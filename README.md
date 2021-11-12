@@ -36,7 +36,7 @@ There are this things on GitHub called "template repositories" which you can use
 
 1. Create the repo and leave it empty
 2. Add this template as a remote: `git remote add template git@github.com:catppuccin/template.git`
-3. Pull from it: `git remote pull template`
+3. Pull from it: `git pull template main`
 4. Delete the remote: `git remote remove template`
 
 ## 🤩 Style
