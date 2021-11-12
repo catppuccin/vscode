@@ -4,9 +4,9 @@
 
 <p align="center">Warm mid-tone dark theme to show off your vibrant self!</p>
 
-## Gallery
-
-> **Note:** put the images under `assets/`. If there are a bunch of them consider [creating an empty branch](https://gist.github.com/joncardasis/e6494afd538a400722545163eb2e1fa5) (e.g. `assets`) and storing them there.
+<p align="center">
+  <img src="https://raw.githubusercontent.com/catppuccin/catppuccin/dev/assets/misc/sample.png"/>
+</p>
 
 ## Usage
 
@@ -42,6 +42,7 @@ There are this things on GitHub called "template repositories" which you can use
 ## 🤩 Style
 
 - The name of the repo must be the simplest version of the app's name (e.g `nvim` instead of `NeoVim`)
+- Put the images under `assets/`. If there are a bunch of them consider [creating an empty branch](https://gist.github.com/joncardasis/e6494afd538a400722545163eb2e1fa5) (e.g. `assets`) and storing them there.
 - Format repo description as "<allusive emoji> Catppuccin theme for AwesomeApp"
 - Add `catppuccin` to the topics.
 - Uppercase meta files (e.g. `README.md`)
