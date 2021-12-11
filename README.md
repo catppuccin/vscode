@@ -1,5 +1,5 @@
 <p align="center">
-  <h2 align="center">😸 Catppuccin for AwesomeApp</h2>
+  <h2 align="center">😸 Catppuccin for VSCode</h2>
 </p>
 
 <p align="center">Warm mid-tone dark theme to show off your vibrant self!</p>
@@ -17,4 +17,4 @@
 
 ## 💝 Thanks to
 
-- [Human](https://github.com/catppuccin)
+- [Gingeh](https://github.com/Gingeh)

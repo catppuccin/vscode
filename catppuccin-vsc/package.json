@@ -17,5 +17,6 @@
                 "path": "./themes/Catppuccin-color-theme.json"
             }
         ]
-    }
+    },
+    "license": "MIT"
 }
