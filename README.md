@@ -20,6 +20,7 @@
 <p align="center">
   <img src="https://raw.githubusercontent.com/Mangeshrex/vscode/main/assets/catppuccin-vscode.png">
 </p>
+
 ## 💝 Thanks to
 
 - [Human](https://github.com/catppuccin)
