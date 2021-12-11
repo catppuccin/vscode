@@ -8,6 +8,11 @@
   <img src="https://raw.githubusercontent.com/catppuccin/catppuccin/dev/assets/misc/sample.png"/>
 </p>
 
+## Preview
+<p align="center">
+  <img src="https://raw.githubusercontent.com/catppuccin/vscode/tree/main/assets/catppuccin-vscode.png">
+</p>
+
 ## Usage
 
 1. Clone this repository locally
