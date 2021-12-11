@@ -8,10 +8,6 @@
   <img src="https://raw.githubusercontent.com/catppuccin/catppuccin/dev/assets/misc/sample.png"/>
 </p>
 
-## Preview
-<p align="center">
-  <img src="https://raw.githubusercontent.com/Mangeshrex/vscode/main/assets/catppuccin-vscode.png">
-</p>
 
 ## Usage
 
@@ -20,6 +16,10 @@
 3. Select `import theme` and browse to where you cloned Catppuccin
 4. Select it
 
+## Preview
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Mangeshrex/vscode/main/assets/catppuccin-vscode.png">
+</p>
 ## 💝 Thanks to
 
 - [Human](https://github.com/catppuccin)
