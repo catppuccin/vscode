@@ -10,7 +10,7 @@
 
 ## Preview
 <p align="center">
-  <img src="https://raw.githubusercontent.com/catppuccin/vscode/tree/main/assets/catppuccin-vscode.png">
+  <img src="https://raw.githubusercontent.com/Mangeshrex/vscode/main/assets/catppuccin-vscode.png">
 </p>
 
 ## Usage
