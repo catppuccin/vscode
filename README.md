@@ -12,7 +12,7 @@
 </p>
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/catppuccin/catppuccin/dev/assets/misc/sample.png"/>
+  <img src="assets/ss.png"/>
 </p>
 
 
@@ -32,11 +32,7 @@
 4. Select the catppuccin theme
 5. Enjoy! :sparkles:
 
-## Preview
-<p align="center">
-  <img src="https://raw.githubusercontent.com/Mangeshrex/vscode/main/assets/catppuccin-vscode.png">
-</p>
-
 ## 💝 Thanks to
 
-- [Gingeh](https://github.com/Gingeh)
+-  [VictorTennekes](https://github.com/VictorTennekes)
+-  [Gingeh](https://github.com/Gingeh)
