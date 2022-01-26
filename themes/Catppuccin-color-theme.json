@@ -355,7 +355,7 @@
             }
         },
         {
-            "name": "keyword.operator.sigil.rust",
+            "name": "Rust sigil operator",
             "scope": "keyword.operator.sigil.rust",
             "settings": {
                 "foreground": "#f28fad"
