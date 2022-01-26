@@ -15,6 +15,86 @@
     },
     "tokenColors": [
         {
+            "name": "All variable",
+            "scope": ["variable.language", "variable.other"],
+            "settings": {
+                "foreground": "#d9e0ee",
+				"fontStyle": "italic"
+            }
+        },
+        {
+            "name": "All function",
+            "scope": ["entity.name.function", "support.function"],
+            "settings": {
+                "foreground": "#96cdfb",
+				"fontStyle": "italic"
+            }
+        },
+        {
+            "name": "All math",
+            "scope": "constant.numeric.decimal",
+            "settings": {
+                "foreground": "#f8bd96"
+            }
+        },
+        {
+            "name": "All types",
+            "scope": "entity.name.type",
+            "settings": {
+                "foreground": "#fae3b0"
+            }
+        },
+        {
+            "name": "All conditionals",
+            "scope": "keyword.control",
+            "settings": {
+                "foreground": "#ddb6f2"
+            }
+        },
+        {
+            "name": "All punctuation brackets",
+            "scope": [
+                "punctuation.brackets.curly",
+                "punctuation.brackets.round",
+                "punctuation.brackets.square",
+                "punctuation.brackets.attribute"
+            ],
+            "settings": {
+                "foreground": "#988ba2"
+            }
+        },
+        {
+            "name": "All punctuation delimeters",
+            "scope": "punctuation.semi",
+            "settings": {
+                "foreground": "#b5e8e0"
+            }
+        },
+        {
+            "name": "All namespace",
+            "scope": "entity.name.namespace",
+            "settings": {
+                "foreground": "#f5e0dc"
+            }
+        },
+        {
+            "name": "All operators",
+            "scope": [
+                "keyword.operator.comparison",
+                "keyword.operator.assignment.equal",
+                "keyword.operator.arrow.skinny",
+                "keyword.operator.math",
+                "keyword.operator.key-value",
+				"keyword.operator.misc",
+				"keyword.operator.namespace"
+            ],
+            "settings": {
+                "foreground": "#89dceb",
+                "fontStyle": "bold"
+            }
+        },
+
+        {
             "name": "unison punctuation",
             "scope": "punctuation.definition.delayed.unison,punctuation.definition.list.begin.unison,punctuation.definition.list.end.unison,punctuation.definition.ability.begin.unison,punctuation.definition.ability.end.unison,punctuation.operator.assignment.as.unison,punctuation.separator.pipe.unison,punctuation.separator.delimiter.unison,punctuation.definition.hash.unison",
             "settings": {
@@ -56,34 +136,153 @@
                 "foreground": "#f8bd96"
             }
         },
+
         {
-            "name": "storage.modifier.lifetime.rust",
+            "name": "Rust modifier",
             "scope": "storage.modifier.lifetime.rust",
             "settings": {
                 "foreground": "#d9e0ee"
             }
         },
         {
-            "name": "support.function.std.rust",
+            "name": "Rust types",
+            "scope": "entity.name.type.rust",
+            "settings": {
+                "foreground": "#fae3b0"
+            }
+        },
+        {
+            "name": "Rust functions std",
             "scope": "support.function.std.rust",
             "settings": {
                 "foreground": "#96cdfb"
             }
         },
         {
-            "name": "entity.name.lifetime.rust",
+            "name": "Rust functions",
+            "scope": "entity.name.function.rust",
+            "settings": {
+                "foreground": "#96cdfb",
+				"fontStyle": "italic"
+            }
+        },
+        {
+            "name": "Rust function keyword",
+            "scope": "keyword.other.fn.rust",
+            "settings": {
+                "foreground": "#e8a2af"
+            }
+        },
+        {
+            "name": "Rust conditionals",
+            "scope": "keyword.control.rust",
+            "settings": {
+                "foreground": "#ddb6f2",
+				"fontStyle": "bold"
+            }
+        },
+        {
+            "name": "Rust punctuation brackets",
+            "scope": [
+                "punctuation.brackets.curly.rust",
+                "punctuation.brackets.round.rust",
+                "punctuation.brackets.square.rust",
+                "punctuation.brackets.attribute.rust"
+            ],
+            "settings": {
+                "foreground": "#988ba2"
+            }
+        },
+        {
+            "name": "Rust namespace",
+            "scope": "entity.name.namespace.rust",
+            "settings": {
+                "foreground": "#f5e0dc"
+            }
+        },
+        {
+            "name": "Rust punctuation delimeters",
+            "scope": "punctuation.semi.rust",
+            "settings": {
+                "foreground": "#b5e8e0"
+            }
+        },
+        {
+            "name": "Rust operators",
+            "scope": [
+				"keyword.operator.comparison.rust",
+                "keyword.operator.assignment.equal.rust",
+                "keyword.operator.arrow.skinny.rust",
+                "keyword.operator.math.rust",
+                "keyword.operator.key-value.rust",
+				"keyword.operator.misc.rust"
+			],
+            "settings": {
+                "foreground": "#89dceb"
+            }
+        },
+        {
+            "name": "Rust operator namespaces",
+            "scope": "keyword.operator.namespace.rust",
+            "settings": {
+                "foreground": "#b5e8e0"
+            }
+        },
+        {
+            "name": "Rust definition attributes",
+            "scope": [
+                "punctuation.definition.attribute.rust",
+                "keyword.operator.attribute.inner.rust"
+            ],
+            "settings": {
+                "foreground": "#b5e8e0",
+                "fontStyle": "bold"
+            }
+        },
+        {
+            "name": "Rust math logic",
+            "scope": "constant.numeric.decimal.rust",
+            "settings": {
+                "foreground": "#f8bd96"
+            }
+        },
+        {
+            "name": "Rust constants",
+            "scope": "support.constant.core.rust",
+            "settings": {
+                "foreground": "#fae3b0"
+            }
+        },
+        {
+            "name": "Rust entity name",
             "scope": "entity.name.lifetime.rust",
             "settings": {
                 "foreground": "#f8bd96"
             }
         },
         {
-            "name": "variable.language.rust",
-            "scope": "variable.language.rust",
+            "name": "Rust variable",
+            "scope": ["variable.language.rust", "variable.other.rust"],
             "settings": {
-                "foreground": "#b5e8e0"
+                "foreground": "#d9e0ee",
+				"fontStyle": "italic"
             }
         },
+        {
+            "name": "",
+            "scope": "keyword.operator.misc.rust",
+            "settings": {
+                "foreground": "#d9e0ee"
+            }
+        },
+        {
+            "name": "keyword.operator.sigil.rust",
+            "scope": "keyword.operator.sigil.rust",
+            "settings": {
+                "foreground": "#f28fad"
+            }
+        },
+
         {
             "name": "support.constant.edge",
             "scope": "support.constant.edge",
@@ -378,20 +577,6 @@
             "scope": "entity.name.function,support.function.console",
             "settings": {
                 "foreground": "#96cdfb"
-            }
-        },
-        {
-            "name": "keyword.operator.misc.rust",
-            "scope": "keyword.operator.misc.rust",
-            "settings": {
-                "foreground": "#d9e0ee"
-            }
-        },
-        {
-            "name": "keyword.operator.sigil.rust",
-            "scope": "keyword.operator.sigil.rust",
-            "settings": {
-                "foreground": "#f28fad"
             }
         },
         {
@@ -1139,13 +1324,6 @@
         },
         {
             "name": "support php constants",
-            "scope": "support.constant.core.rust",
-            "settings": {
-                "foreground": "#fae3b0"
-            }
-        },
-        {
-            "name": "support php constants",
             "scope": "support.constant.ext.php,support.constant.std.php,support.constant.core.php,support.constant.parser-token.php",
             "settings": {
                 "foreground": "#fae3b0"
@@ -1497,7 +1675,6 @@
             }
         },
 
-
         {
             "name": "Shell definition variables",
             "scope": ["punctuation.definition.variable.shell"],
@@ -1570,14 +1747,11 @@
         },
         {
             "name": "Shell parenthesis",
-            "scope": [
-                "punctuation.definition.logical-expression.shell"
-            ],
+            "scope": ["punctuation.definition.logical-expression.shell"],
             "settings": {
                 "foreground": "#988ba2"
             }
         },
-
 
         {
             "name": "Makefile prerequisities",
