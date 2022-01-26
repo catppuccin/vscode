@@ -39,7 +39,7 @@
       "name": "support.variable.magic.python",
       "scope": "support.variable.magic.python",
       "settings": {
-        "foreground": "#b5e8e0"
+        "foreground": "#d9e0ee"
       }
     },
     {
@@ -200,7 +200,7 @@
       "name": "js/ts variable.other.constant",
       "scope": "variable.other.constant",
       "settings": {
-        "foreground": "#f8bd96"
+        "foreground": "#d9e0ee"
       }
     },
     {
@@ -252,7 +252,7 @@
       "name": "java variable.name",
       "scope": "meta.definition.variable.name.java",
       "settings": {
-        "foreground": "#b5e8e0"
+        "foreground": "#d9e0ee"
       }
     },
     {
@@ -336,7 +336,7 @@
       "name": "js variable readwrite",
       "scope": "variable.other.readwrite,meta.object-literal.key,support.variable.property,support.variable.object.process,support.variable.object.node",
       "settings": {
-        "foreground": "#b5e8e0"
+        "foreground": "#d9e0ee"
       }
     },
     {
@@ -545,7 +545,7 @@
       "name": "Variables",
       "scope": "variable",
       "settings": {
-        "foreground": "#b5e8e0"
+        "foreground": "#d9e0ee"
       }
     },
     {
@@ -1283,7 +1283,7 @@
       "name": "cs local variable",
       "scope": "entity.name.variable.local.cs",
       "settings": {
-        "foreground": "#b5e8e0"
+        "foreground": "#d9e0ee"
       }
     },
     {
@@ -1541,6 +1541,24 @@
       }
     },
     {
+      "name": "Shell funcs",
+      "scope": [
+        "meta.scope.group.shell"
+      ],
+      "settings": {
+        "foreground": "#96cdfb"
+      }
+    },
+    {
+      "name": "Shell conditionals",
+      "scope": [
+        "keyword.control.shell"
+      ],
+      "settings": {
+        "foreground": "#ddb6f2"
+      }
+    },
+    {
       "name": "Makefile prerequisities",
       "scope": [
         "meta.scope.prerequisites.makefile"
@@ -1643,7 +1661,7 @@
         "entity.name.function.xi"
       ],
       "settings": {
-        "foreground": "#f8bd96"
+        "foreground": "#96cdfb"
       }
     },
     {
