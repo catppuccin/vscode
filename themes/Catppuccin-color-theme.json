@@ -19,7 +19,7 @@
             "scope": ["variable.language", "variable.other"],
             "settings": {
                 "foreground": "#d9e0ee",
-				"fontStyle": "italic"
+                "fontStyle": "italic"
             }
         },
         {
@@ -27,7 +27,7 @@
             "scope": ["entity.name.function", "support.function"],
             "settings": {
                 "foreground": "#96cdfb",
-				"fontStyle": "italic"
+                "fontStyle": "italic"
             }
         },
         {
@@ -85,12 +85,91 @@
                 "keyword.operator.arrow.skinny",
                 "keyword.operator.math",
                 "keyword.operator.key-value",
-				"keyword.operator.misc",
-				"keyword.operator.namespace"
+                "keyword.operator.misc",
+                "keyword.operator.namespace"
             ],
             "settings": {
                 "foreground": "#89dceb",
                 "fontStyle": "bold"
+            }
+        },
+
+        {
+            "name": "JSON quoted string",
+            "scope": "source.json meta.structure.dictionary.json > string.quoted.json",
+            "settings": {
+                "foreground": "#b5e8e0"
+            }
+        },
+        {
+            "name": "JSON punctuation string",
+            "scope": "source.json meta.structure.dictionary.json > string.quoted.json > punctuation.string",
+            "settings": {
+                "foreground": "#b5e8e0"
+            }
+        },
+        {
+            "name": "JSON punct structure",
+            "scope": "source.json meta.structure.dictionary.json > value.json > string.quoted.json,source.json meta.structure.array.json > value.json > string.quoted.json,source.json meta.structure.dictionary.json > value.json > string.quoted.json > punctuation,source.json meta.structure.array.json > value.json > string.quoted.json > punctuation",
+            "settings": {
+                "foreground": "#abe9b3"
+            }
+        },
+        {
+            "name": "JSON property name",
+            "scope": "support.type.property-name.json.comments",
+            "settings": {
+                "foreground": "#96cdfb"
+            }
+        },
+        {
+            "name": "JSON constants",
+            "scope": "constant.language.json.comments",
+            "settings": {
+                "foreground": "#f8bd96"
+            }
+        },
+        {
+            "name": "JSON punctuation",
+            "scope": [
+				"punctuation.separator.dictionary.pair.json.comments",
+				"punctuation.separator.array.json.comments"
+			],
+            "settings": {
+                "foreground": "#b5e8e0"
+            }
+        },
+        {
+            "name": "JSON brackets",
+            "scope": [
+                "punctuation.definition.dictionary.begin.json.comments",
+                "punctuation.definition.dictionary.end.json.comments",
+                "punctuation.definition.array.begin.json.comments",
+                "punctuation.definition.array.end.json.comments"
+            ],
+            "settings": {
+                "foreground": "#988ba2"
+            }
+        },
+        {
+            "name": "JSON constant language",
+            "scope": "source.json meta.structure.dictionary.json > constant.language.json,source.json meta.structure.array.json > constant.language.json",
+            "settings": {
+                "foreground": "#89dceb"
+            }
+        },
+        {
+            "name": "JSON property name [VSCODE-CUSTOM]",
+            "scope": "support.type.property-name.json",
+            "settings": {
+                "foreground": "#b5e8e0"
+            }
+        },
+        {
+            "name": "[VSCODE-CUSTOM] JSON Punctuation for Property Name",
+            "scope": "support.type.property-name.json punctuation",
+            "settings": {
+                "foreground": "#b5e8e0"
             }
         },
 
@@ -163,7 +242,7 @@
             "scope": "entity.name.function.rust",
             "settings": {
                 "foreground": "#96cdfb",
-				"fontStyle": "italic"
+                "fontStyle": "italic"
             }
         },
         {
@@ -178,7 +257,7 @@
             "scope": "keyword.control.rust",
             "settings": {
                 "foreground": "#ddb6f2",
-				"fontStyle": "bold"
+                "fontStyle": "bold"
             }
         },
         {
@@ -210,13 +289,13 @@
         {
             "name": "Rust operators",
             "scope": [
-				"keyword.operator.comparison.rust",
+                "keyword.operator.comparison.rust",
                 "keyword.operator.assignment.equal.rust",
                 "keyword.operator.arrow.skinny.rust",
                 "keyword.operator.math.rust",
                 "keyword.operator.key-value.rust",
-				"keyword.operator.misc.rust"
-			],
+                "keyword.operator.misc.rust"
+            ],
             "settings": {
                 "foreground": "#89dceb"
             }
@@ -265,7 +344,7 @@
             "scope": ["variable.language.rust", "variable.other.rust"],
             "settings": {
                 "foreground": "#d9e0ee",
-				"fontStyle": "italic"
+                "fontStyle": "italic"
             }
         },
         {
@@ -1201,48 +1280,6 @@
             "scope": "invalid.unimplemented",
             "settings": {
                 "foreground": "#ffffff"
-            }
-        },
-        {
-            "name": "Source Json Meta Structure Dictionary Json > String Quoted Json",
-            "scope": "source.json meta.structure.dictionary.json > string.quoted.json",
-            "settings": {
-                "foreground": "#b5e8e0"
-            }
-        },
-        {
-            "name": "Source Json Meta Structure Dictionary Json > String Quoted Json > Punctuation String",
-            "scope": "source.json meta.structure.dictionary.json > string.quoted.json > punctuation.string",
-            "settings": {
-                "foreground": "#b5e8e0"
-            }
-        },
-        {
-            "name": "Source Json Meta Structure Dictionary Json > Value Json > String Quoted Json,source Json Meta Structure Array Json > Value Json > String Quoted Json,source Json Meta Structure Dictionary Json > Value Json > String Quoted Json > Punctuation,source Json Meta Structure Array Json > Value Json > String Quoted Json > Punctuation",
-            "scope": "source.json meta.structure.dictionary.json > value.json > string.quoted.json,source.json meta.structure.array.json > value.json > string.quoted.json,source.json meta.structure.dictionary.json > value.json > string.quoted.json > punctuation,source.json meta.structure.array.json > value.json > string.quoted.json > punctuation",
-            "settings": {
-                "foreground": "#abe9b3"
-            }
-        },
-        {
-            "name": "Source Json Meta Structure Dictionary Json > Constant Language Json,source Json Meta Structure Array Json > Constant Language Json",
-            "scope": "source.json meta.structure.dictionary.json > constant.language.json,source.json meta.structure.array.json > constant.language.json",
-            "settings": {
-                "foreground": "#89dceb"
-            }
-        },
-        {
-            "name": "[VSCODE-CUSTOM] JSON Property Name",
-            "scope": "support.type.property-name.json",
-            "settings": {
-                "foreground": "#b5e8e0"
-            }
-        },
-        {
-            "name": "[VSCODE-CUSTOM] JSON Punctuation for Property Name",
-            "scope": "support.type.property-name.json punctuation",
-            "settings": {
-                "foreground": "#b5e8e0"
             }
         },
         {
