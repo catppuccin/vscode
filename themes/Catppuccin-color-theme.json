@@ -31,10 +31,11 @@
             }
         },
         {
-            "name": "All math",
-            "scope": "constant.numeric.decimal",
+            "name": "All numeric",
+            "scope": ["constant.numeric.decimal", "constant.numeric.integer"],
             "settings": {
-                "foreground": "#f8bd96"
+                "foreground": "#f8bd96",
+                "fontStyle": "bold"
             }
         },
         {
@@ -57,7 +58,9 @@
                 "punctuation.brackets.curly",
                 "punctuation.brackets.round",
                 "punctuation.brackets.square",
-                "punctuation.brackets.attribute"
+                "punctuation.brackets.attribute",
+                "punctuation.definition.parameters.end",
+                "punctuation.definition.parameters.begin"
             ],
             "settings": {
                 "foreground": "#988ba2"
@@ -132,9 +135,9 @@
         {
             "name": "JSON punctuation",
             "scope": [
-				"punctuation.separator.dictionary.pair.json.comments",
-				"punctuation.separator.array.json.comments"
-			],
+                "punctuation.separator.dictionary.pair.json.comments",
+                "punctuation.separator.array.json.comments"
+            ],
             "settings": {
                 "foreground": "#b5e8e0"
             }
@@ -359,6 +362,41 @@
             "scope": "keyword.operator.sigil.rust",
             "settings": {
                 "foreground": "#f28fad"
+            }
+        },
+
+        {
+            "name": "Lua operators",
+            "scope": "keyword.operator.lua",
+            "settings": {
+                "foreground": "#89dceb",
+                "fontStyle": "bold"
+            }
+        },
+        {
+            "name": "Lua numeric",
+            "scope": "constant.numeric.integer.lua",
+            "settings": {
+                "foreground": "#f8bd96",
+                "fontStyle": "bold"
+            }
+        },
+        {
+            "name": "Lua other vars",
+            "scope": "variable.other.lua",
+            "settings": {
+                "foreground": "#c9cbff",
+                "fontStyle": "italic"
+            }
+        },
+        {
+            "name": "Lua brackets",
+            "scope": [
+                "punctuation.definition.parameters.end.lua",
+                "punctuation.definition.parameters.begin.lua"
+            ],
+            "settings": {
+                "foreground": "#988ba2"
             }
         },
 
