@@ -1496,11 +1496,62 @@
                 "foreground": "#abe9b3"
             }
         },
+
+
+        {
+            "name": "Shell definition variables",
+            "scope": ["punctuation.definition.variable.shell"],
+            "settings": {
+                "foreground": "#988ba2"
+            }
+        },
+        {
+            "name": "Shell logical operators",
+            "scope": ["keyword.operator.logical.shell"],
+            "settings": {
+                "foreground": "#89dceb"
+            }
+        },
+        {
+            "name": "Shell clauses",
+            "scope": ["meta.scope.case-clause-body.shell"],
+            "settings": {
+                "foreground": "#d9e0ee"
+            }
+        },
         {
             "name": "Shell funcs",
             "scope": ["meta.scope.group.shell"],
             "settings": {
                 "foreground": "#96cdfb"
+            }
+        },
+        {
+            "name": "Shell interpolated cmds",
+            "scope": ["string.interpolated.dollar.shell"],
+            "settings": {
+                "foreground": "#fae3b0"
+            }
+        },
+        {
+            "name": "Shell interpolated strings",
+            "scope": ["string.quoted.single.shell"],
+            "settings": {
+                "foreground": "#c9cbff"
+            }
+        },
+        {
+            "name": "Shell pipe symbol",
+            "scope": ["keyword.operator.pipe.shell"],
+            "settings": {
+                "foreground": "#89dceb"
+            }
+        },
+        {
+            "name": "Shell group definition",
+            "scope": ["punctuation.definition.group.shell"],
+            "settings": {
+                "foreground": "#988ba2"
             }
         },
         {
@@ -1510,6 +1561,24 @@
                 "foreground": "#ddb6f2"
             }
         },
+        {
+            "name": "Shell opeartors and punct delimeters",
+            "scope": ["keyword.operator.list.shell"],
+            "settings": {
+                "foreground": "#b5e8e0"
+            }
+        },
+        {
+            "name": "Shell parenthesis",
+            "scope": [
+                "punctuation.definition.logical-expression.shell"
+            ],
+            "settings": {
+                "foreground": "#988ba2"
+            }
+        },
+
+
         {
             "name": "Makefile prerequisities",
             "scope": ["meta.scope.prerequisites.makefile"],
