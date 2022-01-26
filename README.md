@@ -22,15 +22,21 @@
 	
 `{version}` = `.vscode` for VSCode or `.vscode-oss`for VSCodium.
 
-* On **Mac**: `$HOME/{version}/extensions`
+* On **Linux / Mac**: `$HOME/{version}/extensions`
 * On **Windows**: `%USERPROFILE%\{version}\extensions`
  
 2. Open the app
 3. type:
-* **Mac**: CMD+SHIFT+p
-* **Windows**: CTRL+SHIFT+p
+* **Mac**: CMD+k CMD+t
+* **Linux / Windows**: CTRL+k CTRL+t
 4. Select the catppuccin theme
 5. Enjoy! :sparkles:
+
+## Development
+
+1. Open this repository in VSCode
+2. Press CTRL+f5 (or CMD+f5) to open a new VSCode instance
+3. The instance's theme will update when modified
 
 ## 💝 Thanks to
 
