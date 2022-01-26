@@ -348,7 +348,7 @@
             }
         },
         {
-            "name": "",
+            "name": "Rust misc operators",
             "scope": "keyword.operator.misc.rust",
             "settings": {
                 "foreground": "#d9e0ee"
