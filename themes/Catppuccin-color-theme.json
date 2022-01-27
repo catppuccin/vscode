@@ -471,17 +471,62 @@
             }
         },
         {
-            "name": "c++ function",
+            "name": "C++ preprocessor",
+            "scope": "keyword.control.directive",
+            "settings": {
+                "foreground": "#b5e8e0"
+            }
+        },
+        {
+            "name": "C++ function",
             "scope": "meta.function.c,meta.function.cpp",
             "settings": {
                 "foreground": "#b5e8e0"
             }
         },
         {
-            "name": "c++ block",
+            "name": "C++ block",
             "scope": "punctuation.section.block.begin.bracket.curly.cpp,punctuation.section.block.end.bracket.curly.cpp,punctuation.terminator.statement.c,punctuation.section.block.begin.bracket.curly.c,punctuation.section.block.end.bracket.curly.c,punctuation.section.parens.begin.bracket.round.c,punctuation.section.parens.end.bracket.round.c,punctuation.section.parameters.begin.bracket.round.c,punctuation.section.parameters.end.bracket.round.c",
             "settings": {
                 "foreground": "#d9e0ee"
+            }
+        },
+        {
+            "name": "C++ storage type modifier",
+            "scope": "storage.type.built-in.primitive.cpp",
+            "settings": {
+                "foreground": "#b5e8e0"
+            }
+        },
+        {
+            "name": "C++ pointer/reference",
+            "scope": [
+                "storage.modifier.pointer.cpp",
+                "storage.modifier.reference.cpp"
+            ],
+            "settings": {
+                "foreground": "#b5e8e0"
+            }
+        },
+        {
+            "name": "C++ loop/conditional",
+            "scope": [
+                "keyword.control.for",
+                "keyword.control.while",
+                "keyword.control.if",
+                "keyword.control.else",
+                "keyword.control.switch",
+                "keyword.control.case"
+            ],
+            "settings": {
+                "foreground": "#ddb6f2"
+            }
+        },
+        {
+            "name": "C++ return",
+            "scope": "keyword.control.return",
+            "settings": {
+                "foreground": "#f5c2e7"
             }
         },
         {
@@ -728,7 +773,7 @@
             "name": "C operator assignment",
             "scope": "keyword.operator.assignment.c,keyword.operator.comparison.c,keyword.operator.c,keyword.operator.increment.c,keyword.operator.decrement.c,keyword.operator.bitwise.shift.c,keyword.operator.assignment.cpp,keyword.operator.comparison.cpp,keyword.operator.cpp,keyword.operator.increment.cpp,keyword.operator.decrement.cpp,keyword.operator.bitwise.shift.cpp",
             "settings": {
-                "foreground": "#f28fad"
+                "foreground": "#96cdfb"
             }
         },
         {
