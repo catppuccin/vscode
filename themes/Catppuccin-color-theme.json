@@ -47,9 +47,18 @@
         },
         {
             "name": "All conditionals",
-            "scope": "keyword.control",
+            "scope": [
+				"keyword.control",
+                "keyword.control.for",
+                "keyword.control.while",
+                "keyword.control.if",
+                "keyword.control.else",
+                "keyword.control.switch",
+                "keyword.control.case"
+			],
             "settings": {
-                "foreground": "#ddb6f2"
+                "foreground": "#ddb6f2",
+				"fontStyle": "bold"
             }
         },
         {
@@ -415,6 +424,104 @@
         },
 
         {
+            "name": "C++ Puct Delimeters",
+            "scope": [
+                "keyword.control.directive",
+                "punctuation.terminator.statement.cpp"
+            ],
+            "settings": {
+                "foreground": "#b5e8e0",
+                "fontStyle": "bold"
+            }
+        },
+        {
+            "name": "C++ Operators",
+            "scope": [
+                "punctuation.separator.scope-resolution.cpp",
+                "punctuation.separator.scope-resolution.namespace.alias.cpp",
+                "punctuation.separator.scope-resolution.namespace.using.cpp"
+            ],
+            "settings": {
+                "foreground": "#89dceb",
+                "fontStyle": "bold"
+            }
+        },
+        {
+            "name": "C++ function",
+            "scope": "meta.function.c,meta.function.cpp",
+            "settings": {
+                "foreground": "#b5e8e0"
+            }
+        },
+        {
+            "name": "C++ *def keywords",
+            "scope": [
+                "keyword.control.directive.conditional.ifdef.cpp",
+                "keyword.control.directive.endif.cpp"
+            ],
+            "settings": {
+                "foreground": "#f28fad"
+            }
+        },
+        {
+            "name": "C++ misc",
+            "scope": [
+                "entity.name.other.preprocessor.macro.predefined.probably",
+                "entity.name.scope-resolution.cpp"
+            ],
+            "settings": {
+                "foreground": "#f5e0dc",
+                "fontStyle": "italic"
+            }
+        },
+        {
+            "name": "C++ block",
+            "scope": "punctuation.section.block.begin.bracket.curly.cpp,punctuation.section.block.end.bracket.curly.cpp,punctuation.terminator.statement.c,punctuation.section.block.begin.bracket.curly.c,punctuation.section.block.end.bracket.curly.c,punctuation.section.parens.begin.bracket.round.c,punctuation.section.parens.end.bracket.round.c,punctuation.section.parameters.begin.bracket.round.c,punctuation.section.parameters.end.bracket.round.c",
+            "settings": {
+                "foreground": "#d9e0ee"
+            }
+        },
+        {
+            "name": "C++ storage type modifier",
+            "scope": "storage.type.built-in.primitive.cpp",
+            "settings": {
+                "foreground": "#b5e8e0"
+            }
+        },
+        {
+            "name": "C++ pointer/reference",
+            "scope": [
+                "storage.modifier.pointer.cpp",
+                "storage.modifier.reference.cpp"
+            ],
+            "settings": {
+                "foreground": "#b5e8e0"
+            }
+        },
+        {
+            "name": "C++ loop/conditional",
+            "scope": [
+                "keyword.control.for",
+                "keyword.control.while",
+                "keyword.control.if",
+                "keyword.control.else",
+                "keyword.control.switch",
+                "keyword.control.case"
+            ],
+            "settings": {
+                "foreground": "#ddb6f2",
+				"fontStyle": "bold"
+            }
+        },
+        {
+            "name": "C++ return",
+            "scope": "keyword.control.return",
+            "settings": {
+                "foreground": "#f5c2e7"
+            }
+        },
+
+        {
             "name": "support.constant.edge",
             "scope": "support.constant.edge",
             "settings": {
@@ -660,7 +767,7 @@
             "name": "operator logical",
             "scope": "keyword.operator.logical",
             "settings": {
-                "foreground": "#89dceb"
+                "foreground": "#89dceb",
                 "fontStyle": "bold"
             }
         },
@@ -798,23 +905,43 @@
         },
         {
             "name": "js dom variable",
-            "scope": "support.variable.dom,support.variable.property.dom",
+            "scope": ["support.variable.dom", "support.variable.property.dom"],
             "settings": {
                 "foreground": "#b5e8e0"
             }
         },
         {
             "name": "keyword.operator",
-            "scope": "keyword.operator.arithmetic,keyword.operator.comparison,keyword.operator.decrement,keyword.operator.increment,keyword.operator.relational",
+            "scope": [
+                "keyword.operator.arithmetic",
+                "keyword.operator.comparison",
+                "keyword.operator.decrement",
+                "keyword.operator.increment",
+                "keyword.operator.relational"
+            ],
             "settings": {
                 "foreground": "#89dceb"
             }
         },
         {
             "name": "C operator assignment",
-            "scope": "keyword.operator.assignment.c,keyword.operator.comparison.c,keyword.operator.c,keyword.operator.increment.c,keyword.operator.decrement.c,keyword.operator.bitwise.shift.c,keyword.operator.assignment.cpp,keyword.operator.comparison.cpp,keyword.operator.cpp,keyword.operator.increment.cpp,keyword.operator.decrement.cpp,keyword.operator.bitwise.shift.cpp",
+            "scope": [
+                "keyword.operator.assignment.c",
+                "keyword.operator.comparison.c",
+                "keyword.operator.c",
+                "keyword.operator.increment.c",
+                "keyword.operator.decrement.c",
+                "keyword.operator.bitwise.shift.c",
+                "keyword.operator.assignment.cpp",
+                "keyword.operator.comparison.cpp",
+                "keyword.operator.cpp",
+                "keyword.operator.increment.cpp",
+                "keyword.operator.decrement.cpp",
+                "keyword.operator.bitwise.shift.cpp"
+            ],
             "settings": {
-                "foreground": "#89dceb"
+                "foreground": "#89dceb",
+                "fontStyle": "bold"
             }
         },
         {
