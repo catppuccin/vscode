@@ -485,6 +485,16 @@
             }
         },
         {
+            "name": "C++ constructor/destructor",
+            "scope": [
+                "entity.name.function.definition.special.constructor", 
+                "entity.name.function.definition.special.member.destructor"
+            ],
+            "settings": {
+                "foreground": "#c9cbff"
+            }
+        },
+        {
             "name": "C++ block",
             "scope": "punctuation.section.block.begin.bracket.curly.cpp,punctuation.section.block.end.bracket.curly.cpp,punctuation.terminator.statement.c,punctuation.section.block.begin.bracket.curly.c,punctuation.section.block.end.bracket.curly.c,punctuation.section.parens.begin.bracket.round.c,punctuation.section.parens.end.bracket.round.c,punctuation.section.parameters.begin.bracket.round.c,punctuation.section.parameters.end.bracket.round.c",
             "settings": {
@@ -527,6 +537,22 @@
             "scope": "keyword.control.return",
             "settings": {
                 "foreground": "#f5c2e7"
+            }
+        },
+        {
+            "name": "Quote multi",
+            "scope": [
+                "string.quoted.docstring.multi",
+                "string.quoted.multi",
+                "source.python string.quoted.docstring.multi.python punctuation.definition.string.begin.python",
+                "source.python string.quoted.docstring.multi.python punctuation.definition.string.end.python",
+                "source.python string.quoted.multi.python punctuation.definition.string.begin.python",
+                "source.python string.quoted.multi.python punctuation.definition.string.end.python",
+                "markup.fenced_code.block"
+            ],
+            "settings": {
+                "foreground": "#b5e8e0",
+                "fontStyle": "italic"
             }
         },
         {
