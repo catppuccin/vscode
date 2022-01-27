@@ -96,7 +96,21 @@
                 "fontStyle": "bold"
             }
         },
-
+        {
+            "name": "All built-in constants",
+            "scope": "constant.language",
+            "settings": {
+                "foreground": "#c9cbff",
+                "fontStyle": "italic"
+            }
+        },
+        {
+            "name": "All constants",
+            "scope": "constant.other",
+            "settings": {
+                "foreground": "#f8bd96"
+            }
+        },
         {
             "name": "JSON quoted string",
             "scope": "source.json meta.structure.dictionary.json > string.quoted.json",
@@ -647,6 +661,7 @@
             "scope": "keyword.operator.logical",
             "settings": {
                 "foreground": "#89dceb"
+                "fontStyle": "bold"
             }
         },
         {
@@ -834,7 +849,7 @@
             "name": "python parameter",
             "scope": "variable.parameter.function.language.python",
             "settings": {
-                "foreground": "#fae3b0"
+                "foreground": "#f5e0dc"
             }
         },
         {
@@ -842,13 +857,6 @@
             "scope": "support.type.python",
             "settings": {
                 "foreground": "#89dceb"
-            }
-        },
-        {
-            "name": "python logical",
-            "scope": "keyword.operator.logical.python",
-            "settings": {
-                "foreground": "#f28fad"
             }
         },
         {
@@ -867,9 +875,10 @@
         },
         {
             "name": "python function-call.generic",
-            "scope": "meta.function-call.generic.python",
+            "scope": "meta.function-call.python",
             "settings": {
-                "foreground": "#96cdfb"
+                "foreground": "#96cdfb",
+                "fontStyle": "italic"
             }
         },
         {
@@ -972,7 +981,8 @@
                 "variable.function"
             ],
             "settings": {
-                "foreground": "#96cdfb"
+                "foreground": "#96cdfb",
+                "fontStyle": "italic"
             }
         },
         {
@@ -1130,7 +1140,7 @@
             "name": "Integers",
             "scope": "constant.numeric",
             "settings": {
-                "foreground": "#fae3b0"
+                "foreground": "#f8bd96"
             }
         },
         {
@@ -2139,9 +2149,26 @@
             }
         },
         {
-            "name": "Python Keyword Control",
-            "scope": "keyword.control.import.python,keyword.control.flow.python",
+            "name": "python keyword import",
+            "scope": "keyword.control.import.python",
             "settings": {
+                "foreground": "#b5e8e0",
+                "fontStyle": "italic"
+            }
+        },
+        {
+            "name": "python keyword flow",
+            "scope": "keyword.control.flow.python",
+            "settings": {
+                "foreground": "#ddb6f2",
+                "fontStyle": "bold"
+            }
+        },
+        {
+            "name": "python storage type",
+            "scope": "storage.type.function.python",
+            "settings": {
+                "foreground": "#e8a2af",
                 "fontStyle": "italic"
             }
         },
