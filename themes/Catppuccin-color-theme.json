@@ -401,10 +401,26 @@
         },
 
         {
-            "name": "C++ preprocessor",
-            "scope": "keyword.control.directive",
+            "name": "C++ Puct Delimeters",
+            "scope": [
+                "keyword.control.directive",
+                "punctuation.terminator.statement.cpp"
+            ],
             "settings": {
-                "foreground": "#b5e8e0"
+                "foreground": "#b5e8e0",
+                "fontStyle": "bold"
+            }
+        },
+        {
+            "name": "C++ Operators",
+            "scope": [
+                "punctuation.separator.scope-resolution.cpp",
+                "punctuation.separator.scope-resolution.namespace.alias.cpp",
+                "punctuation.separator.scope-resolution.namespace.using.cpp"
+            ],
+            "settings": {
+                "foreground": "#89dceb",
+                "fontStyle": "bold"
             }
         },
         {
@@ -412,6 +428,27 @@
             "scope": "meta.function.c,meta.function.cpp",
             "settings": {
                 "foreground": "#b5e8e0"
+            }
+        },
+        {
+            "name": "C++ *def keywords",
+            "scope": [
+                "keyword.control.directive.conditional.ifdef.cpp",
+                "keyword.control.directive.endif.cpp"
+            ],
+            "settings": {
+                "foreground": "#f28fad"
+            }
+        },
+        {
+            "name": "C++ misc",
+            "scope": [
+                "entity.name.other.preprocessor.macro.predefined.probably",
+                "entity.name.scope-resolution.cpp"
+            ],
+            "settings": {
+                "foreground": "#f5e0dc",
+                "fontStyle": "italic"
             }
         },
         {
