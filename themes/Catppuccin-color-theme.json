@@ -47,9 +47,18 @@
         },
         {
             "name": "All conditionals",
-            "scope": "keyword.control",
+            "scope": [
+				"keyword.control",
+                "keyword.control.for",
+                "keyword.control.while",
+                "keyword.control.if",
+                "keyword.control.else",
+                "keyword.control.switch",
+                "keyword.control.case"
+			],
             "settings": {
-                "foreground": "#ddb6f2"
+                "foreground": "#ddb6f2",
+				"fontStyle": "bold"
             }
         },
         {
@@ -486,7 +495,8 @@
                 "keyword.control.case"
             ],
             "settings": {
-                "foreground": "#ddb6f2"
+                "foreground": "#ddb6f2",
+				"fontStyle": "bold"
             }
         },
         {
