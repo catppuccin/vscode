@@ -1002,7 +1002,7 @@
         },
         {
             "name": "python function-call.generic",
-            "scope": "meta.function-call.python",
+            "scope": "meta.function-call.generic.python",
             "settings": {
                 "foreground": "#96cdfb",
                 "fontStyle": "italic"
