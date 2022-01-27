@@ -105,7 +105,21 @@
                 "fontStyle": "bold"
             }
         },
-
+        {
+            "name": "All built-in constants",
+            "scope": "constant.language",
+            "settings": {
+                "foreground": "#c9cbff",
+                "fontStyle": "italic"
+            }
+        },
+        {
+            "name": "All constants",
+            "scope": "constant.other",
+            "settings": {
+                "foreground": "#f8bd96"
+            }
+        },
         {
             "name": "JSON quoted string",
             "scope": "source.json meta.structure.dictionary.json > string.quoted.json",
@@ -578,6 +592,91 @@
             }
         },
         {
+            "name": "C++ preprocessor",
+            "scope": "keyword.control.directive",
+            "settings": {
+                "foreground": "#b5e8e0"
+            }
+        },
+        {
+            "name": "C++ function",
+            "scope": "meta.function.c,meta.function.cpp",
+            "settings": {
+                "foreground": "#b5e8e0"
+            }
+        },
+        {
+            "name": "C++ constructor/destructor",
+            "scope": [
+                "entity.name.function.definition.special.constructor", 
+                "entity.name.function.definition.special.member.destructor"
+            ],
+            "settings": {
+                "foreground": "#c9cbff"
+            }
+        },
+        {
+            "name": "C++ block",
+            "scope": "punctuation.section.block.begin.bracket.curly.cpp,punctuation.section.block.end.bracket.curly.cpp,punctuation.terminator.statement.c,punctuation.section.block.begin.bracket.curly.c,punctuation.section.block.end.bracket.curly.c,punctuation.section.parens.begin.bracket.round.c,punctuation.section.parens.end.bracket.round.c,punctuation.section.parameters.begin.bracket.round.c,punctuation.section.parameters.end.bracket.round.c",
+            "settings": {
+                "foreground": "#d9e0ee"
+            }
+        },
+        {
+            "name": "C++ storage type modifier",
+            "scope": "storage.type.built-in.primitive.cpp",
+            "settings": {
+                "foreground": "#b5e8e0"
+            }
+        },
+        {
+            "name": "C++ pointer/reference",
+            "scope": [
+                "storage.modifier.pointer.cpp",
+                "storage.modifier.reference.cpp"
+            ],
+            "settings": {
+                "foreground": "#b5e8e0"
+            }
+        },
+        {
+            "name": "C++ loop/conditional",
+            "scope": [
+                "keyword.control.for",
+                "keyword.control.while",
+                "keyword.control.if",
+                "keyword.control.else",
+                "keyword.control.switch",
+                "keyword.control.case"
+            ],
+            "settings": {
+                "foreground": "#ddb6f2"
+            }
+        },
+        {
+            "name": "C++ return",
+            "scope": "keyword.control.return",
+            "settings": {
+                "foreground": "#f5c2e7"
+            }
+        },
+        {
+            "name": "Quote multi",
+            "scope": [
+                "string.quoted.docstring.multi",
+                "string.quoted.multi",
+                "source.python string.quoted.docstring.multi.python punctuation.definition.string.begin.python",
+                "source.python string.quoted.docstring.multi.python punctuation.definition.string.end.python",
+                "source.python string.quoted.multi.python punctuation.definition.string.begin.python",
+                "source.python string.quoted.multi.python punctuation.definition.string.end.python",
+                "markup.fenced_code.block"
+            ],
+            "settings": {
+                "foreground": "#b5e8e0",
+                "fontStyle": "italic"
+            }
+        },
+        {
             "name": "js/ts punctuation separator key-value",
             "scope": "punctuation.separator.key-value",
             "settings": {
@@ -668,7 +767,8 @@
             "name": "operator logical",
             "scope": "keyword.operator.logical",
             "settings": {
-                "foreground": "#89dceb"
+                "foreground": "#89dceb",
+                "fontStyle": "bold"
             }
         },
         {
@@ -876,7 +976,7 @@
             "name": "python parameter",
             "scope": "variable.parameter.function.language.python",
             "settings": {
-                "foreground": "#fae3b0"
+                "foreground": "#f5e0dc"
             }
         },
         {
@@ -884,13 +984,6 @@
             "scope": "support.type.python",
             "settings": {
                 "foreground": "#89dceb"
-            }
-        },
-        {
-            "name": "python logical",
-            "scope": "keyword.operator.logical.python",
-            "settings": {
-                "foreground": "#f28fad"
             }
         },
         {
@@ -911,7 +1004,8 @@
             "name": "python function-call.generic",
             "scope": "meta.function-call.generic.python",
             "settings": {
-                "foreground": "#96cdfb"
+                "foreground": "#96cdfb",
+                "fontStyle": "italic"
             }
         },
         {
@@ -1014,7 +1108,8 @@
                 "variable.function"
             ],
             "settings": {
-                "foreground": "#96cdfb"
+                "foreground": "#96cdfb",
+                "fontStyle": "italic"
             }
         },
         {
@@ -1172,7 +1267,7 @@
             "name": "Integers",
             "scope": "constant.numeric",
             "settings": {
-                "foreground": "#fae3b0"
+                "foreground": "#f8bd96"
             }
         },
         {
@@ -2181,9 +2276,26 @@
             }
         },
         {
-            "name": "Python Keyword Control",
-            "scope": "keyword.control.import.python,keyword.control.flow.python",
+            "name": "python keyword import",
+            "scope": "keyword.control.import.python",
             "settings": {
+                "foreground": "#b5e8e0",
+                "fontStyle": "italic"
+            }
+        },
+        {
+            "name": "python keyword flow",
+            "scope": "keyword.control.flow.python",
+            "settings": {
+                "foreground": "#ddb6f2",
+                "fontStyle": "bold"
+            }
+        },
+        {
+            "name": "python storage type",
+            "scope": "storage.type.function.python",
+            "settings": {
+                "foreground": "#e8a2af",
                 "fontStyle": "italic"
             }
         },

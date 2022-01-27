@@ -42,3 +42,4 @@
 
 -  [VictorTennekes](https://github.com/VictorTennekes)
 -  [Gingeh](https://github.com/Gingeh)
+-  [BrunDerSchwarzmagier](https://github.com/BrunDerSchwarzmagier)
