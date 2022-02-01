@@ -12,7 +12,7 @@
 </p>
 
 <p align="center">
-  <img src="assets/ss.png"/>
+  <img src="https://raw.githubusercontent.com/catppuccin/vscode/main/assets/ss.png"/>
 </p>
 
 
