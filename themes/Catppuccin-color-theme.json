@@ -33,7 +33,7 @@
             "name": "All parameter",
             "scope": [
                 "variable.parameter.function",
-                "variable.parameter.function-call",
+                "variable.parameter.function-call"
             ],
             "settings": {
                 "foreground": "#f5e0dc",
@@ -953,7 +953,6 @@
             "settings": {
                 "foreground": "#89dceb"
             }
-        },
         },
         {
             "name": "python block",
