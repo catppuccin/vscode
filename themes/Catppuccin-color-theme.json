@@ -460,9 +460,9 @@
         {
             "name": "C++ directive",
             "scope": [
-                "punctuation.definition.directive",
                 "keyword.control.directive",
-                "keyword.other.using.directive"
+                "keyword.other.using.directive",
+                "punctuation.definition.directive"
             ],
             "settings": {
                 "foreground": "#b5e8e0",
@@ -473,7 +473,11 @@
             "name": "C++ ifdef directive",
             "scope": [
                 "keyword.control.directive.conditional.ifdef.cpp",
-                "keyword.control.directive.endif.cpp"
+                "keyword.control.directive.else.cpp",
+                "keyword.control.directive.else.cpp punctuation.definition.directive.cpp",
+                "keyword.control.directive.endif.cpp",
+                "keyword.control.directive.conditional.ifdef.cpp punctuation.definition.directive.cpp",
+                "keyword.control.directive.endif.cpp punctuation.definition.directive.cpp"
             ],
             "settings": {
                 "foreground": "#f28fad"
