@@ -48,17 +48,17 @@
         {
             "name": "All conditionals",
             "scope": [
-				"keyword.control",
+                "keyword.control",
                 "keyword.control.for",
                 "keyword.control.while",
                 "keyword.control.if",
                 "keyword.control.else",
                 "keyword.control.switch",
                 "keyword.control.case"
-			],
+            ],
             "settings": {
                 "foreground": "#ddb6f2",
-				"fontStyle": "bold"
+                "fontStyle": "bold"
             }
         },
         {
@@ -510,7 +510,7 @@
             ],
             "settings": {
                 "foreground": "#ddb6f2",
-				"fontStyle": "bold"
+                "fontStyle": "bold"
             }
         },
         {
@@ -608,7 +608,7 @@
         {
             "name": "C++ constructor/destructor",
             "scope": [
-                "entity.name.function.definition.special.constructor", 
+                "entity.name.function.definition.special.constructor",
                 "entity.name.function.definition.special.member.destructor"
             ],
             "settings": {
@@ -2459,10 +2459,10 @@
         "editorGroupHeader.tabsBackground": "#1e1e2e",
         "tab.activeForeground": "#d9e0ee",
         "tab.border": "#302d41",
-        "tab.activeBackground": "#302d41",
+        "tab.activeBackground": "#1e1e2e",
         "tab.activeBorder": "#00000000",
         "tab.activeBorderTop": "#00000000",
-        "tab.inactiveBackground": "#1e1e2e",
+        "tab.inactiveBackground": "#302d41",
         "tab.inactiveForeground": "#d9e0ee64",
         "scrollbarSlider.background": "#575268",
         "scrollbarSlider.hoverBackground": "#6e6c7e",
