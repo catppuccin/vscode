@@ -537,7 +537,7 @@
                 "punctuation.section.parens.begin.bracket.round.c",
                 "punctuation.section.parens.end.bracket.round.c",
                 "punctuation.section.parameters.begin.bracket.round.c",
-                "punctuation.section.parameters.end.bracket.round.c",
+                "punctuation.section.parameters.end.bracket.round.c"
             ],
             "settings": {
                 "foreground": "#d9e0ee"
@@ -547,7 +547,7 @@
             "name": "C++ storage type modifier",
             "scope": "storage.type.built-in.primitive.cpp",
             "settings": {
-                "foreground": "#b5e8e0"
+                "foreground": "#fae3b0"
             }
         },
         {
