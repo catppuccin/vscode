@@ -30,6 +30,17 @@
             }
         },
         {
+            "name": "All parameter",
+            "scope": [
+                "variable.parameter.function",
+                "variable.parameter.function-call",
+            ],
+            "settings": {
+                "foreground": "#f5e0dc",
+                "fontStyle": "italic"
+            }
+        },
+        {
             "name": "All numeric",
             "scope": ["constant.numeric.decimal", "constant.numeric.integer"],
             "settings": {
@@ -590,13 +601,6 @@
             }
         },
         {
-            "name": "Text",
-            "scope": "variable.parameter.function",
-            "settings": {
-                "foreground": "#d9e0ee"
-            }
-        },
-        {
             "name": "Comment Markup Link",
             "scope": "comment markup.link",
             "settings": {
@@ -944,25 +948,12 @@
             }
         },
         {
-            "name": "python parameter",
-            "scope": "variable.parameter.function.language.python",
-            "settings": {
-                "foreground": "#f5e0dc"
-            }
-        },
-        {
             "name": "python type",
             "scope": "support.type.python",
             "settings": {
                 "foreground": "#89dceb"
             }
         },
-        {
-            "name": "pyCs",
-            "scope": "variable.parameter.function.python",
-            "settings": {
-                "foreground": "#fae3b0"
-            }
         },
         {
             "name": "python block",
@@ -1006,20 +997,6 @@
             "scope": "entity.name.namespace",
             "settings": {
                 "foreground": "#f8bd96"
-            }
-        },
-        {
-            "name": "Variables",
-            "scope": "variable",
-            "settings": {
-                "foreground": "#d9e0ee"
-            }
-        },
-        {
-            "name": "Variables",
-            "scope": "variable.c",
-            "settings": {
-                "foreground": "#d9e0ee"
             }
         },
         {
