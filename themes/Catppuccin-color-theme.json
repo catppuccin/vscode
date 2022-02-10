@@ -446,8 +446,31 @@
                 "foreground": "#b5e8e0"
             }
         },
+
         {
-            "name": "C++ *def keywords",
+            "name": "C++ constructor/destructor",
+            "scope": [
+                "entity.name.function.definition.special.constructor",
+                "entity.name.function.definition.special.member.destructor"
+            ],
+            "settings": {
+                "foreground": "#c9cbff"
+            }
+        },
+        {
+            "name": "C++ directive",
+            "scope": [
+                "punctuation.definition.directive",
+                "keyword.control.directive",
+                "keyword.other.using.directive"
+            ],
+            "settings": {
+                "foreground": "#b5e8e0",
+                "fontStyle": "italic"
+            }
+        },
+        {
+            "name": "C++ ifdef directive",
             "scope": [
                 "keyword.control.directive.conditional.ifdef.cpp",
                 "keyword.control.directive.endif.cpp"
@@ -499,7 +522,41 @@
                 "foreground": "#f5c2e7"
             }
         },
-
+        {
+            "name": "C++ block",
+            "scope": [
+                "punctuation.section.block.begin.bracket.curly.cpp",
+                "punctuation.section.block.end.bracket.curly.cpp",
+                "punctuation.terminator.statement.c",
+                "punctuation.section.block.begin.bracket.curly.c",
+                "punctuation.section.block.end.bracket.curly.c",
+                "punctuation.section.parens.begin.bracket.round.c",
+                "punctuation.section.parens.end.bracket.round.c",
+                "punctuation.section.parameters.begin.bracket.round.c",
+                "punctuation.section.parameters.end.bracket.round.c",
+            ],
+            "settings": {
+                "foreground": "#d9e0ee"
+            }
+        },
+        {
+            "name": "C++ storage type modifier",
+            "scope": "storage.type.built-in.primitive.cpp",
+            "settings": {
+                "foreground": "#b5e8e0"
+            }
+        },
+        {
+            "name": "C++/C#",
+            "scope": [
+                "entity.name.label.cs",
+                "entity.name.scope-resolution.function.call",
+                "entity.name.scope-resolution.function.definition"
+            ],
+            "settings": {
+                "foreground": "#f8bd96"
+            }
+        },
         {
             "name": "support.constant.edge",
             "scope": "support.constant.edge",
@@ -568,90 +625,6 @@
             "scope": "markup.deleted.diff",
             "settings": {
                 "foreground": "#b5e8e0"
-            }
-        },
-        {
-            "name": "C++ directives",
-            "scope": [
-                "punctuation.definition.directive",
-                "keyword.control.directive",
-                "keyword.other.using.directive"
-            ],
-            "settings": {
-                "foreground": "#b5e8e0",
-                "fontStyle": "italic"
-            }
-        },
-        {
-            "name": "C++ function",
-            "scope": "meta.function.c,meta.function.cpp",
-            "settings": {
-                "foreground": "#b5e8e0"
-            }
-        },
-        {
-            "name": "C++ constructor/destructor",
-            "scope": [
-                "entity.name.function.definition.special.constructor",
-                "entity.name.function.definition.special.member.destructor"
-            ],
-            "settings": {
-                "foreground": "#c9cbff"
-            }
-        },
-        {
-            "name": "C++ block",
-            "scope": [
-                "punctuation.section.block.begin.bracket.curly.cpp",
-                "punctuation.section.block.end.bracket.curly.cpp",
-                "punctuation.terminator.statement.c",
-                "punctuation.section.block.begin.bracket.curly.c",
-                "punctuation.section.block.end.bracket.curly.c",
-                "punctuation.section.parens.begin.bracket.round.c",
-                "punctuation.section.parens.end.bracket.round.c",
-                "punctuation.section.parameters.begin.bracket.round.c",
-                "punctuation.section.parameters.end.bracket.round.c",
-            ],
-            "settings": {
-                "foreground": "#d9e0ee"
-            }
-        },
-        {
-            "name": "C++ storage type modifier",
-            "scope": "storage.type.built-in.primitive.cpp",
-            "settings": {
-                "foreground": "#b5e8e0"
-            }
-        },
-        {
-            "name": "C++ pointer/reference",
-            "scope": [
-                "storage.modifier.pointer.cpp",
-                "storage.modifier.reference.cpp"
-            ],
-            "settings": {
-                "foreground": "#b5e8e0"
-            }
-        },
-        {
-            "name": "C++ loop/conditional",
-            "scope": [
-                "keyword.control.for",
-                "keyword.control.while",
-                "keyword.control.if",
-                "keyword.control.else",
-                "keyword.control.switch",
-                "keyword.control.case"
-            ],
-            "settings": {
-                "foreground": "#ddb6f2"
-            }
-        },
-        {
-            "name": "C++ return",
-            "scope": "keyword.control.return",
-            "settings": {
-                "foreground": "#f5c2e7"
             }
         },
         {
@@ -2169,17 +2142,6 @@
             "scope": ["punctuation.definition.tag.xi"],
             "settings": {
                 "foreground": "#6e6c7e"
-            }
-        },
-        {
-            "name": "C++/C#",
-            "scope": [
-                "entity.name.label.cs",
-                "entity.name.scope-resolution.function.call",
-                "entity.name.scope-resolution.function.definition"
-            ],
-            "settings": {
-                "foreground": "#f8bd96"
             }
         },
         {
