@@ -18,8 +18,7 @@
             "name": "All variable",
             "scope": ["variable.language", "variable.other"],
             "settings": {
-                "foreground": "#d9e0ee",
-                "fontStyle": "italic"
+                "foreground": "#d9e0ee"
             }
         },
         {
@@ -64,12 +63,9 @@
         {
             "name": "All punctuation brackets",
             "scope": [
-                "punctuation.brackets.curly",
-                "punctuation.brackets.round",
-                "punctuation.brackets.square",
-                "punctuation.brackets.attribute",
-                "punctuation.definition.parameters.end",
-                "punctuation.definition.parameters.begin"
+                "punctuation.brackets",
+                "punctuation.section",
+                "punctuation.definition"
             ],
             "settings": {
                 "foreground": "#988ba2"
@@ -93,7 +89,7 @@
             "name": "All operators",
             "scope": [
                 "keyword.operator.comparison",
-                "keyword.operator.assignment.equal",
+                "keyword.operator.assignment",
                 "keyword.operator.arrow.skinny",
                 "keyword.operator.math",
                 "keyword.operator.key-value",
@@ -425,10 +421,7 @@
 
         {
             "name": "C++ Puct Delimeters",
-            "scope": [
-                "keyword.control.directive",
-                "punctuation.terminator.statement.cpp"
-            ],
+            "scope": "punctuation.terminator.statement.cpp",
             "settings": {
                 "foreground": "#b5e8e0",
                 "fontStyle": "bold"
@@ -472,20 +465,6 @@
             "settings": {
                 "foreground": "#f5e0dc",
                 "fontStyle": "italic"
-            }
-        },
-        {
-            "name": "C++ block",
-            "scope": "punctuation.section.block.begin.bracket.curly.cpp,punctuation.section.block.end.bracket.curly.cpp,punctuation.terminator.statement.c,punctuation.section.block.begin.bracket.curly.c,punctuation.section.block.end.bracket.curly.c,punctuation.section.parens.begin.bracket.round.c,punctuation.section.parens.end.bracket.round.c,punctuation.section.parameters.begin.bracket.round.c,punctuation.section.parameters.end.bracket.round.c",
-            "settings": {
-                "foreground": "#d9e0ee"
-            }
-        },
-        {
-            "name": "C++ storage type modifier",
-            "scope": "storage.type.built-in.primitive.cpp",
-            "settings": {
-                "foreground": "#b5e8e0"
             }
         },
         {
@@ -592,10 +571,15 @@
             }
         },
         {
-            "name": "C++ preprocessor",
-            "scope": "keyword.control.directive",
+            "name": "C++ directives",
+            "scope": [
+                "punctuation.definition.directive",
+                "keyword.control.directive",
+                "keyword.other.using.directive"
+            ],
             "settings": {
-                "foreground": "#b5e8e0"
+                "foreground": "#b5e8e0",
+                "fontStyle": "italic"
             }
         },
         {
@@ -617,7 +601,17 @@
         },
         {
             "name": "C++ block",
-            "scope": "punctuation.section.block.begin.bracket.curly.cpp,punctuation.section.block.end.bracket.curly.cpp,punctuation.terminator.statement.c,punctuation.section.block.begin.bracket.curly.c,punctuation.section.block.end.bracket.curly.c,punctuation.section.parens.begin.bracket.round.c,punctuation.section.parens.end.bracket.round.c,punctuation.section.parameters.begin.bracket.round.c,punctuation.section.parameters.end.bracket.round.c",
+            "scope": [
+                "punctuation.section.block.begin.bracket.curly.cpp",
+                "punctuation.section.block.end.bracket.curly.cpp",
+                "punctuation.terminator.statement.c",
+                "punctuation.section.block.begin.bracket.curly.c",
+                "punctuation.section.block.end.bracket.curly.c",
+                "punctuation.section.parens.begin.bracket.round.c",
+                "punctuation.section.parens.end.bracket.round.c",
+                "punctuation.section.parameters.begin.bracket.round.c",
+                "punctuation.section.parameters.end.bracket.round.c",
+            ],
             "settings": {
                 "foreground": "#d9e0ee"
             }
@@ -765,7 +759,10 @@
         },
         {
             "name": "operator logical",
-            "scope": "keyword.operator.logical",
+            "scope": [
+                "keyword.operator.logical",
+                "keyword.operator.ternary"
+            ],
             "settings": {
                 "foreground": "#89dceb",
                 "fontStyle": "bold"
@@ -920,20 +917,17 @@
                 "keyword.operator.relational"
             ],
             "settings": {
-                "foreground": "#89dceb"
+                "foreground": "#89dceb",
+                "fontStyle": "bold"
             }
         },
         {
-            "name": "C operator assignment",
+            "name": "C operators",
             "scope": [
-                "keyword.operator.assignment.c",
-                "keyword.operator.comparison.c",
                 "keyword.operator.c",
                 "keyword.operator.increment.c",
                 "keyword.operator.decrement.c",
                 "keyword.operator.bitwise.shift.c",
-                "keyword.operator.assignment.cpp",
-                "keyword.operator.comparison.cpp",
                 "keyword.operator.cpp",
                 "keyword.operator.increment.cpp",
                 "keyword.operator.decrement.cpp",
@@ -1019,21 +1013,8 @@
             "name": "Operators",
             "scope": "keyword.operator",
             "settings": {
-                "foreground": "#d9e0ee"
-            }
-        },
-        {
-            "name": "Compound Assignment Operators",
-            "scope": "keyword.operator.assignment.compound",
-            "settings": {
-                "foreground": "#f28fad"
-            }
-        },
-        {
-            "name": "Compound Assignment Operators js/ts",
-            "scope": "keyword.operator.assignment.compound.js,keyword.operator.assignment.compound.ts",
-            "settings": {
-                "foreground": "#89dceb"
+                "foreground": "#89dceb",
+                "fontStyle": "bold"
             }
         },
         {
@@ -1848,20 +1829,6 @@
             "scope": ["keyword.other.substitution.end"],
             "settings": {
                 "foreground": "#abe9b3"
-            }
-        },
-        {
-            "name": "js operator.assignment",
-            "scope": ["keyword.operator.assignment"],
-            "settings": {
-                "foreground": "#89dceb"
-            }
-        },
-        {
-            "name": "go operator",
-            "scope": ["keyword.operator.assignment.go"],
-            "settings": {
-                "foreground": "#f8bd96"
             }
         },
         {
