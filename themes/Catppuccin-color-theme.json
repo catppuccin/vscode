@@ -18,8 +18,7 @@
             "name": "All variable",
             "scope": ["variable.language", "variable.other"],
             "settings": {
-                "foreground": "#d9e0ee",
-                "fontStyle": "italic"
+                "foreground": "#d9e0ee"
             }
         },
         {
@@ -27,6 +26,17 @@
             "scope": ["entity.name.function", "support.function"],
             "settings": {
                 "foreground": "#96cdfb",
+                "fontStyle": "italic"
+            }
+        },
+        {
+            "name": "All parameter",
+            "scope": [
+                "variable.parameter.function",
+                "variable.parameter.function-call"
+            ],
+            "settings": {
+                "foreground": "#f5e0dc",
                 "fontStyle": "italic"
             }
         },
@@ -64,12 +74,9 @@
         {
             "name": "All punctuation brackets",
             "scope": [
-                "punctuation.brackets.curly",
-                "punctuation.brackets.round",
-                "punctuation.brackets.square",
-                "punctuation.brackets.attribute",
-                "punctuation.definition.parameters.end",
-                "punctuation.definition.parameters.begin"
+                "punctuation.brackets",
+                "punctuation.section",
+                "punctuation.definition"
             ],
             "settings": {
                 "foreground": "#988ba2"
@@ -93,7 +100,7 @@
             "name": "All operators",
             "scope": [
                 "keyword.operator.comparison",
-                "keyword.operator.assignment.equal",
+                "keyword.operator.assignment",
                 "keyword.operator.arrow.skinny",
                 "keyword.operator.math",
                 "keyword.operator.key-value",
@@ -425,10 +432,7 @@
 
         {
             "name": "C++ Puct Delimeters",
-            "scope": [
-                "keyword.control.directive",
-                "punctuation.terminator.statement.cpp"
-            ],
+            "scope": "punctuation.terminator.statement.cpp",
             "settings": {
                 "foreground": "#b5e8e0",
                 "fontStyle": "bold"
@@ -453,11 +457,38 @@
                 "foreground": "#b5e8e0"
             }
         },
+
         {
-            "name": "C++ *def keywords",
+            "name": "C++ constructor/destructor",
+            "scope": [
+                "entity.name.function.definition.special.constructor",
+                "entity.name.function.definition.special.member.destructor"
+            ],
+            "settings": {
+                "foreground": "#c9cbff"
+            }
+        },
+        {
+            "name": "C++ directive",
+            "scope": [
+                "keyword.control.directive",
+                "keyword.other.using.directive",
+                "punctuation.definition.directive"
+            ],
+            "settings": {
+                "foreground": "#b5e8e0",
+                "fontStyle": "italic"
+            }
+        },
+        {
+            "name": "C++ ifdef directive",
             "scope": [
                 "keyword.control.directive.conditional.ifdef.cpp",
-                "keyword.control.directive.endif.cpp"
+                "keyword.control.directive.else.cpp",
+                "keyword.control.directive.else.cpp punctuation.definition.directive.cpp",
+                "keyword.control.directive.endif.cpp",
+                "keyword.control.directive.conditional.ifdef.cpp punctuation.definition.directive.cpp",
+                "keyword.control.directive.endif.cpp punctuation.definition.directive.cpp"
             ],
             "settings": {
                 "foreground": "#f28fad"
@@ -472,20 +503,6 @@
             "settings": {
                 "foreground": "#f5e0dc",
                 "fontStyle": "italic"
-            }
-        },
-        {
-            "name": "C++ block",
-            "scope": "punctuation.section.block.begin.bracket.curly.cpp,punctuation.section.block.end.bracket.curly.cpp,punctuation.terminator.statement.c,punctuation.section.block.begin.bracket.curly.c,punctuation.section.block.end.bracket.curly.c,punctuation.section.parens.begin.bracket.round.c,punctuation.section.parens.end.bracket.round.c,punctuation.section.parameters.begin.bracket.round.c,punctuation.section.parameters.end.bracket.round.c",
-            "settings": {
-                "foreground": "#d9e0ee"
-            }
-        },
-        {
-            "name": "C++ storage type modifier",
-            "scope": "storage.type.built-in.primitive.cpp",
-            "settings": {
-                "foreground": "#b5e8e0"
             }
         },
         {
@@ -520,7 +537,41 @@
                 "foreground": "#f5c2e7"
             }
         },
-
+        {
+            "name": "C++ block",
+            "scope": [
+                "punctuation.section.block.begin.bracket.curly.cpp",
+                "punctuation.section.block.end.bracket.curly.cpp",
+                "punctuation.terminator.statement.c",
+                "punctuation.section.block.begin.bracket.curly.c",
+                "punctuation.section.block.end.bracket.curly.c",
+                "punctuation.section.parens.begin.bracket.round.c",
+                "punctuation.section.parens.end.bracket.round.c",
+                "punctuation.section.parameters.begin.bracket.round.c",
+                "punctuation.section.parameters.end.bracket.round.c"
+            ],
+            "settings": {
+                "foreground": "#d9e0ee"
+            }
+        },
+        {
+            "name": "C++ storage type modifier",
+            "scope": "storage.type.built-in.primitive.cpp",
+            "settings": {
+                "foreground": "#fae3b0"
+            }
+        },
+        {
+            "name": "C++/C#",
+            "scope": [
+                "entity.name.label.cs",
+                "entity.name.scope-resolution.function.call",
+                "entity.name.scope-resolution.function.definition"
+            ],
+            "settings": {
+                "foreground": "#f8bd96"
+            }
+        },
         {
             "name": "support.constant.edge",
             "scope": "support.constant.edge",
@@ -547,13 +598,6 @@
             "scope": "punctuation.definition.string.begin,punctuation.definition.string.end",
             "settings": {
                 "foreground": "#abe9b3"
-            }
-        },
-        {
-            "name": "Text",
-            "scope": "variable.parameter.function",
-            "settings": {
-                "foreground": "#d9e0ee"
             }
         },
         {
@@ -589,75 +633,6 @@
             "scope": "markup.deleted.diff",
             "settings": {
                 "foreground": "#b5e8e0"
-            }
-        },
-        {
-            "name": "C++ preprocessor",
-            "scope": "keyword.control.directive",
-            "settings": {
-                "foreground": "#b5e8e0"
-            }
-        },
-        {
-            "name": "C++ function",
-            "scope": "meta.function.c,meta.function.cpp",
-            "settings": {
-                "foreground": "#b5e8e0"
-            }
-        },
-        {
-            "name": "C++ constructor/destructor",
-            "scope": [
-                "entity.name.function.definition.special.constructor",
-                "entity.name.function.definition.special.member.destructor"
-            ],
-            "settings": {
-                "foreground": "#c9cbff"
-            }
-        },
-        {
-            "name": "C++ block",
-            "scope": "punctuation.section.block.begin.bracket.curly.cpp,punctuation.section.block.end.bracket.curly.cpp,punctuation.terminator.statement.c,punctuation.section.block.begin.bracket.curly.c,punctuation.section.block.end.bracket.curly.c,punctuation.section.parens.begin.bracket.round.c,punctuation.section.parens.end.bracket.round.c,punctuation.section.parameters.begin.bracket.round.c,punctuation.section.parameters.end.bracket.round.c",
-            "settings": {
-                "foreground": "#d9e0ee"
-            }
-        },
-        {
-            "name": "C++ storage type modifier",
-            "scope": "storage.type.built-in.primitive.cpp",
-            "settings": {
-                "foreground": "#b5e8e0"
-            }
-        },
-        {
-            "name": "C++ pointer/reference",
-            "scope": [
-                "storage.modifier.pointer.cpp",
-                "storage.modifier.reference.cpp"
-            ],
-            "settings": {
-                "foreground": "#b5e8e0"
-            }
-        },
-        {
-            "name": "C++ loop/conditional",
-            "scope": [
-                "keyword.control.for",
-                "keyword.control.while",
-                "keyword.control.if",
-                "keyword.control.else",
-                "keyword.control.switch",
-                "keyword.control.case"
-            ],
-            "settings": {
-                "foreground": "#ddb6f2"
-            }
-        },
-        {
-            "name": "C++ return",
-            "scope": "keyword.control.return",
-            "settings": {
-                "foreground": "#f5c2e7"
             }
         },
         {
@@ -765,7 +740,10 @@
         },
         {
             "name": "operator logical",
-            "scope": "keyword.operator.logical",
+            "scope": [
+                "keyword.operator.logical",
+                "keyword.operator.ternary"
+            ],
             "settings": {
                 "foreground": "#89dceb",
                 "fontStyle": "bold"
@@ -920,20 +898,17 @@
                 "keyword.operator.relational"
             ],
             "settings": {
-                "foreground": "#89dceb"
+                "foreground": "#89dceb",
+                "fontStyle": "bold"
             }
         },
         {
-            "name": "C operator assignment",
+            "name": "C operators",
             "scope": [
-                "keyword.operator.assignment.c",
-                "keyword.operator.comparison.c",
                 "keyword.operator.c",
                 "keyword.operator.increment.c",
                 "keyword.operator.decrement.c",
                 "keyword.operator.bitwise.shift.c",
-                "keyword.operator.assignment.cpp",
-                "keyword.operator.comparison.cpp",
                 "keyword.operator.cpp",
                 "keyword.operator.increment.cpp",
                 "keyword.operator.decrement.cpp",
@@ -973,24 +948,10 @@
             }
         },
         {
-            "name": "python parameter",
-            "scope": "variable.parameter.function.language.python",
-            "settings": {
-                "foreground": "#f5e0dc"
-            }
-        },
-        {
             "name": "python type",
             "scope": "support.type.python",
             "settings": {
                 "foreground": "#89dceb"
-            }
-        },
-        {
-            "name": "pyCs",
-            "scope": "variable.parameter.function.python",
-            "settings": {
-                "foreground": "#fae3b0"
             }
         },
         {
@@ -1019,21 +980,8 @@
             "name": "Operators",
             "scope": "keyword.operator",
             "settings": {
-                "foreground": "#d9e0ee"
-            }
-        },
-        {
-            "name": "Compound Assignment Operators",
-            "scope": "keyword.operator.assignment.compound",
-            "settings": {
-                "foreground": "#f28fad"
-            }
-        },
-        {
-            "name": "Compound Assignment Operators js/ts",
-            "scope": "keyword.operator.assignment.compound.js,keyword.operator.assignment.compound.ts",
-            "settings": {
-                "foreground": "#89dceb"
+                "foreground": "#89dceb",
+                "fontStyle": "bold"
             }
         },
         {
@@ -1048,20 +996,6 @@
             "scope": "entity.name.namespace",
             "settings": {
                 "foreground": "#f8bd96"
-            }
-        },
-        {
-            "name": "Variables",
-            "scope": "variable",
-            "settings": {
-                "foreground": "#d9e0ee"
-            }
-        },
-        {
-            "name": "Variables",
-            "scope": "variable.c",
-            "settings": {
-                "foreground": "#d9e0ee"
             }
         },
         {
@@ -1302,7 +1236,7 @@
             "name": "Attribute IDs",
             "scope": "entity.other.attribute-name.id",
             "settings": {
-                "fontStyle": "normal",
+                "fontStyle": "",
                 "foreground": "#96cdfb"
             }
         },
@@ -1310,7 +1244,7 @@
             "name": "Attribute class",
             "scope": "entity.other.attribute-name.class.css",
             "settings": {
-                "fontStyle": "normal",
+                "fontStyle": "",
                 "foreground": "#fae3b0"
             }
         },
@@ -1851,20 +1785,6 @@
             }
         },
         {
-            "name": "js operator.assignment",
-            "scope": ["keyword.operator.assignment"],
-            "settings": {
-                "foreground": "#89dceb"
-            }
-        },
-        {
-            "name": "go operator",
-            "scope": ["keyword.operator.assignment.go"],
-            "settings": {
-                "foreground": "#f8bd96"
-            }
-        },
-        {
             "name": "go operator",
             "scope": [
                 "keyword.operator.arithmetic.go",
@@ -2202,17 +2122,6 @@
             "scope": ["punctuation.definition.tag.xi"],
             "settings": {
                 "foreground": "#6e6c7e"
-            }
-        },
-        {
-            "name": "C++/C#",
-            "scope": [
-                "entity.name.label.cs",
-                "entity.name.scope-resolution.function.call",
-                "entity.name.scope-resolution.function.definition"
-            ],
-            "settings": {
-                "foreground": "#f8bd96"
             }
         },
         {
