@@ -1,35 +1,37 @@
 {
-    "name": "catppuccin-vsc",
-    "displayName": "Catppuccin for VSCode",
-    "publisher": "Catppuccin",
-    "description": "Warm mid-tone dark theme to show off your vibrant self!",
-    "version": "1.0.3",
-    "engines": {
-        "vscode": "^1.13.0"
-    },
-    "categories": [
-        "Themes"
-    ],
-    "contributes": {
-        "themes": [
-            {
-                "label": "Catppuccin",
-                "uiTheme": "vs-dark",
-                "path": "./themes/Catppuccin-color-theme.json"
-            }
-        ]
-    },
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/catppuccin/vscode.git"
-    },
-    "bugs": {
-        "url": "https://github.com/catppuccin/vscode/issues"
-    },
-    "icon": "icon.png",
-    "license": "MIT",
-    "__metadata": {
-        "publisherDisplayName": "Catppuccin",
-        "publisherId": "Catppuccin"
-    }
+	"name": "catppuccin-vsc",
+	"displayName": "Catppuccin for VSCode",
+	"publisher": "Catppuccin",
+	"description": "Warm mid-tone dark theme to show off your vibrant self!",
+	"version": "1.0.3",
+	"engines": {
+		"vscode": "^1.13.0"
+	},
+	"categories": [
+		"Themes"
+	],
+	"contributes": {
+		"themes": [
+			{
+				"label": "Catppuccin",
+				"uiTheme": "vs-dark",
+				"path": "./themes/Catppuccin-color-theme.json"
+			}
+		]
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/catppuccin/vscode.git"
+	},
+	"bugs": {
+		"url": "https://github.com/catppuccin/vscode/issues"
+	},
+	"icon": "icon.png",
+	"license": "MIT",
+	"__metadata": {
+		"publisherDisplayName": "Catppuccin",
+		"publisherId": "e7d2ed61-53e0-4dd4-afbe-f536c3bb4316",
+		"id": "69264e4d-cd3b-468a-8f2b-e69673c7d864",
+		"isPreReleaseVersion": false
+	}
 }
