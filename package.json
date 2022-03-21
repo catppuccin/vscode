@@ -3,7 +3,7 @@
 	"displayName": "Catppuccin for VSCode",
 	"publisher": "Catppuccin",
 	"description": "Warm mid-tone dark theme to show off your vibrant self!",
-	"version": "1.0.4",
+	"version": "1.0.5",
 	"engines": {
 		"vscode": "^1.13.0"
 	},
