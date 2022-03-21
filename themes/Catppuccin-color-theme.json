@@ -2220,7 +2220,7 @@
         "foreground": "#d9e0ee",
         "focusBorder": "#96cdfb",
         "selection.background": "#6e6c7e",
-        "scrollbar.shadow": "#161320",
+        "scrollbar.shadow": "#1e1e2e",
         "activityBar.foreground": "#d9e0ee",
         "activityBar.background": "#1e1e2e",
         "activityBar.inactiveForeground": "#d9e0ee5a",
@@ -2331,8 +2331,9 @@
         "editorGutter.foldingControlForeground": "#c3bac6",
         "editorCodeLens.foreground": "#988ba2",
         "editorGroup.border": "#575268",
-        "diffEditor.insertedTextBackground": "#abe9b336",
-        "diffEditor.removedTextBackground": "#f28fad3e",
+        // test
+        "diffEditor.insertedTextBackground": "#abe9b318",
+        "diffEditor.removedTextBackground": "#f28fad1c",
         "diffEditor.border": "#575268",
         "panel.background": "#1e1e2e",
         "panel.border": "#575268",
@@ -2373,7 +2374,7 @@
         "tab.activeBorderTop": "#00000000",
         "tab.inactiveBackground": "#302d41",
         "tab.inactiveForeground": "#d9e0ee64",
-        "scrollbarSlider.background": "#575268",
+        "scrollbarSlider.background": "#5752687e",
         "scrollbarSlider.hoverBackground": "#6e6c7e",
         "scrollbarSlider.activeBackground": "#bfbfbf66",
         "progressBar.background": "#96cdfb",
@@ -2461,6 +2462,8 @@
         "breadcrumb.activeSelectionForeground": "#d9e0ee",
         "editorGutter.commentRangeForeground": "#c3bac6",
         "debugExceptionWidget.background": "#302d41",
-        "debugExceptionWidget.border": "#575268"
+        "debugExceptionWidget.border": "#575268",
+        "activitusbar.inactiveColour": "#000000",
+        "activitusbar.activeColour": "#000000"
     }
 }
