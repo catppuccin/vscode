@@ -3,7 +3,7 @@
 	"displayName": "Catppuccin for VSCode",
 	"publisher": "Catppuccin",
 	"description": "Warm mid-tone dark theme to show off your vibrant self!",
-	"version": "1.0.6",
+	"version": "2.0.0",
 	"engines": {
 		"vscode": "^1.13.0"
 	},
@@ -13,9 +13,24 @@
 	"contributes": {
 		"themes": [
 			{
-				"label": "Catppuccin",
+				"label": "Catppuccin Mocha",
 				"uiTheme": "vs-dark",
-				"path": "./themes/Catppuccin-color-theme.json"
+				"path": "./themes/Catppuccin-mocha-color-theme.json"
+			},
+			{
+				"label": "Catppuccin Macchiato",
+				"uiTheme": "vs-dark",
+				"path": "./themes/Catppuccin-macchiato-color-theme.json"
+			},
+			{
+				"label": "Catppuccin Frappé",
+				"uiTheme": "vs-dark",
+				"path": "./themes/Catppuccin-frappe-color-theme.json"
+			},
+			{
+				"label": "Catppuccin Latte",
+				"uiTheme": "vs",
+				"path": "./themes/Catppuccin-latte-color-theme.json"
 			}
 		]
 	},
