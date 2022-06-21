@@ -18,6 +18,16 @@
 
 ## Usage
 
+### Automatic installation
+
+Open the Extensions page and type Catppucin in the search field. 
+
+![image](https://user-images.githubusercontent.com/6344099/171170526-428181e0-1302-40d0-bedb-1e1c3f88f88a.png)
+
+Click on install. 
+
+### Manual installation
+
 1. Clone this repository into the extentions folder of VSCode/VSCodium:
 	
 `{version}` = `.vscode` for VSCode or `.vscode-oss`for VSCodium.
