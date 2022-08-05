@@ -290,7 +290,7 @@
             "scope": "keyword.control.rust",
             "settings": {
                 "foreground": "#ca9ee6",
-                "fontStyle": "bold"
+                "fontStyle": "bold italic"
             }
         },
         {
@@ -647,7 +647,8 @@
                 "markup.fenced_code.block"
             ],
             "settings": {
-                "foreground": "#81c8be",
+                // "foreground": "#81c8be",
+                "foreground": "#a6d189",
                 "fontStyle": "italic"
             }
         },
@@ -1096,7 +1097,8 @@
             "name": "Keyword Control",
             "scope": "keyword.control",
             "settings": {
-                "foreground": "#e78284"
+                // "foreground": "#e78284"
+                "foreground": "#99d1db"
             }
         },
         {
@@ -1222,14 +1224,14 @@
             "name": "Tags",
             "scope": "entity.name.tag",
             "settings": {
-                "foreground": "#81c8be"
+                "foreground": "#ca9ee6"
             }
         },
         {
             "name": "Attributes",
             "scope": "entity.other.attribute-name",
             "settings": {
-                "foreground": "#e5c890"
+                "foreground": "#8caaee"
             }
         },
         {
@@ -1246,6 +1248,13 @@
             "settings": {
                 "fontStyle": "",
                 "foreground": "#e5c890"
+            }
+        },
+        {
+            "name": "SCSS variables",
+            "scope": "variable.scss",
+            "settings": {
+                "foreground": "#ca9ee6"
             }
         },
         {
@@ -1802,6 +1811,13 @@
             }
         },
         {
+            "name": "Go import statement",
+            "scope": "keyword.import.go",
+            "settings": {
+                "foreground": "#8caaee"
+            }
+        },
+        {
             "name": "elm prelude",
             "scope": ["support.type.prelude.elm"],
             "settings": {
@@ -2246,7 +2262,7 @@
         "listFilterWidget.outline": "#00000000",
         "listFilterWidget.noMatchesOutline": "#e78284",
         "statusBar.foreground": "#c6d0f5",
-        "statusBar.background": "#51576d",
+        "statusBar.background": "#232634",
         "statusBarItem.hoverBackground": "#ffffff1f",
         "statusBar.debuggingBackground": "#e78284",
         "statusBar.debuggingForeground": "#51576d",
@@ -2313,7 +2329,8 @@
         "editorBracketMatch.background": "#949cbb14",
         "editorBracketMatch.border": "#949cbb",
         "editor.foldBackground": "#8caaee42",
-        "editorOverviewRuler.background": "#25252500",
+        // "editorOverviewRuler.background": "#25252500",
+        "editorOverviewRuler.background": "#292c3c",
         "editorOverviewRuler.border": "#FFFFFF0F",
         "editorError.foreground": "#e78284",
         "editorError.background": "#B73A3400",

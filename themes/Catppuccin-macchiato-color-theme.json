@@ -290,7 +290,7 @@
             "scope": "keyword.control.rust",
             "settings": {
                 "foreground": "#c6a0f6",
-                "fontStyle": "bold"
+                "fontStyle": "bold italic"
             }
         },
         {
@@ -647,7 +647,8 @@
                 "markup.fenced_code.block"
             ],
             "settings": {
-                "foreground": "#8bd5ca",
+                // "foreground": "#8bd5ca",
+                "foreground": "#a6da95",
                 "fontStyle": "italic"
             }
         },
@@ -1096,7 +1097,8 @@
             "name": "Keyword Control",
             "scope": "keyword.control",
             "settings": {
-                "foreground": "#ed8796"
+                // "foreground": "#ed8796"
+                "foreground": "#91d7e3"
             }
         },
         {
@@ -1117,7 +1119,8 @@
             "name": "Storage",
             "scope": "storage",
             "settings": {
-                "foreground": "#ed8796"
+                // "foreground": "#ed8796"
+                "foreground": "#b7bdf8"
             }
         },
         {
@@ -1222,14 +1225,14 @@
             "name": "Tags",
             "scope": "entity.name.tag",
             "settings": {
-                "foreground": "#8bd5ca"
+                "foreground": "#c6a0f6"
             }
         },
         {
             "name": "Attributes",
             "scope": "entity.other.attribute-name",
             "settings": {
-                "foreground": "#eed49f"
+                "foreground": "#8aadf4"
             }
         },
         {
@@ -1246,6 +1249,13 @@
             "settings": {
                 "fontStyle": "",
                 "foreground": "#eed49f"
+            }
+        },
+        {
+            "name": "SCSS variables",
+            "scope": "variable.scss",
+            "settings": {
+                "foreground": "#c6a0f6"
             }
         },
         {
@@ -1802,6 +1812,13 @@
             }
         },
         {
+            "name": "Go import statement",
+            "scope": "keyword.import.go",
+            "settings": {
+                "foreground": "#8aadf4"
+            }
+        },
+        {
             "name": "elm prelude",
             "scope": ["support.type.prelude.elm"],
             "settings": {
@@ -2246,7 +2263,7 @@
         "listFilterWidget.outline": "#00000000",
         "listFilterWidget.noMatchesOutline": "#ed8796",
         "statusBar.foreground": "#cad3f5",
-        "statusBar.background": "#494d64",
+        "statusBar.background": "#181926",
         "statusBarItem.hoverBackground": "#ffffff1f",
         "statusBar.debuggingBackground": "#ed8796",
         "statusBar.debuggingForeground": "#494d64",
@@ -2313,7 +2330,7 @@
         "editorBracketMatch.background": "#939ab714",
         "editorBracketMatch.border": "#939ab7",
         "editor.foldBackground": "#8aadf442",
-        "editorOverviewRuler.background": "#25252500",
+        "editorOverviewRuler.background": "#1e2030",
         "editorOverviewRuler.border": "#FFFFFF0F",
         "editorError.foreground": "#ed8796",
         "editorError.background": "#B73A3400",

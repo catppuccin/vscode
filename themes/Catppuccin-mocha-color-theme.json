@@ -290,7 +290,7 @@
             "scope": "keyword.control.rust",
             "settings": {
                 "foreground": "#cba6f7",
-                "fontStyle": "bold"
+                "fontStyle": "bold italic"
             }
         },
         {
@@ -647,7 +647,7 @@
                 "markup.fenced_code.block"
             ],
             "settings": {
-                "foreground": "#94e2d5",
+                "foreground": "#a6e3a1",
                 "fontStyle": "italic"
             }
         },
@@ -1096,7 +1096,8 @@
             "name": "Keyword Control",
             "scope": "keyword.control",
             "settings": {
-                "foreground": "#f38ba8"
+                // "foreground": "#f38ba8"
+                "foreground": "#89dceb"
             }
         },
         {
@@ -1222,14 +1223,15 @@
             "name": "Tags",
             "scope": "entity.name.tag",
             "settings": {
-                "foreground": "#94e2d5"
+                "foreground": "#cba6f7"
             }
         },
         {
             "name": "Attributes",
             "scope": "entity.other.attribute-name",
             "settings": {
-                "foreground": "#f9e2af"
+                // "foreground": "#f9e2af"
+                "foreground": "#89b4fa"
             }
         },
         {
@@ -1246,6 +1248,13 @@
             "settings": {
                 "fontStyle": "",
                 "foreground": "#f9e2af"
+            }
+        },
+        {
+            "name": "SCSS variables",
+            "scope": "variable.scss",
+            "settings": {
+                "foreground": "#cba6f7"
             }
         },
         {
@@ -1802,6 +1811,13 @@
             }
         },
         {
+            "name": "Go import statement",
+            "scope": "keyword.import.go",
+            "settings": {
+                "foreground": "#89b4fa"
+            }
+        },
+        {
             "name": "elm prelude",
             "scope": ["support.type.prelude.elm"],
             "settings": {
@@ -2246,7 +2262,8 @@
         "listFilterWidget.outline": "#00000000",
         "listFilterWidget.noMatchesOutline": "#f38ba8",
         "statusBar.foreground": "#cdd6f4",
-        "statusBar.background": "#45475a",
+        // "statusBar.background": "#45475a",
+        "statusBar.background": "#11111b",
         "statusBarItem.hoverBackground": "#ffffff1f",
         "statusBar.debuggingBackground": "#f38ba8",
         "statusBar.debuggingForeground": "#45475a",
@@ -2274,7 +2291,7 @@
         "button.secondaryForeground": "#cdd6f4",
         "button.secondaryBackground": "#45475a",
         "button.secondaryHoverBackground": "#1e1e2e",
-        "input.background": "#1e1e2e",
+        "input.background": "#302d41",
         "input.border": "#00000000",
         "input.foreground": "#cdd6f4",
         "inputOption.activeBackground": "#89b4fa26",
@@ -2313,8 +2330,8 @@
         "editorBracketMatch.background": "#9399b214",
         "editorBracketMatch.border": "#9399b2",
         "editor.foldBackground": "#89b4fa42",
-        "editorOverviewRuler.background": "#25252500",
-        "editorOverviewRuler.border": "#FFFFFF0F",
+        "editorOverviewRuler.background": "#181825",
+        "editorOverviewRuler.border": "#FFFFFF0F",  
         "editorError.foreground": "#f38ba8",
         "editorError.background": "#B73A3400",
         "editorError.border": "#ffffff00",
