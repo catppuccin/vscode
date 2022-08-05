@@ -2279,7 +2279,7 @@
         "menubar.selectionForeground": "#cdd6f4",
         "menubar.selectionBackground": "#45475a",
         "menu.foreground": "#cdd6f4",
-        "menu.background": "#45475a",
+        "menu.background": "#1e1e2e",
         "menu.selectionForeground": "#cdd6f4",
         "menu.selectionBackground": "#585b70",
         "menu.selectionBorder": "#00000000",
@@ -2481,6 +2481,8 @@
         "debugExceptionWidget.background": "#45475a",
         "debugExceptionWidget.border": "#585b70",
         "activitusbar.inactiveColour": "#000000",
-        "activitusbar.activeColour": "#000000"
+        "activitusbar.activeColour": "#000000",
+        
+        
     }
 }

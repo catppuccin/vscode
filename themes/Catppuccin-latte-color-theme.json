@@ -2271,7 +2271,7 @@
         "statusBar.noFolderBackground": "#8839ef",
         "statusBar.noFolderForeground": "#bcc0cc",
         "statusBarItem.remoteBackground": "#40a02b",
-        "statusBarItem.remoteForeground": "#bcc0cc",
+        "statusBarItem.remoteForeground": "#4c4f69",
         "titleBar.activeBackground": "#eff1f5",
         "titleBar.activeForeground": "#4c4f69",
         "titleBar.inactiveBackground": "#eff1f591",
@@ -2280,7 +2280,7 @@
         "menubar.selectionForeground": "#4c4f69",
         "menubar.selectionBackground": "#bcc0cc",
         "menu.foreground": "#4c4f69",
-        "menu.background": "#bcc0cc",
+        "menu.background": "#eff1f5",
         "menu.selectionForeground": "#4c4f69",
         "menu.selectionBackground": "#acb0be",
         "menu.selectionBorder": "#00000000",
@@ -2483,6 +2483,6 @@
         "debugExceptionWidget.background": "#bcc0cc",
         "debugExceptionWidget.border": "#acb0be",
         "activitusbar.inactiveColour": "#000000",
-        "activitusbar.activeColour": "#000000"
+        "activitusbar.activeColour": "#000000",
     }
 }
