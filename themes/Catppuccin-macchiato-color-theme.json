@@ -2283,7 +2283,7 @@
         "menu.selectionForeground": "#cad3f5",
         "menu.selectionBackground": "#5b6078",
         "menu.selectionBorder": "#00000000",
-        "menu.separatorBackground": "#cad3f5",
+        "menu.separatorBackground": "#5b6078",
         "menu.border": "#00000085",
         "button.background": "#5b6078",
         "button.foreground": "#cad3f5",
@@ -2461,6 +2461,7 @@
         "dropdown.background": "#363a4f",
         "dropdown.foreground": "#cad3f5",
         "dropdown.border": "#00000000",
+        "disabledForeground": "#a5adcb",
         "minimapGutter.addedBackground": "#a6da95",
         "minimapGutter.modifiedBackground": "#91d7e3",
         "minimapGutter.deletedBackground": "#ed8796",
@@ -2480,7 +2481,6 @@
         "editorGutter.commentRangeForeground": "#939ab7",
         "debugExceptionWidget.background": "#494d64",
         "debugExceptionWidget.border": "#5b6078",
-        "activitusbar.inactiveColour": "#000000",
-        "activitusbar.activeColour": "#000000"
+        "list.warningForeground": "#eed49f"
     }
 }
