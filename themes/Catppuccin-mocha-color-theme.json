@@ -740,10 +740,7 @@
         },
         {
             "name": "operator logical",
-            "scope": [
-                "keyword.operator.logical",
-                "keyword.operator.ternary"
-            ],
+            "scope": ["keyword.operator.logical", "keyword.operator.ternary"],
             "settings": {
                 "foreground": "#89dceb",
                 "fontStyle": "bold"
@@ -2331,7 +2328,7 @@
         "editorBracketMatch.border": "#9399b2",
         "editor.foldBackground": "#89b4fa42",
         "editorOverviewRuler.background": "#181825",
-        "editorOverviewRuler.border": "#FFFFFF0F",  
+        "editorOverviewRuler.border": "#FFFFFF0F",
         "editorError.foreground": "#f38ba8",
         "editorError.background": "#B73A3400",
         "editorError.border": "#ffffff00",
@@ -2481,7 +2478,13 @@
         "editorGutter.commentRangeForeground": "#9399b2",
         "debugExceptionWidget.background": "#45475a",
         "debugExceptionWidget.border": "#585b70",
-        "list.warningForeground": "#f9e2af"
-        
+        "list.warningForeground": "#f9e2af",
+        "editorBracketHighlight.foreground1": "#f38ba8",
+        "editorBracketHighlight.foreground2": "#fab387",
+        "editorBracketHighlight.foreground3": "#f9e2af",
+        "editorBracketHighlight.foreground4": "#a6e3a1",
+        "editorBracketHighlight.foreground5": "#74c7ec",
+        "editorBracketHighlight.foreground6": "#cba6f7",
+        "editorBracketHighlight.unexpectedBracket.foreground": "#eba0ac"
     }
 }
