@@ -20,7 +20,7 @@
 
 **Preferred method of installation**
 
-- Install the extension from the [marketplace](https://marketplace.visualstudio.com/items?itemName=Catppuccin.catppuccin-vsc).
+- Install the extension from the [marketplace](https://marketplace.visualstudio.com/items?itemName=Catppuccin.catppuccin-vsc).\
   **OR**
 - Open Visual Studio Code. Launch Quick Open by pressing <kbd>Ctrl+P</kbd> and typing `ext install Catppuccin.catppuccin-vsc`.
 
