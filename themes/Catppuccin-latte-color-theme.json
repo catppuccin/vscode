@@ -2230,7 +2230,7 @@
     "colors": {
         "foreground": "#4c4f69",
         "focusBorder": "#1e66f5",
-        "selection.background": "#9ca0b0",
+        "selection.background": "#acb0be",
         "scrollbar.shadow": "#eff1f5",
         "activityBar.foreground": "#4c4f69",
         "activityBar.background": "#eff1f5",
