@@ -32,6 +32,9 @@
 4. Select the catppuccin theme
 5. Enjoy! :sparkles:
 
+## Note 
+- From the settings, change `window.titleBarStyle` to `custom` for the context menus to be properly rendered according to the theme.
+
 ## Development
 
 1. Open this repository in VSCode
@@ -43,6 +46,8 @@
 -  [VictorTennekes](https://github.com/VictorTennekes)
 -  [Gingeh](https://github.com/Gingeh)
 -  [BrunDerSchwarzmagier](https://github.com/BrunDerSchwarzmagier)
+-  [ghostx31](https://github.com/ghostx31)
+-  [Ren](https://github.com/watatomo)
 &nbsp;
 
 <p align="center"><img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/footers/gray0_ctp_on_line.png" /></p>
