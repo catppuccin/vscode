@@ -439,6 +439,13 @@
             }
         },
         {
+            "name": "C++ Variables",
+            "scope": "variable.other.local.cpp",
+            "settings": {
+                "foreground": "#c6d0f5",
+            }
+        },
+        {
             "name": "C++ Operators",
             "scope": [
                 "punctuation.separator.scope-resolution.cpp",
