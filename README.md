@@ -18,28 +18,36 @@
 
 ## Usage
 
-1. Clone this repository into the extentions folder of VSCode/VSCodium:
-	
-`{version}` = `.vscode` for VSCode or `.vscode-oss`for VSCodium.
+**Preferred method of installation**
 
-* On **Linux / Mac**: `$HOME/{version}/extensions`
-* On **Windows**: `%USERPROFILE%\{version}\extensions`
- 
-2. Open the app
-3. type:
-* **Mac**: CMD+k CMD+t
-* **Linux / Windows**: CTRL+k CTRL+t
-4. Select the catppuccin theme
-5. Enjoy! :sparkles:
+- Install the extension from the [marketplace](https://marketplace.visualstudio.com/items?itemName=Catppuccin.catppuccin-vsc).
+  **OR**
+- Open Visual Studio Code. Launch Quick Open by pressing <kbd>Ctrl+P</kbd> and typing `ext install Catppuccin.catppuccin-vsc`.
+
+**Manual method for installation**
+
+1. Clone this repository into the extensions folder of VSCode:
+    ```
+    git clone https://github.com/catppuccin/vscode.git $HOME/.vscode/extensions/catppuccin-vsc
+    ```
+    Or if you are using VSCodium:
+    ```
+    git clone https://github.com/catppuccin/vscode.git $HOME/.vscode-oss/extensions/catppuccin-vsc
+    ```
+2. Open the app and type:
+   * **macOS**: <kbd>CMD+K</kbd> <kbd>CMD+T</kbd>
+   * **Linux/Windows**: <kbd>CTRL+K</kbd> <kbd>CTRL+T</kbd>
+1. Select theme flavour from the list.
+2. Enjoy! :sparkles:
 
 ## Note 
 - From the settings, change `window.titleBarStyle` to `custom` for the context menus to be properly rendered according to the theme.
 
-## Development
+## Development 
 
-1. Open this repository in VSCode
-2. Press CTRL+f5 (or CMD+f5) to open a new VSCode instance
-3. The instance's theme will update when modified
+1. Clone and open this repository in VSCode.
+2. Press <kbd>Ctrl+F5</kbd> (or <kbd>CMD+F5</kbd>) to open a new VSCode instance.
+3. The new instance's theme elements will update when modifications are performed from the original instance. 
 
 ## 💝 Thanks to
 
