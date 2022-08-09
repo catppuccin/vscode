@@ -647,7 +647,6 @@
                 "markup.fenced_code.block"
             ],
             "settings": {
-                // "foreground": "#81c8be",
                 "foreground": "#a6d189",
                 "fontStyle": "italic"
             }
@@ -1097,7 +1096,6 @@
             "name": "Keyword Control",
             "scope": "keyword.control",
             "settings": {
-                // "foreground": "#e78284"
                 "foreground": "#99d1db"
             }
         },
@@ -2329,7 +2327,6 @@
         "editorBracketMatch.background": "#949cbb14",
         "editorBracketMatch.border": "#949cbb",
         "editor.foldBackground": "#8caaee42",
-        // "editorOverviewRuler.background": "#25252500",
         "editorOverviewRuler.background": "#292c3c",
         "editorOverviewRuler.border": "#FFFFFF0F",
         "editorError.foreground": "#e78284",
@@ -2348,7 +2345,7 @@
         "editorGutter.foldingControlForeground": "#949cbb",
         "editorCodeLens.foreground": "#838ba7",
         "editorGroup.border": "#626880",
-        // test
+        // diff editor colors
         "diffEditor.insertedTextBackground": "#a6d18918",
         "diffEditor.removedTextBackground": "#e782841c",
         "diffEditor.border": "#626880",

@@ -1093,7 +1093,6 @@
             "name": "Keyword Control",
             "scope": "keyword.control",
             "settings": {
-                // "foreground": "#ed8796"
                 "foreground": "#91d7e3"
             }
         },
@@ -1227,7 +1226,6 @@
             "name": "Attributes",
             "scope": "entity.other.attribute-name",
             "settings": {
-                // "foreground": "#eed49f"
                 "foreground": "#8aadf4"
             }
         },
@@ -2259,7 +2257,6 @@
         "listFilterWidget.outline": "#00000000",
         "listFilterWidget.noMatchesOutline": "#ed8796",
         "statusBar.foreground": "#cad3f5",
-        // "statusBar.background": "#494d64",
         "statusBar.background": "#181926",
         "statusBarItem.hoverBackground": "#ffffff1f",
         "statusBar.debuggingBackground": "#ed8796",
@@ -2345,7 +2342,7 @@
         "editorGutter.foldingControlForeground": "#939ab7",
         "editorCodeLens.foreground": "#8087a2",
         "editorGroup.border": "#5b6078",
-        // test
+        // diff editor colors 
         "diffEditor.insertedTextBackground": "#a6da9518",
         "diffEditor.removedTextBackground": "#ed87961c",
         "diffEditor.border": "#5b6078",
