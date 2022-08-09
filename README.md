@@ -46,6 +46,8 @@
 -  [VictorTennekes](https://github.com/VictorTennekes)
 -  [Gingeh](https://github.com/Gingeh)
 -  [BrunDerSchwarzmagier](https://github.com/BrunDerSchwarzmagier)
+-  [ghostx31](https://github.com/ghostx31)
+-  [Ren](https://github.com/watatomo)
 &nbsp;
 
 <p align="center"><img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/footers/gray0_ctp_on_line.png" /></p>
