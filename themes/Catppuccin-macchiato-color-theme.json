@@ -439,6 +439,13 @@
             }
         },
         {
+            "name": "C++ Variables",
+            "scope": "variable.other.local.cpp",
+            "settings": {
+                "foreground": "#cad3f5",
+            }
+        },
+        {
             "name": "C++ Operators",
             "scope": [
                 "punctuation.separator.scope-resolution.cpp",
@@ -2342,7 +2349,7 @@
         "editorGutter.foldingControlForeground": "#939ab7",
         "editorCodeLens.foreground": "#8087a2",
         "editorGroup.border": "#5b6078",
-        // diff editor colors 
+        // diff editor colors
         "diffEditor.insertedTextBackground": "#a6da9518",
         "diffEditor.removedTextBackground": "#ed87961c",
         "diffEditor.border": "#5b6078",
