@@ -2,7 +2,7 @@
   "name": "catppuccin-vsc",
   "displayName": "Catppuccin for VSCode",
   "publisher": "Catppuccin",
-  "description": "Warm mid-tone dark theme to show off your vibrant self!",
+  "description": "Soothing pastel theme for VSCode",
   "version": "2.0.0",
   "engines": {
     "vscode": "^1.13.0"
