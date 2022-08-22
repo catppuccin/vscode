@@ -58,6 +58,58 @@
 1. Select theme flavour from the list.
 2. Enjoy! :sparkles:
 
+### Disable Italics
+
+To prevent any italics from showing, please copy & paste the following configuration into your `settings.json`
+
+```json
+"editor.tokenColorCustomizations": {
+    "textMateRules": [
+      {
+        "scope": [
+          "entity.name.function",
+          "support.function",
+          "variable.parameter.function",
+          "variable.parameter.function-call",
+          "constant.language",
+          "entity.name.function.rust",
+          "keyword.control.rust",
+          "variable.language.rust",
+          "variable.other.rust",
+          "variable.other.lua",
+          "keyword.control.directive",
+          "keyword.other.using.directive",
+          "punctuation.definition.directive",
+          "entity.name.other.preprocessor.macro.predefined.probably",
+          "entity.name.scope-resolution.cpp",
+          "string.quoted.docstring.multi",
+          "string.quoted.multi",
+          "source.python string.quoted.docstring.multi.python punctuation.definition.string.begin.python",
+          "source.python string.quoted.docstring.multi.python punctuation.definition.string.end.python",
+          "source.python string.quoted.multi.python punctuation.definition.string.begin.python",
+          "source.python string.quoted.multi.python punctuation.definition.string.end.python",
+          "markup.fenced_code.block",
+          "meta.function-call.generic.python",
+          "entity.name.function",
+          "meta.require",
+          "support.function.any-method",
+          "variable.function",
+          "markup.italic, punctuation.definition.italic,todo.emphasis",
+          "comment, punctuation.definition.comment",
+          "comment.line.double-slash,comment.block.documentation",
+          "entity.other.attribute-name.js,entity.other.attribute-name.ts,entity.other.attribute-name.jsx,entity.other.attribute-name.tsx,variable.parameter,variable.language.super",
+          "keyword.control.import.python",
+          "storage.type.function.python",
+          "markup.italic.markdown",
+        ],
+        "settings": {
+          "fontStyle": ""
+        }
+      }
+    ]
+  },
+```
+
 ## Note 
 - From the settings, change `window.titleBarStyle` to `custom` for the context menus to be properly rendered according to the theme.
 
