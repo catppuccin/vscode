@@ -1,5 +1,6 @@
 import { variants } from "@catppuccin/palette";
 import { CatppuccinFlavour, CatppuccinPalette, ThemeOptions } from "../types";
+import utils from "../utils";
 
 const flavours = Object.keys(variants) as CatppuccinFlavour[];
 const colours = Object.keys(variants.mocha);
@@ -13,7 +14,9 @@ export const compileTheme = (
     }
 ) => {
     const palette: CatppuccinPalette = {};
-    colours.forEach((colour) => (palette[colour] = variants.mocha[colour].hex));
+    colours.forEach(
+        (colour) => (palette[colour] = variants[flavour][colour].hex)
+    );
     const isLatte = flavour == "latte";
 
     const theme = {
@@ -2664,6 +2667,6 @@ export const compileTheme = (
 export const updateThemes = (options: ThemeOptions, paths) => {
     flavours.map((flavour) => {
         const theme = compileTheme(flavour, options);
-        console.log(paths[flavour], JSON.stringify(theme).length);
+        utils.saveThemeJSON(paths[flavour], theme);
     });
 };
