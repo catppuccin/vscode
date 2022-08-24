@@ -13,7 +13,34 @@ export const compileTheme = (
         italicKeywords: true,
     }
 ) => {
-    const palette: CatppuccinPalette = {};
+    const palette: CatppuccinPalette = {
+        rosewater: "",
+        flamingo: "",
+        pink: "",
+        mauve: "",
+        red: "",
+        maroon: "",
+        peach: "",
+        yellow: "",
+        green: "",
+        teal: "",
+        sky: "",
+        sapphire: "",
+        blue: "",
+        lavender: "",
+        text: "",
+        subtext1: "",
+        subtext0: "",
+        overlay2: "",
+        overlay1: "",
+        overlay0: "",
+        surface2: "",
+        surface1: "",
+        surface0: "",
+        base: "",
+        mantle: "",
+        crust: "",
+    };
     colours.forEach(
         (colour) => (palette[colour] = variants[flavour][colour].hex)
     );
