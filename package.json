@@ -3,9 +3,9 @@
     "displayName": "Catppuccin for VSCode",
     "publisher": "Catppuccin",
     "description": "Soothing pastel theme for VSCode",
-    "version": "2.0.0",
+    "version": "2.1.0",
     "engines": {
-        "vscode": "^1.13.0"
+        "vscode": "^1.70.0"
     },
     "categories": [
         "Themes"
