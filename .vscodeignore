@@ -1,0 +1,14 @@
+.github/
+.husky/
+.vscode-test-web/
+
+*.vsix
+**/*.ts
+dist/hooks
+tsconfig.json
+
+.eslintcache
+.eslintignore
+.eslintrc.js
+.gitignore
+.yarn-error.log
