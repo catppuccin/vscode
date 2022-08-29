@@ -49,3 +49,10 @@ type ThemeOptions = {
     italicComments: boolean;
     italicKeywords: boolean;
 };
+
+type ThemePaths = {
+    latte: string;
+    frappe: string;
+    macchiato: string;
+    mocha: string;
+};

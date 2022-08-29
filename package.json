@@ -122,8 +122,9 @@
         "*.{ts,json,md}": "prettier --write"
     },
     "scripts": {
-        "build:ts": "tsc",
-        "build": "yarn clean && yarn build:ts",
+        "compile": "tsc",
+        "compile:theme": "node ./dist/hooks/generateThemes.js",
+        "build": "yarn clean && yarn compile && yarn compile:theme",
         "clean": "rimraf dist *.vsix",
         "lint": "eslint . --ext .ts",
         "prepare": "husky install"
