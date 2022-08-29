@@ -1,6 +1,12 @@
+import { variants } from "@catppuccin/palette";
 import * as fs from "fs";
+import { compileTheme } from "./theme";
 import { workspace, window, commands } from "vscode";
-import { CatppuccinAccent, ThemeOptions } from "./types";
+import type {
+    CatppuccinAccent,
+    CatppuccinFlavour,
+    ThemeOptions,
+} from "./types";
 
 class Utils {
     private promptToReload() {
@@ -34,6 +40,13 @@ class Utils {
     };
     saveThemeJSON = (path, data: any): void => {
         this.writeFile(path, data).then(this.promptToReload);
+    };
+    updateThemes = (options: ThemeOptions, paths) => {
+        const flavours = Object.keys(variants) as CatppuccinFlavour[];
+        flavours.map((flavour) => {
+            const theme = compileTheme(flavour, options);
+            this.saveThemeJSON(paths[flavour], theme);
+        });
     };
 }
 
