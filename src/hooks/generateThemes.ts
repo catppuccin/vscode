@@ -20,5 +20,5 @@ const flavours = [
 
 flavours.map((flavour) => {
     const theme = compileTheme(flavour, defaultOptions);
-    fs.writeFileSync(paths[flavour], JSON.stringify(theme, null, 2));
+    fs.writeFileSync(paths[flavour], JSON.stringify(theme, null, 4));
 });
