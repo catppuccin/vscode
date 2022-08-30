@@ -125,6 +125,7 @@
         "compile": "tsc",
         "compile:theme": "node ./dist/hooks/generateThemes.js",
         "build": "yarn clean && yarn compile && yarn compile:theme",
+        "postbuild": "prettier -w ./src ./themes",
         "clean": "rimraf dist *.vsix",
         "lint": "eslint . --ext .ts",
         "prepare": "husky install"
