@@ -64,6 +64,7 @@ To prevent any italics from showing, please copy & paste the following configura
 
 ```json
 "editor.tokenColorCustomizations": {
+  "[Catppuccin Frappé][Catppuccin Macchiato][Catppuccin Mocha]": {
     "textMateRules": [
       {
         "scope": [
@@ -94,20 +95,30 @@ To prevent any italics from showing, please copy & paste the following configura
           "meta.require",
           "support.function.any-method",
           "variable.function",
-          "markup.italic, punctuation.definition.italic,todo.emphasis",
-          "comment, punctuation.definition.comment",
-          "comment.line.double-slash,comment.block.documentation",
-          "entity.other.attribute-name.js,entity.other.attribute-name.ts,entity.other.attribute-name.jsx,entity.other.attribute-name.tsx,variable.parameter,variable.language.super",
+          "markup.italic",
+          "punctuation.definition.italic",
+          "todo.emphasis",
+          "comment",
+          "punctuation.definition.comment",
+          "comment.line.double-slash",
+          "comment.block.documentation",
           "keyword.control.import.python",
           "storage.type.function.python",
           "markup.italic.markdown",
+          "entity.other.attribute-name.ts",
+          "entity.other.attribute-name.js",
+          "entity.other.attribute-name.jsx",
+          "entity.other.attribute-name.tsx",
+          "variable.parameter",
+          "variable.language.super"
         ],
         "settings": {
           "fontStyle": ""
         }
       }
     ]
-  },
+  }
+},
 ```
 
 ## Note 
