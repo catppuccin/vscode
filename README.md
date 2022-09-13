@@ -38,9 +38,9 @@
 
 **Preferred method of installation**
 
-- Install the extension from the [marketplace](https://marketplace.visualstudio.com/items?itemName=Catppuccin.catppuccin-vsc).\
-  **OR**
-- Open Visual Studio Code. Launch Quick Open by pressing <kbd>Ctrl+P</kbd> and typing `ext install Catppuccin.catppuccin-vsc`.
+-   Install the extension from the [marketplace](https://marketplace.visualstudio.com/items?itemName=Catppuccin.catppuccin-vsc).\
+    **OR**
+-   Open Visual Studio Code. Launch Quick Open by pressing <kbd>Ctrl+P</kbd> and typing `ext install Catppuccin.catppuccin-vsc`.
 
 **Manual method for installation**
 
@@ -53,10 +53,10 @@
     git clone https://github.com/catppuccin/vscode.git $HOME/.vscode-oss/extensions/catppuccin-vsc
     ```
 2. Open the app and type:
-   * **macOS**: <kbd>CMD+K</kbd> <kbd>CMD+T</kbd>
-   * **Linux/Windows**: <kbd>CTRL+K</kbd> <kbd>CTRL+T</kbd>
-1. Select theme flavour from the list.
-2. Enjoy! :sparkles:
+    - **macOS**: <kbd>CMD+K</kbd> <kbd>CMD+T</kbd>
+    - **Linux/Windows**: <kbd>CTRL+K</kbd> <kbd>CTRL+T</kbd>
+3. Select theme flavour from the list.
+4. Enjoy! :sparkles:
 
 ### Disable Italics
 
@@ -64,6 +64,7 @@ To prevent any italics from showing, please copy & paste the following configura
 
 ```json
 "editor.tokenColorCustomizations": {
+  "[Catppuccin Frappé][Catppuccin Macchiato][Catppuccin Mocha]": {
     "textMateRules": [
       {
         "scope": [
@@ -94,39 +95,50 @@ To prevent any italics from showing, please copy & paste the following configura
           "meta.require",
           "support.function.any-method",
           "variable.function",
-          "markup.italic, punctuation.definition.italic,todo.emphasis",
-          "comment, punctuation.definition.comment",
-          "comment.line.double-slash,comment.block.documentation",
-          "entity.other.attribute-name.js,entity.other.attribute-name.ts,entity.other.attribute-name.jsx,entity.other.attribute-name.tsx,variable.parameter,variable.language.super",
+          "markup.italic",
+          "punctuation.definition.italic",
+          "todo.emphasis",
+          "comment",
+          "punctuation.definition.comment",
+          "comment.line.double-slash",
+          "comment.block.documentation",
           "keyword.control.import.python",
           "storage.type.function.python",
           "markup.italic.markdown",
+          "entity.other.attribute-name.ts",
+          "entity.other.attribute-name.js",
+          "entity.other.attribute-name.jsx",
+          "entity.other.attribute-name.tsx",
+          "variable.parameter",
+          "variable.language.super"
         ],
         "settings": {
           "fontStyle": ""
         }
       }
     ]
-  },
+  }
+},
 ```
 
-## Note 
-- From the settings, change `window.titleBarStyle` to `custom` for the context menus to be properly rendered according to the theme.
+## Note
 
-## Development 
+-   From the settings, change `window.titleBarStyle` to `custom` for the context menus to be properly rendered according to the theme.
+
+## Development
 
 1. Clone and open this repository in VSCode.
 2. Press <kbd>Ctrl+F5</kbd> (or <kbd>CMD+F5</kbd>) to open a new VSCode instance.
-3. The new instance's theme elements will update when modifications are performed from the original instance. 
+3. The new instance's theme elements will update when modifications are performed from the original instance.
 
 ## 💝 Thanks to
 
--  [VictorTennekes](https://github.com/VictorTennekes)
--  [Gingeh](https://github.com/Gingeh)
--  [BrunDerSchwarzmagier](https://github.com/BrunDerSchwarzmagier)
--  [ghostx31](https://github.com/ghostx31)
--  [Ren](https://github.com/watatomo)
-&nbsp;
+-   [VictorTennekes](https://github.com/VictorTennekes)
+-   [Gingeh](https://github.com/Gingeh)
+-   [BrunDerSchwarzmagier](https://github.com/BrunDerSchwarzmagier)
+-   [ghostx31](https://github.com/ghostx31)
+-   [Ren](https://github.com/watatomo)
+    &nbsp;
 
 <p align="center"><img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/footers/gray0_ctp_on_line.png" /></p>
 <p align="center">Copyright &copy; 2021-present <a href="https://github.com/catppuccin" target="_blank">Catppuccin Org</a>
