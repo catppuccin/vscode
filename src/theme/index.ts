@@ -1,4 +1,5 @@
 import { variants } from "@catppuccin/palette";
+import { platform } from "os";
 import { CatppuccinFlavour, CatppuccinPalette, ThemeOptions } from "../types";
 
 const colours = Object.keys(variants.mocha);
@@ -2672,9 +2673,9 @@ export const compileTheme = (
             ),
             "peekViewTitleLabel.foreground": palette.text,
             "icon.foreground": palette.text,
-            "checkbox.background": palette.surface0,
+            "checkbox.background": palette.surface1,
             "checkbox.foreground": palette.text,
-            "checkbox.border": transparent,
+            "checkbox.border": palette.surface1,
             "dropdown.background": palette.surface0,
             "dropdown.foreground": palette.text,
             "dropdown.border": transparent,
