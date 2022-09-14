@@ -1,5 +1,4 @@
 import { variants } from "@catppuccin/palette";
-import { platform } from "os";
 import { CatppuccinFlavour, CatppuccinPalette, ThemeOptions } from "../types";
 
 const colours = Object.keys(variants.mocha);
