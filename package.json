@@ -34,6 +34,16 @@
       }
     ]
   },
+  "extensionKind": [
+    "ui",
+    "workspace"
+  ],
+  "capabilities": {
+    "untrustedWorkspaces": {
+      "supported": true
+    },
+    "virtualWorkspaces": true
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/catppuccin/vscode.git"
