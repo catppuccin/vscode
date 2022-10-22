@@ -2445,7 +2445,7 @@
         "editorCursor.background": "#1e1e2e",
         "editor.selectionBackground": "#585b70",
         "editor.inactiveSelectionBackground": "#00000000",
-        "editorWhitespace.foreground": "#9399b219",
+        "editorWhitespace.foreground": "#9399b266",
         "editor.selectionHighlightBackground": "#9399b266",
         "editor.selectionHighlightBorder": "#89dceb33",
         "editor.findMatchBackground": "#585b70",
