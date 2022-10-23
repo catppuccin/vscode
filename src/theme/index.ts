@@ -2509,7 +2509,7 @@ export const compileTheme = (
             "editorCursor.background": palette.base,
             "editor.selectionBackground": palette.surface2,
             "editor.inactiveSelectionBackground": transparent,
-            "editorWhitespace.foreground": opacity(palette.overlay2, 0.1),
+            "editorWhitespace.foreground": opacity(palette.overlay2, 0.4),
             "editor.selectionHighlightBackground": opacity(
                 palette.overlay2,
                 0.4
