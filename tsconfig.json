@@ -1,13 +1,13 @@
 {
-    "compilerOptions": {
-        "module": "commonjs",
-        "target": "es6",
-        "rootDir": "./src",
-        "outDir": "./dist",
-        "sourceMap": true,
-        "strict": false,
-        "lib": ["es6"]
-    },
-    "include": ["src"],
-    "exclude": ["node_modules"]
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es6",
+    "rootDir": "./src",
+    "outDir": "./dist",
+    "sourceMap": false,
+    "strict": false,
+    "lib": ["es6"]
+  },
+  "include": ["src"],
+  "exclude": ["node_modules"]
 }
