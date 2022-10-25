@@ -2564,6 +2564,7 @@
     "merge.incomingContentBackground": "#243A5E",
     "merge.commonHeaderBackground": "#626880",
     "merge.commonContentBackground": "#51576d",
+    "editorStickyScrollHover.background": "#414559",
     "editorSuggestWidget.background": "#292c3c",
     "editorSuggestWidget.border": "#626880",
     "editorSuggestWidget.foreground": "#c6d0f5",

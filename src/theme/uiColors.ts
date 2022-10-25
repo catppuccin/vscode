@@ -203,6 +203,7 @@ export const getUiColors = (context: ThemeContext) => {
     "merge.incomingContentBackground": "#243A5E",
     "merge.commonHeaderBackground": palette.surface2,
     "merge.commonContentBackground": palette.surface1,
+    "editorStickyScrollHover.background": palette.surface0,
     "editorSuggestWidget.background": palette.mantle,
     "editorSuggestWidget.border": palette.surface2,
     "editorSuggestWidget.foreground": palette.text,
