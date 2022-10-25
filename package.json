@@ -3,34 +3,86 @@
   "displayName": "Catppuccin for VSCode",
   "publisher": "Catppuccin",
   "description": "Soothing pastel theme for VSCode",
-  "version": "2.0.0",
+  "version": "2.1.2",
   "engines": {
-    "vscode": "^1.13.0"
+    "vscode": "^1.70.0"
   },
   "categories": [
     "Themes"
   ],
+  "extensionKind": [
+    "ui",
+    "workspace"
+  ],
+  "activationEvents": [
+    "*"
+  ],
+  "capabilities": {
+    "untrustedWorkspaces": {
+      "supported": true
+    },
+    "virtualWorkspaces": true
+  },
+  "main": "dist/main.js",
   "contributes": {
     "themes": [
       {
         "label": "Catppuccin Mocha",
         "uiTheme": "vs-dark",
-        "path": "./themes/Catppuccin-mocha-color-theme.json"
+        "path": "./themes/mocha.json"
       },
       {
         "label": "Catppuccin Macchiato",
         "uiTheme": "vs-dark",
-        "path": "./themes/Catppuccin-macchiato-color-theme.json"
+        "path": "./themes/macchiato.json"
       },
       {
         "label": "Catppuccin Frappé",
         "uiTheme": "vs-dark",
-        "path": "./themes/Catppuccin-frappe-color-theme.json"
+        "path": "./themes/frappe.json"
       },
       {
         "label": "Catppuccin Latte",
         "uiTheme": "vs",
-        "path": "./themes/Catppuccin-latte-color-theme.json"
+        "path": "./themes/latte.json"
+      }
+    ],
+    "configuration": [
+      {
+        "title": "Catppuccin",
+        "properties": {
+          "catppuccin.italicKeywords": {
+            "type": "boolean",
+            "default": true,
+            "description": "Italicise keywords or not."
+          },
+          "catppuccin.italicComments": {
+            "type": "boolean",
+            "default": true,
+            "description": "Italicise comments or not."
+          },
+          "catppuccin.accentColour": {
+            "type": "string",
+            "default": "mauve",
+            "description": "The colour to use for accents.",
+            "enum": [
+              "rosewater",
+              "flamingo",
+              "pink",
+              "mauve",
+              "red",
+              "maroon",
+              "peach",
+              "yellow",
+              "green",
+              "teal",
+              "sky",
+              "sapphire",
+              "blue",
+              "lavender"
+            ]
+          }
+        }
       }
     ]
   },
@@ -48,5 +100,37 @@
     "publisherId": "e7d2ed61-53e0-4dd4-afbe-f536c3bb4316",
     "id": "69264e4d-cd3b-468a-8f2b-e69673c7d864",
     "isPreReleaseVersion": false
+  },
+  "devDependencies": {
+    "@catppuccin/palette": "^0.1.5",
+    "@types/node": "^18.7.10",
+    "@types/vscode": "^1.70.0",
+    "@typescript-eslint/eslint-plugin": "^5.34.0",
+    "@typescript-eslint/parser": "^5.34.0",
+    "esbuild": "^0.15.12",
+    "eslint": "^8.22.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "husky": ">=6",
+    "lint-staged": ">=10",
+    "prettier": "^2.7.1",
+    "rimraf": "^3.0.2",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.7.4",
+    "vsce": "^2.10.2"
+  },
+  "lint-staged": {
+    "*.ts": "eslint --cache --fix",
+    "*.{ts,json,md}": "prettier --write"
+  },
+  "scripts": {
+    "compile": "node ./build.js",
+    "compile:theme": "ts-node src/hooks/generateThemes.ts",
+    "build": "yarn clean && yarn compile:theme && yarn compile",
+    "postbuild": "prettier -w ./src ./themes",
+    "clean": "rimraf dist *.vsix",
+    "lint": "eslint . --ext .ts",
+    "prepare": "husky install",
+    "package": "vsce package --allow-star-activation --yarn"
   }
 }
