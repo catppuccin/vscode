@@ -4,14 +4,14 @@ import { CatppuccinPalette, ThemeOptions } from "../../types";
 export default function (palette: CatppuccinPalette, options: ThemeOptions) {
   return [
     {
-      name: "[VSCODE-CUSTOM] Markdown headings",
+      name: "Markdown headings",
       scope: "entity.name.section.markdown",
       settings: {
         foreground: palette.teal,
       },
     },
     {
-      name: "[VSCODE-CUSTOM] Markdown heading Punctuation Definition",
+      name: "Markdown heading Punctuation Definition",
       scope: "punctuation.definition.heading.markdown",
       settings: {
         foreground: palette.teal,
@@ -25,42 +25,42 @@ export default function (palette: CatppuccinPalette, options: ThemeOptions) {
       },
     },
     {
-      name: "[VSCODE-CUSTOM] Markdown heading setext",
+      name: "Markdown heading setext",
       scope: "markup.heading.setext",
       settings: {
         foreground: palette.text,
       },
     },
     {
-      name: "[VSCODE-CUSTOM] Markdown Punctuation Definition Bold",
+      name: "Markdown Punctuation Definition Bold",
       scope: "punctuation.definition.bold.markdown",
       settings: {
         foreground: palette.yellow,
       },
     },
     {
-      name: "[VSCODE-CUSTOM] Markdown Inline Raw",
+      name: "Markdown Inline Raw",
       scope: "markup.inline.raw.markdown",
       settings: {
         foreground: palette.green,
       },
     },
     {
-      name: "[VSCODE-CUSTOM] Markdown Inline Raw",
+      name: "Markdown Inline Raw",
       scope: "markup.inline.raw.string.markdown",
       settings: {
         foreground: palette.green,
       },
     },
     {
-      name: "[VSCODE-CUSTOM] Markdown List Punctuation Definition",
+      name: "Markdown List Punctuation Definition",
       scope: "punctuation.definition.list.markdown",
       settings: {
         foreground: palette.teal,
       },
     },
     {
-      name: "[VSCODE-CUSTOM] Markdown Punctuation Definition String",
+      name: "Markdown Punctuation Definition String",
       scope: [
         "punctuation.definition.string.begin.markdown",
         "punctuation.definition.string.end.markdown",
@@ -78,14 +78,14 @@ export default function (palette: CatppuccinPalette, options: ThemeOptions) {
       },
     },
     {
-      name: "[VSCODE-CUSTOM] Markdown Punctuation Definition Link",
+      name: "Markdown Punctuation Definition Link",
       scope: "punctuation.definition.metadata.markdown",
       settings: {
         foreground: palette.teal,
       },
     },
     {
-      name: "[VSCODE-CUSTOM] Markdown Underline Link/Image",
+      name: "Markdown Underline Link/Image",
       scope:
         "markup.underline.link.markdown,markup.underline.link.image.markdown",
       settings: {
@@ -93,7 +93,7 @@ export default function (palette: CatppuccinPalette, options: ThemeOptions) {
       },
     },
     {
-      name: "[VSCODE-CUSTOM] Markdown Link Title/Description",
+      name: "Markdown Link Title/Description",
       scope:
         "string.other.link.title.markdown,string.other.link.description.markdown",
       settings: {
@@ -101,7 +101,7 @@ export default function (palette: CatppuccinPalette, options: ThemeOptions) {
       },
     },
     {
-      name: "[VSCODE-CUSTOM] Markdown Quote",
+      name: "Markdown Quote",
       scope: "markup.quote.markdown",
       settings: {
         foreground: palette.overlay0,

@@ -77,14 +77,14 @@ export default function (palette: CatppuccinPalette, options: ThemeOptions) {
       },
     },
     {
-      name: "JSON property name [VSCODE-CUSTOM]",
+      name: "JSON property name",
       scope: "support.type.property-name.json",
       settings: {
         foreground: palette.teal,
       },
     },
     {
-      name: "[VSCODE-CUSTOM] JSON Punctuation for Property Name",
+      name: "JSON Punctuation for Property Name",
       scope: "support.type.property-name.json punctuation",
       settings: {
         foreground: palette.teal,
