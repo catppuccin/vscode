@@ -28,7 +28,8 @@ export const compileTheme = (
 
   const palette: CatppuccinPalette = {
     ...(ctpPalette as CatppuccinPalette),
-    ...options.colorOverrides,
+    ...options.colorOverrides?.all,
+    ...options.colorOverrides?.[flavour],
   };
 
   const context: ThemeContext = {

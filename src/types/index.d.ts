@@ -44,7 +44,13 @@ export interface CatppuccinPalette {
   crust: string;
 }
 
-export type ColorOverrides = Partial<CatppuccinPalette>;
+export type ColorOverrides = {
+  all?: Partial<CatppuccinPalette>;
+  latte?: Partial<CatppuccinPalette>;
+  frappe?: Partial<CatppuccinPalette>;
+  macchiato?: Partial<CatppuccinPalette>;
+  mocha?: Partial<CatppuccinPalette>;
+};
 
 export type ThemeOptions = {
   accent: CatppuccinAccent;
