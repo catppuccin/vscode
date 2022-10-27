@@ -61,82 +61,37 @@
 3. Select theme flavour from the list.
 4. Enjoy! :sparkles:
 
-### Disable Italics
-
-To prevent any italics from showing, please copy & paste the following
-configuration into your `settings.json`
-
-```json
-"editor.tokenColorCustomizations": {
-  "[Catppuccin Frappé][Catppuccin Macchiato][Catppuccin Mocha]": {
-    "textMateRules": [
-      {
-        "scope": [
-          "entity.name.function",
-          "support.function",
-          "variable.parameter.function",
-          "variable.parameter.function-call",
-          "constant.language",
-          "entity.name.function.rust",
-          "keyword.control.rust",
-          "variable.language.rust",
-          "variable.other.rust",
-          "variable.other.lua",
-          "keyword.control.directive",
-          "keyword.other.using.directive",
-          "punctuation.definition.directive",
-          "entity.name.other.preprocessor.macro.predefined.probably",
-          "entity.name.scope-resolution.cpp",
-          "string.quoted.docstring.multi",
-          "string.quoted.multi",
-          "source.python string.quoted.docstring.multi.python punctuation.definition.string.begin.python",
-          "source.python string.quoted.docstring.multi.python punctuation.definition.string.end.python",
-          "source.python string.quoted.multi.python punctuation.definition.string.begin.python",
-          "source.python string.quoted.multi.python punctuation.definition.string.end.python",
-          "markup.fenced_code.block",
-          "meta.function-call.generic.python",
-          "entity.name.function",
-          "meta.require",
-          "support.function.any-method",
-          "variable.function",
-          "markup.italic",
-          "punctuation.definition.italic",
-          "todo.emphasis",
-          "comment",
-          "punctuation.definition.comment",
-          "comment.line.double-slash",
-          "comment.block.documentation",
-          "keyword.control.import.python",
-          "storage.type.function.python",
-          "markup.italic.markdown",
-          "entity.other.attribute-name.ts",
-          "entity.other.attribute-name.js",
-          "entity.other.attribute-name.jsx",
-          "entity.other.attribute-name.tsx",
-          "variable.parameter",
-          "variable.language.super"
-        ],
-        "settings": {
-          "fontStyle": ""
-        }
-      }
-    ]
-  }
-},
-```
-
 ## Note
 
 - From the settings, change `window.titleBarStyle` to `custom` for the context
   menus to be properly rendered according to the theme.
 
+## 🙋 FAQ (optional)
+
+- Q: **_"How can I disable italics?"_**\
+  A: Open your settings, and look for `Extensions > Catppuccin`. There you can toggle comments for both Keywords & Comments. You'll have to reload your editor once to see changes.
+
+- Q: **_"How can I override palette colours?"_**\
+  A: Open your Command Palette (<kbd>Cmd+Shift+P</kbd> or <kbd>Ctrl+Shift+P</kbd>), and select "Open User Settings (JSON)". Once there, make your changes like this, and reload:
+
+```json
+    // ...your other settings...
+    "catppuccin.colorOverrides": {
+        // OLEDppuccin
+        "mocha": {
+            "base": "#000000",
+            "mantle": "#000000",
+            "crust": "#000000",
+        }
+    }
+```
+
 ## Development
 
 1. Clone and open this repository in VSCode.
-2. Press <kbd>Ctrl+F5</kbd> (or <kbd>CMD+F5</kbd>) to open a new VSCode
-   instance.
-3. The new instance's theme elements will update when modifications are
-   performed from the original instance.
+2. Launch a new instance from "Run and Debug". This will spawn a new instance, which will have the current build of the Theme available.
+3. Make modifications to the JSONs in `./themes` to see the changes immediatly.
+4. To preserve changes, they have to be edited in `./src/theme/*.ts`, since the theme builds the JSONs from there.
 
 ## 💝 Thanks to
 

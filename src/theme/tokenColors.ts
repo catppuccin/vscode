@@ -1,7 +1,7 @@
 import { ThemeContext } from "../types";
 
 export const getTokenColors = (context: ThemeContext) => {
-  const { palette, options, isLatte } = context;
+  const { palette, options } = context;
 
   return [
     {
