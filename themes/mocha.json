@@ -2451,7 +2451,7 @@
     "editor.rangeHighlightBackground": "#89dceb3f",
     "editor.rangeHighlightBorder": "#00000000",
     "editor.hoverHighlightBackground": "#89dceb3f",
-    "editor.wordHighlightStrongBackground": "#585b70",
+    "editor.wordHighlightStrongBackground": "#585b707f",
     "editor.wordHighlightBackground": "#585b70b2",
     "editor.lineHighlightBackground": "#cdd6f411",
     "editor.lineHighlightBorder": "#1e1e2e",
