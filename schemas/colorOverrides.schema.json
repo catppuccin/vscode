@@ -25,7 +25,7 @@
   "definitions": {
     "HexColor": {
       "type": "string",
-      "pattern": "^#([A-Fa-f0-9]){3,8}$"
+      "pattern": "^#([A-Fa-f0-9]){6}$"
     },
     "Overrides": {
       "type": "object",
