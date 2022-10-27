@@ -7,8 +7,7 @@ import {
 } from "../types";
 import { getTokenColors } from "./tokenColors";
 import { getUiColors } from "./uiColors";
-
-const colours = Object.keys(variants.mocha);
+import { capitalize } from "./utils";
 
 export const compileTheme = (
   flavour: CatppuccinFlavour = "mocha",
@@ -16,49 +15,32 @@ export const compileTheme = (
     accent: "mauve",
     italicComments: true,
     italicKeywords: true,
+    colorOverrides: null,
   }
 ) => {
+  const ctpPalette = Object.entries(variants[flavour])
+    .map(([k, v]) => {
+      return {
+        [k as unknown as string]: v.hex,
+      };
+    })
+    .reduce((acc, curr) => ({ ...acc, ...curr }), {});
+
   const palette: CatppuccinPalette = {
-    rosewater: "",
-    flamingo: "",
-    pink: "",
-    mauve: "",
-    red: "",
-    maroon: "",
-    peach: "",
-    yellow: "",
-    green: "",
-    teal: "",
-    sky: "",
-    sapphire: "",
-    blue: "",
-    lavender: "",
-    text: "",
-    subtext1: "",
-    subtext0: "",
-    overlay2: "",
-    overlay1: "",
-    overlay0: "",
-    surface2: "",
-    surface1: "",
-    surface0: "",
-    base: "",
-    mantle: "",
-    crust: "",
+    ...(ctpPalette as CatppuccinPalette),
+    ...options.colorOverrides,
   };
-  colours.forEach(
-    (colour) => (palette[colour] = variants[flavour][colour].hex)
-  );
+
   const context: ThemeContext = {
     palette,
     options,
     isLatte: flavour === "latte",
   };
 
+  const flavourName = `Catppuccin ${capitalize(flavour)}`;
+
   const theme = {
-    name: `Catppuccin ${
-      flavour.charAt(0).toUpperCase() + flavour.substring(1)
-    }`,
+    name: flavourName,
     type: context.isLatte ? "light" : "dark",
     semanticHighlighting: true,
     semanticTokenColors: {

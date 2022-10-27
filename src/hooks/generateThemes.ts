@@ -7,6 +7,7 @@ const defaultOptions: ThemeOptions = {
   accent: "mauve",
   italicComments: true,
   italicKeywords: true,
+  colorOverrides: undefined,
 };
 
 const paths = getThemePaths();
