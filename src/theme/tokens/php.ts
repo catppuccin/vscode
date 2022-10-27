@@ -12,16 +12,22 @@ export default function (palette: CatppuccinPalette, options: ThemeOptions) {
     },
     {
       name: "laravel blade tag",
-      scope:
-        "text.html.laravel-blade source.php.embedded.line.html entity.name.tag.laravel-blade",
+      scope: [
+        "entity.name.tag.laravel-blade",
+        "source.php.embedded.line.html",
+        "text.html.laravel-blade",
+      ],
       settings: {
         foreground: palette.red,
       },
     },
     {
       name: "laravel blade @",
-      scope:
-        "text.html.laravel-blade source.php.embedded.line.html support.constant.laravel-blade",
+      scope: [
+        "source.php.embedded.line.html",
+        "support.constant.laravel-blade",
+        "text.html.laravel-blade",
+      ],
       settings: {
         foreground: palette.red,
       },
@@ -29,11 +35,11 @@ export default function (palette: CatppuccinPalette, options: ThemeOptions) {
     {
       name: "use statement for other classes",
       scope: [
-        "support.other.namespace.use.php",
-        "support.other.namespace.use-as.php",
-        "support.other.namespace.php",
         "entity.other.alias.php",
         "meta.interface.php",
+        "support.other.namespace.php",
+        "support.other.namespace.use-as.php",
+        "support.other.namespace.use.php",
       ],
       settings: {
         foreground: palette.peach,
@@ -77,10 +83,10 @@ export default function (palette: CatppuccinPalette, options: ThemeOptions) {
     {
       name: "php types",
       scope: [
-        "storage.type.php",
-        "meta.other.type.phpdoc.php",
-        "keyword.other.type.php",
         "keyword.other.array.phpdoc.php",
+        "keyword.other.type.php",
+        "meta.other.type.phpdoc.php",
+        "storage.type.php",
       ],
       settings: {
         foreground: palette.peach,
@@ -88,8 +94,11 @@ export default function (palette: CatppuccinPalette, options: ThemeOptions) {
     },
     {
       name: "php call-function",
-      scope:
-        "meta.function-call.php,meta.function-call.object.php,meta.function-call.static.php",
+      scope: [
+        "meta.function-call.object.php",
+        "meta.function-call.php",
+        "meta.function-call.static.php",
+      ],
       settings: {
         foreground: palette.blue,
       },
@@ -97,26 +106,26 @@ export default function (palette: CatppuccinPalette, options: ThemeOptions) {
     {
       name: "php function-resets",
       scope: [
-        "punctuation.definition.parameters.begin.bracket.round.php",
-        "punctuation.definition.parameters.end.bracket.round.php",
-        "punctuation.separator.delimiter.php",
-        "punctuation.section.scope.begin.php",
-        "punctuation.section.scope.end.php",
-        "punctuation.terminator.expression.php",
         "punctuation.definition.arguments.begin.bracket.round.php",
         "punctuation.definition.arguments.end.bracket.round.php",
-        "punctuation.definition.storage-type.begin.bracket.round.php",
-        "punctuation.definition.storage-type.end.bracket.round.php",
         "punctuation.definition.array.begin.bracket.round.php",
         "punctuation.definition.array.end.bracket.round.php",
-        "punctuation.definition.begin.bracket.round.php",
-        "punctuation.definition.end.bracket.round.php",
         "punctuation.definition.begin.bracket.curly.php",
+        "punctuation.definition.begin.bracket.round.php",
         "punctuation.definition.end.bracket.curly.php",
-        "punctuation.definition.section.switch-block.end.bracket.curly.php",
-        "punctuation.definition.section.switch-block.start.bracket.curly.php",
+        "punctuation.definition.end.bracket.round.php",
+        "punctuation.definition.parameters.begin.bracket.round.php",
+        "punctuation.definition.parameters.end.bracket.round.php",
         "punctuation.definition.section.switch-block.begin.bracket.curly.php",
         "punctuation.definition.section.switch-block.end.bracket.curly.php",
+        "punctuation.definition.section.switch-block.end.bracket.curly.php",
+        "punctuation.definition.section.switch-block.start.bracket.curly.php",
+        "punctuation.definition.storage-type.begin.bracket.round.php",
+        "punctuation.definition.storage-type.end.bracket.round.php",
+        "punctuation.section.scope.begin.php",
+        "punctuation.section.scope.end.php",
+        "punctuation.separator.delimiter.php",
+        "punctuation.terminator.expression.php",
       ],
       settings: {
         foreground: palette.text,
@@ -125,10 +134,10 @@ export default function (palette: CatppuccinPalette, options: ThemeOptions) {
     {
       name: "support php constants",
       scope: [
-        "support.constant.ext.php",
-        "support.constant.std.php",
         "support.constant.core.php",
+        "support.constant.ext.php",
         "support.constant.parser-token.php",
+        "support.constant.std.php",
       ],
       settings: {
         foreground: palette.yellow,
@@ -136,15 +145,18 @@ export default function (palette: CatppuccinPalette, options: ThemeOptions) {
     },
     {
       name: "php goto",
-      scope: "entity.name.goto-label.php,support.other.php",
+      scope: ["entity.name.goto-label.php", "support.other.php"],
       settings: {
         foreground: palette.blue,
       },
     },
     {
       name: "php logical/bitwise operator",
-      scope:
-        "keyword.operator.logical.php,keyword.operator.bitwise.php,keyword.operator.arithmetic.php",
+      scope: [
+        "keyword.operator.logical.php",
+        "keyword.operator.bitwise.php",
+        "keyword.operator.arithmetic.php",
+      ],
       settings: {
         foreground: palette.sky,
       },
@@ -165,7 +177,7 @@ export default function (palette: CatppuccinPalette, options: ThemeOptions) {
     },
     {
       name: "php heredoc/nowdoc",
-      scope: "keyword.operator.heredoc.php,keyword.operator.nowdoc.php",
+      scope: ["keyword.operator.heredoc.php", "keyword.operator.nowdoc.php"],
       settings: {
         foreground: palette.red,
       },
