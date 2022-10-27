@@ -194,8 +194,6 @@ export default function (palette: CatppuccinPalette, options: ThemeOptions) {
         "entity.other.attribute-name.ts",
         "entity.other.attribute-name.jsx",
         "entity.other.attribute-name.tsx",
-        "variable.parameter",
-        "variable.language.super",
       ],
       settings: {
         fontStyle: options.italicKeywords ? "italic" : "",

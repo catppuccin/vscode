@@ -27,7 +27,7 @@ export const getTokenColors = (context: ThemeContext) => {
         "variable.parameter.function-call",
       ],
       settings: {
-        foreground: palette.pink,
+        foreground: palette.maroon,
         fontStyle: options.italicKeywords ? "italic" : "",
       },
     },
@@ -49,7 +49,6 @@ export const getTokenColors = (context: ThemeContext) => {
     {
       name: "All conditionals",
       scope: [
-        "keyword.control",
         "keyword.control.for",
         "keyword.control.while",
         "keyword.control.if",
@@ -84,7 +83,7 @@ export const getTokenColors = (context: ThemeContext) => {
       name: "All namespace",
       scope: "entity.name.namespace",
       settings: {
-        foreground: palette.rosewater,
+        foreground: palette.text,
       },
     },
     {
@@ -355,13 +354,6 @@ export const getTokenColors = (context: ThemeContext) => {
       },
     },
     {
-      name: "Namespaces",
-      scope: "entity.name.namespace",
-      settings: {
-        foreground: palette.peach,
-      },
-    },
-    {
       name: "Language variables",
       scope: "variable.language",
       settings: {
@@ -403,13 +395,6 @@ export const getTokenColors = (context: ThemeContext) => {
       },
     },
     {
-      name: "Classes",
-      scope: "support.class, entity.name.type.class",
-      settings: {
-        foreground: palette.peach,
-      },
-    },
-    {
       name: "Class name",
       scope: "entity.name.class.identifier.namespace.type",
       settings: {
@@ -428,17 +413,10 @@ export const getTokenColors = (context: ThemeContext) => {
       },
     },
     {
-      name: "Type Name",
-      scope: "entity.name.type",
-      settings: {
-        foreground: palette.peach,
-      },
-    },
-    {
       name: "Keyword Control",
       scope: "keyword.control",
       settings: {
-        foreground: palette.sky,
+        foreground: palette.mauve,
       },
     },
     {

@@ -30,14 +30,6 @@ export default function (palette: CatppuccinPalette, options: ThemeOptions) {
       },
     },
     {
-      name: "python keyword import",
-      scope: "keyword.control.import.python",
-      settings: {
-        foreground: palette.teal,
-        fontStyle: options.italicKeywords ? "italic" : "",
-      },
-    },
-    {
       name: "python keyword flow",
       scope: "keyword.control.flow.python",
       settings: {
@@ -49,8 +41,7 @@ export default function (palette: CatppuccinPalette, options: ThemeOptions) {
       name: "python storage type",
       scope: "storage.type.function.python",
       settings: {
-        foreground: palette.maroon,
-        fontStyle: options.italicKeywords ? "italic" : "",
+        foreground: palette.mauve,
       },
     },
     {
@@ -104,18 +95,24 @@ export default function (palette: CatppuccinPalette, options: ThemeOptions) {
       },
     },
     {
-      name: "python function-call.generic",
-      scope: "meta.function-call.generic.python",
-      settings: {
-        foreground: palette.blue,
-        fontStyle: options.italicKeywords ? "italic" : "",
-      },
-    },
-    {
       name: "python placeholder reset to normal string",
       scope: "constant.character.format.placeholder.other.python",
       settings: {
-        foreground: palette.yellow,
+        foreground: palette.pink,
+      },
+    },
+    {
+      name: "python exception",
+      scope: "support.type.exception.python",
+      settings: {
+        foreground: palette.peach,
+      },
+    },
+    {
+      name: "entity.name.type",
+      scope: "entity.name.type",
+      settings: {
+        foreground: palette.peach,
       },
     },
   ];

@@ -62,6 +62,9 @@ export const compileTheme = (
       "variable.defaultLibrary": {
         foreground: palette.peach,
       },
+      parameter: {
+        foreground: palette.maroon,
+      },
     },
     tokenColors: getTokenColors(context),
     colors: getUiColors(context),
