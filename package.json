@@ -64,13 +64,13 @@
           "catppuccin.colorOverrides": {
             "type": "object",
             "default": {},
-            "description": "Custom Color Overrides",
+            "description": "Custom color overrides",
             "$ref": "https://raw.githubusercontent.com/catppuccin/vscode/main/schemas/colorOverrides.schema.json"
           },
-          "catppuccin.accentColour": {
+          "catppuccin.accentColor": {
             "type": "string",
             "default": "mauve",
-            "description": "The colour to use for accents.",
+            "description": "The color to use for accents.",
             "enum": [
               "rosewater",
               "flamingo",

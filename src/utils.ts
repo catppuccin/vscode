@@ -31,7 +31,7 @@ class Utils {
   getConfiguration = (): ThemeOptions => {
     const workspaceConfiguration = workspace.getConfiguration("catppuccin");
     return {
-      accent: workspaceConfiguration.get<CatppuccinAccent>("accentColour"),
+      accent: workspaceConfiguration.get<CatppuccinAccent>("accentColor"),
       italicKeywords: workspaceConfiguration.get<boolean>("italicKeywords"),
       italicComments: workspaceConfiguration.get<boolean>("italicComments"),
       colorOverrides:
