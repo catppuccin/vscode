@@ -1,4 +1,5 @@
 assets/
+schemas/
 .github/
 .husky/
 .vscode-test-web/
