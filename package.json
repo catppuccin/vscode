@@ -54,12 +54,12 @@
           "catppuccin.italicKeywords": {
             "type": "boolean",
             "default": true,
-            "description": "Italicise keywords or not."
+            "description": "Toggle italics for keywords."
           },
           "catppuccin.italicComments": {
             "type": "boolean",
             "default": true,
-            "description": "Italicise comments or not."
+            "description": "Toggle italics for comments."
           },
           "catppuccin.colorOverrides": {
             "type": "object",
