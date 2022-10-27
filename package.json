@@ -62,12 +62,10 @@
             "description": "Italicise comments or not."
           },
           "catppuccin.colorOverrides": {
-            "type": [
-              "object",
-              "null"
-            ],
-            "default": null,
-            "description": "Color Overrides"
+            "type": "object",
+            "default": {},
+            "description": "Custom Color Overrides",
+            "$ref": "https://raw.githubusercontent.com/catppuccin/vscode/main/schemas/colorOverrides.schema.json"
           },
           "catppuccin.accentColour": {
             "type": "string",

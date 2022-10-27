@@ -1,0 +1,117 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "type": "object",
+  "additionalProperties": false,
+  "description": "Color Overrides",
+  "default": {},
+  "properties": {
+    "all": {
+      "$ref": "#/definitions/Overrides"
+    },
+    "latte": {
+      "$ref": "#/definitions/Overrides"
+    },
+    "frappe": {
+      "$ref": "#/definitions/Overrides"
+    },
+    "macchiato": {
+      "$ref": "#/definitions/Overrides"
+    },
+    "mocha": {
+      "$ref": "#/definitions/Overrides"
+    }
+  },
+  "required": [],
+  "definitions": {
+    "HexColor": {
+      "type": "string",
+      "pattern": "^#([A-Fa-f0-9]){3,8}$"
+    },
+    "Overrides": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "base": {
+          "$ref": "#/definitions/HexColor"
+        },
+        "mantle": {
+          "$ref": "#/definitions/HexColor"
+        },
+        "crust": {
+          "$ref": "#/definitions/HexColor"
+        },
+        "overlay0": {
+          "$ref": "#/definitions/HexColor"
+        },
+        "overlay1": {
+          "$ref": "#/definitions/HexColor"
+        },
+        "overlay2": {
+          "$ref": "#/definitions/HexColor"
+        },
+        "surface0": {
+          "$ref": "#/definitions/HexColor"
+        },
+        "surface1": {
+          "$ref": "#/definitions/HexColor"
+        },
+        "surface2": {
+          "$ref": "#/definitions/HexColor"
+        },
+        "subtext0": {
+          "$ref": "#/definitions/HexColor"
+        },
+        "subtext1": {
+          "$ref": "#/definitions/HexColor"
+        },
+        "text": {
+          "$ref": "#/definitions/HexColor"
+        },
+        "rosewater": {
+          "$ref": "#/definitions/HexColor"
+        },
+        "flamingo": {
+          "$ref": "#/definitions/HexColor"
+        },
+        "pink": {
+          "$ref": "#/definitions/HexColor"
+        },
+        "mauve": {
+          "$ref": "#/definitions/HexColor"
+        },
+        "red": {
+          "$ref": "#/definitions/HexColor"
+        },
+        "maroon": {
+          "$ref": "#/definitions/HexColor"
+        },
+        "peach": {
+          "$ref": "#/definitions/HexColor"
+        },
+        "yellow": {
+          "$ref": "#/definitions/HexColor"
+        },
+        "green": {
+          "$ref": "#/definitions/HexColor"
+        },
+        "teal": {
+          "$ref": "#/definitions/HexColor"
+        },
+        "sky": {
+          "$ref": "#/definitions/HexColor"
+        },
+        "sapphire": {
+          "$ref": "#/definitions/HexColor"
+        },
+        "blue": {
+          "$ref": "#/definitions/HexColor"
+        },
+        "lavender": {
+          "$ref": "#/definitions/HexColor"
+        }
+      },
+      "required": [],
+      "title": "Overrides"
+    }
+  }
+}
