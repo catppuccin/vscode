@@ -92,7 +92,7 @@ export const getUiColors = (context: ThemeContext) => {
     "editor.rangeHighlightBackground": opacity(palette.sky, 0.25),
     "editor.rangeHighlightBorder": transparent,
     "editor.hoverHighlightBackground": opacity(palette.sky, 0.25),
-    "editor.wordHighlightStrongBackground": palette.surface2,
+    "editor.wordHighlightStrongBackground": opacity(palette.surface2, 0.5),
     "editor.wordHighlightBackground": opacity(palette.surface2, 0.7),
     "editor.lineHighlightBackground": opacity(palette.text, 0.07),
     "editor.lineHighlightBorder": palette.base,
