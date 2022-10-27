@@ -1,5 +1,6 @@
 dist/
 node_modules/
+themes/
 .eslintcache
 .yarn-error.log
 *.vsix

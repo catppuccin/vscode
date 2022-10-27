@@ -2,6 +2,7 @@ import { compileTheme } from "../theme";
 import { CatppuccinFlavour, ThemeOptions } from "../types";
 import { getThemePaths } from "../helpers";
 import * as fs from "fs";
+import path = require("path");
 
 const defaultOptions: ThemeOptions = {
   accent: "mauve",
@@ -21,5 +22,8 @@ const flavours = [
 
 flavours.map((flavour) => {
   const theme = compileTheme(flavour, defaultOptions);
-  fs.writeFileSync(paths[flavour], JSON.stringify(theme, null, 2));
+  // ignore error if directory exists
+  fs.mkdir(path.dirname(paths[flavour]), (_) => {
+    fs.writeFileSync(paths[flavour], JSON.stringify(theme, null, 2));
+  });
 });
