@@ -1,18 +1,22 @@
-import { workspace, window, ConfigurationChangeEvent } from "vscode";
+import { workspace, ConfigurationChangeEvent } from "vscode";
 import { getThemePaths } from "./helpers";
-import utils from "./utils";
+import utils, { UpdateTrigger } from "./utils";
 
 export const activate = () => {
+  const config = utils.getConfiguration();
+  const paths = getThemePaths();
+
+  // regenerate the theme files when the config changes
   workspace.onDidChangeConfiguration((event: ConfigurationChangeEvent) => {
     if (event.affectsConfiguration("catppuccin")) {
-      const config = utils.getConfiguration();
-      const paths = getThemePaths();
-      utils.updateThemes(config, paths);
-      window.showInformationMessage(
-        "Catppuccin Configuration changed, re-generating the JSON theme."
-      );
+      utils.updateThemes(config, paths, UpdateTrigger.CONFIG_CHANGE);
     }
   });
+
+  // regenerate on a fresh install if non-default config is set
+  if (utils.isFreshInstall() && !utils.isDefaultConfig()) {
+    utils.updateThemes(config, paths, UpdateTrigger.FRESH_INSTALL);
+  }
 };
 
 export const deactivate = () => {};
