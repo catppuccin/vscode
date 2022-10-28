@@ -4,7 +4,7 @@ on:
 
 name: Lint & Build Artifact
 jobs:
-  publish:
+  lint-and-build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -28,5 +28,5 @@ jobs:
       - name: Upload Artifact
         uses: actions/upload-artifact@v3
         with:
-          name: catppuccin-vsc-${{ env.GITHUB_SHA }}.vsix
+          name: catppuccin-vsc.vsix
           path: ${{ steps.packageExtension.outputs.vsixPath }}
