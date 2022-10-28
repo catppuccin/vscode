@@ -1,0 +1,32 @@
+on:
+  - push
+  - pull_request
+
+name: Lint & Build Artifact
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+          cache: yarn
+      - name: Install dependencies & build
+        run: |
+          yarn install --frozen-lockfile
+          yarn build
+      - name: Lint
+        run: yarn lint
+      - name: Package Extension
+        id: packageExtension
+        uses: HaaLeo/publish-vscode-extension@v1
+        with:
+          yarn: true
+          pat: stub
+          dryRun: true
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: catppuccin-vsc-${{ env.GITHUB_SHA }}.vsix
+          path: ${{ steps.packageExtension.outputs.vsixPath }}
