@@ -166,7 +166,7 @@ export const getUiColors = (context: ThemeContext) => {
     "extensionButton.prominentForeground": palette.crust,
     "extensionButton.prominentBackground": accent,
     "extensionButton.prominentHoverBackground": shade(accent, 0.2),
-    "extensionBadge.remoteBackground": palette.sky,
+    "extensionBadge.remoteBackground": palette.blue,
     "extensionBadge.remoteForeground": palette.crust,
     "extensionIcon.starForeground": palette.yellow,
     "extensionIcon.verifiedForeground": palette.green,
@@ -308,11 +308,11 @@ export const getUiColors = (context: ThemeContext) => {
     // having no folder open shouldn't change the bar
     "statusBar.noFolderBackground": palette.crust,
     "statusBar.noFolderForeground": palette.text,
-    // debugging is red
-    "statusBar.debuggingBackground": palette.red,
+    // debugging is peach
+    "statusBar.debuggingBackground": palette.peach,
     "statusBar.debuggingForeground": palette.crust,
-    // remote is sky
-    "statusBarItem.remoteBackground": palette.sky,
+    // remote is blue
+    "statusBarItem.remoteBackground": palette.blue,
     "statusBarItem.remoteForeground": palette.crust,
     // different states
     "statusBarItem.activeBackground": opacity(palette.surface2, 0.4),
