@@ -1,14 +1,18 @@
-assets/
-schemas/
 .github/
 .husky/
+.vscode/
 .vscode-test-web/
+
+assets/
+schemas/
+themes/.flag
 
 *.vsix
 **/*.ts
-dist/hooks
+build.js
 tsconfig.json
 
+.editorconfig
 .eslintcache
 .eslintignore
 .eslintrc.js

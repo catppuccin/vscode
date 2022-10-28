@@ -9,14 +9,16 @@ import { getTokenColors } from "./tokenColors";
 import { getUiColors } from "./uiColors";
 import { capitalize } from "./utils";
 
+export const defaultOptions: ThemeOptions = {
+  accent: "mauve",
+  italicComments: true,
+  italicKeywords: true,
+  colorOverrides: {},
+};
+
 export const compileTheme = (
   flavour: CatppuccinFlavour = "mocha",
-  options: ThemeOptions = {
-    accent: "mauve",
-    italicComments: true,
-    italicKeywords: true,
-    colorOverrides: null,
-  }
+  options: ThemeOptions = defaultOptions
 ) => {
   const ctpPalette = Object.entries(variants[flavour])
     .map(([k, v]) => {
