@@ -51,7 +51,7 @@ export const getUiColors = (context: ThemeContext) => {
     "badge.foreground": palette.text,
 
     "breadcrumb.activeSelectionForeground": accent,
-    "breadcrumb.background": palette.crust,
+    "breadcrumb.background": palette.mantle,
     "breadcrumb.focusForeground": accent,
     "breadcrumb.foreground": opacity(palette.text, 0.8),
     "breadcrumbPicker.background": palette.mantle,
@@ -149,7 +149,7 @@ export const getUiColors = (context: ThemeContext) => {
     "editorGroup.border": palette.surface2,
     "editorGroup.dropBackground": dropBackground,
     "editorGroup.emptyBackground": palette.base,
-    "editorGroupHeader.tabsBackground": palette.crust,
+    "editorGroupHeader.tabsBackground": palette.mantle,
     "editorGutter.addedBackground": palette.green,
     "editorGutter.background": palette.base,
     "editorGutter.commentRangeForeground": palette.overlay2,
@@ -324,10 +324,10 @@ export const getUiColors = (context: ThemeContext) => {
     "sideBar.background": palette.mantle,
     "sideBar.dropBackground": dropBackground,
     "sideBar.foreground": palette.text,
-    "sideBarSectionHeader.background": palette.crust,
+    "sideBarSectionHeader.background": palette.mantle,
     "sideBarSectionHeader.foreground": palette.text,
     "sideBarTitle.foreground": accent,
-    "sideBarTitle.background": palette.crust,
+    "sideBarTitle.background": palette.mantle,
 
     // Status Bar
     "statusBar.background": palette.crust,
@@ -364,7 +364,7 @@ export const getUiColors = (context: ThemeContext) => {
     "tab.activeBorder": accent,
     "tab.activeBorderTop": transparent,
     "tab.activeForeground": accent,
-    "tab.border": palette.mantle,
+    "tab.border": palette.base,
     "tab.inactiveBackground": palette.mantle,
     "tab.inactiveForeground": palette.overlay0,
 
