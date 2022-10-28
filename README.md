@@ -38,33 +38,22 @@
 
 **Preferred method of installation**
 
-- Install the extension from the
-  [marketplace](https://marketplace.visualstudio.com/items?itemName=Catppuccin.catppuccin-vsc).
-  \
-  **OR**
-- Open Visual Studio Code. Launch Quick Open by pressing <kbd>Ctrl+P</kbd> and
-  typing `ext install Catppuccin.catppuccin-vsc`.
+Install the extension from a Marketplace:
+
+- [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=Catppuccin.catppuccin-vsc)
+- [Open-VSX](https://open-vsx.org/extension/Catppuccin/catppuccin-vsc)
 
 **Manual method for installation**
 
-1. Clone this repository into the extensions folder of VSCode:
-   ```
-   git clone https://github.com/catppuccin/vscode.git $HOME/.vscode/extensions/catppuccin-vsc
-   ```
-   Or if you are using VSCodium:
-   ```
-   git clone https://github.com/catppuccin/vscode.git $HOME/.vscode-oss/extensions/catppuccin-vsc
-   ```
-2. Open the app and type:
-   - **macOS**: <kbd>CMD+K</kbd> <kbd>CMD+T</kbd>
-   - **Linux/Windows**: <kbd>CTRL+K</kbd> <kbd>CTRL+T</kbd>
-3. Select theme flavour from the list.
-4. Enjoy! :sparkles:
+Download the VSIX from
+[the latest GitHub release](https://github.com/catppuccin/vscode/releases/latest).
+Open the Command Palette, and select "Extensions: Install from VSIX...", then
+open the file you just downloaded.
 
-## Note
+> **Note**
 
-- From the settings, change `window.titleBarStyle` to `custom` for the context
-  menus to be properly rendered according to the theme.
+From the settings, change `window.titleBarStyle` to `custom` for the context
+menus to be properly rendered according to the theme.
 
 ## 🙋 FAQ (optional)
 
