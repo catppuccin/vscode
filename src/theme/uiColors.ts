@@ -231,10 +231,10 @@ export const getUiColors = (context: ThemeContext) => {
 
     "merge.commonContentBackground": palette.surface1,
     "merge.commonHeaderBackground": palette.surface2,
-    "merge.currentContentBackground": "#27403B",
-    "merge.currentHeaderBackground": "#158472",
-    "merge.incomingContentBackground": "#243A5E",
-    "merge.incomingHeaderBackground": "#395F8F",
+    "merge.currentContentBackground": opacity(palette.green, 0.2),
+    "merge.currentHeaderBackground": opacity(palette.green, 0.4),
+    "merge.incomingContentBackground": opacity(palette.blue, 0.2),
+    "merge.incomingHeaderBackground": opacity(palette.blue, 0.4),
 
     "minimap.background": palette.mantle,
     "minimap.errorHighlight": palette.red,
