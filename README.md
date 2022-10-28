@@ -55,12 +55,12 @@ open the file you just downloaded.
 From the settings, change `window.titleBarStyle` to `custom` for the context
 menus to be properly rendered according to the theme.
 
-## 🙋 FAQ (optional)
+## 🙋 FAQ
 
-- Q: **_"How can I disable italics?"_**\
+- <strong>Q</strong>: <strong><em>"How can I disable italics?"</em></strong>\
   A: Open your settings, and look for `Extensions > Catppuccin`. There you can toggle comments for both Keywords & Comments. You'll have to reload your editor once to see changes.
 
-- Q: **_"How can I override palette colours?"_**\
+- <strong>Q</strong>: <strong><em>"How can I override palette colours?"</strong></em>\
   A: Open your Command Palette (<kbd>Cmd+Shift+P</kbd> or <kbd>Ctrl+Shift+P</kbd>), and select "Open User Settings (JSON)". Once there, make your changes like this, and reload:
 
 ```json
