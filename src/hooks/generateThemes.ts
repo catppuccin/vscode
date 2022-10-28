@@ -23,7 +23,7 @@ const flavours = [
 flavours.map((flavour) => {
   const theme = compileTheme(flavour, defaultOptions);
   // ignore error if directory exists
-  fs.mkdir(path.dirname(paths[flavour]), (_) => {
+  fs.mkdir(path.dirname(paths[flavour]), () => {
     fs.writeFileSync(paths[flavour], JSON.stringify(theme, null, 2));
   });
 });
