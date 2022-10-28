@@ -56,6 +56,7 @@ export type ThemeOptions = {
   accent: CatppuccinAccent;
   italicComments: boolean;
   italicKeywords: boolean;
+  boldKeywords: boolean;
   colorOverrides: ColorOverrides;
 };
 

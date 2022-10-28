@@ -11,6 +11,7 @@ import { capitalize } from "./utils";
 
 export const defaultOptions: ThemeOptions = {
   accent: "mauve",
+  boldKeywords: true,
   italicComments: true,
   italicKeywords: true,
   colorOverrides: {},
