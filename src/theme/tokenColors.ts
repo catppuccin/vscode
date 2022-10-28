@@ -35,7 +35,7 @@ export const getTokenColors = (context: ThemeContext) => {
       scope: ["constant.numeric.decimal", "constant.numeric.integer"],
       settings: {
         foreground: palette.peach,
-        fontStyle: "bold",
+        fontStyle: options.boldKeywords ? "bold" : "",
       },
     },
     {
@@ -58,7 +58,7 @@ export const getTokenColors = (context: ThemeContext) => {
       ],
       settings: {
         foreground: palette.red,
-        fontStyle: "bold",
+        fontStyle: options.boldKeywords ? "bold" : "",
       },
     },
     {
@@ -99,7 +99,7 @@ export const getTokenColors = (context: ThemeContext) => {
       ],
       settings: {
         foreground: palette.sky,
-        fontStyle: "bold",
+        fontStyle: options.boldKeywords ? "bold" : "",
       },
     },
     {
@@ -304,7 +304,9 @@ export const getTokenColors = (context: ThemeContext) => {
       scope: "keyword.control.rust",
       settings: {
         foreground: palette.mauve,
-        fontStyle: options.italicKeywords ? "bold italic" : "",
+        fontStyle: `${options.boldKeywords && "bold"} ${
+          options.italicKeywords && "italic"
+        }`,
       },
     },
     {
@@ -362,7 +364,7 @@ export const getTokenColors = (context: ThemeContext) => {
       ],
       settings: {
         foreground: palette.teal,
-        fontStyle: "bold",
+        fontStyle: options.boldKeywords ? "bold" : "",
       },
     },
     {
@@ -414,7 +416,7 @@ export const getTokenColors = (context: ThemeContext) => {
       scope: "keyword.operator.lua",
       settings: {
         foreground: palette.sky,
-        fontStyle: "bold",
+        fontStyle: options.boldKeywords ? "bold" : "",
       },
     },
     {
@@ -422,7 +424,7 @@ export const getTokenColors = (context: ThemeContext) => {
       scope: "constant.numeric.integer.lua",
       settings: {
         foreground: palette.peach,
-        fontStyle: "bold",
+        fontStyle: options.boldKeywords ? "bold" : "",
       },
     },
     {
@@ -449,7 +451,7 @@ export const getTokenColors = (context: ThemeContext) => {
       scope: "punctuation.terminator.statement.cpp",
       settings: {
         foreground: palette.teal,
-        fontStyle: "bold",
+        fontStyle: options.boldKeywords ? "bold" : "",
       },
     },
     {
@@ -468,7 +470,7 @@ export const getTokenColors = (context: ThemeContext) => {
       ],
       settings: {
         foreground: palette.sky,
-        fontStyle: "bold",
+        fontStyle: options.boldKeywords ? "bold" : "",
       },
     },
     {
@@ -545,7 +547,7 @@ export const getTokenColors = (context: ThemeContext) => {
       ],
       settings: {
         foreground: palette.mauve,
-        fontStyle: "bold",
+        fontStyle: options.boldKeywords ? "bold" : "",
       },
     },
     {
@@ -787,7 +789,7 @@ export const getTokenColors = (context: ThemeContext) => {
       scope: ["keyword.operator.logical", "keyword.operator.ternary"],
       settings: {
         foreground: palette.sky,
-        fontStyle: "bold",
+        fontStyle: options.boldKeywords ? "bold" : "",
       },
     },
     {
@@ -960,7 +962,7 @@ export const getTokenColors = (context: ThemeContext) => {
       ],
       settings: {
         foreground: palette.sky,
-        fontStyle: "bold",
+        fontStyle: options.boldKeywords ? "bold" : "",
       },
     },
     {
@@ -977,7 +979,7 @@ export const getTokenColors = (context: ThemeContext) => {
       ],
       settings: {
         foreground: palette.sky,
-        fontStyle: "bold",
+        fontStyle: options.boldKeywords ? "bold" : "",
       },
     },
     {
@@ -1051,7 +1053,7 @@ export const getTokenColors = (context: ThemeContext) => {
       scope: "keyword.operator",
       settings: {
         foreground: palette.sky,
-        fontStyle: "bold",
+        fontStyle: options.boldKeywords ? "bold" : "",
       },
     },
     {
@@ -2337,7 +2339,7 @@ export const getTokenColors = (context: ThemeContext) => {
       scope: "keyword.control.flow.python",
       settings: {
         foreground: palette.mauve,
-        fontStyle: "bold",
+        fontStyle: options.boldKeywords ? "bold" : "",
       },
     },
     {

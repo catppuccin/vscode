@@ -51,6 +51,11 @@
       {
         "title": "Catppuccin",
         "properties": {
+          "catppuccin.boldKeywords": {
+            "type": "boolean",
+            "default": true,
+            "description": "Toggle bold fonts for keywords."
+          },
           "catppuccin.italicKeywords": {
             "type": "boolean",
             "default": true,

@@ -1,15 +1,9 @@
 import { compileTheme } from "../theme";
-import { CatppuccinFlavour, ThemeOptions } from "../types";
+import { CatppuccinFlavour } from "../types";
 import { getThemePaths } from "../helpers";
 import * as fs from "fs";
 import path = require("path");
-
-const defaultOptions: ThemeOptions = {
-  accent: "mauve",
-  italicComments: true,
-  italicKeywords: true,
-  colorOverrides: undefined,
-};
+import { defaultOptions } from "../theme";
 
 const paths = getThemePaths();
 

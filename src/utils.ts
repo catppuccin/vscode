@@ -56,6 +56,7 @@ class Utils {
     const conf = workspace.getConfiguration("catppuccin");
     return {
       accent: conf.get<CatppuccinAccent>("accentColor"),
+      boldKeywords: conf.get<boolean>("boldKeywords"),
       italicKeywords: conf.get<boolean>("italicKeywords"),
       italicComments: conf.get<boolean>("italicComments"),
       colorOverrides: conf.get<ColorOverrides>("colorOverrides"),
