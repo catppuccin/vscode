@@ -30,14 +30,16 @@ jobs:
           pat: ${{ secrets.VS_MARKETPLACE_TOKEN }}
           extensionFile: ${{ steps.packageExtension.outputs.vsixPath }}
           registryUrl: https://marketplace.visualstudio.com
-      # waits on issue #51
-      # - name: Publish to Open VSX Registry
-      #   uses: HaaLeo/publish-vscode-extension@v1
-      #   with:
-      #     yarn: true
-      #     pat: ${{ secrets.OPEN_VSX_TOKEN }}
-      #     extensionFile: ${{ steps.packageExtension.outputs.vsixPath }}
-      #     registryUrl: https://marketplace.visualstudio.com
+      - name: Publish to Open VSX Registry
+        uses: HaaLeo/publish-vscode-extension@v1
+        # continue even if OpenVSX fails
+        continue-on-error: true
+        timeout-minutes: 10
+        # see issue #51
+        with:
+          yarn: true
+          pat: ${{ secrets.OPEN_VSX_TOKEN }}
+          extensionFile: ${{ steps.packageExtension.outputs.vsixPath }}
       - name: Create GH Release
         uses: softprops/action-gh-release@v1
         with:
