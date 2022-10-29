@@ -14,6 +14,7 @@ export type CatppuccinAccent =
   | "sapphire"
   | "blue"
   | "lavender";
+export type CatppuccinWorkbenchMode = "default" | "flat";
 
 export interface CatppuccinPalette {
   rosewater: string;
@@ -58,6 +59,7 @@ export type ThemeOptions = {
   italicKeywords: boolean;
   boldKeywords: boolean;
   colorOverrides: ColorOverrides;
+  workbenchMode: CatppuccinWorkbenchMode;
 };
 
 export type ThemePaths = {
