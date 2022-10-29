@@ -51,7 +51,7 @@ export const getUiColors = (context: ThemeContext) => {
     "badge.foreground": palette.text,
 
     "breadcrumb.activeSelectionForeground": accent,
-    "breadcrumb.background": palette.mantle,
+    "breadcrumb.background": palette.base,
     "breadcrumb.focusForeground": accent,
     "breadcrumb.foreground": opacity(palette.text, 0.8),
     "breadcrumbPicker.background": palette.mantle,
