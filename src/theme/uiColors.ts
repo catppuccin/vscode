@@ -263,7 +263,7 @@ export const getUiColors = (context: ThemeContext) => {
     "merge.incomingContentBackground": opacity(palette.blue, 0.2),
     "merge.incomingHeaderBackground": opacity(palette.blue, 0.4),
 
-    "minimap.background": palette.mantle,
+    "minimap.background": opacity(palette.mantle, 0.5),
     "minimap.errorHighlight": palette.red,
     "minimap.findMatchHighlight": palette.surface2,
     "minimap.selectionHighlight": palette.surface2,
