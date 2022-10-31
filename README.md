@@ -57,17 +57,25 @@ open the file you just downloaded.
 
 Open your settings, and look for `Extensions > Catppuccin`. Available options are documented here.
 
+### Custom accent colour
+
+`catppuccin.accentColor`
+
+You can choose any colour as your "accent" colour. `mauve` is our default, but you can add more personality by using your favourite!
+
 ### Disable italics & bold fonts
 
 You can toggle whether to use
 
-- italics for keywords
-- italics for comments
-- bold for keywords
+- italics for keywords: `catppuccin.italicKeywords`
+- italics for comments: `catppuccin.italicComments`
+- bold for keywords: `catppuccin.boldKeywords`
 
 ### Override palette colours
 
-Colors can be overwritten using `catppuccin.colorOverrides` in the JSON user settings, like so:
+`catppuccin.colorOverrides`
+
+Colors can be overwritten in the JSON user settings, like so:
 
 ```json5
     // ...your other settings...
@@ -87,6 +95,8 @@ Colors can be overwritten using `catppuccin.colorOverrides` in the JSON user set
 
 ### Use palette colours on workbench elements (UI)
 
+`catppuccin.customUIColors`
+
 If you want to customize where certain palette colours appear, you can change it like so:
 
 ```json5
@@ -96,9 +106,10 @@ If you want to customize where certain palette colours appear, you can change it
             "breadcrumb.background": "overlay0",
             "breadcrumb.foreground": "text",
         },
-        // but for mocha, use "crust" on "pink"
+        // but for mocha, use "crust" on your currently selected accent.
         "mocha": {
-            "breadcrumb.background": "pink",
+            // "accent" selects your current accent colour.
+            "breadcrumb.background": "accent",
             "breadcrumb.foreground": "crust",
             // you can use opacity, by specifing it after a space
             // "rosewater 0.5" would mean 50% opacity, here it's 20%
