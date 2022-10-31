@@ -54,33 +54,33 @@
           "catppuccin.boldKeywords": {
             "type": "boolean",
             "default": true,
-            "description": "Toggle bold fonts for keywords."
+            "markdownDescription": "Controls whether to use **bold** for keywords."
           },
           "catppuccin.italicKeywords": {
             "type": "boolean",
             "default": true,
-            "description": "Toggle italics for keywords."
+            "markdownDescription": "Controls whether to use *italics* for keywords."
           },
           "catppuccin.italicComments": {
             "type": "boolean",
             "default": true,
-            "description": "Toggle italics for comments."
+            "markdownDescription": "Controls whether to use *italics* for comments."
           },
           "catppuccin.colorOverrides": {
             "type": "object",
             "default": {},
-            "description": "Custom color overrides",
+            "markdownDescription": "Custom color overrides. Assign your own hex codes to palette colors. See [the docs](https://github.com/catppuccin/vscode#override-palette-colours) for reference.",
             "$ref": "https://raw.githubusercontent.com/catppuccin/vscode/main/schemas/colorOverrides.schema.json"
           },
           "catppuccin.customUIColors": {
             "type": "object",
             "default": {},
-            "description": "Custom UI colors"
+            "markdownDescription": "Customize UI colors. Map `workbench.colorCustomizations` to palette colors. See [the docs](https://github.com/catppuccin/vscode#use-palette-colours-on-workbench-elements-ui) for reference."
           },
           "catppuccin.accentColor": {
             "type": "string",
             "default": "mauve",
-            "description": "The color to use for accents.",
+            "description": "Controls which accent color to use.",
             "enum": [
               "rosewater",
               "flamingo",
