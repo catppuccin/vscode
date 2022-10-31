@@ -156,6 +156,7 @@
     "compile:theme": "ts-node src/hooks/generateThemes.ts",
     "build": "yarn clean && yarn compile:theme && yarn compile",
     "postbuild": "prettier -w ./src ./themes",
+    "dev": "DEBUG=1 yarn build",
     "clean": "rimraf dist *.vsix",
     "lint": "eslint . --ext .ts",
     "prepare": "husky install",

@@ -6,10 +6,10 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "Extension",
+      "name": "Debug Extension",
       "type": "extensionHost",
       "request": "launch",
-      "preLaunchTask": "npm: build",
+      "preLaunchTask": "npm: dev",
       "args": ["--extensionDevelopmentPath=${workspaceFolder}"]
     }
   ]
