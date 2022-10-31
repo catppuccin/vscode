@@ -1,10 +1,37 @@
-import { ThemeContext } from "../types";
+import { CatppuccinWorkbenchMode, ThemeContext } from "../types";
 import { opacity, transparent, shade } from "./utils";
+
+const getWorkbenchColors = (context: ThemeContext) => {
+  const { palette, options } = context;
+
+  const workbenchMode = options.workbenchMode;
+  const colorsMap: Record<CatppuccinWorkbenchMode, Record<string, string>> = {
+    default: {},
+    flat: {
+      "activityBar.background": palette.mantle,
+      "breadcrumb.background": palette.base,
+      "commandCenter.background": palette.mantle,
+      "debugToolBar.background": palette.mantle,
+      "editorGroupHeader.tabsBackground": palette.mantle,
+      "minimap.background": opacity(palette.base, 0.5),
+      "sideBarSectionHeader.background": palette.mantle,
+      "sideBarTitle.background": palette.mantle,
+      "statusBar.background": palette.mantle,
+      "statusBar.noFolderBackground": palette.mantle,
+      "tab.border": palette.base,
+      "titleBar.activeBackground": palette.mantle,
+      "titleBar.inactiveBackground": palette.mantle,
+    },
+  };
+
+  return colorsMap[workbenchMode];
+};
 
 export const getUiColors = (context: ThemeContext) => {
   const { palette, options, isLatte } = context;
 
   const accent = palette[options.accent];
+  const workbenchColors = getWorkbenchColors(context);
 
   const dropBackground = opacity(palette.surface2, 0.6);
 
@@ -487,6 +514,9 @@ export const getUiColors = (context: ThemeContext) => {
     "charts.orange": palette.peach,
     "charts.green": palette.green,
     "charts.purple": palette.mauve,
+    // workbench overrides
+    ...workbenchColors,
+    // custom named overrides
     ...customNamedColors,
   };
 };

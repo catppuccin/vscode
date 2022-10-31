@@ -97,6 +97,15 @@
               "blue",
               "lavender"
             ]
+          },
+          "catppuccin.workbenchMode": {
+            "type": "string",
+            "default": "default",
+            "description": "The appearance mode for workbench.",
+            "enum": [
+              "default",
+              "flat"
+            ]
           }
         }
       }

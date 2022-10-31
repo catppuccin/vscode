@@ -15,6 +15,7 @@ export const defaultOptions: ThemeOptions = {
   italicComments: true,
   italicKeywords: true,
   colorOverrides: {},
+  workbenchMode: "default",
   customUIColors: {},
 };
 

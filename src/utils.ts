@@ -9,6 +9,7 @@ import {
   CustomUIColors,
   ThemeOptions,
   ThemePaths,
+  CatppuccinWorkbenchMode,
 } from "./types";
 import { join } from "path";
 
@@ -61,6 +62,7 @@ class Utils {
       italicKeywords: conf.get<boolean>("italicKeywords"),
       italicComments: conf.get<boolean>("italicComments"),
       colorOverrides: conf.get<ColorOverrides>("colorOverrides"),
+      workbenchMode: conf.get<CatppuccinWorkbenchMode>("workbenchMode"),
       customUIColors: conf.get<CustomUIColors>("customUIColors"),
     };
   };
