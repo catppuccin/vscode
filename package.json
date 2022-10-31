@@ -101,10 +101,14 @@
           "catppuccin.workbenchMode": {
             "type": "string",
             "default": "default",
-            "description": "The appearance mode for workbench.",
+            "description": "Controls how the workbench should be styled.",
             "enum": [
               "default",
               "flat"
+            ],
+            "enumDescriptions": [
+              "The default look, using 3 shades of the base color.",
+              "A more flat look, using 2 shades of the base color."
             ]
           }
         }
