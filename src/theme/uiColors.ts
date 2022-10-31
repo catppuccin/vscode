@@ -8,6 +8,30 @@ export const getUiColors = (context: ThemeContext) => {
 
   const dropBackground = opacity(palette.surface2, 0.6);
 
+  const customizations = {
+    ...options.customUIColors.all,
+    ...options.customUIColors[palette.name],
+  };
+
+  let customUIcol = {};
+
+  Object.entries(customizations).map(([k, v]) => {
+    //check if the entry is a "color opacity" mapping
+    const entry = v.split(" ");
+    let result: string;
+    if (entry.length !== 1) {
+      console.log(Number(entry[1]));
+      result = opacity(palette[entry[0]], Number(entry[1]));
+    } else {
+      result = palette[entry[0]];
+    }
+
+    customUIcol = {
+      ...customUIcol,
+      [k]: result,
+    };
+  });
+
   // find the definitions here:
   // https://code.visualstudio.com/api/references/theme-color
   return {
@@ -449,5 +473,6 @@ export const getUiColors = (context: ThemeContext) => {
     "charts.orange": palette.peach,
     "charts.green": palette.green,
     "charts.purple": palette.mauve,
+    ...customUIcol,
   };
 };

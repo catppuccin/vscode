@@ -72,6 +72,11 @@
             "description": "Custom color overrides",
             "$ref": "https://raw.githubusercontent.com/catppuccin/vscode/main/schemas/colorOverrides.schema.json"
           },
+          "catppuccin.customUIColors": {
+            "type": "object",
+            "default": {},
+            "description": "Custom UI colors"
+          },
           "catppuccin.accentColor": {
             "type": "string",
             "default": "mauve",

@@ -16,6 +16,7 @@ export type CatppuccinAccent =
   | "lavender";
 
 export interface CatppuccinPalette {
+  name: CatppuccinFlavour;
   rosewater: string;
   flamingo: string;
   pink: string;
@@ -52,12 +53,21 @@ export type ColorOverrides = {
   mocha?: Partial<CatppuccinPalette>;
 };
 
+export type CustomUIColors = {
+  all?: Record<"all", string>;
+  latte?: Record<"latte", string>;
+  frappe?: Record<"frappe", string>;
+  macchiato?: Record<"macchiato", string>;
+  mocha?: Record<"mocha", string>;
+};
+
 export type ThemeOptions = {
   accent: CatppuccinAccent;
   italicComments: boolean;
   italicKeywords: boolean;
   boldKeywords: boolean;
   colorOverrides: ColorOverrides;
+  customUIColors: CustomUIColors;
 };
 
 export type ThemePaths = {

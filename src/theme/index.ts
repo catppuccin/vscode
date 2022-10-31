@@ -15,6 +15,7 @@ export const defaultOptions: ThemeOptions = {
   italicComments: true,
   italicKeywords: true,
   colorOverrides: {},
+  customUIColors: {},
 };
 
 export const compileTheme = (
@@ -25,6 +26,7 @@ export const compileTheme = (
     .map(([k, v]) => {
       return {
         [k as unknown as string]: v.hex,
+        name: flavour,
       };
     })
     .reduce((acc, curr) => ({ ...acc, ...curr }), {});
