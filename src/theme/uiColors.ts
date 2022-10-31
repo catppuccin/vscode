@@ -71,7 +71,7 @@ export const getUiColors = (context: ThemeContext) => {
   // https://code.visualstudio.com/api/references/theme-color
   return {
     // Base colors
-    focusBorder: accent,
+    focusBorder: transparent,
     foreground: palette.text,
     disabledForeground: palette.subtext0,
     "widget.shadow": opacity(palette.mantle, 0.5),
