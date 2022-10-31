@@ -97,9 +97,9 @@ export const getUiColors = (context: ThemeContext) => {
     "button.secondaryForeground": palette.text,
     "button.secondaryBackground": palette.surface2,
     "button.secondaryHoverBackground": shade(palette.surface2, 0.2),
-    "checkbox.background": accent,
-    "checkbox.border": palette.crust,
-    "checkbox.foreground": palette.crust,
+    "checkbox.background": palette.surface1,
+    "checkbox.border": transparent,
+    "checkbox.foreground": accent,
 
     // dropdown controls
     "dropdown.background": palette.mantle,
@@ -352,6 +352,12 @@ export const getUiColors = (context: ThemeContext) => {
     "settings.focusedRowBackground": opacity(palette.surface2, 0.2),
     "settings.headerForeground": palette.text,
     "settings.modifiedItemIndicator": accent,
+    "settings.dropdownBackground": palette.surface1,
+    "settings.dropdownListBorder": transparent,
+    "settings.textInputBackground": palette.surface1,
+    "settings.textInputBorder": transparent,
+    "settings.numberInputBackground": palette.surface1,
+    "settings.numberInputBorder": transparent,
 
     "sideBar.background": palette.mantle,
     "sideBar.dropBackground": dropBackground,
