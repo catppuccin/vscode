@@ -8,11 +8,19 @@ const getWorkbenchColors = (context: ThemeContext) => {
   const colorsMap: Record<CatppuccinWorkbenchMode, Record<string, string>> = {
     default: {},
     flat: {
+      "activityBar.background": palette.mantle,
       "breadcrumb.background": palette.base,
+      "commandCenter.background": palette.mantle,
+      "debugToolBar.background": palette.mantle,
       "editorGroupHeader.tabsBackground": palette.mantle,
+      "minimap.background": opacity(palette.base, 0.5),
       "sideBarSectionHeader.background": palette.mantle,
       "sideBarTitle.background": palette.mantle,
+      "statusBar.background": palette.mantle,
+      "statusBar.noFolderBackground": palette.mantle,
       "tab.border": palette.base,
+      "titleBar.activeBackground": palette.mantle,
+      "titleBar.inactiveBackground": palette.mantle,
     },
   };
 
