@@ -50,30 +50,77 @@ Download the VSIX from
 Open the Command Palette, and select "Extensions: Install from VSIX...", then
 open the file you just downloaded.
 
-> **Note**
+> **Note**\
+> It is recommended to change `window.titleBarStyle` to `custom` in your JSON user settings.
 
-From the settings, change `window.titleBarStyle` to `custom` for the context
-menus to be properly rendered according to the theme.
+## Customization
 
-## 🙋 FAQ
+Open your settings, and look for `Extensions > Catppuccin`. Available options are documented here.
 
-- <strong>Q</strong>: <strong><em>"How can I disable italics?"</em></strong>\
-  A: Open your settings, and look for `Extensions > Catppuccin`. There you can toggle comments for both Keywords & Comments. You'll have to reload your editor once to see changes.
+### Custom accent colour
 
-- <strong>Q</strong>: <strong><em>"How can I override palette colours?"</strong></em>\
-  A: Open your Command Palette (<kbd>Cmd+Shift+P</kbd> or <kbd>Ctrl+Shift+P</kbd>), and select "Open User Settings (JSON)". Once there, make your changes like this, and reload:
+`catppuccin.accentColor`
 
-```json
+You can choose any colour as your "accent" colour. `mauve` is our default, but you can add more personality by using your favourite!
+
+### Disable italics & bold fonts
+
+You can toggle whether to use
+
+- italics for keywords: `catppuccin.italicKeywords`
+- italics for comments: `catppuccin.italicComments`
+- bold for keywords: `catppuccin.boldKeywords`
+
+### Override palette colours
+
+`catppuccin.colorOverrides`
+
+Colors can be overwritten in the JSON user settings, like so:
+
+```json5
     // ...your other settings...
     "catppuccin.colorOverrides": {
-        // OLEDppuccin
+        // make text red red all flavours
+        "all": {
+            "text": "#ff0000"
+        },
+        // make Mocha "OLEDppuccin" - use black editor background
         "mocha": {
             "base": "#000000",
-            "mantle": "#000000",
-            "crust": "#000000",
+            "mantle": "#010101",
+            "crust": "#020202",
         }
     }
 ```
+
+### Use palette colours on workbench elements (UI)
+
+`catppuccin.customUIColors`
+
+If you want to customize where certain palette colours appear, you can change it like so:
+
+```json5
+    "catppuccin.customUIColors": {
+        // make the breadcrumb "text" on "overlay0" for all flavours
+        "all": {
+            "breadcrumb.background": "overlay0",
+            "breadcrumb.foreground": "text",
+        },
+        // but for mocha, use "crust" on your currently selected accent.
+        "mocha": {
+            // "accent" selects your current accent colour.
+            "breadcrumb.background": "accent",
+            "breadcrumb.foreground": "crust",
+            // you can use opacity, by specifing it after a space
+            // "rosewater 0.5" would mean 50% opacity, here it's 20%
+            "minimap.background": "rosewater 0.2"
+        }
+    },
+```
+
+You can find all the available keys [here](https://code.visualstudio.com/api/references/theme-color).
+
+> **Note**: This respects your [color overrides](#override-palette-colours).
 
 ## Development
 

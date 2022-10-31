@@ -8,6 +8,38 @@ export const getUiColors = (context: ThemeContext) => {
 
   const dropBackground = opacity(palette.surface2, 0.6);
 
+  // support for custom named colors
+  const customNamedColors = {
+    ...Object.entries({
+      // collect the options, overwrite the "all" config with the current palette config
+      ...options.customUIColors.all,
+      ...options.customUIColors[palette.name],
+    })
+      .map(([k, v]) => {
+        // deal with accents
+        if (v === "accent") {
+          return {
+            [k]: accent,
+          };
+        }
+
+        //check if the entry is a "color opacity" mapping
+        const entry = v.split(" ");
+        if (entry.length !== 1) {
+          // call the opacity function
+          v = opacity(palette[entry[0]], Number(entry[1]));
+        } else {
+          // resolve to the palette color
+          v = palette[v];
+        }
+
+        return {
+          [k]: v,
+        };
+      })
+      .reduce((prev, cur) => ({ ...prev, ...cur }), {}),
+  };
+
   // find the definitions here:
   // https://code.visualstudio.com/api/references/theme-color
   return {
@@ -449,5 +481,6 @@ export const getUiColors = (context: ThemeContext) => {
     "charts.orange": palette.peach,
     "charts.green": palette.green,
     "charts.purple": palette.mauve,
+    ...customNamedColors,
   };
 };

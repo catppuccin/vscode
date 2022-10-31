@@ -2,10 +2,11 @@ import { variants } from "@catppuccin/palette";
 import * as fs from "fs";
 import { compileTheme, defaultOptions } from "./theme";
 import { commands, workspace, window } from "vscode";
-import type {
+import {
   CatppuccinAccent,
   CatppuccinFlavour,
   ColorOverrides,
+  CustomUIColors,
   ThemeOptions,
   ThemePaths,
 } from "./types";
@@ -60,6 +61,7 @@ class Utils {
       italicKeywords: conf.get<boolean>("italicKeywords"),
       italicComments: conf.get<boolean>("italicComments"),
       colorOverrides: conf.get<ColorOverrides>("colorOverrides"),
+      customUIColors: conf.get<CustomUIColors>("customUIColors"),
     };
   };
   updateThemes = async (
