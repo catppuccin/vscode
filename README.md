@@ -12,26 +12,26 @@
 </p>
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/catppuccin/vscode/main/assets/ss.png"/>
+  <img src="./assets/preview.webp"/>
 </p>
 
 ## Previews
 
 <details>
 <summary>🌻 Latte</summary>
-<img src="https://user-images.githubusercontent.com/79978224/183617750-085cb606-eea0-4c7a-a8b9-10426617c0a0.png"/>
+<img src="assets/latte.webp"/>
 </details>
 <details>
 <summary>🪴 Frappé</summary>
-<img src="https://user-images.githubusercontent.com/79978224/183618317-9adec6d4-b9da-4c6f-b2f4-9752054c98f4.png"/>
+<img src="assets/frappe.webp"/>
 </details>
 <details>
 <summary>🌺 Macchiato</summary>
-<img src="https://user-images.githubusercontent.com/79978224/183618382-61a17330-e61f-47c7-b0e1-ffb309ddb459.png"/>
+<img src="assets/macchiato.webp"/>
 </details>
 <details>
 <summary>🌿 Mocha</summary>
-<img src="https://user-images.githubusercontent.com/79978224/183618460-075a74a2-7d3e-46d8-997a-cfa6fc8cbaab.png"/>
+<img src="assets/mocha.webp"/>
 </details>
 
 ## Usage
@@ -54,6 +54,39 @@ open the file you just downloaded.
 > It is recommended to change `window.titleBarStyle` to `custom` in your JSON user settings.
 
 ## Customization
+
+Catppuccin for VSCode can be customized to your liking. If you like the Catppuccin colours, but feel that they are a bit too bright for working at night, customization got you covered!
+
+<!-- OLED screenshot -->
+
+<details>
+<summary>⚙️ Used settings</summary>
+<p>
+
+```json5
+     // use Mocha as the base
+    "workbench.colorTheme": "Catppuccin Mocha",
+    // pink as the accent colour
+    "catppuccin.accentColor": "pink",
+    // make Mocha specifically very dark
+    // (this preserves other flavours!)
+    "catppuccin.colorOverrides": {
+        "mocha": {
+            "base": "#000000",
+            "mantle": "#010101",
+            "crust": "#020202",
+        }
+    },
+    // use your accent (pink) on the statusBar as well
+    "catppuccin.customUIColors": {
+        "mocha": {
+            "statusBar.foreground": "accent"
+        }
+    },
+```
+
+</p>
+</details>
 
 Open your settings, and look for `Extensions > Catppuccin`. Available options are documented here.
 
@@ -86,6 +119,11 @@ If you'd like a more flat look, you can change it to `flat`! This only uses `bas
 
 - `base: #1e1e2e` - the editor background
 - `mantle: #181825` - the sidebar, the activity bar, status bar and title bar
+
+<details>
+<summary>📸 Preview</summary>
+<!-- TODO -->
+</details>
 
 ### Override palette colours
 
