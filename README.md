@@ -57,7 +57,7 @@ open the file you just downloaded.
 
 Catppuccin for VSCode can be customized to your liking. If you like the Catppuccin colours, but feel that they are a bit too bright for working at night, customization got you covered!
 
-<!-- OLED screenshot -->
+<img width="1488" alt="oldeppuccin-pink-accent" src="https://user-images.githubusercontent.com/79978224/199134942-2091178a-314b-4782-b5d8-8d3a348fbefe.png">
 
 <details>
 <summary>⚙️ Used settings</summary>
@@ -122,7 +122,9 @@ If you'd like a more flat look, you can change it to `flat`! This only uses `bas
 
 <details>
 <summary>📸 Preview</summary>
-<!-- TODO -->
+
+![flat appearance](https://user-images.githubusercontent.com/79978224/199135078-4b399c9d-327c-4e2d-bed8-3d20ce9f502e.png)
+
 </details>
 
 ### Override palette colours
