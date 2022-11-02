@@ -1,5 +1,5 @@
 import { CatppuccinWorkbenchMode, ThemeContext } from "../types";
-import { opacity, transparent, shade } from "./utils";
+import { opacity, shade, transparent } from "./utils";
 
 const getWorkbenchColors = (context: ThemeContext) => {
   const { palette, options } = context;
@@ -43,10 +43,17 @@ export const getUiColors = (context: ThemeContext) => {
     })
       .map(([k, v]) => {
         // deal with accents
-        if (v === "accent") {
-          return {
-            [k]: accent,
-          };
+        if (v.startsWith("accent")) {
+          const entry = v.split(" ");
+          if (entry.length !== 1) {
+            return {
+              [k]: opacity(accent, Number(entry[1])),
+            };
+          } else {
+            return {
+              [k]: accent,
+            };
+          }
         }
 
         //check if the entry is a "color opacity" mapping
