@@ -1,5 +1,6 @@
 import { CatppuccinWorkbenchMode, ThemeContext } from "../types";
-import { opacity, shade, transparent } from "./utils";
+import { opacity, transparent, shade } from "./utils";
+import extensions from "./extensions";
 
 const getWorkbenchColors = (context: ThemeContext) => {
   const { palette, options } = context;
@@ -520,6 +521,9 @@ export const getUiColors = (context: ThemeContext) => {
     "charts.orange": palette.peach,
     "charts.green": palette.green,
     "charts.purple": palette.mauve,
+
+    ...extensions(context),
+
     // workbench overrides
     ...workbenchColors,
     // custom named overrides
