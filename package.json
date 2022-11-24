@@ -24,6 +24,7 @@
     "virtualWorkspaces": true
   },
   "main": "dist/main.js",
+  "browser": "dist/main.js",
   "contributes": {
     "themes": [
       {
