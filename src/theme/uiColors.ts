@@ -21,6 +21,7 @@ const getWorkbenchColors = (context: ThemeContext) => {
       "tab.border": palette.base,
       "titleBar.activeBackground": palette.mantle,
       "titleBar.inactiveBackground": palette.mantle,
+      "scrollbar.shadow": palette.base,
     },
   };
 
@@ -378,7 +379,7 @@ export const getUiColors = (context: ThemeContext) => {
 
     "progressBar.background": accent,
 
-    "scrollbar.shadow": palette.base,
+    "scrollbar.shadow": palette.crust,
     "scrollbarSlider.activeBackground": opacity(palette.surface0, 0.4),
     "scrollbarSlider.background": opacity(palette.surface2, 0.5),
     "scrollbarSlider.hoverBackground": palette.overlay0,
@@ -460,7 +461,7 @@ export const getUiColors = (context: ThemeContext) => {
     "terminal.border": palette.surface2,
     "terminal.foreground": palette.text,
     "terminal.dropBackground": dropBackground,
-    "terminal.selectionBackground": opacity(palette.surface2, 0.2),
+    "terminal.selectionBackground": palette.surface2,
     "terminalCursor.background": palette.base,
     "terminalCursor.foreground": palette.rosewater,
 
