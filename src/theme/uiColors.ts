@@ -460,7 +460,7 @@ export const getUiColors = (context: ThemeContext) => {
     "terminal.border": palette.surface2,
     "terminal.foreground": palette.text,
     "terminal.dropBackground": dropBackground,
-    "terminal.selectionBackground": opacity(palette.surface2, 0.2),
+    "terminal.selectionBackground": palette.surface2,
     "terminalCursor.background": palette.base,
     "terminalCursor.foreground": palette.rosewater,
 
