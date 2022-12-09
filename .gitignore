@@ -3,5 +3,4 @@ node_modules/
 themes/
 .eslintcache
 .yarn-error.log
-yarn.lock
 *.vsix
