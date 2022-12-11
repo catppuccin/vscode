@@ -111,6 +111,23 @@
               "The default look, using 3 shades of the base color.",
               "A more flat look, using 2 shades of the base color."
             ]
+          },
+          "catppuccin.bracketMode": {
+            "type": "string",
+            "default": "rainbow",
+            "description": "Controls how bracket pairs should be themed",
+            "enum": [
+              "rainbow",
+              "dimmed",
+              "monochromatic",
+              "neovim"
+            ],
+            "enumDescriptions": [
+              "Uses 6 rainbow colors for matching bracket pairs.",
+              "Uses the same 6 rainbow colors as `rainbow`, but has a dimmed appearance.",
+              "A monochromatic, grey appearance for matching bracket pairs.",
+              "Uses the same bracket pair colors as our neovim port."
+            ]
           }
         }
       }

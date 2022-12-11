@@ -127,6 +127,17 @@ If you'd like a more flat look, you can change it to `flat`! This only uses `bas
 
 </details>
 
+### Paired Brackets
+
+`catppuccin.bracketMode`
+
+By default we're using `red`, `peach`, `yellow`, `green`, `blue`, and `mauve` for matching bracket pairs. You can change that option, if you want different colors:
+
+- `rainbow` is our default setting, using the colors described above.
+- `dimmed` uses the same rainbow colors, but muted by 20%.
+- `monochromatic` only uses greyish colors, from `subtext1` to `surface2`.
+- `neovim` uses the same colors that [`nvim-ts-rainbow`](https://github.com/p00f/nvim-ts-rainbow) uses in our [Neovim port](https://github.com/catppuccin/nvim).
+
 ### Override palette colours
 
 `catppuccin.colorOverrides`

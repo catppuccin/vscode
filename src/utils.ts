@@ -10,6 +10,7 @@ import {
   ThemeOptions,
   ThemePaths,
   CatppuccinWorkbenchMode,
+  CatppuccinBracketMode,
 } from "./types";
 import { join } from "path";
 
@@ -63,6 +64,7 @@ class Utils {
       italicComments: conf.get<boolean>("italicComments"),
       colorOverrides: conf.get<ColorOverrides>("colorOverrides"),
       workbenchMode: conf.get<CatppuccinWorkbenchMode>("workbenchMode"),
+      bracketMode: conf.get<CatppuccinBracketMode>("bracketMode"),
       customUIColors: conf.get<CustomUIColors>("customUIColors"),
     };
   };
