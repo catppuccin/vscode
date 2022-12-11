@@ -53,6 +53,10 @@ open the file you just downloaded.
 > **Note**\
 > It is recommended to change `window.titleBarStyle` to `custom` in your JSON user settings.
 
+**Using the JSON theme only**
+
+You can find the compiled theme JSON files (with default settings as documented below) on the [compiled branch](https://github.com/catppuccin/vscode/tree/compiled).
+
 ## Customization
 
 Catppuccin for VSCode can be customized to your liking. If you like the Catppuccin colours, but feel that they are a bit too bright for working at night, customization got you covered!
