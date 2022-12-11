@@ -21,7 +21,7 @@ const getWorkbenchColors = (context: ThemeContext) => {
       "tab.border": palette.base,
       "titleBar.activeBackground": palette.mantle,
       "titleBar.inactiveBackground": palette.mantle,
-      "scrollbar.shadow": palette.base,
+      "scrollbar.shadow": palette.mantle,
     },
   };
 
