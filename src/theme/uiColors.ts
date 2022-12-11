@@ -75,12 +75,10 @@ const getCustomizedColors = (context: ThemeContext) => {
     },
   };
 
-  const x = {
+  return {
     ...bracketsMap[options.bracketMode],
     ...workbenchMap[options.workbenchMode],
   };
-  console.log(x);
-  return x;
 };
 
 export const getUiColors = (context: ThemeContext) => {
