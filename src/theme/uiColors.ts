@@ -291,6 +291,9 @@ export const getUiColors = (context: ThemeContext) => {
     "editorOverviewRuler.background": palette.mantle,
     "editorOverviewRuler.border": opacity(palette.text, 0.07),
     "editorRuler.foreground": palette.surface2,
+    // breakpoints
+    "editor.stackFrameHighlightBackground": opacity(palette.yellow, 0.15),
+    "editor.focusedStackFrameHighlightBackground": opacity(palette.green, 0.15),
     "editorStickyScrollHover.background": palette.surface0,
     "editorSuggestWidget.background": palette.mantle,
     "editorSuggestWidget.border": palette.surface2,
