@@ -2509,6 +2509,8 @@
     "editorOverviewRuler.background": "#e6e9ef",
     "editorOverviewRuler.border": "#4c4f6911",
     "editorRuler.foreground": "#acb0be",
+    "editor.stackFrameHighlightBackground": "#df8e1d26",
+    "editor.focusedStackFrameHighlightBackground": "#40a02b26",
     "editorStickyScrollHover.background": "#ccd0da",
     "editorSuggestWidget.background": "#e6e9ef",
     "editorSuggestWidget.border": "#acb0be",
