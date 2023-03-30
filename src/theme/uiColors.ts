@@ -228,6 +228,11 @@ export const getUiColors = (context: ThemeContext) => {
     "diffEditor.border": palette.surface2,
     "diffEditor.insertedTextBackground": opacity(palette.green, 0.1),
     "diffEditor.removedTextBackground": opacity(palette.red, 0.1),
+    "diffEditor.insertedLineBackground": opacity(palette.green, 0.15),
+    "diffEditor.removedLineBackground": opacity(palette.red, 0.15),
+    "diffEditor.diagonalFill": opacity(palette.surface2, 0.6),
+    "diffEditorOverview.insertedForeground": opacity(palette.green, 0.8),
+    "diffEditorOverview.removedForeground": opacity(palette.red, 0.8),
 
     "editor.background": palette.base,
     "editor.findMatchBackground": palette.surface2,
