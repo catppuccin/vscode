@@ -15,6 +15,9 @@
   <img src="assets/preview.webp"/>
 </p>
 
+> **Note**\
+> Get the newly released [Catppuccin Icon Pack](https://marketplace.visualstudio.com/items?itemName=Catppuccin.catppuccin-vsc-icons) now!
+
 ## Previews
 
 <details>
