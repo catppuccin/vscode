@@ -1,4 +1,4 @@
-import { workspace, ConfigurationChangeEvent } from "vscode";
+import { workspace, ConfigurationChangeEvent, extensions } from "vscode";
 import { getThemePaths } from "./helpers";
 import utils, { UpdateTrigger } from "./utils";
 
@@ -16,6 +16,25 @@ export const activate = () => {
 
   // regenerate the theme files when the config changes
   workspace.onDidChangeConfiguration((event: ConfigurationChangeEvent) => {
+    if (
+      event.affectsConfiguration("workbench.colorTheme") &&
+      extensions.getExtension("catppuccin.catppuccin-vsc-icons")
+    ) {
+      const theme = workspace
+        .getConfiguration("workbench")
+        .get("colorTheme") as string;
+      const ctp_themes = {
+        "Catppuccin Latte": "catppuccin-latte",
+        "Catppuccin Frappé": "catppuccin-frappe",
+        "Catppuccin Macchiato": "catppuccin-macchiato",
+        "Catppuccin Mocha": "catppuccin-mocha",
+      };
+      if (Object.keys(ctp_themes).includes(theme)) {
+        workspace
+          .getConfiguration("workbench")
+          .update("iconTheme", ctp_themes[theme], true);
+      }
+    }
     if (event.affectsConfiguration("catppuccin")) {
       utils.updateThemes(
         utils.getConfiguration(),
