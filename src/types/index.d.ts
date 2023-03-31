@@ -75,6 +75,7 @@ export type ThemeOptions = {
   colorOverrides: ColorOverrides;
   workbenchMode: CatppuccinWorkbenchMode;
   bracketMode: CatppuccinBracketMode;
+  extraBordersEnabled: boolean;
   customUIColors: CustomUIColors;
 };
 

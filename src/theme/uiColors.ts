@@ -86,6 +86,7 @@ export const getUiColors = (context: ThemeContext) => {
 
   const accent = palette[options.accent];
   const dropBackground = opacity(palette.surface2, 0.6);
+  const border = options.extraBordersEnabled ? opacity(palette.overlay1, 0.15) : transparent;
 
   // support for custom named colors
   const customNamedColors = {
@@ -158,7 +159,7 @@ export const getUiColors = (context: ThemeContext) => {
     "activityBar.foreground": accent,
     "activityBar.dropBar": dropBackground,
     "activityBar.inactiveForeground": palette.overlay0,
-    "activityBar.border": transparent,
+    "activityBar.border": border,
     "activityBarBadge.background": accent,
     "activityBarBadge.foreground": palette.crust,
     "activityBar.activeBorder": transparent,
@@ -184,7 +185,7 @@ export const getUiColors = (context: ThemeContext) => {
     "button.secondaryBackground": palette.surface2,
     "button.secondaryHoverBackground": shade(palette.surface2, 0.2),
     "checkbox.background": palette.surface1,
-    "checkbox.border": transparent,
+    "checkbox.border": border,
     "checkbox.foreground": accent,
 
     // dropdown controls
@@ -372,7 +373,7 @@ export const getUiColors = (context: ThemeContext) => {
     "tree.indentGuidesStroke": palette.overlay0,
 
     "menu.background": palette.base,
-    "menu.border": opacity(palette.base, 0.5),
+    "menu.border": options.extraBordersEnabled ? palette.surface2 : opacity(palette.base, 0.5),
     "menu.foreground": palette.text,
     "menu.selectionBackground": palette.surface2,
     "menu.selectionBorder": transparent,
@@ -455,6 +456,7 @@ export const getUiColors = (context: ThemeContext) => {
     "sideBar.background": palette.mantle,
     "sideBar.dropBackground": dropBackground,
     "sideBar.foreground": palette.text,
+    "sideBar.border": border,
     "sideBarSectionHeader.background": palette.mantle,
     "sideBarSectionHeader.foreground": palette.text,
     "sideBarTitle.foreground": accent,
@@ -463,6 +465,7 @@ export const getUiColors = (context: ThemeContext) => {
     // Status Bar
     "statusBar.background": palette.crust,
     "statusBar.foreground": palette.text,
+    "statusBar.border": border,
     // having no folder open shouldn't change the bar
     "statusBar.noFolderBackground": palette.crust,
     "statusBar.noFolderForeground": palette.text,
@@ -528,7 +531,7 @@ export const getUiColors = (context: ThemeContext) => {
     "titleBar.activeForeground": palette.text,
     "titleBar.inactiveBackground": palette.crust,
     "titleBar.inactiveForeground": opacity(palette.text, 0.5),
-    "titleBar.border": transparent,
+    "titleBar.border": border,
 
     // welcome page
     "welcomePage.tileBackground": palette.mantle,
