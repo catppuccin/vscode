@@ -65,6 +65,7 @@ class Utils {
       colorOverrides: conf.get<ColorOverrides>("colorOverrides"),
       workbenchMode: conf.get<CatppuccinWorkbenchMode>("workbenchMode"),
       bracketMode: conf.get<CatppuccinBracketMode>("bracketMode"),
+      extraBordersEnabled: conf.get<boolean>("extraBordersEnabled"),
       customUIColors: conf.get<CustomUIColors>("customUIColors"),
     };
   };

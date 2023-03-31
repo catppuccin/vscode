@@ -129,6 +129,11 @@
               "A monochromatic, grey appearance for matching bracket pairs.",
               "Uses the same bracket pair colors as our neovim port."
             ]
+          },
+          "catppuccin.extraBordersEnabled": {
+            "type": "boolean",
+            "default": false,
+            "description": "Controls whether borders should be enabled on some additional UI elements."
           }
         }
       }

@@ -17,6 +17,7 @@ export const defaultOptions: ThemeOptions = {
   colorOverrides: {},
   workbenchMode: "default",
   bracketMode: "rainbow",
+  extraBordersEnabled: false,
   customUIColors: {},
 };
 
