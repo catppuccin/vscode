@@ -86,7 +86,9 @@ export const getUiColors = (context: ThemeContext) => {
 
   const accent = palette[options.accent];
   const dropBackground = opacity(palette.surface2, 0.6);
-  const border = options.extraBordersEnabled ? opacity(palette.overlay1, 0.15) : transparent;
+  const border = options.extraBordersEnabled
+    ? opacity(palette.overlay1, 0.15)
+    : transparent;
 
   // support for custom named colors
   const customNamedColors = {
@@ -373,7 +375,9 @@ export const getUiColors = (context: ThemeContext) => {
     "tree.indentGuidesStroke": palette.overlay0,
 
     "menu.background": palette.base,
-    "menu.border": options.extraBordersEnabled ? palette.surface2 : opacity(palette.base, 0.5),
+    "menu.border": options.extraBordersEnabled
+      ? palette.surface2
+      : opacity(palette.base, 0.5),
     "menu.foreground": palette.text,
     "menu.selectionBackground": palette.surface2,
     "menu.selectionBorder": transparent,
