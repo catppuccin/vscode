@@ -22,7 +22,7 @@ export const activate = () => {
     ) {
       const theme = workspace
         .getConfiguration("workbench")
-        .get("colorTheme") as string;
+        .get<string>("colorTheme");
       const ctp_themes = {
         "Catppuccin Latte": "catppuccin-latte",
         "Catppuccin Frappé": "catppuccin-frappe",
