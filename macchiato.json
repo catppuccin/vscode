@@ -83,7 +83,7 @@
       }
     },
     {
-      "name": "All punctuation delimeters",
+      "name": "All punctuation delimiters",
       "scope": "punctuation.semi",
       "settings": {
         "foreground": "#8bd5ca"
@@ -334,7 +334,7 @@
       }
     },
     {
-      "name": "Rust punctuation delimeters",
+      "name": "Rust punctuation delimiters",
       "scope": "punctuation.semi.rust",
       "settings": {
         "foreground": "#8bd5ca"
@@ -450,7 +450,7 @@
       }
     },
     {
-      "name": "C++ Puct Delimeters",
+      "name": "C++ Punct Delimiters",
       "scope": "punctuation.terminator.statement.cpp",
       "settings": {
         "foreground": "#8bd5ca",
@@ -2077,7 +2077,7 @@
       }
     },
     {
-      "name": "Shell opeartors and punct delimeters",
+      "name": "Shell operators and punct delimiters",
       "scope": ["keyword.operator.list.shell"],
       "settings": {
         "foreground": "#8bd5ca"
@@ -2654,12 +2654,14 @@
     "sideBar.background": "#1e2030",
     "sideBar.dropBackground": "#5b607899",
     "sideBar.foreground": "#cad3f5",
+    "sideBar.border": "#00000000",
     "sideBarSectionHeader.background": "#1e2030",
     "sideBarSectionHeader.foreground": "#cad3f5",
     "sideBarTitle.foreground": "#c6a0f6",
     "sideBarTitle.background": "#181926",
     "statusBar.background": "#181926",
     "statusBar.foreground": "#cad3f5",
+    "statusBar.border": "#00000000",
     "statusBar.noFolderBackground": "#181926",
     "statusBar.noFolderForeground": "#cad3f5",
     "statusBar.debuggingBackground": "#f5a97f",
