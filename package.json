@@ -205,11 +205,11 @@
     }
   },
   "scripts": {
-    "compile": "tsup src/browser.ts src/main.ts --external vscode --minify --clean",
+    "compile": "tsup",
     "compile:theme": "ts-node src/hooks/generateThemes.ts",
     "build": "yarn compile:theme && yarn compile",
     "postbuild": "prettier -w ./themes",
-    "dev": "yarn compile:theme && yarn compile --sourcemap",
+    "dev": "DEBUG=1 yarn build",
     "lint": "eslint . --ext .ts",
     "prepare": "husky install",
     "package": "vsce package --allow-star-activation --yarn"
