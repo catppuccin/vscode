@@ -164,28 +164,52 @@
     "@typescript-eslint/eslint-plugin": "^5.34.0",
     "@typescript-eslint/parser": "^5.34.0",
     "@vscode/vsce": "^2.15.0",
-    "esbuild": "^0.17.5",
     "eslint": "^8.22.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.2.1",
     "husky": ">=6",
     "lint-staged": ">=10",
     "prettier": "^2.7.1",
-    "rimraf": "^4.1.2",
     "ts-node": "^10.9.1",
+    "tsup": "^6.7.0",
     "typescript": "^4.7.4"
   },
   "lint-staged": {
     "*.ts": "eslint --cache --fix",
     "*.{ts,json,md}": "prettier --write"
   },
+  "eslintConfig": {
+    "env": {
+      "es2021": true
+    },
+    "extends": [
+      "eslint:recommended",
+      "plugin:@typescript-eslint/recommended",
+      "plugin:prettier/recommended"
+    ],
+    "overrides": [],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+      "ecmaVersion": "latest",
+      "project": "tsconfig.json",
+      "sourceType": "module"
+    },
+    "plugins": [
+      "@typescript-eslint",
+      "prettier"
+    ],
+    "rules": {
+      "@typescript-eslint/no-empty-function": "off",
+      "@typescript-eslint/explicit-module-boundary-types": "off",
+      "@typescript-eslint/no-explicit-any": "off"
+    }
+  },
   "scripts": {
-    "compile": "node ./build.js",
+    "compile": "tsup src/browser.ts src/main.ts --external vscode --minify --clean",
     "compile:theme": "ts-node src/hooks/generateThemes.ts",
-    "build": "yarn clean && yarn compile:theme && yarn compile",
-    "postbuild": "prettier -w ./src ./themes",
-    "dev": "DEBUG=1 yarn build",
-    "clean": "rimraf dist *.vsix",
+    "build": "yarn compile:theme && yarn compile",
+    "postbuild": "prettier -w ./themes",
+    "dev": "yarn compile:theme && yarn compile --sourcemap",
     "lint": "eslint . --ext .ts",
     "prepare": "husky install",
     "package": "vsce package --allow-star-activation --yarn"
