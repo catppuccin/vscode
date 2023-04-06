@@ -10,7 +10,8 @@
       "type": "extensionHost",
       "request": "launch",
       "preLaunchTask": "npm: dev",
-      "args": ["--extensionDevelopmentPath=${workspaceFolder}"]
+      "args": ["--extensionDevelopmentPath=${workspaceFolder}"],
+      "outFiles": ["${workspaceFolder}/dist/*.js"]
     }
   ]
 }
