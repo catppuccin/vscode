@@ -41,10 +41,10 @@ class Utils {
     console.log("Checking if catppuccin is installed for the first time.");
     const flagPath = join(__dirname, "..", "themes", ".flag");
     if (fs.existsSync(flagPath)) {
-      console.log("Catppuccin is installed for the first time!");
+      console.log("Catppuccin has been installed before.");
       return false;
     } else {
-      console.log("Catppuccin has been installed before.");
+      console.log("Catppuccin is installed for the first time!");
       fs.writeFileSync(flagPath, "");
       return true;
     }
