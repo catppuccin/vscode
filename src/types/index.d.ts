@@ -14,7 +14,7 @@ export type CatppuccinAccent =
   | "sapphire"
   | "blue"
   | "lavender";
-export type CatppuccinWorkbenchMode = "default" | "flat";
+export type CatppuccinWorkbenchMode = "default" | "flat" | "minimal";
 export type CatppuccinBracketMode =
   | "rainbow"
   | "dimmed"

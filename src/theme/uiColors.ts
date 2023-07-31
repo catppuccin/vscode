@@ -73,6 +73,25 @@ const getCustomizedColors = (context: ThemeContext) => {
       "titleBar.inactiveBackground": palette.mantle,
       "scrollbar.shadow": palette.mantle,
     },
+    minimal: {
+      "activityBar.background": palette.base,
+      "breadcrumb.background": palette.base,
+      "commandCenter.background": palette.base,
+      "debugToolBar.background": palette.base,
+      "editor.background": palette.base,
+      "editorWidget.background": palette.base,
+      "editorGroupHeader.tabsBackground": palette.base,
+      "minimap.background": opacity(palette.base, 0.5),
+      "statusBar.background": palette.base,
+      "statusBar.noFolderBackground": palette.base,
+      "sideBar.background": palette.base,
+      "sideBarSectionHeader.background": palette.base,
+      "sideBarTitle.background": palette.base,
+      "tab.border": palette.base,
+      "tab.inactiveBackground": palette.base,
+      "titleBar.activeBackground": palette.base,
+      "titleBar.inactiveBackground": palette.base,
+    },
   };
 
   return {
