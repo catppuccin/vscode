@@ -104,11 +104,13 @@
             "description": "Controls how the workbench should be styled.",
             "enum": [
               "default",
-              "flat"
+              "flat",
+              "minimal"
             ],
             "enumDescriptions": [
               "The default look, using 3 shades of the base color.",
-              "A more flat look, using 2 shades of the base color."
+              "A more flat look, using 2 shades of the base color.",
+              "A minimal look, using 1 shade of the base color."
             ]
           }
         }
