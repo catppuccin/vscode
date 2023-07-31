@@ -1,12 +1,62 @@
-import { CatppuccinWorkbenchMode, ThemeContext } from "../types";
+import {
+  CatppuccinBracketMode,
+  CatppuccinWorkbenchMode,
+  ThemeContext,
+} from "../types";
 import { opacity, transparent, shade } from "./utils";
 import extensions from "./extensions";
 
-const getWorkbenchColors = (context: ThemeContext) => {
-  const { palette, options } = context;
+const getCustomizedColors = (context: ThemeContext) => {
+  const { palette, options, isLatte } = context;
 
-  const workbenchMode = options.workbenchMode;
-  const colorsMap: Record<CatppuccinWorkbenchMode, Record<string, string>> = {
+  // invert the shade if current theme is latte
+  const L = isLatte ? -1 : 1;
+  const bracketsMap: Record<CatppuccinBracketMode, Record<string, string>> = {
+    rainbow: {
+      "editorBracketHighlight.foreground1": palette.red,
+      "editorBracketHighlight.foreground2": palette.peach,
+      "editorBracketHighlight.foreground3": palette.yellow,
+      "editorBracketHighlight.foreground4": palette.green,
+      "editorBracketHighlight.foreground5": palette.sapphire,
+      "editorBracketHighlight.foreground6": palette.mauve,
+      "editorBracketHighlight.unexpectedBracket.foreground": palette.maroon,
+    },
+    dimmed: {
+      "editorBracketHighlight.foreground1": shade(palette.red, -0.6 * L),
+      "editorBracketHighlight.foreground2": shade(palette.peach, -0.6 * L),
+      "editorBracketHighlight.foreground3": shade(palette.yellow, -0.6 * L),
+      "editorBracketHighlight.foreground4": shade(palette.green, -0.6 * L),
+      "editorBracketHighlight.foreground5": shade(palette.sapphire, -0.6 * L),
+      "editorBracketHighlight.foreground6": shade(palette.mauve, -0.6 * L),
+      "editorBracketHighlight.unexpectedBracket.foreground": shade(
+        palette.maroon,
+        -0.6 * L
+      ),
+    },
+    monochromatic: {
+      "editorBracketHighlight.foreground1": palette.subtext1,
+      "editorBracketHighlight.foreground2": palette.subtext0,
+      "editorBracketHighlight.foreground3": palette.overlay2,
+      "editorBracketHighlight.foreground4": palette.overlay1,
+      "editorBracketHighlight.foreground5": palette.overlay0,
+      "editorBracketHighlight.foreground6": palette.surface2,
+      "editorBracketHighlight.unexpectedbracket.foreground": palette.maroon,
+    },
+    neovim: {
+      "editorBracketHighlight.foreground1": palette.red,
+      "editorBracketHighlight.foreground2": palette.teal,
+      "editorBracketHighlight.foreground3": palette.yellow,
+      "editorBracketHighlight.foreground4": palette.blue,
+      "editorBracketHighlight.foreground5": palette.pink,
+      "editorBracketHighlight.foreground6": palette.flamingo,
+      "editorBracketHighlight.unexpectedBracket.foreground": palette.maroon,
+    },
+  };
+
+  const workbenchMap: Record<
+    CatppuccinWorkbenchMode,
+    Record<string, string>
+  > = {
     default: {},
     flat: {
       "activityBar.background": palette.mantle,
@@ -21,6 +71,7 @@ const getWorkbenchColors = (context: ThemeContext) => {
       "tab.border": palette.base,
       "titleBar.activeBackground": palette.mantle,
       "titleBar.inactiveBackground": palette.mantle,
+      "scrollbar.shadow": palette.mantle,
     },
     minimal: {
       "activityBar.background": palette.base,
@@ -43,16 +94,20 @@ const getWorkbenchColors = (context: ThemeContext) => {
     },
   };
 
-  return colorsMap[workbenchMode];
+  return {
+    ...bracketsMap[options.bracketMode],
+    ...workbenchMap[options.workbenchMode],
+  };
 };
 
 export const getUiColors = (context: ThemeContext) => {
   const { palette, options, isLatte } = context;
 
   const accent = palette[options.accent];
-  const workbenchColors = getWorkbenchColors(context);
-
   const dropBackground = opacity(palette.surface2, 0.6);
+  const border = options.extraBordersEnabled
+    ? opacity(palette.overlay1, 0.15)
+    : transparent;
 
   // support for custom named colors
   const customNamedColors = {
@@ -125,7 +180,7 @@ export const getUiColors = (context: ThemeContext) => {
     "activityBar.foreground": accent,
     "activityBar.dropBar": dropBackground,
     "activityBar.inactiveForeground": palette.overlay0,
-    "activityBar.border": transparent,
+    "activityBar.border": border,
     "activityBarBadge.background": accent,
     "activityBarBadge.foreground": palette.crust,
     "activityBar.activeBorder": transparent,
@@ -151,7 +206,7 @@ export const getUiColors = (context: ThemeContext) => {
     "button.secondaryBackground": palette.surface2,
     "button.secondaryHoverBackground": shade(palette.surface2, 0.2),
     "checkbox.background": palette.surface1,
-    "checkbox.border": transparent,
+    "checkbox.border": border,
     "checkbox.foreground": accent,
 
     // dropdown controls
@@ -195,6 +250,11 @@ export const getUiColors = (context: ThemeContext) => {
     "diffEditor.border": palette.surface2,
     "diffEditor.insertedTextBackground": opacity(palette.green, 0.1),
     "diffEditor.removedTextBackground": opacity(palette.red, 0.1),
+    "diffEditor.insertedLineBackground": opacity(palette.green, 0.15),
+    "diffEditor.removedLineBackground": opacity(palette.red, 0.15),
+    "diffEditor.diagonalFill": opacity(palette.surface2, 0.6),
+    "diffEditorOverview.insertedForeground": opacity(palette.green, 0.8),
+    "diffEditorOverview.removedForeground": opacity(palette.red, 0.8),
 
     "editor.background": palette.base,
     "editor.findMatchBackground": palette.surface2,
@@ -216,13 +276,6 @@ export const getUiColors = (context: ThemeContext) => {
     "editor.selectionHighlightBorder": opacity(palette.sky, 0.2),
     "editor.wordHighlightBackground": opacity(palette.surface2, 0.7),
     "editor.wordHighlightStrongBackground": opacity(palette.surface2, 0.5),
-    "editorBracketHighlight.foreground1": palette.red,
-    "editorBracketHighlight.foreground2": palette.peach,
-    "editorBracketHighlight.foreground3": palette.yellow,
-    "editorBracketHighlight.foreground4": palette.green,
-    "editorBracketHighlight.foreground5": palette.sapphire,
-    "editorBracketHighlight.foreground6": palette.mauve,
-    "editorBracketHighlight.unexpectedBracket.foreground": palette.maroon,
     "editorBracketMatch.background": opacity(palette.overlay2, 0.1),
     "editorBracketMatch.border": palette.overlay2,
     "editorCodeLens.foreground": palette.overlay1,
@@ -249,6 +302,12 @@ export const getUiColors = (context: ThemeContext) => {
     "editorInfo.background": transparent,
     "editorInfo.border": transparent,
     "editorInfo.foreground": palette.blue,
+    "editorInlayHint.foreground": palette.surface2,
+    "editorInlayHint.background": opacity(palette.mantle, 0.75),
+    "editorInlayHint.typeForeground": palette.subtext1,
+    "editorInlayHint.typeBackground": opacity(palette.mantle, 0.75),
+    "editorInlayHint.parameterForeground": palette.subtext0,
+    "editorInlayHint.parameterBackground": opacity(palette.mantle, 0.75),
     "editorLineNumber.activeForeground": accent,
     "editorLineNumber.foreground": palette.overlay1,
     "editorLink.activeForeground": accent,
@@ -259,6 +318,9 @@ export const getUiColors = (context: ThemeContext) => {
     "editorOverviewRuler.background": palette.mantle,
     "editorOverviewRuler.border": opacity(palette.text, 0.07),
     "editorRuler.foreground": palette.surface2,
+    // breakpoints
+    "editor.stackFrameHighlightBackground": opacity(palette.yellow, 0.15),
+    "editor.focusedStackFrameHighlightBackground": opacity(palette.green, 0.15),
     "editorStickyScrollHover.background": palette.surface0,
     "editorSuggestWidget.background": palette.mantle,
     "editorSuggestWidget.border": palette.surface2,
@@ -332,7 +394,9 @@ export const getUiColors = (context: ThemeContext) => {
     "tree.indentGuidesStroke": palette.overlay0,
 
     "menu.background": palette.base,
-    "menu.border": opacity(palette.base, 0.5),
+    "menu.border": options.extraBordersEnabled
+      ? palette.surface2
+      : opacity(palette.base, 0.5),
     "menu.foreground": palette.text,
     "menu.selectionBackground": palette.surface2,
     "menu.selectionBorder": transparent,
@@ -397,7 +461,7 @@ export const getUiColors = (context: ThemeContext) => {
 
     "progressBar.background": accent,
 
-    "scrollbar.shadow": palette.base,
+    "scrollbar.shadow": palette.crust,
     "scrollbarSlider.activeBackground": opacity(palette.surface0, 0.4),
     "scrollbarSlider.background": opacity(palette.surface2, 0.5),
     "scrollbarSlider.hoverBackground": palette.overlay0,
@@ -415,6 +479,7 @@ export const getUiColors = (context: ThemeContext) => {
     "sideBar.background": palette.mantle,
     "sideBar.dropBackground": dropBackground,
     "sideBar.foreground": palette.text,
+    "sideBar.border": border,
     "sideBarSectionHeader.background": palette.mantle,
     "sideBarSectionHeader.foreground": palette.text,
     "sideBarTitle.foreground": accent,
@@ -423,6 +488,7 @@ export const getUiColors = (context: ThemeContext) => {
     // Status Bar
     "statusBar.background": palette.crust,
     "statusBar.foreground": palette.text,
+    "statusBar.border": border,
     // having no folder open shouldn't change the bar
     "statusBar.noFolderBackground": palette.crust,
     "statusBar.noFolderForeground": palette.text,
@@ -479,7 +545,7 @@ export const getUiColors = (context: ThemeContext) => {
     "terminal.border": palette.surface2,
     "terminal.foreground": palette.text,
     "terminal.dropBackground": dropBackground,
-    "terminal.selectionBackground": opacity(palette.surface2, 0.2),
+    "terminal.selectionBackground": palette.surface2,
     "terminalCursor.background": palette.base,
     "terminalCursor.foreground": palette.rosewater,
 
@@ -488,7 +554,7 @@ export const getUiColors = (context: ThemeContext) => {
     "titleBar.activeForeground": palette.text,
     "titleBar.inactiveBackground": palette.crust,
     "titleBar.inactiveForeground": opacity(palette.text, 0.5),
-    "titleBar.border": transparent,
+    "titleBar.border": border,
 
     // welcome page
     "welcomePage.tileBackground": palette.mantle,
@@ -544,7 +610,7 @@ export const getUiColors = (context: ThemeContext) => {
     ...extensions(context),
 
     // workbench overrides
-    ...workbenchColors,
+    ...getCustomizedColors(context),
     // custom named overrides
     ...customNamedColors,
   };

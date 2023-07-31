@@ -15,6 +15,9 @@
   <img src="assets/preview.webp"/>
 </p>
 
+> **Note**\
+> Get the newly released [Catppuccin Icon Pack](https://marketplace.visualstudio.com/items?itemName=Catppuccin.catppuccin-vsc-icons) now!
+
 ## Previews
 
 <details>
@@ -53,9 +56,13 @@ open the file you just downloaded.
 > **Note**\
 > It is recommended to change `window.titleBarStyle` to `custom` in your JSON user settings.
 
+**Using the JSON theme only**
+
+You can find the compiled theme JSON files (with default settings as documented below) on the [compiled branch](https://github.com/catppuccin/vscode/tree/compiled).
+
 ## Customization
 
-Catppuccin for VSCode can be customized to your liking. If you like the Catppuccin colours, but feel that they are a bit too bright for working at night, customization got you covered!
+Catppuccin for VSCode can be customized to your liking. If you like the Catppuccin colors, but feel that they are a bit too bright for working at night, customization got you covered!
 
 <img width="1488" alt="oldeppuccin-pink-accent" src="https://user-images.githubusercontent.com/79978224/199134942-2091178a-314b-4782-b5d8-8d3a348fbefe.png">
 
@@ -66,7 +73,7 @@ Catppuccin for VSCode can be customized to your liking. If you like the Catppucc
 ```json5
      // use Mocha as the base
     "workbench.colorTheme": "Catppuccin Mocha",
-    // pink as the accent colour
+    // pink as the accent color
     "catppuccin.accentColor": "pink",
     // make Mocha specifically very dark
     // (this preserves other flavours!)
@@ -90,11 +97,11 @@ Catppuccin for VSCode can be customized to your liking. If you like the Catppucc
 
 Open your settings, and look for `Extensions > Catppuccin`. Available options are documented here.
 
-### Custom accent colour
+### Custom accent color
 
 `catppuccin.accentColor`
 
-You can choose any colour as your "accent" colour. `mauve` is our default, but you can add more personality by using your favourite!
+You can choose any color as your "accent" color. `mauve` is our default, but you can add more personality by using your favorite!
 
 ### Disable italics & bold fonts
 
@@ -108,7 +115,7 @@ You can toggle whether to use
 
 `catppuccin.workbenchMode`
 
-By default, Catppuccin for VSCode uses 3 shades of our `base` colour for the workbench.
+By default, Catppuccin for VSCode uses 3 shades of our `base` color for the workbench.
 For example in Mocha:
 
 - `base: #1e1e2e` - the editor background
@@ -127,11 +134,22 @@ If you'd like a more flat look, you can change it to `flat`! This only uses `bas
 
 </details>
 
-### Override palette colours
+### Paired Brackets
+
+`catppuccin.bracketMode`
+
+By default, we're using `red`, `peach`, `yellow`, `green`, `blue`, and `mauve` for matching bracket pairs. You can change that option, if you want different colors:
+
+- `rainbow` is our default setting, using the colors described above.
+- `dimmed` uses the same rainbow colors, but muted by 20%.
+- `monochromatic` only uses grayish colors, from `subtext1` to `surface2`.
+- `neovim` uses the same colors that [`nvim-ts-rainbow`](https://github.com/p00f/nvim-ts-rainbow) uses in our [Neovim port](https://github.com/catppuccin/nvim).
+
+### Override palette colors
 
 `catppuccin.colorOverrides`
 
-Colours can be overwritten in the JSON user settings, like so:
+Colors can be overwritten in the JSON user settings, like so:
 
 ```json5
     // ...your other settings...
@@ -149,11 +167,11 @@ Colours can be overwritten in the JSON user settings, like so:
     }
 ```
 
-### Use palette colours on workbench elements (UI)
+### Use palette colors on workbench elements (UI)
 
 `catppuccin.customUIColors`
 
-If you want to customize where certain palette colours appear, you can change it like so:
+If you want to customize where certain palette colors appear, you can change it like so:
 
 ```json5
     "catppuccin.customUIColors": {
@@ -164,7 +182,7 @@ If you want to customize where certain palette colours appear, you can change it
         },
         // but for mocha, use "crust" on your currently selected accent.
         "mocha": {
-            // "accent" selects your current accent colour.
+            // "accent" selects your current accent color.
             "breadcrumb.background": "accent",
             "breadcrumb.foreground": "crust",
             // you can use opacity, by specifing it after a space
@@ -176,7 +194,7 @@ If you want to customize where certain palette colours appear, you can change it
 
 You can find all the available keys [here](https://code.visualstudio.com/api/references/theme-color).
 
-> **Note**: This respects your [colour overrides](#override-palette-colours).
+> **Note**: This respects your [color overrides](#override-palette-colors).
 
 ## Support
 

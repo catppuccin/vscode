@@ -16,6 +16,18 @@ jobs:
       - run: |
           yarn install --frozen-lockfile
           yarn build
+      - name: Publish to orphaned branch
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./themes
+          publish_branch: compiled
+          user_name: 'github-actions[bot]'
+          user_email: 'github-actions[bot]@users.noreply.github.com'
+          exclude_assets: ".flag"
+          # this is here because we're not using the Action for it's main purpose (GH pages)
+          # we're not interested in preventing Jekyll (creating a `.nojekyll` file)
+          enable_jekyll: true
       - name: Package Extension
         id: packageExtension
         uses: HaaLeo/publish-vscode-extension@v1

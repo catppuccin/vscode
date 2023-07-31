@@ -16,6 +16,8 @@ export const defaultOptions: ThemeOptions = {
   italicKeywords: true,
   colorOverrides: {},
   workbenchMode: "default",
+  bracketMode: "rainbow",
+  extraBordersEnabled: false,
   customUIColors: {},
 };
 

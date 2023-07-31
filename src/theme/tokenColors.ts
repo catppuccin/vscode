@@ -73,7 +73,7 @@ export const getTokenColors = (context: ThemeContext) => {
       },
     },
     {
-      name: "All punctuation delimeters",
+      name: "All punctuation delimiters",
       scope: "punctuation.semi",
       settings: {
         foreground: palette.teal,
@@ -329,7 +329,7 @@ export const getTokenColors = (context: ThemeContext) => {
       },
     },
     {
-      name: "Rust punctuation delimeters",
+      name: "Rust punctuation delimiters",
       scope: "punctuation.semi.rust",
       settings: {
         foreground: palette.teal,
@@ -447,7 +447,7 @@ export const getTokenColors = (context: ThemeContext) => {
     },
 
     {
-      name: "C++ Puct Delimeters",
+      name: "C++ Punct Delimiters",
       scope: "punctuation.terminator.statement.cpp",
       settings: {
         foreground: palette.teal,
@@ -2077,7 +2077,7 @@ export const getTokenColors = (context: ThemeContext) => {
       },
     },
     {
-      name: "Shell opeartors and punct delimeters",
+      name: "Shell operators and punct delimiters",
       scope: ["keyword.operator.list.shell"],
       settings: {
         foreground: palette.teal,
