@@ -268,7 +268,7 @@ export const getUiColors = (context: ThemeContext) => {
     "editor.hoverHighlightBackground": opacity(palette.sky, 0.25),
     "editor.inactiveSelectionBackground": transparent,
     "editor.lineHighlightBackground": opacity(palette.text, 0.07),
-    "editor.lineHighlightBorder": palette.base,
+    "editor.lineHighlightBorder": transparent,
     "editor.rangeHighlightBackground": opacity(palette.sky, 0.25),
     "editor.rangeHighlightBorder": transparent,
     "editor.selectionBackground": palette.surface2,
