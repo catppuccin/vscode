@@ -485,6 +485,11 @@ export const getUiColors = (context: ThemeContext) => {
     "sideBarTitle.foreground": accent,
     "sideBarTitle.background": palette.crust,
 
+    // banners, such as Restricted Mode
+    "banner.background": palette.surface1,
+    "banner.foreground": palette.text,
+    "banner.iconForeground": palette.text,
+
     // Status Bar
     "statusBar.background": palette.crust,
     "statusBar.foreground": palette.text,
