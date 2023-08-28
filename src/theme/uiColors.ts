@@ -497,9 +497,14 @@ export const getUiColors = (context: ThemeContext) => {
     // having no folder open shouldn't change the bar
     "statusBar.noFolderBackground": palette.crust,
     "statusBar.noFolderForeground": palette.text,
+    "statusBar.noFolderBorder": border,
     // debugging is peach
     "statusBar.debuggingBackground": palette.peach,
     "statusBar.debuggingForeground": palette.crust,
+    "statusBar.debuggingBorder": border,
+    // offline styled the same as banners
+    "statusBar.offlineBackground": palette.surface1,
+    "statusBar.offlineForeground": palette.text,
     // remote is blue
     "statusBarItem.remoteBackground": palette.blue,
     "statusBarItem.remoteForeground": palette.crust,
