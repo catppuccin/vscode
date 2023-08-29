@@ -1,9 +1,12 @@
+name: release-please
+
 on:
   push:
-    branches:
-      - main
+    branches: [main]
 
-name: release-please
+permissions:
+  contents: write
+  pull-requests: write
 
 jobs:
   release-please:
@@ -12,3 +15,69 @@ jobs:
       - uses: google-github-actions/release-please-action@v3
         with:
           release-type: node
+
+      - uses: actions/checkout@v3
+        if: ${{ steps.release.outputs.release_created }}
+
+      - uses: actions/setup-node@v3
+        if: ${{ steps.release.outputs.release_created }}
+        with:
+          node-version: 18
+          cache: yarn
+
+      - name: Build
+        if: ${{ steps.release.outputs.release_created }}
+        run: |
+          yarn install --frozen-lockfile
+          yarn build
+
+      - name: Publish to orphaned branch
+        if: ${{ steps.release.outputs.release_created }}
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./themes
+          publish_branch: compiled
+          user_name: 'github-actions[bot]'
+          user_email: 'github-actions[bot]@users.noreply.github.com'
+          exclude_assets: ".flag"
+          # this is here because we're not using the Action for it's main purpose (GH pages)
+          # we're not interested in preventing Jekyll (creating a `.nojekyll` file)
+          enable_jekyll: true
+
+      - name: Package Extension
+        if: ${{ steps.release.outputs.release_created }}
+        id: packageExtension
+        uses: HaaLeo/publish-vscode-extension@v1
+        with:
+          yarn: true
+          pat: stub
+          dryRun: true
+
+      - name: Publish to Visual Studio Marketplace
+        if: ${{ steps.release.outputs.release_created }}
+        uses: HaaLeo/publish-vscode-extension@v1
+        with:
+          yarn: true
+          pat: ${{ secrets.VS_MARKETPLACE_TOKEN }}
+          extensionFile: ${{ steps.packageExtension.outputs.vsixPath }}
+          registryUrl: https://marketplace.visualstudio.com
+
+      - name: Publish to Open VSX Registry
+        if: ${{ steps.release.outputs.release_created }}
+        uses: HaaLeo/publish-vscode-extension@v1
+        # continue even if OpenVSX fails
+        continue-on-error: true
+        timeout-minutes: 10
+        # see issue #51
+        with:
+          yarn: true
+          pat: ${{ secrets.OPEN_VSX_TOKEN }}
+          extensionFile: ${{ steps.packageExtension.outputs.vsixPath }}
+
+      - name: Add fils to GH Release
+        if: ${{ steps.release.outputs.release_created }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run:
+          gh release upload ${{ steps.release.outputs.tag_name }} ${{ steps.packageExtension.outputs.vsixPath }}
