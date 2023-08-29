@@ -28,7 +28,7 @@ export const compileTheme = (
   const ctpPalette = Object.entries(variants[flavour])
     .map(([k, v]) => {
       return {
-        [k as unknown as string]: v.hex,
+        [k as unknown as any]: v["hex"],
         name: flavour,
       };
     })

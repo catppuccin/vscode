@@ -1,18 +1,13 @@
-import { compileTheme } from "../theme";
-import { CatppuccinFlavour } from "../types";
-import { getThemePaths } from "../helpers";
 import * as fs from "fs";
 import path = require("path");
-import { defaultOptions } from "../theme";
+import { variants } from "@catppuccin/palette";
+
+import { getThemePaths } from "../helpers";
+import { compileTheme, defaultOptions } from "../theme";
+import { CatppuccinFlavour } from "../types";
 
 const paths = getThemePaths();
-
-const flavours = [
-  "latte" as CatppuccinFlavour,
-  "frappe" as CatppuccinFlavour,
-  "macchiato" as CatppuccinFlavour,
-  "mocha" as CatppuccinFlavour,
-];
+const flavours = Object.keys(variants) as CatppuccinFlavour[];
 
 flavours.map((flavour) => {
   const theme = compileTheme(flavour, defaultOptions);

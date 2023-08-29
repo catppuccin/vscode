@@ -3,15 +3,28 @@ import {
   CatppuccinWorkbenchMode,
   ThemeContext,
 } from "../types";
-import { opacity, transparent, shade } from "./utils";
+import { WorkbenchColors } from "../types/workbench";
+import { opacity, shade, transparent } from "./utils";
 import extensions from "./extensions";
+
+type PickStartsWith<T extends object, S extends string> = {
+  [K in keyof T as K extends `${S}${infer R}` ? K : never]: T[K];
+};
+
+type BracketHLs = keyof PickStartsWith<
+  WorkbenchColors,
+  "editorBracketHighlight"
+>;
 
 const getCustomizedColors = (context: ThemeContext) => {
   const { palette, options, isLatte } = context;
 
   // invert the shade if current theme is latte
   const L = isLatte ? -1 : 1;
-  const bracketsMap: Record<CatppuccinBracketMode, Record<string, string>> = {
+  const bracketsMap: Record<
+    CatppuccinBracketMode,
+    Record<BracketHLs, string>
+  > = {
     rainbow: {
       "editorBracketHighlight.foreground1": palette.red,
       "editorBracketHighlight.foreground2": palette.peach,
@@ -55,7 +68,7 @@ const getCustomizedColors = (context: ThemeContext) => {
 
   const workbenchMap: Record<
     CatppuccinWorkbenchMode,
-    Record<string, string>
+    Partial<Record<keyof WorkbenchColors, string>>
   > = {
     default: {},
     flat: {
@@ -100,7 +113,9 @@ const getCustomizedColors = (context: ThemeContext) => {
   };
 };
 
-export const getUiColors = (context: ThemeContext) => {
+export const getUiColors = (
+  context: ThemeContext
+): Partial<Record<keyof WorkbenchColors, string>> => {
   const { palette, options, isLatte } = context;
 
   const accent = palette[options.accent];
