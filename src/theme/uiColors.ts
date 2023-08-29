@@ -352,12 +352,13 @@ export const getUiColors = (
     // extensions marketplace
     "extensionButton.prominentForeground": palette.crust,
     "extensionButton.prominentBackground": accent,
+    "extensionButton.separator": palette.base,
     "extensionButton.prominentHoverBackground": shade(accent, 0.2),
     "extensionBadge.remoteBackground": palette.blue,
     "extensionBadge.remoteForeground": palette.crust,
     "extensionIcon.starForeground": palette.yellow,
     "extensionIcon.verifiedForeground": palette.green,
-    "extensionIcon.preReleaseForeground": palette.rosewater,
+    "extensionIcon.preReleaseForeground": palette.surface2,
     "extensionIcon.sponsorForeground": palette.pink,
 
     // git colors
