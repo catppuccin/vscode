@@ -536,28 +536,28 @@ export const getUiColors = (context: ThemeContext) => {
     "tab.inactiveForeground": palette.overlay0,
 
     // Terminal
-    "terminal.ansiBlack": palette.overlay0,
-    "terminal.ansiBlue": palette.blue,
-    "terminal.ansiBrightBlack": palette.overlay1,
-    "terminal.ansiBrightBlue": palette.blue,
-    "terminal.ansiBrightCyan": palette.sky,
-    "terminal.ansiBrightGreen": palette.green,
-    "terminal.ansiBrightMagenta": palette.pink,
-    "terminal.ansiBrightRed": palette.red,
-    "terminal.ansiBrightWhite": palette.text,
-    "terminal.ansiBrightYellow": palette.yellow,
-    "terminal.ansiCyan": palette.sky,
-    "terminal.ansiGreen": palette.green,
-    "terminal.ansiMagenta": palette.pink,
-    "terminal.ansiRed": palette.red,
-    "terminal.ansiWhite": palette.overlay2,
-    "terminal.ansiYellow": palette.yellow,
-    "terminal.border": palette.surface2,
     "terminal.foreground": palette.text,
-    "terminal.dropBackground": dropBackground,
-    "terminal.selectionBackground": palette.surface2,
+    "terminal.ansiBlack": isLatte ? palette.subtext1 : palette.surface1, // color0
+    "terminal.ansiRed": palette.red, // color1
+    "terminal.ansiGreen": palette.green, // color2
+    "terminal.ansiYellow": palette.yellow, // color3
+    "terminal.ansiBlue": palette.blue, // color4
+    "terminal.ansiMagenta": palette.pink, // color5
+    "terminal.ansiCyan": palette.sky, // color6
+    "terminal.ansiWhite": isLatte ? palette.surface2 : palette.subtext1, // color7
+    "terminal.ansiBrightBlack": isLatte ? palette.subtext0 : palette.surface2, // color8
+    "terminal.ansiBrightRed": palette.red, // color9
+    "terminal.ansiBrightGreen": palette.green, // color10
+    "terminal.ansiBrightYellow": palette.yellow, // color11
+    "terminal.ansiBrightBlue": palette.blue, // color12
+    "terminal.ansiBrightMagenta": palette.pink, // color13
+    "terminal.ansiBrightCyan": palette.sky, // color14
+    "terminal.ansiBrightWhite": isLatte ? palette.surface1 : palette.subtext0, // color15
+    "terminal.selectionBackground": opacity(palette.surface2, 0.5),
     "terminalCursor.background": palette.base,
     "terminalCursor.foreground": palette.rosewater,
+    "terminal.border": palette.surface2,
+    "terminal.dropBackground": dropBackground,
 
     // title bar
     "titleBar.activeBackground": palette.crust,
