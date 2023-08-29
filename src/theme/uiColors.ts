@@ -53,7 +53,7 @@ const getCustomizedColors = (context: ThemeContext) => {
       "editorBracketHighlight.foreground4": palette.overlay1,
       "editorBracketHighlight.foreground5": palette.overlay0,
       "editorBracketHighlight.foreground6": palette.surface2,
-      "editorBracketHighlight.unexpectedbracket.foreground": palette.maroon,
+      "editorBracketHighlight.unexpectedBracket.foreground": palette.maroon,
     },
     neovim: {
       "editorBracketHighlight.foreground1": palette.red,
@@ -78,7 +78,6 @@ const getCustomizedColors = (context: ThemeContext) => {
       "debugToolBar.background": palette.mantle,
       "editorGroupHeader.tabsBackground": palette.mantle,
       "minimap.background": opacity(palette.base, 0.5),
-      "sideBarTitle.background": palette.mantle,
       "statusBar.background": palette.mantle,
       "statusBar.noFolderBackground": palette.mantle,
       "tab.border": palette.base,
@@ -99,7 +98,6 @@ const getCustomizedColors = (context: ThemeContext) => {
       "statusBar.noFolderBackground": palette.base,
       "sideBar.background": palette.base,
       "sideBarSectionHeader.background": palette.base,
-      "sideBarTitle.background": palette.base,
       "tab.border": palette.base,
       "tab.inactiveBackground": palette.base,
       "titleBar.activeBackground": palette.base,
@@ -193,7 +191,7 @@ export const getUiColors = (
     // Activity Bar
     "activityBar.background": palette.crust,
     "activityBar.foreground": accent,
-    "activityBar.dropBar": dropBackground,
+    "activityBar.dropBorder": dropBackground,
     "activityBar.inactiveForeground": palette.overlay0,
     "activityBar.border": border,
     "activityBarBadge.background": accent,
@@ -498,7 +496,6 @@ export const getUiColors = (
     "sideBarSectionHeader.background": palette.mantle,
     "sideBarSectionHeader.foreground": palette.text,
     "sideBarTitle.foreground": accent,
-    "sideBarTitle.background": palette.crust,
 
     // banners, such as Restricted Mode
     "banner.background": palette.surface1,
