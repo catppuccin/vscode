@@ -170,7 +170,9 @@
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-prettier": "^4.2.1",
     "husky": ">=6",
+    "json-schema-to-typescript": "^13.1.1",
     "lint-staged": ">=13.2.0",
+    "node-fetch": "^3.3.2",
     "prettier": "^2.8.7",
     "ts-node": "^10.9.1",
     "tsup": "^6.7.0",
@@ -207,13 +209,14 @@
     }
   },
   "scripts": {
+    "build": "yarn compile:theme && yarn compile",
     "compile": "tsup",
     "compile:theme": "ts-node src/hooks/generateThemes.ts",
-    "build": "yarn compile:theme && yarn compile",
-    "postbuild": "prettier -w ./themes",
     "dev": "DEBUG=1 yarn build",
     "lint": "eslint . --ext .ts",
+    "package": "vsce package --allow-star-activation --yarn",
+    "postbuild": "prettier -w ./themes",
     "prepare": "husky install",
-    "package": "vsce package --allow-star-activation --yarn"
+    "update-types": "ts-node src/hooks/updateVSCtypes.mts"
   }
 }

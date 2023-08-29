@@ -3,15 +3,28 @@ import {
   CatppuccinWorkbenchMode,
   ThemeContext,
 } from "../types";
-import { opacity, transparent, shade } from "./utils";
+import { WorkbenchColors } from "../types/workbench";
+import { opacity, shade, transparent } from "./utils";
 import extensions from "./extensions";
+
+type PickStartsWith<T extends object, S extends string> = {
+  [K in keyof T as K extends `${S}${infer R}` ? K : never]: T[K];
+};
+
+type BracketHLs = keyof PickStartsWith<
+  WorkbenchColors,
+  "editorBracketHighlight"
+>;
 
 const getCustomizedColors = (context: ThemeContext) => {
   const { palette, options, isLatte } = context;
 
   // invert the shade if current theme is latte
   const L = isLatte ? -1 : 1;
-  const bracketsMap: Record<CatppuccinBracketMode, Record<string, string>> = {
+  const bracketsMap: Record<
+    CatppuccinBracketMode,
+    Record<BracketHLs, string>
+  > = {
     rainbow: {
       "editorBracketHighlight.foreground1": palette.red,
       "editorBracketHighlight.foreground2": palette.peach,
@@ -40,7 +53,7 @@ const getCustomizedColors = (context: ThemeContext) => {
       "editorBracketHighlight.foreground4": palette.overlay1,
       "editorBracketHighlight.foreground5": palette.overlay0,
       "editorBracketHighlight.foreground6": palette.surface2,
-      "editorBracketHighlight.unexpectedbracket.foreground": palette.maroon,
+      "editorBracketHighlight.unexpectedBracket.foreground": palette.maroon,
     },
     neovim: {
       "editorBracketHighlight.foreground1": palette.red,
@@ -55,7 +68,7 @@ const getCustomizedColors = (context: ThemeContext) => {
 
   const workbenchMap: Record<
     CatppuccinWorkbenchMode,
-    Record<string, string>
+    Partial<Record<keyof WorkbenchColors, string>>
   > = {
     default: {},
     flat: {
@@ -65,7 +78,6 @@ const getCustomizedColors = (context: ThemeContext) => {
       "debugToolBar.background": palette.mantle,
       "editorGroupHeader.tabsBackground": palette.mantle,
       "minimap.background": opacity(palette.base, 0.5),
-      "sideBarTitle.background": palette.mantle,
       "statusBar.background": palette.mantle,
       "statusBar.noFolderBackground": palette.mantle,
       "tab.border": palette.base,
@@ -86,7 +98,6 @@ const getCustomizedColors = (context: ThemeContext) => {
       "statusBar.noFolderBackground": palette.base,
       "sideBar.background": palette.base,
       "sideBarSectionHeader.background": palette.base,
-      "sideBarTitle.background": palette.base,
       "tab.border": palette.base,
       "tab.inactiveBackground": palette.base,
       "titleBar.activeBackground": palette.base,
@@ -100,7 +111,9 @@ const getCustomizedColors = (context: ThemeContext) => {
   };
 };
 
-export const getUiColors = (context: ThemeContext) => {
+export const getUiColors = (
+  context: ThemeContext
+): Partial<Record<keyof WorkbenchColors, string>> => {
   const { palette, options, isLatte } = context;
 
   const accent = palette[options.accent];
@@ -178,7 +191,7 @@ export const getUiColors = (context: ThemeContext) => {
     // Activity Bar
     "activityBar.background": palette.crust,
     "activityBar.foreground": accent,
-    "activityBar.dropBar": dropBackground,
+    "activityBar.dropBorder": dropBackground,
     "activityBar.inactiveForeground": palette.overlay0,
     "activityBar.border": border,
     "activityBarBadge.background": accent,
@@ -483,7 +496,6 @@ export const getUiColors = (context: ThemeContext) => {
     "sideBarSectionHeader.background": palette.mantle,
     "sideBarSectionHeader.foreground": palette.text,
     "sideBarTitle.foreground": accent,
-    "sideBarTitle.background": palette.crust,
 
     // banners, such as Restricted Mode
     "banner.background": palette.surface1,
