@@ -144,6 +144,13 @@ export const getUiColors = (
           }
         }
 
+        // allow custom hex colors
+        if (v.startsWith("#")) {
+          return {
+            [k]: v,
+          };
+        }
+
         //check if the entry is a "color opacity" mapping
         const entry = v.split(" ");
         if (entry.length !== 1) {
