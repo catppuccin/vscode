@@ -6,7 +6,11 @@ export const getTokenColors = (context: ThemeContext) => {
   return [
     {
       name: "All variable",
-      scope: ["variable.language", "variable.other"],
+      scope: [
+        "variable.language",
+        "variable.other",
+        "punctuation.definition.variable.php",
+      ],
       settings: {
         foreground: palette.flamingo,
       },
