@@ -380,7 +380,7 @@ export const getUiColors = (
     "gitDecoration.untrackedResourceForeground": palette.green,
 
     "input.background": palette.surface0,
-    "input.border": transparent,
+    "input.border": accent,
     "input.foreground": palette.text,
     "input.placeholderForeground": opacity(palette.text, 0.45),
     "inputOption.activeBackground": opacity(palette.blue, 0.15),
@@ -458,7 +458,7 @@ export const getUiColors = (
     "panel.border": palette.surface2,
     "panelSection.border": palette.surface2,
     "panelSection.dropBackground": dropBackground,
-    "panelTitle.activeBorder": palette.text,
+    "panelTitle.activeBorder": accent,
     "panelTitle.activeForeground": palette.text,
     "panelTitle.inactiveForeground": palette.subtext0,
 
@@ -578,6 +578,7 @@ export const getUiColors = (
     "terminalCursor.foreground": palette.rosewater,
     "terminal.border": palette.surface2,
     "terminal.dropBackground": dropBackground,
+    "terminal.tab.activeBorder": accent,
 
     // title bar
     "titleBar.activeBackground": palette.crust,
