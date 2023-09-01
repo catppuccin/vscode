@@ -313,7 +313,7 @@ export const getUiColors = (
     "editorGutter.commentRangeForeground": palette.overlay2,
     "editorGutter.deletedBackground": palette.red,
     "editorGutter.foldingControlForeground": palette.overlay2,
-    "editorGutter.modifiedBackground": palette.sky,
+    "editorGutter.modifiedBackground": palette.yellow,
     "editorHoverWidget.background": palette.mantle,
     "editorHoverWidget.border": palette.surface2,
     "editorHoverWidget.foreground": palette.text,
@@ -334,9 +334,10 @@ export const getUiColors = (
     "editorMarkerNavigation.background": palette.mantle,
     "editorMarkerNavigationError.background": palette.red,
     "editorMarkerNavigationInfo.background": palette.blue,
-    "editorMarkerNavigationWarning.background": palette.yellow,
+    "editorMarkerNavigationWarning.background": palette.peach,
     "editorOverviewRuler.background": palette.mantle,
     "editorOverviewRuler.border": opacity(palette.text, 0.07),
+    "editorOverviewRuler.modifiedForeground": palette.yellow,
     "editorRuler.foreground": palette.surface2,
     // breakpoints
     "editor.stackFrameHighlightBackground": opacity(palette.yellow, 0.15),
@@ -408,7 +409,7 @@ export const getUiColors = (
     "list.hoverForeground": palette.text,
     "list.inactiveSelectionBackground": palette.surface1, // currently selected focused in editor
     "list.inactiveSelectionForeground": palette.text,
-    "list.warningForeground": palette.yellow,
+    "list.warningForeground": palette.peach,
     "listFilterWidget.background": palette.surface1,
     "listFilterWidget.noMatchesOutline": palette.red,
     "listFilterWidget.outline": transparent,
@@ -444,7 +445,7 @@ export const getUiColors = (
     "minimapSlider.activeBackground": opacity(accent, 0.6),
     "minimapGutter.addedBackground": opacity(palette.green, 0.75),
     "minimapGutter.deletedBackground": opacity(palette.red, 0.75),
-    "minimapGutter.modifiedBackground": opacity(palette.sky, 0.75),
+    "minimapGutter.modifiedBackground": opacity(palette.yellow, 0.75),
 
     "notificationCenter.border": accent,
     "notificationCenterHeader.foreground": palette.text,
@@ -558,6 +559,8 @@ export const getUiColors = (
     "tab.border": palette.mantle,
     "tab.inactiveBackground": palette.mantle,
     "tab.inactiveForeground": palette.overlay0,
+    "tab.activeModifiedBorder": palette.yellow,
+    "tab.inactiveModifiedBorder": opacity(palette.yellow, 0.3),
 
     // Terminal
     "terminal.foreground": palette.text,
