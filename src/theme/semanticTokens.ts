@@ -4,6 +4,12 @@ export const getSemanticTokens = (context: ThemeContext): SemanticTokens => {
   const { palette } = context;
 
   return {
+    "*.deprecated": {
+      fontStyle: "underline",
+    },
+    "*.static": {
+      foreground: palette.peach,
+    },
     class: {
       foreground: palette.yellow,
     },
@@ -21,6 +27,12 @@ export const getSemanticTokens = (context: ThemeContext): SemanticTokens => {
     },
     parameter: {
       foreground: palette.red,
+    },
+    regexp: {
+      foreground: palette.pink,
+    },
+    string: {
+      foreground: palette.green,
     },
     "variable.constant": {
       foreground: palette.peach,
