@@ -5,7 +5,7 @@ export const activate = () => {
   workspace.onDidChangeConfiguration((event: ConfigurationChangeEvent) => {
     if (event.affectsConfiguration("catppuccin")) {
       window.showInformationMessage(
-        "VSCode Web doesn't support advanced Catppuccin options at the moment."
+        "VSCode Web doesn't support advanced Catppuccin options at the moment.",
       );
     }
   });

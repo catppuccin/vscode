@@ -8,6 +8,7 @@ import { opacity, shade, transparent } from "./utils";
 import extensions from "./extensions";
 
 type PickStartsWith<T extends object, S extends string> = {
+  // eslint-disable-next-line
   [K in keyof T as K extends `${S}${infer R}` ? K : never]: T[K];
 };
 
@@ -43,7 +44,7 @@ const getCustomizedColors = (context: ThemeContext) => {
       "editorBracketHighlight.foreground6": shade(palette.mauve, -0.6 * L),
       "editorBracketHighlight.unexpectedBracket.foreground": shade(
         palette.maroon,
-        -0.6 * L
+        -0.6 * L,
       ),
     },
     monochromatic: {
@@ -112,7 +113,7 @@ const getCustomizedColors = (context: ThemeContext) => {
 };
 
 export const getUiColors = (
-  context: ThemeContext
+  context: ThemeContext,
 ): Partial<Record<keyof WorkbenchColors, string>> => {
   const { palette, options, isLatte } = context;
 

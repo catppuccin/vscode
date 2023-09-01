@@ -72,7 +72,7 @@ class Utils {
   updateThemes = async (
     options: ThemeOptions,
     paths: ThemePaths,
-    trigger: UpdateTrigger
+    trigger: UpdateTrigger,
   ) => {
     const flavours = Object.keys(variants) as CatppuccinFlavour[];
 

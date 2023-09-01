@@ -10,7 +10,7 @@ export const activate = () => {
     utils.updateThemes(
       utils.getConfiguration(),
       paths,
-      UpdateTrigger.FRESH_INSTALL
+      UpdateTrigger.FRESH_INSTALL,
     );
   }
 
@@ -39,7 +39,7 @@ export const activate = () => {
       utils.updateThemes(
         utils.getConfiguration(),
         paths,
-        UpdateTrigger.CONFIG_CHANGE
+        UpdateTrigger.CONFIG_CHANGE,
       );
     }
   });

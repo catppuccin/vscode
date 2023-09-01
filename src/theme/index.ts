@@ -23,7 +23,7 @@ export const defaultOptions: ThemeOptions = {
 
 export const compileTheme = (
   flavour: CatppuccinFlavour = "mocha",
-  options: ThemeOptions = defaultOptions
+  options: ThemeOptions = defaultOptions,
 ) => {
   const ctpPalette = Object.entries(variants[flavour])
     .map(([k, v]) => {
