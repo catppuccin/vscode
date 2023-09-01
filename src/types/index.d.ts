@@ -1,3 +1,7 @@
+export type * from "./textmate-colors";
+export type * from "./workbench-colors";
+export type * from "./token-styling";
+
 export type CatppuccinFlavour = "latte" | "frappe" | "macchiato" | "mocha";
 export type CatppuccinAccent =
   | "rosewater"

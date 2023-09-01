@@ -1,14 +1,14 @@
-import {
+import type {
   CatppuccinBracketMode,
   CatppuccinWorkbenchMode,
   ThemeContext,
+  WorkbenchColors,
 } from "../types";
-import { WorkbenchColors } from "../types/workbench";
 import { opacity, shade, transparent } from "./utils";
 import extensions from "./extensions";
 
 type PickStartsWith<T extends object, S extends string> = {
-  // eslint-disable-next-line
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   [K in keyof T as K extends `${S}${infer R}` ? K : never]: T[K];
 };
 
