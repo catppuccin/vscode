@@ -10,7 +10,8 @@ export const getThemePaths = (): ThemePaths => {
     mocha: "",
   };
   themes.map(
-    (theme) => (paths[theme] = join(__dirname, "..", "themes", `${theme}.json`))
+    (theme) =>
+      (paths[theme] = join(__dirname, "..", "themes", `${theme}.json`)),
   );
   return paths;
 };

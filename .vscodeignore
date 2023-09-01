@@ -1,8 +1,11 @@
+.envrc
 .direnv/
 .github/
 .husky/
 .vscode/
 .vscode-test-web/
+.yarn/
+.yarnrc.yml
 
 assets/
 schemas/
@@ -10,7 +13,8 @@ themes/.flag
 
 *.vsix
 **/*.ts
-build.js
+**/*.mts
+**/*.nix
 tsconfig.json
 
 .editorconfig
