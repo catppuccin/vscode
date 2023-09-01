@@ -216,13 +216,6 @@ export default (context: ThemeContext) => {
       },
     },
     {
-      name: "Illegal / Invalid",
-      scope: ["invalid.illegal", "invalid.deprecated"],
-      settings: {
-        fontStyle: "underline",
-      },
-    },
-    {
       name: "Preprocessor directives",
       scope: ["keyword.control.directive", "punctuation.definition.directive"],
       settings: {
