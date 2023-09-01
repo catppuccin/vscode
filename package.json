@@ -218,5 +218,6 @@
     "postbuild": "prettier -w ./themes",
     "prepare": "husky install",
     "update-types": "ts-node src/hooks/updateVSCtypes.mts"
-  }
+  },
+  "packageManager": "yarn@3.6.3"
 }
