@@ -9,7 +9,7 @@ const tokens = (context: ThemeContext): TextmateColors => {
       scope: [
         "entity.name.tag.yaml",
         "punctuation.support.type.property-name",
-        "support.type.property-name.json",
+        "support.type.property-name",
       ],
       settings: {
         foreground: palette.blue,
