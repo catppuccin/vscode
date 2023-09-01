@@ -24,6 +24,30 @@ const tokens = (context: ThemeContext): TextmateColors => {
         fontStyle: "",
       },
     },
+    {
+      name: "YAML anchors",
+      scope: ["entity.name.type.anchor.yaml", "variable.other.alias.yaml"],
+      settings: {
+        foreground: palette.yellow,
+      },
+    },
+    {
+      name: "YAML anchor puctuation",
+      scope: [
+        "punctuation.definition.anchor.yaml",
+        "punctuation.definition.alias.yaml",
+      ],
+      settings: {
+        foreground: palette.pink,
+      },
+    },
+    {
+      name: "YAML triple dashes",
+      scope: "entity.other.document.begin.yaml",
+      settings: {
+        foreground: palette.pink,
+      },
+    },
   ];
 };
 
