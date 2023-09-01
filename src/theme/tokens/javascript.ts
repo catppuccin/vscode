@@ -5,6 +5,14 @@ const tokens = (context: ThemeContext): TextmateColors => {
 
   return [
     {
+      name: "Exported Variable",
+      scope: "meta.export variable.other.readwrite.js",
+      settings: {
+        foreground: palette.maroon,
+        fontStyle: "",
+      },
+    },
+    {
       name: "JS/TS constants",
       scope: [
         "variable.other.constant.object.ts",
