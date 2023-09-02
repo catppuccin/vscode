@@ -15,6 +15,7 @@ const tokens = (context: ThemeContext): TextmateColors => {
         "source.yaml entity.name.tag",
         "source.yaml punctuation.support.type.property-name",
         "source.yaml support.type.property-name",
+        "source.ini entity.name.section.group-title",
       ],
       settings: {
         foreground: palette.blue,

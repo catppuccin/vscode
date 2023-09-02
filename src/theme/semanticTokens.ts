@@ -14,5 +14,6 @@ export const getSemanticTokens = (context: ThemeContext): SemanticTokens => {
     "variable.readonly:typescript": { foreground: palette.text },
     "property.readonly:javascript": { foreground: palette.text },
     "property.readonly:typescript": { foreground: palette.text },
+    tomlArrayKey: { foreground: palette.blue, fontStyle: "" },
   };
 };
