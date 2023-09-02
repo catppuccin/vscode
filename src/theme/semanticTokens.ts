@@ -26,7 +26,7 @@ export const getSemanticTokens = (context: ThemeContext): SemanticTokens => {
       foreground: palette.yellow,
     },
     parameter: {
-      foreground: palette.red,
+      foreground: palette.maroon,
     },
     regexp: {
       foreground: palette.pink,
