@@ -1,6 +1,7 @@
 on:
-  - push
-  - pull_request
+  push:
+      branches: [main]
+  pull_request:
 
 name: Lint & Build Artifact
 jobs:
