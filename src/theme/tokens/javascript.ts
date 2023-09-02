@@ -51,6 +51,8 @@ const tokens = (context: ThemeContext): TextmateColors => {
       scope: [
         "constant.language.null.js",
         "constant.language.null.ts",
+        "constant.language.undefined.js",
+        "constant.language.undefined.ts",
         "support.type.builtin.ts",
       ],
       settings: {
@@ -66,7 +68,10 @@ const tokens = (context: ThemeContext): TextmateColors => {
     },
     {
       name: "Arrow functions",
-      scope: "keyword.declaration.function.arrow.js",
+      scope: [
+        "keyword.declaration.function.arrow.js",
+        "storage.type.function.arrow.ts",
+      ],
       settings: {
         foreground: palette.teal,
         fontStyle: "",
@@ -78,6 +83,20 @@ const tokens = (context: ThemeContext): TextmateColors => {
       settings: {
         foreground: palette.blue,
         fontStyle: "italic",
+      },
+    },
+    {
+      name: "of/ keyof / typeof as keywords",
+      scope: [
+        "keyword.operator.expression.keyof.ts",
+        "keyword.operator.expression.typeof.js",
+        "keyword.operator.expression.typeof.ts",
+        "keyword.operator.expression.of.ts",
+        "keyword.operator.expression.of.js",
+      ],
+      settings: {
+        foreground: palette.mauve,
+        fontStyle: "",
       },
     },
   ];

@@ -8,8 +8,11 @@ export const getSemanticTokens = (context: ThemeContext): SemanticTokens => {
     "class.builtin:python": { foreground: palette.mauve },
     enumMember: { foreground: palette.teal },
     selfKeyword: { foreground: palette.red },
+    "variable.defaultLibrary": { foreground: palette.maroon },
     // ignore `consts` being peach in JS & TS
     "variable.readonly:javascript": { foreground: palette.text },
     "variable.readonly:typescript": { foreground: palette.text },
+    "property.readonly:javascript": { foreground: palette.text },
+    "property.readonly:typescript": { foreground: palette.text },
   };
 };
