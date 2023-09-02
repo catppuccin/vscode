@@ -12,42 +12,62 @@ const tokens = (context: ThemeContext): TextmateColors => {
       },
     },
     {
-      scope: ["heading.1.markdown", "markup.heading.setext.1.markdown"],
+      scope: [
+        "heading.1.markdown punctuation.definition.heading.markdown",
+        "heading.1.markdown",
+        "markup.heading.setext.1.markdown",
+      ],
       settings: {
         foreground: palette.red,
         fontStyle: "",
       },
     },
     {
-      scope: ["heading.2.markdown", "markup.heading.setext.2.markdown"],
+      scope: [
+        "heading.2.markdown punctuation.definition.heading.markdown",
+        "heading.2.markdown",
+        "markup.heading.setext.2.markdown",
+      ],
       settings: {
         foreground: palette.peach,
         fontStyle: "",
       },
     },
     {
-      scope: "heading.3.markdown",
+      scope: [
+        "heading.3.markdown punctuation.definition.heading.markdown",
+        "heading.3.markdown",
+      ],
       settings: {
         foreground: palette.yellow,
         fontStyle: "",
       },
     },
     {
-      scope: "heading.4.markdown",
+      scope: [
+        "heading.4.markdown punctuation.definition.heading.markdown",
+        "heading.4.markdown",
+      ],
       settings: {
         foreground: palette.green,
         fontStyle: "",
       },
     },
     {
-      scope: "heading.5.markdown",
+      scope: [
+        "heading.5.markdown punctuation.definition.heading.markdown",
+        "heading.5.markdown",
+      ],
       settings: {
         foreground: palette.blue,
         fontStyle: "",
       },
     },
     {
-      scope: "heading.6.markdown",
+      scope: [
+        "heading.6.markdown punctuation.definition.heading.markdown",
+        "heading.6.markdown",
+      ],
       settings: {
         foreground: palette.mauve,
         fontStyle: "",
@@ -116,6 +136,15 @@ const tokens = (context: ThemeContext): TextmateColors => {
       scope: "fenced_code.block.language.markdown",
       settings: {
         foreground: palette.sky,
+        fontStyle: "",
+      },
+    },
+    {
+      name: "Markdown triple backticks",
+      scope:
+        "markup.fenced_code.block.markdown punctuation.definition.markdown",
+      settings: {
+        foreground: palette.overlay2,
         fontStyle: "",
       },
     },
