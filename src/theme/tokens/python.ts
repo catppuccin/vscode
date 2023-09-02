@@ -5,54 +5,125 @@ const tokens = (context: ThemeContext): TextmateColors => {
 
   return [
     {
-      name: "Python magic (double underline prefix/suffix)",
-      scope: ["support.function.magic.python", "support.variable.magic.python"],
+      name: "support.variable.magic.python",
+      scope: "support.variable.magic.python",
       settings: {
-        foreground: palette.teal,
+        foreground: palette.text,
+        fontStyle: "",
+      },
+    },
+    {
+      name: "punctuation.separator.parameters.python",
+      scope: [
+        "punctuation.separator.period.python",
+        "punctuation.separator.element.python",
+        "punctuation.parenthesis.begin.python",
+        "punctuation.parenthesis.end.python",
+      ],
+      settings: {
+        foreground: palette.text,
+        fontStyle: "",
+      },
+    },
+    {
+      name: "variable.parameter.function.language.special.self.python",
+      scope: "variable.parameter.function.language.special.self.python",
+      settings: {
+        foreground: palette.peach,
+        fontStyle: "",
+      },
+    },
+    {
+      name: "python keyword flow",
+      scope: "keyword.control.flow.python",
+      settings: {
+        foreground: palette.mauve,
+        fontStyle: "",
+      },
+    },
+    {
+      name: "python storage type",
+      scope: "storage.type.function.python",
+      settings: {
+        foreground: palette.mauve,
+        fontStyle: "",
+      },
+    },
+    {
+      name: "python function support",
+      scope: [
+        "support.token.decorator.python",
+        "meta.function.decorator.identifier.python",
+      ],
+      settings: {
+        foreground: palette.sky,
+        fontStyle: "",
+      },
+    },
+    {
+      name: "python function decorator @",
+      scope: "meta.function.decorator.python",
+      settings: {
+        foreground: palette.blue,
+        fontStyle: "",
+      },
+    },
+    {
+      name: "Python multi string",
+      scope: [
+        "source.python string.quoted.docstring.multi.python punctuation.definition.string.begin.python",
+        "source.python string.quoted.docstring.multi.python punctuation.definition.string.end.python",
+        "source.python string.quoted.multi.python punctuation.definition.string.begin.python",
+        "source.python string.quoted.multi.python punctuation.definition.string.end.python",
+      ],
+      settings: {
+        foreground: palette.green,
         fontStyle: "italic",
       },
     },
     {
-      name: "Python type annotations",
+      name: "python type",
+      scope: "support.type.python",
+      settings: {
+        foreground: palette.sky,
+        fontStyle: "",
+      },
+    },
+    {
+      name: "python block",
       scope: [
-        "meta.function.parameters.annotation.python",
-        "meta.variable.annotation.python",
+        "punctuation.definition.arguments.begin.python",
+        "punctuation.definition.arguments.end.python",
+        "punctuation.separator.arguments.python",
+        "punctuation.definition.list.begin.python",
+        "punctuation.definition.list.end.python",
       ],
       settings: {
-        foreground: palette.yellow,
+        foreground: palette.text,
         fontStyle: "",
       },
     },
     {
-      name: "Python f-string",
-      scope: "storage.type.string.python",
-      settings: {
-        foreground: palette.green,
-        fontStyle: "",
-      },
-    },
-    {
-      name: "Python f-string braces",
-      scope:
-        "meta.string.interpolated.python punctuation.section.interpolation",
+      name: "python placeholder reset to normal string",
+      scope: "constant.character.format.placeholder.other.python",
       settings: {
         foreground: palette.pink,
         fontStyle: "",
       },
     },
     {
-      name: "Python f-string format specifier",
-      scope:
-        "meta.string.interpolated.python storage.modifier.conversion.python",
+      name: "python exception",
+      scope: "support.type.exception.python",
       settings: {
-        foreground: palette.pink,
+        foreground: palette.peach,
         fontStyle: "",
       },
     },
     {
-      scope: "support.function",
+      name: "entity.name.type",
+      scope: ["entity.name.type", "support.type.python"],
       settings: {
-        foreground: palette.blue,
+        foreground: palette.peach,
         fontStyle: "",
       },
     },
