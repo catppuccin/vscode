@@ -5,11 +5,16 @@ const tokens = (context: ThemeContext): TextmateColors => {
 
   return [
     {
-      name: "JSON/YAML keys",
+      name: "JSON/YAML keys, other left-hand assignments",
       scope: [
-        "entity.name.tag.yaml",
-        "punctuation.support.type.property-name",
-        "support.type.property-name",
+        "source.ini keyword.other.definition",
+        "source.json punctuation.support.type.property-name",
+        "source.json support.type.property-name.json",
+        "source.toml punctuation.support.type.property-name",
+        "source.toml support.type.property-name",
+        "source.yaml entity.name.tag",
+        "source.yaml punctuation.support.type.property-name",
+        "source.yaml support.type.property-name",
       ],
       settings: {
         foreground: palette.blue,
