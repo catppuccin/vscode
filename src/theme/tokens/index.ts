@@ -17,7 +17,12 @@ export default (context: ThemeContext) => {
 
   return [
     {
-      scope: ["source", "variable.other.readwrite"],
+      name: "Basic text & variable names (incl. leading punctuation)",
+      scope: [
+        "source",
+        "variable.other.readwrite",
+        "punctuation.definition.variable",
+      ],
       settings: {
         foreground: palette.text,
         fontStyle: "",

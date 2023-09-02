@@ -50,13 +50,6 @@ const tokens = (context: ThemeContext): TextmateColors => {
       },
     },
     {
-      name: "Less 'other variables' @ punctuation",
-      scope: "variable.other.less punctuation.definition.variable.less",
-      settings: {
-        foreground: palette.text,
-      },
-    },
-    {
       name: "CSS variables (--prefixed)",
       scope: [
         "source.css meta.property-list variable",
