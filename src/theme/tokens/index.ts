@@ -93,7 +93,6 @@ export default (context: ThemeContext) => {
         "keyword.operator.word",
         "keyword.operator.new",
         "variable.language.super",
-        "variable.language.this",
         "support.type.primitive",
         "storage.type",
         "storage.modifier",
@@ -258,6 +257,14 @@ export default (context: ThemeContext) => {
       scope: "support.type.property-name.css",
       settings: {
         foreground: palette.blue,
+        fontStyle: "",
+      },
+    },
+    {
+      name: "This/Self keyword",
+      scope: "variable.language.this",
+      settings: {
+        foreground: palette.red,
         fontStyle: "",
       },
     },
