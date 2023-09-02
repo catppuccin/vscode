@@ -35,7 +35,7 @@ const tokens = (context: ThemeContext): TextmateColors => {
       },
     },
     {
-      name: "Less/SCSS right-hand variables ($-prefixed)",
+      name: "Less/SCSS right-hand variables (@/$-prefixed)",
       scope: [
         "source.css meta.property-value variable",
         "source.css meta.property-value variable.other.less",
@@ -47,6 +47,13 @@ const tokens = (context: ThemeContext): TextmateColors => {
       settings: {
         foreground: palette.maroon,
         fontStyle: "",
+      },
+    },
+    {
+      name: "Less 'other variables' @ punctuation",
+      scope: "variable.other.less punctuation.definition.variable.less",
+      settings: {
+        foreground: palette.text,
       },
     },
     {

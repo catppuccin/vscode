@@ -20,6 +20,14 @@ const tokens = (context: ThemeContext): TextmateColors => {
         fontStyle: "",
       },
     },
+    {
+      name: "PHP dollar sign",
+      scope: "variable.other.php punctuation.definition.variable.php",
+      settings: {
+        foreground: palette.text,
+        fontStyle: "",
+      },
+    },
   ];
 };
 

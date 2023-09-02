@@ -5,20 +5,28 @@ const tokens = (context: ThemeContext): TextmateColors => {
 
   return [
     {
+      name: "HTML/XML DOCTYPE as keyword",
       scope: [
-        "text.html entity.name.tag",
-        "source.jsx entity.name.tag",
-        "source.tsx entity.name.tag",
-        "source.astro entity.name.tag",
-        // stylesheet extras
-        "source.css entity.name.tag",
+        "keyword.other.doctype",
+        "meta.tag.sgml.doctype punctuation.definition.tag",
+        "meta.tag.metadata.doctype entity.name.tag",
+        "meta.tag.metadata.doctype punctuation.definition.tag",
       ],
+      settings: {
+        foreground: palette.mauve,
+        fontStyle: "",
+      },
+    },
+    {
+      name: "HTML/XML-like <tags/>",
+      scope: ["entity.name.tag"],
       settings: {
         foreground: palette.blue,
         fontStyle: "",
       },
     },
     {
+      name: "Special characters like &amp;",
       scope: [
         "text.html constant.character.entity",
         "text.html constant.character.entity punctuation",
@@ -29,16 +37,18 @@ const tokens = (context: ThemeContext): TextmateColors => {
       },
     },
     {
-      scope: [
-        "text.html entity.other.attribute-name",
-        "source.astro entity.other.attribute-name",
-        "source.tsx entity.other.attribute-name",
-        "source.jsx entity.other.attribute-name",
-        // stylesheet extras
-        "source.css entity.other.attribute-name",
-      ],
+      name: "HTML/XML tag attribute values",
+      scope: ["entity.other.attribute-name"],
       settings: {
         foreground: palette.yellow,
+        fontStyle: "",
+      },
+    },
+    {
+      name: "Components",
+      scope: ["meta.tag support.class.component"],
+      settings: {
+        foreground: palette.blue,
         fontStyle: "",
       },
     },
