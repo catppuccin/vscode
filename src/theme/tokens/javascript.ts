@@ -32,7 +32,7 @@ const tokens = (context: ThemeContext): TextmateColors => {
     },
     {
       name: "Node constants as keywords (module, etc.)",
-      scope: "support.constant.node",
+      scope: ["support.constant.node", "support.type.object.module.js"],
       settings: {
         foreground: palette.mauve,
         fontStyle: "",
@@ -59,6 +59,14 @@ const tokens = (context: ThemeContext): TextmateColors => {
       settings: {
         foreground: palette.teal,
         fontStyle: "",
+      },
+    },
+    {
+      name: "Decorator punctuations (decorators inherit from blue functions, instead of styleguide peach)",
+      scope: "punctuation.decorator.ts",
+      settings: {
+        foreground: palette.blue,
+        fontStyle: "italic",
       },
     },
   ];

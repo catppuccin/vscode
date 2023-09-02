@@ -119,7 +119,7 @@ export default (context: ThemeContext) => {
       scope: [
         "variable.function",
         "meta.function-call.method",
-        "entity.name.function.definition",
+        "entity.name.function",
       ],
       settings: {
         foreground: palette.blue,
