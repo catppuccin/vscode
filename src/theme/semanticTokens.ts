@@ -4,23 +4,17 @@ export const getSemanticTokens = (context: ThemeContext): SemanticTokens => {
   const { palette } = context;
 
   return {
-    decorators: {
-      foreground: palette.peach,
+    "class:python": {
+      foreground: palette.yellow,
+    },
+    "class.builtin:python": {
+      foreground: palette.mauve,
     },
     enumMember: {
       foreground: palette.teal,
     },
-    macro: {
-      foreground: palette.teal,
-    },
-    parameter: {
-      foreground: palette.maroon,
-    },
-    regexp: {
-      foreground: palette.pink,
-    },
-    string: {
-      foreground: palette.green,
+    selfKeyword: {
+      foreground: palette.red,
     },
   };
 };

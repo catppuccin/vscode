@@ -5,20 +5,10 @@ const tokens = (context: ThemeContext): TextmateColors => {
 
   return [
     {
-      name: "support.variable.magic.python",
-      scope: "support.variable.magic.python",
-      settings: {
-        foreground: palette.text,
-        fontStyle: "",
-      },
-    },
-    {
-      name: "punctuation.separator.parameters.python",
+      name: "Python argument functions reset to text, otherwise they inherit blue from function-call",
       scope: [
-        "punctuation.separator.period.python",
-        "punctuation.separator.element.python",
-        "punctuation.parenthesis.begin.python",
-        "punctuation.parenthesis.end.python",
+        "support.variable.magic.python",
+        "meta.function-call.arguments.python",
       ],
       settings: {
         foreground: palette.text,
@@ -26,16 +16,27 @@ const tokens = (context: ThemeContext): TextmateColors => {
       },
     },
     {
-      name: "variable.parameter.function.language.special.self.python",
-      scope: "variable.parameter.function.language.special.self.python",
+      name: "Python double underscore functions",
+      scope: ["support.function.magic.python"],
       settings: {
-        foreground: palette.peach,
-        fontStyle: "",
+        foreground: palette.sky,
+        fontStyle: "italic",
       },
     },
     {
-      name: "python keyword flow",
-      scope: "keyword.control.flow.python",
+      name: "Python `self` keyword",
+      scope: [
+        "variable.parameter.function.language.special.self.python",
+        "variable.language.special.self.python",
+      ],
+      settings: {
+        foreground: palette.red,
+        fontStyle: "italic",
+      },
+    },
+    {
+      name: "python keyword flow/logical (for ... in)",
+      scope: ["keyword.control.flow.python", "keyword.operator.logical.python"],
       settings: {
         foreground: palette.mauve,
         fontStyle: "",
@@ -61,10 +62,21 @@ const tokens = (context: ThemeContext): TextmateColors => {
       },
     },
     {
-      name: "python function decorator @",
-      scope: "meta.function.decorator.python",
+      name: "python function calls",
+      scope: ["meta.function-call.python"],
       settings: {
         foreground: palette.blue,
+        fontStyle: "italic",
+      },
+    },
+    {
+      name: "python function decorators",
+      scope: [
+        "entity.name.function.decorator.python",
+        "punctuation.definition.decorator.python",
+      ],
+      settings: {
+        foreground: palette.peach,
         fontStyle: "",
       },
     },
@@ -75,32 +87,11 @@ const tokens = (context: ThemeContext): TextmateColors => {
         "source.python string.quoted.docstring.multi.python punctuation.definition.string.end.python",
         "source.python string.quoted.multi.python punctuation.definition.string.begin.python",
         "source.python string.quoted.multi.python punctuation.definition.string.end.python",
+        "source.python storage.type.string",
       ],
       settings: {
         foreground: palette.green,
         fontStyle: "italic",
-      },
-    },
-    {
-      name: "python type",
-      scope: "support.type.python",
-      settings: {
-        foreground: palette.sky,
-        fontStyle: "",
-      },
-    },
-    {
-      name: "python block",
-      scope: [
-        "punctuation.definition.arguments.begin.python",
-        "punctuation.definition.arguments.end.python",
-        "punctuation.separator.arguments.python",
-        "punctuation.definition.list.begin.python",
-        "punctuation.definition.list.end.python",
-      ],
-      settings: {
-        foreground: palette.text,
-        fontStyle: "",
       },
     },
     {
@@ -112,8 +103,11 @@ const tokens = (context: ThemeContext): TextmateColors => {
       },
     },
     {
-      name: "python exception",
-      scope: "support.type.exception.python",
+      name: "Python exception & builtins such as exit()",
+      scope: [
+        "support.type.exception.python",
+        "support.function.builtin.python",
+      ],
       settings: {
         foreground: palette.peach,
         fontStyle: "",
@@ -123,8 +117,24 @@ const tokens = (context: ThemeContext): TextmateColors => {
       name: "entity.name.type",
       scope: ["support.type.python"],
       settings: {
-        foreground: palette.yellow,
+        foreground: palette.peach,
         fontStyle: "",
+      },
+    },
+    {
+      name: "python constants (True/False)",
+      scope: "constant.language.python",
+      settings: {
+        foreground: palette.mauve,
+        fontStyle: "",
+      },
+    },
+    {
+      name: "Arguments accessed later in the function body",
+      scope: ["meta.indexed-name.python", "meta.item-access.python"],
+      settings: {
+        foreground: palette.maroon,
+        fontStyle: "italic",
       },
     },
   ];
