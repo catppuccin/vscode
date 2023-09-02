@@ -278,7 +278,7 @@ export const getUiColors = (
     "diffEditorOverview.removedForeground": opacity(palette.red, 0.8),
 
     "editor.background": palette.base,
-    "editor.findMatchBackground": opacity(palette.red, 0.6),
+    "editor.findMatchBackground": opacity(palette.red, 0.3),
     "editor.findMatchBorder": transparent,
     "editor.findMatchHighlightBackground": opacity(palette.sky, 0.3),
     "editor.findMatchHighlightBorder": transparent,
