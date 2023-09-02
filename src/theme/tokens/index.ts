@@ -5,6 +5,7 @@ import data from "./data";
 import golang from "./golang";
 import html from "./html";
 import javascript from "./javascript";
+import markdown from "./markdown";
 import python from "./python";
 import rust from "./rust";
 import shell from "./shell";
@@ -241,8 +242,16 @@ export default (context: ThemeContext) => {
     },
 
     // per-language tokens
-    ...[cpp, data, golang, html, javascript, python, rust, shell].flatMap(
-      (el) => el(context),
-    ),
+    ...[
+      cpp,
+      data,
+      golang,
+      html,
+      javascript,
+      markdown,
+      python,
+      rust,
+      shell,
+    ].flatMap((el) => el(context)),
   ];
 };
