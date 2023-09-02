@@ -81,6 +81,7 @@ const tokens = (context: ThemeContext): TextmateColors => {
       ],
       settings: {
         foreground: palette.rosewater,
+        fontStyle: "",
       },
     },
     {
@@ -95,6 +96,7 @@ const tokens = (context: ThemeContext): TextmateColors => {
       ],
       settings: {
         foreground: palette.lavender,
+        fontStyle: "",
       },
     },
     {
@@ -106,6 +108,7 @@ const tokens = (context: ThemeContext): TextmateColors => {
       ],
       settings: {
         foreground: palette.green,
+        fontStyle: "",
       },
     },
     {
@@ -116,6 +119,7 @@ const tokens = (context: ThemeContext): TextmateColors => {
       ],
       settings: {
         foreground: palette.pink,
+        fontStyle: "",
       },
     },
     {
@@ -123,6 +127,7 @@ const tokens = (context: ThemeContext): TextmateColors => {
       scope: "meta.separator.markdown",
       settings: {
         foreground: palette.teal,
+        fontStyle: "",
       },
     },
     {
@@ -130,6 +135,7 @@ const tokens = (context: ThemeContext): TextmateColors => {
       scope: ["punctuation.definition.list.begin.markdown"],
       settings: {
         foreground: palette.teal,
+        fontStyle: "",
       },
     },
   ];

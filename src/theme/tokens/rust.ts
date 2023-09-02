@@ -33,6 +33,7 @@ const tokens = (context: ThemeContext): TextmateColors => {
       ],
       settings: {
         foreground: palette.mauve,
+        fontStyle: "",
       },
     },
     {
@@ -40,6 +41,7 @@ const tokens = (context: ThemeContext): TextmateColors => {
       scope: "entity.name.type.numeric.rust",
       settings: {
         foreground: palette.mauve,
+        fontStyle: "",
       },
     },
     {
@@ -47,6 +49,7 @@ const tokens = (context: ThemeContext): TextmateColors => {
       scope: "meta.generic.rust",
       settings: {
         foreground: palette.peach,
+        fontStyle: "",
       },
     },
     {
@@ -62,6 +65,7 @@ const tokens = (context: ThemeContext): TextmateColors => {
       scope: "entity.name.module.rust",
       settings: {
         foreground: palette.peach,
+        fontStyle: "",
       },
     },
     {
@@ -77,6 +81,7 @@ const tokens = (context: ThemeContext): TextmateColors => {
       scope: "storage.type.source.rust",
       settings: {
         foreground: palette.yellow,
+        fontStyle: "",
       },
     },
     {
@@ -84,6 +89,7 @@ const tokens = (context: ThemeContext): TextmateColors => {
       scope: "entity.name.union.rust",
       settings: {
         foreground: palette.yellow,
+        fontStyle: "",
       },
     },
     {
@@ -91,6 +97,7 @@ const tokens = (context: ThemeContext): TextmateColors => {
       scope: "meta.enum.rust storage.type.source.rust",
       settings: {
         foreground: palette.teal,
+        fontStyle: "",
       },
     },
     {
@@ -102,6 +109,7 @@ const tokens = (context: ThemeContext): TextmateColors => {
       ],
       settings: {
         foreground: palette.teal,
+        fontStyle: "",
       },
     },
     {
@@ -117,6 +125,7 @@ const tokens = (context: ThemeContext): TextmateColors => {
       scope: "string.quoted.double.rust constant.other.placeholder.rust",
       settings: {
         foreground: palette.pink,
+        fontStyle: "",
       },
     },
     {
@@ -125,6 +134,7 @@ const tokens = (context: ThemeContext): TextmateColors => {
         "meta.function.return-type.rust meta.generic.rust storage.type.rust",
       settings: {
         foreground: palette.text,
+        fontStyle: "",
       },
     },
     {
@@ -132,6 +142,7 @@ const tokens = (context: ThemeContext): TextmateColors => {
       scope: "meta.function.call.rust",
       settings: {
         foreground: palette.blue,
+        fontStyle: "",
       },
     },
     {
@@ -139,6 +150,7 @@ const tokens = (context: ThemeContext): TextmateColors => {
       scope: "punctuation.brackets.angle.rust",
       settings: {
         foreground: palette.sky,
+        fontStyle: "",
       },
     },
     {
@@ -146,6 +158,7 @@ const tokens = (context: ThemeContext): TextmateColors => {
       scope: "source.rust constant",
       settings: {
         foreground: palette.peach,
+        fontStyle: "",
       },
     },
   ];
