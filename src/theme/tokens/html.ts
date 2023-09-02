@@ -5,14 +5,12 @@ const tokens = (context: ThemeContext): TextmateColors => {
 
   return [
     {
-      scope: "text.html",
-      settings: {
-        foreground: palette.text,
-        fontStyle: "",
-      },
-    },
-    {
-      scope: "text.html entity.name.tag",
+      scope: [
+        "text.html entity.name.tag",
+        "source.jsx entity.name.tag",
+        "source.tsx entity.name.tag",
+        "source.astro entity.name.tag",
+      ],
       settings: {
         foreground: palette.blue,
         fontStyle: "",
@@ -29,7 +27,12 @@ const tokens = (context: ThemeContext): TextmateColors => {
       },
     },
     {
-      scope: "text.html entity.other.attribute-name",
+      scope: [
+        "text.html entity.other.attribute-name",
+        "source.astro entity.other.attribute-name",
+        "source.tsx entity.other.attribute-name",
+        "source.jsx entity.other.attribute-name",
+      ],
       settings: {
         foreground: palette.yellow,
         fontStyle: "",
