@@ -35,6 +35,14 @@ const tokens = (context: ThemeContext): TextmateColors => {
       },
     },
     {
+      name: "CSS vendored property names",
+      scope: ["support.type.vendored.property-name"],
+      settings: {
+        foreground: palette.sky,
+        fontStyle: "",
+      },
+    },
+    {
       name: "Less/SCSS right-hand variables (@/$-prefixed)",
       scope: [
         "source.css meta.property-value variable",
