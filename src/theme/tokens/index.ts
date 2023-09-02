@@ -8,6 +8,7 @@ import golang from "./golang";
 import html from "./html";
 import javascript from "./javascript";
 import markdown from "./markdown";
+import ruby from "./ruby";
 import php from "./php";
 import python from "./python";
 import rust from "./rust";
@@ -279,6 +280,7 @@ export default (context: ThemeContext) => {
       html,
       javascript,
       markdown,
+      ruby,
       php,
       python,
       rust,
