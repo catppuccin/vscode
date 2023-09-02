@@ -34,8 +34,5 @@ export const getSemanticTokens = (context: ThemeContext): SemanticTokens => {
     string: {
       foreground: palette.green,
     },
-    "variable.constant": {
-      foreground: palette.peach,
-    },
   };
 };
