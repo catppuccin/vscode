@@ -16,7 +16,8 @@
 </p>
 
 > **Note**\
-> Get the newly released [Catppuccin Icon Pack](https://marketplace.visualstudio.com/items?itemName=Catppuccin.catppuccin-vsc-icons) now!
+> We just released a complete rewrite of our **Syntax Highlighting**.\
+> If a language you use now lacks syntax highlighting, please report it in [an issue](https://github.com/catppuccin/vscode/issues/new/choose)!
 
 ## Previews
 
@@ -61,6 +62,9 @@ open the file you just downloaded.
 You can find the compiled theme JSON files (with default settings as documented below) on the [compiled branch](https://github.com/catppuccin/vscode/tree/compiled).
 
 ## Customization
+
+> **Note**\
+> We also have a [Catppuccin Icon Pack](https://marketplace.visualstudio.com/items?itemName=Catppuccin.catppuccin-vsc-icons)!
 
 Catppuccin for VSCode can be customized to your liking. If you like the Catppuccin colors, but feel that they are a bit too bright for working at night, customization got you covered!
 
