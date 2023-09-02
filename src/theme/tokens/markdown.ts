@@ -112,6 +112,14 @@ const tokens = (context: ThemeContext): TextmateColors => {
       },
     },
     {
+      name: "Markdown triple backtick language identifier",
+      scope: "fenced_code.block.language.markdown",
+      settings: {
+        foreground: palette.sky,
+        fontStyle: "",
+      },
+    },
+    {
       name: "Markdown quotes",
       scope: [
         "markup.quote.markdown",
