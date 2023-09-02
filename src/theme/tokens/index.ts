@@ -3,6 +3,7 @@ import type { ThemeContext } from "../../types";
 import cpp from "./cpp";
 import css from "./css";
 import data from "./data";
+import dotenv from "./dotenv";
 import golang from "./golang";
 import html from "./html";
 import javascript from "./javascript";
@@ -266,6 +267,7 @@ export default (context: ThemeContext) => {
       cpp,
       css,
       data,
+      dotenv,
       golang,
       html,
       javascript,
