@@ -9,7 +9,6 @@ import type {
 import { getTokenColors } from "./tokenColors";
 import { getUiColors } from "./uiColors";
 import { capitalize } from "./utils";
-import { getSemanticTokens } from "./semanticTokens";
 
 export const defaultOptions: ThemeOptions = {
   accent: "mauve",
@@ -54,8 +53,7 @@ export const compileTheme = (
     name: flavourName,
     type: context.isLatte ? "light" : "dark",
     colors: getUiColors(context),
-    semanticHighlighting: true,
-    semanticTokenColors: getSemanticTokens(context),
+    semanticHighlighting: false,
     tokenColors: getTokenColors(context),
   };
 

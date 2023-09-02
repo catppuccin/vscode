@@ -47,6 +47,17 @@ const tokens = (context: ThemeContext): TextmateColors => {
       },
     },
     {
+      name: "Builtin types",
+      scope: [
+        "constant.language.null.js",
+        "constant.language.null.ts",
+        "support.type.builtin.ts",
+      ],
+      settings: {
+        foreground: palette.mauve,
+      },
+    },
+    {
       scope: "variable.parameter.generic",
       settings: {
         foreground: palette.yellow,

@@ -83,6 +83,8 @@ export default (context: ThemeContext) => {
       scope: [
         "keyword",
         "keyword.operator.word",
+        "keyword.operator.new",
+        "variable.language.super",
         "variable.language.this",
         "support.type.primitive",
         "storage.type",

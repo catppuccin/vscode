@@ -121,9 +121,9 @@ const tokens = (context: ThemeContext): TextmateColors => {
     },
     {
       name: "entity.name.type",
-      scope: ["entity.name.type", "support.type.python"],
+      scope: ["support.type.python"],
       settings: {
-        foreground: palette.peach,
+        foreground: palette.yellow,
         fontStyle: "",
       },
     },
