@@ -1,11 +1,13 @@
 import type { ThemeContext } from "../../types";
 
 import cpp from "./cpp";
+import css from "./css";
 import data from "./data";
 import golang from "./golang";
 import html from "./html";
 import javascript from "./javascript";
 import markdown from "./markdown";
+import php from "./php";
 import python from "./python";
 import rust from "./rust";
 import shell from "./shell";
@@ -25,7 +27,7 @@ export default (context: ThemeContext) => {
       name: "Parentheses, Brackets, Braces",
       scope: "punctuation",
       settings: {
-        foreground: palette.text,
+        foreground: palette.overlay2,
         fontStyle: "",
       },
     },
@@ -89,6 +91,8 @@ export default (context: ThemeContext) => {
         "support.type.primitive",
         "storage.type",
         "storage.modifier",
+        // include punctuation like $ and @ if they're part of the keyword
+        "punctuation.definition.keyword",
       ],
       settings: {
         foreground: palette.mauve,
@@ -122,6 +126,7 @@ export default (context: ThemeContext) => {
         "variable.function",
         "meta.function-call.method",
         "entity.name.function",
+        "support.function.misc",
       ],
       settings: {
         foreground: palette.blue,
@@ -197,7 +202,7 @@ export default (context: ThemeContext) => {
       },
     },
     {
-      scope: "variable.parameter",
+      scope: ["variable.parameter", "meta.function.parameters"],
       settings: {
         foreground: palette.maroon,
         fontStyle: "italic",
@@ -242,15 +247,25 @@ export default (context: ThemeContext) => {
         fontStyle: "",
       },
     },
+    {
+      name: "Property names (left hand assignments in json/yaml/css)",
+      scope: "support.type.property-name.css",
+      settings: {
+        foreground: palette.blue,
+        fontStyle: "",
+      },
+    },
 
     // per-language tokens
     ...[
       cpp,
+      css,
       data,
       golang,
       html,
       javascript,
       markdown,
+      php,
       python,
       rust,
       shell,

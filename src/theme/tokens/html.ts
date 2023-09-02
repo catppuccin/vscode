@@ -10,6 +10,8 @@ const tokens = (context: ThemeContext): TextmateColors => {
         "source.jsx entity.name.tag",
         "source.tsx entity.name.tag",
         "source.astro entity.name.tag",
+        // stylesheet extras
+        "source.css entity.name.tag",
       ],
       settings: {
         foreground: palette.blue,
@@ -32,6 +34,8 @@ const tokens = (context: ThemeContext): TextmateColors => {
         "source.astro entity.other.attribute-name",
         "source.tsx entity.other.attribute-name",
         "source.jsx entity.other.attribute-name",
+        // stylesheet extras
+        "source.css entity.other.attribute-name",
       ],
       settings: {
         foreground: palette.yellow,
