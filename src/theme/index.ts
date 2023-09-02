@@ -1,11 +1,13 @@
 import { variants } from "@catppuccin/palette";
-import {
+
+import type {
   CatppuccinFlavour,
   CatppuccinPalette,
   ThemeContext,
   ThemeOptions,
 } from "../types";
 import { getTokenColors } from "./tokenColors";
+import { getSemanticTokens } from "./semanticTokens";
 import { getUiColors } from "./uiColors";
 import { capitalize } from "./utils";
 
@@ -51,20 +53,10 @@ export const compileTheme = (
   const theme = {
     name: flavourName,
     type: context.isLatte ? "light" : "dark",
-    semanticHighlighting: true,
-    semanticTokenColors: {
-      enumMember: {
-        foreground: palette.sky,
-      },
-      "variable.constant": {
-        foreground: palette.yellow,
-      },
-      "variable.defaultLibrary": {
-        foreground: palette.peach,
-      },
-    },
-    tokenColors: getTokenColors(context),
     colors: getUiColors(context),
+    semanticHighlighting: true,
+    semanticTokenColors: getSemanticTokens(context),
+    tokenColors: getTokenColors(context),
   };
 
   return theme;
