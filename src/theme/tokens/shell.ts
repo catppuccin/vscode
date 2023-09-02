@@ -10,6 +10,8 @@ const tokens = (context: ThemeContext): TextmateColors => {
         "comment.line.shebang",
         "comment.line.shebang punctuation.definition.comment",
         "comment.line.shebang",
+        "punctuation.definition.comment.shebang.shell",
+        "meta.shebang.shell",
       ],
       settings: {
         foreground: palette.pink,
@@ -47,7 +49,10 @@ const tokens = (context: ThemeContext): TextmateColors => {
       },
     },
     {
-      scope: "source.shell punctuation.section.interpolation",
+      scope: [
+        "source.shell punctuation.section.interpolation",
+        "punctuation.definition.evaluation.backticks.shell",
+      ],
       settings: {
         foreground: palette.teal,
         fontStyle: "",
@@ -55,9 +60,18 @@ const tokens = (context: ThemeContext): TextmateColors => {
     },
     {
       name: "Shell EOF",
-      scope: "entity.name.tag.heredoc.shell",
+      scope: "source.shell entity.name.tag.heredoc.shell",
       settings: {
         foreground: palette.mauve,
+        fontStyle: "",
+      },
+    },
+    {
+      name: "Shell quoted variable",
+      scope:
+        "source.shell string.quoted.double.shell variable.other.normal.shell",
+      settings: {
+        foreground: palette.text,
         fontStyle: "",
       },
     },
