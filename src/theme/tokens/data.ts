@@ -39,6 +39,14 @@ const tokens = (context: ThemeContext): TextmateColors => {
       },
     },
     {
+      name: "TOML tables",
+      scope: "support.type.property-name.table",
+      settings: {
+        foreground: palette.yellow,
+        fontStyle: "",
+      },
+    },
+    {
       name: "YAML anchor puctuation",
       scope: [
         "punctuation.definition.anchor.yaml",
