@@ -264,7 +264,11 @@ export default (context: ThemeContext) => {
     },
     {
       name: "This/Self keyword",
-      scope: "variable.language.this",
+      scope: [
+        "variable.language.this",
+        // leading punctuation like $this in PHP
+        "variable.language.this punctuation.definition.variable",
+      ],
       settings: {
         foreground: palette.red,
         fontStyle: "",
