@@ -5,6 +5,7 @@ import css from "./css";
 import data from "./data";
 import dotenv from "./dotenv";
 import golang from "./golang";
+import graphql from "./graphql";
 import html from "./html";
 import java from "./java";
 import javascript from "./javascript";
@@ -282,6 +283,7 @@ export default (context: ThemeContext) => {
       data,
       dotenv,
       golang,
+      graphql,
       html,
       java,
       javascript,
