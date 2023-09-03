@@ -9,10 +9,11 @@ import graphql from "./graphql";
 import html from "./html";
 import java from "./java";
 import javascript from "./javascript";
+import latex from "./latex";
 import markdown from "./markdown";
-import ruby from "./ruby";
 import php from "./php";
 import python from "./python";
+import ruby from "./ruby";
 import rust from "./rust";
 import shell from "./shell";
 
@@ -287,10 +288,11 @@ export default (context: ThemeContext) => {
       html,
       java,
       javascript,
+      latex,
       markdown,
-      ruby,
       php,
       python,
+      ruby,
       rust,
       shell,
     ].flatMap((el) => el(context)),
