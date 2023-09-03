@@ -20,6 +20,15 @@ const tokens = (context: ThemeContext): TextmateColors => {
         fontStyle: "",
       },
     },
+    {
+      name: "Go constants (nil, true, false)",
+      // nil should be peach, but TextMate doesn't offer a fine-grained enough scope
+      scope: "constant.language.go",
+      settings: {
+        foreground: palette.peach,
+        fontStyle: "",
+      },
+    },
   ];
 };
 

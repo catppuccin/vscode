@@ -23,6 +23,10 @@ export const getSemanticTokens = (context: ThemeContext): SemanticTokens => {
     "property.readonly:javascriptreact": { foreground: palette.text },
     "property.readonly:typescriptreact": { foreground: palette.text },
 
+    // Golang builtin readonly defaultLibrary (nil)
+    "type.defaultLibrary:go": { foreground: palette.mauve },
+    "variable.readonly.defaultLibrary:go": { foreground: palette.mauve },
+
     // TOML syntax
     tomlArrayKey: { foreground: palette.blue, fontStyle: "" },
     tomlTableKey: { foreground: palette.blue, fontStyle: "" },
