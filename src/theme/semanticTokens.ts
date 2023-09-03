@@ -18,5 +18,12 @@ export const getSemanticTokens = (context: ThemeContext): SemanticTokens => {
     tomlTableKey: { foreground: palette.blue, fontStyle: "" },
     "builtinAttribute.attribute.library:rust": { foreground: palette.blue },
     "generic.attribute:rust": { foreground: palette.text },
+
+    // Typst
+    heading: { foreground: palette.red },
+    "text.emph": { foreground: palette.red, fontStyle: "italic" },
+    "text.strong": { foreground: palette.red, fontStyle: "bold" },
+    "text.math": { foreground: palette.flamingo },
+    pol: { foreground: palette.flamingo },
   };
 };
