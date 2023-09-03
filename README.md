@@ -40,6 +40,9 @@
 
 ## Usage
 
+> **Note**\
+> It is recommended to change `window.titleBarStyle` to `custom` in your JSON user settings.
+
 **Preferred method of installation**
 
 Install the extension from a Marketplace:
@@ -54,12 +57,11 @@ Download the VSIX from
 Open the Command Palette, and select "Extensions: Install from VSIX...", then
 open the file you just downloaded.
 
-> **Note**\
-> It is recommended to change `window.titleBarStyle` to `custom` in your JSON user settings.
-
 **Using the JSON theme only**
 
 You can find the compiled theme JSON files (with default settings as documented below) on the [compiled branch](https://github.com/catppuccin/vscode/tree/compiled).
+
+This can be useful if you want to use syntax highlighters that work with VSCode themes (like Shiki and derivatives), or if your work environment only allows you to install allowlisted extensions.
 
 ## Customization
 
@@ -67,12 +69,6 @@ You can find the compiled theme JSON files (with default settings as documented 
 > We also have a [Catppuccin Icon Pack](https://marketplace.visualstudio.com/items?itemName=Catppuccin.catppuccin-vsc-icons)!
 
 Catppuccin for VSCode can be customized to your liking. If you like the Catppuccin colors, but feel that they are a bit too bright for working at night, customization got you covered!
-
-<img width="1488" alt="oldeppuccin-pink-accent" src="https://user-images.githubusercontent.com/79978224/199134942-2091178a-314b-4782-b5d8-8d3a348fbefe.png">
-
-<details>
-<summary>⚙️ Used settings</summary>
-<p>
 
 ```json5
      // use Mocha as the base
@@ -96,10 +92,14 @@ Catppuccin for VSCode can be customized to your liking. If you like the Catppucc
     },
 ```
 
-</p>
+<details>
+<summary>📸 Preview</summary>
+
+<img width="1488" alt="oldeppuccin-pink-accent" src="https://user-images.githubusercontent.com/79978224/199134942-2091178a-314b-4782-b5d8-8d3a348fbefe.png">
+
 </details>
 
-Open your settings, and look for `Extensions > Catppuccin`. Available options are documented here.
+To see all available options, open your settings, and look for `Extensions > Catppuccin`.
 
 ### Custom accent color
 
@@ -122,21 +122,18 @@ You can toggle whether to use
 By default, Catppuccin for VSCode uses 3 shades of our `base` color for the workbench.
 For example in Mocha:
 
-- `base: #1e1e2e` - the editor background
-- `mantle: #181825` - the sidebar
-- `crust: #11111b` - the activity bar, status bar and title bar
+- `base`: #1e1e2e - the editor background
+- `mantle`: \#181825 - the sidebar
+- `crust`: #11111b - the activity bar, status bar and title bar
 
 If you'd like a more flat look, you can change it to `flat`! This only uses `base` and `mantle`, reducing it to 2 shades:
 
-- `base: #1e1e2e` - the editor background
-- `mantle: #181825` - the sidebar, the activity bar, status bar and title bar
+- `base`: #1e1e2e - the editor background
+- `mantle`: \#181825 - the sidebar, the activity bar, status bar and title bar
 
-<details>
-<summary>📸 Preview</summary>
+For absolute minimalism, you can go with `minimal`; a single shade for the whole workbench.
 
-![flat appearance](https://user-images.githubusercontent.com/79978224/199135078-4b399c9d-327c-4e2d-bed8-3d20ce9f502e.png)
-
-</details>
+- This only uses `base` (#1e1e2e)
 
 ### Paired Brackets
 
@@ -202,7 +199,7 @@ You can find all the available keys [here](https://code.visualstudio.com/api/ref
 
 ## Support
 
-If you have any questions regarding this port, feel free to [open an issue](https://github.com/catppuccin/vscode/issues), or ask in [our Discord](https://discord.catppuccin.com), where have a [dedicated forum](https://discord.com/channels/907385605422448742/1020275848940626002/1036777622941736990) for support.
+If you have any questions regarding this port, feel free to [open an issue](https://github.com/catppuccin/vscode/issues), or ask in [our Discord](https://discord.catppuccin.com), where have a [dedicated forum](https://discord.com/channels/907385605422448742/1020275848940626002) for support.
 
 ## Development
 
