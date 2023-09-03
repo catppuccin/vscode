@@ -481,6 +481,16 @@
     "tomlArrayKey": {
       "foreground": "#8caaee",
       "fontStyle": ""
+    },
+    "tomlTableKey": {
+      "foreground": "#8caaee",
+      "fontStyle": ""
+    },
+    "builtinAttribute.attribute.library:rust": {
+      "foreground": "#8caaee"
+    },
+    "generic.attribute:rust": {
+      "foreground": "#c6d0f5"
     }
   },
   "tokenColors": [
@@ -900,6 +910,14 @@
       }
     },
     {
+      "name": "TOML tables",
+      "scope": "support.type.property-name.table",
+      "settings": {
+        "foreground": "#e5c890",
+        "fontStyle": ""
+      }
+    },
+    {
       "name": "YAML anchor puctuation",
       "scope": [
         "punctuation.definition.anchor.yaml",
@@ -1005,6 +1023,33 @@
       ],
       "settings": {
         "foreground": "#8caaee",
+        "fontStyle": ""
+      }
+    },
+    {
+      "name": "Annotations",
+      "scope": [
+        "punctuation.definition.annotation",
+        "storage.type.annotation"
+      ],
+      "settings": {
+        "foreground": "#ef9f76",
+        "fontStyle": ""
+      }
+    },
+    {
+      "name": "Java enums",
+      "scope": "constant.other.enum.java",
+      "settings": {
+        "foreground": "#81c8be",
+        "fontStyle": ""
+      }
+    },
+    {
+      "name": "Java imports",
+      "scope": "storage.modifier.import.java",
+      "settings": {
+        "foreground": "#c6d0f5",
         "fontStyle": ""
       }
     },
