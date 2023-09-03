@@ -5,17 +5,11 @@ const tokens = (context: ThemeContext): TextmateColors => {
 
   return [
     {
-      scope: "punctuation.definition.heading.markdown",
-      settings: {
-        foreground: palette.subtext0,
-        fontStyle: "",
-      },
-    },
-    {
       scope: [
         "heading.1.markdown punctuation.definition.heading.markdown",
         "heading.1.markdown",
         "markup.heading.setext.1.markdown",
+        "markup.heading.heading-0.asciidoc",
       ],
       settings: {
         foreground: palette.red,
@@ -27,6 +21,7 @@ const tokens = (context: ThemeContext): TextmateColors => {
         "heading.2.markdown punctuation.definition.heading.markdown",
         "heading.2.markdown",
         "markup.heading.setext.2.markdown",
+        "markup.heading.heading-1.asciidoc",
       ],
       settings: {
         foreground: palette.peach,
@@ -37,6 +32,7 @@ const tokens = (context: ThemeContext): TextmateColors => {
       scope: [
         "heading.3.markdown punctuation.definition.heading.markdown",
         "heading.3.markdown",
+        "markup.heading.heading-2.asciidoc",
       ],
       settings: {
         foreground: palette.yellow,
@@ -47,6 +43,7 @@ const tokens = (context: ThemeContext): TextmateColors => {
       scope: [
         "heading.4.markdown punctuation.definition.heading.markdown",
         "heading.4.markdown",
+        "markup.heading.heading-3.asciidoc",
       ],
       settings: {
         foreground: palette.green,
@@ -57,6 +54,7 @@ const tokens = (context: ThemeContext): TextmateColors => {
       scope: [
         "heading.5.markdown punctuation.definition.heading.markdown",
         "heading.5.markdown",
+        "markup.heading.heading-4.asciidoc",
       ],
       settings: {
         foreground: palette.blue,
@@ -67,6 +65,7 @@ const tokens = (context: ThemeContext): TextmateColors => {
       scope: [
         "heading.6.markdown punctuation.definition.heading.markdown",
         "heading.6.markdown",
+        "markup.heading.heading-5.asciidoc",
       ],
       settings: {
         foreground: palette.mauve,
@@ -74,33 +73,31 @@ const tokens = (context: ThemeContext): TextmateColors => {
       },
     },
     {
-      scope: "markup.bold.markdown",
+      scope: "markup.bold",
       settings: {
         foreground: palette.red,
         fontStyle: "bold",
       },
     },
     {
-      scope: "markup.italic.markdown",
+      scope: "markup.italic",
       settings: {
         foreground: palette.red,
         fontStyle: "italic",
       },
     },
     {
-      scope: "markup.strikethrough.markdown",
+      scope: "markup.strikethrough",
       settings: {
         foreground: palette.subtext0,
         fontStyle: "strikethrough",
       },
     },
     {
-      scope: [
-        "punctuation.definition.link.markdown",
-        "markup.underline.link.markdown",
-      ],
+      name: "Markdown auto links",
+      scope: ["punctuation.definition.link", "markup.underline.link"],
       settings: {
-        foreground: palette.rosewater,
+        foreground: palette.blue,
         fontStyle: "",
       },
     },
@@ -109,10 +106,12 @@ const tokens = (context: ThemeContext): TextmateColors => {
       scope: [
         "text.html.markdown punctuation.definition.link.title",
         "string.other.link.title.markdown",
+        "markup.link",
         // references like
         // > [1]: http://example.com "Example"
         "punctuation.definition.constant.markdown",
         "constant.other.reference.link.markdown",
+        "markup.substitution.attribute-reference",
       ],
       settings: {
         foreground: palette.lavender,
@@ -133,7 +132,7 @@ const tokens = (context: ThemeContext): TextmateColors => {
     },
     {
       name: "Markdown triple backtick language identifier",
-      scope: "fenced_code.block.language.markdown",
+      scope: "fenced_code.block.language",
       settings: {
         foreground: palette.sky,
         fontStyle: "",
@@ -141,8 +140,10 @@ const tokens = (context: ThemeContext): TextmateColors => {
     },
     {
       name: "Markdown triple backticks",
-      scope:
-        "markup.fenced_code.block.markdown punctuation.definition.markdown",
+      scope: [
+        "markup.fenced_code.block punctuation.definition",
+        "markup.raw support.asciidoc",
+      ],
       settings: {
         foreground: palette.overlay2,
         fontStyle: "",
@@ -150,10 +151,7 @@ const tokens = (context: ThemeContext): TextmateColors => {
     },
     {
       name: "Markdown quotes",
-      scope: [
-        "markup.quote.markdown",
-        "punctuation.definition.quote.begin.markdown",
-      ],
+      scope: ["markup.quote", "punctuation.definition.quote.begin"],
       settings: {
         foreground: palette.pink,
         fontStyle: "",
@@ -169,7 +167,10 @@ const tokens = (context: ThemeContext): TextmateColors => {
     },
     {
       name: "Markdown list bullets",
-      scope: ["punctuation.definition.list.begin.markdown"],
+      scope: [
+        "punctuation.definition.list.begin.markdown",
+        "markup.list.bullet",
+      ],
       settings: {
         foreground: palette.teal,
         fontStyle: "",
