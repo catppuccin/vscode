@@ -23,10 +23,10 @@ export const defaultOptions: ThemeOptions = {
   customUIColors: {},
 };
 
-export const compileTheme = (
-  flavour: CatppuccinFlavour = "mocha",
-  options: ThemeOptions = defaultOptions,
-) => {
+export const resolvePalette = (
+  flavour: CatppuccinFlavour,
+  options: ThemeOptions,
+): CatppuccinPalette => {
   const ctpPalette = Object.entries(variants[flavour])
     .map(([k, v]) => {
       return {
@@ -36,12 +36,18 @@ export const compileTheme = (
     })
     .reduce((acc, curr) => ({ ...acc, ...curr }), {});
 
-  const palette: CatppuccinPalette = {
+  return {
     ...(ctpPalette as CatppuccinPalette),
     ...options.colorOverrides?.all,
     ...options.colorOverrides?.[flavour],
   };
+};
 
+export const compileTheme = (
+  flavour: CatppuccinFlavour = "mocha",
+  options: ThemeOptions = defaultOptions,
+) => {
+  const palette = resolvePalette(flavour, options);
   const context: ThemeContext = {
     palette,
     options,

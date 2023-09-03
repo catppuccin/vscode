@@ -1,0 +1,5 @@
+@use "~@catppuccin/highlightjs/sass/_theme";
+
+.markdown-body code {
+    @include theme.highlights("mocha", "variables", "ctp-");
+}
