@@ -6,6 +6,7 @@ import data from "./data";
 import dotenv from "./dotenv";
 import golang from "./golang";
 import html from "./html";
+import java from "./java";
 import javascript from "./javascript";
 import markdown from "./markdown";
 import ruby from "./ruby";
@@ -278,6 +279,7 @@ export default (context: ThemeContext) => {
       dotenv,
       golang,
       html,
+      java,
       javascript,
       markdown,
       ruby,
