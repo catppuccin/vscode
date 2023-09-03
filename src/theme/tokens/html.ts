@@ -30,6 +30,13 @@ const tokens = (context: ThemeContext): TextmateColors => {
       scope: [
         "text.html constant.character.entity",
         "text.html constant.character.entity punctuation",
+        "constant.character.entity.xml",
+        "constant.character.entity.xml punctuation",
+        // ditto for JSX / TSX
+        "constant.character.entity.js.jsx",
+        "constant.charactger.entity.js.jsx punctuation",
+        "constant.character.entity.tsx",
+        "constant.character.entity.tsx punctuation",
       ],
       settings: {
         foreground: palette.red,
