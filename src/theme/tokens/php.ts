@@ -20,6 +20,20 @@ const tokens = (context: ThemeContext): TextmateColors => {
         fontStyle: "",
       },
     },
+    {
+      name: "PHP Constants (null, __FILE__, etc.)",
+      scope: "constant.language.php",
+      settings: {
+        foreground: palette.mauve,
+      },
+    },
+    {
+      name: "PHP functions",
+      scope: "text.html.php support.function",
+      settings: {
+        foreground: palette.blue,
+      },
+    },
   ];
 };
 
