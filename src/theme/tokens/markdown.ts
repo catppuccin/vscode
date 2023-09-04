@@ -8,6 +8,8 @@ const tokens = (context: ThemeContext): TextmateColors => {
       scope: [
         "heading.1.markdown punctuation.definition.heading.markdown",
         "heading.1.markdown",
+        "markup.heading.atx.1.mdx",
+        "markup.heading.atx.1.mdx punctuation.definition.heading.mdx",
         "markup.heading.setext.1.markdown",
         "markup.heading.heading-0.asciidoc",
       ],
@@ -20,6 +22,8 @@ const tokens = (context: ThemeContext): TextmateColors => {
       scope: [
         "heading.2.markdown punctuation.definition.heading.markdown",
         "heading.2.markdown",
+        "markup.heading.atx.2.mdx",
+        "markup.heading.atx.2.mdx punctuation.definition.heading.mdx",
         "markup.heading.setext.2.markdown",
         "markup.heading.heading-1.asciidoc",
       ],
@@ -32,6 +36,8 @@ const tokens = (context: ThemeContext): TextmateColors => {
       scope: [
         "heading.3.markdown punctuation.definition.heading.markdown",
         "heading.3.markdown",
+        "markup.heading.atx.3.mdx",
+        "markup.heading.atx.3.mdx punctuation.definition.heading.mdx",
         "markup.heading.heading-2.asciidoc",
       ],
       settings: {
@@ -43,6 +49,8 @@ const tokens = (context: ThemeContext): TextmateColors => {
       scope: [
         "heading.4.markdown punctuation.definition.heading.markdown",
         "heading.4.markdown",
+        "markup.heading.atx.4.mdx",
+        "markup.heading.atx.4.mdx punctuation.definition.heading.mdx",
         "markup.heading.heading-3.asciidoc",
       ],
       settings: {
@@ -54,6 +62,8 @@ const tokens = (context: ThemeContext): TextmateColors => {
       scope: [
         "heading.5.markdown punctuation.definition.heading.markdown",
         "heading.5.markdown",
+        "markup.heading.atx.5.mdx",
+        "markup.heading.atx.5.mdx punctuation.definition.heading.mdx",
         "markup.heading.heading-4.asciidoc",
       ],
       settings: {
@@ -65,6 +75,8 @@ const tokens = (context: ThemeContext): TextmateColors => {
       scope: [
         "heading.6.markdown punctuation.definition.heading.markdown",
         "heading.6.markdown",
+        "markup.heading.atx.6.mdx",
+        "markup.heading.atx.6.mdx punctuation.definition.heading.mdx",
         "markup.heading.heading-5.asciidoc",
       ],
       settings: {
