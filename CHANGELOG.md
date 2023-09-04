@@ -1,5 +1,17 @@
 # Changelog
 
+## [3.2.0](https://github.com/catppuccin/vscode/compare/v3.1.0...v3.2.0) (2023-09-04)
+
+
+### Features
+
+* **syntax:** add julia support ([d9bb0b6](https://github.com/catppuccin/vscode/commit/d9bb0b62eccba3ba87a07080a11d4514ae9667d3))
+
+
+### Bug Fixes
+
+* **syntax:** use yellow for ini section titles ([09004dc](https://github.com/catppuccin/vscode/commit/09004dcc5da0af3cdbfcebdbd29f3eaed1dc5d72))
+
 ## [3.1.0](https://github.com/catppuccin/vscode/compare/v3.0.1...v3.1.0) (2023-09-04)
 
 
