@@ -5053,6 +5053,7 @@ __metadata:
     "@typescript-eslint/eslint-plugin": ^6.5.0
     "@typescript-eslint/parser": ^6.5.0
     "@vscode/vsce": ^2.21.0
+    chromatic: ^7.0.0
     eslint: ^8.48.0
     eslint-config-prettier: ^9.0.0
     eslint-plugin-prettier: ^5.0.0
@@ -5181,6 +5182,17 @@ __metadata:
   version: 2.0.0
   resolution: "chownr@npm:2.0.0"
   checksum: c57cf9dd0791e2f18a5ee9c1a299ae6e801ff58fee96dc8bfd0dcb4738a6ce58dd252a3605b1c93c6418fe4f9d5093b28ffbf4d66648cb2a9c67eaef9679be2f
+  languageName: node
+  linkType: hard
+
+"chromatic@npm:^7.0.0":
+  version: 7.0.0
+  resolution: "chromatic@npm:7.0.0"
+  bin:
+    chroma: dist/bin.js
+    chromatic: dist/bin.js
+    chromatic-cli: dist/bin.js
+  checksum: 654be2eaf365a865fa718f9913fb1b7ef7bdb2788f57912c56fa28422c79e8e71a12342fd61db032994196334ddce4a900ea92f7daab5c14f023155cd4435ad6
   languageName: node
   linkType: hard
 
