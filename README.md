@@ -94,9 +94,7 @@ Catppuccin for VSCode can be customized to your liking. If you like the Catppucc
 
 <details>
 <summary>📸 Preview</summary>
-
-<img width="1488" alt="oldeppuccin-pink-accent" src="https://user-images.githubusercontent.com/79978224/199134942-2091178a-314b-4782-b5d8-8d3a348fbefe.png">
-
+<img width="1488" alt="oldeppuccin-pink-accent" src="https://user-images.githubusercontent.com/79978224/265295206-47d0c993-5d61-4e93-aa96-6d0d95a24f33.png">
 </details>
 
 To see all available options, open your settings, and look for `Extensions > Catppuccin`.
@@ -126,14 +124,29 @@ For example in Mocha:
 - `mantle`: \#181825 - the sidebar
 - `crust`: #11111b - the activity bar, status bar and title bar
 
+<details>
+<summary>📸 Preview</summary>
+<img width="1488" alt="default-mocha" src="assets/mocha.webp">
+</details>
+
 If you'd like a more flat look, you can change it to `flat`! This only uses `base` and `mantle`, reducing it to 2 shades:
 
 - `base`: #1e1e2e - the editor background
 - `mantle`: \#181825 - the sidebar, the activity bar, status bar and title bar
 
+<details>
+<summary>📸 Preview</summary>
+<img width="1488" alt="flat-mocha" src="https://user-images.githubusercontent.com/79978224/265295217-e20e6195-2969-44db-aa57-8e901bc52817.png">
+</details>
+
 For absolute minimalism, you can go with `minimal`; a single shade for the whole workbench.
 
 - This only uses `base` (#1e1e2e)
+
+<details>
+<summary>📸 Preview</summary>
+<img width="1488" alt="minimal-mocha" src="https://user-images.githubusercontent.com/79978224/265295213-e04f74fc-48a2-4d3e-b379-5d5a4d15da8a.png">
+</details>
 
 ### Paired Brackets
 
