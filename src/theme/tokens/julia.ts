@@ -21,10 +21,18 @@ const tokens = (context: ThemeContext): TextmateColors => {
       },
     },
     {
-      name: "Julia constants (true, false)",
+      name: "Julia language constants (true, false)",
       scope: "constant.language.julia",
       settings: {
         foreground: palette.peach,
+        fontStyle: "",
+      },
+    },
+    {
+      name: "Julia other constants (these seem to be arguments inside arrays)",
+      scope: "constant.other.symbol.julia",
+      settings: {
+        foreground: palette.maroon,
         fontStyle: "",
       },
     },
