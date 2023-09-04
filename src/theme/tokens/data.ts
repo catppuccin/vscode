@@ -15,7 +15,6 @@ const tokens = (context: ThemeContext): TextmateColors => {
         "entity.name.tag.yaml",
         "punctuation.support.type.property-name.yaml",
         "support.type.property-name.yaml",
-        "entity.name.section.group-title.ini",
       ],
       settings: {
         foreground: palette.blue,
@@ -39,8 +38,11 @@ const tokens = (context: ThemeContext): TextmateColors => {
       },
     },
     {
-      name: "TOML tables",
-      scope: "support.type.property-name.table",
+      name: "TOML tables / ini groups",
+      scope: [
+        "support.type.property-name.table",
+        "entity.name.section.group-title.ini",
+      ],
       settings: {
         foreground: palette.yellow,
         fontStyle: "",
