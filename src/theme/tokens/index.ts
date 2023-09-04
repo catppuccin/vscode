@@ -9,6 +9,7 @@ import graphql from "./graphql";
 import html from "./html";
 import java from "./java";
 import javascript from "./javascript";
+import julia from "./julia";
 import latex from "./latex";
 import markdown from "./markdown";
 import php from "./php";
@@ -288,6 +289,7 @@ export default (context: ThemeContext) => {
       html,
       java,
       javascript,
+      julia,
       latex,
       markdown,
       php,
