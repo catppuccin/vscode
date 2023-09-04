@@ -1,5 +1,13 @@
 # Changelog
 
+## [3.2.1](https://github.com/catppuccin/vscode/compare/v3.2.0...v3.2.1) (2023-09-04)
+
+
+### Bug Fixes
+
+* **syntax:** Julia column symbols ([#155](https://github.com/catppuccin/vscode/issues/155)) ([67d5ae1](https://github.com/catppuccin/vscode/commit/67d5ae1e2bc40b8b748914dd92c114ee02ca4778)), closes [#151](https://github.com/catppuccin/vscode/issues/151)
+* **syntax:** MDX headings ([c1f04fc](https://github.com/catppuccin/vscode/commit/c1f04fc5f1a2cc9c4bae65696e0ab36ea4ae3e33))
+
 ## [3.2.0](https://github.com/catppuccin/vscode/compare/v3.1.0...v3.2.0) (2023-09-04)
 
 
