@@ -1,0 +1,38 @@
+@import "@catppuccin/palette/style";
+
+.shiki {
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+.mocha {
+    background-color: var(--ctp-mocha-base);
+    color: var(--ctp-mocha-text);
+}
+.macchiato {
+    background-color: var(--ctp-macchiato-base);
+    color: var(--ctp-macchiato-text);
+}
+.frappe {
+    background-color: var(--ctp-frappe-base);
+    color: var(--ctp-frappe-text);
+}
+.latte {
+    background-color: var(--ctp-latte-base);
+    color: var(--ctp-latte-text);
+}
+
+html.mocha .shiki,
+html.mocha .shiki span {
+  background-color: var(--shiki-dark-bg) !important;
+  color: var(--shiki-dark) !important;
+}
+html.macchiato .shiki,
+html.macchiato .shiki span {
+  background-color: var(--shiki-macchiato-bg) !important;
+  color: var(--shiki-macchiato) !important;
+}
+html.frappe .shiki,
+html.frappe .shiki span {
+  background-color: var(--shiki-frappe-bg) !important;
+  color: var(--shiki-frappe) !important;
+}
