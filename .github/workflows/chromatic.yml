@@ -1,12 +1,15 @@
 on: 
   push:
       branches: [main]
-      paths: &paths
+      paths:
         - ".storybook/**/*"
         - "stories/**/*"
         - "src/theme/**/*.ts"
   pull_request:
-      paths: *paths
+      paths:
+        - ".storybook/**/*"
+        - "stories/**/*"
+        - "src/theme/**/*.ts"
 
 name: 'Chromatic'
 
