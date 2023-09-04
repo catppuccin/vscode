@@ -1,5 +1,6 @@
 dist/
 node_modules/
+storybook-static/
 themes/
 .eslintcache
 *.vsix

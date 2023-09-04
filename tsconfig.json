@@ -9,7 +9,7 @@
     "lib": ["es6"]
   },
   "include": ["src", "."],
-  "exclude": ["node_modules"],
+  "exclude": ["node_modules", "stories"],
   "ts-node": {
     "esm": true,
     "compilerOptions": {
