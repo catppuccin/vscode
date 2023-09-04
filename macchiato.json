@@ -917,8 +917,7 @@
         "support.type.property-name.toml",
         "entity.name.tag.yaml",
         "punctuation.support.type.property-name.yaml",
-        "support.type.property-name.yaml",
-        "entity.name.section.group-title.ini"
+        "support.type.property-name.yaml"
       ],
       "settings": {
         "foreground": "#8aadf4",
@@ -948,8 +947,11 @@
       }
     },
     {
-      "name": "TOML tables",
-      "scope": "support.type.property-name.table",
+      "name": "TOML tables / ini groups",
+      "scope": [
+        "support.type.property-name.table",
+        "entity.name.section.group-title.ini"
+      ],
       "settings": {
         "foreground": "#eed49f",
         "fontStyle": ""
@@ -1242,6 +1244,30 @@
       ],
       "settings": {
         "foreground": "#c6a0f6",
+        "fontStyle": ""
+      }
+    },
+    {
+      "name": "Julia functions",
+      "scope": "support.function.julia",
+      "settings": {
+        "foreground": "#8aadf4",
+        "fontStyle": "italic"
+      }
+    },
+    {
+      "name": "Julia macros",
+      "scope": "support.function.macro.julia",
+      "settings": {
+        "foreground": "#8bd5ca",
+        "fontStyle": "italic"
+      }
+    },
+    {
+      "name": "Julia constants (true, false)",
+      "scope": "constant.language.julia",
+      "settings": {
+        "foreground": "#f5a97f",
         "fontStyle": ""
       }
     },
