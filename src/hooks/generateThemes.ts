@@ -1,4 +1,4 @@
-import * as fs from "fs";
+import * as fs from "fs/promises";
 import * as path from "path";
 import { variants } from "@catppuccin/palette";
 
@@ -11,8 +11,8 @@ const flavours = Object.keys(variants) as CatppuccinFlavour[];
 flavours.map((flavour) => {
   const theme = compileTheme(flavour, defaultOptions);
   // ignore error if directory exists
-  fs.mkdir(path.dirname(themeDir), () => {
-    fs.writeFileSync(
+  fs.mkdir(themeDir, { recursive: true }).then(() => {
+    fs.writeFile(
       path.join(themeDir, `${flavour}.json`),
       JSON.stringify(theme, null, 2),
     );
