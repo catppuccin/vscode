@@ -70,26 +70,28 @@ This can be useful if you want to use syntax highlighters that work with VSCode 
 
 Catppuccin for VSCode can be customized to your liking. If you like the Catppuccin colors, but feel that they are a bit too bright for working at night, customization got you covered!
 
-```json5
-     // use Mocha as the base
-    "workbench.colorTheme": "Catppuccin Mocha",
-    // pink as the accent color
-    "catppuccin.accentColor": "pink",
-    // make Mocha specifically very dark
-    // (this preserves other flavours!)
-    "catppuccin.colorOverrides": {
-        "mocha": {
-            "base": "#000000",
-            "mantle": "#010101",
-            "crust": "#020202",
-        }
-    },
-    // use your accent (pink) on the statusBar as well
-    "catppuccin.customUIColors": {
-        "mocha": {
-            "statusBar.foreground": "accent"
-        }
-    },
+```jsonc
+{
+  // use Mocha as the base
+  "workbench.colorTheme": "Catppuccin Mocha",
+  // pink as the accent color
+  "catppuccin.accentColor": "pink",
+  // make Mocha specifically very dark
+  // (this preserves other flavours!)
+  "catppuccin.colorOverrides": {
+    "mocha": {
+      "base": "#000000",
+      "mantle": "#010101",
+      "crust": "#020202"
+    }
+  },
+  // use your accent (pink) on the statusBar as well
+  "catppuccin.customUIColors": {
+    "mocha": {
+      "statusBar.foreground": "accent"
+    }
+  }
+}
 ```
 
 <details>
@@ -165,20 +167,22 @@ By default, we're using `red`, `peach`, `yellow`, `green`, `blue`, and `mauve` f
 
 Colors can be overwritten in the JSON user settings, like so:
 
-```json5
-    // ...your other settings...
-    "catppuccin.colorOverrides": {
-        // make text red red all flavours
-        "all": {
-            "text": "#ff0000"
-        },
-        // make Mocha "OLEDppuccin" - use black editor background
-        "mocha": {
-            "base": "#000000",
-            "mantle": "#010101",
-            "crust": "#020202",
-        }
+```jsonc
+{
+  // ...your other settings...
+  "catppuccin.colorOverrides": {
+    // make text red red all flavours
+    "all": {
+      "text": "#ff0000"
+    },
+    // make Mocha "OLEDppuccin" - use black editor background
+    "mocha": {
+      "base": "#000000",
+      "mantle": "#010101",
+      "crust": "#020202"
     }
+  }
+}
 ```
 
 ### Use palette colors on workbench elements (UI)
@@ -187,23 +191,25 @@ Colors can be overwritten in the JSON user settings, like so:
 
 If you want to customize where certain palette colors appear, you can change it like so:
 
-```json5
-    "catppuccin.customUIColors": {
-        // make the breadcrumb "text" on "overlay0" for all flavours
-        "all": {
-            "breadcrumb.background": "overlay0",
-            "breadcrumb.foreground": "text",
-        },
-        // but for mocha, use "crust" on your currently selected accent.
-        "mocha": {
-            // "accent" selects your current accent color.
-            "breadcrumb.background": "accent",
-            "breadcrumb.foreground": "crust",
-            // you can use opacity, by specifing it after a space
-            // "rosewater 0.5" would mean 50% opacity, here it's 20%
-            "minimap.background": "rosewater 0.2"
-        }
+```jsonc
+{
+  "catppuccin.customUIColors": {
+    // make the breadcrumb "text" on "overlay0" for all flavours
+    "all": {
+      "breadcrumb.background": "overlay0",
+      "breadcrumb.foreground": "text"
     },
+    // but for mocha, use "crust" on your currently selected accent.
+    "mocha": {
+      // "accent" selects your current accent color.
+      "breadcrumb.background": "accent",
+      "breadcrumb.foreground": "crust",
+      // you can use opacity, by specifing it after a space
+      // "rosewater 0.5" would mean 50% opacity, here it's 20%
+      "minimap.background": "rosewater 0.2"
+    }
+  }
+}
 ```
 
 You can find all the available keys [here](https://code.visualstudio.com/api/references/theme-color).
