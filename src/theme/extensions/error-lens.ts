@@ -1,4 +1,4 @@
-import { ThemeContext } from "../../types";
+import type { ThemeContext } from "../../types";
 import { opacity } from "../utils";
 
 export default function colors(context: ThemeContext) {
