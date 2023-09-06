@@ -3,7 +3,7 @@
 !CHANGELOG.md
 !LICENSE
 !README.md
+!assets/icon.png
 !dist/
-!icon.png
 !package.json
-!themes/
+!themes/*.json
