@@ -1,12 +1,24 @@
-import { workspace, ConfigurationChangeEvent, extensions } from "vscode";
-import { getThemePaths } from "./helpers";
+import {
+  workspace,
+  ConfigurationChangeEvent,
+  extensions,
+  ExtensionContext,
+  Uri,
+} from "vscode";
 import utils, { UpdateTrigger } from "./utils";
+import type { ThemePaths } from "./types";
 
-export const activate = () => {
-  const paths = getThemePaths();
+export const activate = async (ctx: ExtensionContext) => {
+  const base = ctx.extensionUri;
+  const paths: ThemePaths = {
+    latte: Uri.joinPath(base, "themes", "latte.json"),
+    frappe: Uri.joinPath(base, "themes", "frappe.json"),
+    macchiato: Uri.joinPath(base, "themes", "macchiato.json"),
+    mocha: Uri.joinPath(base, "themes", "mocha.json"),
+  };
 
   // regenerate on a fresh install if non-default config is set
-  if (utils.isFreshInstall() && !utils.isDefaultConfig()) {
+  if ((await utils.isFreshInstall(ctx)) && !utils.isDefaultConfig()) {
     utils.updateThemes(
       utils.getConfiguration(),
       paths,

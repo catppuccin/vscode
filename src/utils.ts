@@ -1,8 +1,14 @@
 import { variants } from "@catppuccin/palette";
-import * as fs from "fs";
 import { compileTheme, defaultOptions } from "./theme";
-import { commands, workspace, window } from "vscode";
 import {
+  commands,
+  workspace,
+  window,
+  Uri,
+  FilePermission,
+  ExtensionContext,
+} from "vscode";
+import type {
   CatppuccinAccent,
   CatppuccinFlavour,
   ColorOverrides,
@@ -12,7 +18,6 @@ import {
   CatppuccinWorkbenchMode,
   CatppuccinBracketMode,
 } from "./types";
-import { join } from "path";
 
 // the reason why an update has been triggered, and a reload is needed
 export enum UpdateTrigger {
@@ -21,7 +26,7 @@ export enum UpdateTrigger {
 }
 
 class Utils {
-  private promptToReload(trigger: UpdateTrigger) {
+  private promptToReload = (trigger: UpdateTrigger) => {
     const msg = `Catppuccin: ${trigger} - Reload required.`;
     const action = "Reload window";
     window.showInformationMessage(msg, action).then((selectedAction) => {
@@ -29,32 +34,54 @@ class Utils {
         commands.executeCommand("workbench.action.reloadWindow");
       }
     });
-  }
-  private writeThemeFile(path: string, data: any) {
-    return fs.writeFile(path, JSON.stringify(data, null, 2), (err) => {
-      if (err) {
-        window.showErrorMessage(err.message);
-      }
-    });
-  }
-  isFreshInstall(): boolean {
+  };
+  private writeThemeFile = async (uri: Uri, data: any): Promise<void> => {
+    return workspace.fs
+      .writeFile(uri, Buffer.from(JSON.stringify(data, null, 2)))
+      .then(
+        () => {},
+        (err) => {
+          window.showErrorMessage(err.message);
+        },
+      );
+  };
+  private fileExists = async (uri: Uri): Promise<boolean> => {
+    return workspace.fs.stat(uri).then(
+      () => true,
+      (ctx) => {
+        console.log(ctx);
+        return false;
+      },
+    );
+  };
+  isMutable = async (uri: Uri): Promise<boolean> => {
+    return workspace.fs.stat(uri).then(
+      (stat) => stat.permissions !== FilePermission.Readonly,
+      (err) => err,
+    );
+  };
+  isFreshInstall = async (
+    ctx: ExtensionContext,
+  ): Promise<boolean | "error"> => {
     console.log("Checking if catppuccin is installed for the first time.");
-    const flagPath = join(__dirname, "..", "themes", ".flag");
-    if (fs.existsSync(flagPath)) {
+    const flagUri = Uri.file(ctx.asAbsolutePath("themes/.flag"));
+    if (this.fileExists(flagUri)) {
       console.log("Catppuccin has been installed before.");
       return false;
     } else {
       console.log("Catppuccin is installed for the first time!");
-      fs.writeFileSync(flagPath, "");
-      return true;
+      return workspace.fs.writeFile(flagUri, Buffer.from("")).then(
+        () => true,
+        () => "error",
+      );
     }
-  }
-  isDefaultConfig(): boolean {
+  };
+  isDefaultConfig = (): boolean => {
     console.log("Checking if catppuccin is using default config.");
     const state = this.getConfiguration() === defaultOptions;
     console.log(`Catppuccin is using ${state ? "default" : "custom"} config.`);
     return state;
-  }
+  };
   getConfiguration = (): ThemeOptions => {
     const conf = workspace.getConfiguration("catppuccin");
     return {
@@ -81,9 +108,16 @@ class Utils {
       return this.writeThemeFile(paths[flavour], theme);
     });
 
-    Promise.all(promises).then(() => {
-      this.promptToReload(trigger);
-    });
+    Promise.all(promises)
+      .then((x) => {
+        window.showInformationMessage(
+          "Catppuccin: Themes updated. " + JSON.stringify(x),
+        );
+        this.promptToReload(trigger);
+      })
+      .catch((err) => {
+        window.showErrorMessage(err.message);
+      });
   };
 }
 
