@@ -1,4 +1,4 @@
-import { variants } from "@catppuccin/palette";
+import { labels, variants } from "@catppuccin/palette";
 
 import type { Uri } from "vscode";
 
@@ -29,35 +29,11 @@ export type CatppuccinBracketMode =
   | "monochromatic"
   | "neovim";
 
-export interface CatppuccinPalette {
+export type CatppuccinPalette = {
   name: CatppuccinFlavour;
-  rosewater: string;
-  flamingo: string;
-  pink: string;
-  mauve: string;
-  red: string;
-  maroon: string;
-  peach: string;
-  yellow: string;
-  green: string;
-  teal: string;
-  sky: string;
-  sapphire: string;
-  blue: string;
-  lavender: string;
-  text: string;
-  subtext1: string;
-  subtext0: string;
-  overlay2: string;
-  overlay1: string;
-  overlay0: string;
-  surface2: string;
-  surface1: string;
-  surface0: string;
-  base: string;
-  mantle: string;
-  crust: string;
-}
+} & {
+  [k in keyof typeof labels]: string;
+};
 
 export type ColorOverrides = {
   all?: Partial<CatppuccinPalette>;

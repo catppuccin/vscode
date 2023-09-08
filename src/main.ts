@@ -1,9 +1,9 @@
 import {
-  workspace,
   ConfigurationChangeEvent,
-  extensions,
   ExtensionContext,
   Uri,
+  extensions,
+  workspace,
 } from "vscode";
 import utils, { UpdateTrigger } from "./utils";
 import type { ThemePaths } from "./types";
@@ -26,35 +26,39 @@ export const activate = async (ctx: ExtensionContext) => {
     );
   }
 
-  // regenerate the theme files when the config changes
-  workspace.onDidChangeConfiguration((event: ConfigurationChangeEvent) => {
-    if (
-      event.affectsConfiguration("workbench.colorTheme") &&
-      extensions.getExtension("catppuccin.catppuccin-vsc-icons")
-    ) {
-      const theme = workspace
-        .getConfiguration("workbench")
-        .get<string>("colorTheme");
-      const ctp_themes = {
-        "Catppuccin Latte": "catppuccin-latte",
-        "Catppuccin Frappé": "catppuccin-frappe",
-        "Catppuccin Macchiato": "catppuccin-macchiato",
-        "Catppuccin Mocha": "catppuccin-mocha",
-      };
-      if (Object.keys(ctp_themes).includes(theme)) {
-        workspace
-          .getConfiguration("workbench")
-          .update("iconTheme", ctp_themes[theme], true);
-      }
-    }
-    if (event.affectsConfiguration("catppuccin")) {
-      utils.updateThemes(
-        utils.getConfiguration(),
-        paths,
-        UpdateTrigger.CONFIG_CHANGE,
-      );
-    }
-  });
+  ctx.subscriptions.push(
+    // regenerate the theme files when the config changes
+    workspace.onDidChangeConfiguration((event) => handler(event, paths)),
+  );
 };
 
-export const deactivate = () => {};
+const handler = (event: ConfigurationChangeEvent, paths: ThemePaths) => {
+  const id = "catppuccin.catppuccin-vsc-icons";
+  const iconsInstalled = extensions.getExtension(id).isActive;
+  const iconsAffected = event.affectsConfiguration("workbench.colorTheme");
+
+  if (iconsInstalled && iconsAffected) {
+    const theme = workspace
+      .getConfiguration("workbench")
+      .get<string>("colorTheme");
+    const ctp_themes = {
+      "Catppuccin Latte": "catppuccin-latte",
+      "Catppuccin Frappé": "catppuccin-frappe",
+      "Catppuccin Macchiato": "catppuccin-macchiato",
+      "Catppuccin Mocha": "catppuccin-mocha",
+    };
+    if (Object.keys(ctp_themes).includes(theme)) {
+      workspace
+        .getConfiguration("workbench")
+        .update("iconTheme", ctp_themes[theme], true);
+    }
+  }
+
+  if (event.affectsConfiguration("catppuccin")) {
+    utils.updateThemes(
+      utils.getConfiguration(),
+      paths,
+      UpdateTrigger.CONFIG_CHANGE,
+    );
+  }
+};

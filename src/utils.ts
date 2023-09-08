@@ -109,10 +109,7 @@ class Utils {
     });
 
     Promise.all(promises)
-      .then((x) => {
-        window.showInformationMessage(
-          "Catppuccin: Themes updated. " + JSON.stringify(x),
-        );
+      .then(() => {
         this.promptToReload(trigger);
       })
       .catch((err) => {
