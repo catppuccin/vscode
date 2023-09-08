@@ -4038,10 +4038,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/vscode@npm:^1.70.0":
-  version: 1.77.0
-  resolution: "@types/vscode@npm:1.77.0"
-  checksum: 169dbced32d3f84aad6a41f0d099343ff2a2a86005e309e48192db500cd846423e0e5848f20a6c1aab71329915423255dd9a083974d6f3eb4bb085c278435b98
+"@types/vscode@npm:~1.70.0":
+  version: 1.70.0
+  resolution: "@types/vscode@npm:1.70.0"
+  checksum: fda7b48d93a8c2164abb393224572e201a995518a223c6d1fb130e66baf5878235901a078ee31f8f12f89854935ca431a9b78c335abc78672b4e25e5b9d32584
   languageName: node
   linkType: hard
 
@@ -5049,7 +5049,7 @@ __metadata:
     "@storybook/react": ^7.4.0
     "@storybook/react-vite": ^7.4.0
     "@types/node": ^18.17.12
-    "@types/vscode": ^1.70.0
+    "@types/vscode": ~1.70.0
     "@typescript-eslint/eslint-plugin": ^6.5.0
     "@typescript-eslint/parser": ^6.5.0
     "@vscode/vsce": ^2.21.0
