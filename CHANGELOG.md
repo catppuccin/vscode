@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.2.3](https://github.com/catppuccin/vscode/compare/v3.2.2...v3.2.3) (2023-09-09)
+
+
+### Bug Fixes
+
+* **syntax:** Python: use `yellow` for typehints next to variables ([46ebb95](https://github.com/catppuccin/vscode/commit/46ebb9535206898b9f214fbd8eda3f0a1bdeb059)), closes [#163](https://github.com/catppuccin/vscode/issues/163)
+
 ## [3.2.2](https://github.com/catppuccin/vscode/compare/v3.2.1...v3.2.2) (2023-09-09)
 
 
