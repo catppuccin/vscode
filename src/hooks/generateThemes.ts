@@ -1,18 +1,20 @@
-import * as fs from "fs";
-import path = require("path");
+import * as fs from "fs/promises";
+import * as path from "path";
 import { variants } from "@catppuccin/palette";
 
-import { getThemePaths } from "../helpers";
 import { compileTheme, defaultOptions } from "../theme";
-import { CatppuccinFlavour } from "../types";
+import type { CatppuccinFlavour } from "../types";
 
-const paths = getThemePaths();
+const themeDir = path.join(__dirname, "../../themes");
 const flavours = Object.keys(variants) as CatppuccinFlavour[];
 
 flavours.map((flavour) => {
   const theme = compileTheme(flavour, defaultOptions);
   // ignore error if directory exists
-  fs.mkdir(path.dirname(paths[flavour]), () => {
-    fs.writeFileSync(paths[flavour], JSON.stringify(theme, null, 2));
+  fs.mkdir(themeDir, { recursive: true }).then(() => {
+    fs.writeFile(
+      path.join(themeDir, `${flavour}.json`),
+      JSON.stringify(theme, null, 2),
+    );
   });
 });

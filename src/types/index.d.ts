@@ -1,8 +1,12 @@
+import { labels, variants } from "@catppuccin/palette";
+
+import type { Uri } from "vscode";
+
 export type * from "./textmate-colors";
 export type * from "./workbench-colors";
 export type * from "./token-styling";
 
-export type CatppuccinFlavour = "latte" | "frappe" | "macchiato" | "mocha";
+export type CatppuccinFlavour = keyof typeof variants;
 export type CatppuccinAccent =
   | "rosewater"
   | "flamingo"
@@ -25,35 +29,11 @@ export type CatppuccinBracketMode =
   | "monochromatic"
   | "neovim";
 
-export interface CatppuccinPalette {
+export type CatppuccinPalette = {
   name: CatppuccinFlavour;
-  rosewater: string;
-  flamingo: string;
-  pink: string;
-  mauve: string;
-  red: string;
-  maroon: string;
-  peach: string;
-  yellow: string;
-  green: string;
-  teal: string;
-  sky: string;
-  sapphire: string;
-  blue: string;
-  lavender: string;
-  text: string;
-  subtext1: string;
-  subtext0: string;
-  overlay2: string;
-  overlay1: string;
-  overlay0: string;
-  surface2: string;
-  surface1: string;
-  surface0: string;
-  base: string;
-  mantle: string;
-  crust: string;
-}
+} & {
+  [k in keyof typeof labels]: string;
+};
 
 export type ColorOverrides = {
   all?: Partial<CatppuccinPalette>;
@@ -84,10 +64,10 @@ export type ThemeOptions = {
 };
 
 export type ThemePaths = {
-  latte: string;
-  frappe: string;
-  macchiato: string;
-  mocha: string;
+  latte: Uri;
+  frappe: Uri;
+  macchiato: Uri;
+  mocha: Uri;
 };
 
 export type ThemeContext = {
