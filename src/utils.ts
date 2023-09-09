@@ -48,10 +48,7 @@ class Utils {
   private fileExists = async (uri: Uri): Promise<boolean> => {
     return workspace.fs.stat(uri).then(
       () => true,
-      (ctx) => {
-        console.log(ctx);
-        return false;
-      },
+      () => false,
     );
   };
   isMutable = async (uri: Uri): Promise<boolean> => {
@@ -65,7 +62,7 @@ class Utils {
   ): Promise<boolean | "error"> => {
     console.log("Checking if catppuccin is installed for the first time.");
     const flagUri = Uri.file(ctx.asAbsolutePath("themes/.flag"));
-    if (this.fileExists(flagUri)) {
+    if (await this.fileExists(flagUri)) {
       console.log("Catppuccin has been installed before.");
       return false;
     } else {
@@ -78,8 +75,11 @@ class Utils {
   };
   isDefaultConfig = (): boolean => {
     console.log("Checking if catppuccin is using default config.");
-    const state = this.getConfiguration() === defaultOptions;
+    const state =
+      JSON.stringify(this.getConfiguration()) ===
+      JSON.stringify(defaultOptions);
     console.log(`Catppuccin is using ${state ? "default" : "custom"} config.`);
+
     return state;
   };
   getConfiguration = (): ThemeOptions => {
@@ -108,13 +108,9 @@ class Utils {
       return this.writeThemeFile(paths[flavour], theme);
     });
 
-    Promise.all(promises)
-      .then(() => {
-        this.promptToReload(trigger);
-      })
-      .catch((err) => {
-        window.showErrorMessage(err.message);
-      });
+    Promise.all(promises).then(() => {
+      this.promptToReload(trigger);
+    });
   };
 }
 
