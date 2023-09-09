@@ -277,6 +277,14 @@ export default (context: ThemeContext) => {
         fontStyle: "",
       },
     },
+    {
+      name: "Object properties",
+      scope: "variable.object.property",
+      settings: {
+        foreground: palette.text,
+        fontStyle: "",
+      },
+    },
 
     // per-language tokens
     ...[
