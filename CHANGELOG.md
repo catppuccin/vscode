@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.2.4](https://github.com/catppuccin/vscode/compare/v3.2.3...v3.2.4) (2023-09-09)
+
+
+### Bug Fixes
+
+* **compiler:** successfully compile when icon pack isn't installed ([#168](https://github.com/catppuccin/vscode/issues/168)) ([c5b4c2e](https://github.com/catppuccin/vscode/commit/c5b4c2ea461eada8ffce4d7f41a72d86284d5c80))
+
 ## [3.2.3](https://github.com/catppuccin/vscode/compare/v3.2.2...v3.2.3) (2023-09-09)
 
 
