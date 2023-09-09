@@ -34,23 +34,27 @@ export const activate = async (ctx: ExtensionContext) => {
 
 const handler = (event: ConfigurationChangeEvent, paths: ThemePaths) => {
   const id = "catppuccin.catppuccin-vsc-icons";
-  const iconsInstalled = extensions.getExtension(id).isActive;
+  const iconsActive = extensions.getExtension(id)?.isActive;
   const iconsAffected = event.affectsConfiguration("workbench.colorTheme");
 
-  if (iconsInstalled && iconsAffected) {
+  if (iconsActive && iconsAffected) {
     const theme = workspace
       .getConfiguration("workbench")
       .get<string>("colorTheme");
-    const ctp_themes = {
-      "Catppuccin Latte": "catppuccin-latte",
-      "Catppuccin Frappé": "catppuccin-frappe",
-      "Catppuccin Macchiato": "catppuccin-macchiato",
-      "Catppuccin Mocha": "catppuccin-mocha",
-    };
-    if (Object.keys(ctp_themes).includes(theme)) {
+    if (theme) {
+      const ctp_themes = {
+        "Catppuccin Latte": "catppuccin-latte",
+        "Catppuccin Frappé": "catppuccin-frappe",
+        "Catppuccin Macchiato": "catppuccin-macchiato",
+        "Catppuccin Mocha": "catppuccin-mocha",
+      };
       workspace
         .getConfiguration("workbench")
-        .update("iconTheme", ctp_themes[theme], true);
+        .update(
+          "iconTheme",
+          ctp_themes[theme as keyof typeof ctp_themes],
+          true,
+        );
     }
   }
 

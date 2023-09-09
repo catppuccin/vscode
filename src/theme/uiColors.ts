@@ -1,5 +1,6 @@
 import type {
   CatppuccinBracketMode,
+  CatppuccinPalette,
   CatppuccinWorkbenchMode,
   ThemeContext,
   WorkbenchColors,
@@ -156,10 +157,13 @@ export const getUiColors = (
         const entry = v.split(" ");
         if (entry.length !== 1) {
           // call the opacity function
-          v = opacity(palette[entry[0]], Number(entry[1]));
+          v = opacity(
+            palette[entry[0] as keyof CatppuccinPalette],
+            Number(entry[1]),
+          );
         } else {
           // resolve to the palette color
-          v = palette[v];
+          v = palette[v as keyof CatppuccinPalette];
         }
 
         return {
