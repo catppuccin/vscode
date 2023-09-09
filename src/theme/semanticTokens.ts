@@ -23,6 +23,9 @@ export const getSemanticTokens = (context: ThemeContext): SemanticTokens => {
     "property.readonly:javascriptreact": { foreground: palette.text },
     "property.readonly:typescriptreact": { foreground: palette.text },
 
+    // Scala, also dealing with constants
+    "variable.readonly:scala": { foreground: palette.text },
+
     // Golang builtin readonly defaultLibrary (nil)
     "type.defaultLibrary:go": { foreground: palette.mauve },
     "variable.readonly.defaultLibrary:go": { foreground: palette.mauve },
