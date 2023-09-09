@@ -1,5 +1,16 @@
 # Changelog
 
+## [3.2.2](https://github.com/catppuccin/vscode/compare/v3.2.1...v3.2.2) (2023-09-09)
+
+
+### Bug Fixes
+
+* italic comments toggle ([#165](https://github.com/catppuccin/vscode/issues/165)) ([b920fb3](https://github.com/catppuccin/vscode/commit/b920fb300cffc43a5d2dc4208365b6c30f866ee1)), closes [#152](https://github.com/catppuccin/vscode/issues/152)
+* **syntax:** Go: color for functions ([10cf259](https://github.com/catppuccin/vscode/commit/10cf2599bc09c576bfa6398dda8afc5e239e373e)), closes [#162](https://github.com/catppuccin/vscode/issues/162)
+* **syntax:** Object properties use `text` now ([c37f780](https://github.com/catppuccin/vscode/commit/c37f780dc7fa98cbcdacf2cc51ffa5305ca2dccf))
+* **syntax:** Scala: disable contants being peach ([c7168cd](https://github.com/catppuccin/vscode/commit/c7168cdf19a2d241d51d2bf32524253a93fe567c)), closes [#161](https://github.com/catppuccin/vscode/issues/161)
+* terminal colors ([#164](https://github.com/catppuccin/vscode/issues/164)) ([5eb8105](https://github.com/catppuccin/vscode/commit/5eb8105af74f4dfd61a0d1dd213f7b2a7ccbd8f1))
+
 ## [3.2.1](https://github.com/catppuccin/vscode/compare/v3.2.0...v3.2.1) (2023-09-04)
 
 
