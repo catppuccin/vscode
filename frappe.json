@@ -467,6 +467,9 @@
     "class.builtin:python": {
       "foreground": "#ca9ee6"
     },
+    "variable.typeHint:python": {
+      "foreground": "#e5c890"
+    },
     "variable.readonly:javascript": {
       "foreground": "#c6d0f5"
     },
