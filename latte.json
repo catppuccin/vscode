@@ -343,7 +343,7 @@
     "tab.activeModifiedBorder": "#df8e1d",
     "tab.inactiveModifiedBorder": "#df8e1d4c",
     "terminal.foreground": "#4c4f69",
-    "terminal.ansiBlack": "#5c5f77",
+    "terminal.ansiBlack": "#bcc0cc",
     "terminal.ansiRed": "#d20f39",
     "terminal.ansiGreen": "#40a02b",
     "terminal.ansiYellow": "#df8e1d",
@@ -358,8 +358,9 @@
     "terminal.ansiBrightBlue": "#1e66f5",
     "terminal.ansiBrightMagenta": "#ea76cb",
     "terminal.ansiBrightCyan": "#04a5e5",
-    "terminal.ansiBrightWhite": "#bcc0cc",
-    "terminal.selectionBackground": "#acb0be7f",
+    "terminal.ansiBrightWhite": "#5c5f77",
+    "terminal.selectionBackground": "#acb0be",
+    "terminal.inactiveSelectionBackground": "#acb0be7f",
     "terminalCursor.background": "#eff1f5",
     "terminalCursor.foreground": "#dc8a78",
     "terminal.border": "#acb0be",
@@ -488,6 +489,9 @@
       "foreground": "#4c4f69"
     },
     "property.readonly:typescriptreact": {
+      "foreground": "#4c4f69"
+    },
+    "variable.readonly:scala": {
       "foreground": "#4c4f69"
     },
     "type.defaultLibrary:go": {
@@ -801,6 +805,14 @@
       }
     },
     {
+      "name": "Object properties",
+      "scope": "variable.object.property",
+      "settings": {
+        "foreground": "#4c4f69",
+        "fontStyle": ""
+      }
+    },
+    {
       "name": "C++ functions",
       "scope": "entity.name.function.call.cpp",
       "settings": {
@@ -1026,6 +1038,14 @@
       "settings": {
         "foreground": "#fe640b",
         "fontStyle": ""
+      }
+    },
+    {
+      "name": "Go functions",
+      "scope": "support.function.go",
+      "settings": {
+        "foreground": "#1e66f5",
+        "fontStyle": "italic"
       }
     },
     {
