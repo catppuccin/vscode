@@ -571,7 +571,7 @@ export const getUiColors = (
 
     // Terminal
     "terminal.foreground": palette.text,
-    "terminal.ansiBlack": isLatte ? palette.subtext1 : palette.surface1, // color0
+    "terminal.ansiBlack": isLatte ? palette.surface1 : palette.subtext0, // color0
     "terminal.ansiRed": palette.red, // color1
     "terminal.ansiGreen": palette.green, // color2
     "terminal.ansiYellow": palette.yellow, // color3
@@ -586,8 +586,9 @@ export const getUiColors = (
     "terminal.ansiBrightBlue": palette.blue, // color12
     "terminal.ansiBrightMagenta": palette.pink, // color13
     "terminal.ansiBrightCyan": palette.sky, // color14
-    "terminal.ansiBrightWhite": isLatte ? palette.surface1 : palette.subtext0, // color15
-    "terminal.selectionBackground": opacity(palette.surface2, 0.5),
+    "terminal.ansiBrightWhite": isLatte ? palette.subtext1 : palette.surface1, // color15
+    "terminal.selectionBackground": palette.surface2,
+    "terminal.inactiveSelectionBackground": opacity(palette.surface2, 0.5),
     "terminalCursor.background": palette.base,
     "terminalCursor.foreground": palette.rosewater,
     "terminal.border": palette.surface2,
