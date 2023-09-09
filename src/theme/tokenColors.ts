@@ -5,7 +5,8 @@ export const getTokenColors = (context: ThemeContext): TextmateColors => {
   const { options } = context;
 
   return tokens(context).map((token) => {
-    // honor the user's italic keyword settings, skip comments (they are handled separately)
+    if (token.name === "Comments") return token;
+
     token = {
       ...token,
       settings: {
