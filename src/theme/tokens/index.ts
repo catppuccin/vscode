@@ -285,6 +285,14 @@ export default (context: ThemeContext) => {
         fontStyle: "",
       },
     },
+    {
+      name: "String template interpolation",
+      scope: "string variable",
+      settings: {
+        foreground: palette.text,
+        fontStyle: "",
+      },
+    },
 
     // per-language tokens
     ...[
