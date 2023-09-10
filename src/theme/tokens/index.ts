@@ -287,7 +287,7 @@ export default (context: ThemeContext) => {
     },
     {
       name: "String template interpolation",
-      scope: "string variable",
+      scope: "string.template variable",
       settings: {
         foreground: palette.text,
         fontStyle: "",

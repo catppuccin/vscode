@@ -15,10 +15,10 @@ const tokens = (context: ThemeContext): TextmateColors => {
     {
       name: "JS/TS constants & properties",
       scope: [
-        "source.js variable.other.constant",
-        "source.ts variable.other.constant",
-        "source.js variable.other.property",
-        "source.ts variable.other.property",
+        "variable.other.constant.js",
+        "variable.other.constant.ts",
+        "variable.other.property.js",
+        "variable.other.property.ts",
       ],
       settings: {
         foreground: palette.text,
