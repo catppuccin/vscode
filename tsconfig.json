@@ -8,6 +8,6 @@
     "strict": true,
     "lib": ["es6"]
   },
-  "include": ["src"],
+  "include": ["src", ".eslintrc.js"],
   "exclude": ["node_modules"]
 }

@@ -1,5 +1,3 @@
-const { error } = require("node:console");
-
 /** @type {import('eslint').Linter.Config} */
 module.exports = {
   env: {
