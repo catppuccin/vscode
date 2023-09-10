@@ -5061,7 +5061,7 @@ __metadata:
     husky: ^8.0.3
     json-schema-to-typescript: ^13.1.1
     lint-staged: ^14.0.1
-    node-fetch: 2.7.0
+    node-fetch: ^2.7.0
     prettier: ^3.0.3
     react: ^18.2.0
     react-dom: ^18.2.0
@@ -9076,7 +9076,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"node-fetch@npm:2.7.0, node-fetch@npm:^2.0.0":
+"node-fetch@npm:^2.0.0, node-fetch@npm:^2.7.0":
   version: 2.7.0
   resolution: "node-fetch@npm:2.7.0"
   dependencies:
