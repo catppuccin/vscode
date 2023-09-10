@@ -35,7 +35,7 @@ const StoryBuilder = ({
 // });
 export const Bash = StoryBuilder({ lang: "bash", file: "bash.sh" });
 export const Coffeescript = StoryBuilder({
-  lang: "coffeescript",
+  lang: "coffee",
   file: "coffeescript.coffee",
 });
 export const Cpp = StoryBuilder({ lang: "cpp", file: "cpp.cpp" });

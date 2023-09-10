@@ -85,15 +85,29 @@ class Utils {
   getConfiguration = (): ThemeOptions => {
     const conf = workspace.getConfiguration("catppuccin");
     return {
-      accent: conf.get<CatppuccinAccent>("accentColor"),
-      boldKeywords: conf.get<boolean>("boldKeywords"),
-      italicKeywords: conf.get<boolean>("italicKeywords"),
-      italicComments: conf.get<boolean>("italicComments"),
-      colorOverrides: conf.get<ColorOverrides>("colorOverrides"),
-      workbenchMode: conf.get<CatppuccinWorkbenchMode>("workbenchMode"),
-      bracketMode: conf.get<CatppuccinBracketMode>("bracketMode"),
-      extraBordersEnabled: conf.get<boolean>("extraBordersEnabled"),
-      customUIColors: conf.get<CustomUIColors>("customUIColors"),
+      accent:
+        conf.get<CatppuccinAccent>("accentColor") ?? defaultOptions.accent,
+      boldKeywords:
+        conf.get<boolean>("boldKeywords") ?? defaultOptions.boldKeywords,
+      italicKeywords:
+        conf.get<boolean>("italicKeywords") ?? defaultOptions.italicKeywords,
+      italicComments:
+        conf.get<boolean>("italicComments") ?? defaultOptions.italicComments,
+      colorOverrides:
+        conf.get<ColorOverrides>("colorOverrides") ??
+        defaultOptions.colorOverrides,
+      workbenchMode:
+        conf.get<CatppuccinWorkbenchMode>("workbenchMode") ??
+        defaultOptions.workbenchMode,
+      bracketMode:
+        conf.get<CatppuccinBracketMode>("bracketMode") ??
+        defaultOptions.bracketMode,
+      extraBordersEnabled:
+        conf.get<boolean>("extraBordersEnabled") ??
+        defaultOptions.extraBordersEnabled,
+      customUIColors:
+        conf.get<CustomUIColors>("customUIColors") ??
+        defaultOptions.customUIColors,
     };
   };
   updateThemes = async (

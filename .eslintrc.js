@@ -11,7 +11,12 @@ module.exports = {
     "plugin:prettier/recommended",
     "plugin:storybook/recommended",
   ],
-  overrides: [],
+  overrides: [
+    {
+      extends: ["plugin:@typescript-eslint/disable-type-checked"],
+      files: ["./tsup.config.ts"],
+    },
+  ],
   parser: "@typescript-eslint/parser",
   parserOptions: {
     ecmaVersion: "latest",

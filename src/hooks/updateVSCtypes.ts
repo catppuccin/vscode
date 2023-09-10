@@ -1,5 +1,6 @@
+import * as path from "path";
 import { writeFileSync } from "fs";
-import { compile } from "json-schema-to-typescript";
+import { JSONSchema, compile } from "json-schema-to-typescript";
 import fetch from "node-fetch";
 
 const vscodeSchemasRoot =
@@ -27,10 +28,10 @@ for (const { schema, name, fname } of mappings) {
   fetch(vscodeSchemasRoot + schema)
     .then((data) => data.json())
     .then((data) => {
-      compile(data, name, {
+      compile(data as JSONSchema, name, {
         additionalProperties: false,
       }).then((typeDefs) => {
-        const fp = new URL(`../types/${fname}`, import.meta.url).pathname;
+        const fp = path.join(__dirname, `../types/${fname}`);
         writeFileSync(fp, typeDefs, "utf-8");
       });
     });

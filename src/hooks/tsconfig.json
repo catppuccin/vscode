@@ -1,0 +1,8 @@
+{
+  "compilerOptions": {
+    "module": "NodeNext",
+    "strict": true,
+    "lib": ["es6"]
+  },
+  "exclude": ["node_modules"]
+}
