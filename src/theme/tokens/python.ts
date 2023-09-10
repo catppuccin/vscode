@@ -81,20 +81,6 @@ const tokens = (context: ThemeContext): TextmateColors => {
       },
     },
     {
-      name: "Python multi string",
-      scope: [
-        "source.python string.quoted.docstring.multi.python punctuation.definition.string.begin.python",
-        "source.python string.quoted.docstring.multi.python punctuation.definition.string.end.python",
-        "source.python string.quoted.multi.python punctuation.definition.string.begin.python",
-        "source.python string.quoted.multi.python punctuation.definition.string.end.python",
-        "source.python storage.type.string",
-      ],
-      settings: {
-        foreground: palette.green,
-        fontStyle: "italic",
-      },
-    },
-    {
       name: "python placeholder reset to normal string",
       scope: "constant.character.format.placeholder.other.python",
       settings: {
@@ -134,6 +120,14 @@ const tokens = (context: ThemeContext): TextmateColors => {
       scope: ["meta.indexed-name.python", "meta.item-access.python"],
       settings: {
         foreground: palette.maroon,
+        fontStyle: "italic",
+      },
+    },
+    {
+      name: "Python f-strings/binary/unicode storage types",
+      scope: "storage.type.string.python",
+      settings: {
+        foreground: palette.green,
         fontStyle: "italic",
       },
     },

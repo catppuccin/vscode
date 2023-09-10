@@ -155,7 +155,7 @@ const tokens = (context: ThemeContext): TextmateColors => {
     },
     {
       name: "Rust constants",
-      scope: "source.rust constant",
+      scope: "constant.other.caps.rust",
       settings: {
         foreground: palette.peach,
         fontStyle: "",

@@ -6,7 +6,7 @@ const tokens = (context: ThemeContext): TextmateColors => {
   return [
     {
       name: "dotenv left-hand side assignments",
-      scope: ["source.env variable.other.env"],
+      scope: ["variable.other.env"],
       settings: {
         foreground: palette.blue,
         fontStyle: "",
@@ -14,7 +14,7 @@ const tokens = (context: ThemeContext): TextmateColors => {
     },
     {
       name: "dotenv reference to existing env variable",
-      scope: ["source.env string.quoted variable.other.env"],
+      scope: ["string.quoted variable.other.env"],
       settings: {
         foreground: palette.text,
         fontStyle: "",
