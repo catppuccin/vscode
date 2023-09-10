@@ -72,21 +72,12 @@ export default (context: ThemeContext) => {
       },
     },
     {
-      scope: "constant.numeric",
-      settings: {
-        foreground: palette.peach,
-        fontStyle: "",
-      },
-    },
-    {
-      scope: ["variable.other.constant", "entity.name.constant"],
-      settings: {
-        foreground: palette.peach,
-        fontStyle: "",
-      },
-    },
-    {
-      scope: "constant.language.boolean",
+      scope: [
+        "constant.numeric",
+        "variable.other.constant",
+        "entity.name.constant",
+        "constant.language.boolean",
+      ],
       settings: {
         foreground: palette.peach,
         fontStyle: "",
