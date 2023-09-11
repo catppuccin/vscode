@@ -101,6 +101,14 @@ const tokens = (context: ThemeContext): TextmateColors => {
         fontStyle: "",
       },
     },
+    {
+      name: "Vue components",
+      scope: ["support.class.component.vue"],
+      settings: {
+        foreground: palette.blue,
+        fontStyle: "",
+      },
+    },
   ];
 };
 
