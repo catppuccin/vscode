@@ -279,6 +279,12 @@ You can find all the available keys [here](https://code.visualstudio.com/api/ref
 
 > **Note**: This respects your [color overrides](#override-palette-colors).
 
+## Extension Support
+
+Catppuccin for VSCode also themes the following extensions:
+
+- [ErrorLens](https://github.com/phindle/error-lens)
+
 ## Support
 
 If you have any questions regarding this port, feel free to [open an issue](https://github.com/catppuccin/vscode/issues), or ask in [our Discord](https://discord.catppuccin.com), where have a [dedicated forum](https://discord.com/channels/907385605422448742/1020275848940626002) for support.
