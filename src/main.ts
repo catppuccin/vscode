@@ -1,10 +1,4 @@
-import {
-  ConfigurationChangeEvent,
-  ExtensionContext,
-  Uri,
-  extensions,
-  workspace,
-} from "vscode";
+import { ExtensionContext, Uri, workspace } from "vscode";
 import utils, { UpdateTrigger } from "./utils";
 import type { ThemePaths } from "./types";
 
@@ -27,42 +21,22 @@ export const activate = async (ctx: ExtensionContext) => {
   }
 
   ctx.subscriptions.push(
-    // regenerate the theme files when the config changes
-    workspace.onDidChangeConfiguration((event) => handler(event, paths)),
-  );
-};
-
-const handler = (event: ConfigurationChangeEvent, paths: ThemePaths) => {
-  const id = "catppuccin.catppuccin-vsc-icons";
-  const iconsActive = extensions.getExtension(id)?.isActive;
-  const iconsAffected = event.affectsConfiguration("workbench.colorTheme");
-
-  if (iconsActive && iconsAffected) {
-    const theme = workspace
-      .getConfiguration("workbench")
-      .get<string>("colorTheme");
-    if (theme) {
-      const ctp_themes = {
-        "Catppuccin Latte": "catppuccin-latte",
-        "Catppuccin Frappé": "catppuccin-frappe",
-        "Catppuccin Macchiato": "catppuccin-macchiato",
-        "Catppuccin Mocha": "catppuccin-mocha",
-      };
-      workspace
-        .getConfiguration("workbench")
-        .update(
-          "iconTheme",
-          ctp_themes[theme as keyof typeof ctp_themes],
-          true,
+    workspace.onDidChangeConfiguration((event) => {
+      // regenerate the theme files when the config changes
+      if (event.affectsConfiguration("catppuccin")) {
+        utils.updateThemes(
+          utils.getConfiguration(),
+          paths,
+          UpdateTrigger.CONFIG_CHANGE,
         );
-    }
-  }
+      }
+      // call the icon pack sync when the theme changes
+      if (event.affectsConfiguration("workbench.colorTheme")) {
+        utils.syncToIconPack();
+      }
+    }),
+  );
 
-  if (event.affectsConfiguration("catppuccin")) {
-    utils.updateThemes(
-      utils.getConfiguration(),
-      paths,
-      UpdateTrigger.CONFIG_CHANGE,
-    );
-  }
+  // call the icon pack sync on activation
+  utils.syncToIconPack();
 };

@@ -7,6 +7,8 @@ import {
   Uri,
   FilePermission,
   ExtensionContext,
+  extensions,
+  ConfigurationTarget,
 } from "vscode";
 import type {
   CatppuccinAccent,
@@ -125,6 +127,37 @@ class Utils {
     Promise.all(promises).then(() => {
       this.promptToReload(trigger);
     });
+  };
+  syncToIconPack = () => {
+    const id = "catppuccin.catppuccin-vsc-icons";
+    // bail if the icon pack isn't installed
+    if (extensions.getExtension(id) === undefined) return;
+
+    // mapping the Catppuccin Theme names to the icon pack names
+    const uiThemesToIconThemes = {
+      "Catppuccin Latte": "catppuccin-latte",
+      "Catppuccin Frappé": "catppuccin-frappe",
+      "Catppuccin Macchiato": "catppuccin-macchiato",
+      "Catppuccin Mocha": "catppuccin-mocha",
+    };
+
+    // check if the current editor theme is a Catppuccin theme
+    const uiTheme =
+      workspace.getConfiguration("workbench").get<string>("colorTheme") ?? "";
+    const ctpThemeActive = Object.keys(uiThemesToIconThemes).includes(uiTheme);
+
+    // and only sync to a Catppuccin icon flavor if the user's currently using Catppuccin for icons
+    const ctpIconsActive = Object.values(uiThemesToIconThemes).includes(
+      workspace.getConfiguration("workbench").get<string>("iconTheme") ?? "",
+    );
+
+    if (ctpThemeActive && ctpIconsActive) {
+      const iconTheme =
+        uiThemesToIconThemes[uiTheme as keyof typeof uiThemesToIconThemes];
+      workspace
+        .getConfiguration("workbench")
+        .update("iconTheme", iconTheme, ConfigurationTarget.Global);
+    }
   };
 }
 
