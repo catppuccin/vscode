@@ -1,5 +1,21 @@
 # Changelog
 
+## [3.3.0](https://github.com/catppuccin/vscode/compare/v3.2.4...v3.3.0) (2023-09-12)
+
+
+### Features
+
+* nix build ([#147](https://github.com/catppuccin/vscode/issues/147)) ([bfe794f](https://github.com/catppuccin/vscode/commit/bfe794f20732392979d57715a14c054788db21d2))
+* **syntax:** Nix highlighting ([be832e1](https://github.com/catppuccin/vscode/commit/be832e104da7eb3e60edefa67596f8b57d7d524a))
+
+
+### Bug Fixes
+
+* **compiler:** icon pack sync improvements ([#174](https://github.com/catppuccin/vscode/issues/174)) ([88ffb52](https://github.com/catppuccin/vscode/commit/88ffb52c51caba23d4a8e5cd466c803bf81cf7bb))
+* **syntax:** don't use source.js/source.ts ([583b3d8](https://github.com/catppuccin/vscode/commit/583b3d87b6d42f7c508264b73482c2f0b960eba0))
+* **syntax:** variable inside string interpolation ([2df9d7d](https://github.com/catppuccin/vscode/commit/2df9d7dec04cbc75638e1eaf2250b76152e0d961))
+* **syntax:** Vue components color ([#173](https://github.com/catppuccin/vscode/issues/173)) ([f79ea58](https://github.com/catppuccin/vscode/commit/f79ea58320ef8789d6dd5e78fe7ef130d8322775))
+
 ## [3.2.4](https://github.com/catppuccin/vscode/compare/v3.2.3...v3.2.4) (2023-09-09)
 
 
