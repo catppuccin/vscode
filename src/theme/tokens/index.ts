@@ -12,6 +12,7 @@ import javascript from "./javascript";
 import julia from "./julia";
 import latex from "./latex";
 import markdown from "./markdown";
+import nix from "./nix";
 import php from "./php";
 import python from "./python";
 import ruby from "./ruby";
@@ -300,6 +301,7 @@ export default (context: ThemeContext) => {
       julia,
       latex,
       markdown,
+      nix,
       php,
       python,
       ruby,
