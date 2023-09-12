@@ -60,7 +60,7 @@ const tokens = (context: ThemeContext): TextmateColors => {
     },
     {
       name: "Shell EOF",
-      scope: "source.shell entity.name.tag.heredoc.shell",
+      scope: "entity.name.tag.heredoc.shell",
       settings: {
         foreground: palette.mauve,
         fontStyle: "",
@@ -68,8 +68,7 @@ const tokens = (context: ThemeContext): TextmateColors => {
     },
     {
       name: "Shell quoted variable",
-      scope:
-        "source.shell string.quoted.double.shell variable.other.normal.shell",
+      scope: "string.quoted.double.shell variable.other.normal.shell",
       settings: {
         foreground: palette.text,
         fontStyle: "",

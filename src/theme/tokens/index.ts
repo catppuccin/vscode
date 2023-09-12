@@ -25,6 +25,7 @@ export default (context: ThemeContext) => {
     {
       name: "Basic text & variable names (incl. leading punctuation)",
       scope: [
+        "text",
         "source",
         "variable.other.readwrite",
         "punctuation.definition.variable",
