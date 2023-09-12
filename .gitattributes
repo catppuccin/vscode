@@ -1,0 +1,3 @@
+*                text=auto
+.husky/**        linguist-generated
+yarn-project.nix linguist-generated
