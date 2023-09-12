@@ -83,10 +83,11 @@ This means that you will have to either
   # in your inputs:
   inputs.catppuccin-vsc.url = "github.com:catppuccin/vscode";
 
-  # create an overlay:
-  nixpkgs.overlays = [(f: p: {
-    catppuccin-vsc = inputs.catppuccin-vsc.packages.${prev.stdenv.hostPlatform.system}.default;
-  })];
+  # add the overlay:
+  nixpkgs.overlays = [inputs.catppuccin-vsc.overlays.default];
+  # the package will be available as
+  # - pkgs.catppuccin-vsc
+  # - pkgs.vscode-extensions.catppuccin.catppuccin-vsc
 
   # in your home-manager options:
   programs.vscode.extensions = [
