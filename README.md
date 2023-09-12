@@ -40,9 +40,6 @@
 
 ## Usage
 
-> **Note**\
-> It is recommended to change `window.titleBarStyle` to `custom` in your JSON user settings.
-
 **Preferred method of installation**
 
 Install the extension from a Marketplace:
@@ -111,6 +108,28 @@ This means that you will have to either
 
 > **Note**\
 > We also have a [Catppuccin Icon Pack](https://marketplace.visualstudio.com/items?itemName=Catppuccin.catppuccin-vsc-icons)!
+
+### VSCode settings
+
+The following settings inside your `settings.json` are recommended for this plugin:
+
+```jsonc
+{
+  // we try to make semantic highlighting look good
+  "editor.semanticHighlighting.enabled": true,
+  // prevent VSCode from modifying the terminal colors
+  "terminal.integrated.minimumContrastRatio": 1,
+  // make the window's titlebar use the workbench colors
+  "window.titleBarStyle": "custom",
+
+  // applicable if you use Go, this is an opt-in flag!
+  "gopls": {
+    "ui.semanticTokens": true
+  }
+}
+```
+
+### Catpuccin settings
 
 Catppuccin for VSCode can be customized to your liking. If you like the Catppuccin colors, but feel that they are a bit too bright for working at night, customization got you covered!
 
