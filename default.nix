@@ -1,6 +1,6 @@
 {
   pkgs ? import <nixpkgs> {},
-  accent ? "mauve",
+  accentColor ? "mauve",
   boldKeywords ? true,
   italicComments ? true,
   italicKeywords ? true,
@@ -9,7 +9,7 @@
   bracketMode ? "rainbow",
   colorOverrides ? {},
   customUIColors ? {},
-}: let
+} @ inputs: let
   inherit (pkgs) lib;
 
   packageJSON = builtins.fromJSON (builtins.readFile ./package.json);
@@ -21,9 +21,7 @@
   inherit (packageJSON) name version;
   pname = "${name}-${version}";
 
-  options = {
-    inherit accent boldKeywords italicComments italicKeywords colorOverrides workbenchMode bracketMode extraBordersEnabled customUIColors;
-  };
+  options = builtins.removeAttrs inputs ["pkgs"];
   project =
     (pkgs.callPackage ./yarn-project.nix {} {
       src = pkgs.nix-gitignore.gitignoreSource [] ./.;
@@ -46,7 +44,7 @@
       '';
     });
 in
-  (lib.checkListOfEnum "${pname}: accent" validAccents [accent])
+  (lib.checkListOfEnum "${pname}: accent" validAccents [accentColor])
   (lib.checkListOfEnum "${pname}: workbenchMode" validWorkbenchModes [workbenchMode])
   (lib.checkListOfEnum "${pname}: bracketMode" validBracketModes [bracketMode])
   pkgs.vscode-utils.buildVscodeMarketplaceExtension {

@@ -93,7 +93,7 @@ This means that you will have to either
   programs.vscode.extensions = [
     # all the theme options will be available as overrides:
     (pkgs.catppuccin-vsc.override {
-      accent = "mauve";
+      accentColor = "mauve";
       boldKeywords = true;
       italicComments = true;
       italicKeywords = true;
