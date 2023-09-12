@@ -63,6 +63,50 @@ You can find the compiled theme JSON files (with default settings as documented 
 
 This can be useful if you want to use syntax highlighters that work with VSCode themes (like Shiki and derivatives), or if your work environment only allows you to install allowlisted extensions.
 
+**Nix (Home-Manager) users**
+
+If you want to change the theme configuration, the theme expects to have a mutable directory to write it's JSON files into.
+This means that you will have to either
+
+- Install this extension in a non-declarative way, so that the extension has permissions to write files.\
+  This means fully excluding `nixpkgs.vscode-extensions.catppuccin.catppuccin-vsc` from your configuration; Just using `programs.vscode.mutableExtensionsDir = true;` will **NOT WORK**.
+- Use the `flake.nix` to build it with your VSCode configuration, using overrides.\
+  This is a declarative way to compile the theme with your preferred options. Please see the example below for a sample configuration.
+
+<details>
+<summary>❄️ Nix Configuration</summary>
+
+```nix
+{
+  # in your inputs:
+  inputs.catppuccin-vsc.url = "github.com:catppuccin/vscode";
+
+  # add the overlay:
+  nixpkgs.overlays = [inputs.catppuccin-vsc.overlays.default];
+  # the package will be available as
+  # - pkgs.catppuccin-vsc
+  # - pkgs.vscode-extensions.catppuccin.catppuccin-vsc
+
+  # in your home-manager options:
+  programs.vscode.extensions = [
+    # all the theme options will be available as overrides, these are defaults:
+    (pkgs.catppuccin-vsc.override {
+      accentColor = "mauve";
+      boldKeywords = true;
+      italicComments = true;
+      italicKeywords = true;
+      extraBordersEnabled = false;
+      workbenchMode = "default";
+      bracketMode = "rainbow";
+      colorOverrides = {};
+      customUIColors = {};
+    })
+  ];
+}
+```
+
+</details>
+
 ## Customization
 
 > **Note**\

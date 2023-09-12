@@ -8,8 +8,11 @@ import type { CatppuccinFlavour } from "../types";
 const themeDir = path.join(__dirname, "../../themes");
 const flavours = Object.keys(variants) as CatppuccinFlavour[];
 
+// options can also be passed as a JSON string
+const options = process.argv[2] ? JSON.parse(process.argv[2]) : {};
+
 flavours.map((flavour) => {
-  const theme = compileTheme(flavour, defaultOptions);
+  const theme = compileTheme(flavour, { ...defaultOptions, ...options });
   // ignore error if directory exists
   fs.mkdir(themeDir, { recursive: true }).then(() => {
     fs.writeFile(
