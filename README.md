@@ -283,7 +283,7 @@ You can find all the available keys [here](https://code.visualstudio.com/api/ref
 
 Catppuccin for VSCode also themes the following extensions:
 
-- [ErrorLens](https://github.com/phindle/error-lens)
+- [ErrorLens](https://github.com/usernamehw/vscode-error-lens)
 
 ## Support
 
