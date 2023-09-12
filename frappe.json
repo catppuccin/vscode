@@ -539,6 +539,7 @@
     {
       "name": "Basic text & variable names (incl. leading punctuation)",
       "scope": [
+        "text",
         "source",
         "variable.other.readwrite",
         "punctuation.definition.variable"
@@ -592,24 +593,12 @@
       }
     },
     {
-      "scope": "constant.numeric",
-      "settings": {
-        "foreground": "#ef9f76",
-        "fontStyle": ""
-      }
-    },
-    {
       "scope": [
+        "constant.numeric",
         "variable.other.constant",
-        "entity.name.constant"
+        "entity.name.constant",
+        "constant.language.boolean"
       ],
-      "settings": {
-        "foreground": "#ef9f76",
-        "fontStyle": ""
-      }
-    },
-    {
-      "scope": "constant.language.boolean",
       "settings": {
         "foreground": "#ef9f76",
         "fontStyle": ""
@@ -816,6 +805,14 @@
       }
     },
     {
+      "name": "String template interpolation",
+      "scope": "string.template variable",
+      "settings": {
+        "foreground": "#c6d0f5",
+        "fontStyle": ""
+      }
+    },
+    {
       "name": "C++ functions",
       "scope": "entity.name.function.call.cpp",
       "settings": {
@@ -1002,7 +999,7 @@
     {
       "name": "dotenv left-hand side assignments",
       "scope": [
-        "source.env variable.other.env"
+        "variable.other.env"
       ],
       "settings": {
         "foreground": "#8caaee",
@@ -1012,7 +1009,7 @@
     {
       "name": "dotenv reference to existing env variable",
       "scope": [
-        "source.env string.quoted variable.other.env"
+        "string.quoted variable.other.env"
       ],
       "settings": {
         "foreground": "#c6d0f5",
@@ -1181,10 +1178,10 @@
     {
       "name": "JS/TS constants & properties",
       "scope": [
-        "source.js variable.other.constant",
-        "source.ts variable.other.constant",
-        "source.js variable.other.property",
-        "source.ts variable.other.property"
+        "variable.other.constant.js",
+        "variable.other.constant.ts",
+        "variable.other.property.js",
+        "variable.other.property.ts"
       ],
       "settings": {
         "foreground": "#c6d0f5",
@@ -1267,6 +1264,16 @@
       ],
       "settings": {
         "foreground": "#ca9ee6",
+        "fontStyle": ""
+      }
+    },
+    {
+      "name": "Vue components",
+      "scope": [
+        "support.class.component.vue"
+      ],
+      "settings": {
+        "foreground": "#8caaee",
         "fontStyle": ""
       }
     },
@@ -1523,6 +1530,33 @@
       }
     },
     {
+      "name": "Nix attribute names",
+      "scope": [
+        "entity.other.attribute-name.multipart.nix",
+        "entity.other.attribute-name.single.nix"
+      ],
+      "settings": {
+        "foreground": "#8caaee",
+        "fontStyle": ""
+      }
+    },
+    {
+      "name": "Nix parameter names",
+      "scope": "variable.parameter.name.nix",
+      "settings": {
+        "foreground": "#c6d0f5",
+        "fontStyle": ""
+      }
+    },
+    {
+      "name": "Nix interpolated parameter names",
+      "scope": "meta.embedded variable.parameter.name.nix",
+      "settings": {
+        "foreground": "#babbf1",
+        "fontStyle": ""
+      }
+    },
+    {
       "name": "PHP Attributes",
       "scope": [
         "support.attribute.builtin",
@@ -1639,20 +1673,6 @@
       }
     },
     {
-      "name": "Python multi string",
-      "scope": [
-        "source.python string.quoted.docstring.multi.python punctuation.definition.string.begin.python",
-        "source.python string.quoted.docstring.multi.python punctuation.definition.string.end.python",
-        "source.python string.quoted.multi.python punctuation.definition.string.begin.python",
-        "source.python string.quoted.multi.python punctuation.definition.string.end.python",
-        "source.python storage.type.string"
-      ],
-      "settings": {
-        "foreground": "#a6d189",
-        "fontStyle": "italic"
-      }
-    },
-    {
       "name": "python placeholder reset to normal string",
       "scope": "constant.character.format.placeholder.other.python",
       "settings": {
@@ -1697,6 +1717,14 @@
       ],
       "settings": {
         "foreground": "#ea999c",
+        "fontStyle": "italic"
+      }
+    },
+    {
+      "name": "Python f-strings/binary/unicode storage types",
+      "scope": "storage.type.string.python",
+      "settings": {
+        "foreground": "#a6d189",
         "fontStyle": "italic"
       }
     },
@@ -1863,7 +1891,7 @@
     },
     {
       "name": "Rust constants",
-      "scope": "source.rust constant",
+      "scope": "constant.other.caps.rust",
       "settings": {
         "foreground": "#ef9f76",
         "fontStyle": ""
@@ -1924,7 +1952,7 @@
     },
     {
       "name": "Shell EOF",
-      "scope": "source.shell entity.name.tag.heredoc.shell",
+      "scope": "entity.name.tag.heredoc.shell",
       "settings": {
         "foreground": "#ca9ee6",
         "fontStyle": ""
@@ -1932,7 +1960,7 @@
     },
     {
       "name": "Shell quoted variable",
-      "scope": "source.shell string.quoted.double.shell variable.other.normal.shell",
+      "scope": "string.quoted.double.shell variable.other.normal.shell",
       "settings": {
         "foreground": "#c6d0f5",
         "fontStyle": ""
