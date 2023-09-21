@@ -3,6 +3,7 @@ import type { ThemeContext } from "../../types";
 import cpp from "./cpp";
 import css from "./css";
 import data from "./data";
+import diff from "./diff";
 import dotenv from "./dotenv";
 import golang from "./golang";
 import graphql from "./graphql";
@@ -292,6 +293,7 @@ export default (context: ThemeContext) => {
       cpp,
       css,
       data,
+      diff,
       dotenv,
       golang,
       graphql,
