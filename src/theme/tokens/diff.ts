@@ -18,7 +18,7 @@ const tokens = (context: ThemeContext): TextmateColors => {
         "meta.diff.header.from-file",
         "meta.diff.header.to-file",
         "punctuation.definition.from-file.diff",
-        "punctuation.definition.to-file.diff"
+        "punctuation.definition.to-file.diff",
       ],
       settings: {
         foreground: palette.blue,
