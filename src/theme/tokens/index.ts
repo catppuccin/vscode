@@ -1,6 +1,7 @@
 import type { ThemeContext } from "../../types";
 
 import cpp from "./cpp";
+import cs from "./cs";
 import css from "./css";
 import data from "./data";
 import diff from "./diff";
@@ -291,6 +292,7 @@ export default (context: ThemeContext) => {
     // per-language tokens
     ...[
       cpp,
+      cs,
       css,
       data,
       diff,
