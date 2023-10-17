@@ -598,6 +598,9 @@ export const getUiColors = (
     "terminal.border": palette.surface2,
     "terminal.dropBackground": dropBackground,
     "terminal.tab.activeBorder": accent,
+    "terminalCommandDecoration.defaultBackground": palette.surface2,
+    "terminalCommandDecoration.successBackground": palette.green,
+    "terminalCommandDecoration.errorBackground": palette.red,
 
     // title bar
     "titleBar.activeBackground": palette.crust,
