@@ -2,9 +2,13 @@ import { labels, variants } from "@catppuccin/palette";
 
 import type { Uri } from "vscode";
 
+// vscode schemas
 export type * from "./textmate-colors";
 export type * from "./workbench-colors";
 export type * from "./token-styling";
+
+// extensions
+export type * from "./errorlens";
 
 export type CatppuccinFlavour = keyof typeof variants;
 export type CatppuccinAccent =

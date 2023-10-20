@@ -1,38 +1,78 @@
 import * as path from "path";
 import { writeFileSync } from "fs";
-import { JSONSchema, compile } from "json-schema-to-typescript";
+import { compile, JSONSchema } from "json-schema-to-typescript";
 import fetch from "node-fetch";
 
-const vscodeSchemasRoot =
-  "https://raw.githubusercontent.com/wraith13/vscode-schemas/master/en/latest/schemas/";
+const tag = process.argv[2] ?? "latest";
+const vscodeSchemasRoot = `https://raw.githubusercontent.com/wraith13/vscode-schemas/master/en/${tag}/schemas/`;
+
+const bannerComment = `/* eslint-disable */
+/**
+ * This file was automatically generated.
+ * DO NOT MODIFY IT BY HAND.
+ * Instead, run \`yarn run updateVSCtypes\` to regenerate this file.
+ */`;
 
 const mappings = [
   {
-    schema: "token-styling.json",
+    schema: vscodeSchemasRoot + "token-styling.json",
     name: "SemanticTokens",
     fname: "token-styling.d.ts",
+    kind: "jsonschema",
   },
   {
-    schema: "textmate-colors.json",
+    schema: vscodeSchemasRoot + "textmate-colors.json",
     name: "TextmateColors",
     fname: "textmate-colors.d.ts",
+    kind: "jsonschema",
   },
   {
-    schema: "workbench-colors.json",
+    schema: vscodeSchemasRoot + "workbench-colors.json",
     name: "WorkbenchColors",
     fname: "workbench-colors.d.ts",
+    kind: "jsonschema",
+  },
+  {
+    schema:
+      "https://raw.githubusercontent.com/usernamehw/vscode-error-lens/v3.13.0/package.json",
+    name: "ErrorLensColors",
+    fname: "errorlens.d.ts",
+    kind: "extension-packagejson",
   },
 ];
 
-for (const { schema, name, fname } of mappings) {
-  fetch(vscodeSchemasRoot + schema)
+for (const { schema, name, fname, kind } of mappings) {
+  fetch(schema)
     .then((data) => data.json())
     .then((data) => {
-      compile(data as JSONSchema, name, {
-        additionalProperties: false,
-      }).then((typeDefs) => {
-        const fp = path.join(__dirname, `../types/${fname}`);
-        writeFileSync(fp, typeDefs, "utf-8");
-      });
+      switch (kind) {
+        case "jsonschema":
+          return compile(data as JSONSchema, name, {
+            additionalProperties: false,
+            bannerComment,
+          });
+        case "extension-packagejson":
+          return fromVSIXColors(name, data);
+        default:
+          throw new Error(`Unknown kind: ${kind}`);
+      }
+    })
+    .then((typeDefs) => {
+      const fp = path.join(__dirname, `../types/${fname}`);
+      writeFileSync(fp, typeDefs, "utf-8");
     });
 }
+
+const fromVSIXColors = (interfaceName: string, data: any) => {
+  let content = `${bannerComment}
+export interface ${interfaceName} {`;
+  data.contributes.colors.map((color: any) => {
+    content += `
+  /**
+   * ${color.description}
+   */
+  "${color.id}": string;
+`;
+  });
+  return content + "};\n";
+};
