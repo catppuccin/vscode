@@ -28,20 +28,16 @@ const StoryBuilder = ({
   };
 };
 
-// TODO:
-// export const Asciidoc = StoryBuilder({
-//   lang: "asciidoc",
-//   file: "asciidoc.adoc",
-// });
 export const Bash = StoryBuilder({ lang: "bash", file: "bash.sh" });
 export const Coffeescript = StoryBuilder({
   lang: "coffee",
   file: "coffeescript.coffee",
 });
 export const Cpp = StoryBuilder({ lang: "cpp", file: "cpp.cpp" });
+export const Cs = StoryBuilder({ lang: "csharp", file: "cs.cs" });
 export const Css = StoryBuilder({ lang: "css", file: "css.css" });
-// TODO:
-// export const Dart = StoryBuilder({ lang: "dart", file: "dart.dart" });
+export const Dart = StoryBuilder({ lang: "dart", file: "dart.dart" });
+export const D = StoryBuilder({ lang: "d", file: "d.d" });
 export const Go = StoryBuilder({ lang: "go", file: "go.go" });
 export const Haskell = StoryBuilder({ lang: "haskell", file: "haskell.hs" });
 export const Html = StoryBuilder({ lang: "html", file: "html.html" });
@@ -50,8 +46,7 @@ export const Json = StoryBuilder({ lang: "json", file: "json.json" });
 export const Kotlin = StoryBuilder({ lang: "kotlin", file: "kotlin.kt" });
 export const Lua = StoryBuilder({ lang: "lua", file: "lua.lua" });
 export const Markdown = StoryBuilder({ lang: "markdown", file: "markdown.md" });
-// TODO:
-// export const Php = StoryBuilder({ lang: "php", file: "php.php" });
+export const Php = StoryBuilder({ lang: "php", file: "php.php" });
 export const Python = StoryBuilder({ lang: "python", file: "python.py" });
 export const Rust = StoryBuilder({ lang: "rust", file: "rust.rs" });
 export const Scala = StoryBuilder({ lang: "scala", file: "scala.scala" });
