@@ -31,7 +31,7 @@ const tokens = (context: ThemeContext): TextmateColors => {
       name: "PHP functions",
       scope: "text.html.php support.function",
       settings: {
-        foreground: palette.blue,
+        foreground: palette.sky,
       },
     },
   ];
