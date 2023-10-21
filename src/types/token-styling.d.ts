@@ -27,7 +27,7 @@ export interface SemanticTokens {
    */
   regexp?: string | Style;
   /**
-   * Style for operators.
+   * Style for operators
    */
   operator?: string | Style;
   /**
@@ -99,7 +99,7 @@ export interface SemanticTokens {
    */
   decorator?: string | Style;
   /**
-   * Style for labels.
+   * Style for labels
    */
   label?: string | Style;
   /**
@@ -127,13 +127,377 @@ export interface SemanticTokens {
    */
   "*.modification"?: string | Style;
   /**
-   * Style to use for symbols that are async.
+   * Style for async functions and the `async` and `await` keywords
    */
   "*.async"?: string | Style;
   /**
    * Style to use for symbols that are read-only.
    */
   "*.readonly"?: string | Style;
+  /**
+   * module
+   */
+  module?: string | Style;
+  /**
+   * intrinsic
+   */
+  intrinsic?: string | Style;
+  /**
+   * self parameter
+   */
+  selfParameter?: string | Style;
+  /**
+   * cls parameter
+   */
+  clsParameter?: string | Style;
+  /**
+   * magic aka dunder function
+   */
+  magicFunction?: string | Style;
+  /**
+   * constants like True, False, None, or __debug__
+   */
+  builtinConstant?: string | Style;
+  /**
+   * Style for ( or )
+   */
+  parenthesis?: string | Style;
+  /**
+   * Style for [ or ]
+   */
+  bracket?: string | Style;
+  /**
+   * {} curly brace
+   */
+  curlybrace?: string | Style;
+  /**
+   * Style for :
+   */
+  colon?: string | Style;
+  /**
+   * Style for ;
+   */
+  semicolon?: string | Style;
+  /**
+   * arrow token
+   */
+  arrow?: string | Style;
+  /**
+   * Style for C++/CLI reference types.
+   */
+  referenceType?: string | Style;
+  /**
+   * Style for C++/CLI properties.
+   */
+  cliProperty?: string | Style;
+  /**
+   * Style for C++/CLI generic types.
+   */
+  genericType?: string | Style;
+  /**
+   * Style for C++/CLI value types.
+   */
+  valueType?: string | Style;
+  /**
+   * Style for C++ template functions.
+   */
+  templateFunction?: string | Style;
+  /**
+   * Style for C++ template types.
+   */
+  templateType?: string | Style;
+  /**
+   * Style for C++ overloaded operators.
+   */
+  operatorOverload?: string | Style;
+  /**
+   * Style for C++ overloaded operator member functions.
+   */
+  memberOperatorOverload?: string | Style;
+  /**
+   * Style for C++ `new` or `delete` operators.
+   */
+  newOperator?: string | Style;
+  /**
+   * Style for C++ user-defined literals.
+   */
+  customLiteral?: string | Style;
+  /**
+   * Style for C++ user-defined literal numbers.
+   */
+  numberLiteral?: string | Style;
+  /**
+   * Style for C++ user-defined literal strings.
+   */
+  stringLiteral?: string | Style;
+  /**
+   * A boolean literal
+   */
+  bool?: string | Style;
+  /**
+   * Punctuation in code
+   */
+  punct?: string | Style;
+  /**
+   * Escape sequence
+   */
+  escape?: string | Style;
+  /**
+   * Hyperlink
+   */
+  link?: string | Style;
+  /**
+   * Raw text
+   */
+  raw?: string | Style;
+  /**
+   * Reference to a label
+   */
+  ref?: string | Style;
+  /**
+   * Heading
+   */
+  heading?: string | Style;
+  /**
+   * List, enum, or term list marker
+   */
+  marker?: string | Style;
+  /**
+   * Term in a term list
+   */
+  term?: string | Style;
+  /**
+   * Delimiter of a different type of markup
+   */
+  delim?: string | Style;
+  /**
+   * Interpolated variable
+   */
+  pol?: string | Style;
+  /**
+   * Syntax error
+   */
+  error?: string | Style;
+  /**
+   * Text
+   */
+  text?: string | Style;
+  /**
+   * Style for < or >
+   */
+  angle?: string | Style;
+  /**
+   * Style for arithmetic operators
+   */
+  arithmetic?: string | Style;
+  /**
+   * Style for attributes
+   */
+  attribute?: string | Style;
+  /**
+   * Style for attribute invocation brackets, that is the `#[` and `]` tokens
+   */
+  attributeBracket?: string | Style;
+  /**
+   * Style for bitwise operators
+   */
+  bitwise?: string | Style;
+  /**
+   * Style for boolean literals
+   */
+  boolean?: string | Style;
+  /**
+   * Style for { or }
+   */
+  brace?: string | Style;
+  /**
+   * Style for builtin attributes
+   */
+  builtinAttribute?: string | Style;
+  /**
+   * Style for builtin types
+   */
+  builtinType?: string | Style;
+  /**
+   * Style for character literals
+   */
+  character?: string | Style;
+  /**
+   * Style for ,
+   */
+  comma?: string | Style;
+  /**
+   * Style for comparison operators
+   */
+  comparison?: string | Style;
+  /**
+   * Style for const generics
+   */
+  constParameter?: string | Style;
+  /**
+   * Style for derives
+   */
+  derive?: string | Style;
+  /**
+   * Style for derive helpers
+   */
+  deriveHelper?: string | Style;
+  /**
+   * Style for .
+   */
+  dot?: string | Style;
+  /**
+   * Style for char or byte escapes in strings
+   */
+  escapeSequence?: string | Style;
+  /**
+   * Style for {} placeholders in format strings
+   */
+  formatSpecifier?: string | Style;
+  /**
+   * Style for invalid char or byte escapes in strings
+   */
+  invalidEscapeSequence?: string | Style;
+  /**
+   * Style for lifetimes
+   */
+  lifetime?: string | Style;
+  /**
+   * Style for logic operators
+   */
+  logical?: string | Style;
+  /**
+   * Style for the ! token of macro calls
+   */
+  macroBang?: string | Style;
+  /**
+   * Style for generic punctuation
+   */
+  punctuation?: string | Style;
+  /**
+   * Style for the self keyword
+   */
+  selfKeyword?: string | Style;
+  /**
+   * Style for the self type keyword
+   */
+  selfTypeKeyword?: string | Style;
+  /**
+   * Style for type aliases
+   */
+  typeAlias?: string | Style;
+  /**
+   * Style for C-style untagged unions
+   */
+  union?: string | Style;
+  /**
+   * Style for names which can not be resolved due to compilation errors
+   */
+  unresolvedReference?: string | Style;
+  /**
+   * Keys of regular arrays.
+   */
+  tomlArrayKey?: string | Style;
+  /**
+   * Keys of inline tables.
+   */
+  tomlTableKey?: string | Style;
+  /**
+   * inside a type annotation
+   */
+  "*.typeHint"?: string | Style;
+  /**
+   * inside a comment style type annotation
+   */
+  "*.typeHintComment"?: string | Style;
+  /**
+   * inside a decorator
+   */
+  "*.decorator"?: string | Style;
+  /**
+   * built-in identifier
+   */
+  "*.builtin"?: string | Style;
+  /**
+   * overridden token
+   */
+  "*.overridden"?: string | Style;
+  /**
+   * Style to use for symbols that are global.
+   */
+  "*.global"?: string | Style;
+  /**
+   * Style to use for symbols that are local.
+   */
+  "*.local"?: string | Style;
+  /**
+   * Math mode markup
+   */
+  "*.math"?: string | Style;
+  /**
+   * Strong (usually bolded) text
+   */
+  "*.strong"?: string | Style;
+  /**
+   * Emphasized (usually italicized) text
+   */
+  "*.emph"?: string | Style;
+  /**
+   * Style for elements within attributes
+   */
+  "*.attribute"?: string | Style;
+  /**
+   * Style for locals whose types implements one of the `Fn*` traits
+   */
+  "*.callable"?: string | Style;
+  /**
+   * Style for compile-time constants
+   */
+  "*.constant"?: string | Style;
+  /**
+   * Style for locals that are being consumed when use in a function call
+   */
+  "*.consuming"?: string | Style;
+  /**
+   * Style for control-flow related tokens, this includes the `?` operator
+   */
+  "*.controlFlow"?: string | Style;
+  /**
+   * Style for names resolving to a crate root
+   */
+  "*.crateRoot"?: string | Style;
+  /**
+   * Style for doc-string injected highlighting like rust source blocks in documentation
+   */
+  "*.injected"?: string | Style;
+  /**
+   * Style for intra doc links in doc-strings
+   */
+  "*.intraDocLink"?: string | Style;
+  /**
+   * Style for items that are defined outside of the current crate
+   */
+  "*.library"?: string | Style;
+  /**
+   * Style for mutable locals and statics as well as functions taking `&mut self`
+   */
+  "*.mutable"?: string | Style;
+  /**
+   * Style for items that are from the current crate and are `pub`
+   */
+  "*.public"?: string | Style;
+  /**
+   * Style for locals behind a reference and functions taking `self` by reference
+   */
+  "*.reference"?: string | Style;
+  /**
+   * Style for associated trait items
+   */
+  "*.trait"?: string | Style;
+  /**
+   * Style for unsafe operations, like unsafe function calls, as well as the `unsafe` token
+   */
+  "*.unsafe"?: string | Style;
   /**
    * This interface was referenced by `SemanticTokens`'s JSON-Schema definition
    * via the `patternProperty` "^(\w+[-_\w+]*|\*)(\.\w+[-_\w+]*)*(:\w+[-_\w+]*)?$".

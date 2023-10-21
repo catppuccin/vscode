@@ -804,13 +804,17 @@ export interface WorkbenchColors {
    */
   "minimap.selectionHighlight"?: string;
   /**
-   * Minimap marker color for errors.
+   * Minimap marker color for infos.
    */
-  "minimap.errorHighlight"?: string;
+  "minimap.infoHighlight"?: string;
   /**
    * Minimap marker color for warnings.
    */
   "minimap.warningHighlight"?: string;
+  /**
+   * Minimap marker color for errors.
+   */
+  "minimap.errorHighlight"?: string;
   /**
    * Minimap background color.
    */
@@ -879,6 +883,10 @@ export interface WorkbenchColors {
    * The border color for text that got moved in the diff editor.
    */
   "diffEditor.move.border"?: string;
+  /**
+   * The active border color for text that got moved in the diff editor.
+   */
+  "diffEditor.moveActive.border"?: string;
   /**
    * The foreground color for array symbols. These symbols appear in the outline, breadcrumb, and suggest widget.
    */
@@ -1011,6 +1019,10 @@ export interface WorkbenchColors {
    * The foreground color for variable symbols. These symbols appear in the outline, breadcrumb, and suggest widget.
    */
   "symbolIcon.variableForeground"?: string;
+  /**
+   * Background color for toggled action items in action bar.
+   */
+  "actionBar.toggledBackground"?: string;
   /**
    * Foreground color of the active item in the parameter hint.
    */
@@ -1700,19 +1712,27 @@ export interface WorkbenchColors {
    */
   "statusBarItem.hoverBackground"?: string;
   /**
+   * Status bar item foreground color when hovering. The status bar is shown in the bottom of the window.
+   */
+  "statusBarItem.hoverForeground"?: string;
+  /**
    * Status bar item background color when hovering an item that contains two hovers. The status bar is shown in the bottom of the window.
    */
   "statusBarItem.compactHoverBackground"?: string;
   /**
-   * Status bar prominent items foreground color. Prominent items stand out from other status bar entries to indicate importance. Change mode `Toggle Tab Key Moves Focus` from command palette to see an example. The status bar is shown in the bottom of the window.
+   * Status bar prominent items foreground color. Prominent items stand out from other status bar entries to indicate importance. The status bar is shown in the bottom of the window.
    */
   "statusBarItem.prominentForeground"?: string;
   /**
-   * Status bar prominent items background color. Prominent items stand out from other status bar entries to indicate importance. Change mode `Toggle Tab Key Moves Focus` from command palette to see an example. The status bar is shown in the bottom of the window.
+   * Status bar prominent items background color. Prominent items stand out from other status bar entries to indicate importance. The status bar is shown in the bottom of the window.
    */
   "statusBarItem.prominentBackground"?: string;
   /**
-   * Status bar prominent items background color when hovering. Prominent items stand out from other status bar entries to indicate importance. Change mode `Toggle Tab Key Moves Focus` from command palette to see an example. The status bar is shown in the bottom of the window.
+   * Status bar prominent items foreground color when hovering. Prominent items stand out from other status bar entries to indicate importance. The status bar is shown in the bottom of the window.
+   */
+  "statusBarItem.prominentHoverForeground"?: string;
+  /**
+   * Status bar prominent items background color when hovering. Prominent items stand out from other status bar entries to indicate importance. The status bar is shown in the bottom of the window.
    */
   "statusBarItem.prominentHoverBackground"?: string;
   /**
@@ -1724,6 +1744,14 @@ export interface WorkbenchColors {
    */
   "statusBarItem.errorForeground"?: string;
   /**
+   * Status bar error items foreground color when hovering. Error items stand out from other status bar entries to indicate error conditions. The status bar is shown in the bottom of the window.
+   */
+  "statusBarItem.errorHoverForeground"?: string;
+  /**
+   * Status bar error items background color when hovering. Error items stand out from other status bar entries to indicate error conditions. The status bar is shown in the bottom of the window.
+   */
+  "statusBarItem.errorHoverBackground"?: string;
+  /**
    * Status bar warning items background color. Warning items stand out from other status bar entries to indicate warning conditions. The status bar is shown in the bottom of the window.
    */
   "statusBarItem.warningBackground"?: string;
@@ -1731,6 +1759,14 @@ export interface WorkbenchColors {
    * Status bar warning items foreground color. Warning items stand out from other status bar entries to indicate warning conditions. The status bar is shown in the bottom of the window.
    */
   "statusBarItem.warningForeground"?: string;
+  /**
+   * Status bar warning items foreground color when hovering. Warning items stand out from other status bar entries to indicate warning conditions. The status bar is shown in the bottom of the window.
+   */
+  "statusBarItem.warningHoverForeground"?: string;
+  /**
+   * Status bar warning items background color when hovering. Warning items stand out from other status bar entries to indicate warning conditions. The status bar is shown in the bottom of the window.
+   */
+  "statusBarItem.warningHoverBackground"?: string;
   /**
    * Activity bar background color. The activity bar is showing on the far left or right and allows to switch between views of the side bar.
    */
@@ -1787,6 +1823,30 @@ export interface WorkbenchColors {
    * Foreground color for the remote indicator on the status bar.
    */
   "statusBarItem.remoteForeground"?: string;
+  /**
+   * Foreground color for the remote indicator on the status bar when hovering.
+   */
+  "statusBarItem.remoteHoverForeground"?: string;
+  /**
+   * Background color for the remote indicator on the status bar when hovering.
+   */
+  "statusBarItem.remoteHoverBackground"?: string;
+  /**
+   * Status bar item background color when the workbench is offline.
+   */
+  "statusBarItem.offlineBackground"?: string;
+  /**
+   * Status bar item foreground color when the workbench is offline.
+   */
+  "statusBarItem.offlineForeground"?: string;
+  /**
+   * Status bar item foreground hover color when the workbench is offline.
+   */
+  "statusBarItem.offlineHoverForeground"?: string;
+  /**
+   * Status bar item background hover color when the workbench is offline.
+   */
+  "statusBarItem.offlineHoverBackground"?: string;
   /**
    * Background color for the remote badge in the extensions view.
    */
@@ -1860,6 +1920,38 @@ export interface WorkbenchColors {
    */
   "menubar.selectionBorder"?: string;
   /**
+   * Foreground color of the command center
+   */
+  "commandCenter.foreground"?: string;
+  /**
+   * Active foreground color of the command center
+   */
+  "commandCenter.activeForeground"?: string;
+  /**
+   * Foreground color of the command center when the window is inactive
+   */
+  "commandCenter.inactiveForeground"?: string;
+  /**
+   * Background color of the command center
+   */
+  "commandCenter.background"?: string;
+  /**
+   * Active background color of the command center
+   */
+  "commandCenter.activeBackground"?: string;
+  /**
+   * Border color of the command center
+   */
+  "commandCenter.border"?: string;
+  /**
+   * Active border color of the command center
+   */
+  "commandCenter.activeBorder"?: string;
+  /**
+   * Border color of the command center when the window is inactive
+   */
+  "commandCenter.inactiveBorder"?: string;
+  /**
    * Notifications center border color. Notifications slide in from the bottom right of the window.
    */
   "notificationCenter.border"?: string;
@@ -1912,45 +2004,21 @@ export interface WorkbenchColors {
    */
   "window.inactiveBorder"?: string;
   /**
-   * Foreground color of the command center
-   */
-  "commandCenter.foreground"?: string;
-  /**
-   * Active foreground color of the command center
-   */
-  "commandCenter.activeForeground"?: string;
-  /**
-   * Foreground color of the command center when the window is inactive
-   */
-  "commandCenter.inactiveForeground"?: string;
-  /**
-   * Background color of the command center
-   */
-  "commandCenter.background"?: string;
-  /**
-   * Active background color of the command center
-   */
-  "commandCenter.activeBackground"?: string;
-  /**
-   * Border color of the command center
-   */
-  "commandCenter.border"?: string;
-  /**
-   * Active border color of the command center
-   */
-  "commandCenter.activeBorder"?: string;
-  /**
-   * Border color of the command center when the window is inactive
-   */
-  "commandCenter.inactiveBorder"?: string;
-  /**
-   * The background color of a chat request.
-   */
-  "chat.requestBackground"?: string;
-  /**
    * The border color of a chat request.
    */
   "chat.requestBorder"?: string;
+  /**
+   * The background color of a chat slash command.
+   */
+  "chat.slashCommandBackground"?: string;
+  /**
+   * The foreground color of a chat slash command.
+   */
+  "chat.slashCommandForeground"?: string;
+  /**
+   * Border color of the sash border.
+   */
+  "simpleFindWidget.sashBorder"?: string;
   /**
    * Icon color for resolved comments.
    */
@@ -1972,17 +2040,9 @@ export interface WorkbenchColors {
    */
   "editorCommentsWidget.rangeBackground"?: string;
   /**
-   * Color of border for comment ranges.
-   */
-  "editorCommentsWidget.rangeBorder"?: string;
-  /**
    * Color of background for currently selected or hovered comment range.
    */
   "editorCommentsWidget.rangeActiveBackground"?: string;
-  /**
-   * Color of border for currently selected or hovered comment range.
-   */
-  "editorCommentsWidget.rangeActiveBorder"?: string;
   /**
    * Editor gutter decoration color for commenting ranges. This color should be opaque.
    */
@@ -2388,13 +2448,9 @@ export interface WorkbenchColors {
    */
   "statusBar.debuggingBorder"?: string;
   /**
-   * Status bar background color when the workbench is offline. The status bar is shown in the bottom of the window
+   * Command center background color when a program is being debugged
    */
-  "statusBar.offlineBackground"?: string;
-  /**
-   * Status bar foreground color when the workbench is offline. The status bar is shown in the bottom of the window
-   */
-  "statusBar.offlineForeground"?: string;
+  "commandCenter.debuggingBackground"?: string;
   /**
    * Color for the debug inline value text.
    */
@@ -2827,4 +2883,392 @@ export interface WorkbenchColors {
    * Color for submodule resources.
    */
   "gitDecoration.submoduleResourceForeground"?: string;
+  /**
+   * Specifies the background color of the file blame annotations
+   */
+  "gitlens.gutterBackgroundColor"?: string;
+  /**
+   * Specifies the foreground color of the file blame annotations
+   */
+  "gitlens.gutterForegroundColor"?: string;
+  /**
+   * Specifies the foreground color of an uncommitted line in the file blame annotations
+   */
+  "gitlens.gutterUncommittedForegroundColor"?: string;
+  /**
+   * Specifies the background color of the inline blame annotation for the current line
+   */
+  "gitlens.trailingLineBackgroundColor"?: string;
+  /**
+   * Specifies the foreground color of the inline blame annotation for the current line
+   */
+  "gitlens.trailingLineForegroundColor"?: string;
+  /**
+   * Specifies the background color of the associated line highlights in blame annotations
+   */
+  "gitlens.lineHighlightBackgroundColor"?: string;
+  /**
+   * Specifies the scroll bar color of the associated line highlights in blame annotations
+   */
+  "gitlens.lineHighlightOverviewRulerColor"?: string;
+  /**
+   * Specifies the icon color of open issues in the GitLens views
+   */
+  "gitlens.openAutolinkedIssueIconColor"?: string;
+  /**
+   * Specifies the icon color of closed issues in the GitLens views
+   */
+  "gitlens.closedAutolinkedIssueIconColor"?: string;
+  /**
+   * Specifies the icon color of closed pull requests in the GitLens views
+   */
+  "gitlens.closedPullRequestIconColor"?: string;
+  /**
+   * Specifies the icon color of open pull requests in the GitLens views
+   */
+  "gitlens.openPullRequestIconColor"?: string;
+  /**
+   * Specifies the icon color of merged pull requests in the GitLens views
+   */
+  "gitlens.mergedPullRequestIconColor"?: string;
+  /**
+   * Specifies the icon color of unpublished changes in the GitLens views
+   */
+  "gitlens.unpublishedChangesIconColor"?: string;
+  /**
+   * Specifies the icon color of unpublished commits in the GitLens views
+   */
+  "gitlens.unpublishedCommitIconColor"?: string;
+  /**
+   * Specifies the icon color of unpulled changes in the GitLens views
+   */
+  "gitlens.unpulledChangesIconColor"?: string;
+  /**
+   * Specifies the decoration foreground color of added files
+   */
+  "gitlens.decorations.addedForegroundColor"?: string;
+  /**
+   * Specifies the decoration foreground color of copied files
+   */
+  "gitlens.decorations.copiedForegroundColor"?: string;
+  /**
+   * Specifies the decoration foreground color of deleted files
+   */
+  "gitlens.decorations.deletedForegroundColor"?: string;
+  /**
+   * Specifies the decoration foreground color of ignored files
+   */
+  "gitlens.decorations.ignoredForegroundColor"?: string;
+  /**
+   * Specifies the decoration foreground color of modified files
+   */
+  "gitlens.decorations.modifiedForegroundColor"?: string;
+  /**
+   * Specifies the decoration foreground color of untracked files
+   */
+  "gitlens.decorations.untrackedForegroundColor"?: string;
+  /**
+   * Specifies the decoration foreground color of renamed files
+   */
+  "gitlens.decorations.renamedForegroundColor"?: string;
+  /**
+   * Specifies the decoration foreground color of branches that are ahead of their upstream
+   */
+  "gitlens.decorations.branchAheadForegroundColor"?: string;
+  /**
+   * Specifies the decoration foreground color of branches that are behind their upstream
+   */
+  "gitlens.decorations.branchBehindForegroundColor"?: string;
+  /**
+   * Specifies the decoration foreground color of branches that are both ahead and behind their upstream
+   */
+  "gitlens.decorations.branchDivergedForegroundColor"?: string;
+  /**
+   * Specifies the decoration foreground color of branches that are up to date with their upstream
+   */
+  "gitlens.decorations.branchUpToDateForegroundColor"?: string;
+  /**
+   * Specifies the decoration foreground color of branches that are not yet published to an upstream
+   */
+  "gitlens.decorations.branchUnpublishedForegroundColor"?: string;
+  /**
+   * Specifies the decoration foreground color of branches that have a missing upstream
+   */
+  "gitlens.decorations.branchMissingUpstreamForegroundColor"?: string;
+  /**
+   * Specifies the decoration foreground color of the status during a rebase operation with conflicts
+   */
+  "gitlens.decorations.statusMergingOrRebasingConflictForegroundColor"?: string;
+  /**
+   * Specifies the decoration foreground color of the status during a rebase operation
+   */
+  "gitlens.decorations.statusMergingOrRebasingForegroundColor"?: string;
+  /**
+   * Specifies the decoration foreground color of workspace repos which are missing a local path
+   */
+  "gitlens.decorations.workspaceRepoMissingForegroundColor"?: string;
+  /**
+   * Specifies the decoration foreground color of workspaces which are currently open as a Code Workspace file
+   */
+  "gitlens.decorations.workspaceCurrentForegroundColor"?: string;
+  /**
+   * Specifies the decoration foreground color of workspace repos which are open in the current workspace
+   */
+  "gitlens.decorations.workspaceRepoOpenForegroundColor"?: string;
+  /**
+   * Specifies the decoration foreground color for worktrees that have uncommitted changes
+   */
+  "gitlens.decorations.worktreeHasUncommittedChangesForegroundColor"?: string;
+  /**
+   * Specifies the decoration foreground color for worktrees cannot be found on disk
+   */
+  "gitlens.decorations.worktreeMissingForegroundColor"?: string;
+  /**
+   * Specifies the color for the first commit lane of the _Commit Graph_ visualization
+   */
+  "gitlens.graphLane1Color"?: string;
+  /**
+   * Specifies the color for the second commit lane of the _Commit Graph_ visualization
+   */
+  "gitlens.graphLane2Color"?: string;
+  /**
+   * Specifies the color for the third commit lane of the _Commit Graph_ visualization
+   */
+  "gitlens.graphLane3Color"?: string;
+  /**
+   * Specifies the color for the fourth commit lane of the _Commit Graph_ visualization
+   */
+  "gitlens.graphLane4Color"?: string;
+  /**
+   * Specifies the color for the fifth commit lane of the _Commit Graph_ visualization
+   */
+  "gitlens.graphLane5Color"?: string;
+  /**
+   * Specifies the color for the sixth commit lane of the _Commit Graph_ visualization
+   */
+  "gitlens.graphLane6Color"?: string;
+  /**
+   * Specifies the color for the seventh commit lane of the _Commit Graph_ visualization
+   */
+  "gitlens.graphLane7Color"?: string;
+  /**
+   * Specifies the color for the eighth commit lane of the _Commit Graph_ visualization
+   */
+  "gitlens.graphLane8Color"?: string;
+  /**
+   * Specifies the color for the ninth commit lane of the _Commit Graph_ visualization
+   */
+  "gitlens.graphLane9Color"?: string;
+  /**
+   * Specifies the color for the tenth commit lane of the _Commit Graph_ visualization
+   */
+  "gitlens.graphLane10Color"?: string;
+  /**
+   * Specifies the color for denoting lines added in the _Changes_ column on the _Commit Graph_
+   */
+  "gitlens.graphChangesColumnAddedColor"?: string;
+  /**
+   * Specifies the color for denoting lines deleted in the _Changes_ column on the _Commit Graph_
+   */
+  "gitlens.graphChangesColumnDeletedColor"?: string;
+  /**
+   * Specifies the color marking HEAD on the minimap of the _Commit Graph_
+   */
+  "gitlens.graphMinimapMarkerHeadColor"?: string;
+  /**
+   * Specifies the color marking HEAD on the scrollbar of the _Commit Graph_
+   */
+  "gitlens.graphScrollMarkerHeadColor"?: string;
+  /**
+   * Specifies the color marking HEAD's upstream on the minimap of the _Commit Graph_
+   */
+  "gitlens.graphMinimapMarkerUpstreamColor"?: string;
+  /**
+   * Specifies the color marking HEAD's upstream on the scrollbar of the _Commit Graph_
+   */
+  "gitlens.graphScrollMarkerUpstreamColor"?: string;
+  /**
+   * Specifies the color marking highlights (matches) on the minimap of the _Commit Graph_
+   */
+  "gitlens.graphMinimapMarkerHighlightsColor"?: string;
+  /**
+   * Specifies the color marking highlights (matches) on the scrollbar of the _Commit Graph_
+   */
+  "gitlens.graphScrollMarkerHighlightsColor"?: string;
+  /**
+   * Specifies the color marking local branches on the minimap of the _Commit Graph_
+   */
+  "gitlens.graphMinimapMarkerLocalBranchesColor"?: string;
+  /**
+   * Specifies the color marking local branches on the scrollbar of the _Commit Graph_
+   */
+  "gitlens.graphScrollMarkerLocalBranchesColor"?: string;
+  /**
+   * Specifies the color marking remote branches on the minimap of the _Commit Graph_
+   */
+  "gitlens.graphMinimapMarkerRemoteBranchesColor"?: string;
+  /**
+   * Specifies the color marking remote branches on the scrollbar of the _Commit Graph_
+   */
+  "gitlens.graphScrollMarkerRemoteBranchesColor"?: string;
+  /**
+   * Specifies the color marking stashes on the minimap of the _Commit Graph_
+   */
+  "gitlens.graphMinimapMarkerStashesColor"?: string;
+  /**
+   * Specifies the color marking stashes on the scrollbar of the _Commit Graph_
+   */
+  "gitlens.graphScrollMarkerStashesColor"?: string;
+  /**
+   * Specifies the color marking tags on the minimap of the _Commit Graph_
+   */
+  "gitlens.graphMinimapMarkerTagsColor"?: string;
+  /**
+   * Specifies the color marking tags on the scrollbar of the _Commit Graph_
+   */
+  "gitlens.graphScrollMarkerTagsColor"?: string;
+  /**
+   * The color used for the assignees and labels fields in a new issue editor.
+   */
+  "issues.newIssueDecoration"?: string;
+  /**
+   * The color used for indicating that an issue is open.
+   */
+  "issues.open"?: string;
+  /**
+   * The color used for indicating that an issue is closed.
+   */
+  "issues.closed"?: string;
+  /**
+   * The color used for indicating that a pull request is merged.
+   */
+  "pullRequests.merged"?: string;
+  /**
+   * The color used for indicating that a pull request is a draft.
+   */
+  "pullRequests.draft"?: string;
+  /**
+   * The color used for indicating that a pull request is open.
+   */
+  "pullRequests.open"?: string;
+  /**
+   * The color used for indicating that a pull request is closed.
+   */
+  "pullRequests.closed"?: string;
+  /**
+   * The color used for indicating a notification on a pull request
+   */
+  "pullRequests.notification"?: string;
+  /**
+   * Background color of the editor error decoration
+   */
+  "testExplorer.errorDecorationBackground"?: string;
+  /**
+   * Color of the border displayed in the Rust source code for the selected syntax node (see "Show Syntax Tree" command)
+   */
+  "rust_analyzer.syntaxTreeBorder"?: string;
+  /**
+   * Background color of the entire line containing error.
+   */
+  "errorLens.errorBackground"?: string;
+  /**
+   * Background color of the error message.
+   */
+  "errorLens.errorMessageBackground"?: string;
+  /**
+   * Background color of the entire line containing error (Only in light themes).
+   */
+  "errorLens.errorBackgroundLight"?: string;
+  /**
+   * Text color used to highlight lines containing errors.
+   */
+  "errorLens.errorForeground"?: string;
+  /**
+   * Text color used to highlight lines containing errors (Only in light themes).
+   */
+  "errorLens.errorForegroundLight"?: string;
+  /**
+   * Background color used to highlight lines containing warnings.
+   */
+  "errorLens.warningBackground"?: string;
+  /**
+   * Background color of the warning message.
+   */
+  "errorLens.warningMessageBackground"?: string;
+  /**
+   * Background color used to highlight lines containing warnings (Only in light themes).
+   */
+  "errorLens.warningBackgroundLight"?: string;
+  /**
+   * Text color used to highlight lines containing warnings.
+   */
+  "errorLens.warningForeground"?: string;
+  /**
+   * Text color used to highlight lines containing warnings (Only in light themes).
+   */
+  "errorLens.warningForegroundLight"?: string;
+  /**
+   * Background color used to highlight lines containing info.
+   */
+  "errorLens.infoBackground"?: string;
+  /**
+   * Background color of the info message.
+   */
+  "errorLens.infoMessageBackground"?: string;
+  /**
+   * Background color used to highlight lines containing info (Only in light themes).
+   */
+  "errorLens.infoBackgroundLight"?: string;
+  /**
+   * Text color used to highlight lines containing info.
+   */
+  "errorLens.infoForeground"?: string;
+  /**
+   * Text color used to highlight lines containing info (Only in light themes).
+   */
+  "errorLens.infoForegroundLight"?: string;
+  /**
+   * Background color used to highlight lines containing hints.
+   */
+  "errorLens.hintBackground"?: string;
+  /**
+   * Background color of the hint message.
+   */
+  "errorLens.hintMessageBackground"?: string;
+  /**
+   * Background color used to highlight lines containing hints (Only in light themes).
+   */
+  "errorLens.hintBackgroundLight"?: string;
+  /**
+   * Text color used to highlight lines containing hints.
+   */
+  "errorLens.hintForeground"?: string;
+  /**
+   * Text color used to highlight lines containing hints (Only in light themes).
+   */
+  "errorLens.hintForegroundLight"?: string;
+  /**
+   * Status bar icon item error color. Foreground is used when the `errorLens.statusBarIconsUseBackground` setting is disabled.
+   */
+  "errorLens.statusBarIconErrorForeground"?: string;
+  /**
+   * Status bar icon item error color. Foreground is used when the `errorLens.statusBarIconsUseBackground` setting is disabled.
+   */
+  "errorLens.statusBarIconWarningForeground"?: string;
+  /**
+   * Status bar item error color.
+   */
+  "errorLens.statusBarErrorForeground"?: string;
+  /**
+   * Status bar item warning color.
+   */
+  "errorLens.statusBarWarningForeground"?: string;
+  /**
+   * Status bar item info color.
+   */
+  "errorLens.statusBarInfoForeground"?: string;
+  /**
+   * Status bar item hint color.
+   */
+  "errorLens.statusBarHintForeground"?: string;
 }
