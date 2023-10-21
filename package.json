@@ -3,7 +3,7 @@
   "displayName": "Catppuccin for VSCode",
   "publisher": "Catppuccin",
   "description": "🦌 Soothing pastel theme for VSCode",
-  "version": "3.3.0",
+  "version": "3.4.0",
   "engines": {
     "vscode": "^1.80.0",
     "node": ">=18.0.0"
