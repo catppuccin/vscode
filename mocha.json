@@ -2,7 +2,7 @@
   "name": "Catppuccin Mocha",
   "type": "dark",
   "colors": {
-    "focusBorder": "#00000000",
+    "focusBorder": "#cba6f7",
     "foreground": "#cdd6f4",
     "disabledForeground": "#a6adc8",
     "widget.shadow": "#1818257f",
@@ -315,8 +315,6 @@
     "statusBar.debuggingBackground": "#fab387",
     "statusBar.debuggingForeground": "#11111b",
     "statusBar.debuggingBorder": "#00000000",
-    "statusBar.offlineBackground": "#45475a",
-    "statusBar.offlineForeground": "#cdd6f4",
     "statusBarItem.remoteBackground": "#89b4fa",
     "statusBarItem.remoteForeground": "#11111b",
     "statusBarItem.activeBackground": "#585b7066",
@@ -366,6 +364,9 @@
     "terminal.border": "#585b70",
     "terminal.dropBackground": "#585b7099",
     "terminal.tab.activeBorder": "#cba6f7",
+    "terminalCommandDecoration.defaultBackground": "#585b70",
+    "terminalCommandDecoration.successBackground": "#a6e3a1",
+    "terminalCommandDecoration.errorBackground": "#f38ba8",
     "titleBar.activeBackground": "#11111b",
     "titleBar.activeForeground": "#cdd6f4",
     "titleBar.inactiveBackground": "#11111b",
@@ -417,31 +418,84 @@
     "charts.green": "#a6e3a1",
     "charts.purple": "#cba6f7",
     "errorLens.errorBackground": "#f38ba826",
-    "errorLens.errorMessageBackground": "#f38ba826",
     "errorLens.errorBackgroundLight": "#f38ba826",
     "errorLens.errorForeground": "#f38ba8",
     "errorLens.errorForegroundLight": "#f38ba8",
-    "errorLens.warningBackground": "#fab38726",
-    "errorLens.warningMessageBackground": "#fab38726",
-    "errorLens.warningBackgroundLight": "#fab38726",
-    "errorLens.warningForeground": "#fab387",
-    "errorLens.warningForegroundLight": "#fab387",
-    "errorLens.infoBackground": "#89b4fa26",
-    "errorLens.infoMessageBackground": "#89b4fa26",
-    "errorLens.infoBackgroundLight": "#89b4fa26",
-    "errorLens.infoForeground": "#89b4fa",
-    "errorLens.infoForegroundLight": "#89b4fa",
+    "errorLens.errorMessageBackground": "#f38ba826",
     "errorLens.hintBackground": "#a6e3a126",
-    "errorLens.hintMessageBackground": "#a6e3a126",
     "errorLens.hintBackgroundLight": "#a6e3a126",
     "errorLens.hintForeground": "#a6e3a1",
     "errorLens.hintForegroundLight": "#a6e3a1",
+    "errorLens.hintMessageBackground": "#a6e3a126",
+    "errorLens.infoBackground": "#89b4fa26",
+    "errorLens.infoBackgroundLight": "#89b4fa26",
+    "errorLens.infoForeground": "#89b4fa",
+    "errorLens.infoForegroundLight": "#89b4fa",
+    "errorLens.infoMessageBackground": "#89b4fa26",
+    "errorLens.statusBarErrorForeground": "#f38ba8",
+    "errorLens.statusBarHintForeground": "#a6e3a1",
     "errorLens.statusBarIconErrorForeground": "#f38ba8",
     "errorLens.statusBarIconWarningForeground": "#fab387",
-    "errorLens.statusBarErrorForeground": "#f38ba8",
-    "errorLens.statusBarWarningForeground": "#fab387",
     "errorLens.statusBarInfoForeground": "#89b4fa",
-    "errorLens.statusBarHintForeground": "#a6e3a1",
+    "errorLens.statusBarWarningForeground": "#fab387",
+    "errorLens.warningBackground": "#fab38726",
+    "errorLens.warningBackgroundLight": "#fab38726",
+    "errorLens.warningForeground": "#fab387",
+    "errorLens.warningForegroundLight": "#fab387",
+    "errorLens.warningMessageBackground": "#fab38726",
+    "gitlens.gutterBackgroundColor": "#3132444c",
+    "gitlens.gutterForegroundColor": "#cdd6f4",
+    "gitlens.gutterUncommittedForegroundColor": "#cba6f7",
+    "gitlens.trailingLineBackgroundColor": "#00000000",
+    "gitlens.trailingLineForegroundColor": "#cdd6f44c",
+    "gitlens.lineHighlightBackgroundColor": "#cba6f726",
+    "gitlens.lineHighlightOverviewRulerColor": "#cba6f7cc",
+    "gitlens.openAutolinkedIssueIconColor": "#a6e3a1",
+    "gitlens.closedAutolinkedIssueIconColor": "#cba6f7",
+    "gitlens.closedPullRequestIconColor": "#f38ba8",
+    "gitlens.openPullRequestIconColor": "#a6e3a1",
+    "gitlens.mergedPullRequestIconColor": "#cba6f7",
+    "gitlens.unpublishedChangesIconColor": "#a6e3a1",
+    "gitlens.unpublishedCommitIconColor": "#a6e3a1",
+    "gitlens.unpulledChangesIconColor": "#fab387",
+    "gitlens.decorations.branchAheadForegroundColor": "#a6e3a1",
+    "gitlens.decorations.branchBehindForegroundColor": "#fab387",
+    "gitlens.decorations.branchDivergedForegroundColor": "#f9e2af",
+    "gitlens.decorations.branchUnpublishedForegroundColor": "#a6e3a1",
+    "gitlens.decorations.branchMissingUpstreamForegroundColor": "#fab387",
+    "gitlens.decorations.statusMergingOrRebasingConflictForegroundColor": "#eba0ac",
+    "gitlens.decorations.statusMergingOrRebasingForegroundColor": "#f9e2af",
+    "gitlens.decorations.workspaceRepoMissingForegroundColor": "#a6adc8",
+    "gitlens.decorations.workspaceCurrentForegroundColor": "#cba6f7",
+    "gitlens.decorations.workspaceRepoOpenForegroundColor": "#cba6f7",
+    "gitlens.decorations.worktreeHasUncommittedChangesForegroundColor": "#fab387",
+    "gitlens.decorations.worktreeMissingForegroundColor": "#eba0ac",
+    "gitlens.graphLane1Color": "#cba6f7",
+    "gitlens.graphLane2Color": "#f9e2af",
+    "gitlens.graphLane3Color": "#89b4fa",
+    "gitlens.graphLane4Color": "#f2cdcd",
+    "gitlens.graphLane5Color": "#a6e3a1",
+    "gitlens.graphLane6Color": "#b4befe",
+    "gitlens.graphLane7Color": "#f5e0dc",
+    "gitlens.graphLane8Color": "#f38ba8",
+    "gitlens.graphLane9Color": "#94e2d5",
+    "gitlens.graphLane10Color": "#f5c2e7",
+    "gitlens.graphChangesColumnAddedColor": "#a6e3a1",
+    "gitlens.graphChangesColumnDeletedColor": "#f38ba8",
+    "gitlens.graphMinimapMarkerHeadColor": "#a6e3a1",
+    "gitlens.graphScrollMarkerHeadColor": "#a6e3a1",
+    "gitlens.graphMinimapMarkerUpstreamColor": "#74b16f",
+    "gitlens.graphScrollMarkerUpstreamColor": "#74b16f",
+    "gitlens.graphMinimapMarkerHighlightsColor": "#f9e2af",
+    "gitlens.graphScrollMarkerHighlightsColor": "#f9e2af",
+    "gitlens.graphMinimapMarkerLocalBranchesColor": "#89b4fa",
+    "gitlens.graphScrollMarkerLocalBranchesColor": "#89b4fa",
+    "gitlens.graphMinimapMarkerRemoteBranchesColor": "#5782c8",
+    "gitlens.graphScrollMarkerRemoteBranchesColor": "#5782c8",
+    "gitlens.graphMinimapMarkerStashesColor": "#cba6f7",
+    "gitlens.graphScrollMarkerStashesColor": "#cba6f7",
+    "gitlens.graphMinimapMarkerTagsColor": "#f2cdcd",
+    "gitlens.graphScrollMarkerTagsColor": "#f2cdcd",
     "editorBracketHighlight.foreground1": "#f38ba8",
     "editorBracketHighlight.foreground2": "#fab387",
     "editorBracketHighlight.foreground3": "#f9e2af",
@@ -806,7 +860,10 @@
     },
     {
       "name": "String template interpolation",
-      "scope": "string.template variable",
+      "scope": [
+        "string.template variable",
+        "string variable"
+      ],
       "settings": {
         "foreground": "#cdd6f4",
         "fontStyle": ""
@@ -835,6 +892,14 @@
       ],
       "settings": {
         "foreground": "#cba6f7",
+        "fontStyle": ""
+      }
+    },
+    {
+      "name": "C# Interpolated Strings",
+      "scope": "meta.interpolation.cs",
+      "settings": {
+        "foreground": "#cdd6f4",
         "fontStyle": ""
       }
     },
@@ -993,6 +1058,43 @@
       "scope": "entity.other.document.begin.yaml",
       "settings": {
         "foreground": "#f5c2e7",
+        "fontStyle": ""
+      }
+    },
+    {
+      "name": "Markup Diff",
+      "scope": "markup.changed.diff",
+      "settings": {
+        "foreground": "#fab387",
+        "fontStyle": ""
+      }
+    },
+    {
+      "name": "Diff",
+      "scope": [
+        "meta.diff.header.from-file",
+        "meta.diff.header.to-file",
+        "punctuation.definition.from-file.diff",
+        "punctuation.definition.to-file.diff"
+      ],
+      "settings": {
+        "foreground": "#89b4fa",
+        "fontStyle": ""
+      }
+    },
+    {
+      "name": "Diff Inserted",
+      "scope": "markup.inserted.diff",
+      "settings": {
+        "foreground": "#a6e3a1",
+        "fontStyle": ""
+      }
+    },
+    {
+      "name": "Diff Deleted",
+      "scope": "markup.deleted.diff",
+      "settings": {
+        "foreground": "#f38ba8",
         "fontStyle": ""
       }
     },
@@ -1557,6 +1659,14 @@
       }
     },
     {
+      "name": "Nix support functions",
+      "scope": "support.function.nix",
+      "settings": {
+        "foreground": "#89b4fa",
+        "fontStyle": ""
+      }
+    },
+    {
       "name": "PHP Attributes",
       "scope": [
         "support.attribute.builtin",
@@ -1586,7 +1696,7 @@
       "name": "PHP functions",
       "scope": "text.html.php support.function",
       "settings": {
-        "foreground": "#89b4fa"
+        "foreground": "#89dceb"
       }
     },
     {
