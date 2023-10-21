@@ -1,5 +1,25 @@
 # Changelog
 
+## [3.4.0](https://github.com/catppuccin/vscode/compare/v3.3.0...v3.4.0) (2023-10-21)
+
+
+### Features
+
+* **extension:** add GitLens integration ([#191](https://github.com/catppuccin/vscode/issues/191)) ([cda1b0f](https://github.com/catppuccin/vscode/commit/cda1b0f100a83b4dd4c10c2f816b28ac059f33ae))
+* increase minimum VSCode version to 1.80.0 ([8a1c1a5](https://github.com/catppuccin/vscode/commit/8a1c1a5f2bc0f5ca413f03b190ecf56c45ec84ea))
+* **syntax:** Diff highlighting ([#182](https://github.com/catppuccin/vscode/issues/182)) ([f148b6c](https://github.com/catppuccin/vscode/commit/f148b6cb1fef18d759c13ae03b226d8a5bdbb89b))
+* **ui:** add colors to terminal command decorations ([#188](https://github.com/catppuccin/vscode/issues/188)) ([ed200ad](https://github.com/catppuccin/vscode/commit/ed200adb6dca3b5914b82052147ac357e56711fe))
+
+
+### Bug Fixes
+
+* **compiler:** extension support ([40d7ee3](https://github.com/catppuccin/vscode/commit/40d7ee3fc83f0b01272dcd2aa1f8d186211c68ff))
+* **syntax:** C# interpolated strings highlighting ([#185](https://github.com/catppuccin/vscode/issues/185)) ([4e05650](https://github.com/catppuccin/vscode/commit/4e05650a3e6d0fcffe298bd6993765b4d1b68d53))
+* **syntax:** Nix support functions (`import`, etc.) ([810f130](https://github.com/catppuccin/vscode/commit/810f13043339d54c1a5bd99ee93709ae3433f200))
+* **syntax:** PHP builtin function color, sky ([#193](https://github.com/catppuccin/vscode/issues/193)) ([23a1cf0](https://github.com/catppuccin/vscode/commit/23a1cf0da7d7f6270b88235decbb45721c21f309))
+* **syntax:** use `string variable` for string interpolation ([5791e92](https://github.com/catppuccin/vscode/commit/5791e92d66bf343b0754ba7f73e93f3eaf96f713))
+* use `focusBorder` variable for keyboard navigation highlights ([#192](https://github.com/catppuccin/vscode/issues/192)) ([afaa458](https://github.com/catppuccin/vscode/commit/afaa4580f529bdbe3cd95dec39f6d551f8a5a533)), closes [#181](https://github.com/catppuccin/vscode/issues/181)
+
 ## [3.3.0](https://github.com/catppuccin/vscode/compare/v3.2.4...v3.3.0) (2023-09-12)
 
 
