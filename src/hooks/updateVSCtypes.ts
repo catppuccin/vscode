@@ -39,6 +39,13 @@ const mappings = [
     fname: "errorlens.d.ts",
     kind: "extension-packagejson",
   },
+  {
+    schema:
+      "https://raw.githubusercontent.com/gitkraken/vscode-gitlens/v14.4.0/package.json",
+    name: "GitLensColors",
+    fname: "gitlens.d.ts",
+    kind: "extension-packagejson",
+  },
 ];
 
 for (const { schema, name, fname, kind } of mappings) {
@@ -74,5 +81,5 @@ export interface ${interfaceName} {`;
   "${color.id}": string;
 `;
   });
-  return content + "};\n";
+  return content + "}\n";
 };
