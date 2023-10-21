@@ -5,7 +5,7 @@
   "description": "🦌 Soothing pastel theme for VSCode",
   "version": "3.3.0",
   "engines": {
-    "vscode": "^1.83.0",
+    "vscode": "^1.80.0",
     "node": ">=18.0.0"
   },
   "categories": [
@@ -168,7 +168,7 @@
     "@storybook/react": "^7.5.1",
     "@storybook/react-vite": "^7.5.1",
     "@types/node": "^18.18.6",
-    "@types/vscode": "~1.83.1",
+    "@types/vscode": "~1.80.0",
     "@typescript-eslint/eslint-plugin": "^6.8.0",
     "@typescript-eslint/parser": "^6.8.0",
     "@vscode/vsce": "^2.21.1",
