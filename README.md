@@ -15,10 +15,6 @@
   <img src="assets/preview.webp"/>
 </p>
 
-> **Note**\
-> We just released a complete rewrite of our **Syntax Highlighting**.\
-> If a language you use now lacks syntax highlighting, please report it in [an issue](https://github.com/catppuccin/vscode/issues/new/choose)!
-
 ## Previews
 
 <details>
@@ -106,7 +102,7 @@ This means that you will have to either
 
 ## Customization
 
-> **Note**\
+> [!Note]
 > We also have a [Catppuccin Icon Pack](https://marketplace.visualstudio.com/items?itemName=Catppuccin.catppuccin-vsc-icons)!
 
 ### VSCode settings
@@ -277,7 +273,8 @@ If you want to customize where certain palette colors appear, you can change it 
 
 You can find all the available keys [here](https://code.visualstudio.com/api/references/theme-color).
 
-> **Note**: This respects your [color overrides](#override-palette-colors).
+> [!Note]
+> This respects your [color overrides](#override-palette-colors).
 
 ## Extension Support
 
@@ -299,12 +296,19 @@ If you have any questions regarding this port, feel free to [open an issue](http
 
 ## 💝 Thanks to
 
-- [VictorTennekes](https://github.com/VictorTennekes)
-- [Gingeh](https://github.com/Gingeh)
-- [BrunDerSchwarzmagier](https://github.com/BrunDerSchwarzmagier)
+**Current maintainers**
+
+- [winston](https://github.com/nekowinston)
+
+**Contributions**
+
+- [Lichthagel](https://github.com/Lichthagel) - GitLens extension support
+- [suppayami](https://github.com/suppayami) - Workbench appearances
+
+**Previous maintainer(s)**
+
 - [ghostx31](https://github.com/ghostx31)
-- [Ren](https://github.com/watatomo)
-- [Hamothy](https://github.com/sgoudham)
+- [VictorTennekes](https://github.com/VictorTennekes)
 
 &nbsp;
 
