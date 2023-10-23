@@ -11,7 +11,7 @@ export type * from "./token-styling";
 export type * from "./errorlens";
 export type * from "./gitlens";
 
-export type CatppuccinFlavour = keyof typeof variants;
+export type CatppuccinFlavor = keyof typeof variants;
 export type CatppuccinAccent =
   | "rosewater"
   | "flamingo"
@@ -35,7 +35,7 @@ export type CatppuccinBracketMode =
   | "neovim";
 
 export type CatppuccinPalette = {
-  name: CatppuccinFlavour;
+  name: CatppuccinFlavor;
 } & {
   [k in keyof typeof labels]: string;
 };
