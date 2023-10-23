@@ -47,24 +47,23 @@ Install the extension from a Marketplace:
 
 Download the VSIX from
 [the latest GitHub release](https://github.com/catppuccin/vscode/releases/latest).
-Open the Command Palette, and select "Extensions: Install from VSIX...", then
-open the file you just downloaded.
+Open the Command Palette and select "Extensions: Install from VSIX...", then open the file you just downloaded.
 
 **Using the JSON theme only**
 
 You can find the compiled theme JSON files (with default settings as documented below) on the [compiled branch](https://github.com/catppuccin/vscode/tree/compiled).
 
-This can be useful if you want to use syntax highlighters that work with VSCode themes (like Shiki and derivatives), or if your work environment only allows you to install allowlisted extensions.
+This can be useful if you want to use syntax highlighters that work with VSCode themes (like Shiki and derivatives) or if your work environment only allows you to install allowlisted extensions.
 
 **Nix (Home-Manager) users**
 
-If you want to change the theme configuration, the theme expects to have a mutable directory to write it's JSON files into.
-This means that you will have to either
+If you would like to change the theme configuration, the theme expects to have a mutable directory to write its JSON files into.
+This means that you will have to either:
 
-- Install this extension in a non-declarative way, so that the extension has permissions to write files.\
+- Install this extension in a non-declarative way so that the extension has permissions to write files.\
   This means fully excluding `nixpkgs.vscode-extensions.catppuccin.catppuccin-vsc` from your configuration; Just using `programs.vscode.mutableExtensionsDir = true;` will **NOT WORK**.
 - Use the `flake.nix` to build it with your VSCode configuration, using overrides.\
-  This is a declarative way to compile the theme with your preferred options. Please see the example below for a sample configuration.
+  This is a declarative way to compile the theme with your preferred options. Please refer to the example below for a sample configuration.
 
 <details>
 <summary>❄️ Nix Configuration</summary>
@@ -125,9 +124,9 @@ The following settings inside your `settings.json` are recommended for this plug
 }
 ```
 
-### Catpuccin settings
+### Catppuccin settings
 
-Catppuccin for VSCode can be customized to your liking. If you like the Catppuccin colors, but feel that they are a bit too bright for working at night, customization got you covered!
+Catppuccin for VSCode can be customized to your liking. If you like the Catppuccin colors but feel that they are a bit too bright for working at night, customization got you covered!
 
 ```jsonc
 {
@@ -136,7 +135,7 @@ Catppuccin for VSCode can be customized to your liking. If you like the Catppucc
   // pink as the accent color
   "catppuccin.accentColor": "pink",
   // make Mocha specifically very dark
-  // (this preserves other flavours!)
+  // (this preserves other flavors!)
   "catppuccin.colorOverrides": {
     "mocha": {
       "base": "#000000",
@@ -158,7 +157,7 @@ Catppuccin for VSCode can be customized to your liking. If you like the Catppucc
 <img width="1488" alt="oldeppuccin-pink-accent" src="https://user-images.githubusercontent.com/79978224/265295206-47d0c993-5d61-4e93-aa96-6d0d95a24f33.png">
 </details>
 
-To see all available options, open your settings, and look for `Extensions > Catppuccin`.
+To see all available options, open your settings and look for `Extensions > Catppuccin`.
 
 ### Custom accent color
 
@@ -178,12 +177,12 @@ You can toggle whether to use
 
 `catppuccin.workbenchMode`
 
-By default, Catppuccin for VSCode uses 3 shades of our `base` color for the workbench.
-For example in Mocha:
+By default, Catppuccin for VSCode uses three shades of our `base` color for the workbench.
+For example, in Mocha:
 
 - `base`: #1e1e2e - the editor background
 - `mantle`: \#181825 - the sidebar
-- `crust`: #11111b - the activity bar, status bar and title bar
+- `crust`: #11111b - the activity bar, status bar, and title bar
 
 <details>
 <summary>📸 Preview</summary>
@@ -193,7 +192,7 @@ For example in Mocha:
 If you'd like a more flat look, you can change it to `flat`! This only uses `base` and `mantle`, reducing it to 2 shades:
 
 - `base`: #1e1e2e - the editor background
-- `mantle`: \#181825 - the sidebar, the activity bar, status bar and title bar
+- `mantle`: \#181825 - the sidebar, the activity bar, status bar, and title bar
 
 <details>
 <summary>📸 Preview</summary>
@@ -213,7 +212,7 @@ For absolute minimalism, you can go with `minimal`; a single shade for the whole
 
 `catppuccin.bracketMode`
 
-By default, we're using `red`, `peach`, `yellow`, `green`, `blue`, and `mauve` for matching bracket pairs. You can change that option, if you want different colors:
+By default, we use `red`, `peach`, `yellow`, `green`, `blue`, and `mauve` for matching bracket pairs. You can change that option if you want different colors:
 
 - `rainbow` is our default setting, using the colors described above.
 - `dimmed` uses the same rainbow colors, but muted by 20%.
@@ -230,7 +229,7 @@ Colors can be overwritten in the JSON user settings, like so:
 {
   // ...your other settings...
   "catppuccin.colorOverrides": {
-    // make text red red all flavours
+    // make text red red all flavors
     "all": {
       "text": "#ff0000"
     },
@@ -253,7 +252,7 @@ If you want to customize where certain palette colors appear, you can change it 
 ```jsonc
 {
   "catppuccin.customUIColors": {
-    // make the breadcrumb "text" on "overlay0" for all flavours
+    // make the breadcrumb "text" on "overlay0" for all flavors
     "all": {
       "breadcrumb.background": "overlay0",
       "breadcrumb.foreground": "text"
@@ -263,7 +262,7 @@ If you want to customize where certain palette colors appear, you can change it 
       // "accent" selects your current accent color.
       "breadcrumb.background": "accent",
       "breadcrumb.foreground": "crust",
-      // you can use opacity, by specifing it after a space
+      // you can use opacity, by specifying it after a space
       // "rosewater 0.5" would mean 50% opacity, here it's 20%
       "minimap.background": "rosewater 0.2"
     }
@@ -285,14 +284,14 @@ Catppuccin for VSCode also themes the following extensions:
 
 ## Support
 
-If you have any questions regarding this port, feel free to [open an issue](https://github.com/catppuccin/vscode/issues), or ask in [our Discord](https://discord.catppuccin.com), where have a [dedicated forum](https://discord.com/channels/907385605422448742/1020275848940626002) for support.
+If you have any questions regarding this port, feel free to [open an issue](https://github.com/catppuccin/vscode/issues) or ask in [our Discord](https://discord.catppuccin.com), where we have a [dedicated forum](https://discord.com/channels/907385605422448742/1020275848940626002) for support.
 
 ## Development
 
 1. Clone and open this repository in VSCode.
-2. Launch a new instance from "Run and Debug". This will spawn a new instance, which will have the current build of the Theme available.
-3. Make modifications to the JSONs in `./themes` to see the changes immediately.
-4. To preserve changes, they have to be edited in `./src/theme/*.ts`, since the theme builds the JSONs from there.
+2. Launch a new instance from "Run and Debug". This will spawn a new instance, which will have the current build of the theme available.
+3. Make modifications to the JSON files in `./themes` to see the changes immediately.
+4. To preserve changes, they have to be edited in `./src/theme/*.ts`, since the theme builds the JSON files from there.
 
 ## 💝 Thanks to
 
