@@ -1,7 +1,7 @@
 import { variants } from "@catppuccin/palette";
 
 import type {
-  CatppuccinFlavour,
+  CatppuccinFlavor,
   CatppuccinPalette,
   ThemeContext,
   ThemeOptions,
@@ -24,14 +24,14 @@ export const defaultOptions: ThemeOptions = {
 };
 
 export const compileTheme = (
-  flavour: CatppuccinFlavour = "mocha",
+  flavor: CatppuccinFlavor = "mocha",
   options: ThemeOptions = defaultOptions,
 ) => {
-  const ctpPalette = Object.entries(variants[flavour])
+  const ctpPalette = Object.entries(variants[flavor])
     .map(([k, v]) => {
       return {
         [k as unknown as any]: v["hex"],
-        name: flavour,
+        name: flavor,
       };
     })
     .reduce((acc, curr) => ({ ...acc, ...curr }), {});
@@ -39,16 +39,16 @@ export const compileTheme = (
   const palette: CatppuccinPalette = {
     ...(ctpPalette as CatppuccinPalette),
     ...options.colorOverrides?.all,
-    ...options.colorOverrides?.[flavour],
+    ...options.colorOverrides?.[flavor],
   };
 
   const context: ThemeContext = {
     palette,
     options,
-    isLatte: flavour === "latte",
+    isLatte: flavor === "latte",
   };
 
-  const flavourName = `Catppuccin ${capitalize(flavour)}`;
+  const flavourName = `Catppuccin ${capitalize(flavor)}`;
 
   const theme = {
     name: flavourName,

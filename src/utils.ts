@@ -12,7 +12,7 @@ import {
 } from "vscode";
 import type {
   CatppuccinAccent,
-  CatppuccinFlavour,
+  CatppuccinFlavor,
   ColorOverrides,
   CustomUIColors,
   ThemeOptions,
@@ -117,11 +117,11 @@ class Utils {
     paths: ThemePaths,
     trigger: UpdateTrigger,
   ) => {
-    const flavours = Object.keys(variants) as CatppuccinFlavour[];
+    const flavors = Object.keys(variants) as CatppuccinFlavor[];
 
-    const promises = flavours.map(async (flavour): Promise<void> => {
-      const theme = compileTheme(flavour, options);
-      return this.writeThemeFile(paths[flavour], theme);
+    const promises = flavors.map(async (flavor): Promise<void> => {
+      const theme = compileTheme(flavor, options);
+      return this.writeThemeFile(paths[flavor], theme);
     });
 
     Promise.all(promises).then(() => {
