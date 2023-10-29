@@ -26,6 +26,17 @@ const tokens = (context: ThemeContext): TextmateColors => {
       },
     },
     {
+      name: "JSDoc",
+      scope: [
+        "variable.other.jsdoc",
+        "comment.block.documentation variable.other",
+      ],
+      settings: {
+        foreground: palette.text,
+        fontStyle: "",
+      },
+    },
+    {
       scope: "support.type.object.console.js",
       settings: {
         foreground: palette.text,
