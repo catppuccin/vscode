@@ -15,7 +15,6 @@ const tokens = (context: ThemeContext): TextmateColors => {
       ],
       settings: {
         foreground: palette.red,
-        fontStyle: "",
       },
     },
     {
@@ -29,7 +28,6 @@ const tokens = (context: ThemeContext): TextmateColors => {
       ],
       settings: {
         foreground: palette.peach,
-        fontStyle: "",
       },
     },
     {
@@ -42,7 +40,6 @@ const tokens = (context: ThemeContext): TextmateColors => {
       ],
       settings: {
         foreground: palette.yellow,
-        fontStyle: "",
       },
     },
     {
@@ -55,7 +52,6 @@ const tokens = (context: ThemeContext): TextmateColors => {
       ],
       settings: {
         foreground: palette.green,
-        fontStyle: "",
       },
     },
     {
@@ -68,7 +64,6 @@ const tokens = (context: ThemeContext): TextmateColors => {
       ],
       settings: {
         foreground: palette.blue,
-        fontStyle: "",
       },
     },
     {
@@ -81,7 +76,6 @@ const tokens = (context: ThemeContext): TextmateColors => {
       ],
       settings: {
         foreground: palette.mauve,
-        fontStyle: "",
       },
     },
     {
@@ -110,7 +104,6 @@ const tokens = (context: ThemeContext): TextmateColors => {
       scope: ["punctuation.definition.link", "markup.underline.link"],
       settings: {
         foreground: palette.blue,
-        fontStyle: "",
       },
     },
     {
@@ -127,7 +120,6 @@ const tokens = (context: ThemeContext): TextmateColors => {
       ],
       settings: {
         foreground: palette.lavender,
-        fontStyle: "",
       },
     },
     {
@@ -139,7 +131,6 @@ const tokens = (context: ThemeContext): TextmateColors => {
       ],
       settings: {
         foreground: palette.green,
-        fontStyle: "",
       },
     },
     {
@@ -147,7 +138,6 @@ const tokens = (context: ThemeContext): TextmateColors => {
       scope: "fenced_code.block.language",
       settings: {
         foreground: palette.sky,
-        fontStyle: "",
       },
     },
     {
@@ -158,7 +148,6 @@ const tokens = (context: ThemeContext): TextmateColors => {
       ],
       settings: {
         foreground: palette.overlay2,
-        fontStyle: "",
       },
     },
     {
@@ -166,7 +155,6 @@ const tokens = (context: ThemeContext): TextmateColors => {
       scope: ["markup.quote", "punctuation.definition.quote.begin"],
       settings: {
         foreground: palette.pink,
-        fontStyle: "",
       },
     },
     {
@@ -174,7 +162,6 @@ const tokens = (context: ThemeContext): TextmateColors => {
       scope: "meta.separator.markdown",
       settings: {
         foreground: palette.teal,
-        fontStyle: "",
       },
     },
     {
@@ -185,7 +172,6 @@ const tokens = (context: ThemeContext): TextmateColors => {
       ],
       settings: {
         foreground: palette.teal,
-        fontStyle: "",
       },
     },
   ];

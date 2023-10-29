@@ -9,7 +9,6 @@ const tokens = (context: ThemeContext): TextmateColors => {
       scope: "entity.name.function.call.cpp",
       settings: {
         foreground: palette.blue,
-        fontStyle: "",
       },
     },
     {
@@ -17,7 +16,6 @@ const tokens = (context: ThemeContext): TextmateColors => {
       scope: "storage.modifier.specifier.extern.cpp",
       settings: {
         foreground: palette.mauve,
-        fontStyle: "",
       },
     },
     {
@@ -25,7 +23,6 @@ const tokens = (context: ThemeContext): TextmateColors => {
       scope: ["keyword.operator.new.cpp"],
       settings: {
         foreground: palette.mauve,
-        fontStyle: "",
       },
     },
   ];

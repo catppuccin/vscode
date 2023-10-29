@@ -9,7 +9,6 @@ const tokens = (context: ThemeContext): TextmateColors => {
       scope: "markup.changed.diff",
       settings: {
         foreground: palette.peach,
-        fontStyle: "",
       },
     },
     {
@@ -22,7 +21,6 @@ const tokens = (context: ThemeContext): TextmateColors => {
       ],
       settings: {
         foreground: palette.blue,
-        fontStyle: "",
       },
     },
     {
@@ -30,7 +28,6 @@ const tokens = (context: ThemeContext): TextmateColors => {
       scope: "markup.inserted.diff",
       settings: {
         foreground: palette.green,
-        fontStyle: "",
       },
     },
     {
@@ -38,7 +35,6 @@ const tokens = (context: ThemeContext): TextmateColors => {
       scope: "markup.deleted.diff",
       settings: {
         foreground: palette.red,
-        fontStyle: "",
       },
     },
   ];

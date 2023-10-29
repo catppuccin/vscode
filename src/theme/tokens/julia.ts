@@ -25,7 +25,6 @@ const tokens = (context: ThemeContext): TextmateColors => {
       scope: "constant.language.julia",
       settings: {
         foreground: palette.peach,
-        fontStyle: "",
       },
     },
     {
@@ -33,7 +32,6 @@ const tokens = (context: ThemeContext): TextmateColors => {
       scope: "constant.other.symbol.julia",
       settings: {
         foreground: palette.maroon,
-        fontStyle: "",
       },
     },
   ];

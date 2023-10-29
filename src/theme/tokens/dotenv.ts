@@ -9,7 +9,6 @@ const tokens = (context: ThemeContext): TextmateColors => {
       scope: ["variable.other.env"],
       settings: {
         foreground: palette.blue,
-        fontStyle: "",
       },
     },
     {
@@ -17,7 +16,6 @@ const tokens = (context: ThemeContext): TextmateColors => {
       scope: ["string.quoted variable.other.env"],
       settings: {
         foreground: palette.text,
-        fontStyle: "",
       },
     },
   ];

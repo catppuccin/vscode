@@ -9,7 +9,6 @@ const tokens = (context: ThemeContext): TextmateColors => {
       scope: "meta.interpolation.cs",
       settings: {
         foreground: palette.text,
-        fontStyle: "",
       },
     },
   ];

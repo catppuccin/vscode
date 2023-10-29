@@ -35,7 +35,6 @@ export default (context: ThemeContext) => {
       ],
       settings: {
         foreground: palette.text,
-        fontStyle: "",
       },
     },
     {
@@ -43,7 +42,6 @@ export default (context: ThemeContext) => {
       scope: "punctuation",
       settings: {
         foreground: palette.overlay2,
-        fontStyle: "",
       },
     },
     {
@@ -58,21 +56,18 @@ export default (context: ThemeContext) => {
       scope: ["string", "punctuation.definition.string"],
       settings: {
         foreground: palette.green,
-        fontStyle: "",
       },
     },
     {
       scope: "string.regexp",
       settings: {
         foreground: palette.pink,
-        fontStyle: "",
       },
     },
     {
       scope: "constant.character.escape",
       settings: {
         foreground: palette.pink,
-        fontStyle: "",
       },
     },
     {
@@ -84,7 +79,6 @@ export default (context: ThemeContext) => {
       ],
       settings: {
         foreground: palette.peach,
-        fontStyle: "",
       },
     },
     {
@@ -101,14 +95,12 @@ export default (context: ThemeContext) => {
       ],
       settings: {
         foreground: palette.mauve,
-        fontStyle: "",
       },
     },
     {
       scope: "entity.name.tag.documentation",
       settings: {
         foreground: palette.mauve,
-        fontStyle: "",
       },
     },
     {
@@ -123,7 +115,6 @@ export default (context: ThemeContext) => {
       ],
       settings: {
         foreground: palette.teal,
-        fontStyle: "",
       },
     },
     {
@@ -168,7 +159,6 @@ export default (context: ThemeContext) => {
       ],
       settings: {
         foreground: palette.teal,
-        fontStyle: "",
       },
     },
     {
@@ -176,7 +166,6 @@ export default (context: ThemeContext) => {
       scope: "meta.property.object",
       settings: {
         foreground: palette.teal,
-        fontStyle: "",
       },
     },
     {
@@ -203,7 +192,6 @@ export default (context: ThemeContext) => {
       ],
       settings: {
         foreground: palette.peach,
-        fontStyle: "",
       },
     },
     {
@@ -218,14 +206,12 @@ export default (context: ThemeContext) => {
       scope: ["constant.language", "support.function.builtin"],
       settings: {
         foreground: palette.red,
-        fontStyle: "",
       },
     },
     {
       scope: "entity.other.attribute-name.documentation",
       settings: {
         foreground: palette.red,
-        fontStyle: "",
       },
     },
     {
@@ -233,7 +219,6 @@ export default (context: ThemeContext) => {
       scope: ["keyword.control.directive", "punctuation.definition.directive"],
       settings: {
         foreground: palette.yellow,
-        fontStyle: "",
       },
     },
     {
@@ -241,7 +226,6 @@ export default (context: ThemeContext) => {
       scope: "punctuation.definition.typeparameters",
       settings: {
         foreground: palette.sky,
-        fontStyle: "",
       },
     },
     {
@@ -249,7 +233,6 @@ export default (context: ThemeContext) => {
       scope: "entity.name.namespace",
       settings: {
         foreground: palette.yellow,
-        fontStyle: "",
       },
     },
     {
@@ -257,7 +240,6 @@ export default (context: ThemeContext) => {
       scope: "support.type.property-name.css",
       settings: {
         foreground: palette.blue,
-        fontStyle: "",
       },
     },
     {
@@ -269,7 +251,6 @@ export default (context: ThemeContext) => {
       ],
       settings: {
         foreground: palette.red,
-        fontStyle: "",
       },
     },
     {
@@ -277,7 +258,6 @@ export default (context: ThemeContext) => {
       scope: "variable.object.property",
       settings: {
         foreground: palette.text,
-        fontStyle: "",
       },
     },
     {
@@ -285,7 +265,6 @@ export default (context: ThemeContext) => {
       scope: ["string.template variable", "string variable"],
       settings: {
         foreground: palette.text,
-        fontStyle: "",
       },
     },
 

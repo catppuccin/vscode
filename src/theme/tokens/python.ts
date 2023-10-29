@@ -12,7 +12,6 @@ const tokens = (context: ThemeContext): TextmateColors => {
       ],
       settings: {
         foreground: palette.text,
-        fontStyle: "",
       },
     },
     {
@@ -39,7 +38,6 @@ const tokens = (context: ThemeContext): TextmateColors => {
       scope: ["keyword.control.flow.python", "keyword.operator.logical.python"],
       settings: {
         foreground: palette.mauve,
-        fontStyle: "",
       },
     },
     {
@@ -47,7 +45,6 @@ const tokens = (context: ThemeContext): TextmateColors => {
       scope: "storage.type.function.python",
       settings: {
         foreground: palette.mauve,
-        fontStyle: "",
       },
     },
     {
@@ -58,7 +55,6 @@ const tokens = (context: ThemeContext): TextmateColors => {
       ],
       settings: {
         foreground: palette.sky,
-        fontStyle: "",
       },
     },
     {
@@ -77,7 +73,6 @@ const tokens = (context: ThemeContext): TextmateColors => {
       ],
       settings: {
         foreground: palette.peach,
-        fontStyle: "",
       },
     },
     {
@@ -85,7 +80,6 @@ const tokens = (context: ThemeContext): TextmateColors => {
       scope: "constant.character.format.placeholder.other.python",
       settings: {
         foreground: palette.pink,
-        fontStyle: "",
       },
     },
     {
@@ -96,7 +90,6 @@ const tokens = (context: ThemeContext): TextmateColors => {
       ],
       settings: {
         foreground: palette.peach,
-        fontStyle: "",
       },
     },
     {
@@ -104,7 +97,6 @@ const tokens = (context: ThemeContext): TextmateColors => {
       scope: ["support.type.python"],
       settings: {
         foreground: palette.peach,
-        fontStyle: "",
       },
     },
     {
@@ -112,7 +104,6 @@ const tokens = (context: ThemeContext): TextmateColors => {
       scope: "constant.language.python",
       settings: {
         foreground: palette.mauve,
-        fontStyle: "",
       },
     },
     {

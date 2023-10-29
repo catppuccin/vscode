@@ -36,7 +36,6 @@ const tokens = (context: ThemeContext): TextmateColors => {
       ],
       settings: {
         foreground: palette.red,
-        fontStyle: "",
       },
     },
     {
@@ -55,7 +54,6 @@ const tokens = (context: ThemeContext): TextmateColors => {
       ],
       settings: {
         foreground: palette.teal,
-        fontStyle: "",
       },
     },
     {
@@ -63,7 +61,6 @@ const tokens = (context: ThemeContext): TextmateColors => {
       scope: "entity.name.tag.heredoc.shell",
       settings: {
         foreground: palette.mauve,
-        fontStyle: "",
       },
     },
     {
@@ -71,7 +68,6 @@ const tokens = (context: ThemeContext): TextmateColors => {
       scope: "string.quoted.double.shell variable.other.normal.shell",
       settings: {
         foreground: palette.text,
-        fontStyle: "",
       },
     },
   ];

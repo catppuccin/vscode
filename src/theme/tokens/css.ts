@@ -9,7 +9,6 @@ const tokens = (context: ThemeContext): TextmateColors => {
       scope: "source.css entity.other.attribute-name.class",
       settings: {
         foreground: palette.yellow,
-        fontStyle: "",
       },
     },
     {
@@ -17,21 +16,18 @@ const tokens = (context: ThemeContext): TextmateColors => {
       scope: "source.css entity.other.attribute-name.pseudo-class",
       settings: {
         foreground: palette.teal,
-        fontStyle: "",
       },
     },
     {
       scope: "source.css constant.other.unicode-range",
       settings: {
         foreground: palette.peach,
-        fontStyle: "",
       },
     },
     {
       scope: "source.css variable.parameter.url",
       settings: {
         foreground: palette.green,
-        fontStyle: "",
       },
     },
     {
@@ -39,7 +35,6 @@ const tokens = (context: ThemeContext): TextmateColors => {
       scope: ["support.type.vendored.property-name"],
       settings: {
         foreground: palette.sky,
-        fontStyle: "",
       },
     },
     {
@@ -54,7 +49,6 @@ const tokens = (context: ThemeContext): TextmateColors => {
       ],
       settings: {
         foreground: palette.maroon,
-        fontStyle: "",
       },
     },
     {
@@ -67,7 +61,6 @@ const tokens = (context: ThemeContext): TextmateColors => {
       ],
       settings: {
         foreground: palette.blue,
-        fontStyle: "",
       },
     },
     {
@@ -75,7 +68,6 @@ const tokens = (context: ThemeContext): TextmateColors => {
       scope: "keyword.other.unit.percentage.css",
       settings: {
         foreground: palette.peach,
-        fontStyle: "",
       },
     },
     {
@@ -83,7 +75,6 @@ const tokens = (context: ThemeContext): TextmateColors => {
       scope: "source.css meta.attribute-selector",
       settings: {
         foreground: palette.green,
-        fontStyle: "",
       },
     },
   ];

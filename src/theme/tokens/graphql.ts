@@ -9,7 +9,6 @@ const tokens = (context: ThemeContext): TextmateColors => {
       scope: "variable.graphql",
       settings: {
         foreground: palette.text,
-        fontStyle: "",
       },
     },
     {
@@ -17,7 +16,6 @@ const tokens = (context: ThemeContext): TextmateColors => {
       scope: "string.unquoted.alias.graphql",
       settings: {
         foreground: palette.flamingo,
-        fontStyle: "",
       },
     },
     {
@@ -25,7 +23,6 @@ const tokens = (context: ThemeContext): TextmateColors => {
       scope: "constant.character.enum.graphql",
       settings: {
         foreground: palette.teal,
-        fontStyle: "",
       },
     },
     {
@@ -34,7 +31,6 @@ const tokens = (context: ThemeContext): TextmateColors => {
         "meta.objectvalues.graphql constant.object.key.graphql string.unquoted.graphql",
       settings: {
         foreground: palette.flamingo,
-        fontStyle: "",
       },
     },
   ];
