@@ -32,6 +32,13 @@ const tokens = (context: ThemeContext): TextmateColors => {
         foreground: palette.sky,
       },
     },
+    {
+      name: "PHPdoc keywords",
+      scope: "keyword.other.phpdoc.php",
+      settings: {
+        fontStyle: "",
+      },
+    },
   ];
 };
 

@@ -5,13 +5,6 @@ const tokens = (context: ThemeContext): TextmateColors => {
 
   return [
     {
-      name: "C++ functions",
-      scope: "entity.name.function.call.cpp",
-      settings: {
-        foreground: palette.blue,
-      },
-    },
-    {
       name: "C++ extern keyword",
       scope: "storage.modifier.specifier.extern.cpp",
       settings: {
@@ -23,6 +16,12 @@ const tokens = (context: ThemeContext): TextmateColors => {
       scope: ["keyword.operator.new.cpp"],
       settings: {
         foreground: palette.mauve,
+      },
+    },
+    {
+      scope: "storage.type.class.doxygen",
+      settings: {
+        fontStyle: "",
       },
     },
   ];

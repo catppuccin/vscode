@@ -21,6 +21,7 @@ const tokens = (context: ThemeContext): TextmateColors => {
       scope: ["entity.name.tag"],
       settings: {
         foreground: palette.blue,
+        fontStyle: "",
       },
     },
     {
@@ -52,6 +53,7 @@ const tokens = (context: ThemeContext): TextmateColors => {
       scope: ["meta.tag support.class.component"],
       settings: {
         foreground: palette.blue,
+        fontStyle: "",
       },
     },
   ];

@@ -11,6 +11,13 @@ const tokens = (context: ThemeContext): TextmateColors => {
         foreground: palette.text,
       },
     },
+    {
+      name: "C# xml-style docs",
+      scope: "comment.block.documentation.cs",
+      settings: {
+        foreground: palette.text,
+      },
+    },
   ];
 };
 

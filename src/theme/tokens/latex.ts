@@ -12,13 +12,6 @@ const tokens = (context: ThemeContext): TextmateColors => {
       },
     },
     {
-      name: "LaTeX functions",
-      scope: "text.tex support.function",
-      settings: {
-        foreground: palette.blue,
-      },
-    },
-    {
       name: "LaTeX be functions",
       scope: "text.tex support.function.be",
       settings: {

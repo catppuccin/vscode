@@ -19,6 +19,7 @@ const tokens = (context: ThemeContext): TextmateColors => {
       scope: "variable.parameter.name.nix",
       settings: {
         foreground: palette.text,
+        fontStyle: "",
       },
     },
     {
@@ -26,13 +27,7 @@ const tokens = (context: ThemeContext): TextmateColors => {
       scope: "meta.embedded variable.parameter.name.nix",
       settings: {
         foreground: palette.lavender,
-      },
-    },
-    {
-      name: "Nix support functions",
-      scope: "support.function.nix",
-      settings: {
-        foreground: palette.blue,
+        fontStyle: "",
       },
     },
   ];

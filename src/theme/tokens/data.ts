@@ -18,6 +18,7 @@ const tokens = (context: ThemeContext): TextmateColors => {
       ],
       settings: {
         foreground: palette.blue,
+        fontStyle: "",
       },
     },
     {
@@ -32,6 +33,7 @@ const tokens = (context: ThemeContext): TextmateColors => {
       scope: ["entity.name.type.anchor.yaml", "variable.other.alias.yaml"],
       settings: {
         foreground: palette.yellow,
+        fontStyle: "",
       },
     },
     {

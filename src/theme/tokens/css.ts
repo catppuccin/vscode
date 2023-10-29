@@ -28,6 +28,7 @@ const tokens = (context: ThemeContext): TextmateColors => {
       scope: "source.css variable.parameter.url",
       settings: {
         foreground: palette.green,
+        fontStyle: "",
       },
     },
     {

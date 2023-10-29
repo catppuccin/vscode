@@ -31,6 +31,14 @@ const tokens = (context: ThemeContext): TextmateColors => {
       ],
       settings: {
         foreground: palette.text,
+        fontStyle: "",
+      },
+    },
+    {
+      name: "JSDoc keywords",
+      scope: "storage.type.class.jsdoc",
+      settings: {
+        fontStyle: "",
       },
     },
     {

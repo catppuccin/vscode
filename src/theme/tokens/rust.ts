@@ -20,6 +20,7 @@ const tokens = (context: ThemeContext): TextmateColors => {
     {
       name: "Rust keyword",
       scope: [
+        "entity.name.function.macro.rules.rust",
         "storage.type.module.rust",
         "storage.modifier.rust",
         "storage.type.struct.rust",
@@ -33,6 +34,7 @@ const tokens = (context: ThemeContext): TextmateColors => {
       ],
       settings: {
         foreground: palette.mauve,
+        fontStyle: "",
       },
     },
     {
@@ -40,6 +42,7 @@ const tokens = (context: ThemeContext): TextmateColors => {
       scope: "entity.name.type.numeric.rust",
       settings: {
         foreground: palette.mauve,
+        fontStyle: "",
       },
     },
     {
@@ -98,10 +101,11 @@ const tokens = (context: ThemeContext): TextmateColors => {
       scope: [
         "support.macro.rust",
         "meta.macro.rust support.function.rust",
-        "entity.name.function.macro",
+        "entity.name.function.macro.rust",
       ],
       settings: {
-        foreground: palette.teal,
+        foreground: palette.blue,
+        fontStyle: "italic",
       },
     },
     {
@@ -146,6 +150,30 @@ const tokens = (context: ThemeContext): TextmateColors => {
       scope: "constant.other.caps.rust",
       settings: {
         foreground: palette.peach,
+      },
+    },
+    {
+      name: "Rust function parameters",
+      scope: "meta.function.definition.rust variable.other.rust",
+      settings: {
+        foreground: palette.maroon,
+      },
+    },
+    {
+      name: "Rust self",
+      scope: "variable.language.self.rust",
+      settings: {
+        foreground: palette.red,
+      },
+    },
+    {
+      name: "Rust metavariable names",
+      scope: [
+        "variable.other.metavariable.name.rust",
+        "meta.macro.metavariable.rust keyword.operator.macro.dollar.rust",
+      ],
+      settings: {
+        foreground: palette.pink,
       },
     },
   ];

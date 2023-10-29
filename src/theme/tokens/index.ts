@@ -1,4 +1,4 @@
-import type { ThemeContext } from "../../types";
+import type { TextmateColors, ThemeContext } from "../../types";
 
 import cpp from "./cpp";
 import cs from "./cs";
@@ -13,15 +13,15 @@ import java from "./java";
 import javascript from "./javascript";
 import julia from "./julia";
 import latex from "./latex";
+import lua from "./lua";
 import markdown from "./markdown";
 import nix from "./nix";
 import php from "./php";
 import python from "./python";
-import ruby from "./ruby";
 import rust from "./rust";
 import shell from "./shell";
 
-export default (context: ThemeContext) => {
+export default (context: ThemeContext): TextmateColors => {
   const { options, palette } = context;
 
   return [
@@ -42,6 +42,7 @@ export default (context: ThemeContext) => {
       scope: "punctuation",
       settings: {
         foreground: palette.overlay2,
+        fontStyle: "",
       },
     },
     {
@@ -95,6 +96,7 @@ export default (context: ThemeContext) => {
       ],
       settings: {
         foreground: palette.mauve,
+        fontStyle: "",
       },
     },
     {
@@ -119,10 +121,11 @@ export default (context: ThemeContext) => {
     },
     {
       scope: [
-        "variable.function",
-        "meta.function-call.method",
         "entity.name.function",
+        "meta.function-call.method",
+        "support.function",
         "support.function.misc",
+        "variable.function",
       ],
       settings: {
         foreground: palette.blue,
@@ -240,6 +243,7 @@ export default (context: ThemeContext) => {
       scope: "support.type.property-name.css",
       settings: {
         foreground: palette.blue,
+        fontStyle: "",
       },
     },
     {
@@ -283,11 +287,11 @@ export default (context: ThemeContext) => {
       javascript,
       julia,
       latex,
+      lua,
       markdown,
       nix,
       php,
       python,
-      ruby,
       rust,
       shell,
     ].flatMap((el) => el(context)),

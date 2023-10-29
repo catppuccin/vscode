@@ -25,6 +25,12 @@ const tokens = (context: ThemeContext): TextmateColors => {
         foreground: palette.text,
       },
     },
+    {
+      name: "Javadoc",
+      scope:
+        "comment.block.javadoc.java keyword.other.documentation.javadoc.java",
+      settings: { fontStyle: "" },
+    },
   ];
 };
 

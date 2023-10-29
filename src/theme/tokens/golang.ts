@@ -26,14 +26,6 @@ const tokens = (context: ThemeContext): TextmateColors => {
         foreground: palette.peach,
       },
     },
-    {
-      name: "Go functions",
-      // nil should be peach, but TextMate doesn't offer a fine-grained enough scope
-      scope: "support.function.go",
-      settings: {
-        foreground: palette.blue,
-      },
-    },
   ];
 };
 
