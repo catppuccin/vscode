@@ -1,4 +1,4 @@
-import type { TextmateColors, ThemeContext } from "../types";
+import type { TextmateColors, ThemeContext } from "@/types";
 import tokens from "./tokens";
 
 export const getTokenColors = (context: ThemeContext): TextmateColors => {

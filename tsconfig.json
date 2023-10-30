@@ -6,7 +6,10 @@
     "outDir": "./dist",
     "sourceMap": false,
     "strict": true,
-    "lib": ["es6"]
+    "lib": ["es6"],
+    "paths": {
+      "@/*": ["./src/*"]
+    }
   },
   "include": ["src", ".eslintrc.js"],
   "exclude": ["node_modules"]

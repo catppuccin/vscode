@@ -5,7 +5,7 @@ import type {
   CatppuccinPalette,
   ThemeContext,
   ThemeOptions,
-} from "../types";
+} from "@/types";
 import { getTokenColors } from "./tokenColors";
 import { getSemanticTokens } from "./semanticTokens";
 import { getUiColors } from "./uiColors";

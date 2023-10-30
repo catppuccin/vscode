@@ -1,117 +1,7 @@
-import type {
-  CatppuccinBracketMode,
-  CatppuccinPalette,
-  CatppuccinWorkbenchMode,
-  ThemeContext,
-  WorkbenchColors,
-} from "../types";
+import type { ThemeContext, WorkbenchColors } from "@/types";
 import { opacity, shade, transparent } from "./utils";
 import extensions from "./extensions";
-
-type PickStartsWith<T extends object, S extends string> = {
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  [K in keyof T as K extends `${S}${infer R}` ? K : never]: T[K];
-};
-
-type BracketHLs = keyof PickStartsWith<
-  WorkbenchColors,
-  "editorBracketHighlight"
->;
-
-const getCustomizedColors = (context: ThemeContext) => {
-  const { palette, options, isLatte } = context;
-
-  // invert the shade if current theme is latte
-  const L = isLatte ? -1 : 1;
-  const bracketsMap: Record<
-    CatppuccinBracketMode,
-    Record<BracketHLs, string>
-  > = {
-    rainbow: {
-      "editorBracketHighlight.foreground1": palette.red,
-      "editorBracketHighlight.foreground2": palette.peach,
-      "editorBracketHighlight.foreground3": palette.yellow,
-      "editorBracketHighlight.foreground4": palette.green,
-      "editorBracketHighlight.foreground5": palette.sapphire,
-      "editorBracketHighlight.foreground6": palette.mauve,
-      "editorBracketHighlight.unexpectedBracket.foreground": palette.maroon,
-    },
-    dimmed: {
-      "editorBracketHighlight.foreground1": shade(palette.red, -0.6 * L),
-      "editorBracketHighlight.foreground2": shade(palette.peach, -0.6 * L),
-      "editorBracketHighlight.foreground3": shade(palette.yellow, -0.6 * L),
-      "editorBracketHighlight.foreground4": shade(palette.green, -0.6 * L),
-      "editorBracketHighlight.foreground5": shade(palette.sapphire, -0.6 * L),
-      "editorBracketHighlight.foreground6": shade(palette.mauve, -0.6 * L),
-      "editorBracketHighlight.unexpectedBracket.foreground": shade(
-        palette.maroon,
-        -0.6 * L,
-      ),
-    },
-    monochromatic: {
-      "editorBracketHighlight.foreground1": palette.subtext1,
-      "editorBracketHighlight.foreground2": palette.subtext0,
-      "editorBracketHighlight.foreground3": palette.overlay2,
-      "editorBracketHighlight.foreground4": palette.overlay1,
-      "editorBracketHighlight.foreground5": palette.overlay0,
-      "editorBracketHighlight.foreground6": palette.surface2,
-      "editorBracketHighlight.unexpectedBracket.foreground": palette.maroon,
-    },
-    neovim: {
-      "editorBracketHighlight.foreground1": palette.red,
-      "editorBracketHighlight.foreground2": palette.teal,
-      "editorBracketHighlight.foreground3": palette.yellow,
-      "editorBracketHighlight.foreground4": palette.blue,
-      "editorBracketHighlight.foreground5": palette.pink,
-      "editorBracketHighlight.foreground6": palette.flamingo,
-      "editorBracketHighlight.unexpectedBracket.foreground": palette.maroon,
-    },
-  };
-
-  const workbenchMap: Record<
-    CatppuccinWorkbenchMode,
-    Partial<Record<keyof WorkbenchColors, string>>
-  > = {
-    default: {},
-    flat: {
-      "activityBar.background": palette.mantle,
-      "breadcrumb.background": palette.base,
-      "commandCenter.background": palette.mantle,
-      "debugToolBar.background": palette.mantle,
-      "editorGroupHeader.tabsBackground": palette.mantle,
-      "minimap.background": opacity(palette.base, 0.5),
-      "statusBar.background": palette.mantle,
-      "statusBar.noFolderBackground": palette.mantle,
-      "tab.border": palette.base,
-      "titleBar.activeBackground": palette.mantle,
-      "titleBar.inactiveBackground": palette.mantle,
-      "scrollbar.shadow": palette.mantle,
-    },
-    minimal: {
-      "activityBar.background": palette.base,
-      "breadcrumb.background": palette.base,
-      "commandCenter.background": palette.base,
-      "debugToolBar.background": palette.base,
-      "editor.background": palette.base,
-      "editorWidget.background": palette.base,
-      "editorGroupHeader.tabsBackground": palette.base,
-      "minimap.background": opacity(palette.base, 0.5),
-      "statusBar.background": palette.base,
-      "statusBar.noFolderBackground": palette.base,
-      "sideBar.background": palette.base,
-      "sideBarSectionHeader.background": palette.base,
-      "tab.border": palette.base,
-      "tab.inactiveBackground": palette.base,
-      "titleBar.activeBackground": palette.base,
-      "titleBar.inactiveBackground": palette.base,
-    },
-  };
-
-  return {
-    ...bracketsMap[options.bracketMode],
-    ...workbenchMap[options.workbenchMode],
-  };
-};
+import uiCustomizations from "./ui";
 
 export const getUiColors = (
   context: ThemeContext,
@@ -123,55 +13,6 @@ export const getUiColors = (
   const border = options.extraBordersEnabled
     ? opacity(palette.overlay1, 0.15)
     : transparent;
-
-  // support for custom named colors
-  const customNamedColors = {
-    ...Object.entries({
-      // collect the options, overwrite the "all" config with the current palette config
-      ...options.customUIColors.all,
-      ...options.customUIColors[palette.name],
-    })
-      .map(([k, v]) => {
-        // deal with accents
-        if (v.startsWith("accent")) {
-          const entry = v.split(" ");
-          if (entry.length !== 1) {
-            return {
-              [k]: opacity(accent, Number(entry[1])),
-            };
-          } else {
-            return {
-              [k]: accent,
-            };
-          }
-        }
-
-        // allow custom hex colors
-        if (v.startsWith("#")) {
-          return {
-            [k]: v,
-          };
-        }
-
-        //check if the entry is a "color opacity" mapping
-        const entry = v.split(" ");
-        if (entry.length !== 1) {
-          // call the opacity function
-          v = opacity(
-            palette[entry[0] as keyof CatppuccinPalette],
-            Number(entry[1]),
-          );
-        } else {
-          // resolve to the palette color
-          v = palette[v as keyof CatppuccinPalette];
-        }
-
-        return {
-          [k]: v,
-        };
-      })
-      .reduce((prev, cur) => ({ ...prev, ...cur }), {}),
-  };
 
   // find the definitions here:
   // https://code.visualstudio.com/api/references/theme-color
@@ -659,10 +500,6 @@ export const getUiColors = (
     "charts.purple": palette.mauve,
 
     ...extensions(context),
-
-    // workbench overrides
-    ...getCustomizedColors(context),
-    // custom named overrides
-    ...customNamedColors,
+    ...uiCustomizations(context),
   };
 };

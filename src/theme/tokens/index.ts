@@ -1,4 +1,4 @@
-import type { TextmateColors, ThemeContext } from "../../types";
+import type { TextmateColors, ThemeContext } from "@/types";
 
 import cpp from "./cpp";
 import cs from "./cs";

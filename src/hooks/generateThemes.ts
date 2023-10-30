@@ -2,8 +2,8 @@ import * as fs from "fs/promises";
 import * as path from "path";
 import { variants } from "@catppuccin/palette";
 
-import { compileTheme, defaultOptions } from "../theme";
-import type { CatppuccinFlavor } from "../types";
+import { compileTheme, defaultOptions } from "@/theme";
+import type { CatppuccinFlavor } from "@/types";
 
 const themeDir = path.join(__dirname, "../../themes");
 const flavors = Object.keys(variants) as CatppuccinFlavor[];

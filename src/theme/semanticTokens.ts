@@ -1,4 +1,4 @@
-import type { SemanticTokens, ThemeContext } from "../types";
+import type { SemanticTokens, ThemeContext } from "@/types";
 
 export const getSemanticTokens = (context: ThemeContext): SemanticTokens => {
   const { palette } = context;
