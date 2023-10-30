@@ -112,7 +112,8 @@ export const getConfiguration = (): ThemeOptions => {
     bracketMode: conf.get<CatppuccinBracketMode>("bracketMode"),
     extraBordersEnabled: conf.get<boolean>("extraBordersEnabled"),
     customUIColors: conf.get<CustomUIColors>("customUIColors"),
-  };
+    underlinedSemanticTokens: conf.get<boolean>("underlinedSemanticTokens"),
+  } satisfies Partial<ThemeOptions>;
   return {
     ...defaultOptions,
     ...filterObject(options, ([, value]) => value !== undefined),

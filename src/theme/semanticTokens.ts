@@ -1,9 +1,9 @@
 import type { SemanticTokens, ThemeContext } from "@/types";
 
 export const getSemanticTokens = (context: ThemeContext): SemanticTokens => {
-  const { palette } = context;
+  const { palette, options } = context;
 
-  return {
+  let mappings: SemanticTokens = {
     enumMember: { foreground: palette.teal },
     selfKeyword: { foreground: palette.red },
     "variable.defaultLibrary": { foreground: palette.maroon },
@@ -47,4 +47,19 @@ export const getSemanticTokens = (context: ThemeContext): SemanticTokens => {
     "text.math": { foreground: palette.flamingo },
     pol: { foreground: palette.flamingo },
   };
+
+  if (options.underlinedSemanticTokens) {
+    mappings = Object.entries(mappings).reduce((acc, [k, v]) => {
+      if (typeof v === "string") return acc;
+      return {
+        ...acc,
+        [k]: {
+          ...v,
+          underline: true,
+        },
+      };
+    }, {});
+  }
+
+  return mappings;
 };

@@ -21,6 +21,7 @@ export const defaultOptions: ThemeOptions = {
   bracketMode: "rainbow",
   extraBordersEnabled: false,
   customUIColors: {},
+  underlinedSemanticTokens: false,
 };
 
 export const compileTheme = (

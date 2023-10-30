@@ -66,6 +66,7 @@ export type ThemeOptions = {
   bracketMode: CatppuccinBracketMode;
   extraBordersEnabled: boolean;
   customUIColors: CustomUIColors;
+  underlinedSemanticTokens: boolean;
 };
 
 export type ThemePaths = {

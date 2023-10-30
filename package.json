@@ -136,6 +136,11 @@
             "type": "boolean",
             "default": false,
             "description": "Controls whether borders should be enabled on some additional UI elements."
+          },
+          "catppuccin.underlinedSemanticTokens": {
+            "type": "boolean",
+            "default": false,
+            "description": "Controls whether semantic tokens should appear as underlined."
           }
         }
       }
