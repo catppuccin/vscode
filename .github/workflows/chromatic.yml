@@ -33,3 +33,4 @@ jobs:
         uses: chromaui/action@v1
         with:
           exitOnceUploaded: true
+          projectToken: "chpt_e3cba49738d7554"
