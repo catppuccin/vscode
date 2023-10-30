@@ -12,16 +12,29 @@ const tokens = (context: ThemeContext): TextmateColors => {
       },
     },
     {
-      name: "C++ keywords",
-      scope: ["keyword.operator.new.cpp"],
+      name: "C++ scope resolution",
+      scope: [
+        "entity.name.scope-resolution.template.call.cpp",
+        "entity.name.scope-resolution.parameter.cpp",
+        "entity.name.scope-resolution.cpp",
+        "entity.name.scope-resolution.function.definition.cpp",
+      ],
       settings: {
-        foreground: palette.mauve,
+        foreground: palette.yellow,
       },
     },
     {
+      name: "C++ doc keywords",
       scope: "storage.type.class.doxygen",
       settings: {
         fontStyle: "",
+      },
+    },
+    {
+      name: "C++ operators",
+      scope: ["storage.modifier.reference.cpp"],
+      settings: {
+        foreground: palette.teal,
       },
     },
   ];
