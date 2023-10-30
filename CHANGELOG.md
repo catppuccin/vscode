@@ -1,5 +1,21 @@
 # Changelog
 
+## [3.5.0](https://github.com/catppuccin/vscode/compare/v3.4.0...v3.5.0) (2023-10-30)
+
+
+### Features
+
+* **syntax:** adjust italic highlights ([1006d8f](https://github.com/catppuccin/vscode/commit/1006d8fe65a5d66020ce5373b1c8bfed2c64b084))
+* **syntax:** initial support for gdscript ([1006d8f](https://github.com/catppuccin/vscode/commit/1006d8fe65a5d66020ce5373b1c8bfed2c64b084))
+* **syntax:** new rust macros ([1006d8f](https://github.com/catppuccin/vscode/commit/1006d8fe65a5d66020ce5373b1c8bfed2c64b084))
+* **syntax:** reintroduce bold keywords ([1006d8f](https://github.com/catppuccin/vscode/commit/1006d8fe65a5d66020ce5373b1c8bfed2c64b084))
+
+
+### Bug Fixes
+
+* **compiler:** bold toggle support ([1006d8f](https://github.com/catppuccin/vscode/commit/1006d8fe65a5d66020ce5373b1c8bfed2c64b084))
+* **syntax:** JSDoc variables ([#200](https://github.com/catppuccin/vscode/issues/200)) ([1dfda6a](https://github.com/catppuccin/vscode/commit/1dfda6af3176ee31ab31e0dc013ba42ab3e4cf32)), closes [#199](https://github.com/catppuccin/vscode/issues/199)
+
 ## [3.4.0](https://github.com/catppuccin/vscode/compare/v3.3.0...v3.4.0) (2023-10-21)
 
 
