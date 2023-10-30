@@ -1,4 +1,4 @@
-import type { ThemeContext } from "../../types";
+import type { TextmateColors, ThemeContext } from "../../types";
 
 import cpp from "./cpp";
 import cs from "./cs";
@@ -6,6 +6,7 @@ import css from "./css";
 import data from "./data";
 import diff from "./diff";
 import dotenv from "./dotenv";
+import gdscript from "./gdscript";
 import golang from "./golang";
 import graphql from "./graphql";
 import html from "./html";
@@ -13,15 +14,15 @@ import java from "./java";
 import javascript from "./javascript";
 import julia from "./julia";
 import latex from "./latex";
+import lua from "./lua";
 import markdown from "./markdown";
 import nix from "./nix";
 import php from "./php";
 import python from "./python";
-import ruby from "./ruby";
 import rust from "./rust";
 import shell from "./shell";
 
-export default (context: ThemeContext) => {
+export default (context: ThemeContext): TextmateColors => {
   const { options, palette } = context;
 
   return [
@@ -35,7 +36,6 @@ export default (context: ThemeContext) => {
       ],
       settings: {
         foreground: palette.text,
-        fontStyle: "",
       },
     },
     {
@@ -58,21 +58,18 @@ export default (context: ThemeContext) => {
       scope: ["string", "punctuation.definition.string"],
       settings: {
         foreground: palette.green,
-        fontStyle: "",
       },
     },
     {
       scope: "string.regexp",
       settings: {
         foreground: palette.pink,
-        fontStyle: "",
       },
     },
     {
       scope: "constant.character.escape",
       settings: {
         foreground: palette.pink,
-        fontStyle: "",
       },
     },
     {
@@ -84,7 +81,6 @@ export default (context: ThemeContext) => {
       ],
       settings: {
         foreground: palette.peach,
-        fontStyle: "",
       },
     },
     {
@@ -108,7 +104,6 @@ export default (context: ThemeContext) => {
       scope: "entity.name.tag.documentation",
       settings: {
         foreground: palette.mauve,
-        fontStyle: "",
       },
     },
     {
@@ -123,15 +118,15 @@ export default (context: ThemeContext) => {
       ],
       settings: {
         foreground: palette.teal,
-        fontStyle: "",
       },
     },
     {
       scope: [
-        "variable.function",
-        "meta.function-call.method",
         "entity.name.function",
+        "meta.function-call.method",
+        "support.function",
         "support.function.misc",
+        "variable.function",
       ],
       settings: {
         foreground: palette.blue,
@@ -168,7 +163,6 @@ export default (context: ThemeContext) => {
       ],
       settings: {
         foreground: palette.teal,
-        fontStyle: "",
       },
     },
     {
@@ -176,7 +170,6 @@ export default (context: ThemeContext) => {
       scope: "meta.property.object",
       settings: {
         foreground: palette.teal,
-        fontStyle: "",
       },
     },
     {
@@ -203,7 +196,6 @@ export default (context: ThemeContext) => {
       ],
       settings: {
         foreground: palette.peach,
-        fontStyle: "",
       },
     },
     {
@@ -218,14 +210,12 @@ export default (context: ThemeContext) => {
       scope: ["constant.language", "support.function.builtin"],
       settings: {
         foreground: palette.red,
-        fontStyle: "",
       },
     },
     {
       scope: "entity.other.attribute-name.documentation",
       settings: {
         foreground: palette.red,
-        fontStyle: "",
       },
     },
     {
@@ -233,7 +223,6 @@ export default (context: ThemeContext) => {
       scope: ["keyword.control.directive", "punctuation.definition.directive"],
       settings: {
         foreground: palette.yellow,
-        fontStyle: "",
       },
     },
     {
@@ -241,7 +230,6 @@ export default (context: ThemeContext) => {
       scope: "punctuation.definition.typeparameters",
       settings: {
         foreground: palette.sky,
-        fontStyle: "",
       },
     },
     {
@@ -249,7 +237,6 @@ export default (context: ThemeContext) => {
       scope: "entity.name.namespace",
       settings: {
         foreground: palette.yellow,
-        fontStyle: "",
       },
     },
     {
@@ -269,7 +256,6 @@ export default (context: ThemeContext) => {
       ],
       settings: {
         foreground: palette.red,
-        fontStyle: "",
       },
     },
     {
@@ -277,7 +263,6 @@ export default (context: ThemeContext) => {
       scope: "variable.object.property",
       settings: {
         foreground: palette.text,
-        fontStyle: "",
       },
     },
     {
@@ -285,7 +270,13 @@ export default (context: ThemeContext) => {
       scope: ["string.template variable", "string variable"],
       settings: {
         foreground: palette.text,
-        fontStyle: "",
+      },
+    },
+    {
+      name: "`new` as bold",
+      scope: "keyword.operator.new",
+      settings: {
+        fontStyle: "bold",
       },
     },
 
@@ -297,6 +288,7 @@ export default (context: ThemeContext) => {
       data,
       diff,
       dotenv,
+      gdscript,
       golang,
       graphql,
       html,
@@ -304,11 +296,11 @@ export default (context: ThemeContext) => {
       javascript,
       julia,
       latex,
+      lua,
       markdown,
       nix,
       php,
       python,
-      ruby,
       rust,
       shell,
     ].flatMap((el) => el(context)),

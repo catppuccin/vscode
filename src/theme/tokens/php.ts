@@ -9,7 +9,6 @@ const tokens = (context: ThemeContext): TextmateColors => {
       scope: ["support.attribute.builtin", "meta.attribute.php"],
       settings: {
         foreground: palette.yellow,
-        fontStyle: "",
       },
     },
     {
@@ -17,7 +16,6 @@ const tokens = (context: ThemeContext): TextmateColors => {
       scope: "meta.function.parameters.php punctuation.definition.variable.php",
       settings: {
         foreground: palette.maroon,
-        fontStyle: "",
       },
     },
     {
@@ -32,6 +30,13 @@ const tokens = (context: ThemeContext): TextmateColors => {
       scope: "text.html.php support.function",
       settings: {
         foreground: palette.sky,
+      },
+    },
+    {
+      name: "PHPdoc keywords",
+      scope: "keyword.other.phpdoc.php",
+      settings: {
+        fontStyle: "",
       },
     },
   ];

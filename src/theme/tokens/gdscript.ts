@@ -5,11 +5,17 @@ const tokens = (context: ThemeContext): TextmateColors => {
 
   return [
     {
-      name: "Ruby built-in functions",
-      scope: ["support.function.kernel.ruby"],
+      name: "GDScript functions",
+      scope: "support.function.builtin.gdscript",
       settings: {
         foreground: palette.blue,
-        fontStyle: "italic",
+      },
+    },
+    {
+      name: "GDScript constants",
+      scope: "constant.language.gdscript",
+      settings: {
+        foreground: palette.peach,
       },
     },
   ];

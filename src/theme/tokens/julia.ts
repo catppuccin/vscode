@@ -5,14 +5,6 @@ const tokens = (context: ThemeContext): TextmateColors => {
 
   return [
     {
-      name: "Julia functions",
-      scope: "support.function.julia",
-      settings: {
-        foreground: palette.blue,
-        fontStyle: "italic",
-      },
-    },
-    {
       name: "Julia macros",
       scope: "support.function.macro.julia",
       settings: {
@@ -25,7 +17,6 @@ const tokens = (context: ThemeContext): TextmateColors => {
       scope: "constant.language.julia",
       settings: {
         foreground: palette.peach,
-        fontStyle: "",
       },
     },
     {
@@ -33,7 +24,6 @@ const tokens = (context: ThemeContext): TextmateColors => {
       scope: "constant.other.symbol.julia",
       settings: {
         foreground: palette.maroon,
-        fontStyle: "",
       },
     },
   ];

@@ -7,14 +7,21 @@ export const getTokenColors = (context: ThemeContext): TextmateColors => {
   return tokens(context).map((token) => {
     if (token.name === "Comments") return token;
 
+    let fontStyle = token.settings.fontStyle;
+    if (!options.italicKeywords && fontStyle !== undefined) {
+      fontStyle = fontStyle?.replace("italic", "");
+    }
+    if (
+      !options.boldKeywords &&
+      fontStyle !== undefined &&
+      token.scope !== "markup.bold"
+    ) {
+      fontStyle = fontStyle?.replace("bold", "");
+    }
+
     token = {
       ...token,
-      settings: {
-        ...token.settings,
-        fontStyle: options.italicKeywords
-          ? token.settings.fontStyle
-          : (token.settings.fontStyle ?? "").replace("italic", ""),
-      },
+      settings: { ...token.settings, fontStyle },
     };
     return token;
   });

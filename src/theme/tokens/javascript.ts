@@ -9,7 +9,6 @@ const tokens = (context: ThemeContext): TextmateColors => {
       scope: "meta.export variable.other.readwrite.js",
       settings: {
         foreground: palette.maroon,
-        fontStyle: "",
       },
     },
     {
@@ -22,7 +21,6 @@ const tokens = (context: ThemeContext): TextmateColors => {
       ],
       settings: {
         foreground: palette.text,
-        fontStyle: "",
       },
     },
     {
@@ -37,10 +35,16 @@ const tokens = (context: ThemeContext): TextmateColors => {
       },
     },
     {
+      name: "JSDoc keywords",
+      scope: "storage.type.class.jsdoc",
+      settings: {
+        fontStyle: "",
+      },
+    },
+    {
       scope: "support.type.object.console.js",
       settings: {
         foreground: palette.text,
-        fontStyle: "",
       },
     },
     {
@@ -48,7 +52,6 @@ const tokens = (context: ThemeContext): TextmateColors => {
       scope: ["support.constant.node", "support.type.object.module.js"],
       settings: {
         foreground: palette.mauve,
-        fontStyle: "",
       },
     },
     {
@@ -56,7 +59,6 @@ const tokens = (context: ThemeContext): TextmateColors => {
       scope: "storage.modifier.implements",
       settings: {
         foreground: palette.mauve,
-        fontStyle: "",
       },
     },
     {
@@ -76,7 +78,6 @@ const tokens = (context: ThemeContext): TextmateColors => {
       scope: "variable.parameter.generic",
       settings: {
         foreground: palette.yellow,
-        fontStyle: "",
       },
     },
     {
@@ -87,7 +88,6 @@ const tokens = (context: ThemeContext): TextmateColors => {
       ],
       settings: {
         foreground: palette.teal,
-        fontStyle: "",
       },
     },
     {
@@ -109,7 +109,6 @@ const tokens = (context: ThemeContext): TextmateColors => {
       ],
       settings: {
         foreground: palette.mauve,
-        fontStyle: "",
       },
     },
     {
@@ -117,7 +116,6 @@ const tokens = (context: ThemeContext): TextmateColors => {
       scope: ["support.class.component.vue"],
       settings: {
         foreground: palette.blue,
-        fontStyle: "",
       },
     },
   ];

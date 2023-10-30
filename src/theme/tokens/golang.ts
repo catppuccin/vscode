@@ -9,7 +9,6 @@ const tokens = (context: ThemeContext): TextmateColors => {
       scope: "comment meta.annotation.go",
       settings: {
         foreground: palette.maroon,
-        fontStyle: "",
       },
     },
     {
@@ -17,7 +16,6 @@ const tokens = (context: ThemeContext): TextmateColors => {
       scope: "comment meta.annotation.parameters.go",
       settings: {
         foreground: palette.peach,
-        fontStyle: "",
       },
     },
     {
@@ -26,16 +24,6 @@ const tokens = (context: ThemeContext): TextmateColors => {
       scope: "constant.language.go",
       settings: {
         foreground: palette.peach,
-        fontStyle: "",
-      },
-    },
-    {
-      name: "Go functions",
-      // nil should be peach, but TextMate doesn't offer a fine-grained enough scope
-      scope: "support.function.go",
-      settings: {
-        foreground: palette.blue,
-        fontStyle: "italic",
       },
     },
   ];

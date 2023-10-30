@@ -12,6 +12,7 @@ export const getSemanticTokens = (context: ThemeContext): SemanticTokens => {
     "class:python": { foreground: palette.yellow },
     "class.builtin:python": { foreground: palette.mauve },
     "variable.typeHint:python": { foreground: palette.yellow },
+    "function.decorator:python": { foreground: palette.peach },
 
     // ignore `const`s being peach in JS & TS
     "variable.readonly:javascript": { foreground: palette.text },

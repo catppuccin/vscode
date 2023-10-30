@@ -26,7 +26,6 @@ const tokens = (context: ThemeContext): TextmateColors => {
       scope: ["constant.language.json", "constant.language.yaml"],
       settings: {
         foreground: palette.peach,
-        fontStyle: "",
       },
     },
     {
@@ -45,7 +44,6 @@ const tokens = (context: ThemeContext): TextmateColors => {
       ],
       settings: {
         foreground: palette.yellow,
-        fontStyle: "",
       },
     },
     {
@@ -53,7 +51,6 @@ const tokens = (context: ThemeContext): TextmateColors => {
       scope: "constant.other.time.datetime.offset.toml",
       settings: {
         foreground: palette.pink,
-        fontStyle: "",
       },
     },
     {
@@ -64,7 +61,6 @@ const tokens = (context: ThemeContext): TextmateColors => {
       ],
       settings: {
         foreground: palette.pink,
-        fontStyle: "",
       },
     },
     {
@@ -72,7 +68,6 @@ const tokens = (context: ThemeContext): TextmateColors => {
       scope: "entity.other.document.begin.yaml",
       settings: {
         foreground: palette.pink,
-        fontStyle: "",
       },
     },
   ];

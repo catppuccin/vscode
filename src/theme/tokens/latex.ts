@@ -9,15 +9,6 @@ const tokens = (context: ThemeContext): TextmateColors => {
       scope: "text.tex keyword.control.preamble",
       settings: {
         foreground: palette.teal,
-        fontStyle: "",
-      },
-    },
-    {
-      name: "LaTeX functions",
-      scope: "text.tex support.function",
-      settings: {
-        foreground: palette.blue,
-        fontStyle: "",
       },
     },
     {
@@ -25,7 +16,6 @@ const tokens = (context: ThemeContext): TextmateColors => {
       scope: "text.tex support.function.be",
       settings: {
         foreground: palette.sky,
-        fontStyle: "",
       },
     },
     {
@@ -33,7 +23,6 @@ const tokens = (context: ThemeContext): TextmateColors => {
       scope: "constant.other.general.math.tex",
       settings: {
         foreground: palette.flamingo,
-        fontStyle: "",
       },
     },
   ];

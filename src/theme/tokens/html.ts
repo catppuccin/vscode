@@ -14,7 +14,6 @@ const tokens = (context: ThemeContext): TextmateColors => {
       ],
       settings: {
         foreground: palette.mauve,
-        fontStyle: "",
       },
     },
     {
@@ -40,7 +39,6 @@ const tokens = (context: ThemeContext): TextmateColors => {
       ],
       settings: {
         foreground: palette.red,
-        fontStyle: "",
       },
     },
     {
@@ -48,7 +46,6 @@ const tokens = (context: ThemeContext): TextmateColors => {
       scope: ["entity.other.attribute-name"],
       settings: {
         foreground: palette.yellow,
-        fontStyle: "",
       },
     },
     {

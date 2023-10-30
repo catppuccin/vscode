@@ -18,8 +18,19 @@ const tokens = (context: ThemeContext): TextmateColors => {
       },
     },
     {
+      name: "Rust attribute strings",
+      scope: [
+        "meta.attribute.rust string.quoted.double.rust",
+        "meta.attribute.rust string.quoted.single.char.rust",
+      ],
+      settings: {
+        fontStyle: "",
+      },
+    },
+    {
       name: "Rust keyword",
       scope: [
+        "entity.name.function.macro.rules.rust",
         "storage.type.module.rust",
         "storage.modifier.rust",
         "storage.type.struct.rust",
@@ -49,7 +60,6 @@ const tokens = (context: ThemeContext): TextmateColors => {
       scope: "meta.generic.rust",
       settings: {
         foreground: palette.peach,
-        fontStyle: "",
       },
     },
     {
@@ -65,7 +75,6 @@ const tokens = (context: ThemeContext): TextmateColors => {
       scope: "entity.name.module.rust",
       settings: {
         foreground: palette.peach,
-        fontStyle: "",
       },
     },
     {
@@ -81,7 +90,6 @@ const tokens = (context: ThemeContext): TextmateColors => {
       scope: "storage.type.source.rust",
       settings: {
         foreground: palette.yellow,
-        fontStyle: "",
       },
     },
     {
@@ -89,7 +97,6 @@ const tokens = (context: ThemeContext): TextmateColors => {
       scope: "entity.name.union.rust",
       settings: {
         foreground: palette.yellow,
-        fontStyle: "",
       },
     },
     {
@@ -97,7 +104,6 @@ const tokens = (context: ThemeContext): TextmateColors => {
       scope: "meta.enum.rust storage.type.source.rust",
       settings: {
         foreground: palette.teal,
-        fontStyle: "",
       },
     },
     {
@@ -105,11 +111,11 @@ const tokens = (context: ThemeContext): TextmateColors => {
       scope: [
         "support.macro.rust",
         "meta.macro.rust support.function.rust",
-        "entity.name.function.macro",
+        "entity.name.function.macro.rust",
       ],
       settings: {
-        foreground: palette.teal,
-        fontStyle: "",
+        foreground: palette.blue,
+        fontStyle: "italic",
       },
     },
     {
@@ -125,7 +131,6 @@ const tokens = (context: ThemeContext): TextmateColors => {
       scope: "string.quoted.double.rust constant.other.placeholder.rust",
       settings: {
         foreground: palette.pink,
-        fontStyle: "",
       },
     },
     {
@@ -134,7 +139,6 @@ const tokens = (context: ThemeContext): TextmateColors => {
         "meta.function.return-type.rust meta.generic.rust storage.type.rust",
       settings: {
         foreground: palette.text,
-        fontStyle: "",
       },
     },
     {
@@ -142,7 +146,6 @@ const tokens = (context: ThemeContext): TextmateColors => {
       scope: "meta.function.call.rust",
       settings: {
         foreground: palette.blue,
-        fontStyle: "",
       },
     },
     {
@@ -150,7 +153,6 @@ const tokens = (context: ThemeContext): TextmateColors => {
       scope: "punctuation.brackets.angle.rust",
       settings: {
         foreground: palette.sky,
-        fontStyle: "",
       },
     },
     {
@@ -158,7 +160,30 @@ const tokens = (context: ThemeContext): TextmateColors => {
       scope: "constant.other.caps.rust",
       settings: {
         foreground: palette.peach,
-        fontStyle: "",
+      },
+    },
+    {
+      name: "Rust function parameters",
+      scope: "meta.function.definition.rust variable.other.rust",
+      settings: {
+        foreground: palette.maroon,
+      },
+    },
+    {
+      name: "Rust self",
+      scope: "variable.language.self.rust",
+      settings: {
+        foreground: palette.red,
+      },
+    },
+    {
+      name: "Rust metavariable names",
+      scope: [
+        "variable.other.metavariable.name.rust",
+        "meta.macro.metavariable.rust keyword.operator.macro.dollar.rust",
+      ],
+      settings: {
+        foreground: palette.pink,
       },
     },
   ];

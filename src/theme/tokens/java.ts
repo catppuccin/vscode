@@ -9,7 +9,6 @@ const tokens = (context: ThemeContext): TextmateColors => {
       scope: ["punctuation.definition.annotation", "storage.type.annotation"],
       settings: {
         foreground: palette.peach,
-        fontStyle: "",
       },
     },
     {
@@ -17,7 +16,6 @@ const tokens = (context: ThemeContext): TextmateColors => {
       scope: "constant.other.enum.java",
       settings: {
         foreground: palette.teal,
-        fontStyle: "",
       },
     },
     {
@@ -25,8 +23,13 @@ const tokens = (context: ThemeContext): TextmateColors => {
       scope: "storage.modifier.import.java",
       settings: {
         foreground: palette.text,
-        fontStyle: "",
       },
+    },
+    {
+      name: "Javadoc",
+      scope:
+        "comment.block.javadoc.java keyword.other.documentation.javadoc.java",
+      settings: { fontStyle: "" },
     },
   ];
 };
