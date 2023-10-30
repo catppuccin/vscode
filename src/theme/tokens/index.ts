@@ -73,11 +73,16 @@ export default (context: ThemeContext): TextmateColors => {
       },
     },
     {
+      name: "Booleans, constants, numbers",
       scope: [
         "constant.numeric",
         "variable.other.constant",
         "entity.name.constant",
         "constant.language.boolean",
+        "constant.language.false",
+        "constant.language.true",
+        "keyword.other.unit.user-defined",
+        "keyword.other.unit.suffix.floating-point",
       ],
       settings: {
         foreground: palette.peach,
