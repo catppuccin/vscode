@@ -164,9 +164,16 @@ const tokens = (context: ThemeContext): TextmateColors => {
     },
     {
       name: "Rust function parameters",
-      scope: "meta.function.definition.rust variable.other.rust",
+      scope: ["meta.function.definition.rust variable.other.rust"],
       settings: {
         foreground: palette.maroon,
+      },
+    },
+    {
+      name: "Rust closure variables",
+      scope: "meta.function.call.rust variable.other.rust",
+      settings: {
+        foreground: palette.text,
       },
     },
     {
