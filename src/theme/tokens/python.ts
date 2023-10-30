@@ -62,7 +62,6 @@ const tokens = (context: ThemeContext): TextmateColors => {
       scope: ["meta.function-call.python"],
       settings: {
         foreground: palette.blue,
-        fontStyle: "italic",
       },
     },
     {
