@@ -408,22 +408,23 @@ export const getUiColors = (
     "inputValidation.warningForeground": palette.crust,
 
     // Lists and trees
-    "list.activeSelectionBackground": palette.surface1, // currently selected in file tree
+    "list.activeSelectionBackground": palette.surface0, // currently selected in file tree
     "list.activeSelectionForeground": palette.text,
     "list.dropBackground": dropBackground,
     "list.focusBackground": palette.surface0, // when using keyboard to move around files
     "list.focusForeground": palette.text,
     "list.focusOutline": transparent,
     "list.highlightForeground": accent,
-    "list.hoverBackground": isLatte ? palette.surface2 : palette.base, // when hovering over the file tree
+    "list.hoverBackground": opacity(palette.surface0, 0.5), // when hovering over the file tree
     "list.hoverForeground": palette.text,
-    "list.inactiveSelectionBackground": palette.surface1, // currently selected focused in editor
+    "list.inactiveSelectionBackground": palette.surface0, // currently selected focused in editor
     "list.inactiveSelectionForeground": palette.text,
     "list.warningForeground": palette.peach,
     "listFilterWidget.background": palette.surface1,
     "listFilterWidget.noMatchesOutline": palette.red,
     "listFilterWidget.outline": transparent,
-    "tree.indentGuidesStroke": palette.overlay0,
+    "tree.indentGuidesStroke": palette.overlay2,
+    "tree.inactiveIndentGuidesStroke": palette.surface1,
 
     "menu.background": palette.base,
     "menu.border": options.extraBordersEnabled
