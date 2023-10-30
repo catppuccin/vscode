@@ -202,7 +202,7 @@
   "scripts": {
     "build": "yarn compile:theme && yarn compile",
     "build-storybook": "storybook build",
-    "chromatic": "chromatic --exit-zero-on-changes --exit-once-uploaded",
+    "chromatic": "chromatic --exit-zero-on-changes --exit-once-uploaded --project-token chpt_e3cba49738d7554",
     "compile": "tsup",
     "compile:theme": "ts-node src/hooks/generateThemes.ts",
     "dev": "DEBUG=1 yarn build",
