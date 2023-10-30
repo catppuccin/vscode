@@ -272,6 +272,13 @@ export default (context: ThemeContext): TextmateColors => {
         foreground: palette.text,
       },
     },
+    {
+      name: "`new` as bold",
+      scope: "keyword.operator.new",
+      settings: {
+        fontStyle: "bold",
+      },
+    },
 
     // per-language tokens
     ...[
