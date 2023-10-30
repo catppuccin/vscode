@@ -1,5 +1,5 @@
 import { ExtensionContext, Uri, workspace } from "vscode";
-import utils, { UpdateTrigger } from "./utils";
+import * as utils from "./utils";
 import type { ThemePaths } from "./types";
 
 export const activate = async (ctx: ExtensionContext) => {
@@ -16,7 +16,7 @@ export const activate = async (ctx: ExtensionContext) => {
     utils.updateThemes(
       utils.getConfiguration(),
       paths,
-      UpdateTrigger.FRESH_INSTALL,
+      utils.UpdateTrigger.FRESH_INSTALL,
     );
   }
 
@@ -27,7 +27,7 @@ export const activate = async (ctx: ExtensionContext) => {
         utils.updateThemes(
           utils.getConfiguration(),
           paths,
-          UpdateTrigger.CONFIG_CHANGE,
+          utils.UpdateTrigger.CONFIG_CHANGE,
         );
       }
       // call the icon pack sync when the theme changes
