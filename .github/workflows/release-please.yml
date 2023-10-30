@@ -18,6 +18,7 @@ jobs:
           release-type: node
     outputs:
       release_created: ${{ steps.release.outputs.release_created }}
+      tag_name: ${{ steps.release.outputs.tag_name }}
 
   release:
     runs-on: ubuntu-latest
@@ -78,4 +79,4 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run:
-          gh release upload ${{ steps.release.outputs.tag_name }} ${{ steps.packageExtension.outputs.vsixPath }}
+          gh release upload ${{ needs.release-please.outputs.tag_name }} ${{ steps.packageExtension.outputs.vsixPath }}
