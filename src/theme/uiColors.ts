@@ -119,7 +119,7 @@ export const getUiColors = (
   const { palette, options, isLatte } = context;
 
   const accent = palette[options.accent];
-  const dropBackground = opacity(palette.surface2, 0.6);
+  const dropBackground = opacity(accent, 0.2);
   const border = options.extraBordersEnabled
     ? opacity(palette.overlay1, 0.15)
     : transparent;
