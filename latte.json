@@ -22,7 +22,7 @@
     "textSeparator.foreground": "#8839ef",
     "activityBar.background": "#dce0e8",
     "activityBar.foreground": "#8839ef",
-    "activityBar.dropBorder": "#acb0be99",
+    "activityBar.dropBorder": "#8839ef33",
     "activityBar.inactiveForeground": "#9ca0b0",
     "activityBar.border": "#00000000",
     "activityBarBadge.background": "#8839ef",
@@ -114,7 +114,7 @@
     "editorCursor.background": "#eff1f5",
     "editorCursor.foreground": "#dc8a78",
     "editorGroup.border": "#acb0be",
-    "editorGroup.dropBackground": "#acb0be99",
+    "editorGroup.dropBackground": "#8839ef33",
     "editorGroup.emptyBackground": "#eff1f5",
     "editorGroupHeader.tabsBackground": "#dce0e8",
     "editorGutter.addedBackground": "#40a02b",
@@ -205,22 +205,23 @@
     "inputValidation.warningBackground": "#fe640b",
     "inputValidation.warningBorder": "#dce0e833",
     "inputValidation.warningForeground": "#dce0e8",
-    "list.activeSelectionBackground": "#bcc0cc",
+    "list.activeSelectionBackground": "#ccd0da",
     "list.activeSelectionForeground": "#4c4f69",
-    "list.dropBackground": "#acb0be99",
+    "list.dropBackground": "#8839ef33",
     "list.focusBackground": "#ccd0da",
     "list.focusForeground": "#4c4f69",
     "list.focusOutline": "#00000000",
     "list.highlightForeground": "#8839ef",
-    "list.hoverBackground": "#acb0be",
+    "list.hoverBackground": "#ccd0da7f",
     "list.hoverForeground": "#4c4f69",
-    "list.inactiveSelectionBackground": "#bcc0cc",
+    "list.inactiveSelectionBackground": "#ccd0da",
     "list.inactiveSelectionForeground": "#4c4f69",
     "list.warningForeground": "#fe640b",
     "listFilterWidget.background": "#bcc0cc",
     "listFilterWidget.noMatchesOutline": "#d20f39",
     "listFilterWidget.outline": "#00000000",
-    "tree.indentGuidesStroke": "#9ca0b0",
+    "tree.indentGuidesStroke": "#7c7f93",
+    "tree.inactiveIndentGuidesStroke": "#bcc0cc",
     "menu.background": "#eff1f5",
     "menu.border": "#eff1f57f",
     "menu.foreground": "#4c4f69",
@@ -262,7 +263,7 @@
     "panel.background": "#eff1f5",
     "panel.border": "#acb0be",
     "panelSection.border": "#acb0be",
-    "panelSection.dropBackground": "#acb0be99",
+    "panelSection.dropBackground": "#8839ef33",
     "panelTitle.activeBorder": "#8839ef",
     "panelTitle.activeForeground": "#4c4f69",
     "panelTitle.inactiveForeground": "#6c6f85",
@@ -297,7 +298,7 @@
     "settings.numberInputBackground": "#bcc0cc",
     "settings.numberInputBorder": "#00000000",
     "sideBar.background": "#e6e9ef",
-    "sideBar.dropBackground": "#acb0be99",
+    "sideBar.dropBackground": "#8839ef33",
     "sideBar.foreground": "#4c4f69",
     "sideBar.border": "#00000000",
     "sideBarSectionHeader.background": "#e6e9ef",
@@ -362,7 +363,7 @@
     "terminalCursor.background": "#eff1f5",
     "terminalCursor.foreground": "#dc8a78",
     "terminal.border": "#acb0be",
-    "terminal.dropBackground": "#acb0be99",
+    "terminal.dropBackground": "#8839ef33",
     "terminal.tab.activeBorder": "#8839ef",
     "terminalCommandDecoration.defaultBackground": "#acb0be",
     "terminalCommandDecoration.successBackground": "#40a02b",
@@ -646,11 +647,16 @@
       }
     },
     {
+      "name": "Booleans, constants, numbers",
       "scope": [
         "constant.numeric",
         "variable.other.constant",
         "entity.name.constant",
-        "constant.language.boolean"
+        "constant.language.boolean",
+        "constant.language.false",
+        "constant.language.true",
+        "keyword.other.unit.user-defined",
+        "keyword.other.unit.suffix.floating-point"
       ],
       "settings": {
         "foreground": "#fe640b"
@@ -870,18 +876,31 @@
       }
     },
     {
-      "name": "C++ keywords",
+      "name": "C++ scope resolution",
       "scope": [
-        "keyword.operator.new.cpp"
+        "entity.name.scope-resolution.template.call.cpp",
+        "entity.name.scope-resolution.parameter.cpp",
+        "entity.name.scope-resolution.cpp",
+        "entity.name.scope-resolution.function.definition.cpp"
       ],
       "settings": {
-        "foreground": "#8839ef"
+        "foreground": "#df8e1d"
       }
     },
     {
+      "name": "C++ doc keywords",
       "scope": "storage.type.class.doxygen",
       "settings": {
         "fontStyle": ""
+      }
+    },
+    {
+      "name": "C++ operators",
+      "scope": [
+        "storage.modifier.reference.cpp"
+      ],
+      "settings": {
+        "foreground": "#179299"
       }
     },
     {
@@ -1962,9 +1981,18 @@
     },
     {
       "name": "Rust function parameters",
-      "scope": "meta.function.definition.rust variable.other.rust",
+      "scope": [
+        "meta.function.definition.rust variable.other.rust"
+      ],
       "settings": {
         "foreground": "#e64553"
+      }
+    },
+    {
+      "name": "Rust closure variables",
+      "scope": "meta.function.call.rust variable.other.rust",
+      "settings": {
+        "foreground": "#4c4f69"
       }
     },
     {
