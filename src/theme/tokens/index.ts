@@ -6,6 +6,7 @@ import css from "./css";
 import data from "./data";
 import diff from "./diff";
 import dotenv from "./dotenv";
+import gdscript from "./gdscript";
 import golang from "./golang";
 import graphql from "./graphql";
 import html from "./html";
@@ -280,6 +281,7 @@ export default (context: ThemeContext): TextmateColors => {
       data,
       diff,
       dotenv,
+      gdscript,
       golang,
       graphql,
       html,
