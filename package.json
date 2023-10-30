@@ -190,8 +190,8 @@
     "react-dom": "^18.2.0",
     "shikiji": "^0.6.10",
     "storybook": "^7.5.1",
-    "ts-node": "^10.9.1",
     "tsup": "^7.2.0",
+    "tsx": "^3.14.0",
     "typescript": "^5.2.2",
     "vite": "^4.5.0"
   },
@@ -204,14 +204,14 @@
     "build-storybook": "storybook build",
     "chromatic": "chromatic --exit-zero-on-changes --exit-once-uploaded --project-token chpt_e3cba49738d7554",
     "compile": "tsup",
-    "compile:theme": "ts-node src/hooks/generateThemes.ts",
+    "compile:theme": "tsx src/hooks/generateThemes.ts",
     "dev": "DEBUG=1 yarn build",
     "lint": "eslint . --ext .ts",
     "package": "vsce package --allow-star-activation --yarn",
     "postbuild": "prettier -w ./themes",
     "prepare": "husky install",
     "storybook": "storybook dev -p 6006",
-    "update-types": "ts-node src/hooks/updateVSCtypes.ts"
+    "update-types": "tsx src/hooks/updateVSCtypes.ts"
   },
   "packageManager": "yarn@3.6.3"
 }

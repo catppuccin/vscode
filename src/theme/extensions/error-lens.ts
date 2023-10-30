@@ -1,5 +1,5 @@
-import type { ErrorLensColors, ThemeContext } from "../../types";
-import { opacity } from "../utils";
+import type { ErrorLensColors, ThemeContext } from "@/types";
+import { opacity } from "@/theme/utils";
 
 export default function colors(
   context: ThemeContext,
