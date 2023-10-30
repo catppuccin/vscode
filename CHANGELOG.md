@@ -1,5 +1,19 @@
 # Changelog
 
+## [3.6.0](https://github.com/catppuccin/vscode/compare/v3.5.0...v3.6.0) (2023-10-30)
+
+
+### Features
+
+* **ui:** use accent color for drop background ([237e92c](https://github.com/catppuccin/vscode/commit/237e92c1aa7a37b2e638302d7906246a8ababd4a))
+
+
+### Bug Fixes
+
+* **syntax:** improve C++ textmate tokens ([#207](https://github.com/catppuccin/vscode/issues/207)) ([3f62df8](https://github.com/catppuccin/vscode/commit/3f62df84a652024302d67df9fd79165a9d63c30a))
+* **syntax:** Rust closure parameters & variables ([#204](https://github.com/catppuccin/vscode/issues/204)) ([358b963](https://github.com/catppuccin/vscode/commit/358b96392888286d4d65eefdeee532f3d709cae9))
+* **ui:** improve contrast on file tree selection ([5234811](https://github.com/catppuccin/vscode/commit/5234811868e8827cdec0cad4a796e87255206811))
+
 ## [3.5.0](https://github.com/catppuccin/vscode/compare/v3.4.0...v3.5.0) (2023-10-30)
 
 
