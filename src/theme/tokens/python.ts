@@ -73,6 +73,7 @@ const tokens = (context: ThemeContext): TextmateColors => {
       ],
       settings: {
         foreground: palette.peach,
+        fontStyle: "italic",
       },
     },
     {
@@ -120,6 +121,13 @@ const tokens = (context: ThemeContext): TextmateColors => {
       settings: {
         foreground: palette.green,
         fontStyle: "italic",
+      },
+    },
+    {
+      name: "Python type hints",
+      scope: "meta.function.parameters.python",
+      settings: {
+        fontStyle: "",
       },
     },
   ];

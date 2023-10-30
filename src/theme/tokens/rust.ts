@@ -18,6 +18,16 @@ const tokens = (context: ThemeContext): TextmateColors => {
       },
     },
     {
+      name: "Rust attribute strings",
+      scope: [
+        "meta.attribute.rust string.quoted.double.rust",
+        "meta.attribute.rust string.quoted.single.char.rust",
+      ],
+      settings: {
+        fontStyle: "",
+      },
+    },
+    {
       name: "Rust keyword",
       scope: [
         "entity.name.function.macro.rules.rust",
