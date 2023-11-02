@@ -71,7 +71,7 @@ This means that you will have to either:
 ```nix
 {
   # in your inputs:
-  inputs.catppuccin-vsc.url = "github.com:catppuccin/vscode";
+  inputs.catppuccin-vsc.url = "github:catppuccin/vscode";
 
   # add the overlay:
   nixpkgs.overlays = [inputs.catppuccin-vsc.overlays.default];
