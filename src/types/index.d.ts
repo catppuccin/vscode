@@ -9,6 +9,7 @@ export type * from "./token-styling";
 
 // extensions
 export type * from "./errorlens";
+export type * from "./github-pull-request";
 export type * from "./gitlens";
 
 export type CatppuccinFlavor = keyof typeof variants;
