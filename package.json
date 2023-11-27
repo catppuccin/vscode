@@ -84,22 +84,7 @@
             "type": "string",
             "default": "mauve",
             "description": "Controls which accent color to use.",
-            "enum": [
-              "rosewater",
-              "flamingo",
-              "pink",
-              "mauve",
-              "red",
-              "maroon",
-              "peach",
-              "yellow",
-              "green",
-              "teal",
-              "sky",
-              "sapphire",
-              "blue",
-              "lavender"
-            ]
+            "$ref": "https://cdn.jsdelivr.net/gh/catppuccin/vscode@main/schemas/customUIColors.schema.json#/$defs/catppuccinColor"
           },
           "catppuccin.workbenchMode": {
             "type": "string",
