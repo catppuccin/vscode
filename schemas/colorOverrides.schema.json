@@ -1,117 +1,122 @@
 {
-  "$schema": "http://json-schema.org/draft-06/schema#",
+  "$schema": "http://json-schema.org/draft-07/schema#",
   "type": "object",
   "additionalProperties": false,
-  "description": "Color Overrides",
-  "default": {},
+  "required": [],
   "properties": {
     "all": {
-      "$ref": "#/definitions/Overrides"
+      "$ref": "#/$defs/overrides",
+      "title": "Overrides applying to all flavors"
     },
     "latte": {
-      "$ref": "#/definitions/Overrides"
+      "$ref": "#/$defs/overrides",
+      "title": "Overrides applying to Latte flavor"
     },
     "frappe": {
-      "$ref": "#/definitions/Overrides"
+      "$ref": "#/$defs/overrides",
+      "title": "Overrides applying to Frappé flavor"
     },
     "macchiato": {
-      "$ref": "#/definitions/Overrides"
+      "$ref": "#/$defs/overrides",
+      "title": "Overrides applying to Macchiato flavor"
     },
     "mocha": {
-      "$ref": "#/definitions/Overrides"
+      "$ref": "#/$defs/overrides",
+      "title": "Overrides applying to Mocha flavor"
     }
   },
-  "required": [],
-  "definitions": {
-    "HexColor": {
-      "type": "string",
-      "pattern": "^#([A-Fa-f0-9]){6}$"
+  "$defs": {
+    "colorOverride": {
+      "format": "color-hex",
+      "defaultSnippets": [
+        {
+          "body": "${1:#ff0000}"
+        }
+      ]
     },
-    "Overrides": {
+    "overrides": {
       "type": "object",
       "additionalProperties": false,
       "properties": {
         "base": {
-          "$ref": "#/definitions/HexColor"
+          "$ref": "#/$defs/colorOverride"
         },
         "mantle": {
-          "$ref": "#/definitions/HexColor"
+          "$ref": "#/$defs/colorOverride"
         },
         "crust": {
-          "$ref": "#/definitions/HexColor"
+          "$ref": "#/$defs/colorOverride"
         },
         "overlay0": {
-          "$ref": "#/definitions/HexColor"
+          "$ref": "#/$defs/colorOverride"
         },
         "overlay1": {
-          "$ref": "#/definitions/HexColor"
+          "$ref": "#/$defs/colorOverride"
         },
         "overlay2": {
-          "$ref": "#/definitions/HexColor"
+          "$ref": "#/$defs/colorOverride"
         },
         "surface0": {
-          "$ref": "#/definitions/HexColor"
+          "$ref": "#/$defs/colorOverride"
         },
         "surface1": {
-          "$ref": "#/definitions/HexColor"
+          "$ref": "#/$defs/colorOverride"
         },
         "surface2": {
-          "$ref": "#/definitions/HexColor"
+          "$ref": "#/$defs/colorOverride"
         },
         "subtext0": {
-          "$ref": "#/definitions/HexColor"
+          "$ref": "#/$defs/colorOverride"
         },
         "subtext1": {
-          "$ref": "#/definitions/HexColor"
+          "$ref": "#/$defs/colorOverride"
         },
         "text": {
-          "$ref": "#/definitions/HexColor"
+          "$ref": "#/$defs/colorOverride"
         },
         "rosewater": {
-          "$ref": "#/definitions/HexColor"
+          "$ref": "#/$defs/colorOverride"
         },
         "flamingo": {
-          "$ref": "#/definitions/HexColor"
+          "$ref": "#/$defs/colorOverride"
         },
         "pink": {
-          "$ref": "#/definitions/HexColor"
+          "$ref": "#/$defs/colorOverride"
         },
         "mauve": {
-          "$ref": "#/definitions/HexColor"
+          "$ref": "#/$defs/colorOverride"
         },
         "red": {
-          "$ref": "#/definitions/HexColor"
+          "$ref": "#/$defs/colorOverride"
         },
         "maroon": {
-          "$ref": "#/definitions/HexColor"
+          "$ref": "#/$defs/colorOverride"
         },
         "peach": {
-          "$ref": "#/definitions/HexColor"
+          "$ref": "#/$defs/colorOverride"
         },
         "yellow": {
-          "$ref": "#/definitions/HexColor"
+          "$ref": "#/$defs/colorOverride"
         },
         "green": {
-          "$ref": "#/definitions/HexColor"
+          "$ref": "#/$defs/colorOverride"
         },
         "teal": {
-          "$ref": "#/definitions/HexColor"
+          "$ref": "#/$defs/colorOverride"
         },
         "sky": {
-          "$ref": "#/definitions/HexColor"
+          "$ref": "#/$defs/colorOverride"
         },
         "sapphire": {
-          "$ref": "#/definitions/HexColor"
+          "$ref": "#/$defs/colorOverride"
         },
         "blue": {
-          "$ref": "#/definitions/HexColor"
+          "$ref": "#/$defs/colorOverride"
         },
         "lavender": {
-          "$ref": "#/definitions/HexColor"
+          "$ref": "#/$defs/colorOverride"
         }
-      },
-      "required": [],
-      "title": "Overrides"
+      }
     }
   }
 }
