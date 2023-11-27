@@ -30,6 +30,14 @@ const tokens = (context: ThemeContext): TextmateColors => {
         fontStyle: "",
       },
     },
+    {
+      name: "Nix paths",
+      scope: "string.unquoted.path.nix",
+      settings: {
+        foreground: palette.text,
+        fontStyle: "",
+      },
+    },
   ];
 };
 
