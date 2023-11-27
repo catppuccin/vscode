@@ -213,5 +213,5 @@
     "storybook": "storybook dev -p 6006",
     "update-types": "tsx src/hooks/updateVSCtypes.ts"
   },
-  "packageManager": "yarn@3.6.3"
+  "packageManager": "yarn@4.0.2"
 }
