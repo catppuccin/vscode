@@ -161,10 +161,6 @@
   },
   "devDependencies": {
     "@catppuccin/palette": "^0.2.0",
-    "@esbuild/darwin-arm64": "npm:0.18.20",
-    "@esbuild/darwin-x64": "npm:0.18.20",
-    "@esbuild/linux-arm64": "npm:0.18.20",
-    "@esbuild/linux-x64": "npm:0.18.20",
     "@storybook/addon-essentials": "^7.5.1",
     "@storybook/addon-styling": "^1.3.7",
     "@storybook/addon-themes": "^7.5.1",
@@ -213,5 +209,5 @@
     "storybook": "storybook dev -p 6006",
     "update-types": "tsx src/hooks/updateVSCtypes.ts"
   },
-  "packageManager": "yarn@3.6.3"
+  "packageManager": "yarn@4.0.2"
 }
