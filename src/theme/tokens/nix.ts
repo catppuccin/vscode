@@ -34,7 +34,7 @@ const tokens = (context: ThemeContext): TextmateColors => {
       name: "Nix paths",
       scope: "string.unquoted.path.nix",
       settings: {
-        foreground: palette.text,
+        foreground: palette.pink,
         fontStyle: "",
       },
     },
