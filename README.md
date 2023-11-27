@@ -280,6 +280,7 @@ You can find all the available keys [here](https://code.visualstudio.com/api/ref
 Catppuccin for VSCode also themes the following extensions:
 
 - [ErrorLens](https://github.com/usernamehw/vscode-error-lens)
+- [GitHub Pull Requests and Issues](https://github.com/microsoft/vscode-pull-request-github)
 - [GitLens](https://github.com/gitkraken/vscode-gitlens)
 
 ## Support

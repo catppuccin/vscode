@@ -46,6 +46,13 @@ const mappings = [
     fname: "gitlens.d.ts",
     kind: "extension-packagejson",
   },
+  {
+    schema:
+      "https://github.com/microsoft/vscode-pull-request-github/raw/v0.77.2023112709/package.json",
+    name: "GitHubPullRequestColors",
+    fname: "github-pull-request.d.ts",
+    kind: "extension-packagejson",
+  },
 ];
 
 for (const { schema, name, fname, kind } of mappings) {
