@@ -6,6 +6,8 @@ export const getSemanticTokens = (context: ThemeContext): SemanticTokens => {
   return {
     enumMember: { foreground: palette.teal },
     selfKeyword: { foreground: palette.red },
+    boolean: { foreground: palette.peach },
+    number: { foreground: palette.peach },
     "variable.defaultLibrary": { foreground: palette.maroon },
 
     // Python types
@@ -39,6 +41,9 @@ export const getSemanticTokens = (context: ThemeContext): SemanticTokens => {
     // Rust attributes
     "builtinAttribute.attribute.library:rust": { foreground: palette.blue },
     "generic.attribute:rust": { foreground: palette.text },
+
+    // Nix
+    "constant.builtin.readonly:nix": { foreground: palette.mauve },
 
     // Typst
     heading: { foreground: palette.red },
