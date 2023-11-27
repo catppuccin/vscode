@@ -5,5 +5,7 @@ in
     buildInputs = [
       nodejs
       (pkgs.yarn.override {inherit nodejs;})
+      pkgs.alejandra
+      pkgs.nil
     ];
   }
