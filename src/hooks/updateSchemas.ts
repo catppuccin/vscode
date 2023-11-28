@@ -146,7 +146,7 @@ fetch(vscodeSchemasRoot + "workbench-colors.json")
     );
     writeFile(
       join(repoRoot, "schemas/customUIColors.schema.json"),
-      JSON.stringify(schema, null, 2),
+      JSON.stringify(schema, null, 2) + "\n",
       "utf-8",
     );
   });
