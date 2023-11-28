@@ -4,6 +4,6 @@
 !LICENSE
 !README.md
 !assets/icon.png
-!dist/
+!dist/*.js
 !package.json
 !themes/*.json
