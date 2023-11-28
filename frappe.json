@@ -444,6 +444,14 @@
     "errorLens.warningForeground": "#ef9f76",
     "errorLens.warningForegroundLight": "#ef9f76",
     "errorLens.warningMessageBackground": "#ef9f7626",
+    "issues.closed": "#ca9ee6",
+    "issues.newIssueDecoration": "#f2d5cf",
+    "issues.open": "#a6d189",
+    "pullRequests.closed": "#e78284",
+    "pullRequests.draft": "#949cbb",
+    "pullRequests.merged": "#ca9ee6",
+    "pullRequests.notification": "#c6d0f5",
+    "pullRequests.open": "#a6d189",
     "gitlens.gutterBackgroundColor": "#4145594c",
     "gitlens.gutterForegroundColor": "#c6d0f5",
     "gitlens.gutterUncommittedForegroundColor": "#ca9ee6",
@@ -513,6 +521,12 @@
     "selfKeyword": {
       "foreground": "#e78284"
     },
+    "boolean": {
+      "foreground": "#ef9f76"
+    },
+    "number": {
+      "foreground": "#ef9f76"
+    },
     "variable.defaultLibrary": {
       "foreground": "#ea999c"
     },
@@ -574,6 +588,9 @@
     },
     "generic.attribute:rust": {
       "foreground": "#c6d0f5"
+    },
+    "constant.builtin.readonly:nix": {
+      "foreground": "#ca9ee6"
     },
     "heading": {
       "foreground": "#e78284"
@@ -1641,6 +1658,14 @@
       "scope": "meta.embedded variable.parameter.name.nix",
       "settings": {
         "foreground": "#babbf1",
+        "fontStyle": ""
+      }
+    },
+    {
+      "name": "Nix paths",
+      "scope": "string.unquoted.path.nix",
+      "settings": {
+        "foreground": "#f4b8e4",
         "fontStyle": ""
       }
     },
