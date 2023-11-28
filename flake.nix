@@ -9,7 +9,7 @@
       pkgs = nixpkgs.legacyPackages.${system};
     in rec {
       default = catppuccin-vsc;
-      catppuccin-vsc = pkgs.callPackage ./. {};
+      catppuccin-vsc = pkgs.callPackage ./nix {};
     });
 
     overlays.default = final: prev: let
@@ -32,7 +32,7 @@
     devShells = forAllSystems (system: let
       pkgs = nixpkgs.legacyPackages.${system};
     in {
-      default = import ./shell.nix {inherit pkgs;};
+      default = import ./nix/shell.nix {inherit pkgs;};
     });
   };
 }

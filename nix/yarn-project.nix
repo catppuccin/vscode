@@ -6,10 +6,10 @@
 
 let
 
-  yarnBin = ./.yarn/releases/yarn-4.0.2.cjs;
+  yarnBin = ../.yarn/releases/yarn-4.0.2.cjs;
 
   cacheFolder = ".yarn/cache";
-  lockfile = ./yarn.lock;
+  lockfile = ../yarn.lock;
 
   # Call overrideAttrs on a derivation if a function is provided.
   optionalOverride = fn: drv:
