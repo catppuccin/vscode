@@ -1,24 +1,24 @@
 @import "@catppuccin/palette/style";
 
 .shiki {
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: "IBM Plex Mono", monospace;
 }
 
 .mocha {
-    background-color: var(--ctp-mocha-base);
-    color: var(--ctp-mocha-text);
+  background-color: var(--ctp-mocha-base);
+  color: var(--ctp-mocha-text);
 }
 .macchiato {
-    background-color: var(--ctp-macchiato-base);
-    color: var(--ctp-macchiato-text);
+  background-color: var(--ctp-macchiato-base);
+  color: var(--ctp-macchiato-text);
 }
 .frappe {
-    background-color: var(--ctp-frappe-base);
-    color: var(--ctp-frappe-text);
+  background-color: var(--ctp-frappe-base);
+  color: var(--ctp-frappe-text);
 }
 .latte {
-    background-color: var(--ctp-latte-base);
-    color: var(--ctp-latte-text);
+  background-color: var(--ctp-latte-base);
+  color: var(--ctp-latte-text);
 }
 
 html.mocha .shiki,

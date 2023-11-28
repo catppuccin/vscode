@@ -1,17 +1,17 @@
 on:
   push:
-      branches: [main]
-      paths:
-        - ".storybook/**/*"
-        - "stories/**/*"
-        - "src/theme/**/*.ts"
+    branches: [main]
+    paths:
+      - ".storybook/**/*"
+      - "stories/**/*"
+      - "src/theme/**/*.ts"
   pull_request:
-      paths:
-        - ".storybook/**/*"
-        - "stories/**/*"
-        - "src/theme/**/*.ts"
+    paths:
+      - ".storybook/**/*"
+      - "stories/**/*"
+      - "src/theme/**/*.ts"
 
-name: 'Chromatic'
+name: "Chromatic"
 
 jobs:
   chromatic-deployment:

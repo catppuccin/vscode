@@ -43,8 +43,8 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./themes
           publish_branch: compiled
-          user_name: 'github-actions[bot]'
-          user_email: 'github-actions[bot]@users.noreply.github.com'
+          user_name: "github-actions[bot]"
+          user_email: "github-actions[bot]@users.noreply.github.com"
           exclude_assets: ".flag"
           enable_jekyll: true
 
@@ -78,5 +78,4 @@ jobs:
       - name: Add fils to GH Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run:
-          gh release upload ${{ needs.release-please.outputs.tag_name }} ${{ steps.packageExtension.outputs.vsixPath }}
+        run: gh release upload ${{ needs.release-please.outputs.tag_name }} ${{ steps.packageExtension.outputs.vsixPath }}
