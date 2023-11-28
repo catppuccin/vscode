@@ -1,5 +1,24 @@
 # Changelog
 
+## [3.7.0](https://github.com/catppuccin/vscode/compare/v3.6.0...v3.7.0) (2023-11-28)
+
+
+### Features
+
+* **extension:** add GitHub Pull Request and Issues ([#216](https://github.com/catppuccin/vscode/issues/216)) ([8da4d3d](https://github.com/catppuccin/vscode/commit/8da4d3d4b4d7f3db30d9b9106dea666c2469baab))
+* **settings:** improved JSON schemas ([#223](https://github.com/catppuccin/vscode/issues/223)) ([dd61a88](https://github.com/catppuccin/vscode/commit/dd61a8868faf53e71558450a320f87e0aeaaa6f0))
+
+
+### Bug Fixes
+
+* **syntax:** nix path colors ([#222](https://github.com/catppuccin/vscode/issues/222)) ([de9cd4f](https://github.com/catppuccin/vscode/commit/de9cd4ff10163255524551d31f9dd23958b945b8))
+* **syntax:** nix paths, numbers, constants ([235693b](https://github.com/catppuccin/vscode/commit/235693bc9ba9d1e05801e5a6954af1bb5accd659))
+
+
+### Reverts
+
+* chore: deduplicate catppuccinColor enum ([371e4db](https://github.com/catppuccin/vscode/commit/371e4db14da2f06d7fda8da9b6929c75a136b0b6))
+
 ## [3.6.0](https://github.com/catppuccin/vscode/compare/v3.5.0...v3.6.0) (2023-10-30)
 
 
