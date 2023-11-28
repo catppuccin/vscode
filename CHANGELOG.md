@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.7.1](https://github.com/catppuccin/vscode/compare/v3.7.0...v3.7.1) (2023-11-28)
+
+
+### Bug Fixes
+
+* **settings:** validation error for customUIColors with opacity ([#225](https://github.com/catppuccin/vscode/issues/225)) ([e897d5c](https://github.com/catppuccin/vscode/commit/e897d5cee8e58eb4390ae3d365182c987aa164ce))
+
 ## [3.7.0](https://github.com/catppuccin/vscode/compare/v3.6.0...v3.7.0) (2023-11-28)
 
 
