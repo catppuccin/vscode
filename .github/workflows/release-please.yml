@@ -78,4 +78,5 @@ jobs:
       - name: Add fils to GH Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: gh release upload ${{ needs.release-please.outputs.tag_name }} ${{ steps.packageExtension.outputs.vsixPath }}
+        run: |
+          gh release upload ${{ needs.release-please.outputs.tag_name }} ${{ steps.packageExtension.outputs.vsixPath }}
