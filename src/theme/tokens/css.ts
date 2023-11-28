@@ -6,9 +6,19 @@ const tokens = (context: ThemeContext): TextmateColors => {
   return [
     {
       name: "Classes, reflecting the className color in JSX",
-      scope: "source.css entity.other.attribute-name.class",
+      scope: [
+        "source.css entity.other.attribute-name.class.css",
+        "entity.other.attribute-name.parent-selector.css punctuation.definition.entity.css",
+      ],
       settings: {
         foreground: palette.yellow,
+      },
+    },
+    {
+      name: "Operators",
+      scope: "punctuation.separator.operator.css",
+      settings: {
+        foreground: palette.teal,
       },
     },
     {
