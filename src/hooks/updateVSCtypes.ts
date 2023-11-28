@@ -1,10 +1,7 @@
-import * as path from "path";
-import { writeFileSync } from "fs";
+import { join } from "node:path";
+import { writeFileSync } from "node:fs";
 import { compile, JSONSchema } from "json-schema-to-typescript";
-import fetch from "node-fetch";
-
-const tag = process.argv[2] ?? "latest";
-const vscodeSchemasRoot = `https://raw.githubusercontent.com/wraith13/vscode-schemas/master/en/${tag}/schemas/`;
+import { repoRoot, vscodeSchemasRoot } from "./constants";
 
 const bannerComment = `/* eslint-disable */
 /**
@@ -71,10 +68,9 @@ for (const { schema, name, fname, kind } of mappings) {
           throw new Error(`Unknown kind: ${kind}`);
       }
     })
-    .then((typeDefs) => {
-      const fp = path.join(__dirname, `../types/${fname}`);
-      writeFileSync(fp, typeDefs, "utf-8");
-    });
+    .then((typeDefs) =>
+      writeFileSync(join(repoRoot, fname), typeDefs, "utf-8"),
+    );
 }
 
 const fromVSIXColors = (interfaceName: string, data: any) => {
