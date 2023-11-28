@@ -181,7 +181,6 @@
     "husky": "^8.0.3",
     "json-schema-to-typescript": "^13.1.1",
     "lint-staged": "^15.1.0",
-    "node-fetch": "^2.7.0",
     "prettier": "^3.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -197,15 +196,14 @@
     "*.{ts,json,md}": "prettier --write"
   },
   "scripts": {
-    "build": "yarn compile:theme && yarn compile",
+    "build": "yarn hooks && yarn compile",
     "build-storybook": "storybook build",
     "chromatic": "chromatic --exit-zero-on-changes --exit-once-uploaded --project-token chpt_e3cba49738d7554",
     "compile": "tsup",
-    "compile:theme": "tsx src/hooks/generateThemes.ts",
     "dev": "yarn compile:theme && yarn compile --env.NODE_ENV development",
+    "hooks": "tsx src/hooks/index.ts",
     "lint": "eslint . --ext .ts",
     "package": "vsce package --allow-star-activation --yarn",
-    "postbuild": "prettier -w ./themes",
     "prepare": "husky install",
     "storybook": "storybook dev -p 6006",
     "update-types": "tsx src/hooks/updateVSCtypes.ts"
