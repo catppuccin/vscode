@@ -13,7 +13,7 @@
   inherit (pkgs) lib;
 
   packageJSON = builtins.fromJSON (builtins.readFile ../package.json);
-  properties = (builtins.head packageJSON.contributes.configuration).properties;
+  properties = packageJSON.contributes.configuration.properties;
   validAccents = properties."catppuccin.accentColor".enum;
   validWorkbenchModes = properties."catppuccin.workbenchMode".enum;
   validBracketModes = properties."catppuccin.bracketMode".enum;
