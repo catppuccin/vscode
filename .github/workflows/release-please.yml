@@ -15,6 +15,7 @@ jobs:
       - uses: google-github-actions/release-please-action@v3
         id: release
         with:
+          token: ${{ secrets.GH_TOKEN }}
           release-type: node
     outputs:
       release_created: ${{ steps.release.outputs.release_created }}
@@ -75,7 +76,7 @@ jobs:
           pat: ${{ secrets.OPEN_VSX_TOKEN }}
           extensionFile: ${{ steps.packageExtension.outputs.vsixPath }}
 
-      - name: Add fils to GH Release
+      - name: Add files to GH Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
