@@ -31,7 +31,7 @@
 
       buildPhase = ''
         runHook preBuild
-        yarn compile
+        yarn build
         runHook postBuild
       '';
 
@@ -46,7 +46,7 @@
 
   extension = pkgs.stdenvNoCC.mkDerivation {
     inherit name version pname src;
-    buildInputs = [pkgs.nodejs pkgs.vsce];
+    buildInputs = [pkgs.nodejs pkgs.vsce pkgs.yarn];
 
     # check in the ./themes/.flag so it doesn't prompt for initial rebuilds
     patchPhase = ''
