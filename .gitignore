@@ -6,10 +6,9 @@ themes/
 .eslintcache
 *.vsix
 
-# yarn v3
+# yarn v4
 .yarn-error.log
 .yarn/*
-!.yarn/releases
 !.yarn/plugins
 !.yarn/sdks
 !.yarn/versions
