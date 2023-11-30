@@ -186,6 +186,7 @@
     "storybook": "^7.5.3",
     "tsup": "^8.0.1",
     "tsx": "^4.6.0",
+    "type-flag": "^3.0.0",
     "typescript": "^5.3.2",
     "vite": "^4.5.0"
   },
@@ -194,16 +195,15 @@
     "*.{ts,json,md}": "prettier --write"
   },
   "scripts": {
-    "build": "yarn hooks && yarn compile",
-    "build-storybook": "storybook build",
+    "build": "tsx build.ts",
+    "build:ads": "tsx build.ts --ads",
     "chromatic": "chromatic --exit-zero-on-changes --exit-once-uploaded --project-token chpt_e3cba49738d7554",
-    "compile": "tsup",
-    "dev": "yarn compile:theme && yarn compile --env.NODE_ENV development",
-    "hooks": "tsx src/hooks/index.ts",
+    "dev": "tsx build.ts --dev",
     "lint": "eslint . --ext .ts",
-    "package": "vsce package --allow-star-activation --yarn",
+    "package": "vsce package --yarn",
     "prepare": "husky install",
-    "storybook": "storybook dev -p 6006",
+    "storybook:build": "storybook build",
+    "storybook:dev": "storybook dev -p 6006",
     "update-types": "tsx src/hooks/updateVSCtypes.ts"
   },
   "packageManager": "yarn@4.0.2"

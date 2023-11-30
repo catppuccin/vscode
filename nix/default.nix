@@ -46,7 +46,7 @@
 
   extension = pkgs.stdenvNoCC.mkDerivation {
     inherit name version pname src;
-    buildInputs = [pkgs.nodejs pkgs.vsce pkgs.yarn];
+    buildInputs = [pkgs.nodejs pkgs.vsce];
 
     # check in the ./themes/.flag so it doesn't prompt for initial rebuilds
     patchPhase = ''
@@ -55,13 +55,15 @@
       runHook postPatch
     '';
 
+    env.CATPPUCCIN_OPTIONS = builtins.toJSON options;
+
     buildPhase = ''
       runHook preBuild
       mkdir -p themes dist
       cp -r ${builder}/* dist/
       touch ./themes/.flag
-      node dist/hooks/generateThemes.js '${builtins.toJSON options}'
-      vsce package --allow-star-activation --yarn
+      node dist/hooks/generateThemes.js
+      vsce package --yarn
       runHook postBuild
     '';
 

@@ -1,2 +1,0 @@
-import "./generateThemes";
-import "./updateSchemas";

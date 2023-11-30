@@ -5535,6 +5535,7 @@ __metadata:
     storybook: "npm:^7.5.3"
     tsup: "npm:^8.0.1"
     tsx: "npm:^4.6.0"
+    type-flag: "npm:^3.0.0"
     typescript: "npm:^5.3.2"
     vite: "npm:^4.5.0"
   languageName: unknown
@@ -12060,6 +12061,13 @@ __metadata:
   version: 2.19.0
   resolution: "type-fest@npm:2.19.0"
   checksum: 7bf9e8fdf34f92c8bb364c0af14ca875fac7e0183f2985498b77be129dc1b3b1ad0a6b3281580f19e48c6105c037fb966ad9934520c69c6434d17fd0af4eed78
+  languageName: node
+  linkType: hard
+
+"type-flag@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "type-flag@npm:3.0.0"
+  checksum: 1a9ddaba06355666ca5d26725604dd707d31dadf7536eb6e7e3c2520d84d773944b4e53f94da8b08bf9064be721a6b9ebbff65d524e5f03767a729966087fd32
   languageName: node
   linkType: hard
 
