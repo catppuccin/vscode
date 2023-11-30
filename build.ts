@@ -23,13 +23,13 @@ const dev = getFlag("--dev", Boolean);
     splitting: true,
   });
 
-  // restore the original package.json when building for ADS
-  if (buildForADS) await updatePackageJson();
-
   const shortName = buildForADS ? "ads" : "vsc";
   const packagePath = `catppuccin-${shortName}-${packageJson.version}.vsix`;
 
-  createVSIX({ useYarn: true, packagePath });
+  await createVSIX({ useYarn: true, packagePath });
+
+  // restore the original package.json when building for ADS
+  if (buildForADS) await updatePackageJson();
 
   if (process.env.CI) {
     setOutput("vsixPath", packagePath);
