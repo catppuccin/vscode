@@ -2,10 +2,12 @@
   nodejs = pkgs.nodejs_18;
 in
   pkgs.mkShell {
-    buildInputs = [
+    buildInputs = with pkgs; [
+      alejandra
+      nil
+
       nodejs
-      (pkgs.yarn.override {inherit nodejs;})
-      pkgs.alejandra
-      pkgs.nil
+      corepack
+      (yarn.override {inherit nodejs;})
     ];
   }
