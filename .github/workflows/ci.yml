@@ -9,26 +9,27 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
       - uses: actions/setup-node@v4
         with:
           node-version: 18
           cache: yarn
+
       - run: corepack enable
-      - name: Install dependencies & build
-        run: |
-          yarn install --immutable
-          yarn build
+
+      - name: Install dependencies
+        run: yarn install --immutable
+
       - name: Lint
         run: yarn lint
-      - name: Package Extension
-        id: packageExtension
-        uses: HaaLeo/publish-vscode-extension@v1
-        with:
-          yarn: true
-          pat: stub
-          dryRun: true
+
+      - name: Build
+        run: |
+          yarn build
+          yarn build:ads
+
       - name: Upload Artifact
         uses: actions/upload-artifact@v3
         with:
           name: catppuccin-vsc.vsix
-          path: ${{ steps.packageExtension.outputs.vsixPath }}
+          path: catppuccin-*.vsix
