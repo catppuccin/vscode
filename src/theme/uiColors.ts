@@ -57,7 +57,7 @@ export const getUiColors = (
     "badge.foreground": palette.text,
 
     "breadcrumb.activeSelectionForeground": accent,
-    "breadcrumb.background": palette.mantle,
+    "breadcrumb.background": palette.base,
     "breadcrumb.focusForeground": accent,
     "breadcrumb.foreground": opacity(palette.text, 0.8),
     "breadcrumbPicker.background": palette.mantle,
@@ -403,14 +403,22 @@ export const getUiColors = (
 
     // Tab Bar
     "tab.activeBackground": palette.base,
-    "tab.activeBorder": accent,
-    "tab.activeBorderTop": transparent,
+    "tab.activeBorder": transparent,
+    "tab.activeBorderTop": accent,
     "tab.activeForeground": accent,
+    "tab.activeModifiedBorder": palette.yellow,
     "tab.border": palette.mantle,
+    "tab.hoverBackground": shade(palette.base, 0.1),
+    "tab.hoverBorder": transparent,
+    "tab.hoverForeground": accent,
     "tab.inactiveBackground": palette.mantle,
     "tab.inactiveForeground": palette.overlay0,
-    "tab.activeModifiedBorder": palette.yellow,
     "tab.inactiveModifiedBorder": opacity(palette.yellow, 0.3),
+    "tab.lastPinnedBorder": accent,
+    "tab.unfocusedActiveBackground": palette.mantle,
+    "tab.unfocusedActiveBorder": transparent,
+    "tab.unfocusedActiveBorderTop": opacity(accent, 0.3),
+    "tab.unfocusedInactiveBackground": shade(palette.mantle, -0.05),
 
     // Terminal
     "terminal.foreground": palette.text,
