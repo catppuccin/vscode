@@ -1,4 +1,6 @@
 import { ThemeContext } from "@/types";
+
+import azureDataStudio from "./azureDataStudio";
 import brackets from "./brackets";
 import workbench from "./workbench";
 
@@ -9,6 +11,7 @@ const uiCustomizations = (context: ThemeContext) => {
     ...brackets(context),
     ...workbench(context),
     ...customNamedColors(context),
+    ...azureDataStudio(context),
   };
 };
 

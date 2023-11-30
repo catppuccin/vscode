@@ -26,16 +26,23 @@ jobs:
     if: ${{ needs.release-please.outputs.release_created }}
     steps:
       - uses: actions/checkout@v4
+
       - uses: actions/setup-node@v4
         with:
           node-version: 18
           cache: yarn
+
       - run: corepack enable
 
-      - name: Build
-        run: |
-          yarn install --immutable
-          yarn build
+      - run: yarn install --immutable
+
+      - name: Build VSCode
+        id: build-vscode
+        run: yarn build
+
+      - name: Build Azure Data Studio
+        id: build-ads
+        run: yarn build:ads
 
       - name: Publish to orphaned branch
         uses: peaceiris/actions-gh-pages@v3
@@ -48,35 +55,27 @@ jobs:
           exclude_assets: ".flag"
           enable_jekyll: true
 
-      - name: Package Extension
-        id: packageExtension
-        uses: HaaLeo/publish-vscode-extension@v1
-        with:
-          yarn: true
-          pat: stub
-          dryRun: true
-
       - name: Publish to Visual Studio Marketplace
         uses: HaaLeo/publish-vscode-extension@v1
         with:
           yarn: true
           pat: ${{ secrets.VS_MARKETPLACE_TOKEN }}
-          extensionFile: ${{ steps.packageExtension.outputs.vsixPath }}
+          extensionFile: ${{ steps.build-vscode.outputs.vsixPath }}
           registryUrl: https://marketplace.visualstudio.com
 
       - name: Publish to Open VSX Registry
         uses: HaaLeo/publish-vscode-extension@v1
         # continue even if OpenVSX fails
+        # -> see https://github.com/catppuccin/vscode/issues/51
         continue-on-error: true
         timeout-minutes: 10
-        # see issue #51
         with:
           yarn: true
           pat: ${{ secrets.OPEN_VSX_TOKEN }}
-          extensionFile: ${{ steps.packageExtension.outputs.vsixPath }}
+          extensionFile: ${{ steps.build-vscode.outputs.vsixPath }}
 
       - name: Add files to GH Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          gh release upload ${{ needs.release-please.outputs.tag_name }} ${{ steps.packageExtension.outputs.vsixPath }}
+          gh release upload ${{ needs.release-please.outputs.tag_name }} catppuccin-*.vsix

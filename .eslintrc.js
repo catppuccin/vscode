@@ -11,8 +11,9 @@ module.exports = {
   ],
   overrides: [
     {
-      extends: ["plugin:@typescript-eslint/disable-type-checked"],
-      files: ["./tsup.config.ts"],
+      // eslint is having trouble linting its own config file
+      files: [".eslintrc.js"],
+      rules: { "@typescript-eslint/no-var-requires": "off", "no-undef": "off" },
     },
   ],
   parser: "@typescript-eslint/parser",

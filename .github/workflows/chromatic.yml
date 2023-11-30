@@ -14,23 +14,27 @@ on:
 name: "Chromatic"
 
 jobs:
-  chromatic-deployment:
+  chromatic:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
+
       - uses: actions/setup-node@v4
         with:
           node-version: 18
           cache: yarn
+
       - run: corepack enable
-      - name: Install dependencies & build
-        run: |
-          yarn install --immutable
-          yarn build
+
+      - run: yarn install --immutable
+
+      - run: yarn build
+
       - name: Publish to Chromatic
         uses: chromaui/action@v1
         with:
+          buildScriptName: "storybook:build"
           exitOnceUploaded: true
           projectToken: "chpt_e3cba49738d7554"

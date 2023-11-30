@@ -31,7 +31,7 @@
 
       buildPhase = ''
         runHook preBuild
-        yarn compile
+        yarn build
         runHook postBuild
       '';
 
@@ -55,13 +55,15 @@
       runHook postPatch
     '';
 
+    env.CATPPUCCIN_OPTIONS = builtins.toJSON options;
+
     buildPhase = ''
       runHook preBuild
       mkdir -p themes dist
       cp -r ${builder}/* dist/
       touch ./themes/.flag
-      node dist/hooks/generateThemes.js '${builtins.toJSON options}'
-      vsce package --allow-star-activation --yarn
+      node dist/hooks/generateThemes.js
+      vsce package --yarn
       runHook postBuild
     '';
 
