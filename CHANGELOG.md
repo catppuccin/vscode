@@ -1,5 +1,17 @@
 # Changelog
 
+## [3.8.0](https://github.com/catppuccin/vscode/compare/v3.7.1...v3.8.0) (2023-11-30)
+
+
+### Features
+
+* **ui:** redesign tab bar ([#231](https://github.com/catppuccin/vscode/issues/231)) ([66e9220](https://github.com/catppuccin/vscode/commit/66e92202cc80c19d887d7606e0ab487bf38652f1))
+
+
+### Bug Fixes
+
+* **syntax:** CSS operators, preprocessor parent selectors ([#227](https://github.com/catppuccin/vscode/issues/227)) ([68b1018](https://github.com/catppuccin/vscode/commit/68b1018378d8fa57d303f29552d01a15225c9312))
+
 ## [3.7.1](https://github.com/catppuccin/vscode/compare/v3.7.0...v3.7.1) (2023-11-28)
 
 
