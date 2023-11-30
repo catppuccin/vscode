@@ -60,7 +60,7 @@ jobs:
         with:
           yarn: true
           pat: ${{ secrets.VS_MARKETPLACE_TOKEN }}
-          extensionFile: ${{ steps.packageExtension.outputs.vsixPath }}
+          extensionFile: ${{ steps.build-vscode.outputs.vsixPath }}
           registryUrl: https://marketplace.visualstudio.com
 
       - name: Publish to Open VSX Registry
@@ -72,7 +72,7 @@ jobs:
         with:
           yarn: true
           pat: ${{ secrets.OPEN_VSX_TOKEN }}
-          extensionFile: ${{ steps.packageExtension.outputs.vsixPath }}
+          extensionFile: ${{ steps.build-vscode.outputs.vsixPath }}
 
       - name: Add files to GH Release
         env:

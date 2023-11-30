@@ -28,10 +28,9 @@ jobs:
 
       - run: corepack enable
 
-      - name: Install dependencies & build
-        run: |
-          yarn install --immutable
-          yarn build
+      - run: yarn install --immutable
+
+      - run: yarn build
 
       - name: Publish to Chromatic
         uses: chromaui/action@v1

@@ -14,13 +14,13 @@ const dev = getFlag("--dev", Boolean);
   const packageJson = await updatePackageJson({ buildForADS });
 
   await build({
+    clean: true,
     entry: ["src/browser.ts", "src/main.ts", "src/hooks/generateThemes.ts"],
     external: ["vscode"],
-    sourcemap: dev,
     minify: !dev,
-    target: "node16",
-    clean: true,
+    sourcemap: dev,
     splitting: true,
+    target: "node16",
   });
 
   const shortName = buildForADS ? "ads" : "vsc";
@@ -30,8 +30,6 @@ const dev = getFlag("--dev", Boolean);
 
   // restore the original package.json when building for ADS
   if (buildForADS) await updatePackageJson();
-
-  if (process.env.CI) {
-    setOutput("vsixPath", packagePath);
-  }
+  // the upload step in the CI required the path to the vsix file
+  if (process.env.CI) setOutput("vsixPath", packagePath);
 })();
