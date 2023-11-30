@@ -15,7 +15,6 @@ jobs:
       - uses: google-github-actions/release-please-action@v3
         id: release
         with:
-          token: ${{ secrets.GH_TOKEN }}
           release-type: node
     outputs:
       release_created: ${{ steps.release.outputs.release_created }}
