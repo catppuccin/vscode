@@ -1,3 +1,4 @@
+import { setOutput } from "@actions/core";
 import { createVSIX } from "@vscode/vsce";
 import { build } from "tsup";
 import { getFlag } from "type-flag";
@@ -10,7 +11,7 @@ const dev = getFlag("--dev", Boolean);
 
 (async () => {
   await generateThemes();
-  const packageJSON = await updatePackageJson({ buildForADS });
+  const packageJson = await updatePackageJson({ buildForADS });
 
   await build({
     entry: ["src/browser.ts", "src/main.ts", "src/hooks/generateThemes.ts"],
@@ -26,8 +27,11 @@ const dev = getFlag("--dev", Boolean);
   if (buildForADS) await updatePackageJson();
 
   const shortName = buildForADS ? "ads" : "vsc";
-  createVSIX({
-    useYarn: true,
-    packagePath: `catppuccin-${shortName}-${packageJSON.version}.vsix`,
-  });
+  const packagePath = `catppuccin-${shortName}-${packageJson.version}.vsix`;
+
+  createVSIX({ useYarn: true, packagePath });
+
+  if (process.env.CI) {
+    setOutput("vsixPath", packagePath);
+  }
 })();

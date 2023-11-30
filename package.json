@@ -71,13 +71,13 @@
           "type": "object",
           "default": {},
           "markdownDescription": "Custom color overrides. Assign your own hex codes to palette colors. See [the docs](https://github.com/catppuccin/vscode#override-palette-colors) for reference.",
-          "$ref": "https://cdn.jsdelivr.net/gh/catppuccin/vscode@v3.7.0/schemas/colorOverrides.schema.json"
+          "$ref": "https://cdn.jsdelivr.net/gh/catppuccin/vscode@v3.7.1/schemas/colorOverrides.schema.json"
         },
         "catppuccin.customUIColors": {
           "type": "object",
           "default": {},
           "markdownDescription": "Customize UI colors. Map `workbench.colorCustomizations` to palette colors. See [the docs](https://github.com/catppuccin/vscode#use-palette-colors-on-workbench-elements-ui) for reference.",
-          "$ref": "https://cdn.jsdelivr.net/gh/catppuccin/vscode@v3.7.0/schemas/customUIColors.schema.json"
+          "$ref": "https://cdn.jsdelivr.net/gh/catppuccin/vscode@v3.7.1/schemas/customUIColors.schema.json"
         },
         "catppuccin.accentColor": {
           "type": "string",
@@ -159,6 +159,7 @@
     "isPreReleaseVersion": false
   },
   "devDependencies": {
+    "@actions/core": "^1.10.1",
     "@catppuccin/palette": "^0.2.0",
     "@storybook/addon-essentials": "^7.5.3",
     "@storybook/addon-styling": "^1.3.7",
