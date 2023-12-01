@@ -26,10 +26,10 @@ const dev = getFlag("--dev", Boolean);
   const shortName = buildForADS ? "ads" : "vsc";
   const packagePath = `catppuccin-${shortName}-${packageJson.version}.vsix`;
 
-  await createVSIX({ useYarn: true, packagePath });
+  await createVSIX({ dependencies: false, packagePath });
 
   // restore the original package.json when building for ADS
   if (buildForADS) await updatePackageJson();
   // the upload step in the CI required the path to the vsix file
-  if (process.env.CI) setOutput("vsixPath", packagePath);
+  if (process.env.GITHUB_ACTIONS) setOutput("vsixPath", packagePath);
 })();
