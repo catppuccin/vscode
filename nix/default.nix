@@ -46,7 +46,7 @@
 
   extension = pkgs.stdenvNoCC.mkDerivation {
     inherit name version pname src;
-    buildInputs = [pkgs.nodejs pkgs.vsce pkgs.yarn];
+    buildInputs = [pkgs.nodejs pkgs.vsce];
 
     # check in the ./themes/.flag so it doesn't prompt for initial rebuilds
     patchPhase = ''
@@ -63,7 +63,7 @@
       cp -r ${builder}/* dist/
       touch ./themes/.flag
       node dist/hooks/generateThemes.js
-      vsce package --yarn
+      vsce package --no-dependencies
       runHook postBuild
     '';
 

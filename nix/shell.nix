@@ -1,13 +1,4 @@
-{pkgs ? import <nixpkgs> {}}: let
-  nodejs = pkgs.nodejs_18;
-in
-  pkgs.mkShell {
-    buildInputs = with pkgs; [
-      alejandra
-      nil
-
-      nodejs
-      corepack
-      (yarn.override {inherit nodejs;})
-    ];
-  }
+{pkgs ? import <nixpkgs> {}}:
+pkgs.mkShell {
+  buildInputs = with pkgs; [alejandra nil nodejs_18 corepack];
+}
