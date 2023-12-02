@@ -15,13 +15,14 @@ const flavors = Object.keys(variants) as CatppuccinFlavor[];
 
 // options can also be passed as a JSON string as an environment variable
 const optEnvVar = process.env.CATPPUCCIN_OPTIONS;
-const options = optEnvVar ? JSON.parse(optEnvVar) : {};
+const optEnv = optEnvVar ? JSON.parse(optEnvVar) : {};
 
 const main = async () => {
   await mkdir(join(repoRoot, "themes"), { recursive: true });
 
   flavors.map((flavor) => {
-    const theme = compileTheme(flavor, { ...defaultOptions, ...options });
+    const options = { ...defaultOptions, ...optEnv };
+    const theme = compileTheme(flavor, options);
     writeFile(
       join(repoRoot, `themes/${flavor}.json`),
       JSON.stringify(theme, null, 2),
