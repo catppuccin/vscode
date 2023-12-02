@@ -1,6 +1,7 @@
 {
   pkgs ? import <nixpkgs> {},
-  accentColor ? "mauve",
+  accentColor ? null,
+  accent ? "mauve",
   boldKeywords ? true,
   italicComments ? true,
   italicKeywords ? true,
@@ -76,7 +77,8 @@
     '';
   };
 in
-  (lib.checkListOfEnum "${pname}: accent" validAccents [accentColor])
+  (lib.throwIfNot (accentColor == null) "${pname}: deprecated option 'accentColor' is no longer supported, please use 'accent' instead.")
+  (lib.checkListOfEnum "${pname}: accent" validAccents [accent])
   (lib.checkListOfEnum "${pname}: workbenchMode" validWorkbenchModes [workbenchMode])
   (lib.checkListOfEnum "${pname}: bracketMode" validBracketModes [bracketMode])
   pkgs.vscode-utils.buildVscodeMarketplaceExtension {
