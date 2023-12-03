@@ -1,4 +1,4 @@
-import tinycolor = require("tinycolor2");
+import tinycolor from "tinycolor2";
 
 /**
  * @param {string} s String to capitalize
