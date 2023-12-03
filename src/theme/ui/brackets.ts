@@ -1,4 +1,4 @@
-import { shade } from "@/theme/utils";
+import { mix } from "@/theme/utils";
 import { ThemeContext, WorkbenchColors } from "@/types";
 
 type PickStartsWith<T extends object, S extends string> = {
@@ -12,10 +12,9 @@ type BracketHLs = keyof PickStartsWith<
 >;
 
 const brackets = (context: ThemeContext): Record<BracketHLs, string> => {
-  const { isLatte, options, palette } = context;
+  const { options, palette } = context;
 
   // invert the shade if current theme is latte
-  const L = isLatte ? -1 : 1;
   const styles = {
     rainbow: {
       "editorBracketHighlight.foreground1": palette.red,
@@ -27,15 +26,36 @@ const brackets = (context: ThemeContext): Record<BracketHLs, string> => {
       "editorBracketHighlight.unexpectedBracket.foreground": palette.maroon,
     },
     dimmed: {
-      "editorBracketHighlight.foreground1": shade(palette.red, -0.6 * L),
-      "editorBracketHighlight.foreground2": shade(palette.peach, -0.6 * L),
-      "editorBracketHighlight.foreground3": shade(palette.yellow, -0.6 * L),
-      "editorBracketHighlight.foreground4": shade(palette.green, -0.6 * L),
-      "editorBracketHighlight.foreground5": shade(palette.sapphire, -0.6 * L),
-      "editorBracketHighlight.foreground6": shade(palette.mauve, -0.6 * L),
-      "editorBracketHighlight.unexpectedBracket.foreground": shade(
+      "editorBracketHighlight.foreground1": mix(palette.red, palette.base, 0.5),
+      "editorBracketHighlight.foreground2": mix(
+        palette.peach,
+        palette.base,
+        0.5,
+      ),
+      "editorBracketHighlight.foreground3": mix(
+        palette.yellow,
+        palette.base,
+        0.5,
+      ),
+      "editorBracketHighlight.foreground4": mix(
+        palette.green,
+        palette.base,
+        0.5,
+      ),
+      "editorBracketHighlight.foreground5": mix(
+        palette.sapphire,
+        palette.base,
+        0.5,
+      ),
+      "editorBracketHighlight.foreground6": mix(
+        palette.mauve,
+        palette.base,
+        0.5,
+      ),
+      "editorBracketHighlight.unexpectedBracket.foreground": mix(
         palette.maroon,
-        -0.6 * L,
+        palette.base,
+        0.5,
       ),
     },
     monochromatic: {
