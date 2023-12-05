@@ -1,5 +1,13 @@
 # Changelog
 
+## [3.8.1](https://github.com/catppuccin/vscode/compare/v3.8.0...v3.8.1) (2023-12-05)
+
+
+### Bug Fixes
+
+* color maths, error in `shade()` function ([#240](https://github.com/catppuccin/vscode/issues/240)) ([ba46d54](https://github.com/catppuccin/vscode/commit/ba46d54a7decbd7e94825e272ee4d06342a9aacb))
+* **nix:** accent color wasn't applying correctly ([#238](https://github.com/catppuccin/vscode/issues/238)) ([2f13f50](https://github.com/catppuccin/vscode/commit/2f13f5036e9568deb2d82c2157394d2c154b6842))
+
 ## [3.8.0](https://github.com/catppuccin/vscode/compare/v3.7.1...v3.8.0) (2023-11-30)
 
 
