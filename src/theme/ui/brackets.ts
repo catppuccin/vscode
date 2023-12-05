@@ -14,8 +14,9 @@ type BracketHLs = keyof PickStartsWith<
 const brackets = (context: ThemeContext): Record<BracketHLs, string> => {
   const { isLatte, options, palette } = context;
 
-  // invert the shade if current theme is latte
-  const L = isLatte ? -1 : 1;
+  // invert the shade of dimmed brackets if current theme is latte
+  const dimAmount = -0.07 * (isLatte ? -1 : 1);
+
   const styles = {
     rainbow: {
       "editorBracketHighlight.foreground1": palette.red,
@@ -27,15 +28,15 @@ const brackets = (context: ThemeContext): Record<BracketHLs, string> => {
       "editorBracketHighlight.unexpectedBracket.foreground": palette.maroon,
     },
     dimmed: {
-      "editorBracketHighlight.foreground1": shade(palette.red, -0.6 * L),
-      "editorBracketHighlight.foreground2": shade(palette.peach, -0.6 * L),
-      "editorBracketHighlight.foreground3": shade(palette.yellow, -0.6 * L),
-      "editorBracketHighlight.foreground4": shade(palette.green, -0.6 * L),
-      "editorBracketHighlight.foreground5": shade(palette.sapphire, -0.6 * L),
-      "editorBracketHighlight.foreground6": shade(palette.mauve, -0.6 * L),
+      "editorBracketHighlight.foreground1": shade(palette.red, dimAmount),
+      "editorBracketHighlight.foreground2": shade(palette.peach, dimAmount),
+      "editorBracketHighlight.foreground3": shade(palette.yellow, dimAmount),
+      "editorBracketHighlight.foreground4": shade(palette.green, dimAmount),
+      "editorBracketHighlight.foreground5": shade(palette.sapphire, dimAmount),
+      "editorBracketHighlight.foreground6": shade(palette.mauve, dimAmount),
       "editorBracketHighlight.unexpectedBracket.foreground": shade(
         palette.maroon,
-        -0.6 * L,
+        dimAmount,
       ),
     },
     monochromatic: {
