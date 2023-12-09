@@ -23,11 +23,11 @@ jobs:
 
       - name: Build
         run: |
-          yarn build
-          yarn build:ads
+          yarn core:build
+          yarn core:build:ads
 
       - name: Upload Artifact
         uses: actions/upload-artifact@v3
         with:
           name: catppuccin-vsc.vsix
-          path: catppuccin-*.vsix
+          path: packages/core/catppuccin-*.vsix

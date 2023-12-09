@@ -1,0 +1,18 @@
+{
+  "packages": {
+    "packages/core": {
+      "package-name": "catppuccin-vsc",
+      "release-type": "node"
+    },
+    "packages/pack": {
+      "package-name": "catppuccin-pack",
+      "release-type": "node"
+    },
+    "packages/vscode": {
+      "package-name": "@catppuccin/vscode",
+      "release-type": "node"
+    }
+  },
+  "plugins": ["node-workspace"],
+  "$schema": "https://raw.githubusercontent.com/googleapis/release-please/main/schemas/config.json"
+}

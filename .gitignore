@@ -1,10 +1,12 @@
-dist/
 node_modules/
 result
 storybook-static/
-themes/
 .eslintcache
+*.tar
+*.tar.gz
+*.tgz
 *.vsix
+*.zip
 
 # yarn v4
 .yarn-error.log

@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { getHighlighter, bundledLanguages } from "shikiji";
 import "@catppuccin/palette/style";
-import mocha from "../themes/mocha.json";
-import macchiato from "../themes/macchiato.json";
-import frappe from "../themes/frappe.json";
-import latte from "../themes/latte.json";
+import mocha from "@catppuccin/vscode/themes/mocha.json";
+import macchiato from "@catppuccin/vscode/themes/macchiato.json";
+import frappe from "@catppuccin/vscode/themes/frappe.json";
+import latte from "@catppuccin/vscode/themes/latte.json";
 
 const themes = [mocha, macchiato, frappe, latte];
 const shiki = getHighlighter({

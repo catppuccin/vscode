@@ -72,7 +72,7 @@ let
   # Main project derivation.
   project = stdenv.mkDerivation (drvCommon // {
     inherit src;
-    name = "catppuccin-vsc";
+    name = "@catppuccin/vscode-monorepo";
 
     configurePhase = ''
       ${buildVars}
@@ -384,6 +384,10 @@ cacheEntries = {
 "@rollup/pluginutils@npm:5.0.4" = { filename = "@rollup-pluginutils-npm-5.0.4-344c94a032-a2f631ff4d.zip"; sha512 = "a2f631ff4d7a3843e9ba39f7dcb2752facf0311d4357d20b0dab19f4de2c21ed33f59af0d65e0ae8c9bb2cc9b97a18fe058f10106a219a8d70f2a385e29a3652"; };
 "@rollup/rollup-darwin-arm64@npm:4.6.0" = { filename = "@rollup-rollup-darwin-arm64-npm-4.6.0-6d047f1f3f-10.zip"; sha512 = "0add4397f1fb90488cfb6b53b96d56d6b9400e9ed824167edb29bd465bfa8c8b3df4d7e6de4f6adb6c8e059a28d177916ccbe162176dba2b9b6171cf054fca72"; };
 "@rollup/rollup-darwin-x64@npm:4.6.0" = { filename = "@rollup-rollup-darwin-x64-npm-4.6.0-2375382f7a-10.zip"; sha512 = "336ab52a9d587fba0a35c76fd6907afee967c9ee982b8ce39d9bbfdf299f5d1ad93803aa213484b7bf590addbf0b3bda3e8cf121b6761caf7bc881773110cebb"; };
+"@rollup/rollup-linux-arm64-gnu@npm:4.6.0" = { filename = "@rollup-rollup-linux-arm64-gnu-npm-4.6.0-f5f0d6c477-10.zip"; sha512 = "e9568851d9cd391a55c0ecff7e183dd3179dd8e0f382f9ad16a871523973531271c67b5bc8667db068e3e135163cd92711e19329a251bec79c7636915eee5580"; };
+"@rollup/rollup-linux-arm64-musl@npm:4.6.0" = { filename = "@rollup-rollup-linux-arm64-musl-npm-4.6.0-3a34676ee9-10.zip"; sha512 = "5fe0dafa4d9aae488468dfc277bddc22b58dfd6a25cb069488dbd5384afef0f8af89e13cf5210dca1cefaf6d53fbf2590af0302ab2ba15530106ae7e2d4bd1e7"; };
+"@rollup/rollup-linux-x64-gnu@npm:4.6.0" = { filename = "@rollup-rollup-linux-x64-gnu-npm-4.6.0-16c9f1da5c-10.zip"; sha512 = "d0d48bab157c97d9b0ba1c8af3cb3da0df870644d5b655ce3d63e80a9032fe70418ffa8904989a63b6aebee6b3969884908e581702c1312f001e707063c539da"; };
+"@rollup/rollup-linux-x64-musl@npm:4.6.0" = { filename = "@rollup-rollup-linux-x64-musl-npm-4.6.0-d87efcc3ee-10.zip"; sha512 = "3caf1eed7faafe9ea4bbf8ce456a4e21c30fbf32a45831959ac84dffab97b53d2a7a681faf3a137bf1dac63d9d488db92f60eb620fd130393b5225d0b3f3d9e2"; };
 "@rollup/rollup-win32-arm64-msvc@npm:4.6.0" = { filename = "@rollup-rollup-win32-arm64-msvc-npm-4.6.0-50f3ab538a-10.zip"; sha512 = "2abea0771545d639d04a1d050d02aab6682f61a9e949e441b01a17d007124dfdf077c08610eaf6b90fba14c85ed53f8885e21c81755d0210bd1fda414fdcc402"; };
 "@rollup/rollup-win32-x64-msvc@npm:4.6.0" = { filename = "@rollup-rollup-win32-x64-msvc-npm-4.6.0-abd52662d0-10.zip"; sha512 = "1b5e77bf42088677c5b7b9af0d038dbd1db0e04e455f906e63fc773dee2edcb9d77579aafd8b3693e4eace5ec15a283999561c27e203b62f5f85e38853a93247"; };
 "@sinclair/typebox@npm:0.27.8" = { filename = "@sinclair-typebox-npm-0.27.8-23e206d653-297f95ff77.zip"; sha512 = "297f95ff77c82c54de8c9907f186076e715ff2621c5222ba50b8d40a170661c0c5242c763cba2a4791f0f91cb1d8ffa53ea1d7294570cf8cd4694c0e383e484d"; };
@@ -473,6 +477,7 @@ cacheEntries = {
 "@types/istanbul-lib-report@npm:3.0.0" = { filename = "@types-istanbul-lib-report-npm-3.0.0-50de3e6b3b-f121dcac8a.zip"; sha512 = "f121dcac8a6b8184f3cab97286d8d519f1937fa8620ada5dbc43b699d602b8be289e4a4bccbd6ee1aade6869d3c9fb68bf04c6fdca8c5b0c4e7e314c31c7900a"; };
 "@types/istanbul-reports@npm:3.0.1" = { filename = "@types-istanbul-reports-npm-3.0.1-770e825002-f1ad54bc68.zip"; sha512 = "f1ad54bc68f37f60b30c7915886b92f86b847033e597f9b34f2415acdbe5ed742fa559a0a40050d74cdba3b6a63c342cac1f3a64dba5b68b66a6941f4abd7903"; };
 "@types/json-schema@npm:7.0.12" = { filename = "@types-json-schema-npm-7.0.12-f05cfc0e99-7a72ba9cb7.zip"; sha512 = "7a72ba9cb7d2b45d7bb032e063c9eeb1ce4102d62551761e84c91f99f8273ba5aaffd34be835869456ec7c40761b4389009d9e777c0020a7227ca0f5e3238e94"; };
+"@types/json-schema@npm:7.0.15" = { filename = "@types-json-schema-npm-7.0.15-fd16381786-1a3c3e0623.zip"; sha512 = "1a3c3e06236e4c4aab89499c428d585527ce50c24fe8259e8b3926d3df4cfbbbcf306cfc73ddfb66cbafc973116efd15967020b0f738f63e09e64c7d260519e7"; };
 "@types/lodash@npm:4.14.197" = { filename = "@types-lodash-npm-4.14.197-8db1555bb5-a09f6c9308.zip"; sha512 = "a09f6c9308089e02ffb16da7b557c680ca38d3af9591455a0a257e5a7a78febd3d6da615c4f738ac9a575e68b0de81f399f13058cab1691a0737d552d3d02971"; };
 "@types/mdast@npm:4.0.0" = { filename = "@types-mdast-npm-4.0.0-71d66a9287-4ba192416c.zip"; sha512 = "4ba192416cdce24c5be2949f384bef1b5467a1d250c708db0ae73addddd3b1b611306f9aaec7229cd5ab9222edcc2b91211bf5b44a744ae6cc995366a8736218"; };
 "@types/mdx@npm:2.0.7" = { filename = "@types-mdx-npm-2.0.7-f7d1739d18-dc9a40adde.zip"; sha512 = "dc9a40addeb27ca95b26cdd9488c05996bcbb9fec083476bdba6a9048ba1183d56f6ecb52c8ef97b1adc767691e71d6cbcd4e52dc04e97c1ae38ecb13c3cd730"; };
@@ -496,6 +501,7 @@ cacheEntries = {
 "@types/resolve@npm:1.20.4" = { filename = "@types-resolve-npm-1.20.4-b445318f16-d9ddf2a923.zip"; sha512 = "d9ddf2a9231df86dd0e98046df531ac63d96d3a97db635d00a25f33520535d0679a2c451751fe26a2221e209c91f6d03286f8c6595bf5f71eddc3d7a7c64ee3f"; };
 "@types/scheduler@npm:0.16.3" = { filename = "@types-scheduler-npm-0.16.3-887bfc0086-2b0aec39c2.zip"; sha512 = "2b0aec39c24268e3ce938c5db2f2e77f5c3dd280e05c262d9c2fe7d890929e4632a6b8e94334017b66b45e4f92a5aa42ba3356640c2a1175fa37bef2f5200767"; };
 "@types/semver@npm:7.5.1" = { filename = "@types-semver-npm-7.5.1-cda240741c-8e19822a2f.zip"; sha512 = "8e19822a2f6282785f4787b3640a205161a65f85de3d2159c5077002adb6e90b2f80bb7c8324ffdb9643061763e1672747f04b0ef3e9ac4179de0dce20ad641d"; };
+"@types/semver@npm:7.5.6" = { filename = "@types-semver-npm-7.5.6-9d2637fc95-e77282b17f.zip"; sha512 = "e77282b17f74354e17e771c0035cccb54b94cc53d0433fa7e9ba9d23fd5d7edcd14b6c8b7327d58bbd89e83b1c5eda71dfe408e06b929007e2b89586e9b63459"; };
 "@types/send@npm:0.17.1" = { filename = "@types-send-npm-0.17.1-5f715ca966-6420837887.zip"; sha512 = "6420837887858f7aa82f2c0272f73edb42385bd0978f43095e83590a405d86c8cc6d918c30b2d542f1d8bddc9f3d16c2e8fdfca936940de71b97c45f228d1896"; };
 "@types/serve-static@npm:1.15.2" = { filename = "@types-serve-static-npm-1.15.2-fc398c0cea-d5f8f5aaa7.zip"; sha512 = "d5f8f5aaa765be6417aa3f2ebe36591f4e9d2d8a7480edf7d3db041427420fd565cb921fc021271098dd2afafce2b443fc0d978faa3ae21a2a58ebde7d525e9e"; };
 "@types/tinycolor2@npm:1.4.6" = { filename = "@types-tinycolor2-npm-1.4.6-62a2039a99-a662fd1771.zip"; sha512 = "a662fd177135d27779b7ccba39881a85167f969787c71c7bf51903d288a519ad5b9526e0a4af7bde6444df6b7abe88bae893d569c6d804108c03dfec9509bdf6"; };
@@ -1258,7 +1264,7 @@ cacheEntries = {
 "tslib@npm:2.6.2" = { filename = "tslib-npm-2.6.2-4fc8c068d9-bd26c22d36.zip"; sha512 = "bd26c22d36736513980091a1e356378e8b662ded04204453d353a7f34a4c21ed0afc59b5f90719d4ba756e581a162ecbf93118dc9c6be5acf70aa309188166ca"; };
 "tsup@npm:8.0.1" = { filename = "tsup-npm-8.0.1-f690188444-f5866035ac.zip"; sha512 = "f5866035ac96c5f421856a3e41ae25afaccae4eba0c9e747626a691be9d017b32b799a533f1e57bf1da6808395452608bb52d16625d2223022448f0d4e42e9ec"; };
 "tsutils@npm:3.21.0" = { filename = "tsutils-npm-3.21.0-347e6636c5-ea036bec1d.zip"; sha512 = "ea036bec1dd024e309939ffd49fda7a351c0e87a1b8eb049570dd119d447250e2c56e0e6c00554e8205760e7417793fdebff752a46e573fbe07d4f375502a5b2"; };
-"tsx@npm:4.6.0" = { filename = "tsx-npm-4.6.0-968353ee80-97aaf8c8d7.zip"; sha512 = "97aaf8c8d718f1ca9ce2c2d57cffae30044588ea5db687b1ff27416b136fe0f307f329b1fb7c6a877aa0a4ba3db3ff19a10d7878b7c4325175155f52b384b73c"; };
+"tsx@npm:4.6.2" = { filename = "tsx-npm-4.6.2-0721a68f14-451b23ed99.zip"; sha512 = "451b23ed999a3bf3592181f3411d67bfe6d4269f2171ca627c5acbe442fd08d8864585eb67095c0dc8462e35ee8427de37c9bb2b4f6ffc629d5a05f0c66983d4"; };
 "tunnel-agent@npm:0.6.0" = { filename = "tunnel-agent-npm-0.6.0-64345ab7eb-7f0d9ed5c2.zip"; sha512 = "7f0d9ed5c22404072b2ae8edc45c071772affd2ed14a74f03b4e71b4dd1a14c3714d85aed64abcaaee5fec2efc79002ba81155c708f4df65821b444abb0cfade"; };
 "tunnel@npm:0.0.6" = { filename = "tunnel-npm-0.0.6-b1c0830ea4-cf1ffed5e6.zip"; sha512 = "cf1ffed5e67159b901a924dbf94c989f20b2b3b65649cfbbe4b6abb35955ce2cf7433b23498bdb2c5530ab185b82190fce531597b3b4a649f06a907fc8702405"; };
 "type-check@npm:0.4.0" = { filename = "type-check-npm-0.4.0-60565800ce-1468777647.zip"; sha512 = "14687776479d048e3c1dbfe58a2409e00367810d6960c0f619b33793271ff2a27f81b52461f14a162f1f89a9b1d8da1b237fc7c99b0e1fdcec28ec63a86b1fec"; };

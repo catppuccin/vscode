@@ -1,0 +1,11 @@
+{
+  "name": "@catppuccin/vscode-typegen",
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "json-schema-to-typescript": "^13.1.1"
+  },
+  "scripts": {
+    "typegen:update": "tsx update.ts"
+  }
+}

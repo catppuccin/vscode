@@ -1,0 +1,27 @@
+{
+  "name": "@catppuccin/vscode-storybook",
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "@catppuccin/vscode": "workspace:*",
+    "@storybook/addon-essentials": "^7.5.3",
+    "@storybook/addon-styling": "^1.3.7",
+    "@storybook/addon-themes": "^7.5.3",
+    "@storybook/blocks": "^7.5.3",
+    "@storybook/react": "^7.5.3",
+    "@storybook/react-vite": "^7.5.3",
+    "chromatic": "^7.6.0",
+    "eslint": "^8.54.0",
+    "eslint-plugin-storybook": "^0.6.15",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "shikiji": "^0.7.4",
+    "storybook": "^7.5.3",
+    "vite": "^4.5.0"
+  },
+  "scripts": {
+    "storybook:chromatic": "chromatic --exit-zero-on-changes --exit-once-uploaded --project-token chpt_e3cba49738d7554",
+    "storybook:build": "storybook build",
+    "storybook:dev": "storybook dev -p 6006"
+  }
+}

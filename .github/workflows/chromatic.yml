@@ -2,14 +2,12 @@ on:
   push:
     branches: [main]
     paths:
-      - ".storybook/**/*"
-      - "stories/**/*"
-      - "src/theme/**/*.ts"
+      - "packages/core/src/theme/**/*.ts"
+      - "packages/storybook/**/*"
   pull_request:
     paths:
-      - ".storybook/**/*"
-      - "stories/**/*"
-      - "src/theme/**/*.ts"
+      - "packages/core/src/theme/**/*.ts"
+      - "packages/storybook/**/*"
 
 name: "Chromatic"
 
@@ -30,11 +28,12 @@ jobs:
 
       - run: yarn install --immutable
 
-      - run: yarn build
+      - run: yarn core:build
 
       - name: Publish to Chromatic
         uses: chromaui/action@v1
         with:
-          buildScriptName: "storybook:build"
+          buildScriptName: storybook:build
           exitOnceUploaded: true
-          projectToken: "chpt_e3cba49738d7554"
+          projectToken: chpt_e3cba49738d7554
+          workingDir: packages/storybook
