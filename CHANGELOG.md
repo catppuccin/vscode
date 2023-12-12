@@ -1,5 +1,13 @@
 # Changelog
 
+## [3.8.2](https://github.com/catppuccin/vscode/compare/v3.8.1...v3.8.2) (2023-12-12)
+
+
+### Bug Fixes
+
+* **settings:** customUIColors color key names ([#246](https://github.com/catppuccin/vscode/issues/246)) ([43a6cdc](https://github.com/catppuccin/vscode/commit/43a6cdcf74e385a69712cd1123f1a2982fbb3c73))
+* **ui:** selection contrast ([#245](https://github.com/catppuccin/vscode/issues/245)) ([bdbc56a](https://github.com/catppuccin/vscode/commit/bdbc56a2ac1475fa7cb6c6f2c2a98a28c9d5258d))
+
 ## [3.8.1](https://github.com/catppuccin/vscode/compare/v3.8.0...v3.8.1) (2023-12-05)
 
 
