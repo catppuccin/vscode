@@ -5571,7 +5571,7 @@ __metadata:
     storybook: "npm:^7.5.3"
     tinycolor2: "npm:^1.6.0"
     tsup: "npm:^8.0.1"
-    tsx: "npm:^4.6.0"
+    tsx: "npm:^4.6.2"
     type-flag: "npm:^3.0.0"
     typescript: "npm:^5.3.2"
     vite: "npm:^4.5.0"
@@ -12025,9 +12025,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tsx@npm:^4.6.0":
-  version: 4.6.0
-  resolution: "tsx@npm:4.6.0"
+"tsx@npm:^4.6.2":
+  version: 4.6.2
+  resolution: "tsx@npm:4.6.2"
   dependencies:
     esbuild: "npm:~0.18.20"
     fsevents: "npm:~2.3.3"
@@ -12037,7 +12037,7 @@ __metadata:
       optional: true
   bin:
     tsx: dist/cli.mjs
-  checksum: 97aaf8c8d718f1ca9ce2c2d57cffae30044588ea5db687b1ff27416b136fe0f307f329b1fb7c6a877aa0a4ba3db3ff19a10d7878b7c4325175155f52b384b73c
+  checksum: 451b23ed999a3bf3592181f3411d67bfe6d4269f2171ca627c5acbe442fd08d8864585eb67095c0dc8462e35ee8427de37c9bb2b4f6ffc629d5a05f0c66983d4
   languageName: node
   linkType: hard
 
