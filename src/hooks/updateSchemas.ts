@@ -1,5 +1,6 @@
 import { writeFile } from "node:fs/promises";
 import { join } from "node:path";
+import { labels } from "@catppuccin/palette";
 
 import { repoRoot, vscodeSchemasRoot } from "./constants";
 import { accents } from "./updatePackageJson";
@@ -22,7 +23,7 @@ const customUiColorsSchema = (workbenchColors: any) => {
       catppuccinColor: {
         anyOf: [
           // allow plain color names,
-          { enum: validColors },
+          { enum: [...Object.keys(labels), "accent"] },
           // custom hex codes,
           { format: "color-hex" },
           // and plain color names + opacity
