@@ -30,4 +30,4 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: catppuccin-vsc.vsix
-          path: packages/core/catppuccin-*.vsix
+          path: packages/catppuccin-vsc/catppuccin-*.vsix

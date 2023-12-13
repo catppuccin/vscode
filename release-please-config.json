@@ -1,18 +1,25 @@
 {
   "packages": {
-    "packages/core": {
-      "package-name": "catppuccin-vsc",
-      "release-type": "node"
+    "packages/catppuccin-vsc": {
+      "component": "catppuccin-vsc"
     },
-    "packages/pack": {
-      "package-name": "catppuccin-pack",
-      "release-type": "node"
-    },
-    "packages/vscode": {
-      "package-name": "@catppuccin/vscode",
-      "release-type": "node"
+    "packages/catppuccin-vsc-pack": {},
+    "packages/catppuccin-vscode": {
+      "component": "@catppuccin/vscode"
     }
   },
-  "plugins": ["node-workspace"],
+  "plugins": [
+    {
+      "type": "node-workspace",
+      "merge": false
+    },
+    {
+      "type": "linked-versions",
+      "groupName": "theme",
+      "components": ["catppuccin-vsc", "@catppuccin/vscode"]
+    }
+  ],
+  "release-type": "node",
+  "separate-pull-requests": true,
   "$schema": "https://raw.githubusercontent.com/googleapis/release-please/main/schemas/config.json"
 }

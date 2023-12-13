@@ -1,5 +1,5 @@
 {
-  "name": "@catppuccin/vscode-typegen",
+  "name": "@catppuccin/vsc-typegen",
   "license": "MIT",
   "private": true,
   "devDependencies": {

@@ -1,13 +1,13 @@
 {
   "name": "@catppuccin/vscode",
-  "version": "1.0.0",
+  "version": "3.8.2",
   "description": "🦌 Soothing pastel theme for VSCode, precompiled JSON version",
   "files": [
     "themes/*"
   ],
   "scripts": {
     "compiled:pack": "npm pack",
-    "prepack": "yarn core:build && cp -r ../core/themes ./",
+    "prepack": "yarn core:build && cp -r ../catppuccin-vsc/themes .",
     "postinstall": "yarn prepack"
   }
 }

@@ -2,12 +2,12 @@ on:
   push:
     branches: [main]
     paths:
-      - "packages/core/src/theme/**/*.ts"
-      - "packages/storybook/**/*"
+      - "packages/catppuccin-vsc/src/theme/**/*.ts"
+      - "packages/catppuccin-vsc-storybook/**/*"
   pull_request:
     paths:
-      - "packages/core/src/theme/**/*.ts"
-      - "packages/storybook/**/*"
+      - "packages/catppuccin-vsc/src/theme/**/*.ts"
+      - "packages/catppuccin-vsc-storybook/**/*"
 
 name: "Chromatic"
 
@@ -36,4 +36,4 @@ jobs:
           buildScriptName: storybook:build
           exitOnceUploaded: true
           projectToken: chpt_e3cba49738d7554
-          workingDir: packages/storybook
+          workingDir: packages/catppuccin-vsc-storybook

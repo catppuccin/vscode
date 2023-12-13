@@ -23,7 +23,7 @@
   "scripts": {
     "lint": "eslint . --ext .ts && yarn typecheck:all",
     "postinstall": "husky install",
-    "typecheck:all": "tsc --noEmit -p packages/core && tsc --noEmit -p packages/storybook"
+    "typecheck:all": "tsc --noEmit -p packages/catppuccin-vsc && tsc --noEmit -p packages/catppuccin-vsc-storybook"
   },
   "workspaces": [
     "packages/*"

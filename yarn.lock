@@ -1655,6 +1655,36 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@catppuccin/vsc-storybook@workspace:packages/catppuccin-vsc-storybook":
+  version: 0.0.0-use.local
+  resolution: "@catppuccin/vsc-storybook@workspace:packages/catppuccin-vsc-storybook"
+  dependencies:
+    "@catppuccin/vscode": "workspace:*"
+    "@storybook/addon-essentials": "npm:^7.5.3"
+    "@storybook/addon-styling": "npm:^1.3.7"
+    "@storybook/addon-themes": "npm:^7.5.3"
+    "@storybook/blocks": "npm:^7.5.3"
+    "@storybook/react": "npm:^7.5.3"
+    "@storybook/react-vite": "npm:^7.5.3"
+    chromatic: "npm:^7.6.0"
+    eslint: "npm:^8.54.0"
+    eslint-plugin-storybook: "npm:^0.6.15"
+    react: "npm:^18.2.0"
+    react-dom: "npm:^18.2.0"
+    shikiji: "npm:^0.7.4"
+    storybook: "npm:^7.5.3"
+    vite: "npm:^4.5.0"
+  languageName: unknown
+  linkType: soft
+
+"@catppuccin/vsc-typegen@workspace:*, @catppuccin/vsc-typegen@workspace:packages/catppuccin-vsc-typegen":
+  version: 0.0.0-use.local
+  resolution: "@catppuccin/vsc-typegen@workspace:packages/catppuccin-vsc-typegen"
+  dependencies:
+    json-schema-to-typescript: "npm:^13.1.1"
+  languageName: unknown
+  linkType: soft
+
 "@catppuccin/vscode-monorepo@workspace:.":
   version: 0.0.0-use.local
   resolution: "@catppuccin/vscode-monorepo@workspace:."
@@ -1675,39 +1705,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@catppuccin/vscode-storybook@workspace:packages/storybook":
+"@catppuccin/vscode@workspace:*, @catppuccin/vscode@workspace:packages/catppuccin-vscode":
   version: 0.0.0-use.local
-  resolution: "@catppuccin/vscode-storybook@workspace:packages/storybook"
-  dependencies:
-    "@catppuccin/vscode": "workspace:*"
-    "@storybook/addon-essentials": "npm:^7.5.3"
-    "@storybook/addon-styling": "npm:^1.3.7"
-    "@storybook/addon-themes": "npm:^7.5.3"
-    "@storybook/blocks": "npm:^7.5.3"
-    "@storybook/react": "npm:^7.5.3"
-    "@storybook/react-vite": "npm:^7.5.3"
-    chromatic: "npm:^7.6.0"
-    eslint: "npm:^8.54.0"
-    eslint-plugin-storybook: "npm:^0.6.15"
-    react: "npm:^18.2.0"
-    react-dom: "npm:^18.2.0"
-    shikiji: "npm:^0.7.4"
-    storybook: "npm:^7.5.3"
-    vite: "npm:^4.5.0"
-  languageName: unknown
-  linkType: soft
-
-"@catppuccin/vscode-typegen@workspace:*, @catppuccin/vscode-typegen@workspace:packages/typegen":
-  version: 0.0.0-use.local
-  resolution: "@catppuccin/vscode-typegen@workspace:packages/typegen"
-  dependencies:
-    json-schema-to-typescript: "npm:^13.1.1"
-  languageName: unknown
-  linkType: soft
-
-"@catppuccin/vscode@workspace:*, @catppuccin/vscode@workspace:packages/compiled":
-  version: 0.0.0-use.local
-  resolution: "@catppuccin/vscode@workspace:packages/compiled"
+  resolution: "@catppuccin/vscode@workspace:packages/catppuccin-vscode"
   languageName: unknown
   linkType: soft
 
@@ -5601,19 +5601,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"catppuccin-vsc-pack@workspace:packages/pack":
+"catppuccin-vsc-pack@workspace:packages/catppuccin-vsc-pack":
   version: 0.0.0-use.local
-  resolution: "catppuccin-vsc-pack@workspace:packages/pack"
+  resolution: "catppuccin-vsc-pack@workspace:packages/catppuccin-vsc-pack"
   languageName: unknown
   linkType: soft
 
-"catppuccin-vsc@workspace:packages/core":
+"catppuccin-vsc@workspace:packages/catppuccin-vsc":
   version: 0.0.0-use.local
-  resolution: "catppuccin-vsc@workspace:packages/core"
+  resolution: "catppuccin-vsc@workspace:packages/catppuccin-vsc"
   dependencies:
     "@actions/core": "npm:^1.10.1"
     "@catppuccin/palette": "npm:^0.2.0"
-    "@catppuccin/vscode-typegen": "workspace:*"
+    "@catppuccin/vsc-typegen": "workspace:*"
     "@types/tinycolor2": "npm:^1"
     "@types/vscode": "npm:~1.80.0"
     tinycolor2: "npm:^1.6.0"

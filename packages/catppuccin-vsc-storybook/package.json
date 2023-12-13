@@ -1,5 +1,5 @@
 {
-  "name": "@catppuccin/vscode-storybook",
+  "name": "@catppuccin/vsc-storybook",
   "license": "MIT",
   "private": true,
   "devDependencies": {

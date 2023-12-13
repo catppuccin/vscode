@@ -41,12 +41,12 @@ jobs:
         run: yarn core:build:ads
 
       - name: Publish to Visual Studio Marketplace
-        working-directory: ./packages/core
+        working-directory: ./packages/catppuccin-vsc
         run: |
           npx @vscode/vsce publish --pat "${{ secrets.VS_MARKETPLACE_TOKEN }}" --packagePath "${{ steps.build-vscode.outputs.vsixPath }}"
 
       - name: Publish to Open VSX Registry
-        working-directory: ./packages/core
+        working-directory: ./packages/catppuccin-vsc
         # continue even if OpenVSX fails
         # -> see https://github.com/catppuccin/vscode/issues/51
         continue-on-error: true
@@ -55,7 +55,7 @@ jobs:
           npx ovsx publish --pat "${{ secrets.VS_MARKETPLACE_TOKEN }}" --packagePath "${{ steps.build-ads.outputs.vsixPath }}"
 
       - name: Add files to GH Release
-        working-directory: ./packages/core
+        working-directory: ./packages/catppuccin-vsc
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
@@ -76,7 +76,7 @@ jobs:
       - run: yarn install --immutable
 
       - name: Publish compiled NPM package
-        working-directory: ./packages/compiled
+        working-directory: ./packages/catppuccin-vscode
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: npm publish --provenance --access public

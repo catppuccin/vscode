@@ -3,14 +3,14 @@ import { labels, variants } from "@catppuccin/palette";
 import type { Uri } from "vscode";
 
 // vscode schemas
-export type * from "@catppuccin/vscode-typegen/types/textmate-colors";
-export type * from "@catppuccin/vscode-typegen/types/workbench-colors";
-export type * from "@catppuccin/vscode-typegen/types/token-styling";
+export type * from "@catppuccin/vsc-typegen/types/textmate-colors";
+export type * from "@catppuccin/vsc-typegen/types/workbench-colors";
+export type * from "@catppuccin/vsc-typegen/types/token-styling";
 
 // extensions
-export type * from "@catppuccin/vscode-typegen/types/errorlens";
-export type * from "@catppuccin/vscode-typegen/types/github-pull-request";
-export type * from "@catppuccin/vscode-typegen/types/gitlens";
+export type * from "@catppuccin/vsc-typegen/types/errorlens";
+export type * from "@catppuccin/vsc-typegen/types/github-pull-request";
+export type * from "@catppuccin/vsc-typegen/types/gitlens";
 
 export type CatppuccinFlavor = keyof typeof variants;
 export type CatppuccinAccent =
