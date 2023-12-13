@@ -1,7 +1,7 @@
 {
   "packages": {
     "packages/catppuccin-vsc": {
-      "component": "catppuccin-vsc"
+      "component": ""
     },
     "packages/catppuccin-vsc-pack": {},
     "packages/catppuccin-vscode": {
@@ -16,7 +16,7 @@
     {
       "type": "linked-versions",
       "groupName": "theme",
-      "components": ["catppuccin-vsc", "@catppuccin/vscode"]
+      "components": ["", "@catppuccin/vscode"]
     }
   ],
   "release-type": "node",
