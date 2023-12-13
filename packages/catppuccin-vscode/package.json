@@ -5,9 +5,12 @@
   "files": [
     "themes/*"
   ],
+  "devDependencies": {
+    "catppuccin-vsc": "workspace:*"
+  },
   "scripts": {
     "compiled:pack": "npm pack",
-    "prepack": "yarn core:build && cp -r ../catppuccin-vsc/themes .",
+    "prepack": "yarn core:build && yarn run -T tsx ./build.ts",
     "postinstall": "yarn prepack"
   }
 }

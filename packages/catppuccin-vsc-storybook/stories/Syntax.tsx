@@ -6,10 +6,8 @@ import macchiato from "catppuccin-vsc/themes/macchiato.json";
 import frappe from "catppuccin-vsc/themes/frappe.json";
 import latte from "catppuccin-vsc/themes/latte.json";
 
-const themes = [mocha, macchiato, frappe, latte];
+const themes = [mocha, macchiato, frappe, latte] as any[];
 const shiki = getHighlighter({
-  //eslint-disable-next-line
-  //@ts-ignore
   themes,
   langs: Object.keys(bundledLanguages),
 });

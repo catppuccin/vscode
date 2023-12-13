@@ -165,13 +165,16 @@
     "@catppuccin/vsc-typegen": "workspace:*",
     "@types/tinycolor2": "^1",
     "@types/vscode": "~1.80.0",
+    "@vscode/vsce": "^2.22.0",
     "tinycolor2": "^1.6.0",
+    "tsup": "^8.0.1",
+    "tsx": "^4.6.2",
     "type-flag": "^3.0.0"
   },
   "scripts": {
-    "core:build": "yarn run -T tsx build.ts",
-    "core:build:ads": "yarn run -T tsx build.ts --ads",
-    "core:dev": "yarn run -T tsx build.ts --dev",
-    "core:package": "yarn run -T vsce package --no-dependencies"
+    "core:build": "tsx build.ts",
+    "core:build:ads": "tsx build.ts --ads",
+    "core:dev": "tsx build.ts --dev",
+    "core:package": "vsce package --no-dependencies"
   }
 }

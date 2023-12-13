@@ -1708,6 +1708,8 @@ __metadata:
 "@catppuccin/vscode@workspace:packages/catppuccin-vscode":
   version: 0.0.0-use.local
   resolution: "@catppuccin/vscode@workspace:packages/catppuccin-vscode"
+  dependencies:
+    catppuccin-vsc: "workspace:*"
   languageName: unknown
   linkType: soft
 
@@ -4521,11 +4523,11 @@ __metadata:
   linkType: hard
 
 "@types/node@npm:^18.18.13":
-  version: 18.18.13
-  resolution: "@types/node@npm:18.18.13"
+  version: 18.19.3
+  resolution: "@types/node@npm:18.19.3"
   dependencies:
     undici-types: "npm:~5.26.4"
-  checksum: 5dcab799e39570a858741a13373a584529d0e6b81120c8a2118e158749d9ace291748644d760af554fe73ab3cebdd91500314bf1ecd17a746fabcae06ebf9eea
+  checksum: b95d0c0be342275e27d882bb6ca73c0b757d1672a121cae1fc3249eda4f86a8abeb5745e5c5c1150914bcfda323a3fc51526cd34e2097f8355bf7cbf12fa6bcb
   languageName: node
   linkType: hard
 
@@ -5616,7 +5618,10 @@ __metadata:
     "@catppuccin/vsc-typegen": "workspace:*"
     "@types/tinycolor2": "npm:^1"
     "@types/vscode": "npm:~1.80.0"
+    "@vscode/vsce": "npm:^2.22.0"
     tinycolor2: "npm:^1.6.0"
+    tsup: "npm:^8.0.1"
+    tsx: "npm:^4.6.2"
     type-flag: "npm:^3.0.0"
   languageName: unknown
   linkType: soft
