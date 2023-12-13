@@ -9,17 +9,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-
       - run: corepack enable
-
       - uses: actions/setup-node@v4
         with:
           node-version: 18
           cache: yarn
-
       - run: yarn install --immutable
 
-      - run: yarn lint
+      - name: Lint
+        run: yarn lint
 
       - name: Build
         run: |

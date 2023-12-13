@@ -18,17 +18,12 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
-
       - run: corepack enable
-
       - uses: actions/setup-node@v4
         with:
           node-version: 18
           cache: yarn
-
       - run: yarn install --immutable
-
-      - run: yarn core:build
 
       - name: Publish to Chromatic
         uses: chromaui/action@v1

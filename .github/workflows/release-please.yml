@@ -72,7 +72,7 @@ jobs:
         with:
           node-version: 18
           cache: yarn
-          registry-url: "https://registry.npmjs.org"
+          registry-url: https://registry.npmjs.org
       - run: yarn install --immutable
 
       - name: Publish compiled NPM package
