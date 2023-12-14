@@ -16,6 +16,11 @@
     "tsx": "^4.6.2",
     "typescript": "^5.3.2"
   },
+  "dependenciesMeta": {
+    "keytar": {
+      "built": false
+    }
+  },
   "lint-staged": {
     "*.ts": "eslint --cache --fix",
     "*.{ts,json,md}": "prettier --write"

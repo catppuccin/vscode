@@ -1702,6 +1702,9 @@ __metadata:
     tsup: "npm:^8.0.1"
     tsx: "npm:^4.6.2"
     typescript: "npm:^5.3.2"
+  dependenciesMeta:
+    keytar:
+      built: false
   languageName: unknown
   linkType: soft
 
