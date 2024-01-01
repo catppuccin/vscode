@@ -112,8 +112,10 @@ const tokens = (context: ThemeContext): TextmateColors => {
       },
     },
     {
-      name: "Try/Catch as bold",
+      name: "export default, try/catch/throw as bold",
       scope: [
+        "meta.export.default keyword.control.default",
+        "meta.export.default keyword.control.export",
         "keyword.control.trycatch.js",
         "keyword.control.trycatch.jsx",
         "keyword.control.trycatch.ts",
