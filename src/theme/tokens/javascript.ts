@@ -111,6 +111,18 @@ const tokens = (context: ThemeContext): TextmateColors => {
         foreground: palette.mauve,
       },
     },
+    {
+      name: "Try/Catch as bold",
+      scope: [
+        "keyword.control.trycatch.js",
+        "keyword.control.trycatch.jsx",
+        "keyword.control.trycatch.ts",
+        "keyword.control.trycatch.tsx",
+      ],
+      settings: {
+        fontStyle: "bold",
+      },
+    },
   ];
 };
 
