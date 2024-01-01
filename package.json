@@ -1,6 +1,163 @@
 {
-  "name": "@catppuccin/vscode-monorepo",
-  "private": true,
+  "name": "catppuccin-vsc",
+  "displayName": "Catppuccin for VSCode",
+  "publisher": "Catppuccin",
+  "description": "🦌 Soothing pastel theme for VSCode",
+  "version": "3.9.0",
+  "engines": {
+    "vscode": "^1.80.0",
+    "node": ">=18.0.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "extensionKind": [
+    "ui",
+    "workspace"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "capabilities": {
+    "untrustedWorkspaces": {
+      "supported": true
+    },
+    "virtualWorkspaces": true
+  },
+  "main": "dist/main.js",
+  "browser": "dist/browser.js",
+  "contributes": {
+    "themes": [
+      {
+        "label": "Catppuccin Mocha",
+        "uiTheme": "vs-dark",
+        "path": "./themes/mocha.json"
+      },
+      {
+        "label": "Catppuccin Macchiato",
+        "uiTheme": "vs-dark",
+        "path": "./themes/macchiato.json"
+      },
+      {
+        "label": "Catppuccin Frappé",
+        "uiTheme": "vs-dark",
+        "path": "./themes/frappe.json"
+      },
+      {
+        "label": "Catppuccin Latte",
+        "uiTheme": "vs",
+        "path": "./themes/latte.json"
+      }
+    ],
+    "configuration": {
+      "title": "Catppuccin",
+      "properties": {
+        "catppuccin.boldKeywords": {
+          "type": "boolean",
+          "default": true,
+          "markdownDescription": "Controls whether to use **bold** for keywords."
+        },
+        "catppuccin.italicComments": {
+          "type": "boolean",
+          "default": true,
+          "markdownDescription": "Controls whether to use *italics* for comments."
+        },
+        "catppuccin.italicKeywords": {
+          "type": "boolean",
+          "default": true,
+          "markdownDescription": "Controls whether to use *italics* for keywords."
+        },
+        "catppuccin.colorOverrides": {
+          "type": "object",
+          "default": {},
+          "markdownDescription": "Custom color overrides. Assign your own hex codes to palette colors. See [the docs](https://github.com/catppuccin/vscode#override-palette-colors) for reference.",
+          "$ref": "https://cdn.jsdelivr.net/gh/catppuccin/vscode@v3.7.1/schemas/colorOverrides.schema.json"
+        },
+        "catppuccin.customUIColors": {
+          "type": "object",
+          "default": {},
+          "markdownDescription": "Customize UI colors. Map `workbench.colorCustomizations` to palette colors. See [the docs](https://github.com/catppuccin/vscode#use-palette-colors-on-workbench-elements-ui) for reference.",
+          "$ref": "https://cdn.jsdelivr.net/gh/catppuccin/vscode@v3.7.1/schemas/customUIColors.schema.json"
+        },
+        "catppuccin.accentColor": {
+          "type": "string",
+          "default": "mauve",
+          "description": "Controls which accent color to use.",
+          "enum": [
+            "rosewater",
+            "flamingo",
+            "pink",
+            "mauve",
+            "red",
+            "maroon",
+            "peach",
+            "yellow",
+            "green",
+            "teal",
+            "sky",
+            "sapphire",
+            "blue",
+            "lavender"
+          ]
+        },
+        "catppuccin.workbenchMode": {
+          "type": "string",
+          "default": "default",
+          "description": "Controls how the workbench should be styled.",
+          "enum": [
+            "default",
+            "flat",
+            "minimal"
+          ],
+          "enumDescriptions": [
+            "The default look, using 3 shades of the base color.",
+            "A more flat look, using 2 shades of the base color.",
+            "A minimal look, using 1 shade of the base color."
+          ]
+        },
+        "catppuccin.bracketMode": {
+          "type": "string",
+          "default": "rainbow",
+          "description": "Controls how bracket pairs should be themed",
+          "enum": [
+            "rainbow",
+            "dimmed",
+            "monochromatic",
+            "neovim"
+          ],
+          "enumDescriptions": [
+            "Uses 6 rainbow colors for matching bracket pairs.",
+            "Uses the same 6 rainbow colors as `rainbow`, but has a dimmed appearance.",
+            "A monochromatic, grey appearance for matching bracket pairs.",
+            "Uses the same bracket pair colors as our neovim port."
+          ]
+        },
+        "catppuccin.extraBordersEnabled": {
+          "type": "boolean",
+          "default": false,
+          "description": "Controls whether borders should be enabled on some additional UI elements."
+        }
+      }
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/catppuccin/vscode.git"
+  },
+  "bugs": {
+    "url": "https://github.com/catppuccin/vscode/issues"
+  },
+  "sponsor": {
+    "url": "https://opencollective.com/catppuccin"
+  },
+  "icon": "assets/icon.png",
+  "license": "MIT",
+  "__metadata": {
+    "publisherDisplayName": "Catppuccin",
+    "publisherId": "e7d2ed61-53e0-4dd4-afbe-f536c3bb4316",
+    "id": "69264e4d-cd3b-468a-8f2b-e69673c7d864",
+    "isPreReleaseVersion": false
+  },
   "devDependencies": {
     "@types/node": "^18.19.4",
     "@typescript-eslint/eslint-plugin": "^6.17.0",
