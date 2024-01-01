@@ -1,9 +1,9 @@
 {pkgs ? import <nixpkgs> {}}: let
-  catppuccin-vsc = pkgs.callPackage ./. {};
+  default = pkgs.callPackage ./. {};
 in {
-  default = catppuccin-vsc;
+  inherit default;
 
-  customized = catppuccin-vsc.override {
+  customized = default.override {
     accent = "pink";
     boldKeywords = false;
     italicComments = false;
