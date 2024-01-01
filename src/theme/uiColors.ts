@@ -1,5 +1,5 @@
 import type { ThemeContext, WorkbenchColors } from "@/types";
-import { opacity, shade, transparent } from "./utils";
+import { mix, opacity, shade, transparent } from "./utils";
 import extensions from "./extensions";
 import uiCustomizations from "./ui";
 
@@ -123,12 +123,12 @@ export const getUiColors = (
     "diffEditorOverview.removedForeground": opacity(palette.red, 0.8),
 
     "editor.background": palette.base,
-    "editor.findMatchBackground": opacity(palette.red, 0.3),
-    "editor.findMatchBorder": transparent,
-    "editor.findMatchHighlightBackground": opacity(palette.sky, 0.3),
-    "editor.findMatchHighlightBorder": transparent,
-    "editor.findRangeHighlightBackground": opacity(palette.sky, 0.3),
-    "editor.findRangeHighlightBorder": transparent,
+    "editor.findMatchBackground": mix(palette.base, palette.red, 0.3),
+    "editor.findMatchBorder": opacity(palette.red, 0.2),
+    "editor.findMatchHighlightBackground": mix(palette.base, palette.sky, 0.3),
+    "editor.findMatchHighlightBorder": opacity(palette.sky, 0.2),
+    "editor.findRangeHighlightBackground": mix(palette.base, palette.sky, 0.3),
+    "editor.findRangeHighlightBorder": opacity(palette.sky, 0.2),
     "editor.foldBackground": opacity(palette.sky, 0.25),
     "editor.foreground": palette.text,
     "editor.hoverHighlightBackground": opacity(palette.sky, 0.25),
