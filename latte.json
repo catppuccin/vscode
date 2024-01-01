@@ -89,12 +89,12 @@
     "diffEditorOverview.insertedForeground": "#40a02bcc",
     "diffEditorOverview.removedForeground": "#d20f39cc",
     "editor.background": "#eff1f5",
-    "editor.findMatchBackground": "#d20f394d",
-    "editor.findMatchBorder": "#00000000",
-    "editor.findMatchHighlightBackground": "#04a5e54d",
-    "editor.findMatchHighlightBorder": "#00000000",
-    "editor.findRangeHighlightBackground": "#04a5e54d",
-    "editor.findRangeHighlightBorder": "#00000000",
+    "editor.findMatchBackground": "#e6adbd",
+    "editor.findMatchBorder": "#d20f3933",
+    "editor.findMatchHighlightBackground": "#a9daf0",
+    "editor.findMatchHighlightBorder": "#04a5e533",
+    "editor.findRangeHighlightBackground": "#a9daf0",
+    "editor.findRangeHighlightBorder": "#04a5e533",
     "editor.foldBackground": "#04a5e540",
     "editor.foreground": "#4c4f69",
     "editor.hoverHighlightBackground": "#04a5e540",
@@ -1265,10 +1265,13 @@
     {
       "name": "Components",
       "scope": [
-        "meta.tag support.class.component"
+        "support.class.component",
+        "support.class.component.jsx",
+        "support.class.component.tsx",
+        "support.class.component.vue"
       ],
       "settings": {
-        "foreground": "#1e66f5",
+        "foreground": "#ea76cb",
         "fontStyle": ""
       }
     },
@@ -1401,25 +1404,15 @@
       }
     },
     {
-      "name": "of/ keyof / typeof as keywords",
+      "name": "Extra JS/TS keywords",
       "scope": [
-        "keyword.operator.expression.keyof.ts",
-        "keyword.operator.expression.typeof.js",
-        "keyword.operator.expression.typeof.ts",
-        "keyword.operator.expression.of.ts",
-        "keyword.operator.expression.of.js"
+        "keyword.operator.expression.in",
+        "keyword.operator.expression.instanceof",
+        "keyword.operator.expression.is",
+        "keyword.operator.expression.keyof"
       ],
       "settings": {
         "foreground": "#8839ef"
-      }
-    },
-    {
-      "name": "Vue components",
-      "scope": [
-        "support.class.component.vue"
-      ],
-      "settings": {
-        "foreground": "#1e66f5"
       }
     },
     {
