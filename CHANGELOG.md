@@ -2,6 +2,11 @@
 
 ## [3.9.0](https://github.com/catppuccin/vscode/compare/v3.8.2...v3.9.0) (2024-01-01)
 
+This is our first update of 2024, and we just reached **200.000 downloads**!\
+Thanks for spreading the word about our theme. ❤️️
+
+If you've been using Catppuccin for a while, I hope that last year's port 
+redesign has grown on you, and that the theme has improved since September.
 
 ### Features
 
