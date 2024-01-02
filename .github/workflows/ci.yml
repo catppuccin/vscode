@@ -9,25 +9,23 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-
       - run: corepack enable
-
       - uses: actions/setup-node@v4
         with:
           node-version: 18
           cache: yarn
-
       - run: yarn install --immutable
 
-      - run: yarn lint
+      - name: Lint
+        run: yarn lint
 
       - name: Build
         run: |
-          yarn build
-          yarn build:ads
+          yarn core:build
+          yarn core:build-ads
 
       - name: Upload Artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
-          name: catppuccin-vsc.vsix
-          path: catppuccin-*.vsix
+          name: catppuccin-vsc-${{ github.sha }}
+          path: packages/catppuccin-vsc/catppuccin-*.vsix

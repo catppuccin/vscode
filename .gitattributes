@@ -1,4 +1,4 @@
 *                text=auto
 .husky/**        linguist-generated
-.yarn/**         linguist-vendored
-yarn-project.nix linguist-generated
+.yarn/**         linguist-vendored  -diff
+yarn-project.nix linguist-generated -diff

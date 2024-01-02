@@ -1,213 +1,37 @@
 {
-  "name": "catppuccin-vsc",
-  "displayName": "Catppuccin for VSCode",
-  "publisher": "Catppuccin",
-  "description": "🦌 Soothing pastel theme for VSCode",
-  "version": "3.9.0",
-  "engines": {
-    "vscode": "^1.80.0",
-    "node": ">=18.0.0"
+  "name": "@catppuccin/vscode-monorepo",
+  "private": true,
+  "devDependencies": {
+    "@types/node": "^18.19.4",
+    "@typescript-eslint/eslint-plugin": "^6.17.0",
+    "@typescript-eslint/parser": "^6.17.0",
+    "@vscode/vsce": "^2.22.0",
+    "eslint": "^8.56.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.1.2",
+    "husky": "^8.0.3",
+    "lint-staged": "^15.2.0",
+    "prettier": "^3.1.1",
+    "tsup": "^8.0.1",
+    "tsx": "^4.7.0",
+    "typescript": "^5.3.3"
   },
-  "categories": [
-    "Themes"
-  ],
-  "extensionKind": [
-    "ui",
-    "workspace"
-  ],
-  "activationEvents": [
-    "onStartupFinished"
-  ],
-  "capabilities": {
-    "untrustedWorkspaces": {
-      "supported": true
-    },
-    "virtualWorkspaces": true
-  },
-  "main": "dist/main.js",
-  "browser": "dist/browser.js",
-  "contributes": {
-    "themes": [
-      {
-        "label": "Catppuccin Mocha",
-        "uiTheme": "vs-dark",
-        "path": "./themes/mocha.json"
-      },
-      {
-        "label": "Catppuccin Macchiato",
-        "uiTheme": "vs-dark",
-        "path": "./themes/macchiato.json"
-      },
-      {
-        "label": "Catppuccin Frappé",
-        "uiTheme": "vs-dark",
-        "path": "./themes/frappe.json"
-      },
-      {
-        "label": "Catppuccin Latte",
-        "uiTheme": "vs",
-        "path": "./themes/latte.json"
-      }
-    ],
-    "configuration": {
-      "title": "Catppuccin",
-      "properties": {
-        "catppuccin.boldKeywords": {
-          "type": "boolean",
-          "default": true,
-          "markdownDescription": "Controls whether to use **bold** for keywords."
-        },
-        "catppuccin.italicComments": {
-          "type": "boolean",
-          "default": true,
-          "markdownDescription": "Controls whether to use *italics* for comments."
-        },
-        "catppuccin.italicKeywords": {
-          "type": "boolean",
-          "default": true,
-          "markdownDescription": "Controls whether to use *italics* for keywords."
-        },
-        "catppuccin.colorOverrides": {
-          "type": "object",
-          "default": {},
-          "markdownDescription": "Custom color overrides. Assign your own hex codes to palette colors. See [the docs](https://github.com/catppuccin/vscode#override-palette-colors) for reference.",
-          "$ref": "https://cdn.jsdelivr.net/gh/catppuccin/vscode@v3.7.1/schemas/colorOverrides.schema.json"
-        },
-        "catppuccin.customUIColors": {
-          "type": "object",
-          "default": {},
-          "markdownDescription": "Customize UI colors. Map `workbench.colorCustomizations` to palette colors. See [the docs](https://github.com/catppuccin/vscode#use-palette-colors-on-workbench-elements-ui) for reference.",
-          "$ref": "https://cdn.jsdelivr.net/gh/catppuccin/vscode@v3.7.1/schemas/customUIColors.schema.json"
-        },
-        "catppuccin.accentColor": {
-          "type": "string",
-          "default": "mauve",
-          "description": "Controls which accent color to use.",
-          "enum": [
-            "rosewater",
-            "flamingo",
-            "pink",
-            "mauve",
-            "red",
-            "maroon",
-            "peach",
-            "yellow",
-            "green",
-            "teal",
-            "sky",
-            "sapphire",
-            "blue",
-            "lavender"
-          ]
-        },
-        "catppuccin.workbenchMode": {
-          "type": "string",
-          "default": "default",
-          "description": "Controls how the workbench should be styled.",
-          "enum": [
-            "default",
-            "flat",
-            "minimal"
-          ],
-          "enumDescriptions": [
-            "The default look, using 3 shades of the base color.",
-            "A more flat look, using 2 shades of the base color.",
-            "A minimal look, using 1 shade of the base color."
-          ]
-        },
-        "catppuccin.bracketMode": {
-          "type": "string",
-          "default": "rainbow",
-          "description": "Controls how bracket pairs should be themed",
-          "enum": [
-            "rainbow",
-            "dimmed",
-            "monochromatic",
-            "neovim"
-          ],
-          "enumDescriptions": [
-            "Uses 6 rainbow colors for matching bracket pairs.",
-            "Uses the same 6 rainbow colors as `rainbow`, but has a dimmed appearance.",
-            "A monochromatic, grey appearance for matching bracket pairs.",
-            "Uses the same bracket pair colors as our neovim port."
-          ]
-        },
-        "catppuccin.extraBordersEnabled": {
-          "type": "boolean",
-          "default": false,
-          "description": "Controls whether borders should be enabled on some additional UI elements."
-        }
-      }
+  "dependenciesMeta": {
+    "keytar": {
+      "built": false
     }
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/catppuccin/vscode.git"
-  },
-  "bugs": {
-    "url": "https://github.com/catppuccin/vscode/issues"
-  },
-  "sponsor": {
-    "url": "https://opencollective.com/catppuccin"
-  },
-  "icon": "assets/icon.png",
-  "license": "MIT",
-  "__metadata": {
-    "publisherDisplayName": "Catppuccin",
-    "publisherId": "e7d2ed61-53e0-4dd4-afbe-f536c3bb4316",
-    "id": "69264e4d-cd3b-468a-8f2b-e69673c7d864",
-    "isPreReleaseVersion": false
-  },
-  "devDependencies": {
-    "@actions/core": "^1.10.1",
-    "@catppuccin/palette": "^0.2.0",
-    "@storybook/addon-essentials": "^7.5.3",
-    "@storybook/addon-styling": "^1.3.7",
-    "@storybook/addon-themes": "^7.5.3",
-    "@storybook/blocks": "^7.5.3",
-    "@storybook/react": "^7.5.3",
-    "@storybook/react-vite": "^7.5.3",
-    "@types/node": "^18.18.13",
-    "@types/tinycolor2": "^1",
-    "@types/vscode": "~1.80.0",
-    "@typescript-eslint/eslint-plugin": "^6.13.0",
-    "@typescript-eslint/parser": "^6.13.0",
-    "@vscode/vsce": "^2.22.0",
-    "chromatic": "^7.6.0",
-    "eslint": "^8.54.0",
-    "eslint-config-prettier": "^9.0.0",
-    "eslint-plugin-prettier": "^5.0.1",
-    "eslint-plugin-storybook": "^0.6.15",
-    "husky": "^8.0.3",
-    "json-schema-to-typescript": "^13.1.1",
-    "lint-staged": "^15.1.0",
-    "prettier": "^3.1.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "shikiji": "^0.7.4",
-    "storybook": "^7.5.3",
-    "tinycolor2": "^1.6.0",
-    "tsup": "^8.0.1",
-    "tsx": "^4.6.2",
-    "type-flag": "^3.0.0",
-    "typescript": "^5.3.2",
-    "vite": "^4.5.0"
-  },
   "lint-staged": {
-    "*.ts": "eslint --cache --fix",
-    "*.{ts,json,md}": "prettier --write"
+    "*.ts": "yarn eslint --cache --fix",
+    "*.{ts,json,md}": "yarn prettier --write"
   },
   "scripts": {
-    "build": "tsx build.ts",
-    "build:ads": "tsx build.ts --ads",
-    "chromatic": "chromatic --exit-zero-on-changes --exit-once-uploaded --project-token chpt_e3cba49738d7554",
-    "dev": "tsx build.ts --dev",
-    "lint": "eslint . --ext .ts",
-    "package": "vsce package --yarn",
-    "prepare": "husky install",
-    "storybook:build": "storybook build",
-    "storybook:dev": "storybook dev -p 6006",
-    "update-types": "tsx src/hooks/updateVSCtypes.ts"
+    "g:typecheck": "tsc --noEmit -p packages/catppuccin-vsc && tsc --noEmit -p packages/catppuccin-vsc-storybook",
+    "lint": "eslint . --ext .ts && yarn g:typecheck",
+    "postinstall": "husky install"
   },
+  "workspaces": [
+    "packages/*"
+  ],
   "packageManager": "yarn@4.0.2"
 }

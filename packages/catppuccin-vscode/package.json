@@ -1,0 +1,20 @@
+{
+  "name": "@catppuccin/vscode",
+  "version": "3.9.0",
+  "description": "🦌 Soothing pastel theme for VSCode, precompiled JSON version",
+  "files": [
+    "themes/*"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "catppuccin-vsc": "workspace:*",
+    "tsx": "^4.7.0"
+  },
+  "scripts": {
+    "compiled:pack": "npm pack",
+    "prepack": "yarn core:build && tsx ./build.ts",
+    "postinstall": "yarn prepack"
+  }
+}

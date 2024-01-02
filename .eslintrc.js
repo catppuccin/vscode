@@ -1,3 +1,10 @@
+const nodeStdLib = [
+  ...require("node:module").builtinModules.flatMap((module) => [
+    module,
+    `node:${module}`,
+  ]),
+];
+
 /** @type {import('eslint').Linter.Config} */
 module.exports = {
   env: {
@@ -7,33 +14,31 @@ module.exports = {
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:prettier/recommended",
-    "plugin:storybook/recommended",
   ],
   overrides: [
     {
       // eslint is having trouble linting its own config file
       files: [".eslintrc.js"],
-      rules: { "@typescript-eslint/no-var-requires": "off", "no-undef": "off" },
+      rules: {
+        "@typescript-eslint/no-var-requires": "off",
+        "no-undef": "off",
+      },
+    },
+    {
+      files: ["packages/catppuccin-vsc/src/**/*"],
+      rules: {
+        "no-restricted-imports": ["error", { paths: nodeStdLib }],
+        "no-restricted-modules": ["error", { paths: nodeStdLib }],
+      },
     },
   ],
   parser: "@typescript-eslint/parser",
   parserOptions: {
     ecmaVersion: "latest",
-    project: ["tsconfig.json", "stories/tsconfig.json"],
     sourceType: "module",
   },
   plugins: ["@typescript-eslint", "prettier"],
   rules: {
-    "@typescript-eslint/no-empty-function": "off",
-    "@typescript-eslint/explicit-module-boundary-types": "off",
     "@typescript-eslint/no-explicit-any": "off",
-    "no-restricted-imports": [
-      "error",
-      { paths: require("node:module").builtinModules },
-    ],
-    "no-restricted-modules": [
-      "error",
-      { paths: require("node:module").builtinModules },
-    ],
   },
 };

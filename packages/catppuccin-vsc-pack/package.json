@@ -1,0 +1,27 @@
+{
+  "name": "catppuccin-vsc-pack",
+  "description": "Soothing pastel theme pack for VSCode",
+  "version": "0.1.0",
+  "displayName": "Catppuccin Pack",
+  "publisher": "catppuccin",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/catppuccin/vscode.git"
+  },
+  "engines": {
+    "vscode": "^1.70.0"
+  },
+  "categories": [
+    "Extension Packs"
+  ],
+  "extensionPack": [
+    "Catppuccin.catppuccin-vsc",
+    "Catppuccin.catppuccin-vsc-icons"
+  ],
+  "devDependencies": {
+    "@vscode/vsce": "^2.22.0"
+  },
+  "scripts": {
+    "pack:vsix": "vsce package --no-dependencies"
+  }
+}

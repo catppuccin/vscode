@@ -1,7 +1,8 @@
 import { join } from "node:path";
 import { writeFileSync } from "node:fs";
 import { compile, JSONSchema } from "json-schema-to-typescript";
-import { repoRoot, vscodeSchemasRoot } from "./constants";
+const vscodeSchemasRoot =
+  "https://raw.githubusercontent.com/wraith13/vscode-schemas/master/en/latest/schemas/";
 
 const bannerComment = `/* eslint-disable */
 /**
@@ -69,7 +70,7 @@ for (const { schema, name, fname, kind } of mappings) {
       }
     })
     .then((typeDefs) =>
-      writeFileSync(join(repoRoot, fname), typeDefs, "utf-8"),
+      writeFileSync(join(__dirname, "types", fname), typeDefs, "utf-8"),
     );
 }
 
