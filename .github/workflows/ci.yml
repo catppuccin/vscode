@@ -22,7 +22,7 @@ jobs:
       - name: Build
         run: |
           yarn core:build
-          yarn core:build:ads
+          yarn core:build-ads
 
       - name: Upload Artifact
         uses: actions/upload-artifact@v4

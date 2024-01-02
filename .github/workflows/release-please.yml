@@ -43,7 +43,7 @@ jobs:
 
       - name: Build Azure Data Studio
         id: build-ads
-        run: yarn core:build:ads
+        run: yarn core:build-ads
 
       - name: Publish to Visual Studio Marketplace
         working-directory: ./packages/catppuccin-vsc
