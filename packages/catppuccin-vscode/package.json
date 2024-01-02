@@ -1,10 +1,14 @@
 {
   "name": "@catppuccin/vscode",
-  "version": "3.8.2",
+  "version": "3.9.0",
   "description": "🦌 Soothing pastel theme for VSCode, precompiled JSON version",
   "files": [
     "themes/*"
   ],
+  "private": false,
+  "publishConfig": {
+    "access": "public"
+  },
   "devDependencies": {
     "catppuccin-vsc": "workspace:*"
   },
