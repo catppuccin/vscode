@@ -17,6 +17,7 @@ jobs:
         id: release
 
     outputs:
+      pack_release: ${{ steps.release.outputs['catppuccin-vsc-pack--release_created'] }}
       vscode_release: ${{ steps.release.outputs['catppuccin-vsc--release_created'] }}
       vscode_tag: ${{ steps.release.outputs['catppuccin-vsc--tag_name'] }}
 
@@ -66,7 +67,37 @@ jobs:
         run: |
           gh release upload ${{ needs.release-please.outputs.vscode_tag }} catppuccin-*.vsix
 
-  release-compiled:
+  release-pack:
+    runs-on: ubuntu-latest
+    needs: release-please
+    if: ${{ needs.release-please.outputs.pack_release }}
+
+    steps:
+      - uses: actions/checkout@v4
+      - run: corepack enable
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 18
+          cache: yarn
+      - run: yarn install --immutable
+
+      - run: yarn pack:build
+
+      - name: Publish to Visual Studio Marketplace
+        working-directory: ./packages/catppuccin-vsc-pack
+        run: |
+          npx @vscode/vsce publish --pat "${{ secrets.VS_MARKETPLACE_TOKEN }}" --packagePath ./catppuccin-vsc-pack.vsix
+
+      - name: Publish to Open VSX Registry
+        working-directory: ./packages/catppuccin-vsc-pack
+        # continue even if OpenVSX fails
+        # -> see https://github.com/catppuccin/vscode/issues/51
+        continue-on-error: true
+        timeout-minutes: 10
+        run: |
+          npx ovsx publish --pat "${{ secrets.VS_MARKETPLACE_TOKEN }}" --packagePath ./catppuccin-vsc-pack.vsix
+
+  release-npm:
     permissions:
       id-token: write
 

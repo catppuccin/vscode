@@ -1,7 +1,7 @@
 {
   "name": "catppuccin-vsc-pack",
   "description": "Soothing pastel theme pack for VSCode",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "displayName": "Catppuccin Pack",
   "publisher": "catppuccin",
   "repository": {
@@ -22,6 +22,6 @@
     "@vscode/vsce": "^2.22.0"
   },
   "scripts": {
-    "pack:vsix": "vsce package --no-dependencies"
+    "pack:build": "vsce package --no-dependencies --out catppuccin-vsc-pack.vsix"
   }
 }
