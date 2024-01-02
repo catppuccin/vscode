@@ -16,6 +16,14 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      # use yarn-nixify to prepare the cache in /nix/store
+      - run: corepack enable
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 18
+          cache: yarn
+      - run: yarn install --immutable
+
       - uses: DeterminateSystems/nix-installer-action@main
 
       - uses: DeterminateSystems/magic-nix-cache-action@main
