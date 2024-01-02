@@ -9,11 +9,12 @@
     "access": "public"
   },
   "devDependencies": {
-    "catppuccin-vsc": "workspace:*"
+    "catppuccin-vsc": "workspace:*",
+    "tsx": "^4.7.0"
   },
   "scripts": {
     "compiled:pack": "npm pack",
-    "prepack": "yarn core:build && yarn run -T tsx ./build.ts",
+    "prepack": "yarn core:build && tsx ./build.ts",
     "postinstall": "yarn prepack"
   }
 }

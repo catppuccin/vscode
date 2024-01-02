@@ -1529,6 +1529,7 @@ __metadata:
     react-dom: "npm:^18.2.0"
     shikiji: "npm:^0.9.17"
     storybook: "npm:^7.6.7"
+    tsx: "npm:^4.7.0"
     vite: "npm:^4.5.1"
   languageName: unknown
   linkType: soft
@@ -1538,6 +1539,7 @@ __metadata:
   resolution: "@catppuccin/vsc-typegen@workspace:packages/catppuccin-vsc-typegen"
   dependencies:
     json-schema-to-typescript: "npm:^13.1.1"
+    tsx: "npm:^4.7.0"
   languageName: unknown
   linkType: soft
 
@@ -1569,6 +1571,7 @@ __metadata:
   resolution: "@catppuccin/vscode@workspace:packages/catppuccin-vscode"
   dependencies:
     catppuccin-vsc: "workspace:*"
+    tsx: "npm:^4.7.0"
   languageName: unknown
   linkType: soft
 
@@ -5178,6 +5181,8 @@ __metadata:
 "catppuccin-vsc-pack@workspace:packages/catppuccin-vsc-pack":
   version: 0.0.0-use.local
   resolution: "catppuccin-vsc-pack@workspace:packages/catppuccin-vsc-pack"
+  dependencies:
+    "@vscode/vsce": "npm:^2.22.0"
   languageName: unknown
   linkType: soft
 
