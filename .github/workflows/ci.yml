@@ -27,5 +27,5 @@ jobs:
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
         with:
-          name: catppuccin-vsc.vsix
+          name: catppuccin-vsc-${{ github.sha }}
           path: packages/catppuccin-vsc/catppuccin-*.vsix
