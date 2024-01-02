@@ -26,9 +26,9 @@
     "*.{ts,json,md}": "yarn prettier --write"
   },
   "scripts": {
-    "lint": "eslint . --ext .ts && yarn typecheck:all",
-    "postinstall": "husky install",
-    "typecheck:all": "tsc --noEmit -p packages/catppuccin-vsc && tsc --noEmit -p packages/catppuccin-vsc-storybook"
+    "g:typecheck": "tsc --noEmit -p packages/catppuccin-vsc && tsc --noEmit -p packages/catppuccin-vsc-storybook",
+    "lint": "eslint . --ext .ts && yarn g:typecheck",
+    "postinstall": "husky install"
   },
   "workspaces": [
     "packages/*"
