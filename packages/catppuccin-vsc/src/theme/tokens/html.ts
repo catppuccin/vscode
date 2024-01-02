@@ -50,9 +50,14 @@ const tokens = (context: ThemeContext): TextmateColors => {
     },
     {
       name: "Components",
-      scope: ["meta.tag support.class.component"],
+      scope: [
+        "support.class.component",
+        "support.class.component.jsx",
+        "support.class.component.tsx",
+        "support.class.component.vue",
+      ],
       settings: {
-        foreground: palette.blue,
+        foreground: palette.pink,
         fontStyle: "",
       },
     },

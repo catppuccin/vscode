@@ -1,5 +1,23 @@
 # Changelog
 
+## [3.9.0](https://github.com/catppuccin/vscode/compare/v3.8.2...v3.9.0) (2024-01-01)
+
+This is our first update of 2024, and we just reached **200.000 downloads**!\
+Thanks for spreading the word about our theme. ❤️️
+
+If you've been using Catppuccin for a while, I hope that last year's port 
+redesign has grown on you, and that the theme has improved since September.
+
+### Features
+
+* **markup:** use pink for Components ([#250](https://github.com/catppuccin/vscode/issues/250)) ([b129824](https://github.com/catppuccin/vscode/commit/b12982421f1891008baafa7853cecc108e2f5f2d))
+* **ui:** redesign search match colors ([#254](https://github.com/catppuccin/vscode/issues/254)) ([907e0f3](https://github.com/catppuccin/vscode/commit/907e0f30f06c89eb065c4904cd6bc46309dccc6c))
+
+
+### Bug Fixes
+
+* **js:** more expressions marked as keyword/mauve ([#251](https://github.com/catppuccin/vscode/issues/251)) ([fde3779](https://github.com/catppuccin/vscode/commit/fde377992105f07eac90f9fdd3972f5a0a11c418))
+
 ## [3.8.2](https://github.com/catppuccin/vscode/compare/v3.8.1...v3.8.2) (2023-12-12)
 
 

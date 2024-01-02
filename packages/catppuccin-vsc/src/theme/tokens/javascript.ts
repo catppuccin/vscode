@@ -99,23 +99,15 @@ const tokens = (context: ThemeContext): TextmateColors => {
       },
     },
     {
-      name: "of/ keyof / typeof as keywords",
+      name: "Extra JS/TS keywords",
       scope: [
-        "keyword.operator.expression.keyof.ts",
-        "keyword.operator.expression.typeof.js",
-        "keyword.operator.expression.typeof.ts",
-        "keyword.operator.expression.of.ts",
-        "keyword.operator.expression.of.js",
+        "keyword.operator.expression.in",
+        "keyword.operator.expression.instanceof",
+        "keyword.operator.expression.is",
+        "keyword.operator.expression.keyof",
       ],
       settings: {
         foreground: palette.mauve,
-      },
-    },
-    {
-      name: "Vue components",
-      scope: ["support.class.component.vue"],
-      settings: {
-        foreground: palette.blue,
       },
     },
   ];

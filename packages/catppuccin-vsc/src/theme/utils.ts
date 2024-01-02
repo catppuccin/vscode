@@ -8,6 +8,15 @@ export const capitalize = (s: string): string =>
   s.charAt(0).toUpperCase() + s.substring(1);
 
 /**
+ * @param {string} color1 6-character hex color, like "#FF69B4".
+ * @param {string} color2 6-character hex color, like "#FF69B4".
+ * @param {number} amount ratio of color1 to color2. value between 0 and 1.
+ * @returns {string} returns the mixed color.
+ */
+export const mix = (color1: string, color2: string, amount: number): string =>
+  tinycolor.mix(color1, color2, amount * 100).toHexString();
+
+/**
  * @param {string} color 6-character hex color, like "#FF69B4".
  * @param {number} opacity how much opacity to apply. value between 0 and 1.
  * @returns {string} color with the specified opacity, hex-encoded.
