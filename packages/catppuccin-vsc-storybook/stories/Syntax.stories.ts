@@ -7,6 +7,18 @@ const meta = {
   component: Syntax,
   parameters: {
     layout: "fullscreen",
+    chromatic: {
+      modes: {
+        dark: {
+          viewport: "xl",
+          theme: "mocha",
+        },
+        light: {
+          viewport: "xl",
+          theme: "latte",
+        },
+      },
+    },
   },
 } satisfies Meta<typeof Syntax>;
 
