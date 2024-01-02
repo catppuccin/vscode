@@ -25,7 +25,7 @@ jobs:
           yarn core:build:ads
 
       - name: Upload Artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: catppuccin-vsc.vsix
           path: packages/catppuccin-vsc/catppuccin-*.vsix
