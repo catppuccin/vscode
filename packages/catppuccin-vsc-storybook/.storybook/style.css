@@ -1,7 +1,7 @@
 @import "@catppuccin/palette/style";
 
 .shiki {
-  font-family: "IBM Plex Mono", monospace;
+  font-family: "JetBrains Mono Variable", monospace;
   font-size: 200%;
 }
 
