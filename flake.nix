@@ -3,17 +3,15 @@
 
   outputs = {nixpkgs, ...} @ inputs: let
     systems = ["aarch64-darwin" "aarch64-linux" "x86_64-darwin" "x86_64-linux"];
-    forAllSystems = f: nixpkgs.lib.genAttrs systems (system: f system);
+    forAllSystems = fn: nixpkgs.lib.genAttrs systems (system: fn nixpkgs.legacyPackages.${system});
   in {
-    packages = forAllSystems (system: let
-      pkgs = nixpkgs.legacyPackages.${system};
-    in rec {
+    packages = forAllSystems (pkgs: rec {
       default = catppuccin-vsc;
       catppuccin-vsc = pkgs.callPackage ./nix {};
     });
 
     overlays.default = final: prev: let
-      pkg = inputs.self.packages.${prev.stdenv.hostPlatform.system}.default;
+      pkg = inputs.self.packages.${prev.stdenv.system}.default;
     in {
       # create a new package
       catppuccin-vsc = pkg;
@@ -29,10 +27,8 @@
         };
     };
 
-    devShells = forAllSystems (system: let
-      pkgs = nixpkgs.legacyPackages.${system};
-    in {
-      default = import ./nix/shell.nix {inherit pkgs;};
-    });
+    devShells = forAllSystems (pkgs: {default = import ./nix/shell.nix {inherit pkgs;};});
+
+    formatter = forAllSystems (pkgs: pkgs.alejandra);
   };
 }
