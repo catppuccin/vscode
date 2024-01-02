@@ -2,6 +2,7 @@
 
 .shiki {
   font-family: "IBM Plex Mono", monospace;
+  font-size: 200%;
 }
 
 .mocha {

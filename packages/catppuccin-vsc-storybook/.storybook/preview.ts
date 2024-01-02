@@ -4,6 +4,11 @@ import "./style.css";
 
 const preview: Preview = {
   parameters: {
+    viewport: {
+      viewports: {
+        xl: { name: "XL", styles: { width: "2400px" } },
+      },
+    },
     layout: "fullscreen",
   },
   decorators: [

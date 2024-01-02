@@ -1,12 +1,17 @@
 import React, { useEffect, useState } from "react";
-import { getHighlighter, bundledLanguages } from "shikiji";
+import { getHighlighter, bundledLanguages, type ThemeInput } from "shikiji";
 import "@catppuccin/palette/style";
 import mocha from "catppuccin-vsc/themes/mocha.json";
 import macchiato from "catppuccin-vsc/themes/macchiato.json";
 import frappe from "catppuccin-vsc/themes/frappe.json";
 import latte from "catppuccin-vsc/themes/latte.json";
 
-const themes = [mocha, macchiato, frappe, latte] as any[];
+const themes = [mocha, macchiato, frappe, latte].map((theme, i) => {
+  return {
+    ...theme,
+    name: ["mocha", "macchiato", "frappe", "latte"][i],
+  } as unknown as ThemeInput;
+});
 const shiki = getHighlighter({
   themes,
   langs: Object.keys(bundledLanguages),
@@ -28,10 +33,10 @@ export const Syntax = ({
           {
             lang: language,
             themes: {
-              light: "Catppuccin Latte",
-              frappe: "Catppuccin Frappe",
-              macchiato: "Catppuccin Macchiato",
-              dark: "Catppuccin Mocha",
+              light: "latte",
+              frappe: "frappe",
+              macchiato: "macchiato",
+              dark: "mocha",
             },
           },
         ),
@@ -48,7 +53,7 @@ export const Syntax = ({
     >
       <div
         style={{
-          maxWidth: "54rem",
+          maxWidth: "100rem",
           margin: "0 auto",
         }}
       >
