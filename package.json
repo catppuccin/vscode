@@ -179,13 +179,13 @@
     }
   },
   "lint-staged": {
-    "*.ts": "yarn eslint --cache --fix",
-    "*.{ts,json,md}": "yarn prettier --write"
+    "*.ts": "yarn run -T eslint --cache --fix",
+    "*.{ts,json,md}": "yarn run -T prettier --write"
   },
   "scripts": {
-    "lint": "eslint . --ext .ts && yarn typecheck:all",
-    "postinstall": "husky install",
-    "typecheck:all": "tsc --noEmit -p packages/catppuccin-vsc && tsc --noEmit -p packages/catppuccin-vsc-storybook"
+    "lint": "yarn run -T eslint . --ext .ts && yarn typecheck:all",
+    "postinstall": "yarn run -T husky install",
+    "typecheck:all": "yarn run -T tsc --noEmit -p packages/catppuccin-vsc && tsc --noEmit -p packages/catppuccin-vsc-storybook"
   },
   "workspaces": [
     "packages/*"

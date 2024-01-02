@@ -136,7 +136,7 @@ let
         cp --recursive .yarn "$out/libexec/$name"
 
         # Copy the Yarn linker output into the package.
-        cp --recursive node_modules "$out/libexec/$name"
+        cp .pnp.* "$out/libexec/$name"
       fi
 
       cd "$out/libexec/$name"
@@ -145,8 +145,6 @@ let
       mkdir -p "$out/bin"
       yarn nixify install-bin $out/bin
 
-      # A package with node_modules doesn't need the cache
-      yarn cache clean
 
       runHook postInstall
     '';

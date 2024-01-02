@@ -5,7 +5,6 @@
   "files": [
     "themes/*"
   ],
-  "private": false,
   "publishConfig": {
     "access": "public"
   },
