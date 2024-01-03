@@ -1,4 +1,4 @@
-import { variants } from "@catppuccin/palette";
+import { flavorEntries } from "@catppuccin/palette";
 import { compileTheme, defaultOptions } from "./theme";
 import {
   commands,
@@ -12,7 +12,6 @@ import {
 } from "vscode";
 import type {
   CatppuccinAccent,
-  CatppuccinFlavor,
   ColorOverrides,
   CustomUIColors,
   ThemeOptions,
@@ -124,7 +123,7 @@ export const updateThemes = async (
   paths: ThemePaths,
   trigger: UpdateTrigger,
 ) => {
-  const flavors = Object.keys(variants) as CatppuccinFlavor[];
+  const flavors = flavorEntries.map(([flavorName]) => flavorName);
 
   const promises = flavors.map(async (flavor): Promise<void> => {
     const theme = compileTheme(flavor, options);

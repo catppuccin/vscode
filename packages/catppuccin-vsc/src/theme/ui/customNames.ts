@@ -4,14 +4,14 @@ import { opacity } from "@/theme/utils";
 type CustomNamedColors = Record<string, string>;
 
 const customNamedColors = (context: ThemeContext): CustomNamedColors => {
-  const { palette, options } = context;
+  const { flavor, palette, options } = context;
   const accent = palette[options.accent];
 
   return {
     ...Object.entries({
       // collect the options, overwrite the "all" config with the current palette config
       ...options.customUIColors.all,
-      ...options.customUIColors[palette.name],
+      ...options.customUIColors[flavor],
     })
       .map(([k, v]) => {
         // deal with accents

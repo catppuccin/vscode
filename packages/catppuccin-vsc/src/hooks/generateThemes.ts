@@ -5,13 +5,12 @@
 
 import { mkdir, writeFile } from "node:fs/promises";
 import { join } from "node:path";
-import { variants } from "@catppuccin/palette";
+import { flavorEntries } from "@catppuccin/palette";
 
 import { compileTheme, defaultOptions } from "@/theme";
-import type { CatppuccinFlavor } from "@/types";
 import { repoRoot } from "./constants";
 
-const flavors = Object.keys(variants) as CatppuccinFlavor[];
+const flavors = flavorEntries.map(([flavorName]) => flavorName);
 
 // options can also be passed as a JSON string as an environment variable
 const optEnvVar = process.env.CATPPUCCIN_OPTIONS;

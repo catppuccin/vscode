@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { getHighlighter, bundledLanguages, type ThemeInput } from "shikiji";
-import "@catppuccin/palette/style";
+import "@catppuccin/palette/css/catppuccin.css";
 import mocha from "catppuccin-vsc/themes/mocha.json";
 import macchiato from "catppuccin-vsc/themes/macchiato.json";
 import frappe from "catppuccin-vsc/themes/frappe.json";

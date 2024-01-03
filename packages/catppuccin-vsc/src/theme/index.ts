@@ -1,4 +1,4 @@
-import { variants } from "@catppuccin/palette";
+import { flavors } from "@catppuccin/palette";
 
 import type {
   CatppuccinFlavor,
@@ -9,7 +9,6 @@ import type {
 import { getTokenColors } from "./tokenColors";
 import { getSemanticTokens } from "./semanticTokens";
 import { getUiColors } from "./uiColors";
-import { capitalize } from "./utils";
 
 export const defaultOptions: ThemeOptions = {
   accent: "mauve",
@@ -27,28 +26,26 @@ export const compileTheme = (
   flavor: CatppuccinFlavor = "mocha",
   options: ThemeOptions = defaultOptions,
 ) => {
-  const ctpPalette = Object.entries(variants[flavor])
-    .map(([k, v]) => {
-      return {
-        [k as unknown as any]: v["hex"],
-        name: flavor,
-      };
-    })
-    .reduce((acc, curr) => ({ ...acc, ...curr }), {});
+  const flavorData = flavors[flavor];
+  const ctpPalette = flavorData.colorEntries.reduce((acc, [k, v]) => {
+    acc[k] = v.hex;
+    return acc;
+  }, {} as CatppuccinPalette);
 
   const palette: CatppuccinPalette = {
-    ...(ctpPalette as CatppuccinPalette),
+    ...ctpPalette,
     ...options.colorOverrides?.all,
     ...options.colorOverrides?.[flavor],
   };
 
   const context: ThemeContext = {
+    flavor,
     palette,
     options,
     isLatte: flavor === "latte",
   };
 
-  const flavourName = `Catppuccin ${capitalize(flavor)}`;
+  const flavourName = `Catppuccin ${flavorData.name}`;
 
   const theme = {
     name: flavourName,
