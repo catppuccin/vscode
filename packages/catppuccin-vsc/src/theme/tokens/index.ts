@@ -19,6 +19,7 @@ import markdown from "./markdown";
 import nix from "./nix";
 import php from "./php";
 import python from "./python";
+import regex from "./regex";
 import rust from "./rust";
 import shell from "./shell";
 
@@ -58,12 +59,6 @@ export default (context: ThemeContext): TextmateColors => {
       scope: ["string", "punctuation.definition.string"],
       settings: {
         foreground: palette.green,
-      },
-    },
-    {
-      scope: "string.regexp",
-      settings: {
-        foreground: palette.pink,
       },
     },
     {
@@ -306,6 +301,7 @@ export default (context: ThemeContext): TextmateColors => {
       nix,
       php,
       python,
+      regex,
       rust,
       shell,
     ].flatMap((el) => el(context)),
