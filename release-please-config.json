@@ -2,12 +2,13 @@
   "bootstrap-sha": "55b3e5d6248eb201c0e16424ce6f345757e94bad",
   "packages": {
     "packages/catppuccin-vsc": {
-      "component": "theme",
-      "include-component-in-tag": false
+      "component": "catppuccin-vsc"
     },
-    "packages/catppuccin-vsc-pack": {},
+    "packages/catppuccin-vsc-pack": {
+      "component": "catppuccin-vsc-pack"
+    },
     "packages/catppuccin-vscode": {
-      "component": "npm"
+      "component": "@catppuccin/vscode"
     }
   },
   "plugins": [
@@ -18,7 +19,7 @@
     {
       "type": "linked-versions",
       "groupName": "theme",
-      "components": ["theme", "npm"]
+      "components": ["catppuccin-vsc", "@catppuccin/vscode"]
     }
   ],
   "release-type": "node",
