@@ -5,6 +5,16 @@ const tokens = (context: ThemeContext): TextmateColors => {
 
   return [
     {
+      name: "Regex string begin/end in JS/TS",
+      scope: [
+        "string.regexp punctuation.definition.string.begin",
+        "string.regexp punctuation.definition.string.end",
+      ],
+      settings: {
+        foreground: palette.pink,
+      },
+    },
+    {
       name: "Regex anchors (^, $)",
       scope: "keyword.control.anchor.regexp",
       settings: {
