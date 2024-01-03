@@ -1,13 +1,6 @@
 import tinycolor from "tinycolor2";
 
 /**
- * @param {string} s String to capitalize
- * @returns {string} returns the String with the first character uppercased.
- */
-export const capitalize = (s: string): string =>
-  s.charAt(0).toUpperCase() + s.substring(1);
-
-/**
  * @param {string} color1 6-character hex color, like "#FF69B4".
  * @param {string} color2 6-character hex color, like "#FF69B4".
  * @param {number} amount ratio of color1 to color2. value between 0 and 1.
