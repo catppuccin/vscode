@@ -1,4 +1,5 @@
 {
+  "bootstrap-sha": "55b3e5d6248eb201c0e16424ce6f345757e94bad",
   "packages": {
     "packages/catppuccin-vsc": {
       "component": "catppuccin-vsc",
@@ -22,6 +23,5 @@
     }
   ],
   "release-type": "node",
-  "separate-pull-requests": false,
   "$schema": "https://raw.githubusercontent.com/googleapis/release-please/main/schemas/config.json"
 }
