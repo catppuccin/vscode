@@ -1,9 +1,11 @@
 import { writeFile } from "node:fs/promises";
 import { join } from "node:path";
-import { labels } from "@catppuccin/palette";
+import { flavors } from "@catppuccin/palette";
 
 import { repoRoot, vscodeSchemasRoot } from "./constants";
 import { accents } from "./updatePackageJson";
+
+const ctpColors = flavors.mocha.colorEntries.map(([name]) => name);
 
 const customUiColorsSchema = (workbenchColors: any) => {
   const validColors = [...accents, "accent"];
@@ -23,7 +25,7 @@ const customUiColorsSchema = (workbenchColors: any) => {
       catppuccinColor: {
         anyOf: [
           // allow plain color names,
-          { enum: [...Object.keys(labels), "accent"] },
+          { enum: [...ctpColors, "accent"] },
           // custom hex codes,
           { format: "color-hex" },
           // and plain color names + opacity

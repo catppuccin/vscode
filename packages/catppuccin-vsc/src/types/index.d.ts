@@ -1,4 +1,4 @@
-import { labels, variants } from "@catppuccin/palette";
+import type { AccentName, Colors, FlavorName } from "@catppuccin/palette";
 
 import type { Uri } from "vscode";
 
@@ -12,22 +12,8 @@ export type * from "@catppuccin/vsc-typegen/types/errorlens";
 export type * from "@catppuccin/vsc-typegen/types/github-pull-request";
 export type * from "@catppuccin/vsc-typegen/types/gitlens";
 
-export type CatppuccinFlavor = keyof typeof variants;
-export type CatppuccinAccent =
-  | "rosewater"
-  | "flamingo"
-  | "pink"
-  | "mauve"
-  | "red"
-  | "maroon"
-  | "peach"
-  | "yellow"
-  | "green"
-  | "teal"
-  | "sky"
-  | "sapphire"
-  | "blue"
-  | "lavender";
+export type CatppuccinAccent = AccentName;
+export type CatppuccinFlavor = FlavorName;
 export type CatppuccinWorkbenchMode = "default" | "flat" | "minimal";
 export type CatppuccinBracketMode =
   | "rainbow"
@@ -35,27 +21,15 @@ export type CatppuccinBracketMode =
   | "monochromatic"
   | "neovim";
 
-export type CatppuccinPalette = {
-  name: CatppuccinFlavor;
-} & {
-  [k in keyof typeof labels]: string;
-};
+export type CatppuccinPalette = Colors<string>;
 
-export type ColorOverrides = {
-  all?: Partial<CatppuccinPalette>;
-  latte?: Partial<CatppuccinPalette>;
-  frappe?: Partial<CatppuccinPalette>;
-  macchiato?: Partial<CatppuccinPalette>;
-  mocha?: Partial<CatppuccinPalette>;
-};
+type FlavorsPlusAll<T> = { all: T } & { [k in CatppuccinFlavor]: T };
 
-export type CustomUIColors = {
-  all?: Record<"all", string>;
-  latte?: Record<"latte", string>;
-  frappe?: Record<"frappe", string>;
-  macchiato?: Record<"macchiato", string>;
-  mocha?: Record<"mocha", string>;
-};
+export type ColorOverrides = Partial<
+  FlavorsPlusAll<Partial<CatppuccinPalette>>
+>;
+
+export type CustomUIColors = Partial<FlavorsPlusAll<Record<string, string>>>;
 
 export type ThemeOptions = {
   accent: CatppuccinAccent;
@@ -77,6 +51,7 @@ export type ThemePaths = {
 };
 
 export type ThemeContext = {
+  flavor: CatppuccinFlavor;
   palette: CatppuccinPalette;
   options: ThemeOptions;
   isLatte: boolean;
