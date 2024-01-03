@@ -123,7 +123,7 @@ export const updateThemes = async (
   paths: ThemePaths,
   trigger: UpdateTrigger,
 ) => {
-  const flavors = flavorEntries.map(([k]) => k);
+  const flavors = flavorEntries.map(([flavorName]) => flavorName);
 
   const promises = flavors.map(async (flavor): Promise<void> => {
     const theme = compileTheme(flavor, options);
