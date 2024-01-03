@@ -105,6 +105,7 @@ const tokens = (context: ThemeContext): TextmateColors => {
         "keyword.operator.expression.instanceof",
         "keyword.operator.expression.is",
         "keyword.operator.expression.keyof",
+        "keyword.operator.expression.typeof.ts",
       ],
       settings: {
         foreground: palette.mauve,
