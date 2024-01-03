@@ -24,13 +24,13 @@ const tokens = (context: ThemeContext): TextmateColors => {
       },
     },
     {
-      name: "JSDoc",
+      name: "JSDoc; these are mainly params, so styled as such",
       scope: [
         "variable.other.jsdoc",
         "comment.block.documentation variable.other",
       ],
       settings: {
-        foreground: palette.text,
+        foreground: palette.maroon,
         fontStyle: "",
       },
     },
