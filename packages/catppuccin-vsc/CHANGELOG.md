@@ -1,5 +1,17 @@
 # Changelog
 
+## [3.10.0](https://github.com/catppuccin/vscode/compare/v3.9.0...v3.10.0) (2024-01-03)
+
+
+### Features
+
+* **regex:** add dedicated syntax highlighting for regex ([#263](https://github.com/catppuccin/vscode/issues/263)) ([db58ea2](https://github.com/catppuccin/vscode/commit/db58ea28d502d8f27c8989526502efed921408b5))
+
+
+### Bug Fixes
+
+* **js/ts:** JSDoc params color, typeof as keyword ([#264](https://github.com/catppuccin/vscode/issues/264)) ([c6d63be](https://github.com/catppuccin/vscode/commit/c6d63be0421cd7548c3b87bea5e8bb73f1a93d1c))
+
 ## [3.9.0](https://github.com/catppuccin/vscode/compare/v3.8.2...v3.9.0) (2024-01-01)
 
 This is our first update of 2024, and we just reached **200.000 downloads**!\
