@@ -2,14 +2,12 @@ on:
   push:
     branches: [main]
     paths:
-      - ".storybook/**/*"
-      - "stories/**/*"
-      - "src/theme/**/*.ts"
+      - "packages/catppuccin-vsc/src/theme/**/*.ts"
+      - "packages/catppuccin-vsc-storybook/**/*"
   pull_request:
     paths:
-      - ".storybook/**/*"
-      - "stories/**/*"
-      - "src/theme/**/*.ts"
+      - "packages/catppuccin-vsc/src/theme/**/*.ts"
+      - "packages/catppuccin-vsc-storybook/**/*"
 
 name: "Chromatic"
 
@@ -20,21 +18,17 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
-
       - run: corepack enable
-
       - uses: actions/setup-node@v4
         with:
           node-version: 18
           cache: yarn
-
       - run: yarn install --immutable
-
-      - run: yarn build
 
       - name: Publish to Chromatic
         uses: chromaui/action@v1
         with:
-          buildScriptName: "storybook:build"
+          buildScriptName: storybook:build
           exitOnceUploaded: true
-          projectToken: "chpt_e3cba49738d7554"
+          projectToken: chpt_e3cba49738d7554
+          workingDir: packages/catppuccin-vsc-storybook

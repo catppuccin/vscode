@@ -1,0 +1,12 @@
+{
+  "name": "@catppuccin/vsc-typegen",
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "json-schema-to-typescript": "^13.1.1",
+    "tsx": "^4.7.0"
+  },
+  "scripts": {
+    "typegen:update": "tsx update.ts"
+  }
+}
