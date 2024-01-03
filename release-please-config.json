@@ -14,7 +14,8 @@
   },
   "plugins": [
     {
-      "type": "node-workspace"
+      "type": "node-workspace",
+      "merge": false
     },
     {
       "type": "linked-versions",
