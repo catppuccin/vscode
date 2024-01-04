@@ -3,6 +3,23 @@ name: release-please
 on:
   push:
     branches: [main]
+  workflow_dispatch:
+    inputs:
+      force-release:
+        description: "Force a release"
+        default: true
+        type: boolean
+      force-release-catppuccin-vsc:
+        description: "Force a release of catppuccin-vsc"
+        default: false
+        type: boolean
+      force-release-catppuccin-vsc-tag:
+        description: "The version to release catppuccin-vsc as"
+        type: string
+      force-release-catppuccin-vsc-pack:
+        description: "Force a release of catppuccin-vsc-pack"
+        default: false
+        type: boolean
 
 jobs:
   release-please:
@@ -19,7 +36,7 @@ jobs:
     outputs:
       pack_release: ${{ steps.release.outputs['catppuccin-vsc-pack--release_created'] }}
       vscode_release: ${{ steps.release.outputs['catppuccin-vsc--release_created'] }}
-      vscode_tag: ${{ steps.release.outputs['catppuccin-vsc--tag_name'] }}
+      vscode_tag: ${{ github.event.inputs['force-release-catppuccin-vsc-tag'] || steps.release.outputs['catppuccin-vsc--tag_name'] }}
 
   release-vscode:
     permissions:
@@ -27,7 +44,7 @@ jobs:
 
     runs-on: ubuntu-latest
     needs: release-please
-    if: ${{ needs.release-please.outputs.vscode_release }}
+    if: ${{ needs.release-please.outputs.vscode_release || github.event.inputs['force-release-catppuccin-vsc'] }}
 
     steps:
       - uses: actions/checkout@v4
@@ -70,7 +87,7 @@ jobs:
   release-pack:
     runs-on: ubuntu-latest
     needs: release-please
-    if: ${{ needs.release-please.outputs.pack_release }}
+    if: ${{ needs.release-please.outputs.pack_release || github.event.inputs['force-release-catppuccin-vsc-pack'] }}
 
     steps:
       - uses: actions/checkout@v4
@@ -103,7 +120,7 @@ jobs:
 
     runs-on: ubuntu-latest
     needs: release-please
-    if: ${{ needs.release-please.outputs.vscode_release }}
+    if: ${{ needs.release-please.outputs.vscode_release || github.event.inputs['force-release-catppuccin-vsc'] }}
 
     steps:
       - uses: actions/checkout@v4
