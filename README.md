@@ -49,11 +49,9 @@ Download the VSIX from
 [the latest GitHub release](https://github.com/catppuccin/vscode/releases/latest).
 Open the Command Palette and select "Extensions: Install from VSIX...", then open the file you just downloaded.
 
-**Using the JSON theme only**
+**Using the JSON files**
 
-You can find the compiled theme JSON files (with default settings as documented below) on the [compiled branch](https://github.com/catppuccin/vscode/tree/compiled).
-
-This can be useful if you want to use syntax highlighters that work with VSCode themes (like Shiki and derivatives) or if your work environment only allows you to install allowlisted extensions.
+If you need to use the JSON files for libraries like [Shiki](https://www.npmjs.com/package/shiki) or [Shikiji](https://www.npmjs.com/package/shikiji), the theme files are published to NPM as [`@catppuccin/vscode`](https://www.npmjs.com/package/@catppuccin/vscode).
 
 **Nix (Home-Manager) users**
 
