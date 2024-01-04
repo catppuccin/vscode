@@ -1,5 +1,18 @@
 # Changelog
 
+## [3.10.0](https://github.com/catppuccin/vscode/compare/catppuccin-vsc-v3.9.0...catppuccin-vsc-v3.10.0) (2024-01-04)
+
+
+### Features
+
+* **syntax:** add dedicated highlighting for regex ([db58ea2](https://github.com/catppuccin/vscode/commit/db58ea28d502d8f27c8989526502efed921408b5))
+
+
+### Bug Fixes
+
+* **syntax:** JSDoc params color, `typeof` as keyword ([c6d63be](https://github.com/catppuccin/vscode/commit/c6d63be0421cd7548c3b87bea5e8bb73f1a93d1c))
+* **ui:** command center appearance, de-emphasize borders ([#267](https://github.com/catppuccin/vscode/issues/267)) ([a822dfd](https://github.com/catppuccin/vscode/commit/a822dfdee0ee26067ac2a4d0de5aacd079d9d567))
+
 ## [3.9.0](https://github.com/catppuccin/vscode/compare/v3.8.2...v3.9.0) (2024-01-01)
 
 This is our first update of 2024, and we just reached **200.000 downloads**!\
