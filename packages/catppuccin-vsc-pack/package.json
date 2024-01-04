@@ -4,6 +4,7 @@
   "version": "1.0.0",
   "displayName": "Catppuccin Pack",
   "publisher": "catppuccin",
+  "icon": "icon.png",
   "repository": {
     "type": "git",
     "url": "https://github.com/catppuccin/vscode.git"
