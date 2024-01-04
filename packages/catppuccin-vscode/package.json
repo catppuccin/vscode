@@ -6,11 +6,16 @@
     "themes/*"
   ],
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "provenance": "true"
   },
   "devDependencies": {
     "catppuccin-vsc": "workspace:*",
     "tsx": "^4.7.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/catppuccin/vscode.git"
   },
   "scripts": {
     "compiled:pack": "npm pack",
