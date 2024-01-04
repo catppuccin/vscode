@@ -34,10 +34,10 @@ jobs:
         id: release
 
     outputs:
-      theme_release: ${{ github.event.inputs.force-release-theme || steps.release.outputs['catppuccin-vsc--release_created'] }}
-      theme_tag: ${{ github.event.inputs.force-release-theme-tag || steps.release.outputs['catppuccin-vsc--tag_name'] }}
-      pack_release: ${{ github.event.inputs.force-release-pack || steps.release.outputs['catppuccin-vsc-pack--release_created'] }}
-      npm_release: ${{ github.event.inputs.force-release-npm || steps.release.outputs['catppuccin-vscode--release_created'] }}
+      theme_release: ${{ github.event.inputs.force-release-theme == 'true' || steps.release.outputs['catppuccin-vsc--release_created'] }}
+      theme_tag: ${{ github.event.inputs.force-release-theme-tag == 'true' || steps.release.outputs['catppuccin-vsc--tag_name'] }}
+      pack_release: ${{ github.event.inputs.force-release-pack == 'true' || steps.release.outputs['catppuccin-vsc-pack--release_created'] }}
+      npm_release: ${{ github.event.inputs.force-release-npm == 'true' || steps.release.outputs['catppuccin-vscode--release_created'] }}
 
   release-vscode:
     permissions:
@@ -137,6 +137,4 @@ jobs:
         working-directory: ./packages/catppuccin-vscode
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-        run: |
-          yarn pack
-          npm publish --provenance ./package.tgz
+        run: npm publish --provenance ./package.tgz
