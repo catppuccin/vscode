@@ -71,7 +71,7 @@ jobs:
         continue-on-error: true
         timeout-minutes: 10
         run: |
-          npx ovsx publish --pat "${{ secrets.VS_MARKETPLACE_TOKEN }}" --packagePath "${{ steps.build-vscode.outputs.vsixPath }}"
+          npx ovsx publish --pat "${{ secrets.OPEN_VSX_TOKEN }}" --packagePath "${{ steps.build-vscode.outputs.vsixPath }}"
 
       - name: Add files to GH Release
         working-directory: ./packages/catppuccin-vsc
