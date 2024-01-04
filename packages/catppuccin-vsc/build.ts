@@ -19,7 +19,6 @@ const dev = getFlag("--dev", Boolean);
     external: ["vscode"],
     minify: !dev,
     sourcemap: dev,
-    splitting: true,
     target: "node16",
   });
 
