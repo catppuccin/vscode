@@ -24,7 +24,7 @@ import ctpMocha from "@catppuccin/vscode/themes/mocha.json" with { type: "json" 
 Import via a CDN, e.g. in Deno:
 
 ```ts
-import ctpLatte from "https://esm.sh/@catppuccin/vscode/themes/mocha.json" with { type: "json" };
+import ctpLatte from "https://esm.sh/@catppuccin/vscode/themes/latte.json" with { type: "json" };
 ```
 
 You can use these JSON files with libraries like [Shiki](https://github.com/shikijs/shiki) and [Shikiji](https://github.com/antfu/shikiji).
