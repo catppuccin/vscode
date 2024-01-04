@@ -396,10 +396,13 @@ export const getUiColors = (
 
     // command center
     "commandCenter.foreground": palette.subtext1,
+    "commandCenter.inactiveForeground": palette.subtext1,
     "commandCenter.activeForeground": accent,
-    "commandCenter.background": palette.crust,
+    "commandCenter.background": palette.mantle,
     "commandCenter.activeBackground": opacity(palette.surface2, 0.2),
-    "commandCenter.border": accent,
+    "commandCenter.border": border,
+    "commandCenter.inactiveBorder": border,
+    "commandCenter.activeBorder": accent,
 
     // Tab Bar
     "tab.activeBackground": palette.base,
