@@ -14,7 +14,7 @@
   },
   "scripts": {
     "compiled:pack": "npm pack",
-    "prepack": "yarn core:build && tsx ./build.ts",
+    "prepack": "yarn core:build && yarn tsx ./build.ts",
     "postinstall": "yarn prepack"
   }
 }
