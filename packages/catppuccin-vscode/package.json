@@ -9,7 +9,7 @@
     "access": "public"
   },
   "devDependencies": {
-    "catppuccin-vsc": "3.10.0",
+    "catppuccin-vsc": "workspace:*",
     "tsx": "^4.7.0"
   },
   "scripts": {

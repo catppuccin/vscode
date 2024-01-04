@@ -13,10 +13,6 @@
   },
   "plugins": [
     {
-      "type": "node-workspace",
-      "merge": false
-    },
-    {
       "type": "linked-versions",
       "groupName": "theme",
       "components": ["catppuccin-vsc", "@catppuccin/vscode"]
