@@ -52,7 +52,7 @@ in
   (lib.checkListOfEnum "${pname}: workbenchMode" validWorkbenchModes [workbenchMode])
   (lib.checkListOfEnum "${pname}: bracketMode" validBracketModes [bracketMode])
   pkgs.vscode-utils.buildVscodeExtension rec {
-    inherit name;
+    inherit name version;
     src = builder.outPath;
     vscodeExtPublisher = "catppuccin";
     vscodeExtName = name;
