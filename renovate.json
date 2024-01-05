@@ -1,5 +1,8 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": ["config:recommended"],
-  "ignorePaths": [".yarn/sdks/**"]
+  "ignorePaths": [".yarn/sdks/**"],
+  "nix": {
+    "enabled": true
+  }
 }
