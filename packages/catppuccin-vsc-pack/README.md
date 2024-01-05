@@ -1,7 +1,7 @@
 <h3 align="center">
 	<img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/logos/exports/1544x1544_circle.png" width="100" alt="Logo"/><br/>
 	<img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/misc/transparent.png" height="30" width="0px"/>
-	Catppuccin Extension Pack for <a href="https://github.com/catppuccin/vscode/tree/main/packages/pack">VSCode</a>
+	<a href="https://github.com/catppuccin/vscode/tree/main/packages/catppuccin-vsc-pack">Catppuccin Extension Pack</a> for <a href="https://code.visualstudio.com/">VSCode</a>
 	<img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/misc/transparent.png" height="30" width="0px"/>
 </h3>
 
