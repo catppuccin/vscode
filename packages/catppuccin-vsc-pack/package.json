@@ -1,7 +1,7 @@
 {
   "name": "catppuccin-vsc-pack",
   "description": "Soothing pastel theme pack for VSCode",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "displayName": "Catppuccin Pack",
   "publisher": "catppuccin",
   "icon": "icon.png",
