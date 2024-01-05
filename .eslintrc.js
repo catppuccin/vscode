@@ -17,8 +17,11 @@ module.exports = {
   ],
   overrides: [
     {
-      // eslint is having trouble linting its own config file
-      files: [".eslintrc.js"],
+      files: [
+        // eslint is having trouble linting its own config file
+        ".eslintrc.js",
+        "yarn.config.cjs",
+      ],
       rules: {
         "@typescript-eslint/no-var-requires": "off",
         "no-undef": "off",
