@@ -73,7 +73,7 @@
           "type": "object",
           "default": {},
           "markdownDescription": "Custom color overrides. Assign your own hex codes to palette colors. See [the docs](https://github.com/catppuccin/vscode#override-palette-colors) for reference.",
-          "$ref": "https://cdn.jsdelivr.net/gh/catppuccin/vscode@catppuccin-vsc-v3.10.0/packages/catppucin-vsc/schemas/colorOverrides.schema.json"
+          "$ref": "https://cdn.jsdelivr.net/gh/catppuccin/vscode@catppuccin-vsc-v3.10.0/packages/catppuccin-vsc/schemas/colorOverrides.schema.json"
         },
         "catppuccin.customUIColors": {
           "type": "object",
