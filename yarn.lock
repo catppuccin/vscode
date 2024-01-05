@@ -1541,6 +1541,7 @@ __metadata:
   dependencies:
     json-schema-to-typescript: "npm:^13.1.1"
     tsx: "npm:^4.7.0"
+    typescript: "npm:^5.3.3"
   languageName: unknown
   linkType: soft
 
@@ -1573,6 +1574,7 @@ __metadata:
   dependencies:
     catppuccin-vsc: "workspace:*"
     tsx: "npm:^4.7.0"
+    typescript: "npm:^5.3.3"
   languageName: unknown
   linkType: soft
 
@@ -5209,6 +5211,7 @@ __metadata:
     tsup: "npm:^8.0.1"
     tsx: "npm:^4.7.0"
     type-flag: "npm:^3.0.0"
+    typescript: "npm:^5.3.3"
   languageName: unknown
   linkType: soft
 
