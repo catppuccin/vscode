@@ -11,6 +11,7 @@ on:
         type: boolean
       force-release-theme-tag:
         description: "The version to release catppuccin-vsc as"
+        default: ""
         type: string
       force-release-pack:
         description: "Force a release of catppuccin-vsc-pack"
@@ -34,10 +35,10 @@ jobs:
         id: release
 
     outputs:
-      theme_release: ${{ github.event.inputs.force-release-theme == 'true' || steps.release.outputs['catppuccin-vsc--release_created'] }}
-      theme_tag: ${{ github.event.inputs.force-release-theme-tag == 'true' || steps.release.outputs['catppuccin-vsc--tag_name'] }}
-      pack_release: ${{ github.event.inputs.force-release-pack == 'true' || steps.release.outputs['catppuccin-vsc-pack--release_created'] }}
-      npm_release: ${{ github.event.inputs.force-release-npm == 'true' || steps.release.outputs['catppuccin-vscode--release_created'] }}
+      theme_release: ${{ github.event.inputs.force-release-theme == 'true' || steps.release.outputs['catppuccin-vsc--release_created'] == 'true' }}
+      theme_tag: ${{ github.event.inputs.force-release-theme-tag || steps.release.outputs['catppuccin-vsc--tag_name'] }}
+      pack_release: ${{ github.event.inputs.force-release-pack == 'true' || steps.release.outputs['catppuccin-vsc-pack--release_created'] == 'true' }}
+      npm_release: ${{ github.event.inputs.force-release-npm == 'true' || steps.release.outputs['catppuccin-vscode--release_created'] == 'true' }}
 
   release-vscode:
     permissions:
@@ -113,7 +114,7 @@ jobs:
         continue-on-error: true
         timeout-minutes: 10
         run: |
-          npx ovsx publish --pat "${{ secrets.VS_MARKETPLACE_TOKEN }}" --packagePath ./catppuccin-vsc-pack.vsix
+          npx ovsx publish --pat "${{ secrets.OPEN_VSX_TOKEN }}" --packagePath ./catppuccin-vsc-pack.vsix
 
   release-npm:
     permissions:
