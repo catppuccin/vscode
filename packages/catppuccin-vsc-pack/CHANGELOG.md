@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.1](https://github.com/catppuccin/vscode/compare/catppuccin-vsc-pack-v1.0.0...catppuccin-vsc-pack-v1.0.1) (2024-01-05)
+
+
+### Documentation
+
+* fix URLs in title ([9449c7c](https://github.com/catppuccin/vscode/commit/9449c7c13c37aff544bee2bb97d69d97438623e3))
+
 ## [1.0.0](https://github.com/catppuccin/vscode/compare/catppuccin-vsc-pack-v0.1.0...catppuccin-vsc-pack-v1.0.0) (2024-01-04)
 
 

@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.10.1](https://github.com/catppuccin/vscode/compare/catppuccin-vsc-v3.10.0...catppuccin-vsc-v3.10.1) (2024-01-05)
+
+
+### Bug Fixes
+
+* settings json schema URL typo ([#272](https://github.com/catppuccin/vscode/issues/272)) ([acc33aa](https://github.com/catppuccin/vscode/commit/acc33aaefd0041028202cbe8ab3d02c0c6a9436d))
+
 ## [3.10.0](https://github.com/catppuccin/vscode/compare/catppuccin-vsc-v3.9.0...catppuccin-vsc-v3.10.0) (2024-01-04)
 
 
