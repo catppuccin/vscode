@@ -66,7 +66,6 @@ const enforcePublishingConfig = ({ Yarn }) => {
 module.exports = defineConfig({
   constraints: async (ctx) => {
     enforceFieldsOnAllWorkspaces(ctx, {
-      "engines.node": ">=20.0.0",
       license: "MIT",
       "repository.directory": (workspace) => workspace.cwd,
       "repository.type": "git",
