@@ -2,7 +2,7 @@
   "name": "@catppuccin/vscode-monorepo",
   "private": true,
   "devDependencies": {
-    "@types/node": "^18.19.4",
+    "@types/node": "^20.10.6",
     "@typescript-eslint/eslint-plugin": "^6.17.0",
     "@typescript-eslint/parser": "^6.17.0",
     "@vscode/vsce": "^2.22.0",
@@ -37,5 +37,11 @@
   "packageManager": "yarn@4.0.2",
   "engines": {
     "node": ">=20.0.0"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/catppuccin/vscode.git",
+    "directory": "."
   }
 }

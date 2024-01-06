@@ -8,7 +8,7 @@
   "version": "3.10.1",
   "engines": {
     "vscode": "^1.80.0",
-    "node": ">=18.0.0"
+    "node": ">=20.0.0"
   },
   "categories": [
     "Themes"
@@ -144,7 +144,8 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/catppuccin/vscode.git"
+    "url": "git+https://github.com/catppuccin/vscode.git",
+    "directory": "packages/catppuccin-vsc"
   },
   "bugs": {
     "url": "https://github.com/catppuccin/vscode/issues"
@@ -163,7 +164,7 @@
     "@actions/core": "^1.10.1",
     "@catppuccin/palette": "^1.0.3",
     "@catppuccin/vsc-typegen": "workspace:*",
-    "@types/node": "^18.19.4",
+    "@types/node": "^20.10.6",
     "@types/tinycolor2": "^1.4.6",
     "@types/vscode": "~1.80.0",
     "@vscode/vsce": "^2.22.0",

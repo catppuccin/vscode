@@ -9,5 +9,13 @@
   },
   "scripts": {
     "typegen:update": "tsx update.ts"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/catppuccin/vscode.git",
+    "directory": "packages/catppuccin-vsc-typegen"
   }
 }

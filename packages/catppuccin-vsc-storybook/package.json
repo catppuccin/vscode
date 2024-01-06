@@ -11,7 +11,7 @@
     "@storybook/blocks": "^7.6.7",
     "@storybook/react": "^7.6.7",
     "@storybook/react-vite": "^7.6.7",
-    "@types/node": "^18.19.4",
+    "@types/node": "^20.10.6",
     "@types/react": "^18.2.46",
     "catppuccin-vsc": "workspace:*",
     "chromatic": "^10.2.0",
@@ -29,5 +29,13 @@
     "storybook:chromatic": "chromatic --exit-zero-on-changes --exit-once-uploaded --project-token chpt_e3cba49738d7554",
     "storybook:build": "yarn core:build && storybook build",
     "storybook:dev": "storybook dev -p 6006"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/catppuccin/vscode.git",
+    "directory": "packages/catppuccin-vsc-storybook"
   }
 }
