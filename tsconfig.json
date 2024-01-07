@@ -1,8 +1,8 @@
 {
   "compilerOptions": {
-    "module": "commonjs",
+    "module": "CommonJS",
     "esModuleInterop": true,
-    "target": "es6",
+    "target": "es2017",
     "noEmit": true,
     "sourceMap": false,
     "skipLibCheck": true,

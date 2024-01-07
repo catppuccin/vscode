@@ -7,7 +7,7 @@ import updatePackageJson from "./src/hooks/updatePackageJson";
 import generateThemes from "./src/hooks/generateThemes";
 
 const buildForADS = getFlag("--ads", Boolean);
-const dev = getFlag("--dev", Boolean);
+const development = getFlag("--dev", Boolean);
 
 (async () => {
   await generateThemes();
@@ -17,8 +17,8 @@ const dev = getFlag("--dev", Boolean);
     clean: true,
     entry: ["src/browser.ts", "src/main.ts", "src/hooks/generateThemes.ts"],
     external: ["vscode"],
-    minify: !dev,
-    sourcemap: dev,
+    minify: !development,
+    sourcemap: development,
     target: "node16",
   });
 

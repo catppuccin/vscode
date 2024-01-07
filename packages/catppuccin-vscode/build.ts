@@ -8,27 +8,26 @@ import latte from "catppuccin-vsc/themes/latte.json";
 
 (async () => {
   await mkdir(join(__dirname, `themes`), { recursive: true });
+  const files = await readdir(join(__dirname, `themes`));
   await Promise.all(
-    (await readdir(join(__dirname, `themes`))).map((file) =>
-      unlink(join(__dirname, `themes`, file)),
-    ),
+    files.map((file) => unlink(join(__dirname, `themes`, file))),
   );
   await Promise.all([
     writeFile(
       join(__dirname, `themes/mocha.json`),
-      JSON.stringify(mocha, null, 2),
+      JSON.stringify(mocha, undefined, 2),
     ),
     writeFile(
       join(__dirname, `themes/macchiato.json`),
-      JSON.stringify(macchiato, null, 2),
+      JSON.stringify(macchiato, undefined, 2),
     ),
     writeFile(
       join(__dirname, `themes/frappe.json`),
-      JSON.stringify(frappe, null, 2),
+      JSON.stringify(frappe, undefined, 2),
     ),
     writeFile(
       join(__dirname, `themes/latte.json`),
-      JSON.stringify(latte, null, 2),
+      JSON.stringify(latte, undefined, 2),
     ),
   ]);
 })();

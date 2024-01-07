@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { join } from "node:path";
 import { writeFileSync } from "node:fs";
 import { compile, JSONSchema } from "json-schema-to-typescript";
@@ -58,19 +59,22 @@ for (const { schema, name, fname, kind } of mappings) {
     .then((data) => data.json())
     .then((data) => {
       switch (kind) {
-        case "jsonschema":
+        case "jsonschema": {
           return compile(data as JSONSchema, name, {
             additionalProperties: false,
             bannerComment,
           });
-        case "extension-packagejson":
+        }
+        case "extension-packagejson": {
           return fromVSIXColors(name, data);
-        default:
+        }
+        default: {
           throw new Error(`Unknown kind: ${kind}`);
+        }
       }
     })
     .then((typeDefs) =>
-      writeFileSync(join(__dirname, "types", fname), typeDefs, "utf-8"),
+      writeFileSync(join(__dirname, "types", fname), typeDefs, "utf8"),
     );
 }
 
