@@ -1,5 +1,4 @@
-/* eslint-env node */
-// eslint-disable-next-line @typescript-eslint/no-var-requires, no-restricted-modules
+// eslint-disable-next-line no-restricted-modules, @typescript-eslint/no-var-requires
 const nodeStdLibrary = require("node:module").builtinModules.map(
   (module) => `node:${module}`,
 );
@@ -14,8 +13,8 @@ module.exports = {
     {
       files: "./src/hooks/**/*.ts",
       rules: {
-        "no-restricted-imports": "off",
-        "no-restricted-modules": "off",
+        "no-restricted-imports": ["off", { paths: nodeStdLibrary }],
+        "no-restricted-modules": ["off", { paths: nodeStdLibrary }],
       },
     },
   ],
