@@ -95,7 +95,7 @@ const configuration = (version: string) => {
 const main = async (options: { buildForADS?: boolean } = {}) => {
   const productName = options.buildForADS ? "Azure Data Studio" : "VSCode";
 
-  return await readFile(join(repoRoot, "package.json"), "utf-8")
+  return await readFile(join(repoRoot, "package.json"), "utf8")
     .then((data) => JSON.parse(data))
     .then((data) => {
       return {
@@ -111,8 +111,8 @@ const main = async (options: { buildForADS?: boolean } = {}) => {
     .then((data) => {
       writeFile(
         join(repoRoot, "package.json"),
-        JSON.stringify(data, null, 2) + "\n",
-        "utf-8",
+        JSON.stringify(data, undefined, 2) + "\n",
+        "utf8",
       );
       return data;
     });

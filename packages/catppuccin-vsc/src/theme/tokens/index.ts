@@ -304,6 +304,6 @@ export default (context: ThemeContext): TextmateColors => {
       regex,
       rust,
       shell,
-    ].flatMap((el) => el(context)),
+    ].flatMap((element) => element(context)),
   ];
 };

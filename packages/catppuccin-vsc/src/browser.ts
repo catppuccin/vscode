@@ -5,8 +5,8 @@ import {
   ExtensionContext,
 } from "vscode";
 
-export const activate = (ctx: ExtensionContext) => {
-  ctx.subscriptions.push(
+export const activate = (context: ExtensionContext) => {
+  context.subscriptions.push(
     workspace.onDidChangeConfiguration((event: ConfigurationChangeEvent) => {
       if (event.affectsConfiguration("catppuccin")) {
         window.showErrorMessage(

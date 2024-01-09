@@ -1,8 +1,8 @@
 {
   "compilerOptions": {
-    "module": "commonjs",
+    "module": "CommonJS",
     "esModuleInterop": true,
-    "target": "es6",
+    "target": "ES2021",
     "noEmit": true,
     "sourceMap": false,
     "skipLibCheck": true,

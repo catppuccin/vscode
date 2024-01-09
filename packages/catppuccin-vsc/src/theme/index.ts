@@ -27,10 +27,10 @@ export const compileTheme = (
   options: ThemeOptions = defaultOptions,
 ) => {
   const flavorData = flavors[flavor];
-  const ctpPalette = flavorData.colorEntries.reduce((acc, [k, v]) => {
-    acc[k] = v.hex;
-    return acc;
-  }, {} as CatppuccinPalette);
+  const ctpPalette = {} as CatppuccinPalette;
+  for (const [k, v] of flavorData.colorEntries) {
+    ctpPalette[k] = v.hex;
+  }
 
   const palette: CatppuccinPalette = {
     ...ctpPalette,

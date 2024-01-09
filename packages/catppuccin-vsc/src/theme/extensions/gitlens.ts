@@ -21,7 +21,7 @@ export default function colors(context: ThemeContext): Partial<GitLensColors> {
     palette.sky,
   ];
 
-  const accentIdx = graphLaneColors.indexOf(palette[options.accent]);
+  const accentIndex = graphLaneColors.indexOf(palette[options.accent]);
 
   return {
     "gitlens.gutterBackgroundColor": opacity(palette.surface0, 0.3),
@@ -70,25 +70,25 @@ export default function colors(context: ThemeContext): Partial<GitLensColors> {
     "gitlens.decorations.worktreeHasUncommittedChangesForegroundColor":
       palette.peach,
     "gitlens.decorations.worktreeMissingForegroundColor": palette.maroon,
-    "gitlens.graphLane1Color": graphLaneColors[accentIdx],
+    "gitlens.graphLane1Color": graphLaneColors[accentIndex],
     "gitlens.graphLane2Color":
-      graphLaneColors[(accentIdx + 1) % graphLaneColors.length],
+      graphLaneColors[(accentIndex + 1) % graphLaneColors.length],
     "gitlens.graphLane3Color":
-      graphLaneColors[(accentIdx + 2) % graphLaneColors.length],
+      graphLaneColors[(accentIndex + 2) % graphLaneColors.length],
     "gitlens.graphLane4Color":
-      graphLaneColors[(accentIdx + 3) % graphLaneColors.length],
+      graphLaneColors[(accentIndex + 3) % graphLaneColors.length],
     "gitlens.graphLane5Color":
-      graphLaneColors[(accentIdx + 4) % graphLaneColors.length],
+      graphLaneColors[(accentIndex + 4) % graphLaneColors.length],
     "gitlens.graphLane6Color":
-      graphLaneColors[(accentIdx + 5) % graphLaneColors.length],
+      graphLaneColors[(accentIndex + 5) % graphLaneColors.length],
     "gitlens.graphLane7Color":
-      graphLaneColors[(accentIdx + 6) % graphLaneColors.length],
+      graphLaneColors[(accentIndex + 6) % graphLaneColors.length],
     "gitlens.graphLane8Color":
-      graphLaneColors[(accentIdx + 7) % graphLaneColors.length],
+      graphLaneColors[(accentIndex + 7) % graphLaneColors.length],
     "gitlens.graphLane9Color":
-      graphLaneColors[(accentIdx + 8) % graphLaneColors.length],
+      graphLaneColors[(accentIndex + 8) % graphLaneColors.length],
     "gitlens.graphLane10Color":
-      graphLaneColors[(accentIdx + 9) % graphLaneColors.length],
+      graphLaneColors[(accentIndex + 9) % graphLaneColors.length],
     "gitlens.graphChangesColumnAddedColor": palette.green,
     "gitlens.graphChangesColumnDeletedColor": palette.red,
     "gitlens.graphMinimapMarkerHeadColor": palette.green,

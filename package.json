@@ -2,13 +2,15 @@
   "name": "@catppuccin/vscode-monorepo",
   "private": true,
   "devDependencies": {
-    "@types/node": "^18.19.4",
-    "@typescript-eslint/eslint-plugin": "^6.17.0",
-    "@typescript-eslint/parser": "^6.17.0",
+    "@types/node": "^20.10.8",
+    "@typescript-eslint/eslint-plugin": "^6.18.1",
+    "@typescript-eslint/parser": "^6.18.1",
     "@vscode/vsce": "^2.22.0",
+    "@yarnpkg/types": "^4.0.0",
     "eslint": "^8.56.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier": "^5.1.2",
+    "eslint-plugin-unicorn": "^50.0.1",
     "husky": "^8.0.3",
     "lint-staged": "^15.2.0",
     "prettier": "^3.1.1",
@@ -27,11 +29,20 @@
   },
   "scripts": {
     "g:typecheck": "tsc --noEmit -p packages/catppuccin-vsc && tsc --noEmit -p packages/catppuccin-vsc-storybook",
-    "lint": "eslint . --ext .ts && yarn g:typecheck",
+    "lint": "eslint . --ext .ts \"$@\" && yarn g:typecheck",
     "postinstall": "husky install"
   },
   "workspaces": [
     "packages/*"
   ],
-  "packageManager": "yarn@4.0.2"
+  "packageManager": "yarn@4.0.2",
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/catppuccin/vscode.git",
+    "directory": "."
+  }
 }

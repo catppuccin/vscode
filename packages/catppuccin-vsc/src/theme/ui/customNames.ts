@@ -17,15 +17,13 @@ const customNamedColors = (context: ThemeContext): CustomNamedColors => {
         // deal with accents
         if (v.startsWith("accent")) {
           const entry = v.split(" ");
-          if (entry.length !== 1) {
-            return {
-              [k]: opacity(accent, Number(entry[1])),
-            };
-          } else {
-            return {
-              [k]: accent,
-            };
-          }
+          return entry.length === 1
+            ? {
+                [k]: accent,
+              }
+            : {
+                [k]: opacity(accent, Number(entry[1])),
+              };
         }
 
         // allow custom hex colors
@@ -37,22 +35,23 @@ const customNamedColors = (context: ThemeContext): CustomNamedColors => {
 
         //check if the entry is a "color opacity" mapping
         const entry = v.split(" ");
-        if (entry.length !== 1) {
-          // call the opacity function
-          v = opacity(
-            palette[entry[0] as keyof CatppuccinPalette],
-            Number(entry[1]),
-          );
-        } else {
-          // resolve to the palette color
-          v = palette[v as keyof CatppuccinPalette];
-        }
+        v =
+          entry.length === 1
+            ? // resolve to the palette color
+              palette[v as keyof CatppuccinPalette]
+            : // call the opacity function
+              opacity(
+                palette[entry[0] as keyof CatppuccinPalette],
+                Number(entry[1]),
+              );
 
         return {
           [k]: v,
         };
       })
-      .reduce((prev, cur) => ({ ...prev, ...cur }), {}),
+      // TODO: rework this to get rid of the reduce
+      // eslint-disable-next-line unicorn/no-array-reduce
+      .reduce((previous, current) => ({ ...previous, ...current }), {}),
   };
 };
 

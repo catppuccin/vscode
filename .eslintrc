@@ -1,0 +1,23 @@
+{
+  "env": {
+    "es2023": true,
+    "node": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended",
+    "plugin:unicorn/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 2021
+  },
+  "ignorePatterns": ["node_modules", "dist"],
+  "plugins": ["@typescript-eslint", "prettier"],
+  "rules": {
+    "unicorn/filename-case": "off",
+    "unicorn/prefer-module": "off",
+    "unicorn/prefer-top-level-await": "off"
+  }
+}

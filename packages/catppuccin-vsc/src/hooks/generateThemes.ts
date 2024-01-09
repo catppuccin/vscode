@@ -13,18 +13,20 @@ import { repoRoot } from "./constants";
 const flavors = flavorEntries.map(([flavorName]) => flavorName);
 
 // options can also be passed as a JSON string as an environment variable
-const optEnvVar = process.env.CATPPUCCIN_OPTIONS;
-const optEnv = optEnvVar ? JSON.parse(optEnvVar) : {};
+const optEnvironmentVariable = process.env.CATPPUCCIN_OPTIONS;
+const optEnvironment = optEnvironmentVariable
+  ? JSON.parse(optEnvironmentVariable)
+  : {};
 
 const main = async () => {
   await mkdir(join(repoRoot, "themes"), { recursive: true });
 
   flavors.map((flavor) => {
-    const options = { ...defaultOptions, ...optEnv };
+    const options = { ...defaultOptions, ...optEnvironment };
     const theme = compileTheme(flavor, options);
     writeFile(
       join(repoRoot, `themes/${flavor}.json`),
-      JSON.stringify(theme, null, 2),
+      JSON.stringify(theme, undefined, 2),
     );
   });
 };

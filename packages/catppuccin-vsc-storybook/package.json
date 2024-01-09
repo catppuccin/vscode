@@ -11,22 +11,31 @@
     "@storybook/blocks": "^7.6.7",
     "@storybook/react": "^7.6.7",
     "@storybook/react-vite": "^7.6.7",
-    "@types/node": "^18.19.4",
-    "@types/react": "^18.2.46",
+    "@types/node": "^20.10.8",
+    "@types/react": "^18.2.47",
     "catppuccin-vsc": "workspace:*",
     "chromatic": "^10.2.0",
     "eslint": "^8.56.0",
     "eslint-plugin-storybook": "^0.6.15",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "shikiji": "^0.9.17",
+    "shikiji": "^0.9.18",
     "storybook": "^7.6.7",
     "tsx": "^4.7.0",
+    "typescript": "^5.3.3",
     "vite": "^4.5.1"
   },
   "scripts": {
     "storybook:chromatic": "chromatic --exit-zero-on-changes --exit-once-uploaded --project-token chpt_e3cba49738d7554",
     "storybook:build": "yarn core:build && storybook build",
     "storybook:dev": "storybook dev -p 6006"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/catppuccin/vscode.git",
+    "directory": "packages/catppuccin-vsc-storybook"
   }
 }

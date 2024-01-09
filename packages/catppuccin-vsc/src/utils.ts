@@ -29,31 +29,33 @@ export enum UpdateTrigger {
 type Entry<T> = { [K in keyof T]: [K, T[K]] }[keyof T];
 
 const filterObject = <T extends object>(
-  obj: T,
-  fn: (entry: Entry<T>, i: number, arr: Entry<T>[]) => boolean,
+  object: T,
+  function_: (entry: Entry<T>, index: number, array: Entry<T>[]) => boolean,
 ) => {
   return Object.fromEntries(
-    (Object.entries(obj) as Entry<T>[]).filter(fn),
+    (Object.entries(object) as Entry<T>[]).filter((element, index, array) =>
+      function_(element, index, array),
+    ),
   ) as Partial<T>;
 };
 
 export const promptToReload = (trigger: UpdateTrigger) => {
-  const msg = `Catppuccin: ${trigger} - Reload required.`;
+  const message = `Catppuccin: ${trigger} - Reload required.`;
   const action = "Reload window";
-  window.showInformationMessage(msg, action).then((selectedAction) => {
+  window.showInformationMessage(message, action).then((selectedAction) => {
     if (selectedAction === action) {
       commands.executeCommand("workbench.action.reloadWindow");
     }
   });
 };
 
-const writeThemeFile = async (uri: Uri, data: any): Promise<void> => {
+const writeThemeFile = async (uri: Uri, data: unknown): Promise<void> => {
   return workspace.fs
-    .writeFile(uri, Buffer.from(JSON.stringify(data, null, 2)))
+    .writeFile(uri, Buffer.from(JSON.stringify(data, undefined, 2)))
     .then(
       () => {},
-      (err) => {
-        window.showErrorMessage(err.message);
+      (error) => {
+        window.showErrorMessage(error.message);
       },
     );
 };
@@ -69,15 +71,15 @@ const fileExists = async (uri: Uri): Promise<boolean> => {
 export const isMutable = async (uri: Uri): Promise<boolean> => {
   return workspace.fs.stat(uri).then(
     (stat) => stat.permissions !== FilePermission.Readonly,
-    (err) => err,
+    (error) => error,
   );
 };
 
 export const isFreshInstall = async (
-  ctx: ExtensionContext,
+  context: ExtensionContext,
 ): Promise<boolean | "error"> => {
   console.log("Checking if catppuccin is installed for the first time.");
-  const flagUri = Uri.file(ctx.asAbsolutePath("themes/.flag"));
+  const flagUri = Uri.file(context.asAbsolutePath("themes/.flag"));
   if (await fileExists(flagUri)) {
     console.log("Catppuccin has been installed before.");
     return false;
@@ -100,17 +102,17 @@ export const isDefaultConfig = (): boolean => {
 };
 
 export const getConfiguration = (): ThemeOptions => {
-  const conf = workspace.getConfiguration("catppuccin");
+  const config = workspace.getConfiguration("catppuccin");
   const options = {
-    accent: conf.get<CatppuccinAccent>("accentColor"),
-    boldKeywords: conf.get<boolean>("boldKeywords"),
-    italicKeywords: conf.get<boolean>("italicKeywords"),
-    italicComments: conf.get<boolean>("italicComments"),
-    colorOverrides: conf.get<ColorOverrides>("colorOverrides"),
-    workbenchMode: conf.get<CatppuccinWorkbenchMode>("workbenchMode"),
-    bracketMode: conf.get<CatppuccinBracketMode>("bracketMode"),
-    extraBordersEnabled: conf.get<boolean>("extraBordersEnabled"),
-    customUIColors: conf.get<CustomUIColors>("customUIColors"),
+    accent: config.get<CatppuccinAccent>("accentColor"),
+    boldKeywords: config.get<boolean>("boldKeywords"),
+    italicKeywords: config.get<boolean>("italicKeywords"),
+    italicComments: config.get<boolean>("italicComments"),
+    colorOverrides: config.get<ColorOverrides>("colorOverrides"),
+    workbenchMode: config.get<CatppuccinWorkbenchMode>("workbenchMode"),
+    bracketMode: config.get<CatppuccinBracketMode>("bracketMode"),
+    extraBordersEnabled: config.get<boolean>("extraBordersEnabled"),
+    customUIColors: config.get<CustomUIColors>("customUIColors"),
   };
   return {
     ...defaultOptions,

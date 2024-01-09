@@ -23,9 +23,14 @@
   pname = "${name}-${version}";
 
   options = builtins.removeAttrs inputs ["pkgs"];
-  src = pkgs.nix-gitignore.gitignoreSource [] ../.;
+  src = pkgs.nix-gitignore.gitignoreSource [] (builtins.path {
+    name = pname;
+    path = ../.;
+  });
 
-  builder = pkgs.callPackage ./yarn-project.nix {} {
+  nodejs = pkgs.nodejs_20;
+
+  builder = pkgs.callPackage ./yarn-project.nix {inherit nodejs;} {
     inherit src;
     overrideAttrs = {
       name = "${pname}-builder";

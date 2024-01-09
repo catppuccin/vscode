@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+
 import { writeFile } from "node:fs/promises";
 import { join } from "node:path";
 import { flavors } from "@catppuccin/palette";
@@ -49,22 +51,20 @@ const main = async () => {
   await fetch(vscodeSchemasRoot + "workbench-colors.json")
     .then((data) => data.json())
     .then((data: any) => {
-      const schema = customUiColorsSchema(
-        Object.entries<any>(data.properties).reduce(
-          (acc, [name, { description }]) => {
-            acc[name] = {
-              description,
-              $ref: "#/$defs/catppuccinColor",
-            };
-            return acc;
-          },
-          {} as any,
-        ),
-      );
+      const workbenchColors = {} as {
+        [name: string]: { description: string; $ref: string };
+      };
+      for (const [name, description] of Object.entries<any>(data.properties)) {
+        workbenchColors[name] = {
+          description,
+          $ref: "#/$defs/catppuccinColor",
+        };
+      }
+      const schema = customUiColorsSchema(workbenchColors);
       writeFile(
         join(repoRoot, "schemas/customUIColors.schema.json"),
-        JSON.stringify(schema, null, 2) + "\n",
-        "utf-8",
+        JSON.stringify(schema, undefined, 2) + "\n",
+        "utf8",
       );
     });
 };

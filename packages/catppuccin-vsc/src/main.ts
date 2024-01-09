@@ -2,8 +2,8 @@ import { ExtensionContext, Uri, workspace } from "vscode";
 import * as utils from "./utils";
 import type { ThemePaths } from "./types";
 
-export const activate = async (ctx: ExtensionContext) => {
-  const base = ctx.extensionUri;
+export const activate = async (context: ExtensionContext) => {
+  const base = context.extensionUri;
   const paths: ThemePaths = {
     latte: Uri.joinPath(base, "themes", "latte.json"),
     frappe: Uri.joinPath(base, "themes", "frappe.json"),
@@ -12,7 +12,7 @@ export const activate = async (ctx: ExtensionContext) => {
   };
 
   // regenerate on a fresh install if non-default config is set
-  if ((await utils.isFreshInstall(ctx)) && !utils.isDefaultConfig()) {
+  if ((await utils.isFreshInstall(context)) && !utils.isDefaultConfig()) {
     utils.updateThemes(
       utils.getConfiguration(),
       paths,
@@ -20,7 +20,7 @@ export const activate = async (ctx: ExtensionContext) => {
     );
   }
 
-  ctx.subscriptions.push(
+  context.subscriptions.push(
     workspace.onDidChangeConfiguration((event) => {
       // regenerate the theme files when the config changes
       if (event.affectsConfiguration("catppuccin")) {
