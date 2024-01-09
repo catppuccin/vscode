@@ -10538,19 +10538,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"shikiji-core@npm:0.9.17":
-  version: 0.9.17
-  resolution: "shikiji-core@npm:0.9.17"
-  checksum: 461dcb908c1f7055756a4e9a0bcdcbac6303b424a055cfa6be01c82383fe2163169bf6e12723dc93a402da5d476a796c4a3e8dcf7ba66a90ad3dcd8718836967
+"shikiji-core@npm:0.9.18":
+  version: 0.9.18
+  resolution: "shikiji-core@npm:0.9.18"
+  checksum: cc8673c664d31a2392bb972c69c57c79f364056dd2361565d401165bee7d3afe8b358c15211d6356357fbc9d25c34dd9d06c9949fa7237031b840995e5eb5da2
   languageName: node
   linkType: hard
 
 "shikiji@npm:^0.9.17":
-  version: 0.9.17
-  resolution: "shikiji@npm:0.9.17"
+  version: 0.9.18
+  resolution: "shikiji@npm:0.9.18"
   dependencies:
-    shikiji-core: "npm:0.9.17"
-  checksum: ed3ab09cefcc61f9e205f0b9dc32aef913dac975e0f267d5a2f1c2bf67bf5d62ae7353e92f7f7c974646d4136408b2acf174e60543deee8e18ea733a94c52a95
+    shikiji-core: "npm:0.9.18"
+  checksum: 29651f5c397c5862ff1c78e0c6b85e6fa47f9f3538f5672f64c4c9afea368e77dfb1697eb7cd5746bc259d7cbaec6d77c91c5e0b520dc4dcbb77ad8492dbef72
   languageName: node
   linkType: hard
 
