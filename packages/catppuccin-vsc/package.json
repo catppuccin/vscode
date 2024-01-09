@@ -164,7 +164,7 @@
     "@actions/core": "^1.10.1",
     "@catppuccin/palette": "^1.0.3",
     "@catppuccin/vsc-typegen": "workspace:*",
-    "@types/node": "^20.10.7",
+    "@types/node": "^20.10.8",
     "@types/tinycolor2": "^1.4.6",
     "@types/vscode": "~1.80.0",
     "@vscode/vsce": "^2.22.0",

@@ -11,7 +11,7 @@
     "@storybook/blocks": "^7.6.7",
     "@storybook/react": "^7.6.7",
     "@storybook/react-vite": "^7.6.7",
-    "@types/node": "^20.10.7",
+    "@types/node": "^20.10.8",
     "@types/react": "^18.2.47",
     "catppuccin-vsc": "workspace:*",
     "chromatic": "^10.2.0",

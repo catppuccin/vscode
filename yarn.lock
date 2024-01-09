@@ -1520,7 +1520,7 @@ __metadata:
     "@storybook/blocks": "npm:^7.6.7"
     "@storybook/react": "npm:^7.6.7"
     "@storybook/react-vite": "npm:^7.6.7"
-    "@types/node": "npm:^20.10.7"
+    "@types/node": "npm:^20.10.8"
     "@types/react": "npm:^18.2.47"
     catppuccin-vsc: "workspace:*"
     chromatic: "npm:^10.2.0"
@@ -1550,7 +1550,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@catppuccin/vscode-monorepo@workspace:."
   dependencies:
-    "@types/node": "npm:^20.10.7"
+    "@types/node": "npm:^20.10.8"
     "@typescript-eslint/eslint-plugin": "npm:^6.18.1"
     "@typescript-eslint/parser": "npm:^6.18.1"
     "@vscode/vsce": "npm:^2.22.0"
@@ -4116,12 +4116,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*, @types/node@npm:^20.10.7":
-  version: 20.10.7
-  resolution: "@types/node@npm:20.10.7"
+"@types/node@npm:*, @types/node@npm:^20.10.8":
+  version: 20.10.8
+  resolution: "@types/node@npm:20.10.8"
   dependencies:
     undici-types: "npm:~5.26.4"
-  checksum: d626cea1b7da4784ee7b335dcc54e64adba9725dab7ca51a690167de502ef89fec07b05ad8e25845d188d7ad7f72c192ec92964d456321ed5b9452113bf9351f
+  checksum: 93268c33c3bf0194427d696658160c77ab8661aa57107df5b248ff952898a372bf92cf0ba7fc07788fa35e59c69b6619cce63d45e4e67fca806e37da7ea42512
   languageName: node
   linkType: hard
 
@@ -5222,7 +5222,7 @@ __metadata:
     "@actions/core": "npm:^1.10.1"
     "@catppuccin/palette": "npm:^1.0.3"
     "@catppuccin/vsc-typegen": "workspace:*"
-    "@types/node": "npm:^20.10.7"
+    "@types/node": "npm:^20.10.8"
     "@types/tinycolor2": "npm:^1.4.6"
     "@types/vscode": "npm:~1.80.0"
     "@vscode/vsce": "npm:^2.22.0"
