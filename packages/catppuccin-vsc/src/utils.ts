@@ -132,9 +132,15 @@ export const updateThemes = async (
     return writeThemeFile(paths[flavor], theme);
   });
 
-  Promise.all(promises).then(() => {
-    promptToReload(trigger);
-  });
+  Promise.all(promises)
+    .then(() => {
+      promptToReload(trigger);
+    })
+    .catch((error) => {
+      window.showErrorMessage(
+        "Failed to save re-compiled theme: \n" + error.message,
+      );
+    });
 };
 
 export const syncToIconPack = () => {
