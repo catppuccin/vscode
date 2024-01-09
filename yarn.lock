@@ -1576,8 +1576,6 @@ __metadata:
   resolution: "@catppuccin/vscode@workspace:packages/catppuccin-vscode"
   dependencies:
     catppuccin-vsc: "workspace:*"
-    tsx: "npm:^4.7.0"
-    typescript: "npm:^5.3.3"
   languageName: unknown
   linkType: soft
 

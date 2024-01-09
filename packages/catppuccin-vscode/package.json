@@ -2,31 +2,26 @@
   "name": "@catppuccin/vscode",
   "version": "3.10.1",
   "description": "🦌 Soothing pastel theme for VSCode, precompiled JSON version",
-  "files": [
-    "themes/*"
-  ],
+  "license": "MIT",
   "publishConfig": {
     "access": "public",
     "provenance": true,
     "registry": "https://registry.npmjs.org"
-  },
-  "devDependencies": {
-    "catppuccin-vsc": "workspace:*",
-    "tsx": "^4.7.0",
-    "typescript": "^5.3.3"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/catppuccin/vscode.git",
     "directory": "packages/catppuccin-vscode"
   },
+  "files": [
+    "themes/*"
+  ],
+  "devDependencies": {
+    "catppuccin-vsc": "workspace:*"
+  },
   "scripts": {
     "compiled:pack": "npm pack",
-    "prepack": "yarn core:build && yarn tsx ./build.ts",
+    "prepack": "yarn core:build && yarn node ./build.mjs",
     "postinstall": "yarn prepack"
-  },
-  "engines": {
-    "node": ">=20.0.0"
-  },
-  "license": "MIT"
+  }
 }
