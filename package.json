@@ -2,9 +2,9 @@
   "name": "@catppuccin/vscode-monorepo",
   "private": true,
   "devDependencies": {
-    "@types/node": "^20.10.6",
-    "@typescript-eslint/eslint-plugin": "^6.17.0",
-    "@typescript-eslint/parser": "^6.17.0",
+    "@types/node": "^20.10.7",
+    "@typescript-eslint/eslint-plugin": "^6.18.1",
+    "@typescript-eslint/parser": "^6.18.1",
     "@vscode/vsce": "^2.22.0",
     "@yarnpkg/types": "^4.0.0",
     "eslint": "^8.56.0",
