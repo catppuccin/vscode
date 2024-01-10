@@ -21,7 +21,6 @@
   },
   "scripts": {
     "compiled:pack": "npm pack",
-    "prepack": "yarn core:build && yarn node ./build.mjs",
-    "postinstall": "yarn prepack"
+    "prepack": "yarn core:build && node ./build.mjs"
   }
 }
