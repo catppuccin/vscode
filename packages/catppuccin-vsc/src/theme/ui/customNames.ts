@@ -22,24 +22,29 @@ class CustomUIColorError extends Error {
 const parseCustomUiColor = (k: string, v: string): [string, number] => {
   const entry = v.split(" ");
   if (entry.length > 2) {
-    throw new CustomUIColorError(k, v, "Too many arguments for accent color");
+    throw new CustomUIColorError(
+      k,
+      v,
+      'Too many arguments, expected "colorName" or "colorName opacityValue".',
+    );
   }
   let opacityValue = 1;
   if (entry.length == 2) {
     opacityValue = Number(entry[1]);
     if (Number.isNaN(opacityValue)) {
-      throw new CustomUIColorError(k, v, "Opacity value is not a number");
+      throw new CustomUIColorError(k, v, "Opacity value is not a number.");
     }
     if (opacityValue < 0 || opacityValue > 1) {
       throw new CustomUIColorError(
         k,
         v,
-        "Opacity value is not in range [0, 1]",
+        "Opacity value is not between 0 and 1.",
       );
     }
   }
   return [entry[0], opacityValue];
 };
+const hexColorRegex = /^#([\dA-Fa-f]{3,4}){1,2}$/;
 
 const customNamedColors = (context: ThemeContext): CustomNamedColors => {
   const { flavor, palette, options } = context;
@@ -52,22 +57,20 @@ const customNamedColors = (context: ThemeContext): CustomNamedColors => {
 
   for (const [k, v] of Object.entries(customUIColors)) {
     // don't change custom hex colors
-    if (v.startsWith("#")) continue;
+    if (hexColorRegex.test(v)) continue;
 
-    // eslint-disable-next-line prefer-const
-    let [color, opacityValue] = parseCustomUiColor(k, v);
+    const [parsedColor, opacityValue] = parseCustomUiColor(k, v);
 
-    // resolve "accent" to the current accent color
-    if (color === "accent") {
+    let color: string;
+    if (parsedColor === "accent") {
       color = accent;
-    } else if (ctpColors.has(color)) {
-      color = palette[color as ColorName];
+    } else if (ctpColors.has(parsedColor)) {
+      color = palette[parsedColor as ColorName];
     } else {
       throw new CustomUIColorError(k, v, "Invalid color name.");
     }
 
-    customUIColors[k] =
-      opacityValue === 1 ? opacity(color, opacityValue) : color;
+    customUIColors[k] = opacity(color, opacityValue);
   }
 
   return customUIColors;
