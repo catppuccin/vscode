@@ -14,6 +14,7 @@ export type * from "@catppuccin/vsc-typegen/types/gitlens";
 
 export type CatppuccinAccent = AccentName;
 export type CatppuccinFlavor = FlavorName;
+export { type ColorName } from "@catppuccin/palette";
 export type CatppuccinWorkbenchMode = "default" | "flat" | "minimal";
 export type CatppuccinBracketMode =
   | "rainbow"

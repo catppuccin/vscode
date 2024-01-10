@@ -45,16 +45,12 @@ export const compileTheme = (
     isLatte: flavor === "latte",
   };
 
-  const flavourName = `Catppuccin ${flavorData.name}`;
-
-  const theme = {
-    name: flavourName,
+  return {
+    name: `Catppuccin ${flavorData.name}`,
     type: context.isLatte ? "light" : "dark",
     colors: getUiColors(context),
     semanticHighlighting: true,
     semanticTokenColors: getSemanticTokens(context),
     tokenColors: getTokenColors(context),
   };
-
-  return theme;
 };
