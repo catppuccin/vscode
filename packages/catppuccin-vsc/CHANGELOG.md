@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.11.0](https://github.com/catppuccin/vscode/compare/catppuccin-vsc-v3.10.1...catppuccin-vsc-v3.11.0) (2024-01-10)
+
+
+### Features
+
+* **compiler:** add verbose errors for wrong user config ([#288](https://github.com/catppuccin/vscode/issues/288)) ([8162693](https://github.com/catppuccin/vscode/commit/816269379fa8b2a7093f20ee774f770d8a48ec01))
+
 ## [3.10.1](https://github.com/catppuccin/vscode/compare/catppuccin-vsc-v3.10.0...catppuccin-vsc-v3.10.1) (2024-01-05)
 
 
