@@ -5,7 +5,7 @@
       "name": "Debug VSCode core extension",
       "type": "extensionHost",
       "request": "launch",
-      "preLaunchTask": "npm: core:dev - packages/core",
+      "preLaunchTask": "npm: core:dev - packages/catppuccin-vsc",
       "args": ["--extensionDevelopmentPath=${workspaceFolder}"],
       "outFiles": ["${workspaceFolder}/packages/core/dist/*.js"]
     }
