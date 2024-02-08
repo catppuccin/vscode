@@ -1,8 +1,5 @@
 // @ts-check
 
-/** @type {import('@yarnpkg/types')} */
-const { defineConfig } = require("@yarnpkg/types");
-
 /**
  * @typedef {import('@yarnpkg/types').Yarn.Constraints.Context} Context
  * @typedef {import('@yarnpkg/types').Yarn.Constraints.Workspace} Workspace
@@ -63,15 +60,16 @@ const enforcePublishingConfig = ({ Yarn }) => {
   }
 };
 
-module.exports = defineConfig({
-  constraints: async (ctx) => {
-    enforceFieldsOnAllWorkspaces(ctx, {
+/** @type {import('@yarnpkg/types').Yarn.Config} */
+module.exports = {
+  constraints: async (context) => {
+    enforceFieldsOnAllWorkspaces(context, {
       license: "MIT",
       "repository.directory": (workspace) => workspace.cwd,
       "repository.type": "git",
       "repository.url": "git+https://github.com/catppuccin/vscode.git",
     });
-    enforceConsistentDependenciesAcrossTheProject(ctx);
-    enforcePublishingConfig(ctx);
+    enforceConsistentDependenciesAcrossTheProject(context);
+    enforcePublishingConfig(context);
   },
-});
+};
