@@ -8159,8 +8159,8 @@ __metadata:
   linkType: hard
 
 "json-schema-to-typescript@npm:^13.1.1":
-  version: 13.1.1
-  resolution: "json-schema-to-typescript@npm:13.1.1"
+  version: 13.1.2
+  resolution: "json-schema-to-typescript@npm:13.1.2"
   dependencies:
     "@bcherny/json-schema-ref-parser": "npm:10.0.5-fork"
     "@types/json-schema": "npm:^7.0.11"
@@ -8178,7 +8178,7 @@ __metadata:
     prettier: "npm:^2.6.2"
   bin:
     json2ts: dist/src/cli.js
-  checksum: 10c0/597b94f3acd87cfb7d77f03636b4cbc19ba67f3035bb8f59e94d4e0193194f951c117455a2ccb2f2343ac1861aca3c17e450867e6503544977e926275f735e4b
+  checksum: 10c0/bdbe67f1ccb10a6c636ba1860e5cda43125fb7530e52c787ee414f113651f00a7d57ac9144028a1f13eb4c6e01634b2932aa670e3b94505fe2c5b64166d77fea
   languageName: node
   linkType: hard
 
