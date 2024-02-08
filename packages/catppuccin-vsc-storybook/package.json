@@ -19,7 +19,7 @@
     "eslint-plugin-storybook": "^0.6.15",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "shikiji": "^0.9.18",
+    "shikiji": "^0.10.0",
     "storybook": "^7.6.7",
     "tsx": "^4.7.0",
     "typescript": "^5.3.3",
