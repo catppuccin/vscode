@@ -3,6 +3,24 @@ name: release-please
 on:
   push:
     branches: [main]
+  workflow_dispatch:
+    inputs:
+      force-release-theme:
+        description: "Force a release of catppuccin-vsc"
+        default: false
+        type: boolean
+      force-release-theme-tag:
+        description: "The version to release catppuccin-vsc as"
+        default: ""
+        type: string
+      force-release-pack:
+        description: "Force a release of catppuccin-vsc-pack"
+        default: false
+        type: boolean
+      force-release-npm:
+        description: "Force a release of @catppuccin/vscode"
+        default: false
+        type: boolean
 
 jobs:
   release-please:
@@ -17,10 +35,10 @@ jobs:
         id: release
 
     outputs:
-      theme_release: ${{ steps.release.outputs['catppuccin-vsc--release_created'] == 'true' }}
-      theme_tag: ${{ steps.release.outputs['catppuccin-vsc--tag_name'] }}
-      pack_release: ${{ steps.release.outputs['catppuccin-vsc-pack--release_created'] == 'true' }}
-      npm_release: ${{ steps.release.outputs['catppuccin-vscode--release_created'] == 'true' }}
+      theme_release: ${{ github.event.inputs.force-release-theme == 'true' || steps.release.outputs['catppuccin-vsc--release_created'] == 'true' }}
+      theme_tag: ${{ github.event.inputs.force-release-theme-tag || steps.release.outputs['catppuccin-vsc--tag_name'] }}
+      pack_release: ${{ github.event.inputs.force-release-pack == 'true' || steps.release.outputs['catppuccin-vsc-pack--release_created'] == 'true' }}
+      npm_release: ${{ github.event.inputs.force-release-npm == 'true' || steps.release.outputs['catppuccin-vscode--release_created'] == 'true' }}
 
   release-vscode:
     permissions:
