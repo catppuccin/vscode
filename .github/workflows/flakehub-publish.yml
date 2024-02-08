@@ -44,7 +44,7 @@ jobs:
 
       - name: Parse the semver tag
         id: semver
-        run: echo "tag=${${{inputs.tag}}#catppuccin-vsc-}" >> GITHUB_OUTPUT
+        run: echo "${{inputs.tag}}" |  sed -E 's/.*-v?([0-9]+\.[0-9]+\.[0-9]+).*/v\1/' >> GITHUB_OUTPUT
 
       - uses: DeterminateSystems/flakehub-push@main
         with:
