@@ -94,7 +94,11 @@ export const getUiColors = (
     // debug icons
     "debugIcon.breakpointForeground": palette.red,
     "debugIcon.breakpointDisabledForeground": opacity(palette.red, 0.6),
-    "debugIcon.breakpointUnverifiedForeground": palette.base,
+    "debugIcon.breakpointUnverifiedForeground": mix(
+      palette.red,
+      palette.surface2,
+      0.5,
+    ),
     "debugIcon.breakpointCurrentStackframeForeground": palette.surface2,
     "debugIcon.breakpointStackframeForeground": palette.surface2,
     "debugIcon.startForeground": palette.green,
