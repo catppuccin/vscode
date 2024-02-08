@@ -101,10 +101,15 @@ const tokens = (context: ThemeContext): TextmateColors => {
     {
       name: "Extra JS/TS keywords",
       scope: [
-        "keyword.operator.expression.in",
-        "keyword.operator.expression.instanceof",
+        "keyword.operator.expression.in.js",
+        "keyword.operator.expression.in.ts",
+        "keyword.operator.expression.infer.ts",
+        "keyword.operator.expression.instanceof.js",
+        "keyword.operator.expression.instanceof.ts",
         "keyword.operator.expression.is",
-        "keyword.operator.expression.keyof",
+        "keyword.operator.expression.keyof.ts",
+        "keyword.operator.expression.of.js",
+        "keyword.operator.expression.of.ts",
         "keyword.operator.expression.typeof.ts",
       ],
       settings: {
