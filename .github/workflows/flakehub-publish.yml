@@ -1,0 +1,50 @@
+name: Publish tags to FlakeHub
+
+on:
+  push:
+    tags:
+      - "v?[0-9]+.[0-9]+.[0-9]+*"
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: The existing tag to publish to FlakeHub
+        type: string
+        required: true
+
+jobs:
+  flakehub-publish:
+    runs-on: ubuntu-latest
+
+    permissions:
+      id-token: write # Necessary for authenticating against FlakeHub
+      contents: read
+
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          ref: "${{ (inputs.tag != null) && format('refs/tags/{0}', inputs.tag) || '' }}"
+
+      # use yarn-nixify to prepare the cache in /nix/store
+      - run: corepack enable
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 18
+          cache: yarn
+      - run: yarn install --immutable
+
+      - uses: DeterminateSystems/nix-installer-action@main
+      - uses: DeterminateSystems/magic-nix-cache-action@main
+
+      - name: Setup cachix
+        uses: cachix/cachix-action@v14
+        if: startsWith(github.event.ref, 'refs/tags/v')
+        with:
+          name: "catppuccin"
+          authToken: "${{ secrets.CACHIX_AUTH_TOKEN }}"
+          skipPush: ${{ github.ref != 'refs/heads/main' }}
+
+      - uses: DeterminateSystems/flakehub-push@main
+        with:
+          visibility: public
+          name: catppuccin/vscode
+          tag: ${{ inputs.tag }}
