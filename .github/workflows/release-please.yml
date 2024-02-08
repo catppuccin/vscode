@@ -9,6 +9,10 @@ on:
         description: "Force a release of catppuccin-vsc"
         default: false
         type: boolean
+      rev:
+        description: "The revision to clone for the release"
+        default: ""
+        type: string
       force-release-theme-tag:
         description: "The version to release catppuccin-vsc as"
         default: ""
@@ -50,6 +54,9 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.inputs.rev || github.sha }}
+
       - run: corepack enable
       - uses: actions/setup-node@v4
         with:

@@ -3,7 +3,7 @@ name: Publish tags to FlakeHub
 on:
   push:
     tags:
-      - "v?[0-9]+.[0-9]+.[0-9]+*"
+      - ".*-v?[0-9]+.[0-9]+.[0-9]+*"
   workflow_dispatch:
     inputs:
       tag:
