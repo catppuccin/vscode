@@ -55,6 +55,8 @@ If you need to use the JSON files for libraries like [Shiki](https://www.npmjs.c
 
 **Nix (Home-Manager) users**
 
+[![FlakeHub](https://img.shields.io/endpoint?url=https://flakehub.com/f/catppuccin/vscode/badge)](https://flakehub.com/flake/catppuccin/vscode)
+
 If you would like to change the theme configuration, the theme expects to have a mutable directory to write its JSON files into.
 This means that you will have to either:
 
@@ -69,7 +71,7 @@ This means that you will have to either:
 ```nix
 {
   # in your inputs:
-  inputs.catppuccin-vsc.url = "github:catppuccin/vscode";
+  inputs.catppuccin-vsc.url = "https://flakehub.com/f/catppuccin/vscode/*.tar.gz";
 
   # add the overlay:
   nixpkgs.overlays = [inputs.catppuccin-vsc.overlays.default];
