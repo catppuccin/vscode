@@ -37,10 +37,9 @@ jobs:
 
       - name: Setup cachix
         uses: cachix/cachix-action@v14
-        if: startsWith(github.event.ref, 'refs/tags/v')
         with:
-          name: "catppuccin"
-          authToken: "${{ secrets.CACHIX_AUTH_TOKEN }}"
+          name: catppuccin
+          authToken: ${{ secrets.CACHIX_AUTH_TOKEN }}
           skipPush: ${{ github.ref != 'refs/heads/main' }}
 
       - uses: DeterminateSystems/flakehub-push@main
