@@ -11,7 +11,7 @@
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier": "^5.1.2",
     "eslint-plugin-unicorn": "^51.0.0",
-    "husky": "^8.0.3",
+    "husky": "^9.0.0",
     "lint-staged": "^15.2.0",
     "prettier": "^3.1.1",
     "tsup": "^8.0.1",
@@ -30,7 +30,7 @@
   "scripts": {
     "g:typecheck": "tsc --noEmit -p packages/catppuccin-vsc && tsc --noEmit -p packages/catppuccin-vsc-storybook",
     "lint": "eslint . --ext .ts \"$@\" && yarn g:typecheck",
-    "postinstall": "husky install && yarn compiled:pack"
+    "postinstall": "husky && yarn compiled:pack"
   },
   "workspaces": [
     "packages/*"
