@@ -1,4 +1,3 @@
 *                text=auto
 .husky/**        linguist-generated
 .yarn/**         linguist-vendored  -diff
-yarn-project.nix linguist-generated
