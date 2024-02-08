@@ -30,7 +30,7 @@
   "scripts": {
     "g:typecheck": "tsc --noEmit -p packages/catppuccin-vsc && tsc --noEmit -p packages/catppuccin-vsc-storybook",
     "lint": "eslint . --ext .ts \"$@\" && yarn g:typecheck",
-    "postinstall": "husky install && yarn compiled:pack"
+    "postinstall": "husky && yarn compiled:pack"
   },
   "workspaces": [
     "packages/*"
