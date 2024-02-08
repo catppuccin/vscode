@@ -46,4 +46,4 @@ jobs:
         with:
           visibility: public
           name: catppuccin/vscode
-          tag: ${{ inputs.tag }}
+          tag: ${{ format(inputs.tag, 'catppuccin-vsc-', '') }}
