@@ -44,7 +44,7 @@ jobs:
 
       - name: Parse the semver tag
         id: semver
-        run: echo "tag=${GITHUB_REF#refs/tags/catppuccin-vsc-}" >> GITHUB_OUTPUT
+        run: echo "tag=${${{inputs.tag}}#catppuccin-vsc-}" >> GITHUB_OUTPUT
 
       - uses: DeterminateSystems/flakehub-push@main
         with:
