@@ -1,6 +1,6 @@
 {
   "name": "@catppuccin/vscode",
-  "version": "3.11.0",
+  "version": "3.11.1",
   "description": "🦌 Soothing pastel theme for VSCode, precompiled JSON version",
   "license": "MIT",
   "publishConfig": {

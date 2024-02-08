@@ -1,5 +1,13 @@
 # Changelog
 
+## [3.11.1](https://github.com/catppuccin/vscode/compare/catppuccin-vsc-v3.11.0...catppuccin-vsc-v3.11.1) (2024-02-08)
+
+
+### Bug Fixes
+
+* **syntax:** JS `of` and `infer` expressions ([#312](https://github.com/catppuccin/vscode/issues/312)) ([b9e9d75](https://github.com/catppuccin/vscode/commit/b9e9d754c06d846f13fb7f4a908cfafbad5fd1ad))
+* **ui:** unverified breakpoints ([#311](https://github.com/catppuccin/vscode/issues/311)) ([4882feb](https://github.com/catppuccin/vscode/commit/4882feb791b7c38116ffe9b729d5769de892e488))
+
 ## [3.11.0](https://github.com/catppuccin/vscode/compare/catppuccin-vsc-v3.10.1...catppuccin-vsc-v3.11.0) (2024-01-10)
 
 
