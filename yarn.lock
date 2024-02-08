@@ -1528,7 +1528,7 @@ __metadata:
     eslint-plugin-storybook: "npm:^0.6.15"
     react: "npm:^18.2.0"
     react-dom: "npm:^18.2.0"
-    shikiji: "npm:^0.9.18"
+    shikiji: "npm:^0.10.0"
     storybook: "npm:^7.6.7"
     tsx: "npm:^4.7.0"
     typescript: "npm:^5.3.3"
@@ -10647,19 +10647,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"shikiji-core@npm:0.9.18":
-  version: 0.9.18
-  resolution: "shikiji-core@npm:0.9.18"
-  checksum: 10c0/cc8673c664d31a2392bb972c69c57c79f364056dd2361565d401165bee7d3afe8b358c15211d6356357fbc9d25c34dd9d06c9949fa7237031b840995e5eb5da2
+"shikiji-core@npm:0.10.2":
+  version: 0.10.2
+  resolution: "shikiji-core@npm:0.10.2"
+  checksum: 10c0/8855fbb59293ad95718e1b15cb88c716e2a55afe30a6096ec267db938afbd423469dd4448a5466dca8cee4a34cfa6a61adf4c82fded6febd5c8fe33cbeeceef5
   languageName: node
   linkType: hard
 
-"shikiji@npm:^0.9.18":
-  version: 0.9.18
-  resolution: "shikiji@npm:0.9.18"
+"shikiji@npm:^0.10.0":
+  version: 0.10.2
+  resolution: "shikiji@npm:0.10.2"
   dependencies:
-    shikiji-core: "npm:0.9.18"
-  checksum: 10c0/29651f5c397c5862ff1c78e0c6b85e6fa47f9f3538f5672f64c4c9afea368e77dfb1697eb7cd5746bc259d7cbaec6d77c91c5e0b520dc4dcbb77ad8492dbef72
+    shikiji-core: "npm:0.10.2"
+  checksum: 10c0/f94a9649a9a704b92497cbf83eddd345e975295862a1ccbaef2faa694482ec32e82eb8c3a60d7085b77034051f6dc233073ea6a04ab5b643d235cdd3ed0383ea
   languageName: node
   linkType: hard
 
