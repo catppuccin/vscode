@@ -52,6 +52,10 @@ export const getUiColors = (
     "activityBar.activeBorder": transparent,
     "activityBar.activeBackground": transparent,
     "activityBar.activeFocusBorder": transparent,
+    "activityBarTop.foreground": accent,
+    "activityBarTop.activeBorder": transparent,
+    "activityBarTop.inactiveForeground": palette.overlay0,
+    "activityBarTop.dropBorder": dropBackground,
 
     "badge.background": palette.surface1,
     "badge.foreground": palette.text,
