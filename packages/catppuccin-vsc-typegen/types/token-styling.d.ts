@@ -6,530 +6,166 @@
 
 export interface SemanticTokens {
   /**
-   * Style for comments.
+   * Style to use for symbols that are abstract.
    */
-  comment?: string | Style;
+  "*.abstract"?: Style | string;
   /**
-   * Style for strings.
+   * Style to use for symbols that are async.
    */
-  string?: string | Style;
-  /**
-   * Style for keywords.
-   */
-  keyword?: string | Style;
-  /**
-   * Style for numbers.
-   */
-  number?: string | Style;
-  /**
-   * Style for expressions.
-   */
-  regexp?: string | Style;
-  /**
-   * Style for operators
-   */
-  operator?: string | Style;
-  /**
-   * Style for namespaces.
-   */
-  namespace?: string | Style;
-  /**
-   * Style for types.
-   */
-  type?: string | Style;
-  /**
-   * Style for structs.
-   */
-  struct?: string | Style;
-  /**
-   * Style for classes.
-   */
-  class?: string | Style;
-  /**
-   * Style for interfaces.
-   */
-  interface?: string | Style;
-  /**
-   * Style for enums.
-   */
-  enum?: string | Style;
-  /**
-   * Style for type parameters.
-   */
-  typeParameter?: string | Style;
-  /**
-   * Style for functions
-   */
-  function?: string | Style;
-  /**
-   * Style for member functions
-   */
-  member?: string | Style;
-  /**
-   * Style for method (member functions)
-   */
-  method?: string | Style;
-  /**
-   * Style for macros.
-   */
-  macro?: string | Style;
-  /**
-   * Style for variables.
-   */
-  variable?: string | Style;
-  /**
-   * Style for parameters.
-   */
-  parameter?: string | Style;
-  /**
-   * Style for properties.
-   */
-  property?: string | Style;
-  /**
-   * Style for enum members.
-   */
-  enumMember?: string | Style;
-  /**
-   * Style for events.
-   */
-  event?: string | Style;
-  /**
-   * Style for decorators & annotations.
-   */
-  decorator?: string | Style;
-  /**
-   * Style for labels
-   */
-  label?: string | Style;
+  "*.async"?: Style | string;
   /**
    * Style for all symbol declarations.
    */
-  "*.declaration"?: string | Style;
-  /**
-   * Style to use for references in documentation.
-   */
-  "*.documentation"?: string | Style;
-  /**
-   * Style to use for symbols that are static.
-   */
-  "*.static"?: string | Style;
-  /**
-   * Style to use for symbols that are abstract.
-   */
-  "*.abstract"?: string | Style;
+  "*.declaration"?: Style | string;
   /**
    * Style to use for symbols that are deprecated.
    */
-  "*.deprecated"?: string | Style;
+  "*.deprecated"?: Style | string;
+  /**
+   * Style to use for references in documentation.
+   */
+  "*.documentation"?: Style | string;
   /**
    * Style to use for write accesses.
    */
-  "*.modification"?: string | Style;
-  /**
-   * Style for async functions and the `async` and `await` keywords
-   */
-  "*.async"?: string | Style;
+  "*.modification"?: Style | string;
   /**
    * Style to use for symbols that are read-only.
    */
-  "*.readonly"?: string | Style;
+  "*.readonly"?: Style | string;
   /**
-   * module
+   * Style to use for symbols that are static.
    */
-  module?: string | Style;
+  "*.static"?: Style | string;
   /**
-   * intrinsic
+   * Style for classes.
    */
-  intrinsic?: string | Style;
+  class?: Style | string;
   /**
-   * self parameter
+   * Style for comments.
    */
-  selfParameter?: string | Style;
+  comment?: Style | string;
   /**
-   * cls parameter
+   * Style for decorators & annotations.
    */
-  clsParameter?: string | Style;
+  decorator?: Style | string;
   /**
-   * magic aka dunder function
+   * Style for enums.
    */
-  magicFunction?: string | Style;
+  enum?: Style | string;
   /**
-   * constants like True, False, None, or __debug__
+   * Style for enum members.
    */
-  builtinConstant?: string | Style;
+  enumMember?: Style | string;
   /**
-   * Style for ( or )
+   * Style for events.
    */
-  parenthesis?: string | Style;
+  event?: Style | string;
   /**
-   * Style for [ or ]
+   * Style for functions
    */
-  bracket?: string | Style;
+  function?: Style | string;
   /**
-   * {} curly brace
+   * Style for interfaces.
    */
-  curlybrace?: string | Style;
+  interface?: Style | string;
   /**
-   * Style for :
+   * Style for keywords.
    */
-  colon?: string | Style;
+  keyword?: Style | string;
   /**
-   * Style for ;
+   * Style for labels.
    */
-  semicolon?: string | Style;
+  label?: Style | string;
   /**
-   * arrow token
+   * Style for macros.
    */
-  arrow?: string | Style;
+  macro?: Style | string;
   /**
-   * Style for C++/CLI reference types.
+   * Style for member functions
    */
-  referenceType?: string | Style;
+  member?: Style | string;
   /**
-   * Style for C++/CLI properties.
+   * Style for method (member functions)
    */
-  cliProperty?: string | Style;
+  method?: Style | string;
   /**
-   * Style for C++/CLI generic types.
+   * Style for namespaces.
    */
-  genericType?: string | Style;
+  namespace?: Style | string;
   /**
-   * Style for C++/CLI value types.
+   * Style for numbers.
    */
-  valueType?: string | Style;
+  number?: Style | string;
   /**
-   * Style for C++ template functions.
+   * Style for operators.
    */
-  templateFunction?: string | Style;
+  operator?: Style | string;
   /**
-   * Style for C++ template types.
+   * Style for parameters.
    */
-  templateType?: string | Style;
+  parameter?: Style | string;
   /**
-   * Style for C++ overloaded operators.
+   * Style for properties.
    */
-  operatorOverload?: string | Style;
+  property?: Style | string;
   /**
-   * Style for C++ overloaded operator member functions.
+   * Style for expressions.
    */
-  memberOperatorOverload?: string | Style;
+  regexp?: Style | string;
   /**
-   * Style for C++ `new` or `delete` operators.
+   * Style for strings.
    */
-  newOperator?: string | Style;
+  string?: Style | string;
   /**
-   * Style for C++ user-defined literals.
+   * Style for structs.
    */
-  customLiteral?: string | Style;
+  struct?: Style | string;
   /**
-   * Style for C++ user-defined literal numbers.
+   * Style for types.
    */
-  numberLiteral?: string | Style;
+  type?: Style | string;
   /**
-   * Style for C++ user-defined literal strings.
+   * Style for type parameters.
    */
-  stringLiteral?: string | Style;
+  typeParameter?: Style | string;
   /**
-   * A boolean literal
+   * Style for variables.
    */
-  bool?: string | Style;
-  /**
-   * Punctuation in code
-   */
-  punct?: string | Style;
-  /**
-   * Escape sequence
-   */
-  escape?: string | Style;
-  /**
-   * Hyperlink
-   */
-  link?: string | Style;
-  /**
-   * Raw text
-   */
-  raw?: string | Style;
-  /**
-   * Reference to a label
-   */
-  ref?: string | Style;
-  /**
-   * Heading
-   */
-  heading?: string | Style;
-  /**
-   * List, enum, or term list marker
-   */
-  marker?: string | Style;
-  /**
-   * Term in a term list
-   */
-  term?: string | Style;
-  /**
-   * Delimiter of a different type of markup
-   */
-  delim?: string | Style;
-  /**
-   * Interpolated variable
-   */
-  pol?: string | Style;
-  /**
-   * Syntax error
-   */
-  error?: string | Style;
-  /**
-   * Text
-   */
-  text?: string | Style;
-  /**
-   * Style for < or >
-   */
-  angle?: string | Style;
-  /**
-   * Style for arithmetic operators
-   */
-  arithmetic?: string | Style;
-  /**
-   * Style for attributes
-   */
-  attribute?: string | Style;
-  /**
-   * Style for attribute invocation brackets, that is the `#[` and `]` tokens
-   */
-  attributeBracket?: string | Style;
-  /**
-   * Style for bitwise operators
-   */
-  bitwise?: string | Style;
-  /**
-   * Style for boolean literals
-   */
-  boolean?: string | Style;
-  /**
-   * Style for { or }
-   */
-  brace?: string | Style;
-  /**
-   * Style for builtin attributes
-   */
-  builtinAttribute?: string | Style;
-  /**
-   * Style for builtin types
-   */
-  builtinType?: string | Style;
-  /**
-   * Style for character literals
-   */
-  character?: string | Style;
-  /**
-   * Style for ,
-   */
-  comma?: string | Style;
-  /**
-   * Style for comparison operators
-   */
-  comparison?: string | Style;
-  /**
-   * Style for const generics
-   */
-  constParameter?: string | Style;
-  /**
-   * Style for derives
-   */
-  derive?: string | Style;
-  /**
-   * Style for derive helpers
-   */
-  deriveHelper?: string | Style;
-  /**
-   * Style for .
-   */
-  dot?: string | Style;
-  /**
-   * Style for char or byte escapes in strings
-   */
-  escapeSequence?: string | Style;
-  /**
-   * Style for {} placeholders in format strings
-   */
-  formatSpecifier?: string | Style;
-  /**
-   * Style for invalid char or byte escapes in strings
-   */
-  invalidEscapeSequence?: string | Style;
-  /**
-   * Style for lifetimes
-   */
-  lifetime?: string | Style;
-  /**
-   * Style for logic operators
-   */
-  logical?: string | Style;
-  /**
-   * Style for the ! token of macro calls
-   */
-  macroBang?: string | Style;
-  /**
-   * Style for generic punctuation
-   */
-  punctuation?: string | Style;
-  /**
-   * Style for the self keyword
-   */
-  selfKeyword?: string | Style;
-  /**
-   * Style for the self type keyword
-   */
-  selfTypeKeyword?: string | Style;
-  /**
-   * Style for type aliases
-   */
-  typeAlias?: string | Style;
-  /**
-   * Style for C-style untagged unions
-   */
-  union?: string | Style;
-  /**
-   * Style for names which can not be resolved due to compilation errors
-   */
-  unresolvedReference?: string | Style;
-  /**
-   * Keys of regular arrays.
-   */
-  tomlArrayKey?: string | Style;
-  /**
-   * Keys of inline tables.
-   */
-  tomlTableKey?: string | Style;
-  /**
-   * inside a type annotation
-   */
-  "*.typeHint"?: string | Style;
-  /**
-   * inside a comment style type annotation
-   */
-  "*.typeHintComment"?: string | Style;
-  /**
-   * inside a decorator
-   */
-  "*.decorator"?: string | Style;
-  /**
-   * built-in identifier
-   */
-  "*.builtin"?: string | Style;
-  /**
-   * overridden token
-   */
-  "*.overridden"?: string | Style;
-  /**
-   * Style to use for symbols that are global.
-   */
-  "*.global"?: string | Style;
-  /**
-   * Style to use for symbols that are local.
-   */
-  "*.local"?: string | Style;
-  /**
-   * Math mode markup
-   */
-  "*.math"?: string | Style;
-  /**
-   * Strong (usually bolded) text
-   */
-  "*.strong"?: string | Style;
-  /**
-   * Emphasized (usually italicized) text
-   */
-  "*.emph"?: string | Style;
-  /**
-   * Style for elements within attributes
-   */
-  "*.attribute"?: string | Style;
-  /**
-   * Style for locals whose types implements one of the `Fn*` traits
-   */
-  "*.callable"?: string | Style;
-  /**
-   * Style for compile-time constants
-   */
-  "*.constant"?: string | Style;
-  /**
-   * Style for locals that are being consumed when use in a function call
-   */
-  "*.consuming"?: string | Style;
-  /**
-   * Style for control-flow related tokens, this includes the `?` operator
-   */
-  "*.controlFlow"?: string | Style;
-  /**
-   * Style for names resolving to a crate root
-   */
-  "*.crateRoot"?: string | Style;
-  /**
-   * Style for doc-string injected highlighting like rust source blocks in documentation
-   */
-  "*.injected"?: string | Style;
-  /**
-   * Style for intra doc links in doc-strings
-   */
-  "*.intraDocLink"?: string | Style;
-  /**
-   * Style for items that are defined outside of the current crate
-   */
-  "*.library"?: string | Style;
-  /**
-   * Style for mutable locals and statics as well as functions taking `&mut self`
-   */
-  "*.mutable"?: string | Style;
-  /**
-   * Style for items that are from the current crate and are `pub`
-   */
-  "*.public"?: string | Style;
-  /**
-   * Style for locals behind a reference and functions taking `self` by reference
-   */
-  "*.reference"?: string | Style;
-  /**
-   * Style for associated trait items
-   */
-  "*.trait"?: string | Style;
-  /**
-   * Style for unsafe operations, like unsafe function calls, as well as the `unsafe` token
-   */
-  "*.unsafe"?: string | Style;
+  variable?: Style | string;
   /**
    * This interface was referenced by `SemanticTokens`'s JSON-Schema definition
    * via the `patternProperty` "^(\w+[-_\w+]*|\*)(\.\w+[-_\w+]*)*(:\w+[-_\w+]*)?$".
    */
-  [k: string]: string | Style;
+  [k: string]: Style | string;
 }
 /**
  * Colors and styles for the token.
  */
 export interface Style {
-  /**
-   * Foreground color for the token.
-   */
-  foreground?: string;
   background?: string;
-  /**
-   * Sets the all font styles of the rule: 'italic', 'bold', 'underline' or 'strikethrough' or a combination. All styles that are not listed are unset. The empty string unsets all styles.
-   */
-  fontStyle?: string;
   /**
    * Sets or unsets the font style to bold. Note, the presence of 'fontStyle' overrides this setting.
    */
   bold?: boolean;
   /**
+   * Sets the all font styles of the rule: 'italic', 'bold', 'underline' or 'strikethrough' or a combination. All styles that are not listed are unset. The empty string unsets all styles.
+   */
+  fontStyle?: string;
+  /**
+   * Foreground color for the token.
+   */
+  foreground?: string;
+  /**
    * Sets or unsets the font style to italic. Note, the presence of 'fontStyle' overrides this setting.
    */
   italic?: boolean;
   /**
-   * Sets or unsets the font style to underline. Note, the presence of 'fontStyle' overrides this setting.
-   */
-  underline?: boolean;
-  /**
    * Sets or unsets the font style to strikethrough. Note, the presence of 'fontStyle' overrides this setting.
    */
   strikethrough?: boolean;
+  /**
+   * Sets or unsets the font style to underline. Note, the presence of 'fontStyle' overrides this setting.
+   */
+  underline?: boolean;
 }
