@@ -3,10 +3,9 @@ import { join } from "node:path";
 import { writeFileSync } from "node:fs";
 import { compile, JSONSchema } from "json-schema-to-typescript";
 const vscodeSchemasRoot =
-  "https://raw.githubusercontent.com/wraith13/vscode-schemas/master/en/latest/schemas/";
+  "https://raw.githubusercontent.com/ota-meshi/extract-vscode-schemas/main/resources/vscode/schemas/";
 
-const bannerComment = `/* eslint-disable */
-/**
+const bannerComment = `/**
  * This file was automatically generated.
  * DO NOT MODIFY IT BY HAND.
  * Instead, run \`yarn run updateVSCtypes\` to regenerate this file.

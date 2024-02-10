@@ -22,9 +22,9 @@ export type TextmateColors = {
         | "constant.character"
         | "constant.character.escape"
         | "constant.numeric"
-        | "constant.numeric.integer"
         | "constant.numeric.float"
         | "constant.numeric.hex"
+        | "constant.numeric.integer"
         | "constant.numeric.octal"
         | "constant.other"
         | "constant.regexp"
@@ -48,10 +48,10 @@ export type TextmateColors = {
         | "keyword"
         | "keyword.control"
         | "keyword.operator"
-        | "keyword.operator.new"
-        | "keyword.operator.assignment"
         | "keyword.operator.arithmetic"
+        | "keyword.operator.assignment"
         | "keyword.operator.logical"
+        | "keyword.operator.new"
         | "keyword.other"
         | "markup"
         | "markup.bold"
@@ -79,8 +79,8 @@ export type TextmateColors = {
         | "meta.return-type"
         | "meta.selector"
         | "meta.tag"
-        | "meta.type.annotation"
         | "meta.type"
+        | "meta.type.annotation"
         | "punctuation.definition.string.begin"
         | "punctuation.definition.string.end"
         | "punctuation.separator"
@@ -115,7 +115,6 @@ export type TextmateColors = {
         | "variable.other.readwrite"
         | "variable.parameter"
       )
-    | string
     | (
         | "comment"
         | "comment.block"
@@ -125,9 +124,9 @@ export type TextmateColors = {
         | "constant.character"
         | "constant.character.escape"
         | "constant.numeric"
-        | "constant.numeric.integer"
         | "constant.numeric.float"
         | "constant.numeric.hex"
+        | "constant.numeric.integer"
         | "constant.numeric.octal"
         | "constant.other"
         | "constant.regexp"
@@ -151,10 +150,10 @@ export type TextmateColors = {
         | "keyword"
         | "keyword.control"
         | "keyword.operator"
-        | "keyword.operator.new"
-        | "keyword.operator.assignment"
         | "keyword.operator.arithmetic"
+        | "keyword.operator.assignment"
         | "keyword.operator.logical"
+        | "keyword.operator.new"
         | "keyword.other"
         | "markup"
         | "markup.bold"
@@ -182,8 +181,8 @@ export type TextmateColors = {
         | "meta.return-type"
         | "meta.selector"
         | "meta.tag"
-        | "meta.type.annotation"
         | "meta.type"
+        | "meta.type.annotation"
         | "punctuation.definition.string.begin"
         | "punctuation.definition.string.end"
         | "punctuation.separator"
@@ -218,7 +217,8 @@ export type TextmateColors = {
         | "variable.other.readwrite"
         | "variable.parameter"
       )[]
-    | string[];
+    | string[]
+    | string;
   settings: Settings;
 }[];
 
@@ -226,13 +226,13 @@ export type TextmateColors = {
  * Colors and styles for the token.
  */
 export interface Settings {
-  /**
-   * Foreground color for the token.
-   */
-  foreground?: string;
   background?: string;
   /**
    * Font style of the rule: 'italic', 'bold', 'underline', 'strikethrough' or a combination. The empty string unsets inherited settings.
    */
   fontStyle?: string;
+  /**
+   * Foreground color for the token.
+   */
+  foreground?: string;
 }
