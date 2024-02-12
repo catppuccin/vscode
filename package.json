@@ -3,8 +3,8 @@
   "private": true,
   "devDependencies": {
     "@types/node": "^20.11.17",
-    "@typescript-eslint/eslint-plugin": "^6.21.0",
-    "@typescript-eslint/parser": "^6.21.0",
+    "@typescript-eslint/eslint-plugin": "^7.0.0",
+    "@typescript-eslint/parser": "^7.0.0",
     "@vscode/vsce": "^2.22.0",
     "@yarnpkg/types": "^4.0.0",
     "eslint": "^8.56.0",
