@@ -27,6 +27,8 @@ let
   drvCommon = {
     # Make sure the build uses the right Node.js version everywhere.
     buildInputs = [ nodejs yarn ];
+    # All dependencies should already be cached.
+    yarn_enable_network = "0";
     # Tell node-gyp to use the provided Node.js headers for native code builds.
     npm_config_nodedir = nodejs;
   };
@@ -55,7 +57,6 @@ let
     outputHashMode = "recursive";
     outputHash = "sha512-/nnteBtNN3F6gjGRSpb+DR7jBZuesmC+qZ1Rrmd+wkIE9VBfVTZcojF/SyDTwH20mGvdHHLspUn/2u8kFc1HBA==";
   };
-
 
   # Main project derivation.
   project = stdenv.mkDerivation (drvCommon // {
@@ -87,8 +88,6 @@ let
       # main project. This is necessary for native bindings that maybe have
       # hardcoded values.
       runHook preConfigure
-
-
 
       # Run normal Yarn install to complete dependency installation.
       yarn install --immutable --immutable-cache
@@ -131,7 +130,6 @@ let
       mkdir -p "$out/bin"
       yarn nixify install-bin $out/bin
 
-
       runHook postInstall
     '';
 
@@ -145,7 +143,5 @@ let
   });
 
   overriddenProject = optionalOverride overrideAttrs project;
-
-
 
 in overriddenProject
