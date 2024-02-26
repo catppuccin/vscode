@@ -39,10 +39,10 @@ jobs:
         id: release
 
     outputs:
-      theme_release: github.event.inputs.force-release-theme == 'true' || steps.release.outputs['packages/catppuccin-vsc--release_created'] == 'true'
-      theme_tag: github.event.inputs.force-release-theme-tag || steps.release.outputs['packages/catppuccin-vsc--tag_name']
-      pack_release: github.event.inputs.force-release-pack == 'true' || steps.release.outputs['packages/catppuccin-vsc-pack--release_created'] == 'true'
-      npm_release: github.event.inputs.force-release-npm == 'true' || steps.release.outputs['packages/catppuccin-vscode--release_created'] == 'true'
+      theme_release: ${{ github.event.inputs.force-release-theme == 'true' || steps.release.outputs['packages/catppuccin-vsc--release_created'] == 'true' }}
+      theme_tag: ${{ github.event.inputs.force-release-theme-tag || steps.release.outputs['packages/catppuccin-vsc--tag_name'] }}
+      pack_release: ${{ github.event.inputs.force-release-pack == 'true' || steps.release.outputs['packages/catppuccin-vsc-pack--release_created'] == 'true' }}
+      npm_release: ${{ github.event.inputs.force-release-npm == 'true' || steps.release.outputs['packages/catppuccin-vscode--release_created'] == 'true' }}
 
   release-vscode:
     permissions:
