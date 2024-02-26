@@ -4665,8 +4665,8 @@ __metadata:
   linkType: hard
 
 "@vscode/vsce@npm:^2.22.0":
-  version: 2.22.0
-  resolution: "@vscode/vsce@npm:2.22.0"
+  version: 2.24.0
+  resolution: "@vscode/vsce@npm:2.24.0"
   dependencies:
     azure-devops-node-api: "npm:^11.0.1"
     chalk: "npm:^2.4.2"
@@ -4694,7 +4694,7 @@ __metadata:
       optional: true
   bin:
     vsce: vsce
-  checksum: 10c0/809228e165933c4c6606b82b2658995a31dbb70f28df3ee1b195314ad4da2440c1b4270d427c9fa217eb61745921fe23fbdad46251e7f540f00952846b7daab9
+  checksum: 10c0/998fb780702321d18e6340c35be85ab421249a61e68fac7d9bc111e1a44ae756d149a736b81d80f1cc7f66aef9f50b29bb0d95ee1f0ce7afa0d4becf9d54456b
   languageName: node
   linkType: hard
 
