@@ -5,7 +5,7 @@
   "displayName": "Catppuccin for VSCode",
   "publisher": "Catppuccin",
   "description": "🦌 Soothing pastel theme for VSCode",
-  "version": "3.11.1",
+  "version": "3.11.2",
   "engines": {
     "vscode": "^1.80.0",
     "node": ">=20.0.0"
@@ -166,7 +166,7 @@
     "@catppuccin/vsc-typegen": "workspace:*",
     "@types/node": "^20.11.20",
     "@types/tinycolor2": "^1.4.6",
-    "@types/vscode": "~1.80.0",
+    "@types/vscode": "~1.86.0",
     "@vscode/vsce": "^2.24.0",
     "tinycolor2": "^1.6.0",
     "tsup": "^8.0.2",

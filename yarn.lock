@@ -4260,10 +4260,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/vscode@npm:~1.80.0":
-  version: 1.80.0
-  resolution: "@types/vscode@npm:1.80.0"
-  checksum: 10c0/6f56a49ec8cac5482e38f3e4fa42f9c0ab3f6968e301389a48fc77450881a0ce17f7cf887a734644de858e708f3671404dfbda959493bcfaf6e07ec8a9c438d5
+"@types/vscode@npm:~1.86.0":
+  version: 1.86.0
+  resolution: "@types/vscode@npm:1.86.0"
+  checksum: 10c0/38d73e073e2d4ee4b1cf2c8762540c4b875af98c43f5632f62a978bcdc12170090b86e7c8e09f8207808e5727f8b90ac8bac9aad73b44205c0fd7ec9c3f045e2
   languageName: node
   linkType: hard
 
@@ -5223,7 +5223,7 @@ __metadata:
     "@catppuccin/vsc-typegen": "workspace:*"
     "@types/node": "npm:^20.11.20"
     "@types/tinycolor2": "npm:^1.4.6"
-    "@types/vscode": "npm:~1.80.0"
+    "@types/vscode": "npm:~1.86.0"
     "@vscode/vsce": "npm:^2.24.0"
     tinycolor2: "npm:^1.6.0"
     tsup: "npm:^8.0.2"
