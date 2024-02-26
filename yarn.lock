@@ -1550,6 +1550,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@catppuccin/vscode-monorepo@workspace:."
   dependencies:
+    "@tsconfig/node18": "npm:^18.2.2"
     "@types/node": "npm:^20.11.20"
     "@typescript-eslint/eslint-plugin": "npm:^7.0.2"
     "@typescript-eslint/parser": "npm:^7.0.2"
@@ -3849,6 +3850,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@tsconfig/node18@npm:^18.2.2":
+  version: 18.2.2
+  resolution: "@tsconfig/node18@npm:18.2.2"
+  checksum: 10c0/71f2c65616125f3ec8c85704ea55100d2131e0c01cbf7a247e5f6f7d617dfaafd5ff4a09b4193bceface4b4f44e9aa909da8e9af3910c01a0661f202386e40af
+  languageName: node
+  linkType: hard
+
 "@types/babel__core@npm:^7.0.0, @types/babel__core@npm:^7.18.0":
   version: 7.20.3
   resolution: "@types/babel__core@npm:7.20.3"
@@ -5221,6 +5229,7 @@ __metadata:
     "@actions/core": "npm:^1.10.1"
     "@catppuccin/palette": "npm:^1.1.0"
     "@catppuccin/vsc-typegen": "workspace:*"
+    "@tsconfig/node18": "npm:^18.2.2"
     "@types/node": "npm:^20.11.20"
     "@types/tinycolor2": "npm:^1.4.6"
     "@types/vscode": "npm:~1.80.0"
