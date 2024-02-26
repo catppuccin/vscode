@@ -23,7 +23,7 @@
     "storybook": "^7.6.13",
     "tsx": "^4.7.0",
     "typescript": "^5.3.3",
-    "vite": "^5.0.0"
+    "vite": "^4.5.2"
   },
   "scripts": {
     "storybook:chromatic": "chromatic --exit-zero-on-changes --exit-once-uploaded --project-token chpt_e3cba49738d7554",
