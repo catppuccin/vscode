@@ -1,5 +1,13 @@
 # Changelog
 
+## [3.11.2](https://github.com/catppuccin/vscode/compare/catppuccin-vsc-v3.11.1...catppuccin-vsc-v3.11.2) (2024-02-26)
+
+
+### Bug Fixes
+
+* **ui:** selection color for non-editor context ([#330](https://github.com/catppuccin/vscode/issues/330)) ([d3c0b6a](https://github.com/catppuccin/vscode/commit/d3c0b6aa05d8e2adff2c8de207845e2e0f211740))
+* **ui:** style `activityBarTop`  ([#316](https://github.com/catppuccin/vscode/issues/316)) ([a5c28e9](https://github.com/catppuccin/vscode/commit/a5c28e9319556c696e184a2f2f49813288063ed6))
+
 ## [3.11.1](https://github.com/catppuccin/vscode/compare/catppuccin-vsc-v3.11.0...catppuccin-vsc-v3.11.1) (2024-02-08)
 
 
