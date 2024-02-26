@@ -22,7 +22,7 @@ export const getUiColors = (
     foreground: palette.text,
     disabledForeground: palette.subtext0,
     "widget.shadow": opacity(palette.mantle, 0.5),
-    "selection.background": opacity(palette.surface2, 0.4),
+    "selection.background": opacity(accent, 0.4),
     descriptionForeground: palette.text,
     errorForeground: palette.red,
     "icon.foreground": accent,
