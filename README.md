@@ -51,7 +51,18 @@ Open the Command Palette and select "Extensions: Install from VSIX...", then ope
 
 **Using the JSON files**
 
-If you need to use the JSON files for libraries like [Shiki](https://www.npmjs.com/package/shiki) or [Shikiji](https://www.npmjs.com/package/shikiji), the theme files are published to NPM as [`@catppuccin/vscode`](https://www.npmjs.com/package/@catppuccin/vscode).
+If you need to use the JSON files for libraries like [Shiki](https://www.npmjs.com/package/shiki) or [Shikiji](https://www.npmjs.com/package/shikiji), the theme files are published to npm as [`@catppuccin/vscode`](https://www.npmjs.com/package/@catppuccin/vscode).
+
+You can use the following `esm.sh` CDN links to access them as well.
+
+| Flavor    | URL                                                     |
+| --------- | ------------------------------------------------------- |
+| Latte     | https://esm.sh/@catppuccin/vscode/themes/latte.json     |
+| Frappé    | https://esm.sh/@catppuccin/vscode/themes/frappe.json    |
+| Macchiato | https://esm.sh/@catppuccin/vscode/themes/macchiato.json |
+| Mocha     | https://esm.sh/@catppuccin/vscode/themes/mocha.json     |
+
+To tag them at a specific version, use a semver specifier such as `@catppuccin/vscode@3.10.0`.
 
 **Nix (Home-Manager) users**
 
