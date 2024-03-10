@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/catppuccin/vscode.git",
+    "url": "https://github.com/catppuccin/vscode.git",
     "directory": "packages/catppuccin-vscode"
   },
   "files": [
@@ -41,5 +41,12 @@
     "build": "yarn tsup",
     "compiled:pack": "npm pack",
     "prepack": "yarn core:build && yarn build"
+  },
+  "homepage": "https://github.com/catppuccin/vscode/tree/main/packages/catppuccin-vscode#readme",
+  "bugs": {
+    "url": "https://github.com/catppuccin/vscode/issues"
+  },
+  "sponsor": {
+    "url": "https://opencollective.com/catppuccin"
   }
 }

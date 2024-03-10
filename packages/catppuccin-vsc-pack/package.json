@@ -8,7 +8,7 @@
   "private": true,
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/catppuccin/vscode.git",
+    "url": "https://github.com/catppuccin/vscode.git",
     "directory": "packages/catppuccin-vsc-pack"
   },
   "engines": {
@@ -28,5 +28,12 @@
   "scripts": {
     "pack:build": "vsce package --no-dependencies --out catppuccin-vsc-pack.vsix"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "homepage": "https://github.com/catppuccin/vscode/tree/main/packages/catppuccin-vsc-pack#readme",
+  "bugs": {
+    "url": "https://github.com/catppuccin/vscode/issues"
+  },
+  "sponsor": {
+    "url": "https://opencollective.com/catppuccin"
+  }
 }

@@ -36,7 +36,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/catppuccin/vscode.git",
+    "url": "https://github.com/catppuccin/vscode.git",
     "directory": "packages/catppuccin-vsc-storybook"
+  },
+  "homepage": "https://github.com/catppuccin/vscode/tree/main/packages/catppuccin-vsc-storybook#readme",
+  "bugs": {
+    "url": "https://github.com/catppuccin/vscode/issues"
+  },
+  "sponsor": {
+    "url": "https://opencollective.com/catppuccin"
   }
 }
