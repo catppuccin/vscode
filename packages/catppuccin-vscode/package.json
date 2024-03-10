@@ -18,6 +18,7 @@
     "dist/*",
     "themes/*"
   ],
+  "main": "dist/index.js",
   "exports": {
     ".": {
       "import": "./dist/index.js",
