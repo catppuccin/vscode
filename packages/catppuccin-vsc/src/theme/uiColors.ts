@@ -140,13 +140,15 @@ export const getUiColors = (
     "editor.foldBackground": opacity(palette.sky, 0.25),
     "editor.foreground": palette.text,
     "editor.hoverHighlightBackground": opacity(palette.sky, 0.25),
-    "editor.inactiveSelectionBackground": opacity(palette.surface2, 0.25),
     "editor.lineHighlightBackground": opacity(palette.text, 0.07),
     "editor.lineHighlightBorder": transparent,
     "editor.rangeHighlightBackground": opacity(palette.sky, 0.25),
     "editor.rangeHighlightBorder": transparent,
 
-    "editor.selectionBackground": opacity(palette.overlay2, 0.2),
+    "editor.selectionBackground": opacity(
+      palette.overlay2,
+      isLatte ? 0.3 : 0.25,
+    ),
     "editor.selectionHighlightBackground": opacity(palette.overlay2, 0.2),
     "editor.selectionHighlightBorder": opacity(palette.overlay2, 0.2),
     "editor.wordHighlightBackground": opacity(palette.overlay2, 0.2),
