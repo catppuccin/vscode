@@ -9,26 +9,24 @@ import generateThemes from "./src/hooks/generateThemes";
 const buildForADS = getFlag("--ads", Boolean);
 const development = getFlag("--dev", Boolean);
 
-(async () => {
-  await generateThemes();
-  const packageJson = await updatePackageJson({ buildForADS });
+await generateThemes();
+const packageJson = await updatePackageJson({ buildForADS });
 
-  await build({
-    clean: true,
-    entry: ["src/browser.ts", "src/main.ts", "src/hooks/generateThemes.ts"],
-    external: ["vscode"],
-    minify: !development,
-    sourcemap: development,
-    target: "node16",
-  });
+await build({
+  clean: true,
+  entry: ["src/browser.ts", "src/main.ts", "src/hooks/generateThemes.ts"],
+  external: ["vscode"],
+  minify: !development,
+  sourcemap: development,
+  target: "node16",
+});
 
-  const shortName = buildForADS ? "ads" : "vsc";
-  const packagePath = `catppuccin-${shortName}-${packageJson.version}.vsix`;
+const shortName = buildForADS ? "ads" : "vsc";
+const packagePath = `catppuccin-${shortName}-${packageJson.version}.vsix`;
 
-  await createVSIX({ dependencies: false, packagePath });
+await createVSIX({ dependencies: false, packagePath });
 
-  // restore the original package.json when building for ADS
-  if (buildForADS) await updatePackageJson();
-  // the upload step in the CI required the path to the vsix file
-  if (process.env.GITHUB_ACTIONS) setOutput("vsixPath", packagePath);
-})();
+// restore the original package.json when building for ADS
+if (buildForADS) await updatePackageJson();
+// the upload step in the CI required the path to the vsix file
+if (process.env.GITHUB_ACTIONS) setOutput("vsixPath", packagePath);

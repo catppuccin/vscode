@@ -1520,6 +1520,7 @@ __metadata:
     "@storybook/blocks": "npm:^7.6.17"
     "@storybook/react": "npm:^7.6.17"
     "@storybook/react-vite": "npm:^7.6.17"
+    "@tsconfig/node18": "npm:^18.2.2"
     "@types/node": "npm:^20.11.20"
     "@types/react": "npm:^18.2.58"
     catppuccin-vsc: "workspace:*"
