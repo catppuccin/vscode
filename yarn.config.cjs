@@ -64,10 +64,16 @@ const enforcePublishingConfig = ({ Yarn }) => {
 module.exports = {
   constraints: async (context) => {
     enforceFieldsOnAllWorkspaces(context, {
+      "bugs.url": "https://github.com/catppuccin/vscode/issues",
+      homepage: ({ cwd }) => {
+        if (cwd === ".") return;
+        return `https://github.com/catppuccin/vscode/tree/main/${cwd}#readme`;
+      },
       license: "MIT",
       "repository.directory": (workspace) => workspace.cwd,
       "repository.type": "git",
-      "repository.url": "git+https://github.com/catppuccin/vscode.git",
+      "repository.url": "https://github.com/catppuccin/vscode.git",
+      "sponsor.url": "https://opencollective.com/catppuccin",
     });
     enforceConsistentDependenciesAcrossTheProject(context);
     enforcePublishingConfig(context);

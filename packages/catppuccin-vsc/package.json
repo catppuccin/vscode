@@ -145,7 +145,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/catppuccin/vscode.git",
+    "url": "https://github.com/catppuccin/vscode.git",
     "directory": "packages/catppuccin-vsc"
   },
   "bugs": {
@@ -180,5 +180,6 @@
     "core:build": "tsx build.ts",
     "core:build-ads": "tsx build.ts --ads",
     "core:dev": "tsx build.ts --dev"
-  }
+  },
+  "homepage": "https://github.com/catppuccin/vscode/tree/main/packages/catppuccin-vsc#readme"
 }
