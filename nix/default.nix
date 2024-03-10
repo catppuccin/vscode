@@ -70,7 +70,7 @@ in
     # we're checking in the ./themes/.flag file so it doesn't prompt for initial rebuilds
     buildPhase = ''
       runHook preBuild
-      node dist/hooks/generateThemes.js
+      node dist/hooks/generateThemes.cjs
       touch ./themes/.flag
       runHook postBuild
     '';

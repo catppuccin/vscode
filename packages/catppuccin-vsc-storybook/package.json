@@ -11,6 +11,7 @@
     "@storybook/blocks": "^7.6.17",
     "@storybook/react": "^7.6.17",
     "@storybook/react-vite": "^7.6.17",
+    "@tsconfig/node18": "^18.2.2",
     "@types/node": "^20.11.20",
     "@types/react": "^18.2.58",
     "catppuccin-vsc": "workspace:*",
