@@ -166,7 +166,7 @@
     "@catppuccin/palette": "^1.1.0",
     "@catppuccin/vsc-typegen": "workspace:*",
     "@tsconfig/node18": "^18.2.2",
-    "@types/node": "^20.11.20",
+    "@types/node": "^20.11.25",
     "@types/tinycolor2": "^1.4.6",
     "@types/vscode": "~1.80.0",
     "@vscode/vsce": "^2.24.0",
@@ -174,7 +174,7 @@
     "tsup": "^8.0.2",
     "tsx": "^4.7.1",
     "type-flag": "^3.0.0",
-    "typescript": "^5.3.3"
+    "typescript": "<5.4.0"
   },
   "scripts": {
     "core:build": "tsx build.ts",
