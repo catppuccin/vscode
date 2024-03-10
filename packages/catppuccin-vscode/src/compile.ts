@@ -7,5 +7,11 @@ export const compile = (
   overrides: Partial<ThemeOptions> = {},
 ) => {
   const options = { ...defaultOptions, ...overrides };
-  return compileTheme(flavor, options);
+  const compiled = compileTheme(flavor, options);
+
+  // like in the original file, we need to shim the name for the Shiki theme
+  return {
+    ...compiled,
+    name: `catppuccin-${flavor}`,
+  };
 };
