@@ -1582,7 +1582,6 @@ __metadata:
     "@types/node": "npm:^20.11.20"
     catppuccin-vsc: "workspace:*"
     tsup: "npm:^8.0.2"
-    tsx: "npm:^4.7.1"
     typescript: "npm:^5.3.3"
   languageName: unknown
   linkType: soft
