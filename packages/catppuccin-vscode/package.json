@@ -1,7 +1,7 @@
 {
   "name": "@catppuccin/vscode",
   "version": "3.11.2",
-  "description": "🦌 Soothing pastel theme for VSCode, precompiled JSON version",
+  "description": "🦌 Soothing pastel theme for VSCode, NPM version",
   "license": "MIT",
   "type": "module",
   "publishConfig": {
@@ -15,13 +15,31 @@
     "directory": "packages/catppuccin-vscode"
   },
   "files": [
+    "dist/*",
     "themes/*"
   ],
+  "main": "dist/index.cjs",
+  "module": "dist/index.js",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "dependencies": {
+    "@catppuccin/palette": "^1.1.0"
+  },
   "devDependencies": {
-    "catppuccin-vsc": "workspace:*"
+    "@tsconfig/node20": "^20.1.2",
+    "@types/node": "^20.11.20",
+    "catppuccin-vsc": "workspace:*",
+    "tsup": "^8.0.2",
+    "typescript": "^5.3.3"
   },
   "scripts": {
+    "build": "yarn tsup",
     "compiled:pack": "npm pack",
-    "prepack": "yarn core:build && yarn node ./build.js"
+    "prepack": "yarn core:build && yarn build"
   }
 }

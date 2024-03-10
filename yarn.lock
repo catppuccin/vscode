@@ -1577,7 +1577,12 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@catppuccin/vscode@workspace:packages/catppuccin-vscode"
   dependencies:
+    "@catppuccin/palette": "npm:^1.1.0"
+    "@tsconfig/node20": "npm:^20.1.2"
+    "@types/node": "npm:^20.11.20"
     catppuccin-vsc: "workspace:*"
+    tsup: "npm:^8.0.2"
+    typescript: "npm:^5.3.3"
   languageName: unknown
   linkType: soft
 
@@ -3855,6 +3860,13 @@ __metadata:
   version: 18.2.2
   resolution: "@tsconfig/node18@npm:18.2.2"
   checksum: 10c0/71f2c65616125f3ec8c85704ea55100d2131e0c01cbf7a247e5f6f7d617dfaafd5ff4a09b4193bceface4b4f44e9aa909da8e9af3910c01a0661f202386e40af
+  languageName: node
+  linkType: hard
+
+"@tsconfig/node20@npm:^20.1.2":
+  version: 20.1.2
+  resolution: "@tsconfig/node20@npm:20.1.2"
+  checksum: 10c0/e438fa9b93f0e6ea667affbbd3217692bf3f92db1b3dcbfba1dd141a7dbcd647c19ed87ce76871c723bed398759ec4a5590685f3e669b600c9371f143a19e0c1
   languageName: node
   linkType: hard
 
@@ -7095,7 +7107,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"function-bind@npm:^1.1.1, function-bind@npm:^1.1.2":
+"function-bind@npm:^1.1.2":
   version: 1.1.2
   resolution: "function-bind@npm:1.1.2"
   checksum: 10c0/d8680ee1e5fcd4c197e4ac33b2b4dce03c71f4d91717292785703db200f5c21f977c568d28061226f9b5900cbcd2c84463646134fd5337e7925e0942bc3f46d5
@@ -7452,15 +7464,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"has@npm:^1.0.3":
-  version: 1.0.3
-  resolution: "has@npm:1.0.3"
-  dependencies:
-    function-bind: "npm:^1.1.1"
-  checksum: 10c0/e1da0d2bd109f116b632f27782cf23182b42f14972ca9540e4c5aa7e52647407a0a4a76937334fddcb56befe94a3494825ec22b19b51f5e5507c3153fd1a5e1b
-  languageName: node
-  linkType: hard
-
 "hasown@npm:^2.0.0":
   version: 2.0.0
   resolution: "hasown@npm:2.0.0"
@@ -7750,11 +7753,11 @@ __metadata:
   linkType: hard
 
 "is-core-module@npm:^2.13.0":
-  version: 2.13.0
-  resolution: "is-core-module@npm:2.13.0"
+  version: 2.13.1
+  resolution: "is-core-module@npm:2.13.1"
   dependencies:
-    has: "npm:^1.0.3"
-  checksum: 10c0/a8e7f46f8cefd7c9f6f5d54f3dbf1c40bf79467b6612d6023421ec6ea7e8e4c22593b3963ff7a3f770db07bc19fccbe7987a550a8bc1a4d6ec4115db5e4c5dca
+    hasown: "npm:^2.0.0"
+  checksum: 10c0/2cba9903aaa52718f11c4896dabc189bab980870aae86a62dc0d5cedb546896770ee946fb14c84b7adf0735f5eaea4277243f1b95f5cefa90054f92fbcac2518
   languageName: node
   linkType: hard
 

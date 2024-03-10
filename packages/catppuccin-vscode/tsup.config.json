@@ -1,0 +1,12 @@
+{
+  "$schema": "https://cdn.jsdelivr.net/npm/tsup/schema.json",
+  "clean": true,
+  "entryPoints": ["src/index.ts", "src/compile.ts"],
+  "format": ["esm", "cjs"],
+  "dts": {
+    "resolve": true
+  },
+  "minify": false,
+  "sourcemap": false,
+  "target": "node16"
+}

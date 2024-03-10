@@ -1,0 +1,12 @@
+{
+  "extends": "@tsconfig/node20/tsconfig.json",
+  "compilerOptions": {
+    "module": "esnext",
+    "moduleResolution": "Node",
+    "noEmit": true,
+    "paths": {
+      "@/*": ["../catppuccin-vsc/src/*"]
+    },
+    "resolveJsonModule": true
+  }
+}
