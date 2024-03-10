@@ -17,36 +17,30 @@ Simple NPM package containing all compiled themes of [Catppuccin for VSCode](htt
 
 You can use these definitions with libraries like [Shiki](https://github.com/shikijs/shiki) and [Shikiji](https://github.com/antfu/shikiji).
 
-Import in Node:
+```console
+npm install @catppuccin/vscode
+pnpm add @catppuccin/vscode
+yarn add @catppuccin/vscode
+```
+
+### API
 
 ```ts
 // the themes with default options
 import { latte, frappe, macchiato, mocha } from "@catppuccin/vscode";
 
-// the compile function to customize your theme
-import { compile } from "@catppuccin/vscode";
+// alternatively, import the JSON files:
+import latte from "@catppuccin/vscode/themes/latte.json" with { type: "json" };
+import frappe from "@catppuccin/vscode/themes/frappe.json" with { type: "json" };
+import macchiato from "@catppuccin/vscode/themes/macchiato.json" with { type: "json" };
+import mocha from "@catppuccin/vscode/themes/mocha.json" with { type: "json" };
 ```
-
-Import via a CDN, e.g. in Deno:
-
-```ts
-// the themes with default options
-import {
-  latte,
-  frappe,
-  macchiato,
-  mocha,
-} from "https://esm.sh/@catppuccin/vscode";
-
-// the compile function to customize your theme
-import { compile } from "https://esm.sh/@catppuccin/vscode";
-```
-
-### API
 
 To customize the theme, you can use the `compile()` function, optionally passing in [options that the VSCode theme supports](https://github.com/catppuccin/vscode/tree/main/packages/catppuccin-vsc#catppuccin-settings).
 
 ```ts
+import { compile } from "@catppuccin/vscode";
+
 const myMocha = compile("mocha", {
   colorOverrides: {
     mocha: {
