@@ -4,6 +4,6 @@
 !LICENSE
 !README.md
 !icon.png
-!dist/*.js
+!dist/*.cjs
 !package.json
 !themes/*.json

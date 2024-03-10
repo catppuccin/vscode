@@ -55,7 +55,7 @@ let
       rm $out/.gitignore
     '';
     outputHashMode = "recursive";
-    outputHash = "sha512-/nnteBtNN3F6gjGRSpb+DR7jBZuesmC+qZ1Rrmd+wkIE9VBfVTZcojF/SyDTwH20mGvdHHLspUn/2u8kFc1HBA==";
+    outputHash = "sha512-DQfyyyYwGGUApuDW868/dfk5DUsMj/LdkDNoxJTqy/gLAKqIKwl9LBOt31cbEWmPqWNcgX/z8b2GTJM8nAvUsQ==";
   };
 
   # Main project derivation.
@@ -121,7 +121,7 @@ let
         cp --reflink=auto --recursive .yarn "$out/libexec/$name"
 
         # Copy the Yarn linker output into the package.
-        cp --reflink=auto .pnp.* "$out/libexec/$name"
+        cp --reflink=auto --recursive node_modules "$out/libexec/$name"
       fi
 
       cd "$out/libexec/$name"
@@ -129,6 +129,9 @@ let
       # Invoke a plugin internal command to setup binaries.
       mkdir -p "$out/bin"
       yarn nixify install-bin $out/bin
+
+      # A package with node_modules doesn't need the cache
+      yarn cache clean
 
       runHook postInstall
     '';

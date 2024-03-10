@@ -3,6 +3,7 @@
   "version": "3.11.2",
   "description": "🦌 Soothing pastel theme for VSCode, precompiled JSON version",
   "license": "MIT",
+  "type": "module",
   "publishConfig": {
     "access": "public",
     "provenance": true,
@@ -21,6 +22,6 @@
   },
   "scripts": {
     "compiled:pack": "npm pack",
-    "prepack": "yarn core:build && yarn node ./build.mjs"
+    "prepack": "yarn core:build && yarn node ./build.js"
   }
 }
