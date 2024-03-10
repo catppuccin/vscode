@@ -29,7 +29,6 @@
     "@catppuccin/palette": "^1.1.0"
   },
   "devDependencies": {
-    "@microsoft/api-extractor": "^7.42.3",
     "@tsconfig/node20": "^20.1.2",
     "@types/node": "^20.11.20",
     "catppuccin-vsc": "workspace:*",

@@ -7,7 +7,7 @@ import { mkdir, writeFile } from "node:fs/promises";
 import { join } from "node:path";
 import { flavorEntries } from "@catppuccin/palette";
 
-import { compileTheme, defaultOptions } from "../theme";
+import { compileTheme, defaultOptions } from "@/theme";
 import { repoRoot } from "./constants";
 
 const flavors = flavorEntries.map(([flavorName]) => flavorName);
