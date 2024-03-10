@@ -121,6 +121,7 @@ let
         cp --reflink=auto --recursive .yarn "$out/libexec/$name"
 
         # Copy the Yarn linker output into the package.
+        cp --reflink=auto --recursive node_modules "$out/libexec/$name"
       fi
 
       cd "$out/libexec/$name"
@@ -128,6 +129,9 @@ let
       # Invoke a plugin internal command to setup binaries.
       mkdir -p "$out/bin"
       yarn nixify install-bin $out/bin
+
+      # A package with node_modules doesn't need the cache
+      yarn cache clean
 
       runHook postInstall
     '';
