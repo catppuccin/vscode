@@ -3,9 +3,9 @@
   "private": true,
   "devDependencies": {
     "@tsconfig/node18": "^18.2.2",
-    "@types/node": "^20.11.20",
-    "@typescript-eslint/eslint-plugin": "^7.0.2",
-    "@typescript-eslint/parser": "^7.0.2",
+    "@types/node": "^20.11.25",
+    "@typescript-eslint/eslint-plugin": "^7.1.1",
+    "@typescript-eslint/parser": "^7.1.1",
     "@vscode/vsce": "^2.24.0",
     "@yarnpkg/types": "^4.0.0",
     "eslint": "^8.57.0",
@@ -17,7 +17,7 @@
     "prettier": "^3.2.5",
     "tsup": "^8.0.2",
     "tsx": "^4.7.1",
-    "typescript": "^5.3.3"
+    "typescript": "<5.4.0"
   },
   "dependenciesMeta": {
     "keytar": {
