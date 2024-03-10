@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.2](https://github.com/catppuccin/vscode/compare/catppuccin-vsc-pack-v1.0.1...catppuccin-vsc-pack-v1.0.2) (2024-03-10)
+
+
+### Documentation
+
+* JSDoc & other improvements/corrections ([#338](https://github.com/catppuccin/vscode/issues/338)) ([1ca9076](https://github.com/catppuccin/vscode/commit/1ca9076bba78dad492cd75819511b5bc08255974))
+
 ## [1.0.1](https://github.com/catppuccin/vscode/compare/catppuccin-vsc-pack-v1.0.0...catppuccin-vsc-pack-v1.0.1) (2024-01-05)
 
 

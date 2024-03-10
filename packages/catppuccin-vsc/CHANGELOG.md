@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.12.0](https://github.com/catppuccin/vscode/compare/catppuccin-vsc-v3.11.2...catppuccin-vsc-v3.12.0) (2024-03-10)
+
+
+### Features
+
+* rework selection background ([#342](https://github.com/catppuccin/vscode/issues/342)) ([08c34c0](https://github.com/catppuccin/vscode/commit/08c34c0758500d2d73fff7ca3742283936749beb))
+
 ## [3.11.2](https://github.com/catppuccin/vscode/compare/catppuccin-vsc-v3.11.1...catppuccin-vsc-v3.11.2) (2024-02-26)
 
 
