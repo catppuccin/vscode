@@ -61,6 +61,11 @@ export type ThemeOptions = {
    * See [the docs](https://github.com/catppuccin/vscode/tree/main/packages/catppuccin-vsc#use-palette-colors-on-workbench-elements-ui) for reference.
    */
   customUIColors: CustomUIColors;
+
+  /**
+   * Controls whether to sync the currently active Catppuccin flavor with the [Catppuccin Icon Pack](https://github.com/catppuccin/vscode-icons)
+   */
+  syncWithIconPack: boolean;
 };
 
 export type ThemePaths = {
