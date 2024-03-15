@@ -88,6 +88,12 @@ const configuration = (version: string) => {
         description:
           "Controls whether borders should be enabled on some additional UI elements.",
       },
+      "catppuccin.syncWithIconPack": {
+        type: "boolean",
+        default: true,
+        markdownDescription:
+          "Controls whether to sync the currently active Catppuccin flavor with the [Catppuccin Icon Pack](https://github.com/catppuccin/vscode-icons)",
+      },
     },
   };
 };

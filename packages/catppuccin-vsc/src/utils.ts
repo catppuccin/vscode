@@ -113,7 +113,8 @@ export const getConfiguration = (): ThemeOptions => {
     bracketMode: config.get<CatppuccinBracketMode>("bracketMode"),
     extraBordersEnabled: config.get<boolean>("extraBordersEnabled"),
     customUIColors: config.get<CustomUIColors>("customUIColors"),
-  };
+    syncWithIconPack: config.get<boolean>("syncWithIconPack"),
+  } satisfies Partial<ThemeOptions>;
   return {
     ...defaultOptions,
     ...filterObject(options, ([, value]) => value !== undefined),

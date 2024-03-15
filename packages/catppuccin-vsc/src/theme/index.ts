@@ -20,6 +20,7 @@ export const defaultOptions: ThemeOptions = {
   bracketMode: "rainbow",
   extraBordersEnabled: false,
   customUIColors: {},
+  syncWithIconPack: true,
 };
 
 export const compileTheme = (

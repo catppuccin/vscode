@@ -11,13 +11,11 @@ export const activate = async (context: ExtensionContext) => {
     mocha: Uri.joinPath(base, "themes", "mocha.json"),
   };
 
+  const config = utils.getConfiguration();
+
   // regenerate on a fresh install if non-default config is set
   if ((await utils.isFreshInstall(context)) && !utils.isDefaultConfig()) {
-    utils.updateThemes(
-      utils.getConfiguration(),
-      paths,
-      utils.UpdateTrigger.FRESH_INSTALL,
-    );
+    utils.updateThemes(config, paths, utils.UpdateTrigger.FRESH_INSTALL);
   }
 
   context.subscriptions.push(
@@ -31,12 +29,17 @@ export const activate = async (context: ExtensionContext) => {
         );
       }
       // call the icon pack sync when the theme changes
-      if (event.affectsConfiguration("workbench.colorTheme")) {
+      if (
+        event.affectsConfiguration("workbench.colorTheme") &&
+        config.syncWithIconPack
+      ) {
         utils.syncToIconPack();
       }
     }),
   );
 
   // call the icon pack sync on activation
-  utils.syncToIconPack();
+  if (config.syncWithIconPack) {
+    utils.syncToIconPack();
+  }
 };
