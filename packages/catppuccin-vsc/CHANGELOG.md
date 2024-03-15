@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.13.0](https://github.com/catppuccin/vscode/compare/catppuccin-vsc-v3.12.0...catppuccin-vsc-v3.13.0) (2024-03-15)
+
+
+### Features
+
+* **options:** add option to disable icon pack sync ([#348](https://github.com/catppuccin/vscode/issues/348)) ([54f5685](https://github.com/catppuccin/vscode/commit/54f5685f28ece588e9939f2ad02f903260f4d1c7))
+
 ## [3.12.0](https://github.com/catppuccin/vscode/compare/catppuccin-vsc-v3.11.2...catppuccin-vsc-v3.12.0) (2024-03-10)
 
 
