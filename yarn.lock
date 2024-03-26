@@ -2952,10 +2952,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@shikijs/core@npm:1.1.7":
-  version: 1.1.7
-  resolution: "@shikijs/core@npm:1.1.7"
-  checksum: 10c0/ee59b88d4c81422792651c0ca52ff378c3035f9d1e4907b58c1d6da06fad02d530775a2e6f43bb033832cd3d2a5f69c9aa4eb5b6b05311396acc503f15442f37
+"@shikijs/core@npm:1.2.1":
+  version: 1.2.1
+  resolution: "@shikijs/core@npm:1.2.1"
+  checksum: 10c0/60b5a1cdaf4389c1377b1527657377dac67173d5fd79fe4d9775392c037d6b0fe46c42bb3e3fbe42a88f4f62295f20f5cf3e43cdf1f070f4ccfedf9077379ecd
   languageName: node
   linkType: hard
 
@@ -10675,11 +10675,11 @@ __metadata:
   linkType: hard
 
 "shiki@npm:^1.1.7":
-  version: 1.1.7
-  resolution: "shiki@npm:1.1.7"
+  version: 1.2.1
+  resolution: "shiki@npm:1.2.1"
   dependencies:
-    "@shikijs/core": "npm:1.1.7"
-  checksum: 10c0/536f8dec961d7938f6d3a63dd6be64be082b56c1433380eda0a82cb57b5789759097947d9ef1726e521d4054a6fe2b73639e94bedaccea2044fa640667167501
+    "@shikijs/core": "npm:1.2.1"
+  checksum: 10c0/a4743e8c2ffa606d9a7b246d4435109bad7d9a25986bd76f186d99f04d1b2eb8e0ae4f78e320085b272a05851b457be70ab55d41c65268f6aca7b64ede875a1d
   languageName: node
   linkType: hard
 
