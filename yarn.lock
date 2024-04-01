@@ -1502,9 +1502,9 @@ __metadata:
   linkType: hard
 
 "@catppuccin/palette@npm:^1.1.0":
-  version: 1.1.0
-  resolution: "@catppuccin/palette@npm:1.1.0"
-  checksum: 10c0/6118914ccb513d9ed76be84b7b901da6a9b782194a835c2230fc3c7fc9e651ea776aceed84b91ae8642a6cb1b0f3bb6a70727b6ea453d259e774442ad658e19d
+  version: 1.1.1
+  resolution: "@catppuccin/palette@npm:1.1.1"
+  checksum: 10c0/ed913c512b4f51166c8a9041977a20a47095c76176e3e0cb87083816a7a3bbcc24e681ffcd431638833c55d95598afb909ffcdc5875e6a0df30e7856117284bf
   languageName: node
   linkType: hard
 
