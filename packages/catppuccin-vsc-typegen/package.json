@@ -5,7 +5,7 @@
   "devDependencies": {
     "json-schema-to-typescript": "^13.1.2",
     "tsx": "^4.7.1",
-    "typescript": "<5.4.0"
+    "typescript": "<5.4.6"
   },
   "scripts": {
     "typegen:update": "tsx update.ts"
