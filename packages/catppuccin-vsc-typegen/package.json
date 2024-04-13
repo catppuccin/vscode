@@ -4,8 +4,8 @@
   "private": true,
   "devDependencies": {
     "json-schema-to-typescript": "^13.1.2",
-    "tsx": "^4.7.1",
-    "typescript": "<5.4.0"
+    "tsx": "^4.7.2",
+    "typescript": "^5.4.5"
   },
   "scripts": {
     "typegen:update": "tsx update.ts"

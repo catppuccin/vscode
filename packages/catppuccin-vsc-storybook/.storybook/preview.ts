@@ -1,6 +1,7 @@
-import type { Preview } from "@storybook/react";
+import type { Preview } from "@storybook/web-components";
 import { withThemeByClassName } from "@storybook/addon-themes";
-import "@fontsource-variable/jetbrains-mono";
+import "@fontsource/jetbrains-mono/latin-400.css";
+import "@fontsource/jetbrains-mono/latin-ext-400-italic.css";
 import "./style.css";
 
 const preview: Preview = {

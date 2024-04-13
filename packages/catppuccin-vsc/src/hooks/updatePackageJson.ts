@@ -1,5 +1,5 @@
 import { readFile, writeFile } from "node:fs/promises";
-import { join } from "node:path";
+import path from "node:path";
 
 import { repoRoot } from "./constants";
 
@@ -101,7 +101,7 @@ const configuration = (version: string) => {
 const main = async (options: { buildForADS?: boolean } = {}) => {
   const productName = options.buildForADS ? "Azure Data Studio" : "VSCode";
 
-  return await readFile(join(repoRoot, "package.json"), "utf8")
+  return await readFile(path.join(repoRoot, "package.json"), "utf8")
     .then((data) => JSON.parse(data))
     .then((data) => {
       return {
@@ -116,7 +116,7 @@ const main = async (options: { buildForADS?: boolean } = {}) => {
     })
     .then((data) => {
       writeFile(
-        join(repoRoot, "package.json"),
+        path.join(repoRoot, "package.json"),
         JSON.stringify(data, undefined, 2) + "\n",
         "utf8",
       );

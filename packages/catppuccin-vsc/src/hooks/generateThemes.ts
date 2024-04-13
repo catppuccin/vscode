@@ -4,7 +4,7 @@
  */
 
 import { mkdir, writeFile } from "node:fs/promises";
-import { join } from "node:path";
+import path from "node:path";
 import { flavorEntries } from "@catppuccin/palette";
 
 import { compileTheme, defaultOptions } from "@/theme";
@@ -19,13 +19,13 @@ const optEnvironment = optEnvironmentVariable
   : {};
 
 const main = async () => {
-  await mkdir(join(repoRoot, "themes"), { recursive: true });
+  await mkdir(path.join(repoRoot, "themes"), { recursive: true });
 
   flavors.map((flavor) => {
     const options = { ...defaultOptions, ...optEnvironment };
     const theme = compileTheme(flavor, options);
     writeFile(
-      join(repoRoot, `themes/${flavor}.json`),
+      path.join(repoRoot, `themes/${flavor}.json`),
       JSON.stringify(theme, undefined, 2),
     );
   });

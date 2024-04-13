@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { join } from "node:path";
+import path from "node:path";
 import { writeFileSync } from "node:fs";
 import { compile, JSONSchema } from "json-schema-to-typescript";
 const vscodeSchemasRoot =
@@ -73,7 +73,7 @@ for (const { schema, name, fname, kind } of mappings) {
       }
     })
     .then((typeDefs) =>
-      writeFileSync(join(__dirname, "types", fname), typeDefs, "utf8"),
+      writeFileSync(path.join(__dirname, "types", fname), typeDefs, "utf8"),
     );
 }
 

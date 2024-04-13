@@ -23,7 +23,7 @@ import regex from "./regex";
 import rust from "./rust";
 import shell from "./shell";
 
-export default (context: ThemeContext): TextmateColors => {
+export default function tokens(context: ThemeContext): TextmateColors {
   const { options, palette } = context;
 
   return [
@@ -306,4 +306,4 @@ export default (context: ThemeContext): TextmateColors => {
       shell,
     ].flatMap((element) => element(context)),
   ];
-};
+}

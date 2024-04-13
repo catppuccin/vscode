@@ -32,14 +32,14 @@
     }
   },
   "dependencies": {
-    "@catppuccin/palette": "^1.1.0"
+    "@catppuccin/palette": "^1.1.1"
   },
   "devDependencies": {
-    "@tsconfig/node20": "^20.1.2",
-    "@types/node": "^20.11.25",
+    "@tsconfig/node20": "^20.1.4",
+    "@types/node": "^20.12.7",
     "catppuccin-vsc": "workspace:*",
     "tsup": "^8.0.2",
-    "typescript": "<5.4.0"
+    "typescript": "^5.4.5"
   },
   "scripts": {
     "build": "yarn tsup",
