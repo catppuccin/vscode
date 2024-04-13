@@ -3,7 +3,7 @@ import errorLens from "./error-lens";
 import gitHubPullRequest from "./github-pull-request";
 import gitLens from "./gitlens";
 
-export default function (context: ThemeContext) {
+export default function extensions(context: ThemeContext) {
   return {
     ...errorLens(context),
     ...gitHubPullRequest(context),

@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
 import { writeFile } from "node:fs/promises";
-import { join } from "node:path";
+import path from "node:path";
 import { flavors } from "@catppuccin/palette";
 
 import { repoRoot, vscodeSchemasRoot } from "./constants";
@@ -62,7 +62,7 @@ const main = async () => {
       }
       const schema = customUiColorsSchema(workbenchColors);
       writeFile(
-        join(repoRoot, "schemas/customUIColors.schema.json"),
+        path.join(repoRoot, "schemas/customUIColors.schema.json"),
         JSON.stringify(schema, undefined, 2) + "\n",
         "utf8",
       );
