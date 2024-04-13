@@ -161,3 +161,4 @@ jobs:
     steps:
       - name: Mark VSCode theme release as latest release
         run: gh release edit ${{ needs.release-please.outputs.theme_tag }} --latest
+        if: ${{ needs.release-please.outputs.theme_release == 'true' }}
