@@ -8,7 +8,7 @@ type CodePreviewProperties = {
   lang: string;
 };
 
-const shiki = getHighlighter({
+const highlighter = await getHighlighter({
   themes: [latte, frappe, macchiato, mocha] as unknown[] as ThemeInput[],
   langs: [
     "bash",
@@ -76,8 +76,6 @@ const StoryBuilder = async ({
   const code = await fetch(
     `https://raw.githubusercontent.com/catppuccin/catppuccin/main/samples/${file}`,
   ).then((response) => response.text());
-
-  const highlighter = await shiki;
 
   const codeHtml = highlighter.codeToHtml(code, {
     lang,

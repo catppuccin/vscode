@@ -10,6 +10,10 @@ const config: StorybookConfig = {
   },
   viteFinal: async (config) => {
     return mergeConfig(config, {
+      // allow top level await
+      build: {
+        target: ["es2022", "edge89", "firefox89", "chrome89", "safari15"],
+      },
       // doesn't allow files served from yarn global cache (used for fontsource)
       server: { fs: { strict: false } },
     });
