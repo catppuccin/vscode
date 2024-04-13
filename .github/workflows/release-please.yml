@@ -146,3 +146,18 @@ jobs:
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: npm publish --provenance
+
+  mark-vscode-theme-as-latest:
+    runs-on: ubuntu-latest
+
+    # always run after all other jobs
+    if: ${{ always() }}
+    needs:
+      - release-please
+      - release-vscode
+      - release-pack
+      - release-npm
+
+    steps:
+      - name: Mark VSCode theme release as latest release
+        run: gh release edit ${{ needs.release-please.outputs.theme_tag }} --latest
