@@ -51,17 +51,17 @@
       '';
     };
   };
+  vscodeExtPublisher = "catppuccin";
+  vscodeExtName = name;
+  vscodeExtUniqueId = "${vscodeExtPublisher}.${vscodeExtName}";
 in
   (lib.throwIfNot (accentColor == null) "${pname}: deprecated option 'accentColor' is no longer supported, please use 'accent' instead.")
   (lib.checkListOfEnum "${pname}: accent" validAccents [accent])
   (lib.checkListOfEnum "${pname}: workbenchMode" validWorkbenchModes [workbenchMode])
   (lib.checkListOfEnum "${pname}: bracketMode" validBracketModes [bracketMode])
-  pkgs.vscode-utils.buildVscodeExtension rec {
-    inherit name version;
+  (pkgs.vscode-utils.buildVscodeExtension {
+    inherit name version vscodeExtPublisher vscodeExtName vscodeExtUniqueId;
     src = builder.outPath;
-    vscodeExtPublisher = "catppuccin";
-    vscodeExtName = name;
-    vscodeExtUniqueId = "${vscodeExtPublisher}.${vscodeExtName}";
 
     buildInputs = [pkgs.nodejs];
 
@@ -74,4 +74,5 @@ in
       touch ./themes/.flag
       runHook postBuild
     '';
-  }
+  })
+  .overrideAttrs (_: {sourceRoot = null;})
