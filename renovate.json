@@ -1,6 +1,6 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["config:recommended", "schedule:weekly"],
+  "extends": ["config:best-practices", "schedule:weekly"],
   "ignoreDeps": ["@types/vscode"],
   "ignorePaths": [".yarn/sdks/**"],
   "bumpVersion": "patch",
