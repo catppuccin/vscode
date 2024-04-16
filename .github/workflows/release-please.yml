@@ -35,7 +35,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: google-github-actions/release-please-action@v4
+      - uses: google-github-actions/release-please-action@a37ac6e4f6449ce8b3f7607e4d97d0146028dc0b # v4
         id: release
 
     outputs:
@@ -53,12 +53,12 @@ jobs:
     if: ${{ needs.release-please.outputs.theme_release == 'true' }}
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4
         with:
           ref: ${{ github.event.inputs.rev || github.sha }}
 
       - run: corepack enable
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@60edb5dd545a775178f52524783378180af0d1f8 # v4
         with:
           node-version: 18
           cache: yarn
@@ -99,9 +99,9 @@ jobs:
     if: ${{ needs.release-please.outputs.pack_release == 'true' }}
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4
       - run: corepack enable
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@60edb5dd545a775178f52524783378180af0d1f8 # v4
         with:
           node-version: 18
           cache: yarn
@@ -132,9 +132,9 @@ jobs:
     if: ${{ needs.release-please.outputs.npm_release == 'true' }}
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4
       - run: corepack enable
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@60edb5dd545a775178f52524783378180af0d1f8 # v4
         with:
           node-version: 18
           cache: yarn
