@@ -15,7 +15,7 @@ Simple NPM package containing all compiled themes of [Catppuccin for VSCode](htt
 
 ### Usage
 
-You can use these definitions with libraries like [Shiki](https://github.com/shikijs/shiki) and [Shikiji](https://github.com/antfu/shikiji).
+You can use these definitions with libraries like [Shiki](https://github.com/shikijs/shiki).
 
 ```console
 npm install @catppuccin/vscode
