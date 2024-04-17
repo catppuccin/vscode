@@ -51,7 +51,7 @@ Open the Command Palette and select "Extensions: Install from VSIX...", then ope
 
 **Using the JSON files**
 
-If you need to use the JSON files for libraries like [Shiki](https://www.npmjs.com/package/shiki) or [Shikiji](https://www.npmjs.com/package/shikiji), the theme files are published to NPM as [`@catppuccin/vscode`](https://www.npmjs.com/package/@catppuccin/vscode).
+If you need to use the JSON files for libraries like [Shiki](https://www.npmjs.com/package/shiki), the theme files are published to NPM as [`@catppuccin/vscode`](https://www.npmjs.com/package/@catppuccin/vscode).
 
 **Nix (Home-Manager) users**
 
@@ -119,8 +119,8 @@ The following settings inside your `settings.json` are recommended for this plug
 
   // applicable if you use Go, this is an opt-in flag!
   "gopls": {
-    "ui.semanticTokens": true
-  }
+    "ui.semanticTokens": true,
+  },
 }
 ```
 
@@ -140,15 +140,15 @@ Catppuccin for VSCode can be customized to your liking. If you like the Catppucc
     "mocha": {
       "base": "#000000",
       "mantle": "#010101",
-      "crust": "#020202"
-    }
+      "crust": "#020202",
+    },
   },
   // use your accent (pink) on the statusBar as well
   "catppuccin.customUIColors": {
     "mocha": {
-      "statusBar.foreground": "accent"
-    }
-  }
+      "statusBar.foreground": "accent",
+    },
+  },
 }
 ```
 
@@ -231,15 +231,15 @@ Colors can be overwritten in the JSON user settings, like so:
   "catppuccin.colorOverrides": {
     // make text red red all flavors
     "all": {
-      "text": "#ff0000"
+      "text": "#ff0000",
     },
     // make Mocha "OLEDppuccin" - use black editor background
     "mocha": {
       "base": "#000000",
       "mantle": "#010101",
-      "crust": "#020202"
-    }
-  }
+      "crust": "#020202",
+    },
+  },
 }
 ```
 
@@ -255,7 +255,7 @@ If you want to customize where certain palette colors appear, you can change it 
     // make the breadcrumb "text" on "overlay0" for all flavors
     "all": {
       "breadcrumb.background": "overlay0",
-      "breadcrumb.foreground": "text"
+      "breadcrumb.foreground": "text",
     },
     // but for mocha, use "crust" on your currently selected accent.
     "mocha": {
@@ -264,9 +264,9 @@ If you want to customize where certain palette colors appear, you can change it 
       "breadcrumb.foreground": "crust",
       // you can use opacity, by specifying it after a space
       // "rosewater 0.5" would mean 50% opacity, here it's 20%
-      "minimap.background": "rosewater 0.2"
-    }
-  }
+      "minimap.background": "rosewater 0.2",
+    },
+  },
 }
 ```
 
