@@ -2,8 +2,7 @@
   "bootstrap-sha": "55b3e5d6248eb201c0e16424ce6f345757e94bad",
   "packages": {
     "packages/catppuccin-vsc": {
-      "component": "catppuccin-vsc",
-      "release-as": "3.13.1"
+      "component": "catppuccin-vsc"
     },
     "packages/catppuccin-vsc-pack": {
       "component": "catppuccin-vsc-pack",
@@ -22,8 +21,7 @@
       ]
     },
     "packages/catppuccin-vscode": {
-      "component": "@catppuccin/vscode",
-      "release-as": "3.13.1"
+      "component": "@catppuccin/vscode"
     }
   },
   "plugins": [
