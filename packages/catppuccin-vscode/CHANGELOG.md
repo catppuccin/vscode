@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.14.0](https://github.com/catppuccin/vscode/compare/@catppuccin/vscode-v3.13.0...@catppuccin/vscode-v3.14.0) (2024-04-24)
+
+
+### Miscellaneous Chores
+
+* **@catppuccin/vscode:** Synchronize theme versions
+
 ## [3.13.0](https://github.com/catppuccin/vscode/compare/@catppuccin/vscode-v3.12.0...@catppuccin/vscode-v3.13.0) (2024-03-15)
 
 
