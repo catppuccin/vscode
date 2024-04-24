@@ -89,7 +89,7 @@ jobs:
       - name: Add files to GH Release
         working-directory: ./packages/catppuccin-vsc
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ github.token }}
         run: |
           gh release upload ${{ needs.release-please.outputs.theme_tag }} catppuccin-*.vsix
 
@@ -160,5 +160,7 @@ jobs:
 
     steps:
       - name: Mark VSCode theme release as latest release
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: gh release edit ${{ needs.release-please.outputs.theme_tag }} --latest
         if: ${{ needs.release-please.outputs.theme_release == 'true' }}
