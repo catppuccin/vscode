@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.14.0](https://github.com/catppuccin/vscode/compare/catppuccin-vsc-v3.13.0...catppuccin-vsc-v3.14.0) (2024-04-24)
+
+
+### Features
+
+* **syntax:** add support for markdown in quarto documents ([#376](https://github.com/catppuccin/vscode/issues/376)) ([723a024](https://github.com/catppuccin/vscode/commit/723a02491ee040ab3cd4c76dcc7642eae4022039))
+
 ## [3.13.0](https://github.com/catppuccin/vscode/compare/catppuccin-vsc-v3.12.0...catppuccin-vsc-v3.13.0) (2024-03-15)
 
 
