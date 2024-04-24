@@ -50,19 +50,27 @@ export interface WorkbenchColors {
    */
   "activityBarBadge.foreground"?: string;
   /**
-   * Focus border color for the active item in the Activity bar when it is on top. The activity allows to switch between views of the side bar.
+   * Background color for the active item in the Activity bar when it is on top / bottom. The activity allows to switch between views of the side bar.
+   */
+  "activityBarTop.activeBackground"?: string;
+  /**
+   * Focus border color for the active item in the Activity bar when it is on top / bottom. The activity allows to switch between views of the side bar.
    */
   "activityBarTop.activeBorder"?: string;
   /**
-   * Drag and drop feedback color for the items in the Activity bar when it is on top. The activity allows to switch between views of the side bar.
+   * Background color of the activity bar when set to top / bottom.
+   */
+  "activityBarTop.background"?: string;
+  /**
+   * Drag and drop feedback color for the items in the Activity bar when it is on top / bottom. The activity allows to switch between views of the side bar.
    */
   "activityBarTop.dropBorder"?: string;
   /**
-   * Active foreground color of the item in the Activity bar when it is on top. The activity allows to switch between views of the side bar.
+   * Active foreground color of the item in the Activity bar when it is on top / bottom. The activity allows to switch between views of the side bar.
    */
   "activityBarTop.foreground"?: string;
   /**
-   * Inactive foreground color of the item in the Activity bar when it is on top. The activity allows to switch between views of the side bar.
+   * Inactive foreground color of the item in the Activity bar when it is on top / bottom. The activity allows to switch between views of the side bar.
    */
   "activityBarTop.inactiveForeground"?: string;
   /**
@@ -177,6 +185,10 @@ export interface WorkbenchColors {
    * The foreground color of a chat avatar.
    */
   "chat.avatarForeground"?: string;
+  /**
+   * The background color of a chat request.
+   */
+  "chat.requestBackground"?: string;
   /**
    * The border color of a chat request.
    */
@@ -1037,6 +1049,22 @@ export interface WorkbenchColors {
    * Editor marker navigation widget warning heading background.
    */
   "editorMarkerNavigationWarning.headerBackground"?: string;
+  /**
+   * The background color of the primary editor cursor when multiple cursors are present. Allows customizing the color of a character overlapped by a block cursor.
+   */
+  "editorMultiCursor.primary.background"?: string;
+  /**
+   * Color of the primary editor cursor when multiple cursors are present.
+   */
+  "editorMultiCursor.primary.foreground"?: string;
+  /**
+   * The background color of secondary editor cursors when multiple cursors are present. Allows customizing the color of a character overlapped by a block cursor.
+   */
+  "editorMultiCursor.secondary.background"?: string;
+  /**
+   * Color of secondary editor cursors when multiple cursors are present.
+   */
+  "editorMultiCursor.secondary.foreground"?: string;
   /**
    * Overview ruler marker color for added content.
    */
@@ -2259,6 +2287,10 @@ export interface WorkbenchColors {
    */
   "sideBar.foreground"?: string;
   /**
+   * Border color between the activity bar at the top/bottom and the views.
+   */
+  "sideBarActivityBarTop.border"?: string;
+  /**
    * Side bar section header background color. The side bar is the container for views like explorer and search. Side bar sections are views nested within the side bar.
    */
   "sideBarSectionHeader.background"?: string;
@@ -2583,6 +2615,10 @@ export interface WorkbenchColors {
    */
   "tab.border"?: string;
   /**
+   * Border between tabs to indicate that a tab can be inserted between two tabs. Tabs are the containers for editors in the editor area. Multiple tabs can be opened in one editor group. There can be multiple editor groups.
+   */
+  "tab.dragAndDropBorder"?: string;
+  /**
    * Tab background color when hovering. Tabs are the containers for editors in the editor area. Multiple tabs can be opened in one editor group. There can be multiple editor groups.
    */
   "tab.hoverBackground"?: string;
@@ -2831,25 +2867,49 @@ export interface WorkbenchColors {
    */
   "testing.iconErrored"?: string;
   /**
+   * Retired color for the 'Errored' icon in the test explorer.
+   */
+  "testing.iconErrored.retired"?: string;
+  /**
    * Color for the 'failed' icon in the test explorer.
    */
   "testing.iconFailed"?: string;
+  /**
+   * Retired color for the 'failed' icon in the test explorer.
+   */
+  "testing.iconFailed.retired"?: string;
   /**
    * Color for the 'passed' icon in the test explorer.
    */
   "testing.iconPassed"?: string;
   /**
+   * Retired color for the 'passed' icon in the test explorer.
+   */
+  "testing.iconPassed.retired"?: string;
+  /**
    * Color for the 'Queued' icon in the test explorer.
    */
   "testing.iconQueued"?: string;
+  /**
+   * Retired color for the 'Queued' icon in the test explorer.
+   */
+  "testing.iconQueued.retired"?: string;
   /**
    * Color for the 'Skipped' icon in the test explorer.
    */
   "testing.iconSkipped"?: string;
   /**
+   * Retired color for the 'Skipped' icon in the test explorer.
+   */
+  "testing.iconSkipped.retired"?: string;
+  /**
    * Color for the 'Unset' icon in the test explorer.
    */
   "testing.iconUnset"?: string;
+  /**
+   * Retired color for the 'Unset' icon in the test explorer.
+   */
+  "testing.iconUnset.retired"?: string;
   /**
    * Text color of test error messages shown inline in the editor.
    */
