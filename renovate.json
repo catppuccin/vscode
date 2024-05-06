@@ -3,11 +3,13 @@
   "extends": [
     "config:best-practices",
     "schedule:weekly",
+    "schedule:automergeWeekly",
+    ":automergeMinor",
     ":preserveSemverRanges"
   ],
+  "postUpdateOptions": ["yarnDedupeHighest"],
   "ignoreDeps": ["@types/vscode"],
   "ignorePaths": [".yarn/sdks/**"],
-  "bumpVersion": "patch",
   "nix": {
     "enabled": true
   }
