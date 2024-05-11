@@ -14,7 +14,7 @@ jobs:
         with:
           node-version: 18
           cache: yarn
-      - run: yarn install --immutable --inline-builds
+      - run: yarn install --immutable
 
       - name: Lint
         run: yarn lint

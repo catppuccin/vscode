@@ -1,0 +1,30 @@
+name: renovate-post
+
+on:
+  push:
+    paths: "**.lock"
+    branches:
+      - "renovate/*"
+
+jobs:
+  update_nix_hash:
+    name: Update Nix hash
+    runs-on: ubuntu-latest
+    if: "${{github.actor == 'renovate[bot]'}}"
+
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@0ad4b8fadaa221de15dcec353f45205ec38ea70b # v4
+      - run: corepack enable
+      - uses: actions/setup-node@60edb5dd545a775178f52524783378180af0d1f8 # v4
+        with:
+          node-version: 18
+          cache: yarn
+      - run: yarn install --immutable
+      - uses: EndBug/add-and-commit@v9.1.4
+        with:
+          author_email: "<29139614+renovate[bot]@users.noreply.github.com>"
+          author_name: "renovate[bot]"
+          message: "chore(deps): update nix hash"
