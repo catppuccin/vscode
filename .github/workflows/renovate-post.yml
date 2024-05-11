@@ -25,7 +25,7 @@ jobs:
           node-version: 18
           cache: yarn
       - run: yarn install --immutable
-      - uses: EndBug/add-and-commit@v9.1.4
+      - uses: EndBug/add-and-commit@a94899bca583c204427a224a7af87c02f9b325d5 # v9.1.4
         with:
           author_email: "<29139614+renovate[bot]@users.noreply.github.com>"
           author_name: "renovate[bot]"
