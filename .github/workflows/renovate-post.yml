@@ -2,7 +2,9 @@ name: renovate-post
 
 on:
   push:
-    paths: "**.lock"
+    paths:
+      - "**/package.json"
+      - "**.lock"
     branches:
       - "renovate/*"
 
