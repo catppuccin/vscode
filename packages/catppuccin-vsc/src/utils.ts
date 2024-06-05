@@ -1,23 +1,24 @@
 import { flavorEntries } from "@catppuccin/palette";
-import { compileTheme, defaultOptions } from "./theme";
 import {
-  commands,
-  workspace,
-  window,
-  Uri,
-  FilePermission,
-  ExtensionContext,
-  extensions,
+  ColorThemeKind,
   ConfigurationTarget,
+  ExtensionContext,
+  FilePermission,
+  Uri,
+  commands,
+  extensions,
+  window,
+  workspace,
 } from "vscode";
+import { compileTheme, defaultOptions } from "./theme";
 import type {
   CatppuccinAccent,
+  CatppuccinBracketMode,
+  CatppuccinWorkbenchMode,
   ColorOverrides,
   CustomUIColors,
   ThemeOptions,
   ThemePaths,
-  CatppuccinWorkbenchMode,
-  CatppuccinBracketMode,
 } from "./types";
 
 // the reason why an update has been triggered, and a reload is needed
@@ -144,6 +145,31 @@ export const updateThemes = async (
     });
 };
 
+const getActiveTheme = (): string => {
+  // if `window.autoDetectColorScheme` is enabled, we have to check the active color theme "kind"
+  // and then use that to look up one of the `workbench.preferred*ColorTheme` settings.
+  // if not, we can use the theme specified by `workbench.colorTheme`.
+  //
+  // this really feels like a function that should be in the API, but I couldn't find it.
+  const workbench = workspace.getConfiguration("workbench");
+  const autoDetectColorScheme = workspace
+    .getConfiguration("window")
+    .get<boolean>("autoDetectColorScheme");
+
+  if (autoDetectColorScheme) {
+    const prefs = {
+      [ColorThemeKind.Light]: "preferredLightColorTheme",
+      [ColorThemeKind.Dark]: "preferredDarkColorTheme",
+      [ColorThemeKind.HighContrastLight]:
+        "preferredHighContrastLightColorTheme",
+      [ColorThemeKind.HighContrast]: "preferredHighContrastColorTheme",
+    };
+    return workbench.get<string>(prefs[window.activeColorTheme.kind]) ?? "";
+  } else {
+    return workbench.get<string>("colorTheme") ?? "";
+  }
+};
+
 export const syncToIconPack = () => {
   const id = "catppuccin.catppuccin-vsc-icons";
   // bail if the icon pack isn't installed
@@ -158,8 +184,7 @@ export const syncToIconPack = () => {
   };
 
   // check if the current editor theme is a Catppuccin theme
-  const uiTheme =
-    workspace.getConfiguration("workbench").get<string>("colorTheme") ?? "";
+  const uiTheme = getActiveTheme();
   const ctpThemeActive = Object.keys(uiThemesToIconThemes).includes(uiTheme);
 
   // and only sync to a Catppuccin icon flavor if the user's currently using Catppuccin for icons

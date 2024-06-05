@@ -1,6 +1,6 @@
-import { ExtensionContext, Uri, workspace } from "vscode";
-import * as utils from "./utils";
+import { ExtensionContext, Uri, window, workspace } from "vscode";
 import type { ThemePaths } from "./types";
+import * as utils from "./utils";
 
 export const activate = async (context: ExtensionContext) => {
   const base = context.extensionUri;
@@ -28,11 +28,11 @@ export const activate = async (context: ExtensionContext) => {
           utils.UpdateTrigger.CONFIG_CHANGE,
         );
       }
-      // call the icon pack sync when the theme changes
-      if (
-        event.affectsConfiguration("workbench.colorTheme") &&
-        config.syncWithIconPack
-      ) {
+    }),
+
+    // call the icon pack sync when the theme changes
+    window.onDidChangeActiveColorTheme(() => {
+      if (config.syncWithIconPack) {
         utils.syncToIconPack();
       }
     }),
