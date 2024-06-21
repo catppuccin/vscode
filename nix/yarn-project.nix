@@ -7,8 +7,8 @@
 let
 
   yarnBin = fetchurl {
-    url = "https://repo.yarnpkg.com/4.2.2/packages/yarnpkg-cli/bin/yarn.js";
-    hash = "sha512-xE4oPFTgLenR2oaHAlsDAHjBuWSNKJWmWquOZCJb+3vsuofhgJ/AtLZ3i71HoeKrasZH3kxeODpTp8F9tsP/Sw==";
+    url = "https://repo.yarnpkg.com/4.3.1/packages/yarnpkg-cli/bin/yarn.js";
+    hash = "sha512-r3gmLX0SWvv+7XQGAqzoxeRAXNf0c1wI/rMnKGsv2yOQ+8oBWJv9H1CxJAVIt0gGdn9aBjyUtn5DGqvQ2G93dA==";
   };
 
   cacheFolder = ".yarn/cache";
