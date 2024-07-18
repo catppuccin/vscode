@@ -1,5 +1,17 @@
 # Changelog
 
+## [3.15.0](https://github.com/catppuccin/vscode/compare/catppuccin-vsc-v3.14.0...catppuccin-vsc-v3.15.0) (2024-07-06)
+
+
+### Features
+
+* support `autoDetectColorScheme` in icon sync ([#399](https://github.com/catppuccin/vscode/issues/399)) ([08de0d9](https://github.com/catppuccin/vscode/commit/08de0d9d44de6693d1379e40a48be797a4fb4715))
+
+
+### Bug Fixes
+
+* diff buttons color to have better contrast ([#406](https://github.com/catppuccin/vscode/issues/406)) ([c936d41](https://github.com/catppuccin/vscode/commit/c936d416a653153d6fb761ee62e160ad252bd8b9))
+
 ## [3.14.0](https://github.com/catppuccin/vscode/compare/catppuccin-vsc-v3.13.0...catppuccin-vsc-v3.14.0) (2024-04-24)
 
 
