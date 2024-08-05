@@ -1645,7 +1645,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@catppuccin/vsc-typegen@workspace:packages/catppuccin-vsc-typegen"
   dependencies:
-    json-schema-to-typescript: "npm:^14.0.0"
+    json-schema-to-typescript: "npm:^15.0.0"
     tsx: "npm:^4.7.2"
     typescript: "npm:^5.4.5"
   languageName: unknown
@@ -4426,15 +4426,6 @@ __metadata:
   version: 2.4.1
   resolution: "@types/normalize-package-data@npm:2.4.1"
   checksum: 10c0/c90b163741f27a1a4c3b1869d7d5c272adbd355eb50d5f060f9ce122ce4342cf35f5b0005f55ef780596cacfeb69b7eee54cd3c2e02d37f75e664945b6e75fc6
-  languageName: node
-  linkType: hard
-
-"@types/prettier@npm:^3.0.0":
-  version: 3.0.0
-  resolution: "@types/prettier@npm:3.0.0"
-  dependencies:
-    prettier: "npm:*"
-  checksum: 10c0/edab8c0c0e56936e89c919cac17e384a9f231ce12062fb3beeb45bc45e7dcc4035dd3d7df3333b0bdd39f3b4501f22267a9dba45e22b9728c139857142e90282
   languageName: node
   linkType: hard
 
@@ -8342,14 +8333,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"json-schema-to-typescript@npm:^14.0.0":
-  version: 14.0.0
-  resolution: "json-schema-to-typescript@npm:14.0.0"
+"json-schema-to-typescript@npm:^15.0.0":
+  version: 15.0.0
+  resolution: "json-schema-to-typescript@npm:15.0.0"
   dependencies:
     "@apidevtools/json-schema-ref-parser": "npm:^11.5.5"
     "@types/json-schema": "npm:^7.0.15"
     "@types/lodash": "npm:^4.17.0"
-    "@types/prettier": "npm:^3.0.0"
     cli-color: "npm:^2.0.4"
     glob: "npm:^10.3.12"
     is-glob: "npm:^4.0.3"
@@ -8357,12 +8347,11 @@ __metadata:
     lodash: "npm:^4.17.21"
     minimist: "npm:^1.2.8"
     mkdirp: "npm:^3.0.1"
-    mz: "npm:^2.7.0"
     node-fetch: "npm:^3.3.2"
     prettier: "npm:^3.2.5"
   bin:
     json2ts: dist/src/cli.js
-  checksum: 10c0/49d65d8c07d5a24e029f57402ba61894b8e6b57778edfa7490ef36ae71e1bc1aa7dba9b55c5f3e2cd6f9349b2e01e88e98492e9f20ed85b6fac16310914ef789
+  checksum: 10c0/1f00ea84fd3802bb2f841fb6c66a9b0aaadb2f484f1f6934988d5579470648e92482a9685f86d8bd804d11b15b504158a0a85dc58756284ba8b3d4e8b41592f6
   languageName: node
   linkType: hard
 
@@ -9998,21 +9987,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prettier@npm:*, prettier@npm:^3.1.1, prettier@npm:^3.2.5":
-  version: 3.2.5
-  resolution: "prettier@npm:3.2.5"
-  bin:
-    prettier: bin/prettier.cjs
-  checksum: 10c0/ea327f37a7d46f2324a34ad35292af2ad4c4c3c3355da07313339d7e554320f66f65f91e856add8530157a733c6c4a897dc41b577056be5c24c40f739f5ee8c6
-  languageName: node
-  linkType: hard
-
 "prettier@npm:^2.8.0":
   version: 2.8.8
   resolution: "prettier@npm:2.8.8"
   bin:
     prettier: bin-prettier.js
   checksum: 10c0/463ea8f9a0946cd5b828d8cf27bd8b567345cf02f56562d5ecde198b91f47a76b7ac9eae0facd247ace70e927143af6135e8cf411986b8cb8478784a4d6d724a
+  languageName: node
+  linkType: hard
+
+"prettier@npm:^3.1.1, prettier@npm:^3.2.5":
+  version: 3.2.5
+  resolution: "prettier@npm:3.2.5"
+  bin:
+    prettier: bin/prettier.cjs
+  checksum: 10c0/ea327f37a7d46f2324a34ad35292af2ad4c4c3c3355da07313339d7e554320f66f65f91e856add8530157a733c6c4a897dc41b577056be5c24c40f739f5ee8c6
   languageName: node
   linkType: hard
 
