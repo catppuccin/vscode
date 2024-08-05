@@ -26,7 +26,7 @@ jobs:
       - run: yarn install --immutable
 
       - name: Publish to Chromatic
-        uses: chromaui/action@a7f65ed179bcbe19fd793367d699f43e0f0540a7 # v11
+        uses: chromaui/action@fdbe7756d4dbf493e2fbb822df73be7accd07e1c # v11
         with:
           buildScriptName: storybook:build
           exitOnceUploaded: true
