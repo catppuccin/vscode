@@ -36,24 +36,24 @@
 
 ## Usage
 
-**Preferred method of installation**
+### Preferred method of installation
 
 Install the extension from a Marketplace:
 
 - [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=Catppuccin.catppuccin-vsc)
 - [Open-VSX](https://open-vsx.org/extension/Catppuccin/catppuccin-vsc)
 
-**Manual method for installation**
+### Manual method for installation
 
 Download the VSIX from
 [the latest GitHub release](https://github.com/catppuccin/vscode/releases/latest).
 Open the Command Palette and select "Extensions: Install from VSIX...", then open the file you just downloaded.
 
-**Using the JSON files**
+### Using the JSON files
 
 If you need to use the JSON files for libraries like [Shiki](https://www.npmjs.com/package/shiki), the theme files are published to NPM as [`@catppuccin/vscode`](https://www.npmjs.com/package/@catppuccin/vscode).
 
-**Nix (Home-Manager) users**
+### Nix (Home-Manager) users
 
 [![FlakeHub](https://img.shields.io/endpoint?url=https://flakehub.com/f/catppuccin/vscode/badge)](https://flakehub.com/flake/catppuccin/vscode)
 
@@ -298,7 +298,7 @@ If you have any questions regarding this port, feel free to [open an issue](http
 
 **Current maintainers**
 
-- [winston](https://github.com/nekowinston)
+- [backwardspy](https://github.com/backwardspy)
 
 **Contributions**
 
@@ -309,6 +309,7 @@ If you have any questions regarding this port, feel free to [open an issue](http
 
 - [ghostx31](https://github.com/ghostx31)
 - [VictorTennekes](https://github.com/VictorTennekes)
+- [winston](https://github.com/nekowinston)
 
 &nbsp;
 
