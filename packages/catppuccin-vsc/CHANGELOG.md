@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.15.1](https://github.com/catppuccin/vscode/compare/catppuccin-vsc-v3.15.0...catppuccin-vsc-v3.15.1) (2024-08-06)
+
+
+### Bug Fixes
+
+* switch to `esm.sh` for schemas ([#420](https://github.com/catppuccin/vscode/issues/420)) ([58771ad](https://github.com/catppuccin/vscode/commit/58771ad653cc5a987e9334932833b997d3115831))
+
 ## [3.15.0](https://github.com/catppuccin/vscode/compare/catppuccin-vsc-v3.14.0...catppuccin-vsc-v3.15.0) (2024-07-06)
 
 
