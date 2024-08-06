@@ -159,6 +159,8 @@ jobs:
       - release-npm
 
     steps:
+      - uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332 # v4
+        if: ${{ needs.release-please.outputs.theme_release == 'true' }}
       - name: Mark VSCode theme release as latest release
         env:
           GH_TOKEN: ${{ github.token }}
