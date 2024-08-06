@@ -44,14 +44,14 @@ const configuration = (version: string) => {
         default: {},
         markdownDescription:
           "Custom color overrides. Assign your own hex codes to palette colors. See [the docs](https://github.com/catppuccin/vscode#override-palette-colors) for reference.",
-        $ref: `https://cdn.jsdelivr.net/gh/catppuccin/vscode@catppuccin-vsc-v${version}/packages/catppuccin-vsc/schemas/colorOverrides.schema.json`,
+        $ref: `https://esm.sh/gh/catppuccin/vscode@catppuccin-vsc-v${version}/packages/catppuccin-vsc/schemas/colorOverrides.schema.json`,
       },
       "catppuccin.customUIColors": {
         type: "object",
         default: {},
         markdownDescription:
           "Customize UI colors. Map `workbench.colorCustomizations` to palette colors. See [the docs](https://github.com/catppuccin/vscode#use-palette-colors-on-workbench-elements-ui) for reference.",
-        $ref: `https://cdn.jsdelivr.net/gh/catppuccin/vscode@catppuccin-vsc-v${version}/packages/catppuccin-vsc/schemas/customUIColors.schema.json`,
+        $ref: `https://esm.sh/gh/catppuccin/vscode@catppuccin-vsc-v${version}/packages/catppuccin-vsc/schemas/customUIColors.schema.json`,
       },
       "catppuccin.accentColor": {
         type: "string",
