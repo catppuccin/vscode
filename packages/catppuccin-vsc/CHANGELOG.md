@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.15.2](https://github.com/catppuccin/vscode/compare/catppuccin-vsc-v3.15.1...catppuccin-vsc-v3.15.2) (2024-08-24)
+
+
+### Bug Fixes
+
+* desync between icon pack and color theme ([#431](https://github.com/catppuccin/vscode/issues/431)) ([88ea69d](https://github.com/catppuccin/vscode/commit/88ea69daf599a08d8e5482b0d001fa243df6d423))
+
 ## [3.15.1](https://github.com/catppuccin/vscode/compare/catppuccin-vsc-v3.15.0...catppuccin-vsc-v3.15.1) (2024-08-06)
 
 
