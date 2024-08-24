@@ -28,6 +28,13 @@ export const activate = async (context: ExtensionContext) => {
           utils.UpdateTrigger.CONFIG_CHANGE,
         );
       }
+      // call the icon pack sync when the config changes
+      if (
+        event.affectsConfiguration("workbench.colorTheme") &&
+        config.syncWithIconPack
+      ) {
+        utils.syncToIconPack();
+      }
     }),
 
     // call the icon pack sync when the theme changes
