@@ -51,7 +51,7 @@ export default function tokens(context: ThemeContext): TextmateColors {
       name: "Comments",
       scope: ["comment", "punctuation.definition.comment"],
       settings: {
-        foreground: palette.overlay0,
+        foreground: palette.overlay2,
         fontStyle: options.italicComments ? "italic" : "",
       },
     },
@@ -107,7 +107,7 @@ export default function tokens(context: ThemeContext): TextmateColors {
       },
     },
     {
-      name: "Punctuation",
+      name: "Operators",
       scope: [
         "keyword.operator",
         "punctuation.accessor",
@@ -117,7 +117,7 @@ export default function tokens(context: ThemeContext): TextmateColors {
         "punctuation.separator.key-value",
       ],
       settings: {
-        foreground: palette.teal,
+        foreground: palette.sky,
       },
     },
     {
