@@ -174,7 +174,7 @@
     "@types/node": "^20.12.7",
     "@types/tinycolor2": "^1.4.6",
     "@types/vscode": "~1.80.0",
-    "@vscode/vsce": "^2.26.0",
+    "@vscode/vsce": "^3.0.0",
     "tinycolor2": "^1.6.0",
     "tsup": "^8.0.2",
     "tsx": "^4.7.2",
