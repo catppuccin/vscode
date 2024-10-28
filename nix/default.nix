@@ -46,7 +46,7 @@
         runHook preInstall
         mkdir -p $out
         cd packages/catppuccin-vsc
-        cp -rL LICENSE README.md package.json dist/ themes/ $out/
+        cp -rL LICENSE README.md package.json icon.png dist/ themes/ $out/
         runHook postInstall
       '';
     };
