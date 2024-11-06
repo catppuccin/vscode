@@ -1,6 +1,7 @@
 import { flavors } from "@catppuccin/palette";
 
 import type {
+  CatppuccinPaletteAnsi,
   CatppuccinFlavor,
   CatppuccinPalette,
   ThemeContext,
@@ -29,8 +30,16 @@ export const compileTheme = (
 ) => {
   const flavorData = flavors[flavor];
   const ctpPalette = {} as CatppuccinPalette;
+  const paletteAnsi = {
+    normal: {},
+    bright: {},
+  } as CatppuccinPaletteAnsi;
   for (const [k, v] of flavorData.colorEntries) {
     ctpPalette[k] = v.hex;
+  }
+  for (const [k, v] of flavorData.ansiColorEntries) {
+    paletteAnsi.normal[k] = v.normal.hex;
+    paletteAnsi.bright[k] = v.bright.hex;
   }
 
   const palette: CatppuccinPalette = {
@@ -42,6 +51,7 @@ export const compileTheme = (
   const context: ThemeContext = {
     flavor,
     palette,
+    paletteAnsi,
     options,
     isLatte: flavor === "latte",
   };

@@ -32,7 +32,7 @@
     }
   },
   "dependencies": {
-    "@catppuccin/palette": "^1.1.1"
+    "@catppuccin/palette": "^1.7.1"
   },
   "devDependencies": {
     "@tsconfig/node20": "^20.1.4",
