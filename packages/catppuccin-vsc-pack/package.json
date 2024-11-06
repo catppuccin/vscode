@@ -23,7 +23,7 @@
     "Catppuccin.catppuccin-vsc-icons"
   ],
   "devDependencies": {
-    "@vscode/vsce": "^2.26.0"
+    "@vscode/vsce": "^3.0.0"
   },
   "scripts": {
     "pack:build": "vsce package --no-dependencies --out catppuccin-vsc-pack.vsix"
