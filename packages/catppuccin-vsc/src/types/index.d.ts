@@ -1,4 +1,9 @@
-import type { AccentName, Colors, FlavorName } from "@catppuccin/palette";
+import type {
+  AccentName,
+  Colors,
+  AnsiColors,
+  FlavorName,
+} from "@catppuccin/palette";
 
 import type { Uri } from "vscode";
 
@@ -23,6 +28,10 @@ export type CatppuccinBracketMode =
   | "neovim";
 
 export type CatppuccinPalette = Colors<string>;
+export type CatppuccinPaletteAnsi = {
+  normal: AnsiColors<string>;
+  bright: AnsiColors<string>;
+};
 
 type FlavorsPlusAll<T> = { all: T } & { [k in CatppuccinFlavor]: T };
 
@@ -78,6 +87,7 @@ export type ThemePaths = {
 export type ThemeContext = {
   flavor: CatppuccinFlavor;
   palette: CatppuccinPalette;
+  paletteAnsi: CatppuccinPaletteAnsi;
   options: ThemeOptions;
   isLatte: boolean;
 };

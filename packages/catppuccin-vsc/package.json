@@ -74,13 +74,13 @@
           "type": "object",
           "default": {},
           "markdownDescription": "Custom color overrides. Assign your own hex codes to palette colors. See [the docs](https://github.com/catppuccin/vscode#override-palette-colors) for reference.",
-          "$ref": "https://esm.sh/gh/catppuccin/vscode@catppuccin-vsc-v3.15.0/packages/catppuccin-vsc/schemas/colorOverrides.schema.json"
+          "$ref": "https://esm.sh/gh/catppuccin/vscode@catppuccin-vsc-v3.15.2/packages/catppuccin-vsc/schemas/colorOverrides.schema.json"
         },
         "catppuccin.customUIColors": {
           "type": "object",
           "default": {},
           "markdownDescription": "Customize UI colors. Map `workbench.colorCustomizations` to palette colors. See [the docs](https://github.com/catppuccin/vscode#use-palette-colors-on-workbench-elements-ui) for reference.",
-          "$ref": "https://esm.sh/gh/catppuccin/vscode@catppuccin-vsc-v3.15.0/packages/catppuccin-vsc/schemas/customUIColors.schema.json"
+          "$ref": "https://esm.sh/gh/catppuccin/vscode@catppuccin-vsc-v3.15.2/packages/catppuccin-vsc/schemas/customUIColors.schema.json"
         },
         "catppuccin.accentColor": {
           "type": "string",
@@ -168,13 +168,13 @@
   },
   "devDependencies": {
     "@actions/core": "^1.10.1",
-    "@catppuccin/palette": "^1.1.1",
+    "@catppuccin/palette": "^1.7.1",
     "@catppuccin/vsc-typegen": "workspace:*",
     "@tsconfig/node18": "^18.2.4",
     "@types/node": "^20.12.7",
     "@types/tinycolor2": "^1.4.6",
     "@types/vscode": "~1.80.0",
-    "@vscode/vsce": "^2.26.0",
+    "@vscode/vsce": "^3.0.0",
     "tinycolor2": "^1.6.0",
     "tsup": "^8.0.2",
     "tsx": "^4.7.2",

@@ -6,7 +6,7 @@ import uiCustomizations from "./ui";
 export const getUiColors = (
   context: ThemeContext,
 ): Partial<Record<keyof WorkbenchColors, string>> => {
-  const { palette, options, isLatte } = context;
+  const { palette, paletteAnsi, options, isLatte } = context;
 
   const accent = palette[options.accent];
   const dropBackground = opacity(accent, 0.2);
@@ -437,22 +437,22 @@ export const getUiColors = (
 
     // Terminal
     "terminal.foreground": palette.text,
-    "terminal.ansiBlack": isLatte ? palette.surface1 : palette.subtext0, // color0
-    "terminal.ansiRed": palette.red, // color1
-    "terminal.ansiGreen": palette.green, // color2
-    "terminal.ansiYellow": palette.yellow, // color3
-    "terminal.ansiBlue": palette.blue, // color4
-    "terminal.ansiMagenta": palette.pink, // color5
-    "terminal.ansiCyan": palette.sky, // color6
-    "terminal.ansiWhite": isLatte ? palette.surface2 : palette.subtext1, // color7
-    "terminal.ansiBrightBlack": isLatte ? palette.subtext0 : palette.surface2, // color8
-    "terminal.ansiBrightRed": palette.red, // color9
-    "terminal.ansiBrightGreen": palette.green, // color10
-    "terminal.ansiBrightYellow": palette.yellow, // color11
-    "terminal.ansiBrightBlue": palette.blue, // color12
-    "terminal.ansiBrightMagenta": palette.pink, // color13
-    "terminal.ansiBrightCyan": palette.sky, // color14
-    "terminal.ansiBrightWhite": isLatte ? palette.subtext1 : palette.surface1, // color15
+    "terminal.ansiBlack": paletteAnsi.normal.black, // color0
+    "terminal.ansiRed": paletteAnsi.normal.red, // color1
+    "terminal.ansiGreen": paletteAnsi.normal.green, // color2
+    "terminal.ansiYellow": paletteAnsi.normal.yellow, // color3
+    "terminal.ansiBlue": paletteAnsi.normal.blue, // color4
+    "terminal.ansiMagenta": paletteAnsi.normal.magenta, // color5
+    "terminal.ansiCyan": paletteAnsi.normal.cyan, // color6
+    "terminal.ansiWhite": paletteAnsi.normal.white, // color7
+    "terminal.ansiBrightBlack": paletteAnsi.bright.black, // color8
+    "terminal.ansiBrightRed": paletteAnsi.bright.red, // color9
+    "terminal.ansiBrightGreen": paletteAnsi.bright.green, // color10
+    "terminal.ansiBrightYellow": paletteAnsi.bright.yellow, // color11
+    "terminal.ansiBrightBlue": paletteAnsi.bright.blue, // color12
+    "terminal.ansiBrightMagenta": paletteAnsi.bright.magenta, // color13
+    "terminal.ansiBrightCyan": paletteAnsi.bright.cyan, // color14
+    "terminal.ansiBrightWhite": paletteAnsi.bright.white, // color15
     "terminal.selectionBackground": palette.surface2,
     "terminal.inactiveSelectionBackground": opacity(palette.surface2, 0.5),
     "terminalCursor.background": palette.base,
