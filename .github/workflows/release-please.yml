@@ -53,7 +53,7 @@ jobs:
     if: ${{ needs.release-please.outputs.theme_release == 'true' }}
 
     steps:
-      - uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332 # v4
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
         with:
           ref: ${{ github.event.inputs.rev || github.sha }}
 
@@ -99,7 +99,7 @@ jobs:
     if: ${{ needs.release-please.outputs.pack_release == 'true' }}
 
     steps:
-      - uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332 # v4
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
       - run: corepack enable
       - uses: actions/setup-node@1e60f620b9541d16bece96c5465dc8ee9832be0b # v4
         with:
@@ -132,7 +132,7 @@ jobs:
     if: ${{ needs.release-please.outputs.npm_release == 'true' }}
 
     steps:
-      - uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332 # v4
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
       - run: corepack enable
       - uses: actions/setup-node@1e60f620b9541d16bece96c5465dc8ee9832be0b # v4
         with:
@@ -159,7 +159,7 @@ jobs:
       - release-npm
 
     steps:
-      - uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332 # v4
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
         if: ${{ needs.release-please.outputs.theme_release == 'true' }}
       - name: Mark VSCode theme release as latest release
         env:
