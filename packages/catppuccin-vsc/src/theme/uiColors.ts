@@ -152,6 +152,10 @@ export const getUiColors = (
     "editor.selectionHighlightBackground": opacity(palette.overlay2, 0.2),
     "editor.selectionHighlightBorder": opacity(palette.overlay2, 0.2),
     "editor.wordHighlightBackground": opacity(palette.overlay2, 0.2),
+    "editor.wordHighlightStrongBackground": opacity(
+      palette.blue,
+      isLatte ? 0.15 : 0.2,
+    ),
 
     "editorBracketMatch.background": opacity(palette.overlay2, 0.1),
     "editorBracketMatch.border": palette.overlay2,
