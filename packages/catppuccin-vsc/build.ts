@@ -26,7 +26,7 @@ const packagePath = `catppuccin-${shortName}-${packageJson.version}.vsix`;
 
 await createVSIX({ dependencies: false, packagePath });
 
-// restore the original package.json when building for ADS
+// restore the original package.json after building ADS
 if (buildForADS) await updatePackageJson();
 // the upload step in the CI required the path to the vsix file
 if (process.env.GITHUB_ACTIONS) setOutput("vsixPath", packagePath);
