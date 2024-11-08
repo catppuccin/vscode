@@ -22,7 +22,7 @@ jobs:
       - run: corepack enable
       - uses: actions/setup-node@39370e3970a6d050c480ffad4ff0ed4d3fdee5af # v4
         with:
-          node-version: 18
+          node-version: 20
           cache: yarn
       - run: yarn install --immutable
       - uses: EndBug/add-and-commit@a94899bca583c204427a224a7af87c02f9b325d5 # v9.1.4
