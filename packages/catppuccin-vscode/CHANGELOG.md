@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.16.0](https://github.com/catppuccin/vscode/compare/@catppuccin/vscode-v3.15.2...@catppuccin/vscode-v3.16.0) (2024-11-08)
+
+
+### Features
+
+* apply new ANSI terminal colours ([#446](https://github.com/catppuccin/vscode/issues/446)) ([034def5](https://github.com/catppuccin/vscode/commit/034def5822b59d35b14095511260c3b161aee947))
+
 ## [3.15.2](https://github.com/catppuccin/vscode/compare/@catppuccin/vscode-v3.15.1...@catppuccin/vscode-v3.15.2) (2024-08-24)
 
 
