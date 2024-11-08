@@ -14,6 +14,7 @@ import java from "./java";
 import javascript from "./javascript";
 import julia from "./julia";
 import latex from "./latex";
+import liquid from "./liquid";
 import lua from "./lua";
 import markdown from "./markdown";
 import nix from "./nix";
@@ -296,6 +297,7 @@ export default function tokens(context: ThemeContext): TextmateColors {
       javascript,
       julia,
       latex,
+      liquid,
       lua,
       markdown,
       nix,

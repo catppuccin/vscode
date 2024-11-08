@@ -28,6 +28,7 @@ const highlighter = await getHighlighter({
     "json",
     "jsx",
     "kotlin",
+    "liquid",
     "lua",
     "markdown",
     "nix",
@@ -131,6 +132,10 @@ export const JavaScript = await StoryBuilder({
 export const Json = await StoryBuilder({ lang: "json", file: "json.json" });
 export const JSX = await StoryBuilder({ lang: "jsx", file: "jsx.jsx" });
 export const Kotlin = await StoryBuilder({ lang: "kotlin", file: "kotlin.kt" });
+export const Liquid = await StoryBuilder({
+  lang: "liquid",
+  file: "liquid.liquid",
+});
 export const Lua = await StoryBuilder({ lang: "lua", file: "lua.lua" });
 export const Markdown = await StoryBuilder({
   lang: "markdown",
