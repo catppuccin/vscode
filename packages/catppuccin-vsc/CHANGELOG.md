@@ -1,5 +1,18 @@
 # Changelog
 
+## [3.16.0](https://github.com/catppuccin/vscode/compare/catppuccin-vsc-v3.15.2...catppuccin-vsc-v3.16.0) (2024-11-08)
+
+
+### Features
+
+* apply new ANSI terminal colours ([#446](https://github.com/catppuccin/vscode/issues/446)) ([034def5](https://github.com/catppuccin/vscode/commit/034def5822b59d35b14095511260c3b161aee947))
+* highlight liquid objects/variables as `pink` ([#449](https://github.com/catppuccin/vscode/issues/449)) ([4c0e083](https://github.com/catppuccin/vscode/commit/4c0e0838ec57fd3bdfb675362f916ccb7e993d04))
+
+
+### Bug Fixes
+
+* set `editor.wordHighlightStrongBackground` ([#448](https://github.com/catppuccin/vscode/issues/448)) ([36d1973](https://github.com/catppuccin/vscode/commit/36d1973e4648896a7f72221f582847db6acaff00))
+
 ## [3.15.2](https://github.com/catppuccin/vscode/compare/catppuccin-vsc-v3.15.1...catppuccin-vsc-v3.15.2) (2024-08-24)
 
 
