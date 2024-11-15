@@ -107,7 +107,7 @@ export default function tokens(context: ThemeContext): TextmateColors {
       },
     },
     {
-      name: "Operators",
+      name: "Punctuation",
       scope: [
         "keyword.operator",
         "punctuation.accessor",
@@ -117,7 +117,7 @@ export default function tokens(context: ThemeContext): TextmateColors {
         "punctuation.separator.key-value",
       ],
       settings: {
-        foreground: palette.sky,
+        foreground: palette.teal,
       },
     },
     {
