@@ -52,7 +52,7 @@ export default function tokens(context: ThemeContext): TextmateColors {
       name: "Comments",
       scope: ["comment", "punctuation.definition.comment"],
       settings: {
-        foreground: palette.overlay0,
+        foreground: palette.overlay2,
         fontStyle: options.italicComments ? "italic" : "",
       },
     },
