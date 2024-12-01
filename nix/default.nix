@@ -19,12 +19,12 @@
   validWorkbenchModes = properties."catppuccin.workbenchMode".enum;
   validBracketModes = properties."catppuccin.bracketMode".enum;
 
-  inherit (packageJSON) name version;
-  pname = "${name}-${version}";
+  inherit (packageJSON) version;
+  pname = packageJSON.name;
 
   options = builtins.removeAttrs inputs ["pkgs"];
   src = pkgs.nix-gitignore.gitignoreSource [] (builtins.path {
-    name = pname;
+    name = "${pname}-${version}";
     path = ../.;
   });
 
@@ -52,7 +52,7 @@
     };
   };
   vscodeExtPublisher = "catppuccin";
-  vscodeExtName = name;
+  vscodeExtName = pname;
   vscodeExtUniqueId = "${vscodeExtPublisher}.${vscodeExtName}";
 in
   (lib.throwIfNot (accentColor == null) "${pname}: deprecated option 'accentColor' is no longer supported, please use 'accent' instead.")
@@ -60,7 +60,7 @@ in
   (lib.checkListOfEnum "${pname}: workbenchMode" validWorkbenchModes [workbenchMode])
   (lib.checkListOfEnum "${pname}: bracketMode" validBracketModes [bracketMode])
   (pkgs.vscode-utils.buildVscodeExtension {
-    inherit name version vscodeExtPublisher vscodeExtName vscodeExtUniqueId;
+    inherit pname version vscodeExtPublisher vscodeExtName vscodeExtUniqueId;
     src = builder.outPath;
 
     buildInputs = [pkgs.nodejs];
