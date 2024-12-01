@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.16.1](https://github.com/catppuccin/vscode/compare/catppuccin-vsc-v3.16.0...catppuccin-vsc-v3.16.1) (2024-12-01)
+
+
+### Bug Fixes
+
+* **tokens:** change comments from `overlay0` to `overlay2` ([#435](https://github.com/catppuccin/vscode/issues/435)) ([35b72d7](https://github.com/catppuccin/vscode/commit/35b72d7f39d24b8af0ccc512b9417e1115865df6))
+
 ## [3.16.0](https://github.com/catppuccin/vscode/compare/catppuccin-vsc-v3.15.2...catppuccin-vsc-v3.16.0) (2024-11-08)
 
 
