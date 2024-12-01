@@ -60,7 +60,7 @@ in
   (lib.checkListOfEnum "${pname}: workbenchMode" validWorkbenchModes [workbenchMode])
   (lib.checkListOfEnum "${pname}: bracketMode" validBracketModes [bracketMode])
   (pkgs.vscode-utils.buildVscodeExtension {
-    inherit name version vscodeExtPublisher vscodeExtName vscodeExtUniqueId;
+    inherit name pname version vscodeExtPublisher vscodeExtName vscodeExtUniqueId;
     src = builder.outPath;
 
     buildInputs = [pkgs.nodejs];
