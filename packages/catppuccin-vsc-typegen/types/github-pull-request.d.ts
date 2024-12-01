@@ -1,7 +1,7 @@
 /**
  * This file was automatically generated.
  * DO NOT MODIFY IT BY HAND.
- * Instead, run `yarn run updateVSCtypes` to regenerate this file.
+ * Instead, run `yarn run typegen:update` to regenerate this file.
  */
 export interface GitHubPullRequestColors {
   /**
