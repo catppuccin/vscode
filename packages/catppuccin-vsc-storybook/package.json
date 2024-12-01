@@ -11,7 +11,7 @@
     "@storybook/blocks": "^8.0.9",
     "@storybook/web-components-vite": "^8.0.9",
     "@tsconfig/node18": "^18.2.4",
-    "@types/node": "^20.12.7",
+    "@types/node": "^22.0.0",
     "catppuccin-vsc": "workspace:*",
     "chromatic": "^11.3.0",
     "eslint": "^8.57.0",
