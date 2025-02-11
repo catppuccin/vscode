@@ -73,7 +73,7 @@ const tokens = (context: ThemeContext): TextmateColors => {
         "markup.heading.heading-4.asciidoc",
       ],
       settings: {
-        foreground: palette.blue,
+        foreground: palette.sapphire,
       },
     },
     {
@@ -87,7 +87,7 @@ const tokens = (context: ThemeContext): TextmateColors => {
         "markup.heading.heading-5.asciidoc",
       ],
       settings: {
-        foreground: palette.mauve,
+        foreground: palette.lavender,
       },
     },
     {
