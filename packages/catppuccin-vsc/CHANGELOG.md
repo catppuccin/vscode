@@ -1,5 +1,13 @@
 # Changelog
 
+## [3.16.1](https://github.com/catppuccin/vscode/compare/catppuccin-vsc-v3.16.0...catppuccin-vsc-v3.16.1) (2025-02-11)
+
+
+### Bug Fixes
+
+* **tokens/markdown:** match headings 5 & 6 to style guide ([#474](https://github.com/catppuccin/vscode/issues/474)) ([328b952](https://github.com/catppuccin/vscode/commit/328b952ef9a1b2568f1ac80ed702dd3599e37e1d))
+* **tokens:** change comments from `overlay0` to `overlay2` ([#435](https://github.com/catppuccin/vscode/issues/435)) ([35b72d7](https://github.com/catppuccin/vscode/commit/35b72d7f39d24b8af0ccc512b9417e1115865df6))
+
 ## [3.16.0](https://github.com/catppuccin/vscode/compare/catppuccin-vsc-v3.15.2...catppuccin-vsc-v3.16.0) (2024-11-08)
 
 
