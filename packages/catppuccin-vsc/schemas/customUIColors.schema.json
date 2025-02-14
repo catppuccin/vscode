@@ -2360,20 +2360,20 @@
           "description": "Border on the side of the terminal tab in the panel. This defaults to tab.activeBorder.",
           "$ref": "#/$defs/catppuccinColor"
         },
-        "testing.iconFailed": {
-          "description": "Color for the 'failed' icon in the test explorer.",
+        "testing.runAction": {
+          "description": "Color for 'run' icons in the editor.",
           "$ref": "#/$defs/catppuccinColor"
         },
         "testing.iconErrored": {
           "description": "Color for the 'Errored' icon in the test explorer.",
           "$ref": "#/$defs/catppuccinColor"
         },
-        "testing.iconPassed": {
-          "description": "Color for the 'passed' icon in the test explorer.",
+        "testing.iconFailed": {
+          "description": "Color for the 'failed' icon in the test explorer.",
           "$ref": "#/$defs/catppuccinColor"
         },
-        "testing.runAction": {
-          "description": "Color for 'run' icons in the editor.",
+        "testing.iconPassed": {
+          "description": "Color for the 'passed' icon in the test explorer.",
           "$ref": "#/$defs/catppuccinColor"
         },
         "testing.iconQueued": {
@@ -2386,6 +2386,30 @@
         },
         "testing.iconSkipped": {
           "description": "Color for the 'Skipped' icon in the test explorer.",
+          "$ref": "#/$defs/catppuccinColor"
+        },
+        "testing.iconErrored.retired": {
+          "description": "Retired color for the 'Errored' icon in the test explorer.",
+          "$ref": "#/$defs/catppuccinColor"
+        },
+        "testing.iconFailed.retired": {
+          "description": "Retired color for the 'failed' icon in the test explorer.",
+          "$ref": "#/$defs/catppuccinColor"
+        },
+        "testing.iconPassed.retired": {
+          "description": "Retired color for the 'passed' icon in the test explorer.",
+          "$ref": "#/$defs/catppuccinColor"
+        },
+        "testing.iconQueued.retired": {
+          "description": "Retired color for the 'Queued' icon in the test explorer.",
+          "$ref": "#/$defs/catppuccinColor"
+        },
+        "testing.iconUnset.retired": {
+          "description": "Retired color for the 'Unset' icon in the test explorer.",
+          "$ref": "#/$defs/catppuccinColor"
+        },
+        "testing.iconSkipped.retired": {
+          "description": "Retired color for the 'Skipped' icon in the test explorer.",
           "$ref": "#/$defs/catppuccinColor"
         },
         "testing.peekBorder": {
@@ -2410,6 +2434,50 @@
         },
         "testing.message.info.lineBackground": {
           "description": "Margin color beside info messages shown inline in the editor.",
+          "$ref": "#/$defs/catppuccinColor"
+        },
+        "testing.messagePeekBorder": {
+          "description": "Color of the peek view borders and arrow when peeking a logged message.",
+          "$ref": "#/$defs/catppuccinColor"
+        },
+        "testing.messagePeekHeaderBackground": {
+          "description": "Color of the peek view borders and arrow when peeking a logged message.",
+          "$ref": "#/$defs/catppuccinColor"
+        },
+        "testing.coveredBackground": {
+          "description": "Background color of text that was covered.",
+          "$ref": "#/$defs/catppuccinColor"
+        },
+        "testing.coveredBorder": {
+          "description": "Border color of text that was covered.",
+          "$ref": "#/$defs/catppuccinColor"
+        },
+        "testing.coveredGutterBackground": {
+          "description": "Gutter color of regions where code was covered.",
+          "$ref": "#/$defs/catppuccinColor"
+        },
+        "testing.uncoveredBranchBackground": {
+          "description": "Background of the widget shown for an uncovered branch.",
+          "$ref": "#/$defs/catppuccinColor"
+        },
+        "testing.uncoveredBackground": {
+          "description": "Background color of text that was not covered.",
+          "$ref": "#/$defs/catppuccinColor"
+        },
+        "testing.uncoveredBorder": {
+          "description": "Border color of text that was not covered.",
+          "$ref": "#/$defs/catppuccinColor"
+        },
+        "testing.uncoveredGutterBackground": {
+          "description": "Gutter color of regions where code not covered.",
+          "$ref": "#/$defs/catppuccinColor"
+        },
+        "testing.coverCountBadgeBackground": {
+          "description": "Background for the badge indicating execution count",
+          "$ref": "#/$defs/catppuccinColor"
+        },
+        "testing.coverCountBadgeForeground": {
+          "description": "Foreground for the badge indicating execution count",
           "$ref": "#/$defs/catppuccinColor"
         },
         "welcomePage.background": {
