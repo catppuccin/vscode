@@ -96,14 +96,14 @@ const tokens = (context: ThemeContext): TextmateColors => {
       name: "entity.name.type",
       scope: ["support.type.python"],
       settings: {
-        foreground: palette.peach,
+        foreground: palette.mauve,
       },
     },
     {
       name: "python constants (True/False)",
       scope: "constant.language.python",
       settings: {
-        foreground: palette.mauve,
+        foreground: palette.peach,
       },
     },
     {
