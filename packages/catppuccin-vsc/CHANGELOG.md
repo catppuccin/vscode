@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.16.2](https://github.com/catppuccin/vscode/compare/catppuccin-vsc-v3.16.1...catppuccin-vsc-v3.16.2) (2025-02-14)
+
+
+### Bug Fixes
+
+* **tokens/python:** mauve builtin types, peach language constants ([#477](https://github.com/catppuccin/vscode/issues/477)) ([b8e5951](https://github.com/catppuccin/vscode/commit/b8e5951a8ad03268854ef29780ce93fe9ea14294))
+
 ## [3.16.1](https://github.com/catppuccin/vscode/compare/catppuccin-vsc-v3.16.0...catppuccin-vsc-v3.16.1) (2025-02-11)
 
 
