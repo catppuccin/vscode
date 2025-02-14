@@ -1627,7 +1627,7 @@ __metadata:
     "@storybook/blocks": "npm:^8.0.9"
     "@storybook/web-components-vite": "npm:^8.0.9"
     "@tsconfig/node18": "npm:^18.2.4"
-    "@types/node": "npm:^20.12.7"
+    "@types/node": "npm:^22.0.0"
     catppuccin-vsc: "workspace:*"
     chromatic: "npm:^11.3.0"
     eslint: "npm:^8.57.0"
@@ -1656,7 +1656,7 @@ __metadata:
   resolution: "@catppuccin/vscode-monorepo@workspace:."
   dependencies:
     "@tsconfig/node18": "npm:^18.2.4"
-    "@types/node": "npm:^20.12.7"
+    "@types/node": "npm:^22.0.0"
     "@typescript-eslint/eslint-plugin": "npm:^8.0.0"
     "@typescript-eslint/parser": "npm:^8.0.0"
     "@vscode/vsce": "npm:^3.0.0"
@@ -1683,7 +1683,7 @@ __metadata:
   dependencies:
     "@catppuccin/palette": "npm:^1.7.1"
     "@tsconfig/node20": "npm:^20.1.4"
-    "@types/node": "npm:^20.12.7"
+    "@types/node": "npm:^22.0.0"
     catppuccin-vsc: "workspace:*"
     tsup: "npm:^8.0.2"
     typescript: "npm:^5.4.5"
@@ -4395,12 +4395,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*, @types/node@npm:^20.12.7":
-  version: 20.12.7
-  resolution: "@types/node@npm:20.12.7"
+"@types/node@npm:*, @types/node@npm:^22.0.0":
+  version: 22.9.0
+  resolution: "@types/node@npm:22.9.0"
   dependencies:
-    undici-types: "npm:~5.26.4"
-  checksum: 10c0/dce80d63a3b91892b321af823d624995c61e39c6a223cc0ac481a44d337640cc46931d33efb3beeed75f5c85c3bda1d97cef4c5cd4ec333caf5dee59cff6eca0
+    undici-types: "npm:~6.19.8"
+  checksum: 10c0/3f46cbe0a49bab4ba30494025e4c8a6e699b98ac922857aa1f0209ce11a1313ee46e6808b8f13fe5b8b960a9d7796b77c8d542ad4e9810e85ef897d5593b5d51
   languageName: node
   linkType: hard
 
@@ -5437,7 +5437,7 @@ __metadata:
     "@catppuccin/palette": "npm:^1.7.1"
     "@catppuccin/vsc-typegen": "workspace:*"
     "@tsconfig/node18": "npm:^18.2.4"
-    "@types/node": "npm:^20.12.7"
+    "@types/node": "npm:^22.0.0"
     "@types/tinycolor2": "npm:^1.4.6"
     "@types/vscode": "npm:~1.80.0"
     "@vscode/vsce": "npm:^3.0.0"
@@ -11725,6 +11725,13 @@ __metadata:
   version: 5.26.5
   resolution: "undici-types@npm:5.26.5"
   checksum: 10c0/bb673d7876c2d411b6eb6c560e0c571eef4a01c1c19925175d16e3a30c4c428181fb8d7ae802a261f283e4166a0ac435e2f505743aa9e45d893f9a3df017b501
+  languageName: node
+  linkType: hard
+
+"undici-types@npm:~6.19.8":
+  version: 6.19.8
+  resolution: "undici-types@npm:6.19.8"
+  checksum: 10c0/078afa5990fba110f6824823ace86073b4638f1d5112ee26e790155f481f2a868cc3e0615505b6f4282bdf74a3d8caad715fd809e870c2bb0704e3ea6082f344
   languageName: node
   linkType: hard
 

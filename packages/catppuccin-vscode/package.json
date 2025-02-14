@@ -36,7 +36,7 @@
   },
   "devDependencies": {
     "@tsconfig/node20": "^20.1.4",
-    "@types/node": "^20.12.7",
+    "@types/node": "^22.0.0",
     "catppuccin-vsc": "workspace:*",
     "tsup": "^8.0.2",
     "typescript": "^5.4.5"

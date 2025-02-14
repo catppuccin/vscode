@@ -3,7 +3,7 @@
   "private": true,
   "devDependencies": {
     "@tsconfig/node18": "^18.2.4",
-    "@types/node": "^20.12.7",
+    "@types/node": "^22.0.0",
     "@typescript-eslint/eslint-plugin": "^8.0.0",
     "@typescript-eslint/parser": "^8.0.0",
     "@vscode/vsce": "^3.0.0",
