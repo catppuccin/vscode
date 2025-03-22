@@ -71,14 +71,23 @@ This means that you will have to either:
   # in your home-manager options:
   catppuccin = {
     enable = true;
-    vscode.accent = "pink";
+    # optionally change the accent color
+    # vscode.accent = "pink";
   };
-
   programs.vscode = {
     enable = true;
-    # Configure VSCode as normal
+    # settings can be configured as normal, see extension defaults below:
     # userSettings = {
-    #  "editor.insertSpaces" = false;
+    #  "catppuccin.boldKeywords": true;
+    #  "catppuccin.italicComments": true;
+    #  "catppuccin.italicKeywords": true;
+    #  "catppuccin.colorOverrides": {},
+    #  "catppuccin.customUIColors": {},
+    #  "catppuccin.workbenchMode": "default",
+    #  "catppuccin.bracketMode": "rainbow",
+    #  "catppuccin.extraBordersEnabled": false,
+    #  "catppuccin.syncWithIconPack": true,
+    #  ...
     # };
   };
 }
