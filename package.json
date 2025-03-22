@@ -27,21 +27,21 @@
     "node": ">=20.0.0"
   },
   "devDependencies": {
-    "@tsconfig/node18": "^18.2.4",
-    "@types/node": "^20.12.7",
     "@typescript-eslint/eslint-plugin": "^8.0.0",
     "@typescript-eslint/parser": "^8.0.0",
-    "@vscode/vsce": "^3.0.0",
-    "eslint": "^8.57.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier": "^5.1.3",
     "eslint-plugin-unicorn": "^52.0.0",
     "husky": "^9.0.11",
     "lint-staged": "^15.2.2",
     "prettier": "^3.2.5",
-    "tsup": "^8.0.2",
-    "tsx": "^4.7.2",
-    "typescript": "^5.4.5"
+    "@tsconfig/node20": "catalog:",
+    "@types/node": "catalog:",
+    "@vscode/vsce": "catalog:",
+    "eslint": "catalog:",
+    "tsup": "catalog:",
+    "tsx": "catalog:",
+    "typescript": "catalog:"
   },
   "dependenciesMeta": {
     "keytar": {

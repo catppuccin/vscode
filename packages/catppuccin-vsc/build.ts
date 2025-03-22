@@ -3,8 +3,8 @@ import { createVSIX } from "@vscode/vsce";
 import { build } from "tsup";
 import { getFlag } from "type-flag";
 
-import updatePackageJson from "./src/hooks/updatePackageJson";
-import generateThemes from "./src/hooks/generateThemes";
+import updatePackageJson from "@/hooks/updatePackageJson";
+import generateThemes from "@/hooks/generateThemes";
 
 const buildForADS = getFlag("--ads", Boolean);
 const development = getFlag("--dev", Boolean);

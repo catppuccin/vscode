@@ -1,6 +1,6 @@
 /**
  * Script to generate theme files for all flavors, Node compatible.
- * Fires as a hook before packaging, and is included in the Nix build.
+ * Fires as a hook before packaging.
  */
 
 import { mkdir, writeFile } from "node:fs/promises";

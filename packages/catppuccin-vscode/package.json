@@ -35,11 +35,11 @@
     "@catppuccin/palette": "catalog:"
   },
   "devDependencies": {
-    "@tsconfig/node20": "^20.1.4",
-    "@types/node": "^20.12.7",
+    "@tsconfig/node20": "catalog:",
+    "@types/node": "catalog:",
     "catppuccin-vsc": "workspace:*",
-    "tsup": "^8.0.2",
-    "typescript": "^5.4.5"
+    "tsup": "catalog:",
+    "typescript": "catalog:"
   },
   "scripts": {
     "build": "pnpm tsup",

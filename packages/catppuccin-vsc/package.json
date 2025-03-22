@@ -167,19 +167,19 @@
     "isPreReleaseVersion": false
   },
   "devDependencies": {
-    "@actions/core": "^1.10.1",
-    "@catppuccin/palette": "^1.7.1",
-    "@catppuccin/vsc-typegen": "workspace:*",
-    "@tsconfig/node18": "^18.2.4",
-    "@types/node": "^20.12.7",
+    "@actions/core": "^1.11.1",
     "@types/tinycolor2": "^1.4.6",
     "@types/vscode": "~1.80.0",
-    "@vscode/vsce": "^3.0.0",
     "tinycolor2": "^1.6.0",
-    "tsup": "^8.0.2",
-    "tsx": "^4.7.2",
     "type-flag": "^3.0.0",
-    "typescript": "^5.4.5"
+    "@catppuccin/palette": "catalog:",
+    "@catppuccin/vsc-typegen": "workspace:*",
+    "@tsconfig/node20": "catalog:",
+    "@types/node": "catalog:",
+    "@vscode/vsce": "catalog:",
+    "tsup": "catalog:",
+    "tsx": "catalog:",
+    "typescript": "catalog:"
   },
   "scripts": {
     "core:build": "tsx build.ts",

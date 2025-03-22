@@ -9,6 +9,27 @@ catalogs:
     '@catppuccin/palette':
       specifier: ^1.7.1
       version: 1.7.1
+    '@tsconfig/node20':
+      specifier: ^20.1.4
+      version: 20.1.4
+    '@types/node':
+      specifier: ^20.17.25
+      version: 20.17.25
+    '@vscode/vsce':
+      specifier: ^3.3.0
+      version: 3.3.0
+    eslint:
+      specifier: ^8.57.1
+      version: 8.57.1
+    tsup:
+      specifier: ^8.4.0
+      version: 8.4.0
+    tsx:
+      specifier: ^4.19.3
+      version: 4.19.3
+    typescript:
+      specifier: ^5.8.2
+      version: 5.8.2
 
 importers:
 
@@ -17,11 +38,11 @@ importers:
       keytar:
         built: false
     devDependencies:
-      '@tsconfig/node18':
-        specifier: ^18.2.4
-        version: 18.2.4
+      '@tsconfig/node20':
+        specifier: 'catalog:'
+        version: 20.1.4
       '@types/node':
-        specifier: ^20.12.7
+        specifier: 'catalog:'
         version: 20.17.25
       '@typescript-eslint/eslint-plugin':
         specifier: ^8.0.0
@@ -30,10 +51,10 @@ importers:
         specifier: ^8.0.0
         version: 8.27.0(eslint@8.57.1)(typescript@5.8.2)
       '@vscode/vsce':
-        specifier: ^3.0.0
+        specifier: 'catalog:'
         version: 3.3.0
       eslint:
-        specifier: ^8.57.0
+        specifier: 'catalog:'
         version: 8.57.1
       eslint-config-prettier:
         specifier: ^9.1.0
@@ -54,31 +75,31 @@ importers:
         specifier: ^3.2.5
         version: 3.5.3
       tsup:
-        specifier: ^8.0.2
+        specifier: 'catalog:'
         version: 8.4.0(jiti@1.21.7)(postcss@8.5.3)(tsx@4.19.3)(typescript@5.8.2)(yaml@2.7.0)
       tsx:
-        specifier: ^4.7.2
+        specifier: 'catalog:'
         version: 4.19.3
       typescript:
-        specifier: ^5.4.5
+        specifier: 'catalog:'
         version: 5.8.2
 
   packages/catppuccin-vsc:
     devDependencies:
       '@actions/core':
-        specifier: ^1.10.1
+        specifier: ^1.11.1
         version: 1.11.1
       '@catppuccin/palette':
-        specifier: ^1.7.1
+        specifier: 'catalog:'
         version: 1.7.1
       '@catppuccin/vsc-typegen':
         specifier: workspace:*
         version: link:../catppuccin-vsc-typegen
-      '@tsconfig/node18':
-        specifier: ^18.2.4
-        version: 18.2.4
+      '@tsconfig/node20':
+        specifier: 'catalog:'
+        version: 20.1.4
       '@types/node':
-        specifier: ^20.12.7
+        specifier: 'catalog:'
         version: 20.17.25
       '@types/tinycolor2':
         specifier: ^1.4.6
@@ -87,28 +108,28 @@ importers:
         specifier: ~1.80.0
         version: 1.80.0
       '@vscode/vsce':
-        specifier: ^3.0.0
+        specifier: 'catalog:'
         version: 3.3.0
       tinycolor2:
         specifier: ^1.6.0
         version: 1.6.0
       tsup:
-        specifier: ^8.0.2
+        specifier: 'catalog:'
         version: 8.4.0(jiti@1.21.7)(postcss@8.5.3)(tsx@4.19.3)(typescript@5.8.2)(yaml@2.7.0)
       tsx:
-        specifier: ^4.7.2
+        specifier: 'catalog:'
         version: 4.19.3
       type-flag:
         specifier: ^3.0.0
         version: 3.0.0
       typescript:
-        specifier: ^5.4.5
+        specifier: 'catalog:'
         version: 5.8.2
 
   packages/catppuccin-vsc-pack:
     devDependencies:
       '@vscode/vsce':
-        specifier: ^3.0.0
+        specifier: 'catalog:'
         version: 3.3.0
 
   packages/catppuccin-vsc-storybook:
@@ -120,7 +141,7 @@ importers:
         specifier: workspace:*
         version: link:../catppuccin-vscode
       '@fontsource/jetbrains-mono':
-        specifier: ^5.0.20
+        specifier: ^5.2.5
         version: 5.2.5
       '@storybook/addon-essentials':
         specifier: ^8.6.7
@@ -135,22 +156,22 @@ importers:
         specifier: ^8.6.7
         version: 8.6.7(lit@3.2.1)(storybook@8.6.7(prettier@3.5.3))(vite@5.4.14(@types/node@20.17.25)(less@4.2.2)(terser@5.39.0))
       '@tsconfig/node20':
-        specifier: ^20.1.4
+        specifier: 'catalog:'
         version: 20.1.4
       '@types/node':
-        specifier: ^20.12.7
+        specifier: 'catalog:'
         version: 20.17.25
       chromatic:
-        specifier: ^11.3.0
+        specifier: ^11.27.0
         version: 11.27.0
       eslint:
-        specifier: ^8.57.0
+        specifier: 'catalog:'
         version: 8.57.1
       eslint-plugin-storybook:
-        specifier: ^0.11.0
+        specifier: ^0.11.6
         version: 0.11.6(eslint@8.57.1)(typescript@5.8.2)
       lit:
-        specifier: ^3.1.3
+        specifier: ^3.2.1
         version: 3.2.1
       shiki:
         specifier: ^1.29.2
@@ -159,10 +180,10 @@ importers:
         specifier: ^8.6.7
         version: 8.6.7(prettier@3.5.3)
       tsx:
-        specifier: ^4.7.2
+        specifier: 'catalog:'
         version: 4.19.3
       typescript:
-        specifier: ^5.4.5
+        specifier: 'catalog:'
         version: 5.8.2
       vite:
         specifier: ^5.4.14
@@ -171,13 +192,13 @@ importers:
   packages/catppuccin-vsc-typegen:
     devDependencies:
       json-schema-to-typescript:
-        specifier: ^15.0.0
+        specifier: ^15.0.4
         version: 15.0.4
       tsx:
-        specifier: ^4.7.2
+        specifier: 'catalog:'
         version: 4.19.3
       typescript:
-        specifier: ^5.4.5
+        specifier: 'catalog:'
         version: 5.8.2
 
   packages/catppuccin-vscode:
@@ -187,19 +208,19 @@ importers:
         version: 1.7.1
     devDependencies:
       '@tsconfig/node20':
-        specifier: ^20.1.4
+        specifier: 'catalog:'
         version: 20.1.4
       '@types/node':
-        specifier: ^20.12.7
+        specifier: 'catalog:'
         version: 20.17.25
       catppuccin-vsc:
         specifier: workspace:*
         version: link:../catppuccin-vsc
       tsup:
-        specifier: ^8.0.2
+        specifier: 'catalog:'
         version: 8.4.0(jiti@1.21.7)(postcss@8.5.3)(tsx@4.19.3)(typescript@5.8.2)(yaml@2.7.0)
       typescript:
-        specifier: ^5.4.5
+        specifier: 'catalog:'
         version: 5.8.2
 
 packages:
@@ -919,9 +940,6 @@ packages:
     peerDependencies:
       lit: ^2.0.0 || ^3.0.0
       storybook: ^8.6.7
-
-  '@tsconfig/node18@18.2.4':
-    resolution: {integrity: sha512-5xxU8vVs9/FNcvm3gE07fPbn9tl6tqGGWA9tSlwsUEkBxtRnTsNmwrV8gasZ9F/EobaSv9+nu8AxUKccw77JpQ==}
 
   '@tsconfig/node20@20.1.4':
     resolution: {integrity: sha512-sqgsT69YFeLWf5NtJ4Xq/xAF8p4ZQHlmGW74Nu2tD4+g5fAsposc4ZfaaPixVu4y01BEiDCWLRDCvDM5JOsRxg==}
@@ -3703,8 +3721,6 @@ snapshots:
       storybook: 8.6.7(prettier@3.5.3)
       tiny-invariant: 1.3.3
       ts-dedent: 2.2.0
-
-  '@tsconfig/node18@18.2.4': {}
 
   '@tsconfig/node20@20.1.4': {}
 
