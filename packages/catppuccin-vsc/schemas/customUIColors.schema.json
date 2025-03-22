@@ -445,11 +445,9 @@
           "$ref": "#/$defs/catppuccinColor"
         },
         "debugIcon.stepOutForeground": {
-          "description": null,
           "$ref": "#/$defs/catppuccinColor"
         },
         "debugIcon.stepOverForeground": {
-          "description": null,
           "$ref": "#/$defs/catppuccinColor"
         },
         "debugIcon.stopForeground": {

@@ -184,7 +184,8 @@
   "scripts": {
     "core:build": "tsx build.ts",
     "core:build-ads": "tsx build.ts --ads",
-    "core:dev": "tsx build.ts --dev"
+    "core:dev": "tsx build.ts --dev",
+    "schema:ui": "tsx packages/catppuccin-vsc/src/hooks/updateSchemas.ts"
   },
   "homepage": "https://github.com/catppuccin/vscode/tree/main/packages/catppuccin-vsc#readme"
 }
