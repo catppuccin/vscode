@@ -32,7 +32,7 @@
     }
   },
   "dependencies": {
-    "@catppuccin/palette": "^1.7.1"
+    "@catppuccin/palette": "catalog:"
   },
   "devDependencies": {
     "@tsconfig/node20": "^20.1.4",
@@ -42,9 +42,9 @@
     "typescript": "^5.4.5"
   },
   "scripts": {
-    "build": "yarn tsup",
+    "build": "pnpm tsup",
     "compiled:pack": "npm pack",
-    "prepack": "yarn core:build && yarn build"
+    "prepack": "pnpm --filter catppuccin-vsc core:build && pnpm build"
   },
   "homepage": "https://github.com/catppuccin/vscode/tree/main/packages/catppuccin-vscode#readme",
   "bugs": {

@@ -14,18 +14,15 @@
     "url": "https://opencollective.com/catppuccin"
   },
   "lint-staged": {
-    "*.ts": "yarn eslint --cache --fix",
-    "*.{ts,json,md}": "yarn prettier --write"
+    "*.ts": "pnpm eslint --cache --fix",
+    "*.{ts,json,md}": "pnpm prettier --write"
   },
   "scripts": {
     "g:typecheck": "tsc --noEmit -p packages/catppuccin-vsc && tsc --noEmit -p packages/catppuccin-vsc-storybook",
-    "lint": "eslint . --ext .ts \"$@\" && yarn g:typecheck",
-    "postinstall": "husky && yarn compiled:pack"
+    "lint": "eslint . --ext .ts \"$@\" && pnpm g:typecheck",
+    "postinstall": "husky && pnpm --filter @catppuccin/vscode compiled:pack"
   },
-  "workspaces": [
-    "packages/*"
-  ],
-  "packageManager": "yarn@4.5.1",
+  "packageManager": "pnpm@10.6.5",
   "engines": {
     "node": ">=20.0.0"
   },
@@ -35,7 +32,6 @@
     "@typescript-eslint/eslint-plugin": "^8.0.0",
     "@typescript-eslint/parser": "^8.0.0",
     "@vscode/vsce": "^3.0.0",
-    "@yarnpkg/types": "^4.0.0",
     "eslint": "^8.57.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier": "^5.1.3",

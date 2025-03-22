@@ -47,7 +47,7 @@ const customUiColorsSchema = (workbenchColors: any) => {
   };
 };
 
-const main = async () => {
+const updateCustomUiColorsSchema = async () => {
   await fetch(vscodeSchemasRoot + "workbench-colors.json")
     .then((data) => data.json())
     .then((data: any) => {
@@ -69,4 +69,4 @@ const main = async () => {
     });
 };
 
-export default main;
+export default updateCustomUiColorsSchema;

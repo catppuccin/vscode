@@ -1,0 +1,9 @@
+packages:
+  - packages/*
+catalog:
+  '@catppuccin/palette': ^1.7.1
+onlyBuiltDependencies:
+  - '@vscode/vsce-sign'
+  - esbuild
+ignoredBuiltDependencies:
+  - keytar

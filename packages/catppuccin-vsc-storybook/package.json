@@ -25,7 +25,7 @@
   },
   "scripts": {
     "storybook:chromatic": "chromatic --exit-zero-on-changes --exit-once-uploaded --project-token chpt_e3cba49738d7554",
-    "storybook:build": "yarn core:build && storybook build",
+    "storybook:build": "pnpm --filter catppuccin-vsc core:build && storybook build",
     "storybook:dev": "storybook dev -p 6006"
   },
   "engines": {

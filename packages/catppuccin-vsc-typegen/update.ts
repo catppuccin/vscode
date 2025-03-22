@@ -3,12 +3,13 @@ import path from "node:path";
 import { writeFileSync } from "node:fs";
 import { compile, JSONSchema } from "json-schema-to-typescript";
 const vscodeSchemasRoot =
+  // FIXME: main is broken with `json-schema-to-typescript` as explained in https://github.com/catppuccin/vscode/pull/459
   "https://raw.githubusercontent.com/ota-meshi/extract-vscode-schemas/main/resources/vscode/schemas/";
 
 const bannerComment = `/**
  * This file was automatically generated.
  * DO NOT MODIFY IT BY HAND.
- * Instead, run \`yarn run updateVSCtypes\` to regenerate this file.
+ * Instead, run \`pnpm --filter @catppuccin/vsc-typegen typegen:update\` to regenerate this file.
  */`;
 
 const mappings = [

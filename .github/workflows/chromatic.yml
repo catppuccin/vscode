@@ -18,12 +18,13 @@ jobs:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
         with:
           fetch-depth: 0
-      - run: corepack enable
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
       - uses: actions/setup-node@39370e3970a6d050c480ffad4ff0ed4d3fdee5af # v4
         with:
           node-version: 20
-          cache: yarn
-      - run: yarn install --immutable
+          cache: pnpm
+      - run: pnpm i --frozen-lockfile
 
       - name: Publish to Chromatic
         uses: chromaui/action@cbce1be7d075d5317d2193e7a3d3872dca86cf0c # v11
