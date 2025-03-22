@@ -69,12 +69,16 @@ This means that you will have to either:
   inputs.catppuccin.url = "github:catppuccin/nix";
 
   # in your home-manager options:
-  catppuccin.enable = true;
+  catppuccin = {
+    enable = true;
+    vscode.accent = "pink";
+  };
+
   programs.vscode = {
     enable = true;
-    # optionally override defaults using extension settings
+    # Configure VSCode as normal
     # userSettings = {
-    #  "catppuccin.accentColor" = "pink";
+    #  "editor.insertSpaces" = false;
     # };
   };
 }
