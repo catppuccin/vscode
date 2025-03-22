@@ -7,5 +7,5 @@ const root =
     : __dirname;
 
 export const vscodeSchemasRoot =
-  "https://raw.githubusercontent.com/ota-meshi/extract-vscode-schemas/main/resources/vscode/schemas/";
+  "https://raw.githubusercontent.com/wraith13/vscode-schemas/master/en/latest/schemas/";
 export const repoRoot = path.join(root, "../..");
