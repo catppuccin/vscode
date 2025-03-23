@@ -7,6 +7,7 @@
     "@storybook/addon-essentials": "^8.6.7",
     "@storybook/addon-themes": "^8.6.7",
     "@storybook/blocks": "^8.6.7",
+    "@storybook/web-components": "^8.6.7",
     "@storybook/web-components-vite": "^8.6.7",
     "chromatic": "^11.27.0",
     "eslint-plugin-storybook": "^0.11.6",

@@ -152,6 +152,9 @@ importers:
       '@storybook/blocks':
         specifier: ^8.6.7
         version: 8.6.7(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(storybook@8.6.7(prettier@3.5.3))
+      '@storybook/web-components':
+        specifier: ^8.6.7
+        version: 8.6.7(lit@3.2.1)(storybook@8.6.7(prettier@3.5.3))
       '@storybook/web-components-vite':
         specifier: ^8.6.7
         version: 8.6.7(lit@3.2.1)(storybook@8.6.7(prettier@3.5.3))(vite@5.4.14(@types/node@20.17.25)(less@4.2.2)(terser@5.39.0))
