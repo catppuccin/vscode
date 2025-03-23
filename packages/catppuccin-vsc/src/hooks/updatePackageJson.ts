@@ -98,16 +98,12 @@ const configuration = (version: string) => {
   };
 };
 
-const main = async (options: { buildForADS?: boolean } = {}) => {
-  const productName = options.buildForADS ? "Azure Data Studio" : "VSCode";
-
+const main = async () => {
   return await readFile(path.join(repoRoot, "package.json"), "utf8")
     .then((data) => JSON.parse(data))
     .then((data) => {
       return {
         ...data,
-        displayName: `Catppuccin for ${productName}`,
-        description: `🦌 Soothing pastel theme for ${productName}`,
         contributes: {
           ...data.contributes,
           configuration: configuration(data.version),

@@ -6,11 +6,10 @@ import { getFlag } from "type-flag";
 import updatePackageJson from "@/hooks/updatePackageJson";
 import generateThemes from "@/hooks/generateThemes";
 
-const buildForADS = getFlag("--ads", Boolean);
 const development = getFlag("--dev", Boolean);
 
 await generateThemes();
-const packageJson = await updatePackageJson({ buildForADS });
+const packageJson = await updatePackageJson();
 
 await build({
   clean: true,
@@ -21,12 +20,9 @@ await build({
   target: "node16",
 });
 
-const shortName = buildForADS ? "ads" : "vsc";
-const packagePath = `catppuccin-${shortName}-${packageJson.version}.vsix`;
+const packagePath = `catppuccin-vsc-${packageJson.version}.vsix`;
 
 await createVSIX({ dependencies: false, packagePath });
 
-// restore the original package.json after building ADS
-if (buildForADS) await updatePackageJson();
 // the upload step in the CI required the path to the vsix file
 if (process.env.GITHUB_ACTIONS) setOutput("vsixPath", packagePath);
