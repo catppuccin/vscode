@@ -55,49 +55,43 @@ If you need to use the JSON files for libraries like [Shiki](https://www.npmjs.c
 
 ### Nix (Home-Manager) users
 
-[![FlakeHub](https://img.shields.io/endpoint?url=https://flakehub.com/f/catppuccin/vscode/badge)](https://flakehub.com/flake/catppuccin/vscode)
-
 If you would like to change the theme configuration, the theme expects to have a mutable directory to write its JSON files into.
 This means that you will have to either:
 
 - Install this extension in a non-declarative way so that the extension has permissions to write files.\
   This means fully excluding `nixpkgs.vscode-extensions.catppuccin.catppuccin-vsc` from your configuration; Just using `programs.vscode.mutableExtensionsDir = true;` will **NOT WORK**.
-- Use the `flake.nix` to build it with your VSCode configuration, using overrides.\
-  This is a declarative way to compile the theme with your preferred options. Please refer to the example below for a sample configuration.
-
-<details>
-<summary>❄️ Nix Configuration</summary>
+- Use our [catppuccin/nix](https://github.com/catppuccin/nix) module to build it with your VSCode configuration, using overrides.\
+  This is a declarative way to compile the theme with your preferred options. **Please refer to the example below for a sample configuration.**
 
 ```nix
 {
   # in your inputs:
-  inputs.catppuccin-vsc.url = "https://flakehub.com/f/catppuccin/vscode/*.tar.gz";
-
-  # add the overlay:
-  nixpkgs.overlays = [inputs.catppuccin-vsc.overlays.default];
-  # the package will be available as
-  # - pkgs.catppuccin-vsc
-  # - pkgs.vscode-extensions.catppuccin.catppuccin-vsc
+  inputs.catppuccin.url = "github:catppuccin/nix";
 
   # in your home-manager options:
-  programs.vscode.extensions = [
-    # all the theme options will be available as overrides, these are defaults:
-    (pkgs.catppuccin-vsc.override {
-      accent = "mauve";
-      boldKeywords = true;
-      italicComments = true;
-      italicKeywords = true;
-      extraBordersEnabled = false;
-      workbenchMode = "default";
-      bracketMode = "rainbow";
-      colorOverrides = {};
-      customUIColors = {};
-    })
-  ];
+  catppuccin = {
+    enable = true;
+    # optionally change the accent color
+    # vscode.accent = "pink";
+  };
+  programs.vscode = {
+    enable = true;
+    # settings can be configured as normal, see extension defaults below:
+    # userSettings = {
+    #  "catppuccin.boldKeywords": true;
+    #  "catppuccin.italicComments": true;
+    #  "catppuccin.italicKeywords": true;
+    #  "catppuccin.colorOverrides": {},
+    #  "catppuccin.customUIColors": {},
+    #  "catppuccin.workbenchMode": "default",
+    #  "catppuccin.bracketMode": "rainbow",
+    #  "catppuccin.extraBordersEnabled": false,
+    #  "catppuccin.syncWithIconPack": true,
+    #  ...
+    # };
+  };
 }
 ```
-
-</details>
 
 ## Customization
 

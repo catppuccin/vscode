@@ -22,9 +22,9 @@
   "module": "dist/index.js",
   "exports": {
     ".": {
+      "types": "./dist/index.d.ts",
       "import": "./dist/index.js",
-      "require": "./dist/index.cjs",
-      "types": "./dist/index.d.ts"
+      "require": "./dist/index.cjs"
     },
     "./themes/*.json": {
       "import": "./themes/*.json",
@@ -32,19 +32,19 @@
     }
   },
   "dependencies": {
-    "@catppuccin/palette": "^1.7.1"
+    "@catppuccin/palette": "catalog:"
   },
   "devDependencies": {
-    "@tsconfig/node20": "^20.1.4",
-    "@types/node": "^20.12.7",
+    "@tsconfig/node20": "catalog:",
+    "@types/node": "catalog:",
     "catppuccin-vsc": "workspace:*",
-    "tsup": "^8.0.2",
-    "typescript": "^5.4.5"
+    "tsup": "catalog:",
+    "typescript": "catalog:"
   },
   "scripts": {
-    "build": "yarn tsup",
-    "compiled:pack": "npm pack",
-    "prepack": "yarn core:build && yarn build"
+    "build": "pnpm tsup",
+    "compiled:pack": "pnpm pack",
+    "prepack": "pnpm --filter catppuccin-vsc core:build && pnpm build"
   },
   "homepage": "https://github.com/catppuccin/vscode/tree/main/packages/catppuccin-vscode#readme",
   "bugs": {

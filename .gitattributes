@@ -1,3 +1,2 @@
 *                text=auto
 .husky/**        linguist-generated
-.yarn/**         linguist-vendored  -diff

@@ -3,9 +3,9 @@
   "license": "MIT",
   "private": true,
   "devDependencies": {
-    "json-schema-to-typescript": "^15.0.0",
-    "tsx": "^4.7.2",
-    "typescript": "^5.4.5"
+    "json-schema-to-typescript": "^15.0.4",
+    "tsx": "catalog:",
+    "typescript": "catalog:"
   },
   "scripts": {
     "typegen:update": "tsx update.ts"

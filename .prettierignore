@@ -1,4 +1,3 @@
-.yarn/
 dist/
 packages/*/themes/*.json
 CHANGELOG.md
