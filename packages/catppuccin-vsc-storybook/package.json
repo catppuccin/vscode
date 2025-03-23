@@ -12,7 +12,7 @@
     "chromatic": "^11.27.0",
     "eslint-plugin-storybook": "^0.11.6",
     "lit": "^3.2.1",
-    "shiki": "^1.29.2",
+    "shiki": "^3.0.0",
     "storybook": "^8.6.7",
     "vite": "^5.4.14",
     "@catppuccin/palette": "catalog:",
