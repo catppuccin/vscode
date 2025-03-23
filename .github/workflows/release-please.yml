@@ -68,10 +68,6 @@ jobs:
         id: build-vscode
         run: pnpm --filter catppuccin-vsc core:build
 
-      - name: Build Azure Data Studio
-        id: build-ads
-        run: pnpm --filter catppuccin-vsc core:build-ads
-
       - name: Publish to Visual Studio Marketplace
         working-directory: ./packages/catppuccin-vsc
         run: |
