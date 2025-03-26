@@ -41,6 +41,9 @@
     "tsup": "catalog:",
     "typescript": "catalog:"
   },
+  "engines": {
+    "node": ">=22.0.0"
+  },
   "scripts": {
     "build": "pnpm tsup",
     "compiled:pack": "pnpm pack",

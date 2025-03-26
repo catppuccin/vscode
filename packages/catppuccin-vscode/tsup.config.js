@@ -2,10 +2,10 @@ import { defineConfig } from "tsup";
 import { mkdir, readdir, unlink, writeFile } from "node:fs/promises";
 import { join } from "node:path";
 
-import mocha from "catppuccin-vsc/themes/mocha.json" assert { type: "json" };
-import macchiato from "catppuccin-vsc/themes/macchiato.json" assert { type: "json" };
-import frappe from "catppuccin-vsc/themes/frappe.json" assert { type: "json" };
-import latte from "catppuccin-vsc/themes/latte.json" assert { type: "json" };
+import mocha from "catppuccin-vsc/themes/mocha.json" with { type: "json" };
+import macchiato from "catppuccin-vsc/themes/macchiato.json" with { type: "json" };
+import frappe from "catppuccin-vsc/themes/frappe.json" with { type: "json" };
+import latte from "catppuccin-vsc/themes/latte.json" with { type: "json" };
 
 export default defineConfig({
   clean: true,
