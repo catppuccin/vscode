@@ -174,7 +174,7 @@
     "type-flag": "^3.0.0",
     "@catppuccin/palette": "catalog:",
     "@catppuccin/vsc-typegen": "workspace:*",
-    "@tsconfig/node20": "catalog:",
+    "@tsconfig/node22": "catalog:",
     "@types/node": "catalog:",
     "@vscode/vsce": "catalog:",
     "tsup": "catalog:",
