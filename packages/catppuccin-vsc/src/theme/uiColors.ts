@@ -122,8 +122,8 @@ export const getUiColors = (
     "debugConsoleInputIcon.foreground": palette.text,
 
     "diffEditor.border": palette.surface2,
-    "diffEditor.insertedTextBackground": opacity(palette.green, 0.1),
-    "diffEditor.removedTextBackground": opacity(palette.red, 0.1),
+    "diffEditor.insertedTextBackground": opacity(palette.green, 0.2),
+    "diffEditor.removedTextBackground": opacity(palette.red, 0.2),
     "diffEditor.insertedLineBackground": opacity(palette.green, 0.15),
     "diffEditor.removedLineBackground": opacity(palette.red, 0.15),
     "diffEditor.diagonalFill": opacity(palette.surface2, 0.6),
