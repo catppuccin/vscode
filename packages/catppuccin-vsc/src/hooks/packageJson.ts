@@ -98,7 +98,16 @@ const configuration = (version: string) => {
   };
 };
 
-const main = async () => {
+const readPackageJsonVersion = async () => {
+  return await readFile(path.join(repoRoot, "package.json"), "utf8").then(
+    (data) => {
+      const json = JSON.parse(data);
+      return json.version;
+    },
+  );
+};
+
+const updatePackageJson = async () => {
   return await readFile(path.join(repoRoot, "package.json"), "utf8")
     .then((data) => JSON.parse(data))
     .then((data) => {
@@ -120,4 +129,4 @@ const main = async () => {
     });
 };
 
-export default main;
+export { updatePackageJson, readPackageJsonVersion };

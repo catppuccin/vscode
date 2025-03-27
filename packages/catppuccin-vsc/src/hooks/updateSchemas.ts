@@ -5,7 +5,7 @@ import path from "node:path";
 import { flavors } from "@catppuccin/palette";
 
 import { repoRoot } from "./constants";
-import { accents } from "./updatePackageJson";
+import { accents } from "./packageJson";
 
 // VSCode 1.98.2
 const vscodeSchemasRoot =
