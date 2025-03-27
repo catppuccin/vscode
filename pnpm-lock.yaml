@@ -13,8 +13,8 @@ catalogs:
       specifier: ^22.0.1
       version: 22.0.1
     '@types/node':
-      specifier: ^20.17.25
-      version: 20.17.25
+      specifier: ^22.0.0
+      version: 22.13.14
     '@vscode/vsce':
       specifier: ^3.3.0
       version: 3.3.0
@@ -43,7 +43,7 @@ importers:
         version: 22.0.1
       '@types/node':
         specifier: 'catalog:'
-        version: 20.17.25
+        version: 22.13.14
       '@typescript-eslint/eslint-plugin':
         specifier: ^8.0.0
         version: 8.27.0(@typescript-eslint/parser@8.27.0(eslint@8.57.1)(typescript@5.8.2))(eslint@8.57.1)(typescript@5.8.2)
@@ -100,7 +100,7 @@ importers:
         version: 22.0.1
       '@types/node':
         specifier: 'catalog:'
-        version: 20.17.25
+        version: 22.13.14
       '@types/tinycolor2':
         specifier: ^1.4.6
         version: 1.4.6
@@ -157,13 +157,13 @@ importers:
         version: 8.6.7(lit@3.2.1)(storybook@8.6.7(prettier@3.5.3))
       '@storybook/web-components-vite':
         specifier: ^8.6.7
-        version: 8.6.7(lit@3.2.1)(storybook@8.6.7(prettier@3.5.3))(vite@5.4.14(@types/node@20.17.25)(less@4.2.2)(terser@5.39.0))
+        version: 8.6.7(lit@3.2.1)(storybook@8.6.7(prettier@3.5.3))(vite@5.4.14(@types/node@22.13.14)(less@4.2.2)(terser@5.39.0))
       '@tsconfig/node22':
         specifier: 'catalog:'
         version: 22.0.1
       '@types/node':
         specifier: 'catalog:'
-        version: 20.17.25
+        version: 22.13.14
       chromatic:
         specifier: ^11.27.0
         version: 11.27.0
@@ -190,7 +190,7 @@ importers:
         version: 5.8.2
       vite:
         specifier: ^5.4.14
-        version: 5.4.14(@types/node@20.17.25)(less@4.2.2)(terser@5.39.0)
+        version: 5.4.14(@types/node@22.13.14)(less@4.2.2)(terser@5.39.0)
 
   packages/catppuccin-vsc-typegen:
     devDependencies:
@@ -215,7 +215,7 @@ importers:
         version: 22.0.1
       '@types/node':
         specifier: 'catalog:'
-        version: 20.17.25
+        version: 22.13.14
       catppuccin-vsc:
         specifier: workspace:*
         version: link:../catppuccin-vsc
@@ -968,8 +968,8 @@ packages:
   '@types/mdx@2.0.13':
     resolution: {integrity: sha512-+OWZQfAYyio6YkJb3HLxDrvnx6SWWDbC0zVPfBRzUk0/nqoDyf6dNxQi3eArPe8rJ473nobTMQ/8Zk+LxJ+Yuw==}
 
-  '@types/node@20.17.25':
-    resolution: {integrity: sha512-bT+r2haIlplJUYtlZrEanFHdPIZTeiMeh/fSOEbOOfWf9uTn+lg8g0KU6Q3iMgjd9FLuuMAgfCNSkjUbxL6E3Q==}
+  '@types/node@22.13.14':
+    resolution: {integrity: sha512-Zs/Ollc1SJ8nKUAgc7ivOEdIBM8JAKgrqqUYi2J997JuKO7/tpQC+WCetQ1sypiKCQWHdvdg9wBNpUPEWZae7w==}
 
   '@types/normalize-package-data@2.4.4':
     resolution: {integrity: sha512-37i+OaWTh9qeK4LSHPsyRC7NahnGotNuZvjLSgcPzblpHB3rrCJxAOgI5gCdKm7coonsaX1Of0ILiTcnZjbfxA==}
@@ -2907,8 +2907,8 @@ packages:
   underscore@1.13.7:
     resolution: {integrity: sha512-GMXzWtsc57XAtguZgaQViUOzs0KTkk8ojr3/xAxXLITqf/3EMwxC0inyETfDFjH/Krbhuep0HNbbjI9i/q3F3g==}
 
-  undici-types@6.19.8:
-    resolution: {integrity: sha512-ve2KP6f/JnbPBFyobGHuerC9g1FYGn/F8n1LWTwNxCEzd6IfqTwUQcNXgEtmmQ6DlRrC1hrSrBnCZPokRrDHjw==}
+  undici-types@6.20.0:
+    resolution: {integrity: sha512-Ny6QZ2Nju20vw1SRHe3d9jVu6gJ+4e3+MMpqu7pqE5HT6WsTSlce++GQmK5UXS8mzV8DSYHrQH+Xrf2jVcuKNg==}
 
   undici@5.29.0:
     resolution: {integrity: sha512-raqeBD6NQK4SkWhQzeYKd1KmIG6dllBOTt55Rmkt4HtI9mwdWtJljnrXjAFUBLTSN67HWrOIZ3EPF4kjUw80Bg==}
@@ -3636,13 +3636,13 @@ snapshots:
       react: 19.0.0
       react-dom: 19.0.0(react@19.0.0)
 
-  '@storybook/builder-vite@8.6.7(storybook@8.6.7(prettier@3.5.3))(vite@5.4.14(@types/node@20.17.25)(less@4.2.2)(terser@5.39.0))':
+  '@storybook/builder-vite@8.6.7(storybook@8.6.7(prettier@3.5.3))(vite@5.4.14(@types/node@22.13.14)(less@4.2.2)(terser@5.39.0))':
     dependencies:
       '@storybook/csf-plugin': 8.6.7(storybook@8.6.7(prettier@3.5.3))
       browser-assert: 1.2.1
       storybook: 8.6.7(prettier@3.5.3)
       ts-dedent: 2.2.0
-      vite: 5.4.14(@types/node@20.17.25)(less@4.2.2)(terser@5.39.0)
+      vite: 5.4.14(@types/node@22.13.14)(less@4.2.2)(terser@5.39.0)
 
   '@storybook/components@8.6.7(storybook@8.6.7(prettier@3.5.3))':
     dependencies:
@@ -3703,9 +3703,9 @@ snapshots:
     dependencies:
       storybook: 8.6.7(prettier@3.5.3)
 
-  '@storybook/web-components-vite@8.6.7(lit@3.2.1)(storybook@8.6.7(prettier@3.5.3))(vite@5.4.14(@types/node@20.17.25)(less@4.2.2)(terser@5.39.0))':
+  '@storybook/web-components-vite@8.6.7(lit@3.2.1)(storybook@8.6.7(prettier@3.5.3))(vite@5.4.14(@types/node@22.13.14)(less@4.2.2)(terser@5.39.0))':
     dependencies:
-      '@storybook/builder-vite': 8.6.7(storybook@8.6.7(prettier@3.5.3))(vite@5.4.14(@types/node@20.17.25)(less@4.2.2)(terser@5.39.0))
+      '@storybook/builder-vite': 8.6.7(storybook@8.6.7(prettier@3.5.3))(vite@5.4.14(@types/node@22.13.14)(less@4.2.2)(terser@5.39.0))
       '@storybook/web-components': 8.6.7(lit@3.2.1)(storybook@8.6.7(prettier@3.5.3))
       magic-string: 0.30.17
       storybook: 8.6.7(prettier@3.5.3)
@@ -3749,9 +3749,9 @@ snapshots:
 
   '@types/mdx@2.0.13': {}
 
-  '@types/node@20.17.25':
+  '@types/node@22.13.14':
     dependencies:
-      undici-types: 6.19.8
+      undici-types: 6.20.0
 
   '@types/normalize-package-data@2.4.4': {}
 
@@ -5876,7 +5876,7 @@ snapshots:
 
   underscore@1.13.7: {}
 
-  undici-types@6.19.8: {}
+  undici-types@6.20.0: {}
 
   undici@5.29.0:
     dependencies:
@@ -5954,13 +5954,13 @@ snapshots:
       '@types/unist': 3.0.3
       vfile-message: 4.0.2
 
-  vite@5.4.14(@types/node@20.17.25)(less@4.2.2)(terser@5.39.0):
+  vite@5.4.14(@types/node@22.13.14)(less@4.2.2)(terser@5.39.0):
     dependencies:
       esbuild: 0.21.5
       postcss: 8.5.3
       rollup: 4.36.0
     optionalDependencies:
-      '@types/node': 20.17.25
+      '@types/node': 22.13.14
       fsevents: 2.3.3
       less: 4.2.2
       terser: 5.39.0
