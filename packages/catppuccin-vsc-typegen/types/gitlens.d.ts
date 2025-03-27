@@ -280,6 +280,16 @@ export interface GitLensColors {
   "gitlens.graphScrollMarkerLocalBranchesColor": string;
 
   /**
+   * Specifies the color marking pull requests on the minimap of the _Commit Graph_
+   */
+  "gitlens.graphMinimapMarkerPullRequestsColor": string;
+
+  /**
+   * Specifies the color marking pull requests on the scrollbar of the _Commit Graph_
+   */
+  "gitlens.graphScrollMarkerPullRequestsColor": string;
+
+  /**
    * Specifies the color marking remote branches on the minimap of the _Commit Graph_
    */
   "gitlens.graphMinimapMarkerRemoteBranchesColor": string;
@@ -308,4 +318,34 @@ export interface GitLensColors {
    * Specifies the color marking tags on the scrollbar of the _Commit Graph_
    */
   "gitlens.graphScrollMarkerTagsColor": string;
+
+  /**
+   * Specifies the color of the _Launchpad_ indicator icon when the priority is mergeable
+   */
+  "gitlens.launchpadIndicatorMergeableColor": string;
+
+  /**
+   * Specifies the color of the _Launchpad_ indicator icon in the hover when the priority is mergeable
+   */
+  "gitlens.launchpadIndicatorMergeableHoverColor": string;
+
+  /**
+   * Specifies the color of the _Launchpad_ indicator icon when the priority is blocked
+   */
+  "gitlens.launchpadIndicatorBlockedColor": string;
+
+  /**
+   * Specifies the color of the _Launchpad_ indicator icon in the hover when the priority is blocked
+   */
+  "gitlens.launchpadIndicatorBlockedHoverColor": string;
+
+  /**
+   * Specifies the color of the _Launchpad_ indicator icon when the priority is follow-up or needs review
+   */
+  "gitlens.launchpadIndicatorAttentionColor": string;
+
+  /**
+   * Specifies the color of the _Launchpad_ indicator icon in the hover when the priority is follow-up or needs review
+   */
+  "gitlens.launchpadIndicatorAttentionHoverColor": string;
 }
