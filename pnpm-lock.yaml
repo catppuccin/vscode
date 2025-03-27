@@ -9,9 +9,9 @@ catalogs:
     '@catppuccin/palette':
       specifier: ^1.7.1
       version: 1.7.1
-    '@tsconfig/node20':
-      specifier: ^20.1.4
-      version: 20.1.4
+    '@tsconfig/node22':
+      specifier: ^22.0.1
+      version: 22.0.1
     '@types/node':
       specifier: ^20.17.25
       version: 20.17.25
@@ -38,9 +38,9 @@ importers:
       keytar:
         built: false
     devDependencies:
-      '@tsconfig/node20':
+      '@tsconfig/node22':
         specifier: 'catalog:'
-        version: 20.1.4
+        version: 22.0.1
       '@types/node':
         specifier: 'catalog:'
         version: 20.17.25
@@ -95,9 +95,9 @@ importers:
       '@catppuccin/vsc-typegen':
         specifier: workspace:*
         version: link:../catppuccin-vsc-typegen
-      '@tsconfig/node20':
+      '@tsconfig/node22':
         specifier: 'catalog:'
-        version: 20.1.4
+        version: 22.0.1
       '@types/node':
         specifier: 'catalog:'
         version: 20.17.25
@@ -158,9 +158,9 @@ importers:
       '@storybook/web-components-vite':
         specifier: ^8.6.7
         version: 8.6.7(lit@3.2.1)(storybook@8.6.7(prettier@3.5.3))(vite@5.4.14(@types/node@20.17.25)(less@4.2.2)(terser@5.39.0))
-      '@tsconfig/node20':
+      '@tsconfig/node22':
         specifier: 'catalog:'
-        version: 20.1.4
+        version: 22.0.1
       '@types/node':
         specifier: 'catalog:'
         version: 20.17.25
@@ -210,9 +210,9 @@ importers:
         specifier: 'catalog:'
         version: 1.7.1
     devDependencies:
-      '@tsconfig/node20':
+      '@tsconfig/node22':
         specifier: 'catalog:'
-        version: 20.1.4
+        version: 22.0.1
       '@types/node':
         specifier: 'catalog:'
         version: 20.17.25
@@ -944,8 +944,8 @@ packages:
       lit: ^2.0.0 || ^3.0.0
       storybook: ^8.6.7
 
-  '@tsconfig/node20@20.1.4':
-    resolution: {integrity: sha512-sqgsT69YFeLWf5NtJ4Xq/xAF8p4ZQHlmGW74Nu2tD4+g5fAsposc4ZfaaPixVu4y01BEiDCWLRDCvDM5JOsRxg==}
+  '@tsconfig/node22@22.0.1':
+    resolution: {integrity: sha512-VkgOa3n6jvs1p+r3DiwBqeEwGAwEvnVCg/hIjiANl5IEcqP3G0u5m8cBJspe1t9qjZRlZ7WFgqq5bJrGdgAKMg==}
 
   '@types/eslint@9.6.1':
     resolution: {integrity: sha512-FXx2pKgId/WyYo2jXw63kk7/+TY7u7AziEJxJAnSFzHlqTAS3Ync6SvgYAN/k4/PQpnnVuzoMuVnByKK2qp0ag==}
@@ -3725,7 +3725,7 @@ snapshots:
       tiny-invariant: 1.3.3
       ts-dedent: 2.2.0
 
-  '@tsconfig/node20@20.1.4': {}
+  '@tsconfig/node22@22.0.1': {}
 
   '@types/eslint@9.6.1':
     dependencies:

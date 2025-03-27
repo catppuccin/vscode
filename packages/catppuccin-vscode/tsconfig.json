@@ -1,8 +1,8 @@
 {
-  "extends": "@tsconfig/node20/tsconfig.json",
+  "extends": "@tsconfig/node22/tsconfig.json",
   "compilerOptions": {
     "module": "esnext",
-    "moduleResolution": "Node",
+    "moduleResolution": "node",
     "noEmit": true,
     "paths": {
       "@/*": ["../catppuccin-vsc/src/*"]

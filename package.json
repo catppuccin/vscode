@@ -35,7 +35,7 @@
     "husky": "^9.0.11",
     "lint-staged": "^15.2.2",
     "prettier": "^3.2.5",
-    "@tsconfig/node20": "catalog:",
+    "@tsconfig/node22": "catalog:",
     "@types/node": "catalog:",
     "@vscode/vsce": "catalog:",
     "eslint": "catalog:",

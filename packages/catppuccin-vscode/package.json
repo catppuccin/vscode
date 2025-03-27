@@ -35,7 +35,7 @@
     "@catppuccin/palette": "catalog:"
   },
   "devDependencies": {
-    "@tsconfig/node20": "catalog:",
+    "@tsconfig/node22": "catalog:",
     "@types/node": "catalog:",
     "catppuccin-vsc": "workspace:*",
     "tsup": "catalog:",
