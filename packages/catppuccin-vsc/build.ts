@@ -3,13 +3,20 @@ import { createVSIX } from "@vscode/vsce";
 import { build } from "tsup";
 import { getFlag } from "type-flag";
 
-import updatePackageJson from "@/hooks/updatePackageJson";
+import { updatePackageJson, readPackageJsonVersion } from "@/hooks/packageJson";
 import generateThemes from "@/hooks/generateThemes";
 
 const development = getFlag("--dev", Boolean);
 
 await generateThemes();
-const packageJson = await updatePackageJson();
+
+const packageJsonVersion = await readPackageJsonVersion();
+if (!development) {
+  console.debug(
+    `Regenerating package.json with version "${packageJsonVersion}"`,
+  );
+  await updatePackageJson();
+}
 
 await build({
   clean: true,
@@ -20,7 +27,7 @@ await build({
   target: "node16",
 });
 
-const packagePath = `catppuccin-vsc-${packageJson.version}.vsix`;
+const packagePath = `catppuccin-vsc-${packageJsonVersion}.vsix`;
 
 await createVSIX({ dependencies: false, packagePath });
 

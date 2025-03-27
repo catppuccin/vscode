@@ -284,9 +284,11 @@ If you have any questions regarding this port, feel free to [open an issue](http
 ## Development
 
 1. Clone and open this repository in VSCode.
-2. Launch a new instance from "Run and Debug". This will spawn a new instance, which will have the current build of the theme available.
-3. Make modifications to the JSON files in `./themes` to see the changes immediately.
-4. To preserve changes, they have to be edited in `./src/theme/*.ts`, since the theme builds the JSON files from there.
+2. Launch the "Debug & Watch Files" configuration from "Run and Debug". This
+   will spawn a new instance and also start a task watching the files in `./src`.
+   The watch task allows for the theme to be hot reloaded based on changes to the
+   TypeScript instead of the generated JSON.
+3. Make modifications in `./src` to see the changes immediately.
 
 ## 💝 Thanks to
 

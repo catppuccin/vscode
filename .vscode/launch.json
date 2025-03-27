@@ -2,12 +2,26 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "Debug VSCode core extension",
+      "name": "Watch Files",
+      "type": "node-terminal",
+      "request": "launch",
+      "command": "pnpm --filter catppuccin-vsc core:watch"
+    },
+    {
+      "name": "Debug Extension",
       "type": "extensionHost",
       "request": "launch",
-      "preLaunchTask": "npm: core:dev - packages/catppuccin-vsc",
-      "args": ["--extensionDevelopmentPath=${workspaceFolder}"],
-      "outFiles": ["${workspaceFolder}/packages/core/dist/*.js"]
+      "args": [
+        "--extensionDevelopmentPath=${workspaceFolder}/packages/catppuccin-vsc"
+      ],
+      "outFiles": ["${workspaceFolder}/packages/catppuccin-vsc/dist/*.js"]
+    }
+  ],
+  "compounds": [
+    {
+      "name": "Debug & Watch Files",
+      "configurations": ["Watch Files", "Debug Extension"],
+      "stopAll": true
     }
   ]
 }
