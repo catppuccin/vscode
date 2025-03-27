@@ -140,9 +140,6 @@ importers:
       '@catppuccin/vscode':
         specifier: workspace:*
         version: link:../catppuccin-vscode
-      '@fontsource/jetbrains-mono':
-        specifier: ^5.2.5
-        version: 5.2.5
       '@storybook/addon-essentials':
         specifier: ^8.6.7
         version: 8.6.7(@types/react@19.0.12)(storybook@8.6.7(prettier@3.5.3))
@@ -474,9 +471,6 @@ packages:
   '@fastify/busboy@2.1.1':
     resolution: {integrity: sha512-vBZP4NlzfOlerQTnba4aqZoMhE/a9HY7HRqoOPaETQcSQuWEIyZMHGfVu6w9wGtGK5fED5qRs2DteVCjOH60sA==}
     engines: {node: '>=14'}
-
-  '@fontsource/jetbrains-mono@5.2.5':
-    resolution: {integrity: sha512-TPZ9b/uq38RMdrlZZkl0RwN8Ju9JxuqMETrw76pUQFbGtE1QbwQaNsLlnUrACNNBNbd0NZRXiJJSkC8ajPgbew==}
 
   '@humanwhocodes/config-array@0.13.0':
     resolution: {integrity: sha512-DZLEEqFWQFiyK6h5YIeynKx7JlvCYWL0cImfSRXZ9l4Sg2efkFGTuFf6vzXjK1cq6IYkU+Eg/JizXw+TD2vRNw==}
@@ -3171,8 +3165,6 @@ snapshots:
   '@eslint/js@8.57.1': {}
 
   '@fastify/busboy@2.1.1': {}
-
-  '@fontsource/jetbrains-mono@5.2.5': {}
 
   '@humanwhocodes/config-array@0.13.0':
     dependencies:

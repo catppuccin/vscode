@@ -1,7 +1,7 @@
 @import "@catppuccin/palette/css/catppuccin.css";
 
 .shiki {
-  font-family: "JetBrains Mono", monospace;
+  font-family: monospace;
   font-size: 200%;
 }
 
