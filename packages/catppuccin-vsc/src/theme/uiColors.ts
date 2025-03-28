@@ -137,7 +137,6 @@ export const getUiColors = (
     "testing.iconSkipped.retired": palette.subtext0,
     "testing.peekBorder": accent,
     "testing.peekHeaderBackground": palette.surface2,
-    "testing.message.error.decorationForeground": opacity(palette.red, 0.8),
     "testing.message.error.lineBackground": opacity(palette.red, 0.15),
     "testing.message.info.decorationForeground": opacity(palette.green, 0.8),
     "testing.message.info.lineBackground": opacity(palette.green, 0.15),
@@ -149,7 +148,7 @@ export const getUiColors = (
     "testing.uncoveredBranchBackground": opacity(palette.red, 0.2),
     "testing.uncoveredBackground": opacity(palette.red, 0.2),
     "testing.uncoveredBorder": transparent,
-    "testing.uncoveredGutterBackground": opacity(palette.red, 0.2),
+    "testing.uncoveredGutterBackground": opacity(palette.red, 0.25),
     "testing.coverCountBadgeBackground": transparent,
     "testing.coverCountBadgeForeground": accent,
 
