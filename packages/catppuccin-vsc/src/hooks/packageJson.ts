@@ -25,21 +25,25 @@ const configuration = (version: string) => {
     title: "Catppuccin",
     properties: {
       "catppuccin.boldKeywords": {
+        scope: "application",
         type: "boolean",
         default: true,
         markdownDescription: "Controls whether to use **bold** for keywords.",
       },
       "catppuccin.italicComments": {
+        scope: "application",
         type: "boolean",
         default: true,
         markdownDescription: "Controls whether to use *italics* for comments.",
       },
       "catppuccin.italicKeywords": {
+        scope: "application",
         type: "boolean",
         default: true,
         markdownDescription: "Controls whether to use *italics* for keywords.",
       },
       "catppuccin.colorOverrides": {
+        scope: "application",
         type: "object",
         default: {},
         markdownDescription:
@@ -47,6 +51,7 @@ const configuration = (version: string) => {
         $ref: `https://esm.sh/gh/catppuccin/vscode@catppuccin-vsc-v${version}/packages/catppuccin-vsc/schemas/colorOverrides.schema.json`,
       },
       "catppuccin.customUIColors": {
+        scope: "application",
         type: "object",
         default: {},
         markdownDescription:
@@ -54,12 +59,14 @@ const configuration = (version: string) => {
         $ref: `https://esm.sh/gh/catppuccin/vscode@catppuccin-vsc-v${version}/packages/catppuccin-vsc/schemas/customUIColors.schema.json`,
       },
       "catppuccin.accentColor": {
+        scope: "application",
         type: "string",
         default: "mauve",
         description: "Controls which accent color to use.",
         enum: accents,
       },
       "catppuccin.workbenchMode": {
+        scope: "application",
         type: "string",
         default: "default",
         description: "Controls how the workbench should be styled.",
@@ -71,6 +78,7 @@ const configuration = (version: string) => {
         ],
       },
       "catppuccin.bracketMode": {
+        scope: "application",
         type: "string",
         default: "rainbow",
         description: "Controls how bracket pairs should be themed",
@@ -83,12 +91,14 @@ const configuration = (version: string) => {
         ],
       },
       "catppuccin.extraBordersEnabled": {
+        scope: "application",
         type: "boolean",
         default: false,
         description:
           "Controls whether borders should be enabled on some additional UI elements.",
       },
       "catppuccin.syncWithIconPack": {
+        scope: "application",
         type: "boolean",
         default: true,
         markdownDescription:
