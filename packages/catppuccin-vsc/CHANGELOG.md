@@ -1,5 +1,22 @@
 # Changelog
 
+## [3.17.0](https://github.com/catppuccin/vscode/compare/catppuccin-vsc-v3.16.1...catppuccin-vsc-v3.17.0) (2025-03-28)
+
+
+### Features
+
+* theme `testing*` config keys ([#458](https://github.com/catppuccin/vscode/issues/458)) ([f73aa19](https://github.com/catppuccin/vscode/commit/f73aa19d74010a33a9829e0ddc866ec63c6b0fad))
+
+
+### Bug Fixes
+
+* specify `scope: application` for all settings ([#507](https://github.com/catppuccin/vscode/issues/507)) ([c62e35f](https://github.com/catppuccin/vscode/commit/c62e35fdac952983c60a2d76cb3bad93955fe9f7))
+* **tokens/python:** mauve builtin types, peach language constants ([#477](https://github.com/catppuccin/vscode/issues/477)) ([b8e5951](https://github.com/catppuccin/vscode/commit/b8e5951a8ad03268854ef29780ce93fe9ea14294))
+* **tokens:** consistently style typst headings ([#506](https://github.com/catppuccin/vscode/issues/506)) ([44925dd](https://github.com/catppuccin/vscode/commit/44925dd1405673da973e49020ce0228a450ea93c))
+* **ui:** increase diff contrast ([406ac5b](https://github.com/catppuccin/vscode/commit/406ac5b7b4bcdb449d5e7f1e23b85ab78bfc5753))
+* **ui:** use `mantle` for codeblock backgrounds ([#495](https://github.com/catppuccin/vscode/issues/495)) ([ea796fd](https://github.com/catppuccin/vscode/commit/ea796fdd9ed77c62c894b2216b948c905248a553))
+* update JSON schema for `customUIColors` ([#485](https://github.com/catppuccin/vscode/issues/485)) ([9bcff9e](https://github.com/catppuccin/vscode/commit/9bcff9eba7ab54a842e60ab7b68f3ee6f5bae34c))
+
 ## [3.16.1](https://github.com/catppuccin/vscode/compare/catppuccin-vsc-v3.16.0...catppuccin-vsc-v3.16.1) (2025-02-11)
 
 
