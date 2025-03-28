@@ -35,7 +35,7 @@ export const getUiColors = (
     // Text colors
     "textBlockQuote.background": palette.mantle,
     "textBlockQuote.border": palette.crust,
-    "textCodeBlock.background": palette.base,
+    "textCodeBlock.background": palette.mantle,
     "textLink.activeForeground": palette.sky,
     "textLink.foreground": palette.blue,
     "textPreformat.foreground": palette.text,
@@ -154,8 +154,8 @@ export const getUiColors = (
     "testing.coverCountBadgeForeground": accent,
 
     "diffEditor.border": palette.surface2,
-    "diffEditor.insertedTextBackground": opacity(palette.green, 0.1),
-    "diffEditor.removedTextBackground": opacity(palette.red, 0.1),
+    "diffEditor.insertedTextBackground": opacity(palette.green, 0.2),
+    "diffEditor.removedTextBackground": opacity(palette.red, 0.2),
     "diffEditor.insertedLineBackground": opacity(palette.green, 0.15),
     "diffEditor.removedLineBackground": opacity(palette.red, 0.15),
     "diffEditor.diagonalFill": opacity(palette.surface2, 0.6),

@@ -5,7 +5,7 @@
   "displayName": "Catppuccin for VSCode",
   "publisher": "Catppuccin",
   "description": "🦌 Soothing pastel theme for VSCode",
-  "version": "3.16.0",
+  "version": "3.16.1",
   "type": "module",
   "engines": {
     "vscode": "^1.80.0",
@@ -56,33 +56,39 @@
       "title": "Catppuccin",
       "properties": {
         "catppuccin.boldKeywords": {
+          "scope": "application",
           "type": "boolean",
           "default": true,
           "markdownDescription": "Controls whether to use **bold** for keywords."
         },
         "catppuccin.italicComments": {
+          "scope": "application",
           "type": "boolean",
           "default": true,
           "markdownDescription": "Controls whether to use *italics* for comments."
         },
         "catppuccin.italicKeywords": {
+          "scope": "application",
           "type": "boolean",
           "default": true,
           "markdownDescription": "Controls whether to use *italics* for keywords."
         },
         "catppuccin.colorOverrides": {
+          "scope": "application",
           "type": "object",
           "default": {},
           "markdownDescription": "Custom color overrides. Assign your own hex codes to palette colors. See [the docs](https://github.com/catppuccin/vscode#override-palette-colors) for reference.",
-          "$ref": "https://esm.sh/gh/catppuccin/vscode@catppuccin-vsc-v3.15.2/packages/catppuccin-vsc/schemas/colorOverrides.schema.json"
+          "$ref": "https://esm.sh/gh/catppuccin/vscode@catppuccin-vsc-v3.16.1/packages/catppuccin-vsc/schemas/colorOverrides.schema.json"
         },
         "catppuccin.customUIColors": {
+          "scope": "application",
           "type": "object",
           "default": {},
           "markdownDescription": "Customize UI colors. Map `workbench.colorCustomizations` to palette colors. See [the docs](https://github.com/catppuccin/vscode#use-palette-colors-on-workbench-elements-ui) for reference.",
-          "$ref": "https://esm.sh/gh/catppuccin/vscode@catppuccin-vsc-v3.15.2/packages/catppuccin-vsc/schemas/customUIColors.schema.json"
+          "$ref": "https://esm.sh/gh/catppuccin/vscode@catppuccin-vsc-v3.16.1/packages/catppuccin-vsc/schemas/customUIColors.schema.json"
         },
         "catppuccin.accentColor": {
+          "scope": "application",
           "type": "string",
           "default": "mauve",
           "description": "Controls which accent color to use.",
@@ -104,6 +110,7 @@
           ]
         },
         "catppuccin.workbenchMode": {
+          "scope": "application",
           "type": "string",
           "default": "default",
           "description": "Controls how the workbench should be styled.",
@@ -119,6 +126,7 @@
           ]
         },
         "catppuccin.bracketMode": {
+          "scope": "application",
           "type": "string",
           "default": "rainbow",
           "description": "Controls how bracket pairs should be themed",
@@ -136,11 +144,13 @@
           ]
         },
         "catppuccin.extraBordersEnabled": {
+          "scope": "application",
           "type": "boolean",
           "default": false,
           "description": "Controls whether borders should be enabled on some additional UI elements."
         },
         "catppuccin.syncWithIconPack": {
+          "scope": "application",
           "type": "boolean",
           "default": true,
           "markdownDescription": "Controls whether to sync the currently active Catppuccin flavor with the [Catppuccin Icon Pack](https://github.com/catppuccin/vscode-icons)"
@@ -167,24 +177,25 @@
     "isPreReleaseVersion": false
   },
   "devDependencies": {
-    "@actions/core": "^1.10.1",
-    "@catppuccin/palette": "^1.7.1",
-    "@catppuccin/vsc-typegen": "workspace:*",
-    "@tsconfig/node18": "^18.2.4",
-    "@types/node": "^20.12.7",
+    "@actions/core": "^1.11.1",
     "@types/tinycolor2": "^1.4.6",
     "@types/vscode": "~1.80.0",
-    "@vscode/vsce": "^3.0.0",
     "tinycolor2": "^1.6.0",
-    "tsup": "^8.0.2",
-    "tsx": "^4.7.2",
     "type-flag": "^3.0.0",
-    "typescript": "^5.4.5"
+    "@catppuccin/palette": "catalog:",
+    "@catppuccin/vsc-typegen": "workspace:*",
+    "@tsconfig/node22": "catalog:",
+    "@types/node": "catalog:",
+    "@vscode/vsce": "catalog:",
+    "tsup": "catalog:",
+    "tsx": "catalog:",
+    "typescript": "catalog:"
   },
   "scripts": {
     "core:build": "tsx build.ts",
-    "core:build-ads": "tsx build.ts --ads",
-    "core:dev": "tsx build.ts --dev"
+    "core:dev": "tsx build.ts --dev",
+    "core:watch": "tsx watch build.ts --dev",
+    "schema:ui": "tsx src/hooks/updateSchemas.ts"
   },
   "homepage": "https://github.com/catppuccin/vscode/tree/main/packages/catppuccin-vsc#readme"
 }

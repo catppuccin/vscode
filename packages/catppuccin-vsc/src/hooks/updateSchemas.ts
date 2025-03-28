@@ -4,8 +4,12 @@ import { writeFile } from "node:fs/promises";
 import path from "node:path";
 import { flavors } from "@catppuccin/palette";
 
-import { repoRoot, vscodeSchemasRoot } from "./constants";
-import { accents } from "./updatePackageJson";
+import { repoRoot } from "./constants";
+import { accents } from "./packageJson";
+
+// VSCode 1.98.2
+const vscodeSchemasRoot =
+  "https://raw.githubusercontent.com/ota-meshi/extract-vscode-schemas/bd18db29edb183a0d8b0b8250b22dbd4428a0da8/resources/vscode/schemas/";
 
 const ctpColors = flavors.mocha.colorEntries.map(([name]) => name);
 
@@ -47,26 +51,24 @@ const customUiColorsSchema = (workbenchColors: any) => {
   };
 };
 
-const main = async () => {
-  await fetch(vscodeSchemasRoot + "workbench-colors.json")
-    .then((data) => data.json())
-    .then((data: any) => {
-      const workbenchColors = {} as {
-        [name: string]: { description: string; $ref: string };
+await fetch(vscodeSchemasRoot + "workbench-colors.json")
+  .then((data) => data.json())
+  .then((data: any) => {
+    const workbenchColors = {} as {
+      [name: string]: { description: string; $ref: string };
+    };
+    for (const [name, { description }] of Object.entries<any>(
+      data.properties,
+    )) {
+      workbenchColors[name] = {
+        description,
+        $ref: "#/$defs/catppuccinColor",
       };
-      for (const [name, description] of Object.entries<any>(data.properties)) {
-        workbenchColors[name] = {
-          description,
-          $ref: "#/$defs/catppuccinColor",
-        };
-      }
-      const schema = customUiColorsSchema(workbenchColors);
-      writeFile(
-        path.join(repoRoot, "schemas/customUIColors.schema.json"),
-        JSON.stringify(schema, undefined, 2) + "\n",
-        "utf8",
-      );
-    });
-};
-
-export default main;
+    }
+    const schema = customUiColorsSchema(workbenchColors);
+    writeFile(
+      path.join(repoRoot, "schemas/customUIColors.schema.json"),
+      JSON.stringify(schema, undefined, 2) + "\n",
+      "utf8",
+    );
+  });

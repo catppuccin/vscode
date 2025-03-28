@@ -7,11 +7,4 @@ storybook-static/
 *.tgz
 *.vsix
 *.zip
-
-# yarn v4
-.yarn-error.log
-.yarn/*
-!.yarn/plugins
-!.yarn/sdks
-!.yarn/versions
-.pnp.*
+.vscode/ltex.dictionary*

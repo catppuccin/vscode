@@ -1,7 +1,7 @@
 /**
  * This file was automatically generated.
  * DO NOT MODIFY IT BY HAND.
- * Instead, run `yarn run updateVSCtypes` to regenerate this file.
+ * Instead, run `pnpm --filter @catppuccin/vsc-typegen typegen:update` to regenerate this file.
  */
 export interface ErrorLensColors {
   /**
@@ -13,6 +13,11 @@ export interface ErrorLensColors {
    * Background color of the error message.
    */
   "errorLens.errorMessageBackground": string;
+
+  /**
+   * Background color of the error range (when errorLens.problemRangeDecorationEnabled setting enabled).
+   */
+  "errorLens.errorRangeBackground": string;
 
   /**
    * Background color of the entire line containing error (Only in light themes).
@@ -40,6 +45,11 @@ export interface ErrorLensColors {
   "errorLens.warningMessageBackground": string;
 
   /**
+   * Background color of the warning range (when errorLens.problemRangeDecorationEnabled setting enabled).
+   */
+  "errorLens.warningRangeBackground": string;
+
+  /**
    * Background color used to highlight lines containing warnings (Only in light themes).
    */
   "errorLens.warningBackgroundLight": string;
@@ -65,6 +75,11 @@ export interface ErrorLensColors {
   "errorLens.infoMessageBackground": string;
 
   /**
+   * Background color of the info range (when errorLens.problemRangeDecorationEnabled setting enabled).
+   */
+  "errorLens.infoRangeBackground": string;
+
+  /**
    * Background color used to highlight lines containing info (Only in light themes).
    */
   "errorLens.infoBackgroundLight": string;
@@ -88,6 +103,11 @@ export interface ErrorLensColors {
    * Background color of the hint message.
    */
   "errorLens.hintMessageBackground": string;
+
+  /**
+   * Background color of the hint range (when errorLens.problemRangeDecorationEnabled setting enabled).
+   */
+  "errorLens.hintRangeBackground": string;
 
   /**
    * Background color used to highlight lines containing hints (Only in light themes).

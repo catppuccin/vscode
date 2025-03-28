@@ -23,6 +23,7 @@ import python from "./python";
 import regex from "./regex";
 import rust from "./rust";
 import shell from "./shell";
+import typst from "./typst";
 
 export default function tokens(context: ThemeContext): TextmateColors {
   const { options, palette } = context;
@@ -52,7 +53,7 @@ export default function tokens(context: ThemeContext): TextmateColors {
       name: "Comments",
       scope: ["comment", "punctuation.definition.comment"],
       settings: {
-        foreground: palette.overlay0,
+        foreground: palette.overlay2,
         fontStyle: options.italicComments ? "italic" : "",
       },
     },
@@ -306,6 +307,7 @@ export default function tokens(context: ThemeContext): TextmateColors {
       regex,
       rust,
       shell,
+      typst,
     ].flatMap((element) => element(context)),
   ];
 }

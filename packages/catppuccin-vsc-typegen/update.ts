@@ -2,28 +2,36 @@
 import path from "node:path";
 import { writeFileSync } from "node:fs";
 import { compile, JSONSchema } from "json-schema-to-typescript";
+
+// v1.98.2
 const vscodeSchemasRoot =
-  "https://raw.githubusercontent.com/ota-meshi/extract-vscode-schemas/main/resources/vscode/schemas/";
+  "https://raw.githubusercontent.com/ota-meshi/extract-vscode-schemas/bd18db29edb183a0d8b0b8250b22dbd4428a0da8/resources/vscode/schemas/";
 
 const bannerComment = `/**
  * This file was automatically generated.
  * DO NOT MODIFY IT BY HAND.
- * Instead, run \`yarn run updateVSCtypes\` to regenerate this file.
+ * Instead, run \`pnpm --filter @catppuccin/vsc-typegen typegen:update\` to regenerate this file.
  */`;
 
 const mappings = [
-  {
-    schema: vscodeSchemasRoot + "token-styling.json",
-    name: "SemanticTokens",
-    fname: "token-styling.d.ts",
-    kind: "jsonschema",
-  },
-  {
-    schema: vscodeSchemasRoot + "textmate-colors.json",
-    name: "TextmateColors",
-    fname: "textmate-colors.d.ts",
-    kind: "jsonschema",
-  },
+  // json-schema-to-typescript breaks on new schemas because of an internal
+  // rule where it cannot accept both "definitions" and "$defs" and therefore
+  // refuses to parse the file. The following commented out schemas must
+  // be converted to Typescript manually.
+  //
+  // ref: https://github.com/bcherny/json-schema-to-typescript/blob/a5834aa990a58b98a02824e1521f27d4235e1e12/src/normalizer.ts#L210-L215
+  // {
+  //   schema: vscodeSchemasRoot + "token-styling.json",
+  //   name: "SemanticTokens",
+  //   fname: "token-styling.d.ts",
+  //   kind: "jsonschema",
+  // },
+  // {
+  //   schema: vscodeSchemasRoot + "textmate-colors.json",
+  //   name: "TextmateColors",
+  //   fname: "textmate-colors.d.ts",
+  //   kind: "jsonschema",
+  // },
   {
     schema: vscodeSchemasRoot + "workbench-colors.json",
     name: "WorkbenchColors",
@@ -32,21 +40,21 @@ const mappings = [
   },
   {
     schema:
-      "https://raw.githubusercontent.com/usernamehw/vscode-error-lens/v3.13.0/package.json",
+      "https://raw.githubusercontent.com/usernamehw/vscode-error-lens/v3.24.0/package.json",
     name: "ErrorLensColors",
     fname: "errorlens.d.ts",
     kind: "extension-packagejson",
   },
   {
     schema:
-      "https://raw.githubusercontent.com/gitkraken/vscode-gitlens/v14.4.0/package.json",
+      "https://raw.githubusercontent.com/gitkraken/vscode-gitlens/v16.3.3/package.json",
     name: "GitLensColors",
     fname: "gitlens.d.ts",
     kind: "extension-packagejson",
   },
   {
     schema:
-      "https://github.com/microsoft/vscode-pull-request-github/raw/v0.77.2023112709/package.json",
+      "https://github.com/microsoft/vscode-pull-request-github/raw/v0.106.0/package.json",
     name: "GitHubPullRequestColors",
     fname: "github-pull-request.d.ts",
     kind: "extension-packagejson",

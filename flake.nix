@@ -7,28 +7,7 @@
   in {
     packages = forAllSystems (pkgs: rec {
       default = catppuccin-vsc;
-      catppuccin-vsc = pkgs.callPackage ./nix {};
+      catppuccin-vsc = throw "catppuccin/vscode: This VSCode extension has been moved to catppuccin/nix.";
     });
-
-    overlays.default = final: prev: let
-      pkg = inputs.self.packages.${prev.stdenv.system}.default;
-    in {
-      # create a new package
-      catppuccin-vsc = pkg;
-      # overwrite the vscode-extensions package
-      vscode-extensions =
-        prev.vscode-extensions
-        // {
-          catppuccin =
-            (prev.vscode-extensions.catppuccin or {})
-            // {
-              catppuccin-vsc = pkg;
-            };
-        };
-    };
-
-    devShells = forAllSystems (pkgs: {default = import ./nix/shell.nix {inherit pkgs;};});
-
-    formatter = forAllSystems (pkgs: pkgs.alejandra);
   };
 }

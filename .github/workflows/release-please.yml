@@ -36,6 +36,9 @@ jobs:
 
     steps:
       - uses: google-github-actions/release-please-action@e4dc86ba9405554aeba3c6bb2d169500e7d3b4ee # v4
+        with:
+          config-file: .github/release-please-config.json
+          manifest-file: .github/release-please-manifest.json
         id: release
 
     outputs:
@@ -57,20 +60,16 @@ jobs:
         with:
           ref: ${{ github.event.inputs.rev || github.sha }}
 
-      - run: corepack enable
+      - uses: pnpm/action-setup@v4
       - uses: actions/setup-node@39370e3970a6d050c480ffad4ff0ed4d3fdee5af # v4
         with:
-          node-version: 20
-          cache: yarn
-      - run: yarn install --immutable
+          node-version: 22
+          cache: pnpm
+      - run: pnpm i --frozen-lockfile
 
       - name: Build VSCode
         id: build-vscode
-        run: yarn core:build
-
-      - name: Build Azure Data Studio
-        id: build-ads
-        run: yarn core:build-ads
+        run: pnpm --filter catppuccin-vsc core:build
 
       - name: Publish to Visual Studio Marketplace
         working-directory: ./packages/catppuccin-vsc
@@ -100,14 +99,14 @@ jobs:
 
     steps:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
-      - run: corepack enable
+      - uses: pnpm/action-setup@v4
       - uses: actions/setup-node@39370e3970a6d050c480ffad4ff0ed4d3fdee5af # v4
         with:
-          node-version: 20
-          cache: yarn
-      - run: yarn install --immutable
+          node-version: 22
+          cache: pnpm
+      - run: pnpm i --frozen-lockfile
 
-      - run: yarn pack:build
+      - run: pnpm --filter catppuccin-vsc-pack pack:build
 
       - name: Publish to Visual Studio Marketplace
         working-directory: ./packages/catppuccin-vsc-pack
@@ -133,19 +132,19 @@ jobs:
 
     steps:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
-      - run: corepack enable
+      - uses: pnpm/action-setup@v4
       - uses: actions/setup-node@39370e3970a6d050c480ffad4ff0ed4d3fdee5af # v4
         with:
-          node-version: 20
-          cache: yarn
+          node-version: 22
+          cache: pnpm
           registry-url: https://registry.npmjs.org
-      - run: yarn install --immutable
+      - run: pnpm i --frozen-lockfile
 
       - name: Publish compiled NPM package
         working-directory: ./packages/catppuccin-vscode
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-        run: npm publish --provenance
+        run: pnpm publish
 
   mark-vscode-theme-as-latest:
     runs-on: ubuntu-latest
