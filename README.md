@@ -73,7 +73,7 @@ This means that you will have to either:
     enable = true;
     # optionally configure the extension settings, defaults are shown below:
     vscode = {
-      accent = "pink";
+      accent = "mauve";
       settings = {
         boldKeywords = true;
         italicComments = true;
