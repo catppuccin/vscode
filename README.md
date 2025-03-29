@@ -71,7 +71,7 @@ This means that you will have to either:
   # in your home-manager options:
   catppuccin = {
     enable = true;
-    # optionally change the settings of the vscode port
+    # optionally configure the extension settings, defaults are shown below:
     vscode = {
       accent = "pink";
       settings = {
