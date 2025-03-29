@@ -83,7 +83,6 @@ This means that you will have to either:
         workbenchMode = "default";
         bracketMode = "rainbow";
         extraBordersEnabled = false;
-        ...
       };
     };
   };
