@@ -15,6 +15,9 @@ catalogs:
     '@types/node':
       specifier: ^22.0.0
       version: 22.13.14
+    '@vscode/vsce':
+      specifier: ^3.3.0
+      version: 3.3.2
     eslint:
       specifier: ^8.57.1
       version: 8.57.1
@@ -40,7 +43,7 @@ importers:
         version: 22.0.1
       '@types/node':
         specifier: 'catalog:'
-        version: 22.13.14
+        version: 22.13.17
       '@typescript-eslint/eslint-plugin':
         specifier: ^8.0.0
         version: 8.28.0(@typescript-eslint/parser@8.28.0(eslint@8.57.1)(typescript@5.8.2))(eslint@8.57.1)(typescript@5.8.2)
@@ -273,8 +276,12 @@ packages:
     resolution: {integrity: sha512-4IXXzcCdLdlXuCG+8UKEwLA1T1NHqUfanhXYHiQTn+6sfWCZXduqbtXDGceg3Ce5QxTGo7EqmbV6Bi+aqKuClQ==}
     engines: {node: '>=18.0.0'}
 
-  '@azure/msal-browser@4.9.1':
-    resolution: {integrity: sha512-GTKj/2xvgD918xULWRwoJ3kiCCZNzeopxa/nDfMC4o6KzrnuWbT3K1AtIFUxok9yC6VrUOgIZXMygky06xDA1g==}
+  '@azure/msal-browser@4.8.0':
+    resolution: {integrity: sha512-z7kJlMW3IAETyq82LDKJqr++IeOvU728q9lkuTFjEIPUWxnB1OlmuPCF32fYurxOnOnJeFEZxjbEzq8xyP0aag==}
+    engines: {node: '>=0.8.0'}
+
+  '@azure/msal-common@15.3.0':
+    resolution: {integrity: sha512-lh+eZfibGwtQxFnx+mj6cYWn0pwA8tDnn8CBs9P21nC7Uw5YWRwfXaXdVQSMENZ5ojRqR+NzRaucEo4qUvs3pA==}
     engines: {node: '>=0.8.0'}
 
   '@azure/msal-common@15.4.0':
@@ -1082,6 +1089,9 @@ packages:
 
   '@types/node@22.13.14':
     resolution: {integrity: sha512-Zs/Ollc1SJ8nKUAgc7ivOEdIBM8JAKgrqqUYi2J997JuKO7/tpQC+WCetQ1sypiKCQWHdvdg9wBNpUPEWZae7w==}
+
+  '@types/node@22.13.17':
+    resolution: {integrity: sha512-nAJuQXoyPj04uLgu+obZcSmsfOenUg6DxPKogeUy6yNCFwWaj5sBF8/G/pNo8EtBJjAfSVgfIlugR/BCOleO+g==}
 
   '@types/normalize-package-data@2.4.4':
     resolution: {integrity: sha512-37i+OaWTh9qeK4LSHPsyRC7NahnGotNuZvjLSgcPzblpHB3rrCJxAOgI5gCdKm7coonsaX1Of0ILiTcnZjbfxA==}
@@ -3317,7 +3327,7 @@ snapshots:
       '@azure/core-tracing': 1.2.0
       '@azure/core-util': 1.11.0
       '@azure/logger': 1.1.4
-      '@azure/msal-browser': 4.9.1
+      '@azure/msal-browser': 4.8.0
       '@azure/msal-node': 3.4.1
       events: 3.3.0
       jws: 4.0.0
@@ -3331,9 +3341,11 @@ snapshots:
     dependencies:
       tslib: 2.8.1
 
-  '@azure/msal-browser@4.9.1':
+  '@azure/msal-browser@4.8.0':
     dependencies:
-      '@azure/msal-common': 15.4.0
+      '@azure/msal-common': 15.3.0
+
+  '@azure/msal-common@15.3.0': {}
 
   '@azure/msal-common@15.4.0': {}
 
@@ -3969,6 +3981,10 @@ snapshots:
   '@types/mdx@2.0.13': {}
 
   '@types/node@22.13.14':
+    dependencies:
+      undici-types: 6.20.0
+
+  '@types/node@22.13.17':
     dependencies:
       undici-types: 6.20.0
 
