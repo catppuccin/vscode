@@ -22,7 +22,7 @@
     "lint": "eslint . --ext .ts \"$@\" && pnpm g:typecheck",
     "postinstall": "husky && pnpm --filter @catppuccin/vscode compiled:pack"
   },
-  "packageManager": "pnpm@10.7.1",
+  "packageManager": "pnpm@10.8.0",
   "engines": {
     "node": ">=20.0.0"
   },
