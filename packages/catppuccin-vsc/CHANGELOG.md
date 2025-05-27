@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.17.1](https://github.com/catppuccin/vscode/compare/catppuccin-vsc-v3.17.0...catppuccin-vsc-v3.17.1) (2025-05-27)
+
+
+### Bug Fixes
+
+* **less:** set properties to blue to match css ([#550](https://github.com/catppuccin/vscode/issues/550)) ([67bd19a](https://github.com/catppuccin/vscode/commit/67bd19a1d06ebda18bcc8a8902c1c5eb70bd01f8))
+
 ## [3.17.0](https://github.com/catppuccin/vscode/compare/catppuccin-vsc-v3.16.1...catppuccin-vsc-v3.17.0) (2025-03-28)
 
 
