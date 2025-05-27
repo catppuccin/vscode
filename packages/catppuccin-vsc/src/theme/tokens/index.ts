@@ -242,8 +242,11 @@ export default function tokens(context: ThemeContext): TextmateColors {
       },
     },
     {
-      name: "Property names (left hand assignments in json/yaml/css)",
-      scope: "support.type.property-name.css",
+      name: "Property names (left hand assignments in json/yaml/css/less)",
+      scope: [
+        "support.type.property-name.css",
+        "support.type.property-name.less",
+      ],
       settings: {
         foreground: palette.blue,
         fontStyle: "",
