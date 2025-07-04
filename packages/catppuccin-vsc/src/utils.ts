@@ -79,13 +79,10 @@ export const isMutable = async (uri: Uri): Promise<boolean> => {
 export const isFreshInstall = async (
   context: ExtensionContext,
 ): Promise<boolean | "error"> => {
-  console.log("Checking if catppuccin is installed for the first time.");
   const flagUri = Uri.file(context.asAbsolutePath("themes/.flag"));
   if (await fileExists(flagUri)) {
-    console.log("Catppuccin has been installed before.");
     return false;
   } else {
-    console.log("Catppuccin is installed for the first time!");
     return workspace.fs.writeFile(flagUri, Buffer.from("")).then(
       () => true,
       () => "error",
@@ -94,10 +91,8 @@ export const isFreshInstall = async (
 };
 
 export const isDefaultConfig = (): boolean => {
-  console.log("Checking if catppuccin is using default config.");
   const state =
     JSON.stringify(getConfiguration()) === JSON.stringify(defaultOptions);
-  console.log(`Catppuccin is using ${state ? "default" : "custom"} config.`);
 
   return state;
 };
