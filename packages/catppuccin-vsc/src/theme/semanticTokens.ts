@@ -34,6 +34,12 @@ export const getSemanticTokens = (context: ThemeContext): SemanticTokens => {
     "type.defaultLibrary:go": { foreground: palette.mauve },
     "variable.readonly.defaultLibrary:go": { foreground: palette.mauve },
 
+    // Haskell:
+    "enumMember:haskell": { foreground: palette.blue }, // data constructor
+    "enum:haskell": { foreground: palette.yellow }, // type constructor
+    "class:haskell": { foreground: palette.yellow, fontStyle: "" }, // typeclass
+    "interface:haskell": { foreground: palette.pink }, // type family
+
     // TOML syntax
     tomlArrayKey: { foreground: palette.blue, fontStyle: "" },
     tomlTableKey: { foreground: palette.blue, fontStyle: "" },

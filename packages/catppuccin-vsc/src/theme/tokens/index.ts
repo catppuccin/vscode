@@ -9,6 +9,7 @@ import dotenv from "./dotenv";
 import gdscript from "./gdscript";
 import golang from "./golang";
 import graphql from "./graphql";
+import haskell from "./haskell";
 import html from "./html";
 import java from "./java";
 import javascript from "./javascript";
@@ -296,6 +297,7 @@ export default function tokens(context: ThemeContext): TextmateColors {
       gdscript,
       golang,
       graphql,
+      haskell,
       html,
       java,
       javascript,
