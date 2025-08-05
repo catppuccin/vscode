@@ -277,6 +277,15 @@ export const getUiColors = (
     "gitDecoration.stageModifiedResourceForeground": palette.yellow,
     "gitDecoration.submoduleResourceForeground": palette.blue,
     "gitDecoration.untrackedResourceForeground": palette.green,
+    // git colors -> built-in git graph
+    "scmGraph.historyItemRefColor": palette.blue,
+    "scmGraph.historyItemBaseRefColor": palette.peach,
+    "scmGraph.historyItemRemoteRefColor": palette.mauve,
+    "scmGraph.foreground1": palette.yellow,
+    "scmGraph.foreground2": palette.red,
+    "scmGraph.foreground3": palette.green,
+    "scmGraph.foreground4": palette.mauve,
+    "scmGraph.foreground5": palette.teal,
 
     "input.background": palette.surface0,
     "input.border": transparent,
