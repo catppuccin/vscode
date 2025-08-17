@@ -1,5 +1,17 @@
 # Changelog
 
+## [3.18.0](https://github.com/catppuccin/vscode/compare/catppuccin-vsc-v3.17.0...catppuccin-vsc-v3.18.0) (2025-08-17)
+
+
+### Features
+
+* support built-in git scm graph ([#560](https://github.com/catppuccin/vscode/issues/560)) ([8ace444](https://github.com/catppuccin/vscode/commit/8ace4440c7a7608425f9359d7b866669c056e05d))
+
+
+### Bug Fixes
+
+* **less:** set properties to blue to match css ([#550](https://github.com/catppuccin/vscode/issues/550)) ([67bd19a](https://github.com/catppuccin/vscode/commit/67bd19a1d06ebda18bcc8a8902c1c5eb70bd01f8))
+
 ## [3.17.0](https://github.com/catppuccin/vscode/compare/catppuccin-vsc-v3.16.1...catppuccin-vsc-v3.17.0) (2025-03-28)
 
 
