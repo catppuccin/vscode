@@ -47,12 +47,12 @@ const tokens = (context: ThemeContext): TextmateColors => {
     },
     {
       name: "pragma keywords",
-      scope: ["	keyword.other.preprocessor"],
+      scope: ["keyword.other.preprocessor"],
       settings: { foreground: palette.red },
     },
     {
       name: "pragma arguments",
-      scope: ["	keyword.other.preprocessor.extension"],
+      scope: ["keyword.other.preprocessor.extension"],
       settings: { foreground: palette.peach },
     },
     {
