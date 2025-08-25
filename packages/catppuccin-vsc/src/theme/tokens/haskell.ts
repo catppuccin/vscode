@@ -19,7 +19,7 @@ const tokens = (context: ThemeContext): TextmateColors => {
     },
     {
       name: "type constructors",
-      scope: ["entity.name.type", "storage.type"],
+      scope: ["storage.type.haskell"],
       settings: {
         foreground: palette.yellow,
         fontStyle: "italic",
