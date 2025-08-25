@@ -1,5 +1,5 @@
 import type { ThemeContext, ColorName } from "@/types";
-import { opacity } from "@/theme/utils";
+import { opacity } from "@/theme/utilities";
 import { flavors } from "@catppuccin/palette";
 
 type CustomNamedColors = Record<string, string>;

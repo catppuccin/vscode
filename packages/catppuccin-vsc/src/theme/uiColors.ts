@@ -1,5 +1,5 @@
 import type { ThemeContext, WorkbenchColors } from "@/types";
-import { mix, opacity, shade, transparent } from "./utils";
+import { mix, opacity, shade, transparent } from "./utilities";
 import extensions from "./extensions";
 import uiCustomizations from "./ui";
 

@@ -1,5 +1,5 @@
 import type { ErrorLensColors, ThemeContext } from "@/types";
-import { opacity } from "@/theme/utils";
+import { opacity } from "@/theme/utilities";
 
 export default function colors(
   context: ThemeContext,

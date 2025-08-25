@@ -1,4 +1,4 @@
-import { shade } from "@/theme/utils";
+import { shade } from "@/theme/utilities";
 import { ThemeContext, WorkbenchColors } from "@/types";
 
 type PickStartsWith<T extends object, S extends string> = {

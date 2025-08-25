@@ -1,5 +1,5 @@
 import { ThemeContext, WorkbenchColors } from "@/types";
-import { opacity } from "@/theme/utils";
+import { opacity } from "@/theme/utilities";
 
 type WorkbenchPartial = Partial<Record<keyof WorkbenchColors, string>>;
 
