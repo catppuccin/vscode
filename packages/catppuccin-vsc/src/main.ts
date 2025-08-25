@@ -1,6 +1,6 @@
 import { ExtensionContext, Uri, window, workspace } from "vscode";
 import type { ThemePaths } from "./types";
-import * as utils from "./utils";
+import * as utilities from "./utilities";
 
 export const activate = async (context: ExtensionContext) => {
   const base = context.extensionUri;
@@ -11,21 +11,28 @@ export const activate = async (context: ExtensionContext) => {
     mocha: Uri.joinPath(base, "themes", "mocha.json"),
   };
 
-  const config = utils.getConfiguration();
+  const config = utilities.getConfiguration();
 
   // regenerate on a fresh install if non-default config is set
-  if ((await utils.isFreshInstall(context)) && !utils.isDefaultConfig()) {
-    utils.updateThemes(config, paths, utils.UpdateTrigger.FRESH_INSTALL);
+  if (
+    (await utilities.isFreshInstall(context)) &&
+    !utilities.isDefaultConfig()
+  ) {
+    utilities.updateThemes(
+      config,
+      paths,
+      utilities.UpdateTrigger.FRESH_INSTALL,
+    );
   }
 
   context.subscriptions.push(
     workspace.onDidChangeConfiguration((event) => {
       // regenerate the theme files when the config changes
       if (event.affectsConfiguration("catppuccin")) {
-        utils.updateThemes(
-          utils.getConfiguration(),
+        utilities.updateThemes(
+          utilities.getConfiguration(),
           paths,
-          utils.UpdateTrigger.CONFIG_CHANGE,
+          utilities.UpdateTrigger.CONFIG_CHANGE,
         );
       }
       // call the icon pack sync when the config changes
@@ -33,20 +40,20 @@ export const activate = async (context: ExtensionContext) => {
         event.affectsConfiguration("workbench.colorTheme") &&
         config.syncWithIconPack
       ) {
-        utils.syncToIconPack();
+        utilities.syncToIconPack();
       }
     }),
 
     // call the icon pack sync when the theme changes
     window.onDidChangeActiveColorTheme(() => {
       if (config.syncWithIconPack) {
-        utils.syncToIconPack();
+        utilities.syncToIconPack();
       }
     }),
   );
 
   // call the icon pack sync on activation
   if (config.syncWithIconPack) {
-    utils.syncToIconPack();
+    utilities.syncToIconPack();
   }
 };

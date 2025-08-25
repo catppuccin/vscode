@@ -1,5 +1,5 @@
 import type { GitLensColors, ThemeContext } from "@/types";
-import { opacity, shade, transparent } from "@/theme/utils";
+import { opacity, shade, transparent } from "@/theme/utilities";
 
 export default function colors(context: ThemeContext): Partial<GitLensColors> {
   const { palette, options } = context;
