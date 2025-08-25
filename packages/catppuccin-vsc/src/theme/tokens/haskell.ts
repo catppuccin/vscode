@@ -13,11 +13,7 @@ const tokens = (context: ThemeContext): TextmateColors => {
   return [
     {
       name: "data constructors",
-      scope: [
-        "variable.other.enummember",
-        "meta.declaration.data constant.other",
-        "constant.other",
-      ],
+      scope: ["meta.declaration.data constant.other", "constant.other"],
       settings: { foreground: palette.blue },
       // like functions (capitalized -> still visually distinct)
     },
@@ -43,11 +39,6 @@ const tokens = (context: ThemeContext): TextmateColors => {
       settings: {
         foreground: palette.peach, // as in Rust
       },
-    },
-    {
-      name: "imports",
-      scope: ["entity.name.namespace"],
-      settings: { foreground: palette.rosewater },
     },
     {
       name: "type parameters",
