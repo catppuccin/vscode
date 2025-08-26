@@ -168,8 +168,8 @@ importers:
         specifier: 'catalog:'
         version: 22.18.0
       chromatic:
-        specifier: ^11.27.0
-        version: 11.28.2
+        specifier: ^13.0.0
+        version: 13.1.3
       eslint:
         specifier: 'catalog:'
         version: 9.34.0(jiti@1.21.7)
@@ -1534,8 +1534,8 @@ packages:
   chownr@1.1.4:
     resolution: {integrity: sha512-jJ0bqzaylmJtVnNgzTeSOs8DPavpbYgEr/b0YL8/2GO3xJEhInFmhKMUnEJQjZumK7KXGFhUy89PrsJWlakBVg==}
 
-  chromatic@11.28.2:
-    resolution: {integrity: sha512-aCmUPcZUs4/p9zRZdMreOoO/5JqO2DiJC3md1/vRx8dlMRcmR/YI5ZbgXZcai2absVR+6hsXZ5XiPxV2sboTuQ==}
+  chromatic@13.1.3:
+    resolution: {integrity: sha512-aOZDwg1PsDe9/UhiXqS6EJPoCGK91hYbj3HaunV/0Ij492eWLkXIzku/e5cF1t7Ma7cAuGpCQDo0vGHg0UO91w==}
     hasBin: true
     peerDependencies:
       '@chromatic-com/cypress': ^0.*.* || ^1.0.0
@@ -4714,7 +4714,7 @@ snapshots:
   chownr@1.1.4:
     optional: true
 
-  chromatic@11.28.2: {}
+  chromatic@13.1.3: {}
 
   ci-info@4.3.0: {}
 
