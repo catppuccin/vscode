@@ -1,6 +1,6 @@
 import { getHighlighter, type ThemeInput } from "shiki";
 import { latte, frappe, macchiato, mocha } from "@catppuccin/vscode";
-import type { Meta, StoryObj } from "@storybook/web-components";
+import type { Meta, StoryObj } from "@storybook/web-components-vite";
 import { html, unsafeStatic } from "lit/static-html.js";
 
 type CodePreviewProperties = {

@@ -6,6 +6,9 @@ export default defineConfig([
   parentConfig,
   ...storybook.configs["flat/recommended"],
   {
+    ignores: ["storybook-static/**"]
+  },
+  {
     rules: {
       "storybook/no-uninstalled-addons": [
         "error",
