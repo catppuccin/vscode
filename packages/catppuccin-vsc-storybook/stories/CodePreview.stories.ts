@@ -1,4 +1,4 @@
-import { getHighlighter, type ThemeInput } from "shiki";
+import { createHighlighter, type ThemeInput } from "shiki";
 import { latte, frappe, macchiato, mocha } from "@catppuccin/vscode";
 import type { Meta, StoryObj } from "@storybook/web-components-vite";
 import { html, unsafeStatic } from "lit/static-html.js";
@@ -8,7 +8,7 @@ type CodePreviewProperties = {
   lang: string;
 };
 
-const highlighter = await getHighlighter({
+const highlighter = await createHighlighter({
   themes: [latte, frappe, macchiato, mocha] as unknown[] as ThemeInput[],
   langs: [
     "bash",
