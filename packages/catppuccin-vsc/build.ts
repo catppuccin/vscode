@@ -7,11 +7,12 @@ import { updatePackageJson, readPackageJsonVersion } from "@/hooks/packageJson";
 import generateThemes from "@/hooks/generateThemes";
 
 const development = getFlag("--dev", Boolean);
+const shouldRegenerate = !getFlag("--no-regenerate", Boolean);
 
 await generateThemes();
 
 const packageJsonVersion = await readPackageJsonVersion();
-if (!development) {
+if (shouldRegenerate) {
   console.debug(
     `Regenerating package.json with version "${packageJsonVersion}"`,
   );

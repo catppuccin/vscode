@@ -193,8 +193,8 @@
   },
   "scripts": {
     "core:build": "tsx build.ts",
-    "core:dev": "tsx build.ts --dev",
-    "core:watch": "tsx watch build.ts --dev",
+    "core:dev": "tsx build.ts --dev --no-regenerate",
+    "core:watch": "tsx watch build.ts --dev --no-regenerate",
     "schema:ui": "tsx src/hooks/updateSchemas.ts"
   },
   "homepage": "https://github.com/catppuccin/vscode/tree/main/packages/catppuccin-vsc#readme"
