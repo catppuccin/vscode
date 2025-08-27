@@ -27,20 +27,24 @@ html.mocha .shiki span {
   background-color: var(--shiki-dark-bg) !important;
   color: var(--shiki-dark) !important;
   font-style: var(--shiki-dark-font-style);
+  font-weight: var(--shiki-dark-font-weight);
 }
 html.macchiato .shiki,
 html.macchiato .shiki span {
   background-color: var(--shiki-macchiato-bg) !important;
   color: var(--shiki-macchiato) !important;
   font-style: var(--shiki-macchiato-font-style);
+  font-weight: var(--shiki-macchiato-font-weight);
 }
 html.frappe .shiki,
 html.frappe .shiki span {
   background-color: var(--shiki-frappe-bg) !important;
   color: var(--shiki-frappe) !important;
   font-style: var(--shiki-frappe-font-style);
+  font-weight: var(--shiki-frappe-font-weight);
 }
 html.latte .shiki,
 html.latte .shiki span {
   font-style: var(--shiki-light-font-style);
+  font-weight: var(--shiki-light-font-weight);
 }
