@@ -4,6 +4,7 @@ import {
   ConfigurationTarget,
   ExtensionContext,
   FilePermission,
+  LogOutputChannel,
   Uri,
   commands,
   extensions,
@@ -39,6 +40,11 @@ const filterObject = <T extends object>(
     ),
   ) as Partial<T>;
 };
+
+export const LOG: LogOutputChannel = window.createOutputChannel(
+  "Catppuccin Theme",
+  { log: true },
+);
 
 export const promptToReload = (trigger: UpdateTrigger) => {
   const message = `Catppuccin: ${trigger} - Reload required.`;
@@ -79,13 +85,13 @@ export const isMutable = async (uri: Uri): Promise<boolean> => {
 export const isFreshInstall = async (
   context: ExtensionContext,
 ): Promise<boolean | "error"> => {
-  console.log("Checking if catppuccin is installed for the first time.");
+  LOG.info("Checking if catppuccin is installed for the first time.");
   const flagUri = Uri.file(context.asAbsolutePath("themes/.flag"));
   if (await fileExists(flagUri)) {
-    console.log("Catppuccin has been installed before.");
+    LOG.info("Catppuccin has been installed before.");
     return false;
   } else {
-    console.log("Catppuccin is installed for the first time!");
+    LOG.info("Catppuccin is installed for the first time!");
     return workspace.fs.writeFile(flagUri, Buffer.from("")).then(
       () => true,
       () => "error",
@@ -94,10 +100,10 @@ export const isFreshInstall = async (
 };
 
 export const isDefaultConfig = (): boolean => {
-  console.log("Checking if catppuccin is using default config.");
+  LOG.info("Checking if catppuccin is using default config.");
   const state =
     JSON.stringify(getConfiguration()) === JSON.stringify(defaultOptions);
-  console.log(`Catppuccin is using ${state ? "default" : "custom"} config.`);
+  LOG.info(`Catppuccin is using ${state ? "default" : "custom"} config.`);
 
   return state;
 };
