@@ -1,5 +1,20 @@
 # Changelog
 
+## [3.18.0](https://github.com/catppuccin/vscode/compare/catppuccin-vsc-v3.17.0...catppuccin-vsc-v3.18.0) (2025-08-27)
+
+
+### Features
+
+* **ui:** support built-in git scm graph ([8ace444](https://github.com/catppuccin/vscode/commit/8ace4440c7a7608425f9359d7b866669c056e05d))
+
+
+### Bug Fixes
+
+* **scripts:** add `--no-regenerate` flag to help avoid flakey builds ([#578](https://github.com/catppuccin/vscode/issues/578)) ([871114b](https://github.com/catppuccin/vscode/commit/871114b2135b7a7ce6c6a4d9028c66bab986a275))
+* **scripts:** use `LogOutputChannel` instead of `console.log` ([12cdb2c](https://github.com/catppuccin/vscode/commit/12cdb2c156a1b2d68c8705080bed20276a40b0a4))
+* **tokens/less:** set properties to `blue` to match CSS ([67bd19a](https://github.com/catppuccin/vscode/commit/67bd19a1d06ebda18bcc8a8902c1c5eb70bd01f8))
+* **tokens/r-language:** ensure function calls are `blue` ([472b93f](https://github.com/catppuccin/vscode/commit/472b93f36f5767ec837447f4b43413723ec1cee6))
+
 ## [3.17.0](https://github.com/catppuccin/vscode/compare/catppuccin-vsc-v3.16.1...catppuccin-vsc-v3.17.0) (2025-03-28)
 
 

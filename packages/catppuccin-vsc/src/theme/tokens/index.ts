@@ -21,6 +21,7 @@ import markdown from "./markdown";
 import nix from "./nix";
 import php from "./php";
 import python from "./python";
+import r from "./r";
 import regex from "./regex";
 import rust from "./rust";
 import shell from "./shell";
@@ -309,6 +310,7 @@ export default function tokens(context: ThemeContext): TextmateColors {
       nix,
       php,
       python,
+      r,
       regex,
       rust,
       shell,
