@@ -17,7 +17,7 @@ const tokens = (context: ThemeContext): TextmateColors => {
         "support.type.property-name.yaml",
       ],
       settings: {
-        foreground: palette.blue,
+        foreground: palette.lavender,
         fontStyle: "",
       },
     },
