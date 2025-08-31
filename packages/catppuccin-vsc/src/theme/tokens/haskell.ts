@@ -20,7 +20,10 @@ const tokens = (context: ThemeContext): TextmateColors => {
   return [
     {
       name: "data constructors",
-      scope: ["meta.declaration.data constant.other", "constant.other"],
+      scope: [
+        "meta.declaration.data constant.other.haskell",
+        "constant.other.haskell", // to hit data constr. if no semantic tokens
+      ],
       settings: {
         foreground: palette.blue,
       },
@@ -36,35 +39,45 @@ const tokens = (context: ThemeContext): TextmateColors => {
     },
     {
       name: "type parameters",
-      scope: ["variable.other.generic-type"],
+      scope: ["variable.other.generic-type.haskell"],
       settings: {
         foreground: palette.maroon,
       },
     },
     {
       name: "special words (builtin constants-like)",
-      scope: ["keyword.other.preprocessor"],
+      scope: [
+        "keyword.other.preprocessor.haskell",
+        "keyword.other.preprocessor.pragma.haskell",
+      ],
       settings: {
         foreground: palette.red,
       },
     },
     {
       name: "pragma arguments",
-      scope: ["keyword.other.preprocessor.extension"],
+      scope: ["keyword.other.preprocessor.extension.haskell"],
       settings: {
         foreground: palette.peach,
       },
     },
     {
       name: "preprocessor directives",
-      scope: ["meta.preprocessor"],
+      scope: [
+        "source.haskell meta.preprocessor.c",
+        "source.haskell meta.preprocessor.c punctuation.definition.preprocessor.c",
+        "meta.preprocessor.haskell",
+      ],
       settings: {
         foreground: palette.rosewater,
       },
     },
     {
       name: "getters in data constructors/records",
-      scope: ["variable.other.member"],
+      scope: [
+        "variable.other.member.haskell",
+        "variable.other.member.definition.haskell",
+      ],
       settings: {
         foreground: palette.blue,
       },

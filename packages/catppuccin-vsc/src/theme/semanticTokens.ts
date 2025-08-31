@@ -49,6 +49,9 @@ export const getSemanticTokens = (context: ThemeContext): SemanticTokens => {
       foreground: palette.pink,
       // needs something distinct from typeclasses -> pick pink which is used for meta-variables in Rust
     },
+    "property:haskell": /* getters in data constructors/records */ {
+      foreground: palette.blue,
+    },
 
     // TOML syntax
     tomlArrayKey: { foreground: palette.blue, fontStyle: "" },
