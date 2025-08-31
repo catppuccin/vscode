@@ -27,8 +27,8 @@ const tokens = (context: ThemeContext): TextmateColors => {
       ],
       settings: {
         foreground: palette.blue,
+        fontStyle: "",
       },
-      // like functions (capitalized -> still visually distinct)
     },
     {
       name: "types",
@@ -43,6 +43,7 @@ const tokens = (context: ThemeContext): TextmateColors => {
       scope: ["variable.other.generic-type.haskell"],
       settings: {
         foreground: palette.maroon,
+        fontStyle: "",
       },
     },
     {
@@ -88,6 +89,7 @@ const tokens = (context: ThemeContext): TextmateColors => {
       ],
       settings: {
         foreground: palette.lavender,
+        fontStyle: "italic",
       },
     },
     {
