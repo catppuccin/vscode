@@ -35,10 +35,19 @@ export const getSemanticTokens = (context: ThemeContext): SemanticTokens => {
     "variable.readonly.defaultLibrary:go": { foreground: palette.mauve },
 
     // Haskell:
-    "enumMember:haskell": { foreground: palette.blue }, // data constructor
-    "enum:haskell": { foreground: palette.yellow }, // type constructor
-    "class:haskell": { foreground: palette.yellow, fontStyle: "" }, // typeclass
-    "interface:haskell": { foreground: palette.pink }, // type family
+    "enumMember:haskell": /* data constructors */ {
+      foreground: palette.blue,
+    },
+    "enum:haskell": /* types */ {
+      foreground: palette.yellow,
+    },
+    "class:haskell": /* typeclasses */ {
+      foreground: palette.yellow,
+      fontStyle: "",
+    },
+    "interface:haskell": /* type families */ {
+      foreground: palette.pink,
+    },
 
     // TOML syntax
     tomlArrayKey: { foreground: palette.blue, fontStyle: "" },
