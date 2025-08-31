@@ -35,13 +35,6 @@ const tokens = (context: ThemeContext): TextmateColors => {
       },
     },
     {
-      name: "module name",
-      scope: "meta.declaration.module.haskell entity.name.namespace.haskell",
-      settings: {
-        foreground: palette.peach, // as in Rust
-      },
-    },
-    {
       name: "type parameters",
       scope: ["variable.other.generic-type"],
       settings: {
