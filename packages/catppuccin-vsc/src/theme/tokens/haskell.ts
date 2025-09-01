@@ -5,12 +5,26 @@ import type { TextmateColors, ThemeContext } from "@/types";
 STYLING CHOICES
 ---------------
 
-  should preferrably appear visually distinct:
-  - data constructors -> use blue
-  - types             -> use yellow+italic
-  - typeclasses [1]   -> use yellow
+  language element     ->color    ->fontStyle
+  -----------------    -------    -----------
+  functions            blue       italic
+  data constructors    blue       -
+  types                yellow     italic
+  typeclasses [1]      yellow     -
+
+It would be preferrable for each listed language element to appear visually distinct from the other. With choices above, that is also achieved, granted setting `italicKeywords` is active.
 
 [1]: typeclasses are not distinguishable from types with only textMate scopes; requires semantic tokens
+
+
+GRAMMAR REF.
+------------
+
+https://github.com/JustusAdam/language-haskell
+
+- is the only Haskell textMate grammar in use
+- (is the upstream of the Haskell VS Code extension)
+- generated listing of all assigned scopes: https://github.com/JustusAdam/language-haskell/blob/master/scope-lists/haskell.scope-db.yaml
 
 */
 
