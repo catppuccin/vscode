@@ -62,12 +62,18 @@ const tokens = (context: ThemeContext): TextmateColors => {
       },
     },
     {
-      name: "preprocessor directives",
+      name: "C preprocessor directives",
       scope: [
         "source.haskell meta.preprocessor.c",
         "source.haskell meta.preprocessor.c punctuation.definition.preprocessor.c",
-        "meta.preprocessor.haskell",
       ],
+      settings: {
+        foreground: palette.rosewater,
+      },
+    },
+    {
+      name: "Haskell preprocessor directives",
+      scope: ["meta.preprocessor.haskell"],
       settings: {
         foreground: palette.rosewater,
       },
