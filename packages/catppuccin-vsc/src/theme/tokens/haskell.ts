@@ -86,7 +86,7 @@ const tokens = (context: ThemeContext): TextmateColors => {
         "variable.other.member.definition.haskell",
       ],
       settings: {
-        foreground: palette.blue,
+        foreground: palette.lavender,
       },
     },
     {
