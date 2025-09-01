@@ -23,6 +23,7 @@ const tokens = (context: ThemeContext): TextmateColors => {
       scope: [
         "meta.declaration.data constant.other.haskell",
         "constant.other.haskell", // to hit data constr. if no semantic tokens
+        "meta.declaration.pattern constant.other.haskell", // pattern synonyms
       ],
       settings: {
         foreground: palette.blue,

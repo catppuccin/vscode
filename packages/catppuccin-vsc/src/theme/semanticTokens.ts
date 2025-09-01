@@ -52,6 +52,10 @@ export const getSemanticTokens = (context: ThemeContext): SemanticTokens => {
     "property:haskell": /* getters in data constructors/records */ {
       foreground: palette.lavender,
     },
+    "macro:haskell": /* pattern synonyms */ {
+      foreground: palette.blue,
+      fontStyle: "",
+    },
 
     // TOML syntax
     tomlArrayKey: { foreground: palette.blue, fontStyle: "" },
