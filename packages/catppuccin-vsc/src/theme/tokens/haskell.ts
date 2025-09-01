@@ -8,7 +8,9 @@ STYLING CHOICES
   should preferrably appear visually distinct:
   - data constructors -> use blue
   - types             -> use yellow+italic
-  - typeclasses       -> use yellow
+  - typeclasses [1]   -> use yellow
+
+[1]: typeclasses are not distinguishable from types with only textMate scopes; requires semantic tokens
 
 */
 
@@ -33,14 +35,6 @@ const tokens = (context: ThemeContext): TextmateColors => {
       },
     },
     {
-      name: "typeclasses",
-      scope: ["entity.name.type.class"],
-      settings: {
-        foreground: palette.yellow,
-        fontStyle: "",
-      },
-    },
-    {
       name: "module name",
       scope: "meta.declaration.module.haskell entity.name.namespace.haskell",
       settings: {
@@ -49,7 +43,7 @@ const tokens = (context: ThemeContext): TextmateColors => {
     },
     {
       name: "type parameters",
-      scope: ["entity.name.type.parameter", "variable.other.generic-type"],
+      scope: ["variable.other.generic-type"],
       settings: {
         foreground: palette.maroon,
       },
@@ -76,17 +70,8 @@ const tokens = (context: ThemeContext): TextmateColors => {
       },
     },
     {
-      name: "type families",
-      scope: ["entity.name.type.interface"],
-      settings: {
-        foreground: palette.pink,
-      },
-      // we need something distinct from typeclasses
-      // -> pick pink which is used for meta-variables in Rust
-    },
-    {
       name: "getters in data constructors/records",
-      scope: ["variable.other.property", "variable.other.member"],
+      scope: ["variable.other.member"],
       settings: {
         foreground: palette.blue,
       },
