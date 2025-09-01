@@ -68,14 +68,15 @@ const tokens = (context: ThemeContext): TextmateColors => {
         "source.haskell meta.preprocessor.c punctuation.definition.preprocessor.c",
       ],
       settings: {
-        foreground: palette.rosewater,
+        foreground: palette.yellow,
       },
     },
     {
       name: "Haskell preprocessor directives",
       scope: ["meta.preprocessor.haskell"],
       settings: {
-        foreground: palette.rosewater,
+        foreground: palette.overlay2,
+        // the enclosing block comment definitions ({-#, #-}) are scoped only with the `meta` scope -> using the comment color is the best-looking choice (also, the whole thing _is_ technically a block comment)
       },
     },
     {
