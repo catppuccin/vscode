@@ -8,3 +8,5 @@ storybook-static/
 *.vsix
 *.zip
 .vscode/ltex.dictionary*
+.DS_Store
+/.DS_Store

@@ -1,22 +1,38 @@
 <h3 align="center">
 	<img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/logos/exports/1544x1544_circle.png" width="100" alt="Logo"/><br/>
 	<img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/misc/transparent.png" height="30" width="0px"/>
-	Catppuccin for <a href="https://code.visualstudio.com">VSCode</a>
+	Catppuccin Darker for <a href="https://code.visualstudio.com">VSCode</a>
 	<img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/misc/transparent.png" height="30" width="0px"/>
 </h3>
 
 <p align="center">
-    <a href="https://github.com/catppuccin/vscode/stargazers"><img src="https://img.shields.io/github/stars/catppuccin/vscode?colorA=363a4f&colorB=b7bdf8&style=for-the-badge"></a>
-    <a href="https://github.com/catppuccin/vscode/issues"><img src="https://img.shields.io/github/issues/catppuccin/vscode?colorA=363a4f&colorB=f5a97f&style=for-the-badge"></a>
-    <a href="https://github.com/catppuccin/vscode/contributors"><img src="https://img.shields.io/github/contributors/catppuccin/vscode?colorA=363a4f&colorB=a6da95&style=for-the-badge"></a>
+    <a href="https://github.com/carlweis/catppuccin-dark/stargazers"><img src="https://img.shields.io/github/stars/carlweis/catppuccin-dark?colorA=363a4f&colorB=b7bdf8&style=for-the-badge"></a>
+    <a href="https://github.com/carlweis/catppuccin-dark/issues"><img src="https://img.shields.io/github/issues/carlweis/catppuccin-dark?colorA=363a4f&colorB=f5a97f&style=for-the-badge"></a>
+    <a href="https://github.com/carlweis/catppuccin-dark/contributors"><img src="https://img.shields.io/github/contributors/carlweis/catppuccin-dark?colorA=363a4f&colorB=a6da95&style=for-the-badge"></a>
 </p>
 
+> 🌙 **Ultra-dark variant of Catppuccin** - A fork featuring an even darker theme with custom colors for those who prefer minimal, low-contrast environments.</p>
+
 <p align="center">
-  <img src="assets/preview.webp"/>
+  <img src="assets/darker.webp"/>
 </p>
+
+## What Makes This Different?
+
+This darker variant features:
+
+- **Ultra-dark backgrounds**: `#181818` base, `#282828` mantle, `#292929` crust
+- **Subtle blue accents**: `#8AB4FB` instead of the default purple
+- **Minimal contrast**: Perfect for late-night coding sessions
+- **Consistent theming**: Every UI element carefully tuned for the darker palette
+- **All original flavors**: Latte, Frappé, Macchiato, and Mocha are still available
 
 ## Previews
 
+<details>
+<summary>🌙 Darker</summary>
+<img src="assets/darker.webp"/>
+</details>
 <details>
 <summary>🌻 Latte</summary>
 <img src="assets/latte.webp"/>
@@ -40,18 +56,18 @@
 
 Install the extension from a Marketplace:
 
-- [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=Catppuccin.catppuccin-vsc)
-- [Open-VSX](https://open-vsx.org/extension/Catppuccin/catppuccin-vsc)
+- [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=codelogix.catppuccin-darker-vsc)
+- [Open-VSX](https://open-vsx.org/extension/codelogix/catppuccin-darker-vsc)
 
 ### Manual method for installation
 
 Download the VSIX from
-[the latest GitHub release](https://github.com/catppuccin/vscode/releases/latest).
+[the latest GitHub release](https://github.com/carlweis/catppuccin-dark/releases/latest).
 Open the Command Palette and select "Extensions: Install from VSIX...", then open the file you just downloaded.
 
 ### Using the JSON files
 
-If you need to use the JSON files for libraries like [Shiki](https://www.npmjs.com/package/shiki), the theme files are published to NPM as [`@catppuccin/vscode`](https://www.npmjs.com/package/@catppuccin/vscode).
+If you need to use the JSON files for libraries like [Shiki](https://www.npmjs.com/package/shiki), you can find the theme files in the `themes/` directory of this repository. The original Catppuccin themes are published to NPM as [`@catppuccin/vscode`](https://www.npmjs.com/package/@catppuccin/vscode).
 
 ### Nix (Home-Manager) users
 
@@ -123,23 +139,24 @@ Catppuccin for VSCode can be customized to your liking. If you like the Catppucc
 
 ```jsonc
 {
-  // use Mocha as the base
-  "workbench.colorTheme": "Catppuccin Mocha",
-  // pink as the accent color
-  "catppuccin.accentColor": "pink",
-  // make Mocha specifically very dark
-  // (this preserves other flavors!)
+  // use the ultra-dark Darker variant
+  "workbench.colorTheme": "Catppuccin Dark",
+  // blue as the accent color (matches the theme)
+  "catppuccin.accentColor": "blue",
+  // the Dark theme already has ultra-dark colors built-in
+  // but you can still override them if needed
   "catppuccin.colorOverrides": {
-    "mocha": {
-      "base": "#000000",
-      "mantle": "#010101",
-      "crust": "#020202",
+    "dark": {
+      "base": "#181818",
+      "mantle": "#282828",
+      "crust": "#292929",
     },
   },
-  // use your accent (pink) on the statusBar as well
+  // customize UI elements with the darker palette
   "catppuccin.customUIColors": {
-    "mocha": {
+    "dark": {
       "statusBar.foreground": "accent",
+      "tab.activeBorderTop": "blue",
     },
   },
 }
@@ -278,7 +295,7 @@ Catppuccin for VSCode also themes the following extensions:
 
 ## Support
 
-If you have any questions regarding this port, feel free to [open an issue](https://github.com/catppuccin/vscode/issues) or ask in [our Discord](https://discord.catppuccin.com), where we have a [dedicated forum](https://discord.com/channels/907385605422448742/1020275848940626002) for support.
+If you have any questions regarding this darker variant, feel free to [open an issue](https://github.com/carlweis/catppuccin-dark/issues). For general Catppuccin support, you can ask in [their Discord](https://discord.catppuccin.com).
 
 ## Development
 
@@ -291,23 +308,25 @@ If you have any questions regarding this port, feel free to [open an issue](http
 
 ## 💝 Thanks to
 
-**Current maintainers**
+**Catppuccin Darker Maintainer**
 
-- [backwardspy](https://github.com/backwardspy)
+- [Carl Weis](https://github.com/carlweis) - Ultra-dark variant implementation
 
-**Contributions**
+**Original Catppuccin VSCode Theme**
 
+- [backwardspy](https://github.com/backwardspy) - Current maintainer
 - [Lichthagel](https://github.com/Lichthagel) - GitLens extension support
 - [suppayami](https://github.com/suppayami) - Workbench appearances
-
-**Previous maintainer(s)**
-
-- [ghostx31](https://github.com/ghostx31)
-- [VictorTennekes](https://github.com/VictorTennekes)
-- [winston](https://github.com/nekowinston)
+- [ghostx31](https://github.com/ghostx31) - Previous maintainer
+- [VictorTennekes](https://github.com/VictorTennekes) - Previous maintainer
+- [winston](https://github.com/nekowinston) - Previous maintainer
 
 &nbsp;
 
 <p align="center"><img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/footers/gray0_ctp_on_line.png" /></p>
-<p align="center">Copyright &copy; 2021-present <a href="https://github.com/catppuccin" target="_blank">Catppuccin Org</a>
-<p align="center"><a href="https://github.com/catppuccin/catppuccin/blob/main/LICENSE"><img src="https://img.shields.io/static/v1.svg?style=for-the-badge&label=License&message=MIT&logoColor=d9e0ee&colorA=363a4f&colorB=b7bdf8"/></a></p>
+<p align="center">
+  Based on <a href="https://github.com/catppuccin/vscode" target="_blank">Catppuccin for VSCode</a><br/>
+  Copyright &copy; 2021-present <a href="https://github.com/catppuccin" target="_blank">Catppuccin Org</a><br/>
+  Darker variant &copy; 2025 <a href="https://github.com/carlweis" target="_blank">Carl Weis</a>
+</p>
+<p align="center"><a href="https://github.com/carlweis/catppuccin-dark/blob/main/LICENSE"><img src="https://img.shields.io/static/v1.svg?style=for-the-badge&label=License&message=MIT&logoColor=d9e0ee&colorA=363a4f&colorB=b7bdf8"/></a></p>

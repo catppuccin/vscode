@@ -3,9 +3,14 @@
   "license": "MIT",
   "private": true,
   "displayName": "Catppuccin Darker for VSCode",
-  "publisher": "carlweis",
+  "publisher": "codelogix",
   "description": "🌙 Ultra-dark variant of the Catppuccin theme for VSCode",
-  "version": "3.18.0",
+  "version": "0.0.1",
+  "icon": "icon.png",
+  "galleryBanner": {
+    "color": "#181818",
+    "theme": "dark"
+  },
   "type": "module",
   "engines": {
     "vscode": "^1.80.0",
@@ -83,14 +88,14 @@
           "type": "object",
           "default": {},
           "markdownDescription": "Custom color overrides. Assign your own hex codes to palette colors. See [the docs](https://github.com/catppuccin/vscode#override-palette-colors) for reference.",
-          "$ref": "https://esm.sh/gh/catppuccin/vscode@catppuccin-vsc-v3.18.0/packages/catppuccin-vsc/schemas/colorOverrides.schema.json"
+          "$ref": "https://esm.sh/gh/catppuccin/vscode@catppuccin-vsc-v0.0.1/packages/catppuccin-vsc/schemas/colorOverrides.schema.json"
         },
         "catppuccin.customUIColors": {
           "scope": "application",
           "type": "object",
           "default": {},
           "markdownDescription": "Customize UI colors. Map `workbench.colorCustomizations` to palette colors. See [the docs](https://github.com/catppuccin/vscode#use-palette-colors-on-workbench-elements-ui) for reference.",
-          "$ref": "https://esm.sh/gh/catppuccin/vscode@catppuccin-vsc-v3.18.0/packages/catppuccin-vsc/schemas/customUIColors.schema.json"
+          "$ref": "https://esm.sh/gh/catppuccin/vscode@catppuccin-vsc-v0.0.1/packages/catppuccin-vsc/schemas/customUIColors.schema.json"
         },
         "catppuccin.accentColor": {
           "scope": "application",
@@ -171,10 +176,9 @@
   "bugs": {
     "url": "https://github.com/carlweis/catppuccin-dark/issues"
   },
-  "icon": "icon.png",
   "__metadata": {
     "publisherDisplayName": "Carl Weis",
-    "publisherId": "carlweis",
+    "publisherId": "codelogix",
     "id": "catppuccin-darker-vsc",
     "isPreReleaseVersion": false
   },

@@ -7,3 +7,4 @@
 !dist/*.cjs
 !package.json
 !themes/*.json
+!assets/*.webp

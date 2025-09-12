@@ -130,6 +130,20 @@ const darkUIColorOverrides = {
   "list.activeSelectionIconForeground": "#8AB4FB",
   "list.focusOutline": "#8AB4FB",
   "list.highlightForeground": "#8AB4FB",
+
+  // Fix search highlight colors for better visibility
+  "searchEditor.findMatchBackground": "#212121",
+  "searchEditor.findMatchBorder": "#8AB4FB",
+  "searchEditor.textInputBorder": "#8AB4FB",
+  "search.resultsInfoForeground": "#cdd6f4",
+  "searchEditor.findMatchHighlightBackground": "#212121",
+  "searchEditor.findMatchHighlightBorder": "#8AB4FB",
+
+  // Quick picker/search highlight fixes
+  "quickInputList.focusIconForeground": "#8AB4FB",
+  "pickerGroup.foreground": "#8AB4FB",
+  "quickInput.foreground": "#cdd6f4",
+  "quickInputTitle.background": "#181818",
   "menubar.selectionForeground": "#8AB4FB",
   "notificationLink.foreground": "#8AB4FB",
   "panelTitle.activeBorder": "#8AB4FB",
