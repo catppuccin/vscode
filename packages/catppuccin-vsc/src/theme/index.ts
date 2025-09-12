@@ -27,7 +27,7 @@ const darkUIColorOverrides = {
   "tab.inactiveBackground": "#212121",
   "tab.activeBackground": "#181818", // Fix: should match base background
   "tab.activeForeground": "#87afaf",
-  "tab.activeBorderTop": "#A6E3A1", // Green accent for active tab highlight
+  "tab.activeBorderTop": "#8AB4FB", // Subtle blue accent for active tab highlight
   "editorGroupHeader.tabsBackground": "#212121",
 
   // Pmenu = { bg = '#212121' }, PmenuSel = { bg = '#212122', fg = '#e5c890' }
@@ -114,6 +114,32 @@ const darkUIColorOverrides = {
   // Replace opacity variants of #313244 with #212121 equivalents
   "scrollbarSlider.activeBackground": "#21212166",
   "gitlens.gutterBackgroundColor": "#2121214d",
+
+  // Replace all #CBA6F8 (purple) and #CBA6F7 (mauve) with #8AB4FB (subtle blue)
+  focusBorder: "#8AB4FB",
+  "icon.foreground": "#8AB4FB",
+  "textSeparator.foreground": "#8AB4FB",
+  "activityBar.foreground": "#8AB4FB",
+  "activityBarBadge.background": "#8AB4FB",
+  "activityBarTop.foreground": "#8AB4FB",
+  "breadcrumb.activeSelectionForeground": "#8AB4FB",
+  "breadcrumb.focusForeground": "#8AB4FB",
+  "button.background": "#8AB4FB",
+  "editorInfo.foreground": "#8AB4FB",
+  "editorWarning.foreground": "#8AB4FB",
+  "list.activeSelectionIconForeground": "#8AB4FB",
+  "list.focusOutline": "#8AB4FB",
+  "list.highlightForeground": "#8AB4FB",
+  "menubar.selectionForeground": "#8AB4FB",
+  "notificationLink.foreground": "#8AB4FB",
+  "panelTitle.activeBorder": "#8AB4FB",
+  "progressBar.background": "#8AB4FB",
+  "settings.headerForeground": "#8AB4FB",
+  "settings.modifiedItemIndicator": "#8AB4FB",
+  "symbolIcon.colorForeground": "#8AB4FB",
+  "tab.lastPinnedBorder": "#8AB4FB",
+  "textLink.foreground": "#8AB4FB",
+  "titleBar.activeForeground": "#8AB4FB",
 };
 import { getTokenColors } from "./tokenColors";
 import { getSemanticTokens } from "./semanticTokens";
