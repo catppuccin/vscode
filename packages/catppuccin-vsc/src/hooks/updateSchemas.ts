@@ -26,6 +26,7 @@ const customUiColorsSchema = (workbenchColors: any) => {
       frappe: { $ref: "#/$defs/catppuccinWorkbenchColors" },
       macchiato: { $ref: "#/$defs/catppuccinWorkbenchColors" },
       mocha: { $ref: "#/$defs/catppuccinWorkbenchColors" },
+      dark: { $ref: "#/$defs/catppuccinWorkbenchColors" },
     },
     $defs: {
       catppuccinColor: {

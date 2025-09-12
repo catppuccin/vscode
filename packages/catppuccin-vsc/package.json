@@ -1,10 +1,10 @@
 {
-  "name": "catppuccin-vsc",
+  "name": "catppuccin-darker-vsc",
   "license": "MIT",
   "private": true,
-  "displayName": "Catppuccin for VSCode",
-  "publisher": "Catppuccin",
-  "description": "🦌 Soothing pastel theme for VSCode",
+  "displayName": "Catppuccin Darker for VSCode",
+  "publisher": "carlweis",
+  "description": "🌙 Ultra-dark variant of the Catppuccin theme for VSCode",
   "version": "3.18.0",
   "type": "module",
   "engines": {
@@ -31,6 +31,11 @@
   "browser": "dist/browser.cjs",
   "contributes": {
     "themes": [
+      {
+        "label": "Catppuccin Dark",
+        "uiTheme": "vs-dark",
+        "path": "./themes/dark.json"
+      },
       {
         "label": "Catppuccin Mocha",
         "uiTheme": "vs-dark",
@@ -160,20 +165,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/catppuccin/vscode.git",
+    "url": "https://github.com/carlweis/catppuccin-dark.git",
     "directory": "packages/catppuccin-vsc"
   },
   "bugs": {
-    "url": "https://github.com/catppuccin/vscode/issues"
-  },
-  "sponsor": {
-    "url": "https://opencollective.com/catppuccin"
+    "url": "https://github.com/carlweis/catppuccin-dark/issues"
   },
   "icon": "icon.png",
   "__metadata": {
-    "publisherDisplayName": "Catppuccin",
-    "publisherId": "e7d2ed61-53e0-4dd4-afbe-f536c3bb4316",
-    "id": "69264e4d-cd3b-468a-8f2b-e69673c7d864",
+    "publisherDisplayName": "Carl Weis",
+    "publisherId": "carlweis",
+    "id": "catppuccin-darker-vsc",
     "isPreReleaseVersion": false
   },
   "devDependencies": {
@@ -197,5 +199,5 @@
     "core:watch": "tsx watch build.ts --dev --no-regenerate",
     "schema:ui": "tsx src/hooks/updateSchemas.ts"
   },
-  "homepage": "https://github.com/catppuccin/vscode/tree/main/packages/catppuccin-vsc#readme"
+  "homepage": "https://github.com/carlweis/catppuccin-dark#readme"
 }

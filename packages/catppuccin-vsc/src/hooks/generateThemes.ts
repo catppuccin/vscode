@@ -10,7 +10,7 @@ import { flavorEntries } from "@catppuccin/palette";
 import { compileTheme, defaultOptions } from "@/theme";
 import { repoRoot } from "./constants";
 
-const flavors = flavorEntries.map(([flavorName]) => flavorName);
+const flavors = [...flavorEntries.map(([flavorName]) => flavorName), "dark"];
 
 // options can also be passed as a JSON string as an environment variable
 const optEnvironmentVariable = process.env.CATPPUCCIN_OPTIONS;

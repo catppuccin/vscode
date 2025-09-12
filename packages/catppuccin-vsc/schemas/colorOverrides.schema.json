@@ -23,6 +23,10 @@
     "mocha": {
       "$ref": "#/$defs/overrides",
       "title": "Overrides applying to Mocha flavor"
+    },
+    "dark": {
+      "$ref": "#/$defs/overrides",
+      "title": "Overrides applying to Dark flavor"
     }
   },
   "$defs": {

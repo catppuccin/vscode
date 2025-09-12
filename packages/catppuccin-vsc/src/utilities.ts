@@ -15,6 +15,7 @@ import { compileTheme, defaultOptions } from "./theme";
 import type {
   CatppuccinAccent,
   CatppuccinBracketMode,
+  CatppuccinFlavor,
   CatppuccinWorkbenchMode,
   ColorOverrides,
   CustomUIColors,
@@ -133,11 +134,11 @@ export const updateThemes = async (
   paths: ThemePaths,
   trigger: UpdateTrigger,
 ) => {
-  const flavors = flavorEntries.map(([flavorName]) => flavorName);
+  const flavors = [...flavorEntries.map(([flavorName]) => flavorName), "dark"];
 
   const promises = flavors.map(async (flavor): Promise<void> => {
-    const theme = compileTheme(flavor, options);
-    return writeThemeFile(paths[flavor], theme);
+    const theme = compileTheme(flavor as CatppuccinFlavor | "dark", options);
+    return writeThemeFile(paths[flavor as keyof ThemePaths], theme);
   });
 
   Promise.all(promises)

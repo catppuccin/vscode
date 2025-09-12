@@ -82,6 +82,7 @@ export type ThemePaths = {
   frappe: Uri;
   macchiato: Uri;
   mocha: Uri;
+  dark: Uri;
 };
 
 export type ThemeContext = {

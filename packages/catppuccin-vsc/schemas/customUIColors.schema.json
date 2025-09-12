@@ -18,6 +18,9 @@
     },
     "mocha": {
       "$ref": "#/$defs/catppuccinWorkbenchColors"
+    },
+    "dark": {
+      "$ref": "#/$defs/catppuccinWorkbenchColors"
     }
   },
   "$defs": {

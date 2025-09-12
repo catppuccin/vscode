@@ -9,6 +9,7 @@ export const activate = async (context: ExtensionContext) => {
     frappe: Uri.joinPath(base, "themes", "frappe.json"),
     macchiato: Uri.joinPath(base, "themes", "macchiato.json"),
     mocha: Uri.joinPath(base, "themes", "mocha.json"),
+    dark: Uri.joinPath(base, "themes", "dark.json"),
   };
 
   const config = utilities.getConfiguration();
