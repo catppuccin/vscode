@@ -27,7 +27,7 @@ jobs:
       - run: pnpm i --frozen-lockfile
 
       - name: Publish to Chromatic
-        uses: chromaui/action@58d9ffb36c90c97a02d061544ecc849cc4a242a9 # v13
+        uses: chromaui/action@4ffe736a2a8262ea28067ff05a13b635ba31ec05 # v13
         with:
           buildScriptName: storybook:build
           exitOnceUploaded: true
