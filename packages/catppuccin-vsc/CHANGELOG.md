@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.18.1](https://github.com/catppuccin/vscode/compare/catppuccin-vsc-v3.18.0...catppuccin-vsc-v3.18.1) (2025-10-12)
+
+
+### Bug Fixes
+
+* leave window border colours as default ([#598](https://github.com/catppuccin/vscode/issues/598)) ([41793ef](https://github.com/catppuccin/vscode/commit/41793ef72dc7cc50c051cdb975f14d4c1a39a449))
+
 ## [3.18.0](https://github.com/catppuccin/vscode/compare/catppuccin-vsc-v3.17.0...catppuccin-vsc-v3.18.0) (2025-08-27)
 
 

@@ -28,10 +28,6 @@ export const getUiColors = (
     "icon.foreground": accent,
     "sash.hoverBorder": accent,
 
-    // Window border
-    "window.activeBorder": transparent,
-    "window.inactiveBorder": transparent,
-
     // Text colors
     "textBlockQuote.background": palette.mantle,
     "textBlockQuote.border": palette.crust,
