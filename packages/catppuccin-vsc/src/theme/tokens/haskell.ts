@@ -78,8 +78,6 @@ const tokens = (context: ThemeContext): TextmateColors => {
     {
       name: "special words (builtin constants-like)",
       scope: [
-        "keyword.other.preprocessor.haskell",
-        "keyword.other.preprocessor.pragma.haskell",
         "keyword.other.default.haskell",
         "keyword.other.role.nominal.haskell",
         "keyword.other.role.representational.haskell",
@@ -90,10 +88,20 @@ const tokens = (context: ThemeContext): TextmateColors => {
       },
     },
     {
+      name: "pragma specifiers",
+      scope: [
+        "keyword.other.preprocessor.haskell",
+        "keyword.other.preprocessor.pragma.haskell",
+      ],
+      settings: {
+        foreground: palette.rosewater,
+      },
+    },
+    {
       name: "pragma arguments",
       scope: ["keyword.other.preprocessor.extension.haskell"],
       settings: {
-        foreground: palette.peach,
+        foreground: palette.red,
       },
     },
     {
@@ -103,7 +111,7 @@ const tokens = (context: ThemeContext): TextmateColors => {
         "source.haskell meta.preprocessor.c punctuation.definition.preprocessor.c",
       ],
       settings: {
-        foreground: palette.yellow,
+        foreground: palette.rosewater,
       },
     },
     {
