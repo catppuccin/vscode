@@ -15,6 +15,27 @@
   <img src="assets/preview.webp"/>
 </p>
 
+## Table of Contents
+  - [Previews](#previews)
+  - [Usage](#usage)
+    - [Preferred method of installation](#preferred-method-of-installation)
+    - [Manual method of installation](#manual-method-for-installation)
+    - [Using the JSON files](#using-the-json-files)
+    - [Nix users](#nix-home-manager-users)
+  - [Customization](#customization)
+    - [VSCode settings](#vscode-settings) 
+    - [Catppuccin settings](#catppuccin-settings)
+    - [Custom accent color](#custom-accent-color)
+    - [Disable italics & bold fonts](#disable-italics--bold-fonts)
+    - [Flat appearance](#flat-appearance)
+    - [Paired Brackets](#paired-brackets)
+    - [Override palette colors](#override-palette-colors)
+    - [Use palette colors on workbench elements (UI)](#use-palette-colors-on-workbench-elements-ui)
+  - [Extension Support](#extension-support)
+  - [Support](#support)
+  - [Development](#development)
+  - [Thanks to](#-thanks-to)
+
 ## Previews
 
 <details>
