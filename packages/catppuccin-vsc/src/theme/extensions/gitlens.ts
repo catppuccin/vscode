@@ -2,7 +2,7 @@ import type { GitLensColors, ThemeContext } from "@/types";
 import { opacity, shade, transparent } from "@/theme/utilities";
 
 export default function colors(context: ThemeContext): Partial<GitLensColors> {
-  const { palette, options } = context;
+  const { palette, accent } = context;
 
   const graphLaneColors = [
     palette.mauve,
@@ -21,22 +21,16 @@ export default function colors(context: ThemeContext): Partial<GitLensColors> {
     palette.sky,
   ];
 
-  const accentIndex = graphLaneColors.indexOf(palette[options.accent]);
+  const accentIndex = graphLaneColors.indexOf(accent);
 
   return {
     "gitlens.gutterBackgroundColor": opacity(palette.surface0, 0.3),
     "gitlens.gutterForegroundColor": palette.text,
-    "gitlens.gutterUncommittedForegroundColor": palette[options.accent],
+    "gitlens.gutterUncommittedForegroundColor": accent,
     "gitlens.trailingLineBackgroundColor": transparent,
     "gitlens.trailingLineForegroundColor": opacity(palette.text, 0.3),
-    "gitlens.lineHighlightBackgroundColor": opacity(
-      palette[options.accent],
-      0.15,
-    ),
-    "gitlens.lineHighlightOverviewRulerColor": opacity(
-      palette[options.accent],
-      0.8,
-    ),
+    "gitlens.lineHighlightBackgroundColor": opacity(accent, 0.15),
+    "gitlens.lineHighlightOverviewRulerColor": opacity(accent, 0.8),
     "gitlens.openAutolinkedIssueIconColor": palette.green,
     "gitlens.closedAutolinkedIssueIconColor": palette.mauve,
     "gitlens.closedPullRequestIconColor": palette.red,
@@ -63,10 +57,8 @@ export default function colors(context: ThemeContext): Partial<GitLensColors> {
     "gitlens.decorations.statusMergingOrRebasingForegroundColor":
       palette.yellow,
     "gitlens.decorations.workspaceRepoMissingForegroundColor": palette.subtext0,
-    "gitlens.decorations.workspaceCurrentForegroundColor":
-      palette[options.accent],
-    "gitlens.decorations.workspaceRepoOpenForegroundColor":
-      palette[options.accent],
+    "gitlens.decorations.workspaceCurrentForegroundColor": accent,
+    "gitlens.decorations.workspaceRepoOpenForegroundColor": accent,
     "gitlens.decorations.worktreeHasUncommittedChangesForegroundColor":
       palette.peach,
     "gitlens.decorations.worktreeMissingForegroundColor": palette.maroon,

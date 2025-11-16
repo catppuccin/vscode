@@ -18,6 +18,7 @@ import type {
   CatppuccinWorkbenchMode,
   ColorOverrides,
   CustomUIColors,
+  CustomAccentColors,
   ThemeOptions,
   ThemePaths,
 } from "./types";
@@ -120,6 +121,7 @@ export const getConfiguration = (): ThemeOptions => {
     bracketMode: config.get<CatppuccinBracketMode>("bracketMode"),
     extraBordersEnabled: config.get<boolean>("extraBordersEnabled"),
     customUIColors: config.get<CustomUIColors>("customUIColors"),
+    customAccentColors: config.get<CustomAccentColors>("customAccentColors"),
     syncWithIconPack: config.get<boolean>("syncWithIconPack"),
   } satisfies Partial<ThemeOptions>;
   return {
