@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.19.0](https://github.com/catppuccin/vscode/compare/catppuccin-vsc-v3.18.1...catppuccin-vsc-v3.19.0) (2025-11-23)
+
+
+### Features
+
+* **syntax:** improve support for Haskell ([#559](https://github.com/catppuccin/vscode/issues/559)) ([1a9ac2b](https://github.com/catppuccin/vscode/commit/1a9ac2b4dc7290e50f4e997a7953723b2891962c))
+
 ## [3.18.1](https://github.com/catppuccin/vscode/compare/catppuccin-vsc-v3.18.0...catppuccin-vsc-v3.18.1) (2025-10-12)
 
 
