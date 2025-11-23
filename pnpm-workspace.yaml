@@ -3,11 +3,11 @@ packages:
 
 catalog:
   '@catppuccin/palette': ^1.7.1
-  '@tsconfig/node22': ^22.0.2
-  '@types/node': ^22.18.10
-  '@vscode/vsce': ^3.6.2
-  eslint: ^9.37.0
-  tsup: ^8.5.0
+  '@tsconfig/node22': ^22.0.5
+  '@types/node': ^22.19.1
+  '@vscode/vsce': ^3.7.0
+  eslint: ^9.39.1
+  tsup: ^8.5.1
   tsx: ^4.20.6
   typescript: ^5.9.3
 
