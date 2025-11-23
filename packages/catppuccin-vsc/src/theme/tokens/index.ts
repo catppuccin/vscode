@@ -266,10 +266,17 @@ export default function tokens(context: ThemeContext): TextmateColors {
       },
     },
     {
+      name: "Struct/Instance fields",
+      scope: ["variable.other.property"],
+      settings: {
+        foreground: palette.lavender,
+      },
+    },
+    {
       name: "Object properties",
       scope: "variable.object.property",
       settings: {
-        foreground: palette.text,
+        foreground: palette.lavender,
       },
     },
     {
