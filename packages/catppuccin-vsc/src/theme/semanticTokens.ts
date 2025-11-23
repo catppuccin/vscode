@@ -34,6 +34,44 @@ export const getSemanticTokens = (context: ThemeContext): SemanticTokens => {
     "type.defaultLibrary:go": { foreground: palette.mauve },
     "variable.readonly.defaultLibrary:go": { foreground: palette.mauve },
 
+    // Haskell:
+    "enumMember:haskell": /* data constructors */ {
+      foreground: palette.blue,
+      fontStyle: "",
+    },
+    "enum:haskell": /* types */ {
+      foreground: palette.yellow,
+      fontStyle: context.options.italicKeywords ? "italic" : undefined,
+    },
+    "type:haskell": /* type aliases */ {
+      foreground: palette.yellow,
+      fontStyle: context.options.italicKeywords ? "italic" : undefined,
+    },
+    "class:haskell": /* typeclasses */ {
+      foreground: palette.yellow,
+      fontStyle: "",
+    },
+    "interface:haskell": /* type families */ {
+      foreground: palette.pink,
+      fontStyle: "",
+      // needs something distinct from typeclasses -> pick pink which is used for meta-variables in Rust
+    },
+    "property:haskell": /* getters in data constructors/records */ {
+      foreground: palette.lavender,
+      fontStyle: context.options.italicKeywords ? "italic" : undefined,
+    },
+    "macro:haskell": /* pattern synonyms */ {
+      foreground: palette.blue,
+      fontStyle: "",
+    },
+    "typeParameter:haskell": {
+      foreground: palette.maroon,
+      fontStyle: "",
+    },
+    "variable:haskell": {
+      fontStyle: "",
+    },
+
     // TOML syntax
     tomlArrayKey: { foreground: palette.blue, fontStyle: "" },
     tomlTableKey: { foreground: palette.blue, fontStyle: "" },
