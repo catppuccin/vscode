@@ -15,9 +15,6 @@ catalogs:
     '@types/node':
       specifier: ^22.19.1
       version: 22.19.1
-    '@vscode/vsce':
-      specifier: ^3.7.0
-      version: 3.7.0
     eslint:
       specifier: ^9.39.1
       version: 9.39.1
@@ -49,7 +46,7 @@ importers:
         version: 22.19.1
       '@vscode/vsce':
         specifier: 'catalog:'
-        version: 3.7.0
+        version: 3.7.1
       eslint:
         specifier: 'catalog:'
         version: 9.39.1(jiti@1.21.7)
@@ -112,7 +109,7 @@ importers:
         version: 1.80.0
       '@vscode/vsce':
         specifier: 'catalog:'
-        version: 3.7.0
+        version: 3.7.1
       tinycolor2:
         specifier: ^1.6.0
         version: 1.6.0
@@ -133,7 +130,7 @@ importers:
     devDependencies:
       '@vscode/vsce':
         specifier: 'catalog:'
-        version: 3.7.0
+        version: 3.7.1
 
   packages/catppuccin-vsc-storybook:
     devDependencies:
@@ -1198,8 +1195,8 @@ packages:
   '@vscode/vsce-sign@2.0.9':
     resolution: {integrity: sha512-8IvaRvtFyzUnGGl3f5+1Cnor3LqaUWvhaUjAYO8Y39OUYlOf3cRd+dowuQYLpZcP3uwSG+mURwjEBOSq4SOJ0g==}
 
-  '@vscode/vsce@3.7.0':
-    resolution: {integrity: sha512-LY9r2T4joszRjz4d92ZPl6LTBUPS4IWH9gG/3JUv+1QyBJrveZlcVISuiaq0EOpmcgFh0GgVgKD4rD/21Tu8sA==}
+  '@vscode/vsce@3.7.1':
+    resolution: {integrity: sha512-OTm2XdMt2YkpSn2Nx7z2EJtSuhRHsTPYsSK59hr3v8jRArK+2UEoju4Jumn1CmpgoBLGI6ReHLJ/czYltNUW3g==}
     engines: {node: '>= 20'}
     hasBin: true
 
@@ -4117,7 +4114,7 @@ snapshots:
       '@vscode/vsce-sign-win32-arm64': 2.0.6
       '@vscode/vsce-sign-win32-x64': 2.0.6
 
-  '@vscode/vsce@3.7.0':
+  '@vscode/vsce@3.7.1':
     dependencies:
       '@azure/identity': 4.13.0
       '@secretlint/node': 10.2.2
