@@ -106,8 +106,44 @@
             "sky",
             "sapphire",
             "blue",
-            "lavender"
+            "lavender",
+            "custom"
           ]
+        },
+        "catppuccin.customAccentColors": {
+          "scope": "application",
+          "type": "object",
+          "default": {
+            "all": "#cba6f7"
+          },
+          "description": "Custom accent colors as hex codes. Only used when `accentColor` is set to `custom`. Use `all` for all flavors or specify per flavor (`latte`, `frappe`, `macchiato`, `mocha`).",
+          "properties": {
+            "all": {
+              "type": "string",
+              "pattern": "^#[0-9A-Fa-f]{6}$",
+              "description": "Custom accent color for all flavors"
+            },
+            "latte": {
+              "type": "string",
+              "pattern": "^#[0-9A-Fa-f]{6}$",
+              "description": "Custom accent color for Latte flavor"
+            },
+            "frappe": {
+              "type": "string",
+              "pattern": "^#[0-9A-Fa-f]{6}$",
+              "description": "Custom accent color for Frappé flavor"
+            },
+            "macchiato": {
+              "type": "string",
+              "pattern": "^#[0-9A-Fa-f]{6}$",
+              "description": "Custom accent color for Macchiato flavor"
+            },
+            "mocha": {
+              "type": "string",
+              "pattern": "^#[0-9A-Fa-f]{6}$",
+              "description": "Custom accent color for Mocha flavor"
+            }
+          }
         },
         "catppuccin.workbenchMode": {
           "scope": "application",

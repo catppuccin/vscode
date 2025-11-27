@@ -21,6 +21,7 @@ export const defaultOptions: ThemeOptions = {
   bracketMode: "rainbow",
   extraBordersEnabled: false,
   customUIColors: {},
+  customAccentColors: {},
   syncWithIconPack: true,
 };
 
@@ -48,12 +49,20 @@ export const compileTheme = (
     ...options.colorOverrides?.[flavor],
   };
 
+  const accent =
+    options.accent === "custom"
+      ? (options.customAccentColors?.[flavor] ??
+        options.customAccentColors?.all ??
+        palette.mauve)
+      : palette[options.accent];
+
   const context: ThemeContext = {
     flavor,
     palette,
     paletteAnsi,
     options,
     isLatte: flavor === "latte",
+    accent,
   };
 
   return {
