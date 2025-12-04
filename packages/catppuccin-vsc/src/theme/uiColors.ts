@@ -31,7 +31,7 @@ export const getUiColors = (
     // Text colors
     "textBlockQuote.background": palette.mantle,
     "textBlockQuote.border": palette.crust,
-    "textCodeBlock.background": palette.mantle,
+    "textCodeBlock.background": palette.surface0,
     "textLink.activeForeground": palette.sky,
     "textLink.foreground": palette.blue,
     "textPreformat.foreground": palette.text,
