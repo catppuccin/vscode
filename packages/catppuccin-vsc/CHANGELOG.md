@@ -1,5 +1,17 @@
 # Changelog
 
+## [3.19.0](https://github.com/catppuccin/vscode/compare/catppuccin-vsc-v3.18.1...catppuccin-vsc-v3.19.0) (2026-05-02)
+
+
+### Features
+
+* **syntax:** improve support for Haskell ([#559](https://github.com/catppuccin/vscode/issues/559)) ([1a9ac2b](https://github.com/catppuccin/vscode/commit/1a9ac2b4dc7290e50f4e997a7953723b2891962c))
+
+
+### Bug Fixes
+
+* use raw.githubusercontent.com for extension schemas ([#633](https://github.com/catppuccin/vscode/issues/633)) ([72d11a7](https://github.com/catppuccin/vscode/commit/72d11a75c92505f896d247079f9e097fec945ac2))
+
 ## [3.18.1](https://github.com/catppuccin/vscode/compare/catppuccin-vsc-v3.18.0...catppuccin-vsc-v3.18.1) (2025-10-12)
 
 
