@@ -5,8 +5,7 @@ import type { ThemeContext } from "@/types";
  * deprecated in VSCode.
  */
 const azureDataStudio = (context: ThemeContext): Record<string, string> => {
-  const { options, palette } = context;
-  const accent = palette[options.accent];
+  const { palette, accent } = context;
 
   return {
     "button.secondaryBorder": accent,

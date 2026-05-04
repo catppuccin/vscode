@@ -17,7 +17,7 @@ export type * from "@catppuccin/vsc-typegen/types/errorlens";
 export type * from "@catppuccin/vsc-typegen/types/github-pull-request";
 export type * from "@catppuccin/vsc-typegen/types/gitlens";
 
-export type CatppuccinAccent = AccentName;
+export type CatppuccinAccent = AccentName | "custom";
 export type CatppuccinFlavor = FlavorName;
 export { type ColorName } from "@catppuccin/palette";
 export type CatppuccinWorkbenchMode = "default" | "flat" | "minimal";
@@ -40,6 +40,8 @@ export type ColorOverrides = Partial<
 >;
 
 export type CustomUIColors = Partial<FlavorsPlusAll<Record<string, string>>>;
+
+export type CustomAccentColors = Partial<FlavorsPlusAll<string>>;
 
 export type ThemeOptions = {
   /** The accent color to use */
@@ -74,6 +76,11 @@ export type ThemeOptions = {
   /**
    * Controls whether to sync the currently active Catppuccin flavor with the [Catppuccin Icon Pack](https://github.com/catppuccin/vscode-icons)
    */
+  customAccentColors: CustomAccentColors;
+
+  /**
+   * Controls whether to sync the currently active Catppuccin flavor with the [Catppuccin Icon Pack](https://github.com/catppuccin/vscode-icons)
+   */
   syncWithIconPack: boolean;
 };
 
@@ -90,4 +97,5 @@ export type ThemeContext = {
   paletteAnsi: CatppuccinPaletteAnsi;
   options: ThemeOptions;
   isLatte: boolean;
+  accent: string;
 };

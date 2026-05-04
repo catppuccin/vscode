@@ -47,8 +47,7 @@ const parseCustomUiColor = (k: string, v: string): [string, number] => {
 const hexColorRegex = /^#([\dA-Fa-f]{3,4}){1,2}$/;
 
 const customNamedColors = (context: ThemeContext): CustomNamedColors => {
-  const { flavor, palette, options } = context;
-  const accent = palette[options.accent];
+  const { flavor, palette, options, accent } = context;
 
   const customUIColors = {
     ...options.customUIColors.all,

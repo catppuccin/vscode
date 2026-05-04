@@ -6,9 +6,8 @@ import uiCustomizations from "./ui";
 export const getUiColors = (
   context: ThemeContext,
 ): Partial<Record<keyof WorkbenchColors, string>> => {
-  const { palette, paletteAnsi, options, isLatte } = context;
+  const { palette, paletteAnsi, options, isLatte, accent } = context;
 
-  const accent = palette[options.accent];
   const dropBackground = opacity(accent, 0.2);
   const border = options.extraBordersEnabled
     ? opacity(palette.overlay1, 0.15)
