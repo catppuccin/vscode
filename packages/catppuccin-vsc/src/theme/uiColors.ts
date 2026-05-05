@@ -183,6 +183,12 @@ export const getUiColors = (
       palette.blue,
       isLatte ? 0.15 : 0.2,
     ),
+    "editor.imeBackground": palette.mantle,
+    "editor.imeForeground": palette.text,
+    "editor.imeBorder": palette.surface2,
+    "editor.compositionBackground": palette.mantle,
+    "editor.compositionForeground": palette.text,
+    "editor.compositionBorder": palette.surface2,
 
     "editorBracketMatch.background": opacity(palette.overlay2, 0.1),
     "editorBracketMatch.border": palette.overlay2,

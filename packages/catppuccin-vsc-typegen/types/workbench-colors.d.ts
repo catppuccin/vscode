@@ -648,6 +648,27 @@ export interface WorkbenchColors {
    * Editor background color.
    */
   "editor.background"?: _1 | _19;
+
+  /**
+   * The background color of the IME composition.
+   */
+  "editor.imeBackground"?: _1 | string;
+  /**
+   * The foreground color of the IME composition.
+   */
+  "editor.imeForeground"?: _1 | string;
+  /**
+   * The border color of the IME composition.
+   */
+  "editor.imeBorder"?: _1 | string;
+  /**
+   * The background color of a composition.
+   */
+  "editor.compositionBackground"?: _1 | string;
+  /**
+   * The foreground color of a composition.
+   */
+  "editor.compositionForeground"?: _1 | string;
   /**
    * The border color for an IME composition.
    */
