@@ -47,8 +47,13 @@ const tokens = (context: ThemeContext): TextmateColors => {
       },
     },
     {
-      name: "TOML dates",
-      scope: "constant.other.time.datetime.offset.toml",
+      name: "TOML dates and times",
+      scope: [
+        "constant.other.time.datetime.offset.toml",
+        "constant.other.time.datetime.local.toml",
+        "constant.other.time.date.toml",
+        "constant.other.time.time.toml",
+      ],
       settings: {
         foreground: palette.pink,
       },
