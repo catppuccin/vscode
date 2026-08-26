@@ -13,8 +13,8 @@ catalogs:
       specifier: ^22.0.5
       version: 22.0.5
     '@types/node':
-      specifier: ^22.19.1
-      version: 22.19.1
+      specifier: ^24.0.0
+      version: 24.13.3
     '@vscode/vsce':
       specifier: ^3.7.0
       version: 3.7.0
@@ -46,7 +46,7 @@ importers:
         version: 22.0.5
       '@types/node':
         specifier: 'catalog:'
-        version: 22.19.1
+        version: 24.13.3
       '@vscode/vsce':
         specifier: 'catalog:'
         version: 3.7.0
@@ -103,7 +103,7 @@ importers:
         version: 22.0.5
       '@types/node':
         specifier: 'catalog:'
-        version: 22.19.1
+        version: 24.13.3
       '@types/tinycolor2':
         specifier: ^1.4.6
         version: 1.4.6
@@ -148,22 +148,22 @@ importers:
         version: 5.2.8
       '@storybook/addon-docs':
         specifier: ^9.1.16
-        version: 9.1.16(@types/react@19.1.11)(storybook@9.1.16(@testing-library/dom@10.4.1)(prettier@3.6.2)(vite@7.2.4(@types/node@22.19.1)(jiti@1.21.7)(less@4.2.2)(terser@5.39.0)(tsx@4.20.6)(yaml@2.8.1)))
+        version: 9.1.16(@types/react@19.1.11)(storybook@9.1.16(@testing-library/dom@10.4.1)(prettier@3.6.2)(vite@7.2.4(@types/node@24.13.3)(jiti@1.21.7)(less@4.2.2)(terser@5.39.0)(tsx@4.20.6)(yaml@2.8.1)))
       '@storybook/addon-themes':
         specifier: ^9.1.16
-        version: 9.1.16(storybook@9.1.16(@testing-library/dom@10.4.1)(prettier@3.6.2)(vite@7.2.4(@types/node@22.19.1)(jiti@1.21.7)(less@4.2.2)(terser@5.39.0)(tsx@4.20.6)(yaml@2.8.1)))
+        version: 9.1.16(storybook@9.1.16(@testing-library/dom@10.4.1)(prettier@3.6.2)(vite@7.2.4(@types/node@24.13.3)(jiti@1.21.7)(less@4.2.2)(terser@5.39.0)(tsx@4.20.6)(yaml@2.8.1)))
       '@storybook/web-components':
         specifier: ^9.1.16
-        version: 9.1.16(lit@3.3.1)(storybook@9.1.16(@testing-library/dom@10.4.1)(prettier@3.6.2)(vite@7.2.4(@types/node@22.19.1)(jiti@1.21.7)(less@4.2.2)(terser@5.39.0)(tsx@4.20.6)(yaml@2.8.1)))
+        version: 9.1.16(lit@3.3.1)(storybook@9.1.16(@testing-library/dom@10.4.1)(prettier@3.6.2)(vite@7.2.4(@types/node@24.13.3)(jiti@1.21.7)(less@4.2.2)(terser@5.39.0)(tsx@4.20.6)(yaml@2.8.1)))
       '@storybook/web-components-vite':
         specifier: ^9.1.16
-        version: 9.1.16(lit@3.3.1)(storybook@9.1.16(@testing-library/dom@10.4.1)(prettier@3.6.2)(vite@7.2.4(@types/node@22.19.1)(jiti@1.21.7)(less@4.2.2)(terser@5.39.0)(tsx@4.20.6)(yaml@2.8.1)))(vite@7.2.4(@types/node@22.19.1)(jiti@1.21.7)(less@4.2.2)(terser@5.39.0)(tsx@4.20.6)(yaml@2.8.1))
+        version: 9.1.16(lit@3.3.1)(storybook@9.1.16(@testing-library/dom@10.4.1)(prettier@3.6.2)(vite@7.2.4(@types/node@24.13.3)(jiti@1.21.7)(less@4.2.2)(terser@5.39.0)(tsx@4.20.6)(yaml@2.8.1)))(vite@7.2.4(@types/node@24.13.3)(jiti@1.21.7)(less@4.2.2)(terser@5.39.0)(tsx@4.20.6)(yaml@2.8.1))
       '@tsconfig/node22':
         specifier: 'catalog:'
         version: 22.0.5
       '@types/node':
         specifier: 'catalog:'
-        version: 22.19.1
+        version: 24.13.3
       chromatic:
         specifier: ^13.3.4
         version: 13.3.4
@@ -172,7 +172,7 @@ importers:
         version: 9.39.1(jiti@1.21.7)
       eslint-plugin-storybook:
         specifier: ^9.1.16
-        version: 9.1.16(eslint@9.39.1(jiti@1.21.7))(storybook@9.1.16(@testing-library/dom@10.4.1)(prettier@3.6.2)(vite@7.2.4(@types/node@22.19.1)(jiti@1.21.7)(less@4.2.2)(terser@5.39.0)(tsx@4.20.6)(yaml@2.8.1)))(typescript@5.9.3)
+        version: 9.1.16(eslint@9.39.1(jiti@1.21.7))(storybook@9.1.16(@testing-library/dom@10.4.1)(prettier@3.6.2)(vite@7.2.4(@types/node@24.13.3)(jiti@1.21.7)(less@4.2.2)(terser@5.39.0)(tsx@4.20.6)(yaml@2.8.1)))(typescript@5.9.3)
       lit:
         specifier: ^3.3.1
         version: 3.3.1
@@ -181,7 +181,7 @@ importers:
         version: 3.15.0
       storybook:
         specifier: ^9.1.16
-        version: 9.1.16(@testing-library/dom@10.4.1)(prettier@3.6.2)(vite@7.2.4(@types/node@22.19.1)(jiti@1.21.7)(less@4.2.2)(terser@5.39.0)(tsx@4.20.6)(yaml@2.8.1))
+        version: 9.1.16(@testing-library/dom@10.4.1)(prettier@3.6.2)(vite@7.2.4(@types/node@24.13.3)(jiti@1.21.7)(less@4.2.2)(terser@5.39.0)(tsx@4.20.6)(yaml@2.8.1))
       tsx:
         specifier: 'catalog:'
         version: 4.20.6
@@ -190,7 +190,7 @@ importers:
         version: 5.9.3
       vite:
         specifier: ^7.2.4
-        version: 7.2.4(@types/node@22.19.1)(jiti@1.21.7)(less@4.2.2)(terser@5.39.0)(tsx@4.20.6)(yaml@2.8.1)
+        version: 7.2.4(@types/node@24.13.3)(jiti@1.21.7)(less@4.2.2)(terser@5.39.0)(tsx@4.20.6)(yaml@2.8.1)
 
   packages/catppuccin-vsc-typegen:
     devDependencies:
@@ -215,7 +215,7 @@ importers:
         version: 22.0.5
       '@types/node':
         specifier: 'catalog:'
-        version: 22.19.1
+        version: 24.13.3
       catppuccin-vsc:
         specifier: workspace:*
         version: link:../catppuccin-vsc
@@ -1037,8 +1037,8 @@ packages:
   '@types/mdx@2.0.13':
     resolution: {integrity: sha512-+OWZQfAYyio6YkJb3HLxDrvnx6SWWDbC0zVPfBRzUk0/nqoDyf6dNxQi3eArPe8rJ473nobTMQ/8Zk+LxJ+Yuw==}
 
-  '@types/node@22.19.1':
-    resolution: {integrity: sha512-LCCV0HdSZZZb34qifBsyWlUmok6W7ouER+oQIGBScS8EsZsQbrtFTUrDX4hOl+CS6p7cnNC4td+qrSVGSCTUfQ==}
+  '@types/node@24.13.3':
+    resolution: {integrity: sha512-Dh8vAsV36ig5wa9OX4pXvMc9D3Veibfw2wix0CUwYODLD8nkj9UsLjASr49nPg+2eKzxhBV+v7L8pXvT4e639Q==}
 
   '@types/normalize-package-data@2.4.4':
     resolution: {integrity: sha512-37i+OaWTh9qeK4LSHPsyRC7NahnGotNuZvjLSgcPzblpHB3rrCJxAOgI5gCdKm7coonsaX1Of0ILiTcnZjbfxA==}
@@ -1126,6 +1126,7 @@ packages:
 
   '@ungap/structured-clone@1.3.0':
     resolution: {integrity: sha512-WmoN8qaIAo7WTYWbAZuG8PYEhn5fkz7dZrqTBZ7dtt//lL2Gwms1IcnQ5yHqjDfX8Ft5j4YzDM23f87zBfDe9g==}
+    deprecated: Potential CWE-502 - Update to 1.3.1 or higher
 
   '@vitest/expect@3.2.4':
     resolution: {integrity: sha512-Io0yyORnB6sikFlt8QW5K7slY4OjqNX9jmJQ02QDda8lyM6B5oNgVWoSoKPac8/kgnCUzuHQKrSLtu/uOqqrig==}
@@ -1720,6 +1721,7 @@ packages:
   eslint@9.39.1:
     resolution: {integrity: sha512-BhHmn2yNOFA9H9JmmIVKJmd288g9hrVRDkdoIgRCRuSySRUHH7r/DI6aAXW9T1WwUuY3DFgrcaqB+deURBLR5g==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
+    deprecated: This version is no longer supported. Please see https://eslint.org/version-support for other options.
     hasBin: true
     peerDependencies:
       jiti: '*'
@@ -1874,6 +1876,7 @@ packages:
   glob@11.1.0:
     resolution: {integrity: sha512-vuNwKSaKiqm7g0THUBu2x7ckSs3XJLXE+2ssL7/MfTGPLLcrJQ/4Uq1CjPTtO5cCIiRxqvN6Twy1qOwhL0Xjcw==}
     engines: {node: 20 || >=22}
+    deprecated: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
     hasBin: true
 
   globals@14.0.0:
@@ -2523,6 +2526,7 @@ packages:
   prebuild-install@7.1.3:
     resolution: {integrity: sha512-8Mf2cbV7x1cXPUILADGI3wuhfqWvtiLA1iclTDbFRZkgRQS0NqsPZphna9V+HyTEadheuPmjaJMsbzKQFOzLug==}
     engines: {node: '>=10'}
+    deprecated: No longer maintained. Please contact the author of the relevant native addon; alternatives are available.
     hasBin: true
 
   prelude-ls@1.2.1:
@@ -3003,8 +3007,8 @@ packages:
   underscore@1.13.7:
     resolution: {integrity: sha512-GMXzWtsc57XAtguZgaQViUOzs0KTkk8ojr3/xAxXLITqf/3EMwxC0inyETfDFjH/Krbhuep0HNbbjI9i/q3F3g==}
 
-  undici-types@6.21.0:
-    resolution: {integrity: sha512-iwDZqg0QAGrg9Rav5H4n0M64c3mkR59cJ6wQp+7C4nI0gsmExaedaYLNO44eT4AtBBwjbTiGPMlt2Md0T9H9JQ==}
+  undici-types@7.18.2:
+    resolution: {integrity: sha512-AsuCzffGHJybSaRrmr5eHr81mwJU3kjw6M+uprWvCXiNeN9SOGwQ3Jn8jb8m3Z6izVgknn1R0FTCEAP2QrLY/w==}
 
   undici@5.29.0:
     resolution: {integrity: sha512-raqeBD6NQK4SkWhQzeYKd1KmIG6dllBOTt55Rmkt4HtI9mwdWtJljnrXjAFUBLTSN67HWrOIZ3EPF4kjUw80Bg==}
@@ -3062,6 +3066,7 @@ packages:
 
   uuid@8.3.2:
     resolution: {integrity: sha512-+NYs2QeMWy+GWFOEm9xnn6HCDp0l7QBD7ml8zLUmJ+93Q5NF0NocErnwkTkXVFNiX3/fpC6afS8Dhb/gz7R7eg==}
+    deprecated: uuid@10 and below is no longer supported.  For ESM codebases, update to uuid@latest.  For CommonJS codebases, use uuid@11 (but be aware this version will likely be deprecated in 2028).
     hasBin: true
 
   validate-npm-package-license@3.0.4:
@@ -3123,6 +3128,7 @@ packages:
   whatwg-encoding@3.1.1:
     resolution: {integrity: sha512-6qN4hJdMwfYBtE3YBTTHhoeuUrDBPZmbQaxWAqSALV/MeEnR5z1xd8UKud2RAkFoPkmB+hli1TZSnyi84xz1vQ==}
     engines: {node: '>=18'}
+    deprecated: Use @exodus/bytes instead for a more spec-conformant and faster implementation
 
   whatwg-mimetype@4.0.0:
     resolution: {integrity: sha512-QaKxh0eNIi2mE9p2vEdzfagOKHCcj1pJ56EEHGQOVxp8r9/iszLUUV7v89x9O1p/T+NlTM5W7jW6+cz4Fq1YVg==}
@@ -3779,34 +3785,34 @@ snapshots:
 
   '@sindresorhus/merge-streams@2.3.0': {}
 
-  '@storybook/addon-docs@9.1.16(@types/react@19.1.11)(storybook@9.1.16(@testing-library/dom@10.4.1)(prettier@3.6.2)(vite@7.2.4(@types/node@22.19.1)(jiti@1.21.7)(less@4.2.2)(terser@5.39.0)(tsx@4.20.6)(yaml@2.8.1)))':
+  '@storybook/addon-docs@9.1.16(@types/react@19.1.11)(storybook@9.1.16(@testing-library/dom@10.4.1)(prettier@3.6.2)(vite@7.2.4(@types/node@24.13.3)(jiti@1.21.7)(less@4.2.2)(terser@5.39.0)(tsx@4.20.6)(yaml@2.8.1)))':
     dependencies:
       '@mdx-js/react': 3.1.1(@types/react@19.1.11)(react@19.2.0)
-      '@storybook/csf-plugin': 9.1.16(storybook@9.1.16(@testing-library/dom@10.4.1)(prettier@3.6.2)(vite@7.2.4(@types/node@22.19.1)(jiti@1.21.7)(less@4.2.2)(terser@5.39.0)(tsx@4.20.6)(yaml@2.8.1)))
+      '@storybook/csf-plugin': 9.1.16(storybook@9.1.16(@testing-library/dom@10.4.1)(prettier@3.6.2)(vite@7.2.4(@types/node@24.13.3)(jiti@1.21.7)(less@4.2.2)(terser@5.39.0)(tsx@4.20.6)(yaml@2.8.1)))
       '@storybook/icons': 1.6.0(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
-      '@storybook/react-dom-shim': 9.1.16(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(storybook@9.1.16(@testing-library/dom@10.4.1)(prettier@3.6.2)(vite@7.2.4(@types/node@22.19.1)(jiti@1.21.7)(less@4.2.2)(terser@5.39.0)(tsx@4.20.6)(yaml@2.8.1)))
+      '@storybook/react-dom-shim': 9.1.16(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(storybook@9.1.16(@testing-library/dom@10.4.1)(prettier@3.6.2)(vite@7.2.4(@types/node@24.13.3)(jiti@1.21.7)(less@4.2.2)(terser@5.39.0)(tsx@4.20.6)(yaml@2.8.1)))
       react: 19.2.0
       react-dom: 19.2.0(react@19.2.0)
-      storybook: 9.1.16(@testing-library/dom@10.4.1)(prettier@3.6.2)(vite@7.2.4(@types/node@22.19.1)(jiti@1.21.7)(less@4.2.2)(terser@5.39.0)(tsx@4.20.6)(yaml@2.8.1))
+      storybook: 9.1.16(@testing-library/dom@10.4.1)(prettier@3.6.2)(vite@7.2.4(@types/node@24.13.3)(jiti@1.21.7)(less@4.2.2)(terser@5.39.0)(tsx@4.20.6)(yaml@2.8.1))
       ts-dedent: 2.2.0
     transitivePeerDependencies:
       - '@types/react'
 
-  '@storybook/addon-themes@9.1.16(storybook@9.1.16(@testing-library/dom@10.4.1)(prettier@3.6.2)(vite@7.2.4(@types/node@22.19.1)(jiti@1.21.7)(less@4.2.2)(terser@5.39.0)(tsx@4.20.6)(yaml@2.8.1)))':
+  '@storybook/addon-themes@9.1.16(storybook@9.1.16(@testing-library/dom@10.4.1)(prettier@3.6.2)(vite@7.2.4(@types/node@24.13.3)(jiti@1.21.7)(less@4.2.2)(terser@5.39.0)(tsx@4.20.6)(yaml@2.8.1)))':
     dependencies:
-      storybook: 9.1.16(@testing-library/dom@10.4.1)(prettier@3.6.2)(vite@7.2.4(@types/node@22.19.1)(jiti@1.21.7)(less@4.2.2)(terser@5.39.0)(tsx@4.20.6)(yaml@2.8.1))
+      storybook: 9.1.16(@testing-library/dom@10.4.1)(prettier@3.6.2)(vite@7.2.4(@types/node@24.13.3)(jiti@1.21.7)(less@4.2.2)(terser@5.39.0)(tsx@4.20.6)(yaml@2.8.1))
       ts-dedent: 2.2.0
 
-  '@storybook/builder-vite@9.1.16(storybook@9.1.16(@testing-library/dom@10.4.1)(prettier@3.6.2)(vite@7.2.4(@types/node@22.19.1)(jiti@1.21.7)(less@4.2.2)(terser@5.39.0)(tsx@4.20.6)(yaml@2.8.1)))(vite@7.2.4(@types/node@22.19.1)(jiti@1.21.7)(less@4.2.2)(terser@5.39.0)(tsx@4.20.6)(yaml@2.8.1))':
+  '@storybook/builder-vite@9.1.16(storybook@9.1.16(@testing-library/dom@10.4.1)(prettier@3.6.2)(vite@7.2.4(@types/node@24.13.3)(jiti@1.21.7)(less@4.2.2)(terser@5.39.0)(tsx@4.20.6)(yaml@2.8.1)))(vite@7.2.4(@types/node@24.13.3)(jiti@1.21.7)(less@4.2.2)(terser@5.39.0)(tsx@4.20.6)(yaml@2.8.1))':
     dependencies:
-      '@storybook/csf-plugin': 9.1.16(storybook@9.1.16(@testing-library/dom@10.4.1)(prettier@3.6.2)(vite@7.2.4(@types/node@22.19.1)(jiti@1.21.7)(less@4.2.2)(terser@5.39.0)(tsx@4.20.6)(yaml@2.8.1)))
-      storybook: 9.1.16(@testing-library/dom@10.4.1)(prettier@3.6.2)(vite@7.2.4(@types/node@22.19.1)(jiti@1.21.7)(less@4.2.2)(terser@5.39.0)(tsx@4.20.6)(yaml@2.8.1))
+      '@storybook/csf-plugin': 9.1.16(storybook@9.1.16(@testing-library/dom@10.4.1)(prettier@3.6.2)(vite@7.2.4(@types/node@24.13.3)(jiti@1.21.7)(less@4.2.2)(terser@5.39.0)(tsx@4.20.6)(yaml@2.8.1)))
+      storybook: 9.1.16(@testing-library/dom@10.4.1)(prettier@3.6.2)(vite@7.2.4(@types/node@24.13.3)(jiti@1.21.7)(less@4.2.2)(terser@5.39.0)(tsx@4.20.6)(yaml@2.8.1))
       ts-dedent: 2.2.0
-      vite: 7.2.4(@types/node@22.19.1)(jiti@1.21.7)(less@4.2.2)(terser@5.39.0)(tsx@4.20.6)(yaml@2.8.1)
+      vite: 7.2.4(@types/node@24.13.3)(jiti@1.21.7)(less@4.2.2)(terser@5.39.0)(tsx@4.20.6)(yaml@2.8.1)
 
-  '@storybook/csf-plugin@9.1.16(storybook@9.1.16(@testing-library/dom@10.4.1)(prettier@3.6.2)(vite@7.2.4(@types/node@22.19.1)(jiti@1.21.7)(less@4.2.2)(terser@5.39.0)(tsx@4.20.6)(yaml@2.8.1)))':
+  '@storybook/csf-plugin@9.1.16(storybook@9.1.16(@testing-library/dom@10.4.1)(prettier@3.6.2)(vite@7.2.4(@types/node@24.13.3)(jiti@1.21.7)(less@4.2.2)(terser@5.39.0)(tsx@4.20.6)(yaml@2.8.1)))':
     dependencies:
-      storybook: 9.1.16(@testing-library/dom@10.4.1)(prettier@3.6.2)(vite@7.2.4(@types/node@22.19.1)(jiti@1.21.7)(less@4.2.2)(terser@5.39.0)(tsx@4.20.6)(yaml@2.8.1))
+      storybook: 9.1.16(@testing-library/dom@10.4.1)(prettier@3.6.2)(vite@7.2.4(@types/node@24.13.3)(jiti@1.21.7)(less@4.2.2)(terser@5.39.0)(tsx@4.20.6)(yaml@2.8.1))
       unplugin: 1.16.1
 
   '@storybook/global@5.0.0': {}
@@ -3816,26 +3822,26 @@ snapshots:
       react: 19.2.0
       react-dom: 19.2.0(react@19.2.0)
 
-  '@storybook/react-dom-shim@9.1.16(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(storybook@9.1.16(@testing-library/dom@10.4.1)(prettier@3.6.2)(vite@7.2.4(@types/node@22.19.1)(jiti@1.21.7)(less@4.2.2)(terser@5.39.0)(tsx@4.20.6)(yaml@2.8.1)))':
+  '@storybook/react-dom-shim@9.1.16(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(storybook@9.1.16(@testing-library/dom@10.4.1)(prettier@3.6.2)(vite@7.2.4(@types/node@24.13.3)(jiti@1.21.7)(less@4.2.2)(terser@5.39.0)(tsx@4.20.6)(yaml@2.8.1)))':
     dependencies:
       react: 19.2.0
       react-dom: 19.2.0(react@19.2.0)
-      storybook: 9.1.16(@testing-library/dom@10.4.1)(prettier@3.6.2)(vite@7.2.4(@types/node@22.19.1)(jiti@1.21.7)(less@4.2.2)(terser@5.39.0)(tsx@4.20.6)(yaml@2.8.1))
+      storybook: 9.1.16(@testing-library/dom@10.4.1)(prettier@3.6.2)(vite@7.2.4(@types/node@24.13.3)(jiti@1.21.7)(less@4.2.2)(terser@5.39.0)(tsx@4.20.6)(yaml@2.8.1))
 
-  '@storybook/web-components-vite@9.1.16(lit@3.3.1)(storybook@9.1.16(@testing-library/dom@10.4.1)(prettier@3.6.2)(vite@7.2.4(@types/node@22.19.1)(jiti@1.21.7)(less@4.2.2)(terser@5.39.0)(tsx@4.20.6)(yaml@2.8.1)))(vite@7.2.4(@types/node@22.19.1)(jiti@1.21.7)(less@4.2.2)(terser@5.39.0)(tsx@4.20.6)(yaml@2.8.1))':
+  '@storybook/web-components-vite@9.1.16(lit@3.3.1)(storybook@9.1.16(@testing-library/dom@10.4.1)(prettier@3.6.2)(vite@7.2.4(@types/node@24.13.3)(jiti@1.21.7)(less@4.2.2)(terser@5.39.0)(tsx@4.20.6)(yaml@2.8.1)))(vite@7.2.4(@types/node@24.13.3)(jiti@1.21.7)(less@4.2.2)(terser@5.39.0)(tsx@4.20.6)(yaml@2.8.1))':
     dependencies:
-      '@storybook/builder-vite': 9.1.16(storybook@9.1.16(@testing-library/dom@10.4.1)(prettier@3.6.2)(vite@7.2.4(@types/node@22.19.1)(jiti@1.21.7)(less@4.2.2)(terser@5.39.0)(tsx@4.20.6)(yaml@2.8.1)))(vite@7.2.4(@types/node@22.19.1)(jiti@1.21.7)(less@4.2.2)(terser@5.39.0)(tsx@4.20.6)(yaml@2.8.1))
-      '@storybook/web-components': 9.1.16(lit@3.3.1)(storybook@9.1.16(@testing-library/dom@10.4.1)(prettier@3.6.2)(vite@7.2.4(@types/node@22.19.1)(jiti@1.21.7)(less@4.2.2)(terser@5.39.0)(tsx@4.20.6)(yaml@2.8.1)))
-      storybook: 9.1.16(@testing-library/dom@10.4.1)(prettier@3.6.2)(vite@7.2.4(@types/node@22.19.1)(jiti@1.21.7)(less@4.2.2)(terser@5.39.0)(tsx@4.20.6)(yaml@2.8.1))
+      '@storybook/builder-vite': 9.1.16(storybook@9.1.16(@testing-library/dom@10.4.1)(prettier@3.6.2)(vite@7.2.4(@types/node@24.13.3)(jiti@1.21.7)(less@4.2.2)(terser@5.39.0)(tsx@4.20.6)(yaml@2.8.1)))(vite@7.2.4(@types/node@24.13.3)(jiti@1.21.7)(less@4.2.2)(terser@5.39.0)(tsx@4.20.6)(yaml@2.8.1))
+      '@storybook/web-components': 9.1.16(lit@3.3.1)(storybook@9.1.16(@testing-library/dom@10.4.1)(prettier@3.6.2)(vite@7.2.4(@types/node@24.13.3)(jiti@1.21.7)(less@4.2.2)(terser@5.39.0)(tsx@4.20.6)(yaml@2.8.1)))
+      storybook: 9.1.16(@testing-library/dom@10.4.1)(prettier@3.6.2)(vite@7.2.4(@types/node@24.13.3)(jiti@1.21.7)(less@4.2.2)(terser@5.39.0)(tsx@4.20.6)(yaml@2.8.1))
     transitivePeerDependencies:
       - lit
       - vite
 
-  '@storybook/web-components@9.1.16(lit@3.3.1)(storybook@9.1.16(@testing-library/dom@10.4.1)(prettier@3.6.2)(vite@7.2.4(@types/node@22.19.1)(jiti@1.21.7)(less@4.2.2)(terser@5.39.0)(tsx@4.20.6)(yaml@2.8.1)))':
+  '@storybook/web-components@9.1.16(lit@3.3.1)(storybook@9.1.16(@testing-library/dom@10.4.1)(prettier@3.6.2)(vite@7.2.4(@types/node@24.13.3)(jiti@1.21.7)(less@4.2.2)(terser@5.39.0)(tsx@4.20.6)(yaml@2.8.1)))':
     dependencies:
       '@storybook/global': 5.0.0
       lit: 3.3.1
-      storybook: 9.1.16(@testing-library/dom@10.4.1)(prettier@3.6.2)(vite@7.2.4(@types/node@22.19.1)(jiti@1.21.7)(less@4.2.2)(terser@5.39.0)(tsx@4.20.6)(yaml@2.8.1))
+      storybook: 9.1.16(@testing-library/dom@10.4.1)(prettier@3.6.2)(vite@7.2.4(@types/node@24.13.3)(jiti@1.21.7)(less@4.2.2)(terser@5.39.0)(tsx@4.20.6)(yaml@2.8.1))
       tiny-invariant: 1.3.3
       ts-dedent: 2.2.0
 
@@ -3925,9 +3931,9 @@ snapshots:
 
   '@types/mdx@2.0.13': {}
 
-  '@types/node@22.19.1':
+  '@types/node@24.13.3':
     dependencies:
-      undici-types: 6.21.0
+      undici-types: 7.18.2
 
   '@types/normalize-package-data@2.4.4': {}
 
@@ -4056,13 +4062,13 @@ snapshots:
       chai: 5.3.3
       tinyrainbow: 2.0.0
 
-  '@vitest/mocker@3.2.4(vite@7.2.4(@types/node@22.19.1)(jiti@1.21.7)(less@4.2.2)(terser@5.39.0)(tsx@4.20.6)(yaml@2.8.1))':
+  '@vitest/mocker@3.2.4(vite@7.2.4(@types/node@24.13.3)(jiti@1.21.7)(less@4.2.2)(terser@5.39.0)(tsx@4.20.6)(yaml@2.8.1))':
     dependencies:
       '@vitest/spy': 3.2.4
       estree-walker: 3.0.3
       magic-string: 0.30.21
     optionalDependencies:
-      vite: 7.2.4(@types/node@22.19.1)(jiti@1.21.7)(less@4.2.2)(terser@5.39.0)(tsx@4.20.6)(yaml@2.8.1)
+      vite: 7.2.4(@types/node@24.13.3)(jiti@1.21.7)(less@4.2.2)(terser@5.39.0)(tsx@4.20.6)(yaml@2.8.1)
 
   '@vitest/pretty-format@3.2.4':
     dependencies:
@@ -4644,11 +4650,11 @@ snapshots:
       '@types/eslint': 9.6.1
       eslint-config-prettier: 10.1.8(eslint@9.39.1(jiti@1.21.7))
 
-  eslint-plugin-storybook@9.1.16(eslint@9.39.1(jiti@1.21.7))(storybook@9.1.16(@testing-library/dom@10.4.1)(prettier@3.6.2)(vite@7.2.4(@types/node@22.19.1)(jiti@1.21.7)(less@4.2.2)(terser@5.39.0)(tsx@4.20.6)(yaml@2.8.1)))(typescript@5.9.3):
+  eslint-plugin-storybook@9.1.16(eslint@9.39.1(jiti@1.21.7))(storybook@9.1.16(@testing-library/dom@10.4.1)(prettier@3.6.2)(vite@7.2.4(@types/node@24.13.3)(jiti@1.21.7)(less@4.2.2)(terser@5.39.0)(tsx@4.20.6)(yaml@2.8.1)))(typescript@5.9.3):
     dependencies:
       '@typescript-eslint/utils': 8.47.0(eslint@9.39.1(jiti@1.21.7))(typescript@5.9.3)
       eslint: 9.39.1(jiti@1.21.7)
-      storybook: 9.1.16(@testing-library/dom@10.4.1)(prettier@3.6.2)(vite@7.2.4(@types/node@22.19.1)(jiti@1.21.7)(less@4.2.2)(terser@5.39.0)(tsx@4.20.6)(yaml@2.8.1))
+      storybook: 9.1.16(@testing-library/dom@10.4.1)(prettier@3.6.2)(vite@7.2.4(@types/node@24.13.3)(jiti@1.21.7)(less@4.2.2)(terser@5.39.0)(tsx@4.20.6)(yaml@2.8.1))
     transitivePeerDependencies:
       - supports-color
       - typescript
@@ -5832,13 +5838,13 @@ snapshots:
 
   sprintf-js@1.0.3: {}
 
-  storybook@9.1.16(@testing-library/dom@10.4.1)(prettier@3.6.2)(vite@7.2.4(@types/node@22.19.1)(jiti@1.21.7)(less@4.2.2)(terser@5.39.0)(tsx@4.20.6)(yaml@2.8.1)):
+  storybook@9.1.16(@testing-library/dom@10.4.1)(prettier@3.6.2)(vite@7.2.4(@types/node@24.13.3)(jiti@1.21.7)(less@4.2.2)(terser@5.39.0)(tsx@4.20.6)(yaml@2.8.1)):
     dependencies:
       '@storybook/global': 5.0.0
       '@testing-library/jest-dom': 6.9.1
       '@testing-library/user-event': 14.6.1(@testing-library/dom@10.4.1)
       '@vitest/expect': 3.2.4
-      '@vitest/mocker': 3.2.4(vite@7.2.4(@types/node@22.19.1)(jiti@1.21.7)(less@4.2.2)(terser@5.39.0)(tsx@4.20.6)(yaml@2.8.1))
+      '@vitest/mocker': 3.2.4(vite@7.2.4(@types/node@24.13.3)(jiti@1.21.7)(less@4.2.2)(terser@5.39.0)(tsx@4.20.6)(yaml@2.8.1))
       '@vitest/spy': 3.2.4
       better-opn: 3.0.2
       esbuild: 0.25.12
@@ -6099,7 +6105,7 @@ snapshots:
 
   underscore@1.13.7: {}
 
-  undici-types@6.21.0: {}
+  undici-types@7.18.2: {}
 
   undici@5.29.0:
     dependencies:
@@ -6175,7 +6181,7 @@ snapshots:
       '@types/unist': 3.0.3
       vfile-message: 4.0.3
 
-  vite@7.2.4(@types/node@22.19.1)(jiti@1.21.7)(less@4.2.2)(terser@5.39.0)(tsx@4.20.6)(yaml@2.8.1):
+  vite@7.2.4(@types/node@24.13.3)(jiti@1.21.7)(less@4.2.2)(terser@5.39.0)(tsx@4.20.6)(yaml@2.8.1):
     dependencies:
       esbuild: 0.25.12
       fdir: 6.5.0(picomatch@4.0.3)
@@ -6184,7 +6190,7 @@ snapshots:
       rollup: 4.53.3
       tinyglobby: 0.2.15
     optionalDependencies:
-      '@types/node': 22.19.1
+      '@types/node': 24.13.3
       fsevents: 2.3.3
       jiti: 1.21.7
       less: 4.2.2
