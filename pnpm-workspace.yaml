@@ -4,7 +4,7 @@ packages:
 catalog:
   '@catppuccin/palette': ^1.7.1
   '@tsconfig/node22': ^22.0.5
-  '@types/node': ^22.19.1
+  '@types/node': ^24.0.0
   '@vscode/vsce': ^3.7.0
   eslint: ^9.39.1
   tsup: ^8.5.1
