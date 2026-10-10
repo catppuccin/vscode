@@ -63,7 +63,7 @@ jobs:
       - uses: pnpm/action-setup@v4
       - uses: actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444 # v5
         with:
-          node-version: 22
+          node-version: 24
           cache: pnpm
       - run: pnpm i --frozen-lockfile
 
@@ -102,7 +102,7 @@ jobs:
       - uses: pnpm/action-setup@v4
       - uses: actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444 # v5
         with:
-          node-version: 22
+          node-version: 24
           cache: pnpm
       - run: pnpm i --frozen-lockfile
 
@@ -135,7 +135,7 @@ jobs:
       - uses: pnpm/action-setup@v4
       - uses: actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444 # v5
         with:
-          node-version: 22
+          node-version: 24
           cache: pnpm
           registry-url: https://registry.npmjs.org
       - run: pnpm i --frozen-lockfile
