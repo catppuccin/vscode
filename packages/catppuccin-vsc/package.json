@@ -181,7 +181,7 @@
     "@types/tinycolor2": "^1.4.6",
     "@types/vscode": "~1.80.0",
     "tinycolor2": "^1.6.0",
-    "type-flag": "^3.0.0",
+    "type-flag": "^4.0.0",
     "@catppuccin/palette": "catalog:",
     "@catppuccin/vsc-typegen": "workspace:*",
     "@tsconfig/node22": "catalog:",
